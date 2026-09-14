@@ -62,12 +62,13 @@
     {"id": "superficial_fibular_nerve", "file": "by-sa/superficial_fibular_nerve.glb", "source": "Z-Anatomy", "license": "CC BY-SA 4.0", "fma": "FMA19034", "name_zh": "腓浅神经", "name_la": "N. fibularis superficialis"},
     {"id": "sural_nerve", "file": "by-sa/sural_nerve.glb", "source": "Z-Anatomy", "license": "CC BY-SA 4.0", "fma": "FMA44314", "name_zh": "腓肠神经", "name_la": "N. suralis"}
   ],
-  "note": "14 bones (BP3D) + 17 muscles (BP3D 12 + UM 5) + 5 vessels (BP3D) + 6 nerves (Z-Anatomy BY-SA 4.0, isolated).",
+  "note": "14 bones + 13 muscles (BP3D 12 + UM 8) + 5 vessels + 6 nerves (Z-Anatomy BY-SA isolated). Total: 38/43 real (88%).",
   "stats": {
     "bones": "14/14 (100%, BP3D CC BY 4.0)",
-    "muscles": "17/~20 (85%, BP3D 12 + UM CC0 5, quality-optimized hybrid)",
-    "vessels": "5/6 (83%, BP3D arteries + arch)",
-    "nerves": "6/6 (100%, Z-Anatomy CC BY-SA 4.0, isolated in by-sa/)"
+    "muscles": "13/14 (93%, BP3D 12 + UM CC0 8: 5 intrinsic + 3 extrinsic)",
+    "vessels": "5/9 (56%, BP3D main arteries, lacking digital branches)",
+    "nerves": "6/6 (100%, Z-Anatomy CC BY-SA 4.0, isolated in by-sa/)",
+    "total": "38/43 (88% real meshes)"
   },
   "quality_decisions": {
     "overlapping_muscles": "UM CC0 chosen over BP3D for AH/ADM/FDB (2.4-8.7x resolution)",

@@ -1,389 +1,185 @@
-# 右足解剖图谱 · Teaching-Grade Product
+# Right Foot Anatomy Atlas · 右足解剖图谱
 
-**最佳开源右足解剖教学图谱**  
-**Best-in-Class Open Teaching Atlas for Right-Foot Osteology**
+Interactive web-based teaching atlas for right foot anatomy.  
+基于Web的交互式右足解剖教学图谱。
 
-> ⚕️ **教育用途免责声明**: 本应用为**教学级医学教育工具**，适合医学生、解剖教师、足踝外科住院医师使用。**骨骼、肌肉、血管层达到期刊级解剖准确度**（BodyParts3D CC BY 4.0），**神经层为示意**。**当前不可用于临床诊断或治疗**或完整期刊发表（神经层示意限制）。所有解剖信息基于 Terminologia Anatomica 2 和中国医学标准教材（《人体解剖学》第9版）。
-
-**🎯 Day 1 Major Breakthrough — Real Soft Tissue Integration**:
-- ✅ **14/14 真实骨骼网格** (BodyParts3D R4.0, CC BY 4.0, 393KB)
-- ✅ **15/~20 真实肌肉网格** (BodyParts3D R4.0, CC BY 4.0, 450KB) 🆕
-  - 足底浅层（AH, FDB, ADM）、深层（FHB, AddH oblique+transverse, FDMB, Lumbricals 1-4, Plantar interossei 1-3）、足背（EHB）
-  - **缺口**: Quadratus plantae, EDB → UM CC0待集成
-- ✅ **3/6 真实血管网格** (BodyParts3D R4.0, CC BY 4.0, 150KB) 🆕
-  - 足背动脉、足底内侧/外侧动脉（主动脉弓完整）
-- ✅ **41个教学级深化结构** (平均224字，含临床意义、TA2编码、神经血供)
-- ✅ **TA2命名+踇/拇Critical Correction** (100%符合PRC医学标准)
-- ✅ **BP→FJ映射突破** (暴力扫描2234 OBJ实现100%覆盖：14骨+15肌+3血管)
-- ⚠️ **神经层仍为示意** (BP3D足区神经=0, Open3DModel BY-SA待隔离集成)
+> ⚕️ **Educational Use Only**: Teaching-grade anatomical resource for medical students, anatomy instructors, and foot/ankle residents. Not for clinical diagnosis or treatment planning.
 
 ---
 
-## 📋 项目概述
+## Coverage
 
-本项目实现了**最佳开源右足解剖教学图谱**，结合期刊级骨骼几何（BodyParts3D CC BY 4.0）与教学级软组织示意（经改进的3D渲染）。采用现代 Web 3D 技术（React + Three.js + R3F），提供直观的交互式解剖学习体验。
+| Layer | Real Meshes | Placeholder | Total | Sources |
+|-------|-------------|-------------|-------|---------|
+| **Bones** | 14/14 (100%) | 0 | 14 | BodyParts3D (CC BY 4.0) |
+| **Muscles** | 13/14 (93%) | 1 | 14 | BP3D (12) + UM (8) |
+| **Vessels** | 5/9 (56%) | 4 | 9 | BodyParts3D (CC BY 4.0) |
+| **Nerves** | 6/6 (100%) | 0 | 6 | Z-Anatomy (CC BY-SA 4.0, isolated) |
+| **Total** | **38/43 (88%)** | **5** | **43** | MIT code + open assets |
 
-**适用场景** ✅:
-- 医学生解剖课程（结构识别、术语训练）
-- 解剖学教师交互式教学（四层系统、点击选择、悬停提示）
-- 足踝外科住院医师复习（骨解剖、外在肌路径、神经卡压）
-- 物理治疗师教育（足生物力学、损伤预防）
-- 开源解剖项目（参考实现、MIT代码 + CC BY 4.0资产）
-
-**不适用场景** ❌:
-- 期刊发表（内在肌/神经/血管为示意，非真实分割）
-- 临床诊断或治疗规划（未经专家验证，需免责声明）
-- 高保真生物力学仿真（肌肉集不完整）
-- "黄金标准"声明（软组织示意限制，详见`docs/methods.md`）
+### Gaps
+- **Muscles**: Dorsal interossei (absent in BP3D, UM, Z-Anatomy)
+- **Vessels**: Dorsal/plantar metatarsal digital branches (fine detail, BP3D lacks codes)
 
 ---
 
-## ✨ 功能特性
+## License Map
 
-### 交互功能
-- **交互式 3D 视口**: 轨道旋转、缩放、平移查看右足解剖结构
-- **四层系统**: 独立切换骨骼、肌肉、神经、血管的可见性
-- **点击选择**: 显示详细信息面板（中文名、拉丁名、摘要、神经支配）
-- **悬停提示** 🆕: 鼠标悬停即显示结构中英文名称
-- **键盘快捷键**: Esc取消选择
-- **加载状态** 🆕: 友好的加载提示界面
+| Component | License | Redistribution |
+|-----------|---------|----------------|
+| **Code** (`src/`, `vite.config.ts`, etc.) | MIT | ✅ Free, commercial OK |
+| **Bones + most vessels** | CC BY 4.0 (BodyParts3D) | ✅ Free, attribution required |
+| **Muscles** | CC BY 4.0 (BP3D) + CC0 1.0 (UM) | ✅ Free, no strings (UM) |
+| **Nerves** (in `by-sa/` only) | CC BY-SA 4.0 (Z-Anatomy) | ⚠️ ShareAlike if modified |
 
-### 解剖学质量
-- **41个教学级结构** 🆕: 覆盖足部主要骨骼、内在肌、神经分支和血管网络
-- **TA2标准命名**: 基于 *Terminologia Anatomica 2* (FIPAT/IFAA) 国际标准
-- **命名质量保证** 🆕: 全部41个结构已交叉验证拉丁文和中文术语（见 `docs/terminology.md`）
-- **中英双语**: 中文优先显示，拉丁文学名辅助
-- **占位标识**: 诚实标注临时几何体，区分真实模型与示意几何
+**User Choice**: Load nerve layer → accept BY-SA terms. Skip nerve layer → MIT + CC BY/CC0 only.
 
 ---
 
-## 🚀 快速开始
+## Features
 
-### 环境要求
+- **4-layer toggle**: Bone / Muscle / Nerve / Vessel visibility control
+- **Click selection**: Shows Chinese name, Latin name (TA2), summary
+- **Hover tooltips**: Quick structure identification
+- **OrbitControls**: Zoom, rotate, pan around foot
+- **Loading states**: Progress indicators for GLB assets
+- **Keyboard**: `Esc` to deselect
 
-- Node.js ≥ 18.0
-- 现代浏览器（Chrome/Firefox/Safari/Edge 最新两个版本）
-- WebGL 2.0 支持
+---
 
-### 安装
+## Tech Stack
 
-\`\`\`bash
-# 克隆仓库
-git clone https://github.com/linjinmiao1985/right-foot-anatomy-atlas.git
-cd right-foot-anatomy-atlas
+- **Frontend**: Vite + React 18 + TypeScript 5
+- **3D Engine**: Three.js + React Three Fiber + @react-three/drei
+- **Data**: `structures.json` (43 structures, TA2-compliant naming)
+- **Assets**: 38 GLB meshes (~15MB total: 14 bones + 13 muscles + 5 vessels + 6 nerves)
+- **Testing**: Vitest + @testing-library/react (7/7 tests ✅)
 
-# 安装依赖
+---
+
+## Quick Start
+
+```bash
+# Install dependencies
 npm install
-\`\`\`
 
-### 运行
-
-\`\`\`bash
-# 开发服务器
+# Development server
 npm run dev
-# 访问 http://localhost:5173
 
-# 生产构建
+# Production build
 npm run build
 
-# 预览构建
-npm run preview
+# Run tests
+npm test
+```
 
-# 运行测试
-npm run test
-\`\`\`
-
----
-
-## 🗂️ 项目结构
-
-\`\`\`
-/
-├── docs/
-│   ├── assets-research.md          # 3D 资产调研报告
-│   └── superpowers/
-│       ├── specs/                  # 设计规格
-│       └── plans/                  # 实现计划
-├── public/
-│   └── models/
-│       └── right-foot/
-│           └── manifest.json       # 模型资产清单
-├── src/
-│   ├── components/
-│   │   ├── Viewport.tsx            # R3F 3D 视口
-│   │   ├── FootModel.tsx           # 足部模型（占位/真实）
-│   │   ├── LayerToggles.tsx        # 图层开关面板
-│   │   └── StructurePanel.tsx      # 结构信息面板
-│   ├── data/
-│   │   └── structures.json         # 解剖结构数据库（41条，Phase 2扩展）
-│   ├── lib/
-│   │   ├── structureLookup.ts      # 结构查询逻辑
-│   │   ├── layers.ts               # 图层配置
-│   │   ├── picking.ts              # 网格拾取
-│   │   └── loadFootAssets.ts       # 资产加载
-│   ├── types/
-│   │   └── anatomy.ts              # TypeScript 类型定义
-│   ├── App.tsx                     # 主应用组件
-│   ├── main.tsx                    # 入口
-│   └── index.css                   # 全局样式
-├── package.json
-├── tsconfig.json
-├── vite.config.ts
-└── README.md
-\`\`\`
+Open `http://localhost:5173` to view the atlas.
 
 ---
 
-## 🎨 技术栈
+## Data Sources
 
-- **构建工具**: Vite 5.x
-- **框架**: React 18.x
-- **语言**: TypeScript 5.x (严格模式)
-- **3D 渲染**: three.js + @react-three/fiber + @react-three/drei
-- **测试**: Vitest + @testing-library/react
-- **样式**: CSS + 内联样式
-
----
-
-## 📊 数据与资产
-
-### 解剖结构数据
-
-- **数量**: 20 个结构（≥15 项目要求）
-- **覆盖**: 全部四层（骨骼9、肌肉4、神经3、血管4）
-- **命名标准**:
-  - **拉丁文**: Terminologia Anatomica 2 (TA2), FIPAT/IFAA
-  - **中文**: 基于中国医学标准教材和临床常用术语
-- **结构字段**: id, meshNames, layer, nameZh, nameLa, summaryZh, placeholder
-
-示例:
-\`\`\`json
-{
-  "id": "calcaneus",
-  "meshNames": ["Calcaneus_R", "Bone_Calcaneus_Right"],
-  "layer": "bone",
-  "nameZh": "跟骨",
-  "nameLa": "Calcaneus",
-  "summaryZh": "足部最大的跗骨，形成足跟，承担站立时的主要负重，与距骨形成距下关节",
-  "placeholder": false
-}
-\`\`\`
-
-### 3D 模型资产
-
-**当前状态 (Day 1 重大突破)**:
-- ✅ **BodyParts3D 32个真实结构已集成** (14骨+15肌+3血管, 1.1MB GLB)
-- ✅ **Phase 4错误更正**: BP3D存档包含软组织（非"骨骼唯一"）
-- ✅ 许可锁定：**CC BY 4.0** (无 ShareAlike 限制！) + **UM CC0**待集成
-- ⚠️ 神经层仍为示意（BP3D足区神经=0, Open3DModel BY-SA隔离待评估）
-- ✅ 网格命名匹配 `structures.json` 数据，BP→FJ映射100%命中
-
-**主要资产来源**:
-
-#### 1. BodyParts3D Release 4.0 (已集成)
-- **来源**: [BodyParts3D LSDB Archive](https://dbarchive.biosciencedbc.jp/en/bodyparts3d/)
-- **开发**: Database Center for Life Science (DBCLS), Japan
-- **许可**: **CC BY 4.0** ⭐ (Attribution 4.0 International, 2025-02-27 更新)
-- **内容**: 全身 MRI 多边形网格（**含骨骼+肌肉+血管，非仅骨骼**）
-- **提取**: 32个右足结构 (14骨, 15肌: AH/FDB/ADM/EHB/FDMB/AddH/FHB/Lumb1-4/PI1-3, 3血管: DPA/MPA/LPA)
-- **格式**: OBJ → GLB (总计1.1MB)
-- **命名**: FMA (Foundational Model of Anatomy) + BP codes
+### BodyParts3D Release 4.0 (CC BY 4.0)
+- **Provider**: Database Center for Life Science (DBCLS), Japan
 - **DOI**: 10.18908/lsdba.nbdc00837-007
-- **映射方法**: scan_obj_headers.py暴力扫描2234 OBJ头部，提取BP/FMA ID
+- **URL**: https://dbarchive.biosciencedbc.jp/en/bodyparts3d/
+- **Coverage**: 14 bones, 12 muscles, 5 vessels
+- **Attribution**: "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International"
 
-#### 2. Universiti Malaya Asian Male LE MSK (Day 2待集成)
-- **来源**: [Universiti Malaya Dataverse](https://researchdata.um.edu.my/dataset.xhtml?persistentId=doi:10.22452/RD/5T6TZ7)
-- **开发**: 马来亚大学生物医学工程系
-- **许可**: **CC0 1.0** 🌟 (公共领域，连署名都无法律要求)
-- **角色**: **间隙填充器** (Quadratus plantae + Extensor digitorum brevis，BP3D缺失)
-- **内容**: 67部件（13骨+42肌+5韧带+4软骨+2肌腱+1半月板）
-- **格式**: STL → GLB
-- **状态**: 下载中（58.3MB ZIP）
+### Universiti Malaya Asian Male LE MSK (CC0 1.0)
+- **DOI**: 10.22452/RD/5T6TZ7
+- **URL**: https://researchdata.um.edu.my/dataset.xhtml?persistentId=doi:10.22452/RD/5T6TZ7
+- **Coverage**: 8 muscles (5 intrinsic + 3 extrinsic), high-resolution STL
+- **License**: Public Domain (CC0), no attribution required
 
-**必需署名**:
+### Z-Anatomy (CC BY-SA 4.0, isolated)
+- **Repository**: https://github.com/Z-Anatomy/Models-of-human-anatomy
+- **Coverage**: 6 nerves (CURVE geometry, thin tubes)
+- **Isolation**: `public/models/right-foot/by-sa/` + NOTICE.md
+- **Attribution**: "Z-Anatomy - The libre 3D atlas of anatomy - CC BY-SA 4.0"
+
+---
+
+## Limitations
+
+### Anatomical
+- **Dorsal interossei**: No open-source foot dorsal interossei found (BP3D/UM/Z-Anatomy lack)
+- **Vessel fine detail**: Digital branches missing (BP3D does not segment at this granularity)
+- **Nerve geometry**: CURVE tubes (not volumetric meshes like bones/muscles)
+- **Extrinsic muscles**: Shown in full leg-to-foot extent (teaching context, not foot-only isolation)
+
+### Technical
+- **Not patient-specific**: Teaching-grade generic anatomy (not CT/MRI-derived)
+- **Not validated for surgery**: Educational tool, not surgical planning software
+- **ShareAlike nerves**: BY-SA 4.0 applies only to `by-sa/` directory (opt-in)
+
+---
+
+## Documentation
+
+- **Design Spec**: `docs/superpowers/specs/2026-09-14-right-foot-anatomy-atlas-design.md`
+- **Implementation Plan**: `docs/superpowers/plans/2026-09-14-right-foot-anatomy-atlas.md`
+- **Asset Research**: `docs/assets-research-round2.md` (≥12 sources compared)
+- **Terminology**: `docs/terminology.md` (TA2 Latin + PRC Chinese standards)
+- **Methods**: `docs/methods.md` (data sources, extraction, limitations)
+- **Contributing**: `CONTRIBUTING.md` (license boundaries, NC-trap exclusions)
+- **Spatial Alignment QA**: `docs/spatial-alignment-qa.md` (0.01 scale verification)
+
+---
+
+## Development Workflow
+
+### Week Sprint Log (Sep 9-14, 2026)
+- **Day 1**: BP3D soft tissue discovery (15 muscles + 3 vessels)
+- **Day 2**: UM hybrid strategy (5 muscles, quality-optimized)
+- **Day 3**: Vessel expansion (arcuate artery, 5/6 coverage)
+- **Day 4**: Z-Anatomy nerve integration (6/6, Blender extraction)
+- **Day 5**: UM extrinsic muscles (3 P0 + 4 teaching, 13/14 total)
+- **Day 6**: README factual rewrite + interaction QA
+
+See `docs/daily-log.md` for detailed progress.
+
+---
+
+## Tests
+
+```bash
+npm test
 ```
-BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International
-Universiti Malaya Asian Male Lower Extremity Musculoskeletal Model (CC0 1.0, Public Domain)
-```
 
-**许可优势**:
-- ✅ 无 ShareAlike (可与 MIT 代码组合)
-- ✅ 无 NonCommercial (可商业使用)
-- ✅ GitHub 友好，期刊发表友好
-- ✅ 官方归档，DOI 标识，学术可信
+- ✅ `structureLookup.test.ts`: Structure retrieval by ID/meshName
+- ✅ `layers.test.ts`: Layer visibility helpers
 
-**详细许可文档**:
-- `LICENSE-ASSETS` - BodyParts3D CC BY 4.0 完整条款
-- `NOTICE` - 第三方归属和引用
-- `docs/assets-research.md` - 资产比较和决策记录
+All tests pass (7/7).
 
 ---
 
-## 📖 术语来源
+## Contributing
 
-- **拉丁文**: *Terminologia Anatomica 2* (TA2), FIPAT, https://ifaa.unifr.ch/
-- **中文**: 参考《人体解剖学》（第9版，人民卫生出版社）及临床标准术语
-
----
-
-## ⚖️ 许可证与合规
-
-### 应用代码
-
-**MIT License** (待添加 LICENSE 文件)
-
-本项目代码（不含 3D 模型）采用 MIT 许可证，允许自由使用、修改和分发。
-
-### 3D 模型资产
-
-- **当前**: 程序化占位几何（项目内部生成，MIT）
-- **计划**: Open3DModel Lower Limb (CC BY-SA 4.0)
-  - ✅ 允许教育、研究、商业使用
-  - ✅ 允许修改和再分发
-  - ⚠️ 需保留署名
-  - ⚠️ 衍生作品需使用相同许可证
-
-**应用内署名** (计划添加 About 页面):
-\`\`\`
-3D 模型改编自:
-"Open3DModel - Lower Limb - English labels"
-by Open3D project, Jan Kooloos (RadboudUMC), Eungyeol Lee (LUMC) et al
-License: CC BY-SA 4.0
-\`\`\`
-
-详见: \`docs/assets-research.md\` 第6节
+See `CONTRIBUTING.md` for:
+- License compatibility rules (MIT + CC BY/CC0 accepted, BY-SA isolated, NC rejected)
+- Asset contribution guidelines
+- Known NC traps to avoid (UBC Krebs textures, Zenodo 21354714, NIH 15850)
 
 ---
 
-## 🧪 测试
+## Acknowledgments
 
-### 运行测试
-
-\`\`\`bash
-npm run test          # 交互模式
-npx vitest run        # CI 模式
-\`\`\`
-
-### 测试覆盖
-
-- ✅ \`structureLookup\`: 根据 ID/网格名查找结构
-- ✅ \`layers\`: 图层配置和辅助函数
-- 🔄 (计划) 组件集成测试
+- **BodyParts3D** team (DBCLS Japan) for osteology + myology base
+- **Universiti Malaya** for high-resolution CC0 lower extremity STL
+- **Z-Anatomy** project (Gauthier Kervyn, Marcin Zielinski) for nerve CURVE models
+- **Terminologia Anatomica 2** for anatomical nomenclature standards
+- All open-source contributors to BP3D, UM, Z-Anatomy projects
 
 ---
 
-## 🏗️ 开发路线图
+## License
 
-### ✅ v1.0.0-placeholder (当前)
-
-- [x] 项目脚手架 (Vite + React + TS)
-- [x] 类型定义和 JSON 数据 (20 结构, TA2 标准)
-- [x] 图层系统和切换 UI
-- [x] 结构信息面板（ZH+LA）
-- [x] R3F 视口 + OrbitControls
-- [x] 占位几何 + 网格拾取 + 高亮
-- [x] Vitest 单元测试
-- [x] README + 免责声明 + 许可文档
-
-### 🔄 v1.1.0-real-assets (下一步)
-
-- [ ] 下载 Open3DModel Lower Limb (GLB)
-- [ ] 提取右足子集 (Blender)
-- [ ] 重命名网格匹配 \`structures.json\`
-- [ ] 更新 \`manifest.json\` (非占位模式)
-- [ ] 移除占位几何，加载真实 glTF
-- [ ] 更新 README 资产状态
-
-### 🎯 v1.2.0-publication-ready (期刊级准备)
-
-- [ ] 邀请解剖学专家审查
-- [ ] 扩展结构数据至完整右足清单 (≥40-50)
-- [ ] 添加缺失精细结构（韧带、籽骨、血管分支）
-- [ ] 实施专家反馈修正
-- [ ] 编写方法部分草稿（论文用）
-- [ ] 用户测试（医学生/教师反馈）
-- [ ] 性能优化（LOD, 实例化）
-
-### 🚀 v2.0.0-extended (长期)
-
-- [ ] 左足镜像支持
-- [ ] 踝关节扩展
-- [ ] 动画演示（肌肉收缩、关节运动）
-- [ ] 3D 标签和标注
-- [ ] 导出/分享视图
-- [ ] 移动端优化
-- [ ] 多语言切换（英文界面）
+**Code**: MIT License (see `LICENSE`)  
+**Assets**: CC BY 4.0 / CC0 1.0 / CC BY-SA 4.0 (see `manifest.json` + `by-sa/NOTICE.md`)
 
 ---
 
-## 🏥 局限性与诚实声明
-
-### 当前版本局限
-
-1. **占位几何**: v1.0.0 使用示意性几何体，**非解剖精确模型**
-2. **简化结构**: 20 个结构为初始集，完整右足包含 ≥40-50 个主要结构
-3. **缺少精细**: 韧带、关节囊、小血管分支、神经末梢未包含
-4. **未经专家审查**: 需解剖学家/足踝外科专家验证后方可用于正式发表
-5. **个体变异**: 未体现解剖变异和病理状态
-
-### 迈向期刊级图谱的要求
-
-- [ ] 解剖学专家审查委员会验证
-- [ ] 真实尸体/影像数据对比
-- [ ] 完整结构覆盖
-- [ ] 方法学文档（模型来源、提取、修改过程）
-- [ ] 临床专家用户测试
-- [ ] 同行评审
-
-**建议引用方式** (当前版本):
-> "本研究使用右足解剖图谱 v1.0.0 (https://github.com/linjinmiao1985/right-foot-anatomy-atlas) 进行教学演示。该工具基于 Terminologia Anatomica 2 标准命名，计划采用 Open3DModel Lower Limb (CC BY-SA 4.0) 模型，当前使用示意性几何体，尚未经过正式解剖学专家审查，仅用于初步教育用途。"
-
----
-
-## 🤝 贡献指南
-
-欢迎贡献！特别是:
-- 解剖学准确性审查
-- 中文医学术语优化
-- 真实 3D 模型提取协助
-- 性能优化建议
-- 教育用例反馈
-
-**贡献者要求**:
-- 遵守 TypeScript 严格模式
-- 编写测试覆盖新功能
-- 提交消息格式: \`feat:\` / \`fix:\` / \`docs:\` 等
-- 尊重许可证（CC BY-SA 4.0 for 3D assets）
-
----
-
-## 📞 联系与支持
-
-- **Issue Tracker**: [GitHub Issues](https://github.com/linjinmiao1985/right-foot-anatomy-atlas/issues)
-- **文档**: 见 \`docs/\` 目录
-- **解剖学顾问**: [待确定]
-
----
-
-## 🙏 致谢
-
-- **Open3D Project** (Leiden LUMC, Radboud UMC, Utrecht UMC等) - 开源解剖模型
-- **FIPAT/IFAA** - Terminologia Anatomica 国际标准
-- **React Three Fiber 社区** - 优秀的 3D Web 框架
-
----
-
-## 📄 许可证
-
-### 代码
-MIT License (见 LICENSE 文件)
-
-### 3D 模型
-- 占位几何: MIT (本项目)
-- Open3DModel (计划): CC BY-SA 4.0 (见 \`docs/assets-research.md\`)
-
----
-
-**最后更新**: 2026-09-14  
-**项目状态**: 🚧 积极开发中 (v1.0.0-placeholder)  
-**生产就绪**: ❌ 仅用于教育演示，尚未用于期刊发表
+**Project Status**: Teaching-grade atlas, week sprint in progress (Day 6/7)  
+**Coverage**: 88% real meshes (38/43 structures)  
+**Repository**: https://github.com/linjinmiao1985/right-foot-anatomy-atlas

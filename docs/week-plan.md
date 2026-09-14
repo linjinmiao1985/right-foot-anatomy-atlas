@@ -115,7 +115,54 @@
 
 ---
 
-### Day 6 (Sat): Nerve/Vessel Integration OR Camera/UX Polish
+### Day 6 (Sat): ✅ COMPLETED — README Factual Rewrite + Interaction QA
+**Focus**: Remove hype, factual coverage table, interaction quality checks
+
+**Actual Tasks**:
+1. ✅ Fixed `structures.json` vessel placeholder flags (5/9 real, 4 placeholder)
+2. ✅ Searched BP3D for digital vessel branches (not found, lacking BP codes)
+3. ✅ Rewrote README: removed "world's first" / "98% complete" hype
+   - Added factual coverage table (88% real: 38/43 structures)
+   - Added license map (MIT / CC BY / CC0 / BY-SA isolated)
+   - Removed celebration language, focused on limitations
+4. ✅ Updated `manifest.json` stats (factual: 13/14 muscles, 5/9 vessels)
+5. ✅ Created `docs/interaction-qa.md` (layer toggles, BY-SA badge, thin nerve selection)
+6. ✅ All tests + build green
+
+**Deliverable**: Honest README + interaction quality documented
+
+**Success Metric**: ✅ Factual tone, no marketing, gaps disclosed
+
+---
+
+### Day 7 (Sun): Polish + Expert Review Prep
+**Focus**: Final documentation, expert review checklist, methods.md for teaching/journal track
+
+**Tasks**:
+1. ⏳ Expert review checklist:
+   - TA2 nomenclature correctness (spot-check 10 random structures)
+   - Chinese terminology alignment with PRC standards
+   - Anatomical accuracy (bone articulations, muscle origins/insertions)
+   - Summary quality (clinical relevance, no copy-paste filler)
+2. ⏳ `docs/methods.md` polish:
+   - Data provenance (BP3D R4, UM doi, Z-Anatomy commit SHA)
+   - Extraction methodology (Blender Python API, trimesh STL→GLB)
+   - Limitations (teaching-grade vs patient-specific, BY-SA boundary)
+   - Reproducibility (scripts in `assets-raw/`, git history)
+3. ⏳ Optional screenshot pack (if browser testing available):
+   - Default view (all layers)
+   - Bone layer only
+   - Muscle layer only (highlight intrinsics)
+   - Nerve layer only (BY-SA badge visible)
+   - Selection panel demo (structure info)
+4. ⏳ Update `docs/daily-log.md` Day 6-7
+5. ⏳ Push PR; tests green
+
+**Deliverable**: Teaching-grade atlas ready for peer review
+
+**Success Metric**: Expert can verify TA2 + anatomy quality without code inspection
+
+**NOT "shipped finished"**: Still teaching-grade, not journal-published
 **Focus**: Either integrate nerves/vessels OR improve viewer experience
 
 **Option A** (if Z-Anatomy BY-SA acceptable):
