@@ -1,7 +1,21 @@
 {
-  "version": "1.0.0-placeholder",
-  "source": "procedural_placeholder_geometry",
-  "license": "N/A - placeholder only",
-  "models": [],
-  "note": "当前使用程序化占位几何体。计划替换为 Open3DModel Lower Limb (CC BY-SA 4.0) 提取的右足子集。"
+  "version": "1.1.0-bodyparts3d-partial",
+  "source": "BodyParts3D Release 4.0 (DBCLS Japan)",
+  "license": "CC BY 4.0",
+  "attribution": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+  "date_extracted": "2026-09-14",
+  "models": [
+    {"id": "calcaneus", "file": "calcaneus_BP9040.glb", "bp": "BP9040", "fma": "FMA24497", "name_zh": "跟骨", "name_la": "Calcaneus"},
+    {"id": "navicular", "file": "navicular_BP9133.glb", "bp": "BP9133", "fma": "FMA24500", "name_zh": "舟骨", "name_la": "Os naviculare"},
+    {"id": "cuneiform_medial", "file": "cuneiform_medial_BP8774.glb", "bp": "BP8774", "fma": "FMA24519", "name_zh": "内侧楔骨", "name_la": "Os cuneiforme mediale"},
+    {"id": "cuneiform_intermediate", "file": "cuneiform_intermediate_BP9205.glb", "bp": "BP9205", "fma": "FMA24520", "name_zh": "中间楔骨", "name_la": "Os cuneiforme intermedium"},
+    {"id": "cuneiform_lateral", "file": "cuneiform_lateral_BP8472.glb", "bp": "BP8472", "fma": "FMA24521", "name_zh": "外侧楔骨", "name_la": "Os cuneiforme laterale"},
+    {"id": "metatarsal_1", "file": "metatarsal_1_BP8230.glb", "bp": "BP8230", "fma": "FMA24507", "name_zh": "第一跖骨", "name_la": "Os metatarsi I"},
+    {"id": "metatarsal_2", "file": "metatarsal_2_BP8627.glb", "bp": "BP8627", "fma": "FMA24509", "name_zh": "第二跖骨", "name_la": "Os metatarsi II"},
+    {"id": "metatarsal_3", "file": "metatarsal_3_BP8802.glb", "bp": "BP8802", "fma": "FMA24511", "name_zh": "第三跖骨", "name_la": "Os metatarsi III"},
+    {"id": "metatarsal_4", "file": "metatarsal_4_BP9130.glb", "bp": "BP9130", "fma": "FMA24513", "name_zh": "第四跖骨", "name_la": "Os metatarsi IV"},
+    {"id": "metatarsal_5", "file": "metatarsal_5_BP7912.glb", "bp": "BP7912", "fma": "FMA24515", "name_zh": "第五跖骨", "name_la": "Os metatarsi V"},
+    {"id": "phalanx_prox_1", "file": "phalanx_prox_1_BP8488.glb", "bp": "BP8488", "fma": "FMA32951", "name_zh": "踇趾近节趾骨", "name_la": "Phalanx proximalis hallucis"}
+  ],
+  "note": "11/14骨骼使用BodyParts3D真实模型（CC BY 4.0）。缺失: talus, cuboid, distal_phalanx_1（使用占位几何）。肌肉/神经/血管仍为占位。"
 }
