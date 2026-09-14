@@ -1,0 +1,23 @@
+import { describe, it, expect } from 'vitest';
+import { LAYER_CONFIG, getAllLayers } from './layers';
+
+describe('layers', () => {
+  it('should have config for all four layers', () => {
+    expect(LAYER_CONFIG.bone).toBeDefined();
+    expect(LAYER_CONFIG.muscle).toBeDefined();
+    expect(LAYER_CONFIG.nerve).toBeDefined();
+    expect(LAYER_CONFIG.vessel).toBeDefined();
+  });
+
+  it('should return all layer keys', () => {
+    const layers = getAllLayers();
+    expect(layers).toEqual(['bone', 'muscle', 'nerve', 'vessel']);
+  });
+
+  it('should have Chinese labels', () => {
+    expect(LAYER_CONFIG.bone.label).toBe('骨骼');
+    expect(LAYER_CONFIG.muscle.label).toBe('肌肉');
+    expect(LAYER_CONFIG.nerve.label).toBe('神经');
+    expect(LAYER_CONFIG.vessel.label).toBe('血管');
+  });
+});
