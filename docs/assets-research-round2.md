@@ -276,18 +276,46 @@
 
 | # | Source | License | Bones | Muscles | Nerves | Vessels | Intrinsics | Verdict |
 |---|--------|---------|-------|---------|--------|---------|------------|---------|
-| 1 | **BodyParts3D** | CC BY 4.0 | 14/14 | ~8/14 | 0/6 | ~4-6/6 | ✅ Partial | **ADOPT** |
-| 2 | **UM Asian Male** | CC0 1.0 | 13 | ~5/14 | 0/6 | 0/6 | ✅ QP/EDB | **ADOPT** |
-| 3 | **Open3DModel** | CC BY-SA 4.0 | ✅ | ✅ Fuller | ✅ | ✅ | ✅ FHB/AddH/Lumb/Inter | **ISOLATE** |
-| 4 | **DU VH** | CC BY 4.0 | ✅ | 3 extr | ❌ | ❌ | ❌ | Defer |
-| 5 | **Zenodo 21354714** | BY-NC-SA | ⚠️ | ⚠️ | ❌ | ❌ | ⚠️ | **REJECT** (NC) |
-| 6 | **Zenodo 1056750** | CC BY | ❌ | ❌ | PDF | ❌ | N/A | **REJECT** (no mesh) |
-| 7 | **NIH 15850** | BY-NC-SA | ⚠️ | ⚠️ | ❌ | ❌ | ⚠️ | **REJECT** (NC) |
-| 8 | **SPARC 307** | CC BY | ❌ | ❌ | Scaffold | Scaffold | N/A | Link-only |
-| 9 | **Z-Anatomy** | CC BY-SA | ⚠️ | ⚠️ | Curves | Curves | ⚠️ | Defer (→Open3D) |
-| 10 | **Visible Korean** | Custom | ✅ | ✅ | ✅ | ✅ | ✅ | Link-only |
+| 1 | **BodyParts3D** | CC BY 4.0 | 14/14 | 12 GLB | 0/6 | 5/6 | ✅ Partial (10/11) | **✅ INTEGRATED** |
+| 2 | **UM Asian Male** | CC0 1.0 | 13 | 5 GLB | 0/6 | 0/6 | ✅ QP/EDB+3 upgr | **✅ INTEGRATED** |
+| 3 | **Open3DModel** | CC BY-SA 4.0 | ✅ | ✅ Fuller | ✅ | ✅ | ✅ FHB/AddH/Lumb/Inter | ⏸️ **BLOCKED** (404) |
+| 4 | **Z-Anatomy** | CC BY-SA 4.0 | ⚠️ | ⚠️ | Curves | Curves | ⚠️ | ⏸️ **BLENDER-ONLY** |
+| 5 | **DU VH** | CC BY 4.0 | ✅ | 3 extr | ❌ | ❌ | ❌ | Defer |
+| 6 | **Zenodo 21354714** | BY-NC-SA | ⚠️ | ⚠️ | ❌ | ❌ | ⚠️ | ❌ **REJECT** (NC) |
+| 7 | **Zenodo 1056750** | CC BY | ❌ | ❌ | PDF | ❌ | N/A | ❌ **REJECT** (no mesh) |
+| 8 | **NIH 15850** | BY-NC-SA | ⚠️ | ⚠️ | ❌ | ❌ | ⚠️ | ❌ **REJECT** (NC) |
+| 9 | **SPARC 307** | CC BY | ❌ | ❌ | Scaffold | Scaffold | N/A | Link-only |
+| 10 | **Visible Korean** | Custom | ✅ | ✅ | ✅ | ✅ | ✅ | Link-only (agr req) |
 | 11 | **OPANEX** | Varies | ⚠️ | ⚠️ | ⚠️ | ⚠️ | ⚠️ | Link-only (viewer) |
-| 12 | **Foot3D** | Varies | ❌ | ❌ | ❌ | ❌ | ❌ | **REJECT** (surface) |
+| 12 | **Foot3D** | Varies | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ **REJECT** (surface) |
+
+---
+
+## Current Integration Status (Day 4)
+
+### ✅ Real Meshes Integrated (CC BY / CC0)
+- **Bones**: 14/14 (100%) — All BodyParts3D
+- **Intrinsic Muscles**: 10/11 (91%) — Hybrid BP3D (12 GLB) + UM (5 GLB) = **17 GLB total**
+  - UM CC0 (5): AH, FDB, ADM, **QP** (BP3D gap), **EDB** (BP3D gap)
+  - BP3D CC BY 4.0 (12): EHB, FDMB, AH heads, FHB, lumbricals(4), plantar interossei(3)
+  - Missing: Dorsal interossei (0 sources found)
+- **Vessels**: 5/6 (83%) — All BodyParts3D
+  - Dorsalis pedis artery, medial/lateral plantar arteries, plantar arch, arcuate artery
+  - Missing: Deep plantar arch digital branches (fine detail)
+- **Nerves**: 0/6 (0%) — Schematic only (honest 占位 labeling)
+  - BP3D: 0 foot nerves confirmed
+  - UM: 0 nerves
+  - Open3DModel: download blocked (session-based links)
+  - Z-Anatomy: Blender-internal (requires manual extraction)
+
+### ⏸️ Blockers (Day 3-4)
+- **Open3DModel Lower Limb OBJ**: 404 errors (dynamic/session links)
+- **Z-Anatomy Nerves/Vessels**: Requires Blender installation (~800MB) + manual export
+
+### 📊 Teaching Product Metrics
+- **Real anatomy coverage**: 29/35 structures (83%)
+- **Placeholder structures**: 6 (3 extrinsic muscles, 1 intrinsic, 6 nerves)
+- **License compliance**: MIT code + CC BY / CC0 assets (redistributable)
 
 ---
 

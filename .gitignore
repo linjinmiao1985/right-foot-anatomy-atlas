@@ -38,3 +38,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 assets-raw/
+
+# Z-Anatomy source files (206MB, can be re-cloned from GitHub)
+third_party/z-anatomy/*
+!third_party/z-anatomy/EVALUATION.md
