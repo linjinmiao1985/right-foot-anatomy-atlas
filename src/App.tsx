@@ -1,15 +1,16 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Viewport from './components/Viewport';
 import LayerToggles from './components/LayerToggles';
 import StructurePanel from './components/StructurePanel';
 import { getAllLayers } from './lib/layers';
-import { getStructureByMeshName } from './lib/structureLookup';
+import { getStructureByMeshName, getAllStructures } from './lib/structureLookup';
 import type { Layer } from './types/anatomy';
 import type { AnatomyStructure } from './types/anatomy';
 
 function App() {
   const [visibleLayers, setVisibleLayers] = useState<Set<Layer>>(new Set(getAllLayers()));
   const [selectedStructure, setSelectedStructure] = useState<AnatomyStructure | null>(null);
+  const [selectedMeshName, setSelectedMeshName] = useState<string | null>(null);
 
   const handleLayerToggle = (layer: Layer) => {
     setVisibleLayers((prev) => {
@@ -24,6 +25,7 @@ function App() {
   };
 
   const handleMeshClick = (meshName: string) => {
+    setSelectedMeshName(meshName);
     const structure = getStructureByMeshName(meshName);
     if (structure) {
       setSelectedStructure(structure);
@@ -40,7 +42,26 @@ function App() {
     }
   };
 
-  const placeholderCount = { bone: 0, muscle: 0, nerve: 0, vessel: 0 };
+  const handleClose = () => {
+    setSelectedStructure(null);
+    setSelectedMeshName(null);
+  };
+
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        handleClose();
+      }
+    };
+    window.addEventListener('keydown', handleEscape);
+    return () => window.removeEventListener('keydown', handleEscape);
+  }, []);
+
+  const structures = getAllStructures();
+  const placeholderCount = structures.reduce((acc, s) => {
+    if (s.placeholder) acc[s.layer]++;
+    return acc;
+  }, { bone: 0, muscle: 0, nerve: 0, vessel: 0 } as Record<Layer, number>);
 
   return (
     <div style={{ width: '100vw', height: '100vh', position: 'relative' }}>
@@ -62,9 +83,9 @@ function App() {
 
       <LayerToggles visibleLayers={visibleLayers} onToggle={handleLayerToggle} placeholderCount={placeholderCount} />
 
-      <Viewport onMeshClick={handleMeshClick} visibleLayers={visibleLayers} />
+      <Viewport onMeshClick={handleMeshClick} visibleLayers={visibleLayers} selectedMeshName={selectedMeshName} />
 
-      <StructurePanel structure={selectedStructure} onClose={() => setSelectedStructure(null)} />
+      <StructurePanel structure={selectedStructure} onClose={handleClose} />
 
       <div
         style={{

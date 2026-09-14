@@ -1,14 +1,15 @@
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Grid } from '@react-three/drei';
+import FootModel from './FootModel';
 import type { Layer } from '../types/anatomy';
 
 interface ViewportProps {
   onMeshClick: (meshName: string) => void;
   visibleLayers: Set<Layer>;
+  selectedMeshName: string | null;
 }
 
-export default function Viewport(_props: ViewportProps) {
-  // onMeshClick 和 visibleLayers 将在 Task 6 添加 FootModel 时使用
+export default function Viewport({ onMeshClick, visibleLayers, selectedMeshName }: ViewportProps) {
   return (
     <Canvas
       camera={{ position: [1.5, 1, 1.5], fov: 50 }}
@@ -20,9 +21,9 @@ export default function Viewport(_props: ViewportProps) {
 
       <Grid args={[10, 10]} cellSize={0.5} cellThickness={0.5} cellColor="#444" sectionColor="#666" fadeDistance={15} />
 
-      <OrbitControls enableDamping dampingFactor={0.05} minDistance={0.5} maxDistance={5} />
+      <FootModel visibleLayers={visibleLayers} onMeshClick={onMeshClick} selectedMeshName={selectedMeshName} />
 
-      {/* 模型组将在 Task 6 添加 */}
+      <OrbitControls enableDamping dampingFactor={0.05} minDistance={0.5} maxDistance={5} />
     </Canvas>
   );
 }

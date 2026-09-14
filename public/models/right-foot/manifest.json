@@ -1,0 +1,7 @@
+{
+  "version": "1.0.0-placeholder",
+  "source": "procedural_placeholder_geometry",
+  "license": "N/A - placeholder only",
+  "models": [],
+  "note": "当前使用程序化占位几何体。计划替换为 Open3DModel Lower Limb (CC BY-SA 4.0) 提取的右足子集。"
+}
