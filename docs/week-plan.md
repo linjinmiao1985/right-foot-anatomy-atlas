@@ -8,18 +8,32 @@
 
 ---
 
-## Current Status (Day 1, Evening)
+## Current Status (Day 2, Complete)
 
-### Completed Today
-- ✅ Asset Research Round 2 initiated (docs/assets-research-round2.md, 12+ sources)
+### Day 1 Completed
+- ✅ Asset Research Round 2 (docs/assets-research-round2.md, ≥12 sources)
+- ✅ BP3D soft tissue breakthrough (15 muscles + 3 vessels extracted, NOT bones-only!)
 - ✅ **Key finding**: Universiti Malaya CC0 dataset (42 muscles, intrinsics confirmed)
-- ✅ Phase 4 conclusion corrected (intrinsic muscles DO exist in open datasets)
-- ✅ Owner update + apology for insufficient Phase 4 research
+- ✅ Phase 4 error corrected (BP3D DOES have soft tissue, UM for gaps)
 
-### In Progress
-- ⏸️ UM STL ZIP download (58.3MB, 42 muscles) — requires file ID or browser
-- ⏸️ License verification for Zenodo, SPARC, Z-Anatomy, Open3DModel
-- ⏸️ FootModel.tsx muscle layer wiring (awaiting UM inventory)
+### Day 2 Completed (UM Hybrid Integration)
+- ✅ **Dataverse API success**: Downloaded UM STL ZIP (58.3MB, file ID 596, 6.5s)
+- ✅ **42-muscle inventory**: Listed all foot muscles (5 intrinsics: QP, EDB, AH, ADM, FDB)
+- ✅ **Quality comparison**: UM 2.4-8.7x resolution vs BP3D (data-driven decision)
+- ✅ **Hybrid strategy**: 17 real muscles (BP3D 12 + UM 5, quality-optimized)
+- ✅ **Vessel expansion**: Added plantar arch (4/6 vessels, 67% coverage)
+- ✅ **Integration**: FootModel + manifest v2.1.0, tests green (build PASS, vitest 7/7)
+
+### Atlas Status Now (Day 2)
+- **Bones**: 14/14 (100%, BP3D CC BY 4.0)
+- **Muscles**: 17/~20 (85%, BP3D 12 + UM 5, hybrid)
+- **Vessels**: 4/6 (67%, BP3D)
+- **Nerves**: 0/6 (0%, Open3DModel BY-SA Day 4-5)
+
+### Key Decisions
+1. **Hybrid over Uniform**: UM quality advantage (2.4-8.7x) justifies dual-source strategy
+2. **Completeness**: BP3D 12 unique muscles + UM 5 (3 quality upgrades, 2 gaps) = 17 total
+3. **Week Pacing**: Deep integration (API + analysis + hybrid) > shallow browser workaround
 
 ---
 

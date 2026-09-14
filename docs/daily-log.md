@@ -78,32 +78,51 @@ Phase 4 claimed "no open intrinsic foot muscles exist" based on insufficient sea
 
 ---
 
-## Day 2 (Tue 2026-09-15) — PLANNED
+## Day 2 (Mon 2026-09-14, 晚) — COMPLETED
 
-### Focus: UM Muscle Inventory (Complete 42-muscle catalog)
+### Focus: UM CC0 Hybrid Integration + Vessel Expansion
 
-**Hard Problem to Solve**: Download + systematically inventory 42 muscles from UM dataset
+**Hard Problem Solved**: Dataverse API download + quality-optimized muscle replacement + vessel coverage expansion
 
-**Planned Tasks**:
-1. UM download via browser (if scripted methods exhausted)
-2. Extract `Final Model STL files.zip` (58.3 MB)
-3. List all 67 STL filenames (13 bones, 42 muscles, 5 ligaments, 4 cartilage, 2 tendons, 1 meniscus)
-4. Filter to 42 muscle files
-5. Identify foot-relevant subset (~15-20 expected)
-6. Document in `assets-raw/um-asian-male/UM_MUSCLE_INVENTORY.md`:
-   - Complete filename list
-   - Foot-relevant subset
-   - Mapping to structures.json IDs
-   - Laterality (right vs left)
-   - Scale/orientation clues
+**Progress**:
+1. ✅ **Dataverse API success**: `GET /api/datasets/:persistentId` → resolved file ID 596 → downloaded 58.3MB in 6.5s
+2. ✅ **42-muscle inventory**: Extracted ZIP, listed all filenames, identified 5 foot intrinsics (QP, EDB, AH, ADM, FDB)
+3. ✅ **Quality comparison**: UM vs BP3D overlapping muscles (2.4-8.7x resolution advantage)
+4. ✅ **Hybrid strategy**: Replace 3 BP3D with UM (quality) + Add 2 UM (gaps) = 17 real muscles (85% coverage)
+5. ✅ **Vessel expansion**: Scanned BP3D for additional vessels, extracted plantar arch (67% coverage, 4/6)
+6. ✅ **GLB conversion**: 5 UM muscles STL→GLB (1.01MB), 1 additional BP3D vessel OBJ→GLB
+7. ✅ **Integration**: Updated FootModel REAL_MUSCLE_MODELS (17 paths), REAL_VESSEL_MODELS (4), manifest v2.1.0
 
-**Success Criteria**:
-- ✅ All 42 muscle filenames documented
-- ✅ Foot-relevant muscles identified (expect ≥11 intrinsics)
-- ✅ Mapping table ready for Day 3 conversion
+### Quality Decisions (Data-Driven)
+| Muscle | BP3D Verts | UM Verts | Ratio | Decision |
+|--------|------------|----------|-------|----------|
+| Abductor Hallucis | 974 | 8,482 | **8.7x** | ✅ Use UM |
+| Abductor Digiti Minimi | 1,492 | 6,646 | **4.5x** | ✅ Use UM |
+| Flexor Digitorum Brevis | 2,468 | 5,804 | **2.4x** | ✅ Use UM |
+| Quadratus Plantae | ❌ Absent | ✅ Present | — | ✅ Use UM (gap) |
+| Extensor Digitorum Brevis | ❌ Absent | ✅ Present | — | ✅ Use UM (gap) |
 
-**Blocker Contingency**:
-If UM download impossible: Switch to Z-Anatomy repo cloning + nerve/vessel curve inventory
+**Verdict**: Hybrid approach achieves best quality (UM high-res) + completeness (BP3D unique muscles)
+
+### Final Atlas Status (Day 2)
+- **Bones**: 14/14 (100%, BP3D CC BY 4.0)
+- **Muscles**: 17/~20 (85%, BP3D 12 + UM CC0 5)
+- **Vessels**: 4/6 (67%, BP3D main arteries + arch)
+- **Nerves**: 0/6 (0%, Open3DModel BY-SA Day 4-5)
+- **Total GLB**: 35 files (1.9MB: 393KB bones + 1.35MB muscles + 170KB vessels)
+
+### Commits
+1. `40f4e4c`: UM CC0 hybrid + plantar arch (Day 2 complete)
+
+### Tests
+- ✅ npm run build: PASS (1.09MB)
+- ✅ npx vitest run: 7/7 PASS
+
+### Key Insights
+- **Dataverse API works**: `GET /api/datasets/:persistentId` returns file list with IDs, `GET /api/access/datafile/{id}` downloads directly (no browser)
+- **Quality matters**: UM 2.4-8.7x resolution upgrade justified hybrid approach vs "uniform source" preference
+- **BP3D vessel coverage underestimated**: Found plantar arch (BP6014), deep plantar (BP6012), superficial medial plantar (BP6436) — integrated arch (in structures.json)
+- **Week sprint pacing validated**: Day 2 deep integration (Dataverse API + quality analysis + 2 source hybrid) > Day 1 shallow "assume browser needed"
 
 ---
 
