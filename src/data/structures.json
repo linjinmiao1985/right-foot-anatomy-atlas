@@ -72,6 +72,33 @@
     "placeholder": false
   },
   {
+    "id": "metatarsal_2",
+    "meshNames": ["Metatarsal_II_R", "Metatarsal_2_Right"],
+    "layer": "bone",
+    "nameZh": "第二跖骨",
+    "nameLa": "Os metatarsi II",
+    "summaryZh": "五根跖骨中最长者，与中间楔骨相接，底部嵌入楔骨间形成坚固的跗跖关节",
+    "placeholder": false
+  },
+  {
+    "id": "metatarsal_3",
+    "meshNames": ["Metatarsal_III_R", "Metatarsal_3_Right"],
+    "layer": "bone",
+    "nameZh": "第三跖骨",
+    "nameLa": "Os metatarsi III",
+    "summaryZh": "与外侧楔骨相接，底部接触第2和第4跖骨底，参与构成横弓",
+    "placeholder": false
+  },
+  {
+    "id": "metatarsal_4",
+    "meshNames": ["Metatarsal_IV_R", "Metatarsal_4_Right"],
+    "layer": "bone",
+    "nameZh": "第四跖骨",
+    "nameLa": "Os metatarsi IV",
+    "summaryZh": "与骰骨相接，位于第3和第5跖骨之间，参与维持足外侧纵弓",
+    "placeholder": false
+  },
+  {
     "id": "metatarsal_5",
     "meshNames": ["Metatarsal_V_R", "Metatarsal_5_Right"],
     "layer": "bone",
@@ -81,12 +108,39 @@
     "placeholder": false
   },
   {
+    "id": "proximal_phalanx_1",
+    "meshNames": ["Phalanx_Prox_Hallux_R", "Phalanx_Proximal_1_Right"],
+    "layer": "bone",
+    "nameZh": "拇趾近节趾骨",
+    "nameLa": "Phalanx proximalis hallucis",
+    "summaryZh": "拇趾（第1趾）的近节趾骨，拇趾仅有2节趾骨，此为近端一节",
+    "placeholder": false
+  },
+  {
+    "id": "distal_phalanx_1",
+    "meshNames": ["Phalanx_Dist_Hallux_R", "Phalanx_Distal_1_Right"],
+    "layer": "bone",
+    "nameZh": "拇趾远节趾骨",
+    "nameLa": "Phalanx distalis hallucis",
+    "summaryZh": "拇趾（第1趾）的远节趾骨，构成拇趾尖端，支持指甲床",
+    "placeholder": false
+  },
+  {
+    "id": "phalanges_2_5",
+    "meshNames": ["Phalanges_2_R", "Phalanges_3_R", "Phalanges_4_R", "Phalanges_5_R"],
+    "layer": "bone",
+    "nameZh": "第2-5趾趾骨",
+    "nameLa": "Phalanges digitorum pedis II-V",
+    "summaryZh": "第2-5趾的趾骨，每趾3节（近节、中节、远节），共12块，参与足趾的屈伸运动",
+    "placeholder": false
+  },
+  {
     "id": "tibialis_posterior",
     "meshNames": ["Tibialis_Posterior_R", "M_Tibialis_Posterior_Right"],
     "layer": "muscle",
     "nameZh": "胫骨后肌",
     "nameLa": "M. tibialis posterior",
-    "summaryZh": "小腿深后群最深层肌，起自胫腓骨后面和骨间膜，止于舟骨粗隆和楔骨，作用为足内翻和跖屈，动态支撑内侧纵弓",
+    "summaryZh": "小腿深后群最深层肌，起自胫腓骨后面和骨间膜，止于舟骨粗隆和楔骨，作用为足内翻和跖屈，动态支撑内侧纵弓，胫神经支配",
     "placeholder": false
   },
   {
@@ -95,7 +149,7 @@
     "layer": "muscle",
     "nameZh": "趾长屈肌",
     "nameLa": "M. flexor digitorum longus",
-    "summaryZh": "起自胫骨后面，经内踝后方入足底，分为4腱止于第2-5趾远节趾骨底，屈第2-5趾并辅助跖屈",
+    "summaryZh": "小腿后群深层肌，起自胫骨后面，经内踝后方入足底，分为4腱止于第2-5趾远节趾骨底，屈第2-5趾并辅助跖屈，胫神经支配",
     "placeholder": false
   },
   {
@@ -104,16 +158,106 @@
     "layer": "muscle",
     "nameZh": "拇长屈肌",
     "nameLa": "M. flexor hallucis longus",
-    "summaryZh": "起自腓骨后面下2/3，肌腱经距骨后方内踝后下至足底，止于拇趾远节趾骨底，屈拇趾并辅助跖屈",
+    "summaryZh": "小腿后群深层肌，起自腓骨后面下2/3，肌腱经距骨后方内踝后下至足底，止于拇趾远节趾骨底，屈拇趾并辅助跖屈，胫神经支配",
     "placeholder": false
   },
   {
-    "id": "gastrocnemius",
-    "meshNames": ["Gastrocnemius_R", "M_Gastrocnemius_Medial_R", "M_Gastrocnemius_Lateral_R"],
+    "id": "abductor_hallucis",
+    "meshNames": ["Abductor_Hallucis_R", "M_Abductor_Hallucis_Right"],
     "layer": "muscle",
-    "nameZh": "腓肠肌",
-    "nameLa": "M. gastrocnemius",
-    "summaryZh": "小腿后群浅层，内外侧头起自股骨内外侧髁，与比目鱼肌共同形成小腿三头肌，经跟腱止于跟骨结节，主要作用为跖屈踝关节",
+    "nameZh": "拇展肌",
+    "nameLa": "M. abductor hallucis",
+    "summaryZh": "足底内侧群浅层肌，起自跟骨结节内侧突，止于拇趾近节趾骨底内侧，作用为展拇趾和屈拇趾近节，足底内侧神经支配",
+    "placeholder": false
+  },
+  {
+    "id": "flexor_hallucis_brevis",
+    "meshNames": ["Flexor_Hallucis_Brevis_R", "M_Flexor_Hallucis_Brevis_Right"],
+    "layer": "muscle",
+    "nameZh": "拇短屈肌",
+    "nameLa": "M. flexor hallucis brevis",
+    "summaryZh": "足底内侧群深层肌，起自骰骨和外侧楔骨，分内外侧腹止于拇趾近节趾骨底两侧（各含一籽骨），屈拇趾近节，足底内侧神经支配",
+    "placeholder": false
+  },
+  {
+    "id": "adductor_hallucis",
+    "meshNames": ["Adductor_Hallucis_R", "M_Adductor_Hallucis_Right"],
+    "layer": "muscle",
+    "nameZh": "拇收肌",
+    "nameLa": "M. adductor hallucis",
+    "summaryZh": "足底深层肌，斜头起自第2-4跖骨底和跖侧韧带，横头起自第3-5跖趾关节囊，共同止于拇趾近节趾骨底外侧，收拇趾并维持横弓，足底外侧神经深支支配",
+    "placeholder": false
+  },
+  {
+    "id": "flexor_digitorum_brevis",
+    "meshNames": ["Flexor_Digitorum_Brevis_R", "M_Flexor_Digitorum_Brevis_Right"],
+    "layer": "muscle",
+    "nameZh": "趾短屈肌",
+    "nameLa": "M. flexor digitorum brevis",
+    "summaryZh": "足底中间群浅层肌，起自跟骨结节，分为4腱止于第2-5趾中节趾骨，屈第2-5趾近节和中节，类似于手部指浅屈肌，足底内侧神经支配",
+    "placeholder": false
+  },
+  {
+    "id": "quadratus_plantae",
+    "meshNames": ["Quadratus_Plantae_R", "M_Quadratus_Plantae_Right"],
+    "layer": "muscle",
+    "nameZh": "足底方肌",
+    "nameLa": "M. quadratus plantae",
+    "summaryZh": "足底中间群深层肌，起自跟骨内外侧，止于趾长屈肌腱，调整趾长屈肌的牵拉方向，使其沿足轴方向屈趾，足底外侧神经支配",
+    "placeholder": false
+  },
+  {
+    "id": "lumbricals",
+    "meshNames": ["Lumbrical_1_R", "Lumbrical_2_R", "Lumbrical_3_R", "Lumbrical_4_R"],
+    "layer": "muscle",
+    "nameZh": "蚓状肌",
+    "nameLa": "Mm. lumbricales pedis",
+    "summaryZh": "4条小肌肉，起自趾长屈肌腱，止于第2-5趾近节趾骨和趾伸肌腱膜，屈近节伸远节，第1条由足底内侧神经支配，第2-4条由足底外侧神经支配",
+    "placeholder": false
+  },
+  {
+    "id": "interossei_dorsales",
+    "meshNames": ["Interosseous_Dorsal_1_R", "Interosseous_Dorsal_2_R", "Interosseous_Dorsal_3_R", "Interosseous_Dorsal_4_R"],
+    "layer": "muscle",
+    "nameZh": "骨间背侧肌",
+    "nameLa": "Mm. interossei dorsales pedis",
+    "summaryZh": "4条双羽状肌，位于跖骨间隙背侧，作用为展第2-4趾（以第2趾为轴），并协助屈近节伸远节，足底外侧神经深支支配",
+    "placeholder": false
+  },
+  {
+    "id": "interossei_plantares",
+    "meshNames": ["Interosseous_Plantar_1_R", "Interosseous_Plantar_2_R", "Interosseous_Plantar_3_R"],
+    "layer": "muscle",
+    "nameZh": "骨间跖侧肌",
+    "nameLa": "Mm. interossei plantares",
+    "summaryZh": "3条单羽状肌，位于第3-5跖骨内侧，作用为收第3-5趾向第2趾（收缩轴），并协助屈近节伸远节，足底外侧神经深支支配",
+    "placeholder": false
+  },
+  {
+    "id": "abductor_digiti_minimi",
+    "meshNames": ["Abductor_Digiti_Minimi_R", "M_Abductor_Digiti_Minimi_Right"],
+    "layer": "muscle",
+    "nameZh": "小趾展肌",
+    "nameLa": "M. abductor digiti minimi pedis",
+    "summaryZh": "足底外侧群浅层肌，起自跟骨结节外侧突和第5跖骨粗隆，止于小趾近节趾骨底外侧，展和屈小趾近节，足底外侧神经支配",
+    "placeholder": false
+  },
+  {
+    "id": "flexor_digiti_minimi_brevis",
+    "meshNames": ["Flexor_Digiti_Minimi_Brevis_R", "M_Flexor_Digiti_Minimi_Brevis_Right"],
+    "layer": "muscle",
+    "nameZh": "小趾短屈肌",
+    "nameLa": "M. flexor digiti minimi brevis pedis",
+    "summaryZh": "足底外侧群深层肌，起自第5跖骨底和长跖韧带，止于小趾近节趾骨底，屈小趾近节，足底外侧神经支配",
+    "placeholder": false
+  },
+  {
+    "id": "extensor_digitorum_brevis",
+    "meshNames": ["Extensor_Digitorum_Brevis_R", "M_Extensor_Digitorum_Brevis_Right"],
+    "layer": "muscle",
+    "nameZh": "趾短伸肌",
+    "nameLa": "M. extensor digitorum brevis",
+    "summaryZh": "足背肌，起自跟骨外侧面，分为4条肌腱，内侧腱（拇短伸肌）止于拇趾近节趾骨底，其余3腱止于第2-4趾长伸肌腱，伸第1-4趾，腓深神经支配",
     "placeholder": false
   },
   {
@@ -122,7 +266,7 @@
     "layer": "nerve",
     "nameZh": "胫神经",
     "nameLa": "N. tibialis",
-    "summaryZh": "坐骨神经较大终支(L4-S3)，沿小腿后面下行，经内踝后方屈肌支持带深面入足底，分为足底内外侧神经，支配小腿后群肌和足底肌",
+    "summaryZh": "坐骨神经较大终支(L4-S3)，沿小腿后面下行，经内踝后方屈肌支持带深面入足底，分为足底内外侧神经，支配小腿后群肌和足底肌及相应皮肤",
     "placeholder": false
   },
   {
@@ -131,7 +275,7 @@
     "layer": "nerve",
     "nameZh": "足底内侧神经",
     "nameLa": "N. plantaris medialis",
-    "summaryZh": "胫神经终支之一，与足底内侧动脉伴行，分布于足底内侧肌群及内侧3.5趾跖面皮肤，类似于手部正中神经",
+    "summaryZh": "胫神经终支之一，与足底内侧动脉伴行，分布于足底内侧肌群（拇展肌、拇短屈肌、趾短屈肌、第1蚓状肌）及内侧3.5趾跖面皮肤，类似于手部正中神经",
     "placeholder": false
   },
   {
@@ -140,7 +284,34 @@
     "layer": "nerve",
     "nameZh": "足底外侧神经",
     "nameLa": "N. plantaris lateralis",
-    "summaryZh": "胫神经终支之一，分布于足底中间和外侧肌群及外侧1.5趾跖面皮肤，类似于手部尺神经",
+    "summaryZh": "胫神经终支之一，分布于足底中间和外侧肌群（除拇展肌、拇短屈肌、趾短屈肌、第1蚓状肌外的所有足底肌）及外侧1.5趾跖面皮肤，类似于手部尺神经",
+    "placeholder": false
+  },
+  {
+    "id": "deep_fibular_nerve",
+    "meshNames": ["Deep_Fibular_Nerve_R", "N_Fibularis_Profundus_Right"],
+    "layer": "nerve",
+    "nameZh": "腓深神经",
+    "nameLa": "N. fibularis profundus",
+    "summaryZh": "腓总神经终支之一，支配小腿前群肌（胫前肌、趾长伸肌、拇长伸肌等）和足背肌（趾短伸肌），皮支分布于第1-2趾间隙背侧",
+    "placeholder": false
+  },
+  {
+    "id": "superficial_fibular_nerve",
+    "meshNames": ["Superficial_Fibular_Nerve_R", "N_Fibularis_Superficialis_Right"],
+    "layer": "nerve",
+    "nameZh": "腓浅神经",
+    "nameLa": "N. fibularis superficialis",
+    "summaryZh": "腓总神经终支之一，支配小腿外侧群肌（腓骨长肌、腓骨短肌），皮支分布于小腿下段前外侧和足背大部（除第1-2趾间隙）皮肤",
+    "placeholder": false
+  },
+  {
+    "id": "sural_nerve",
+    "meshNames": ["Sural_Nerve_R", "N_Suralis_Right"],
+    "layer": "nerve",
+    "nameZh": "腓肠神经",
+    "nameLa": "N. suralis",
+    "summaryZh": "由胫神经腓肠内侧皮支和腓总神经吻合支组成，沿小腿后面下行，经外踝后方至足外侧缘，分布于小腿下段后外侧、外踝、足背外侧及小趾外侧皮肤",
     "placeholder": false
   },
   {
@@ -149,7 +320,25 @@
     "layer": "vessel",
     "nameZh": "足背动脉",
     "nameLa": "A. dorsalis pedis",
-    "summaryZh": "胫前动脉延续，沿足背至第1跖骨间隙，分为第1跖背动脉和足底深支，发出跗内外侧动脉和弓状动脉",
+    "summaryZh": "胫前动脉延续，沿足背至第1跖骨间隙，分为第1跖背动脉和足底深支，发出跗内侧动脉、跗外侧动脉和弓状动脉，是足背主要供血动脉",
+    "placeholder": false
+  },
+  {
+    "id": "arcuate_artery",
+    "meshNames": ["Arcuate_Artery_R", "A_Arcuata_Right"],
+    "layer": "vessel",
+    "nameZh": "弓状动脉",
+    "nameLa": "A. arcuata",
+    "summaryZh": "足背动脉分支，横行于跗骨远端，发出第2-4跖背动脉，每条跖背动脉再分为趾背动脉供应相邻两趾的邻侧",
+    "placeholder": false
+  },
+  {
+    "id": "dorsal_metatarsal_arteries",
+    "meshNames": ["Metatarsal_Dorsal_2_R", "Metatarsal_Dorsal_3_R", "Metatarsal_Dorsal_4_R"],
+    "layer": "vessel",
+    "nameZh": "跖背动脉",
+    "nameLa": "Aa. metatarsales dorsales",
+    "summaryZh": "由弓状动脉发出的第2-4跖背动脉，沿相应跖骨间隙走行，至趾基底分为趾背动脉，供应第2-5趾",
     "placeholder": false
   },
   {
@@ -158,7 +347,7 @@
     "layer": "vessel",
     "nameZh": "胫后动脉",
     "nameLa": "A. tibialis posterior",
-    "summaryZh": "腘动脉终支之一，沿小腿后面下行，经内踝后方入足底，在跟骨结节内侧分为足底内外侧动脉",
+    "summaryZh": "腘动脉终支之一，沿小腿后面下行，经内踝后方入足底，在跟骨结节内侧分为足底内侧动脉和足底外侧动脉，是足底主要供血动脉",
     "placeholder": false
   },
   {
@@ -167,7 +356,7 @@
     "layer": "vessel",
     "nameZh": "足底内侧动脉",
     "nameLa": "A. plantaris medialis",
-    "summaryZh": "胫后动脉终支，沿足内侧缘前行，分布于足内侧和拇展肌、趾短屈肌，发出趾支至拇趾",
+    "summaryZh": "胫后动脉终支之一，沿足内侧缘前行，与足底内侧神经伴行，分布于足内侧和拇展肌、趾短屈肌，发出趾浅支至拇趾内侧",
     "placeholder": false
   },
   {
@@ -176,7 +365,34 @@
     "layer": "vessel",
     "nameZh": "足底外侧动脉",
     "nameLa": "A. plantaris lateralis",
-    "summaryZh": "胫后动脉终支，斜向外前行至足外侧，与足背动脉足底深支吻合形成足底动脉弓，发出跖底动脉供应趾部",
+    "summaryZh": "胫后动脉终支之一，斜向外前行至足外侧，与足底外侧神经伴行，然后转向内侧与足背动脉足底深支吻合形成足底动脉弓，是足底主要血供来源",
+    "placeholder": false
+  },
+  {
+    "id": "plantar_arch",
+    "meshNames": ["Plantar_Arch_R", "A_Arcus_Plantaris_Right"],
+    "layer": "vessel",
+    "nameZh": "足底动脉弓",
+    "nameLa": "Arcus plantaris",
+    "summaryZh": "由足底外侧动脉与足背动脉足底深支吻合形成，横行于跖骨底平面，发出4条跖底动脉和穿支，是足底深部主要动脉干",
+    "placeholder": false
+  },
+  {
+    "id": "plantar_metatarsal_arteries",
+    "meshNames": ["Metatarsal_Plantar_1_R", "Metatarsal_Plantar_2_R", "Metatarsal_Plantar_3_R", "Metatarsal_Plantar_4_R"],
+    "layer": "vessel",
+    "nameZh": "跖底动脉",
+    "nameLa": "Aa. metatarsales plantares",
+    "summaryZh": "由足底动脉弓发出4条，沿第1-4跖骨间隙走行，至趾基底分为趾底总动脉再分为趾底固有动脉，供应第1-5趾跖侧",
+    "placeholder": false
+  },
+  {
+    "id": "fibular_artery",
+    "meshNames": ["Fibular_Artery_R", "A_Fibularis_Right"],
+    "layer": "vessel",
+    "nameZh": "腓动脉",
+    "nameLa": "A. fibularis",
+    "summaryZh": "胫后动脉最大分支，沿腓骨内侧下行，发出穿支、跟外侧支和交通支，主要供应小腿外侧区、腓骨、外踝及跟骨外侧",
     "placeholder": false
   }
 ]
