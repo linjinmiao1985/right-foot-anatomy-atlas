@@ -313,9 +313,132 @@ Phase 4 claimed "no open intrinsic foot muscles exist" based on insufficient sea
 
 ---
 
-## Day 6-7 — See week-plan.md
+## Day 6 — 2026-09-14 📝 Factual Tone Correction
 
-Detailed plans in `docs/week-plan.md`
+**Focus**: README/manifest accuracy + vessel gap confirmation + interaction QA
+
+**Progress** ✅:
+1. **README rewrite (factual only)**:
+   - Removed "world's first", "major breakthrough", "98% complete product" language
+   - Replaced with factual coverage table: 14/14 bones, 13/14 muscles, 5/9 vessels, 6/6 nerves
+   - Added explicit limitations: dorsal interossei (placeholder), vessel digital branches (4/9 placeholder)
+   - License map clarified: MIT code / CC BY BP3D / CC0 UM / BY-SA Z-Anatomy (`by-sa/` isolated)
+   - Status: **Teaching-grade, not journal-ready**
+2. **structures.json vessel placeholder fixes**:
+   - Changed 4 vessels to `placeholder: true`: `dorsal_metatarsal_arteries`, `posterior_tibial_artery`, `plantar_metatarsal_arteries`, `fibular_artery`
+   - Reason: No real GLB meshes in `FootModel.tsx` for these structures
+3. **manifest.json update**:
+   - Stats corrected: 13/14 muscles (93%), 5/9 vessels (56%), 88% total real meshes
+   - Aligned with `structures.json` reality
+4. **BP3D vessel digital branch hunt**:
+   - Searched `isa_parts_list_e.txt` for `metatarsal` + `digital`
+   - Result: NO BP codes for `dorsal_metatarsal_arteries` or `plantar_metatarsal_arteries`
+   - Conclusion: BP3D lacks fine vessel detail (expected limitation)
+5. **Interaction QA document**:
+   - Created `docs/interaction-qa.md`
+   - Test scenarios: layer toggles, BY-SA nerve badge, selection on thin curves, camera framing
+   - Manual test protocol (browser-free alternative: code review)
+6. **week-plan.md update**:
+   - Day 6 completed
+   - Day 7: expert-review-checklist.md, methods.md polish, daily-log
+
+**Coverage After Day 6**:
+- Bones: 14/14 (100%)
+- Muscles: 13/14 (93%) — 10 intrinsics + 3 extrinsics
+- Vessels: 5/9 (56%)
+- Nerves: 6/6 (100%, BY-SA isolated)
+- **Total: 38/43 (88%) real meshes**
+
+**Blockers**: None
+
+**Commits**: 1 commit (7f9ea32) — README factual rewrite, vessel placeholder fixes, manifest alignment
+
+**Tests/Build**: ✅ GREEN (7/7 tests, clean build)
+
+**Tomorrow (Day 7)** 📋:
+1. `docs/expert-review-checklist.md` (TA2 names, 踇/拇, layer accuracy, license boundaries, gaps)
+2. Polish `docs/methods.md` (provenance, conversion pipeline, BY-SA isolation, reproducibility)
+3. Optional: screenshots (skip if browser theater flaky)
+4. daily-log Day 7 entry + week-plan open items for next week
+5. Push PR; tests green
+
+**Key Insight** 💡:
+- **Factual tone > hype**: "88% real coverage" is honest; "98% complete product" overstates (4/9 vessels placeholder)
+- **Data integrity critical**: `structures.json` placeholder flags must match `FootModel.tsx` REAL_*_MODELS arrays
+
+---
+
+## Day 7 — 2026-09-14 📋 Expert Review Prep
+
+**Focus**: Quality documentation for teaching-track review
+
+**Progress** ✅:
+1. **expert-review-checklist.md created**:
+   - Section A: TA2 nomenclature compliance (spot-check 10+ structures)
+   - Section B: Anatomical accuracy (osteology, myology, angiology, neurology)
+   - Section C: Layer system accuracy (raycasting, visibility, material distinction)
+   - Section D: License boundaries (MIT/CC BY/CC0 vs BY-SA isolated)
+   - Section E: Known gaps (dorsal interossei, vessel digital branches)
+   - Section F: Spatial alignment (0.01 scale, coordinate systems)
+   - Section G: Clinical disclaimer (educational use, not diagnosis/surgery)
+   - Section H: Reproducibility (scripts, git history, data provenance)
+   - Section I: Summary assessment (pass/fail criteria)
+   - Reviewer notes section for external feedback
+2. **methods.md polished (complete rewrite)**:
+   - Provenance: BP3D (bones/muscles/vessels), UM (muscles), Z-Anatomy (nerves)
+   - Extraction methodology: BP→FJ brute-force scan, UM Dataverse API, Z-Anatomy Blender export
+   - Conversion pipeline: OBJ/STL → GLB via trimesh, scale 0.01 (mm→cm)
+   - License isolation: BY-SA nerves in `by-sa/` subdirectory + NOTICE.md
+   - Limitations: teaching-grade (not patient-specific), dorsal interossei absent, vessel fine detail lacking
+   - Reproducibility: scripts in `assets-raw/` + `third_party/`, git history, data provenance table
+   - Future work: dorsal interossei (requires new dataset), vessel digital branches, VR/AR support
+3. **Screenshots**: SKIPPED (browser theater unreliable in headless environment; viewer testing left for manual reviewer)
+4. **daily-log.md**: Updated with Day 6 + Day 7 entries
+5. **week-plan.md**: Updated below
+
+**Blockers**: None
+
+**Commits**: Pending final commit (expert-review docs + daily-log)
+
+**Tests/Build**: ✅ GREEN (7/7 tests, clean build)
+
+**Next Week (If Continued)** 🔬:
+1. External expert review (anatomy instructor/foot surgeon)
+2. Address nomenclature corrections (if any TA2 deviations found)
+3. Dorsal interossei hunt (monitor new open-source datasets)
+4. Optional: PBR materials, muscle fiber direction, translucency refinement
+5. Optional: teaching video (demonstrate layer toggles, selection, BY-SA boundary)
+
+**Key Insight** 💡:
+- **Expert review checklist = structured QA**: 9 sections (A-I) provide clear pass/fail criteria for external reviewers
+- **methods.md clarity > comprehensiveness**: Journal-track documentation requires provenance (DOI/GitHub commit) + reproducibility (scripts) + limitations (no fake completeness claims)
+
+---
+
+## Week Summary (Day 1-7)
+
+**Delivered**:
+- 14/14 bones (CC BY 4.0, BP3D)
+- 13/14 muscles (CC BY 4.0 BP3D + CC0 1.0 UM hybrid)
+- 5/9 vessels (CC BY 4.0, BP3D)
+- 6/6 nerves (CC BY-SA 4.0, Z-Anatomy isolated)
+- **88% real coverage (38/43 structures)**
+
+**Documentation**:
+- `README.md` (factual tone, coverage table, license map)
+- `docs/assets-research-round2.md` (≥12 sources evaluated)
+- `docs/expert-review-checklist.md` (9-section QA framework)
+- `docs/methods.md` (provenance, extraction, conversion, limitations, reproducibility)
+- `docs/interaction-qa.md` (UI test scenarios)
+- `docs/spatial-alignment-qa.md` (coordinate system QA)
+- `CONTRIBUTING.md` (NC-exclusion policy)
+- `third_party/z-anatomy/EVALUATION.md` + `public/models/right-foot/by-sa/NOTICE.md` (BY-SA isolation)
+
+**Remaining Gaps**:
+- 1 muscle: dorsal interossei (no open-source dataset found)
+- 4 vessels: digital/metatarsal branches (BP3D lacks fine detail)
+
+**Status**: **Week-scale quality sprint completed. Teaching-grade atlas ready for expert review (not journal-publication-ready due to soft tissue limitations).**
 
 ---
 

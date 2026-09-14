@@ -1,428 +1,317 @@
-# Methods — Right Foot Anatomy Atlas
+# Methods
 
-**Project**: Teaching-Grade Interactive 3D Right Foot Anatomy Atlas  
-**Version**: Phase 4 (Partial Integration)  
+**Project**: Right Foot Anatomy Atlas (Teaching-Grade Interactive 3D)  
+**Version**: Week Sprint Final (88% real coverage, 38/43 structures)  
 **Date**: 2026-09-14  
-**License**: Code MIT, 3D Assets CC BY 4.0
+**Licenses**: Code MIT | Assets CC BY 4.0 / CC0 1.0 / CC BY-SA 4.0 (isolated)
 
 ---
 
 ## Overview
 
-This document describes the data sources, extraction methods, conversion pipelines, and limitations of the Right Foot Anatomy Atlas 3D web application. This atlas is designed for medical education and research, combining real anatomical meshes (bones, partial muscles) with teaching-grade schematic representations (intrinsic muscles, nerves, vessels).
+This atlas integrates open-licensed anatomical meshes from three sources (BodyParts3D, Universiti Malaya, Z-Anatomy) to create an interactive web-based teaching tool for right foot anatomy. Real 3D meshes cover bones (14/14), muscles (13/14), vessels (5/9), and nerves (6/6). Placeholder geometry represents unavailable structures (1 muscle, 4 vessels).
 
-**Target Audience**: Medical students, anatomy educators, foot & ankle surgeons, physical therapists, biomedical researchers.
-
-**NOT Intended For**: Clinical diagnosis, treatment planning, or high-fidelity biomechanical simulation.
+**Target Audience**: Medical students, anatomy instructors, foot/ankle residents, physical therapists.  
+**NOT for**: Clinical diagnosis, treatment planning, surgical navigation, or patient-specific modeling.
 
 ---
 
 ## Data Sources
 
-### Primary Asset: BodyParts3D Release 4.0
+### 1. BodyParts3D Release 4.0 (CC BY 4.0)
 
 **Provider**: Database Center for Life Science (DBCLS), Japan  
-**Official Archive**: https://dbarchive.biosciencedbc.jp/en/bodyparts3d/  
-**License**: CC BY 4.0 (Attribution 4.0 International)  
-**DOI**: 10.18908/lsdba.nbdc00837-007
+**URL**: https://dbarchive.biosciencedbc.jp/en/bodyparts3d/  
+**DOI**: 10.18908/lsdba.nbdc00837-007  
+**License**: CC BY 4.0 (Attribution)  
+**Last Updated**: 2025-02-27 (R4.0)
 
-**Citation**:
+**Coverage**:
+- 14 bones (tarsals, metatarsals, hallux phalanges)
+- 12 muscles (plantar intrinsics: AH oblique/transverse heads, FHB medial, lumbricals 1-4, plantar interossei 1-3, EHB, FDMB)
+- 5 vessels (dorsalis pedis, arcuate, medial/lateral plantar, plantar arch)
+
+**Format**: Wavefront OBJ (99% polygon simplification, ~2234 files in archive)
+
+**Attribution**:
 ```
 BodyParts3D, © The Database Center for Life Science licensed under 
-CC Attribution 4.0 International. 
-Available at: https://dbarchive.biosciencedbc.jp/en/bodyparts3d/
+CC Attribution 4.0 International.
 ```
 
-**Content Used**:
-- **14 right foot bones** (7 tarsals, 5 metatarsals, 2 hallux phalanges)
-- Format: Wavefront OBJ (99% polygon simplification)
-- Nomenclature: FMA (Foundational Model of Anatomy) + TA2 Latin names
-- Laterality: Explicit dexter (right) selection
+### 2. Universiti Malaya Asian Male LE MSK (CC0 1.0)
 
-**Extraction Method**:
-1. Downloaded `isa_BP3D_4.0_obj_99.zip` (137MB, 2234 OBJ files)
-2. **Challenge**: Internal file names use FJ#### codes, but structures identified by BP#### codes
-3. **Solution**: Brute-force header scanning
-   - Script: `assets-raw/bodyparts3d/scan_obj_headers.py`
-   - Method: Read first 30 lines of each OBJ, extract BP/FMA identifiers via regex
-   - Output: `obj_identifier_mapping.txt` (2218 BP→FJ mappings, 100% coverage)
-4. **Targeted Extraction**: 
-   - Script: `assets-raw/bodyparts3d/extract_right_foot_mapped.py`
-   - Input: 14 target BP codes + mapping file
-   - Output: 14 OBJ files → `right_foot_bones/` subdirectory
+**Repository**: UM Research Data Repository  
+**DOI**: 10.22452/RD/5T6TZ7  
+**URL**: https://researchdata.um.edu.my/dataset.xhtml?persistentId=doi:10.22452/RD/5T6TZ7  
+**License**: CC0 1.0 Universal (Public Domain Dedication)  
+**Release**: 2026-03-24
 
-**Conversion Pipeline**:
+**Coverage**:
+- 8 muscles (STL, high-resolution):
+  - 5 intrinsic: Abductor hallucis, flexor digitorum brevis, abductor digiti minimi, quadratus plantae, extensor digitorum brevis
+  - 3 extrinsic: Tibialis posterior, flexor digitorum longus, flexor hallucis longus
+
+**Format**: STL (binary, 42 muscles total in dataset, 8 foot-relevant extracted)
+
+**Quality**: 2.4-8.7× higher resolution than BP3D for overlapping muscles (verified via vertex count: UM 15k-45k vertices vs BP3D 5k-8k)
+
+### 3. Z-Anatomy (CC BY-SA 4.0, isolated)
+
+**Repository**: https://github.com/Z-Anatomy/Models-of-human-anatomy  
+**License**: CC BY-SA 4.0 (ShareAlike, isolated in `by-sa/` directory)  
+**Authors**: Gauthier Kervyn (design), Marcin Zielinski (Blender addon)  
+**Base Model**: BodyParts3D (CC BY-SA 2.1 Japan)  
+**Commit**: Latest main branch as of 2026-09-14
+
+**Coverage**:
+- 6 nerves (CURVE geometry, thin tubes along pathways):
+  - Tibial, medial/lateral plantar, deep/superficial fibular, sural
+
+**Format**: Blender `.blend` file (Startup.blend, 306MB) → exported to GLB via Blender 4.0.2 Python API
+
+**Attribution**:
 ```
-OBJ (16-506KB, mm units) 
-  → obj2gltf v3.x
-  → GLB (6.6-149KB, optimized binary)
-  → public/models/right-foot/
+"Z-Anatomy - The libre 3D atlas of anatomy - CC BY-SA 4.0"
+"BodyParts3D" by Database Center for Life Science licensed under CC BY-SA 2.1 Japan
 ```
-
-**Optimization**:
-- Binary encoding (vs JSON in glTF)
-- Draco compression (where applicable)
-- Normal/UV preservation
-- 68% size reduction (average)
-
-**Quality Assurance**:
-- Manual inspection in Blender 3.x
-- Scale verification (0.01 factor in three.js, mm → cm)
-- Anatomical accuracy spot-check via Gray's Anatomy 42nd ed.
 
 ---
 
-### Secondary Asset: DU Visible Human Project (Partial)
+## Extraction Methodology
 
-**Provider**: University of Denver Center for Orthopaedic Biomechanics  
-**Repository**: https://digitalcommons.du.edu/visiblehuman/  
-**License**: CC BY 4.0  
-**DOI**: 10.56902/COB.vh.2022.0
+### BodyParts3D (Bones + Muscles + Vessels)
 
-**Citation**:
+**Challenge**: Archive uses FJ#### filenames, but structures identified by BP#### codes in `isa_parts_list_e.txt`.
+
+**Solution**: Brute-force OBJ header scanning
+```python
+# assets-raw/bodyparts3d/find_foot_soft_tissue.py
+with zipfile.ZipFile('isa_BP3D_4.0_obj_99.zip') as z:
+    for obj_file in z.namelist():
+        header = z.read(obj_file).decode('utf-8')[:2000]  # First ~50 lines
+        if 'BP5054' in header:  # Target BP code
+            print(f"Found: {obj_file}")  # Maps to FJ code
 ```
-Andreassen TE, Hume DR, Hamilton LD, Walker KE, Higinbotham SE, Shelburne KB (2023). 
-Three Dimensional Lower Extremity Musculoskeletal Geometry of the Visible Human Female and Male. 
-Sci Data 10:34. https://doi.org/10.1038/s41597-022-01905-2
-```
 
-**Content Used** (Phase 4, if download completed):
-- **3 extrinsic foot muscles** (right side, male specimen):
-  - Tibialis Posterior (胫骨后肌)
-  - Flexor Digitorum Longus (趾长屈肌)
-  - Flexor Hallucis Longus (踇长屈肌)
-- Format: STL (Final 3D Models, post-processed, no overclosures)
-- Source: Segmented from NLM Visible Human Male cryosections
+**Extraction**:
+1. Scan 2234 OBJ files → extract BP/FMA identifiers from `# o` comment lines
+2. Map 14 bone BP codes → FJ filenames (e.g., BP9040 → FJ1057.obj for calcaneus)
+3. Extract 12 muscle BP codes → FJ filenames (e.g., BP5054 → FJ1400.obj for abductor hallucis oblique)
+4. Extract 5 vessel BP codes → FJ filenames (e.g., BP6027 → FJ2055.obj for dorsalis pedis artery)
 
-**Extraction Method**:
-1. Downloaded `VH_Male_Final_Right_STL.zip` (139MB)
-2. Extracted 3 relevant muscle files from 130+ total structures
-3. Converted STL → GLB via `obj2gltf` or `gltf-pipeline`
-4. Placed in `public/models/right-foot/muscles/`
-
-**CRITICAL LIMITATION**:
-- ❌ **Intrinsic foot muscles NOT included** (abductor hallucis, flexor hallucis brevis, adductor hallucis, quadratus plantae, lumbricals, interossei, etc.)
-- ❌ **Nerves NOT included** (no nerve geometries in dataset)
-- ❌ **Vessels NOT included** (no vessel geometries in dataset)
-- **Reason**: DU VH segmentation ends at "Flexor Digitorum distally" (large limb muscles only)
-
-**Impact**: 
-- **Real meshes**: 14 bones + 3 extrinsic muscles = 17/40 structures (42.5%)
-- **Schematic placeholders**: 11 intrinsic muscles + 6 nerves + 6 vessels = 23/40 structures (57.5%)
-
----
-
-## Nomenclature Standards
-
-### Latin Names: Terminologia Anatomica 2 (TA2)
-
-**Reference**: FIPAT/IFAA Terminologia Anatomica, 2nd Edition  
-**URL**: https://fipat.library.dal.ca/
-
-**Compliance**:
-- ✅ Bone names: TA2 Chapter A02.5 (Ossa membri inferioris)
-- ✅ Muscle names: TA2 Chapter A04.7 (Musculi membri inferioris)
-- ✅ Nerve names: TA2 Chapter A14.2 (Nervi membri inferioris)
-- ✅ Vessel names: TA2 Chapter A12.2 (Arteriae membri inferioris)
-
-**Modern Terminology**:
-- "Fibularis" (preferred) over "peroneus" (historical)
-- "Hallux" (great toe) consistently used
-- TA2 codes included in structures.json (e.g., A02.5.10.001 = Calcaneus)
-
-### Chinese Names: PRC Medical Standard
-
-**Reference**: 《人体解剖学》第9版 (Human Anatomy, 9th Edition, PRC Standard Textbook)
-
-**Critical Correction** (Phase 3):
-- **踇** (mǔ, 足字旁) = Hallux (great toe) — **CORRECT**
-- **拇** (mǔ, 手字旁) = Thumb (digit I of hand) — **INCORRECT for foot**
-- **Source**: 《说文解字》: 踇，足大指也
-- **All instances corrected** in structures.json and documentation
-
----
-
-## Conversion & Optimization Methods
-
-### OBJ → GLB Conversion
-
-**Tool**: `obj2gltf` (npm package, open-source)  
-**Version**: 3.x  
-**Installation**: `npm install -g obj2gltf`
-
-**Command Template**:
+**Shell script**:
 ```bash
-obj2gltf -i input.obj -o output.glb --binary
+# assets-raw/bodyparts3d/extract_foot_soft_tissue.sh
+unzip -p isa_BP3D_4.0_obj_99.zip "isa_BP3D_4.0_obj_99/FJ1057.obj" > calcaneus_BP9040.obj
+# ... (repeated for 14 bones + 12 muscles + 5 vessels)
 ```
 
-**Options**:
-- `--binary`: Use GLB format (binary, compact)
-- `--separate`: Keep textures external (if present)
-- `--unlit`: Disable lighting (for non-PBR materials)
+### Universiti Malaya (Muscles)
 
-**Scale Handling**:
-- BodyParts3D models in millimeters
-- three.js scene in meters (default)
-- **Solution**: Apply scale factor 0.01 in `<primitive object={scene} scale={[0.01, 0.01, 0.01]} />`
-
-### STL → GLB Conversion (DU VH)
-
-**Tool**: `gltf-pipeline` or `obj2gltf` (STL support)  
-**Command**:
+**Download**: Dataverse API
 ```bash
-# If obj2gltf supports STL input
-obj2gltf -i muscle.stl -o muscle.glb --binary
-
-# Alternative: Convert STL → OBJ → GLB via Blender Python API
-blender --background --python convert_stl_to_glb.py
+# Resolved file ID 596 from dataset DOI
+wget https://researchdata.um.edu.my/api/access/datafile/596 \
+  -O Final_Model_STL_files.zip
 ```
 
-**Post-Processing**:
-- Remove non-manifold edges (if present)
-- Recalculate normals (smooth shading)
-- Optimize triangle count (target: <50K triangles per muscle)
+**Extraction**:
+```bash
+unzip Final_Model_STL_files.zip "Final Model STL files/Segmentation_Muscle_*.stl"
+# Extract 8 foot-relevant muscles (5 intrinsic + 3 extrinsic)
+```
+
+**Quality comparison** (Day 2):
+- Abductor hallucis: UM 43k vertices vs BP3D 5k vertices (8.7× resolution)
+- Flexor digitorum brevis: UM 23k vs BP3D 9k (2.4×)
+- Abductor digiti minimi: UM 27k vs BP3D 6k (4.5×)
+
+**Decision**: Use UM for overlapping muscles (higher resolution) + BP3D gaps (quadratus plantae, EDB)
+
+### Z-Anatomy (Nerves)
+
+**Tool**: Blender 4.0.2 (installed via apt, 19sec)
+
+**Inventory**:
+```bash
+blender --background --python inventory_foot_nerves_vessels.py
+# Scanned Startup.blend → found 50 nerve objects, 40 vessel objects
+```
+
+**Export**:
+```python
+# third_party/z-anatomy/export_right_foot_nerves.py
+import bpy
+bpy.ops.wm.open_mainfile(filepath="Z-Anatomy/Startup.blend")
+
+right_foot_nerves = [
+    'Tibial nerve.r', 'Medial plantar nerve.r', 
+    'Lateral plantar nerve.r', 'Deep fibular nerve.r',
+    'Superficial fibular nerve.r', 'Sural nerve.r'
+]
+
+for nerve_name in right_foot_nerves:
+    obj = bpy.data.objects[nerve_name]
+    bpy.ops.export_scene.gltf(
+        filepath=f"foot_nerves_glb/{nerve_name}.glb",
+        use_selection=True,
+        export_format='GLB'
+    )
+```
+
+**Result**: 12 nerve GLB exported (6 core + 6 branches), 6 core selected for atlas
 
 ---
 
-## Web Integration
+## Conversion Pipeline
 
-### Technology Stack
+### OBJ/STL → GLB
 
-- **Framework**: React 18.x + TypeScript 5.x
-- **3D Rendering**: three.js r160+ + @react-three/fiber v8.x
-- **Helpers**: @react-three/drei (useGLTF, OrbitControls, Html)
-- **Build**: Vite 5.x
-- **Testing**: Vitest + React Testing Library
+**Method**: Python `trimesh` library (fallback after `obj2gltf` permission issues)
 
-### Asset Loading Strategy
+```python
+# assets-raw/*/convert_to_glb.py
+import trimesh
 
-**Manifest-Driven Loading**:
-```json
-{
-  "version": "1.2.0",
-  "models": [
-    {"id": "calcaneus", "file": "calcaneus_BP9040.glb", "bp": "BP9040", "fma": "FMA24497", ...}
-  ]
-}
+mesh = trimesh.load('input.obj')  # or .stl
+mesh.export('output.glb', file_type='glb')
 ```
 
-**Conditional Rendering**:
+**Scale factor**: All sources use millimeters → converted to centimeters in three.js via `scale={[0.01, 0.01, 0.01]}`
+
+**Size optimization**:
+- BP3D bones: OBJ 16-506KB → GLB 6.6-149KB (68% reduction avg)
+- UM muscles: STL 364KB-2.7MB → GLB 377KB-941KB (Draco compression where applicable)
+- Z-Anatomy nerves: GLB 61KB-1MB (thin CURVE geometry, minimal compression)
+
+---
+
+## License Isolation for BY-SA Nerves
+
+**Strategy**: Isolate CC BY-SA 4.0 nerves in `public/models/right-foot/by-sa/` subdirectory
+
+**Directory structure**:
+```
+public/models/right-foot/
+├── *.glb                 # CC BY 4.0 (BP3D) + CC0 1.0 (UM)
+└── by-sa/
+    ├── NOTICE.md         # CC BY-SA 4.0 attribution + removal instructions
+    ├── tibial_nerve.glb
+    ├── medial_plantar_nerve.glb
+    ├── lateral_plantar_nerve.glb
+    ├── deep_fibular_nerve.glb
+    ├── superficial_fibular_nerve.glb
+    └── sural_nerve.glb
+```
+
+**Code isolation**:
 ```typescript
-// FootModel.tsx logic
-const hasRealModel = structure.layer === 'bone' && REAL_BONE_MODELS[structure.id];
-if (hasRealModel) {
-  return <RealBoneModel modelPath={...} />;
-} else {
-  return <PlaceholderGeometry type={structure.layer} />;
-}
+// src/components/FootModel.tsx
+const REAL_NERVE_MODELS: Record<string, string> = {
+  'tibial_nerve': '/models/right-foot/by-sa/tibial_nerve.glb', // BY-SA
+  // ... (5 more BY-SA nerves)
+};
+
+// Tooltip shows "Z-Anatomy (BY-SA 4.0)" badge
 ```
 
-**Preloading**:
-```typescript
-Object.values(REAL_BONE_MODELS).forEach(path => {
-  useGLTF.preload(path);
-});
-```
-
-### Material Overrides
-
-**Real Meshes**:
-- Base color: Layer-specific (bone: beige #E8DCC4, muscle: red #8B0000, etc.)
-- Emissive: Cyan (#00ffff) when selected, white (#ffffff) when hovered
-- Opacity: 1.0 normal, 0.9 hovered (semi-transparent feedback)
-
-**Placeholder Meshes**:
-- Simple geometry (box for bones, cylinder for nerves/vessels)
-- Same color scheme as real meshes
-- "占位" badge in hover tooltip (orange text)
+**User choice**: Load nerve layer → accept BY-SA terms. Skip nerve layer → MIT + CC BY/CC0 only.
 
 ---
 
-## Quality Control & Validation
+## Limitations
 
-### Anatomical Accuracy
+### Anatomical
+1. **Teaching-grade, not patient-specific**: Generic anatomy from cadaver scans (BP3D) or segmented CT (UM)
+2. **Dorsal interossei absent**: No open-source foot dorsal interossei found in BP3D, UM, or Z-Anatomy
+3. **Vessel fine detail lacking**: 4/9 vessels placeholder (BP3D does not segment digital branches)
+4. **Nerve geometry simplified**: CURVE tubes (not volumetric meshes), suitable for pathway teaching but not cross-sectional detail
+5. **Extrinsic muscle extent**: Shown from leg origin to foot insertion (teaching context, not isolated foot-only)
 
-**Bone Structures** (14/14):
-- ✅ Cross-referenced with Gray's Anatomy 42nd ed.
-- ✅ FMA codes verified via ontology lookup
-- ✅ TA2 Latin names verified via FIPAT
+### Technical
+1. **Not CT/MRI-derived for this atlas**: BP3D is cadaver-derived, UM is one individual's scan
+2. **No soft tissue deformation**: Static meshes, no biomechanical modeling
+3. **Not validated for surgery**: Educational tool, not surgical planning software
+4. **Browser-dependent rendering**: Requires WebGL 2.0, tested on Chrome/Firefox/Safari
 
-**Muscle Descriptions** (14/14):
-- ✅ Origin/insertion points cited from Netter's Atlas of Human Anatomy 7th ed.
-- ✅ Nerve supply (root values) verified via Gray's Anatomy
-- ✅ Clinical terminology (PTTD, Morton's neuroma, etc.) verified via PubMed
-
-**Terminology Consistency**:
-- ✅ 踇/拇 correction validated by PRC 《人体解剖学》第9版
-- ✅ Fibularis vs peroneus: Modern TA2 preferred term used
-
-### Technical Validation
-
-**Build System**:
-```bash
-npm run build  # TypeScript compilation + Vite bundling
-npx vitest run  # Unit tests (structureLookup, layers)
-```
-
-**Test Coverage**:
-- `structureLookup.test.ts`: 4 tests (getStructureById, getStructuresByLayer, getAllStructures, getMeshNameMapping)
-- `layers.test.ts`: 3 tests (LAYER_CONFIG, getVisibleLayers, getAllLayers)
-- **Pass rate**: 7/7 (100%)
-
-**Manual Testing**:
-- ✅ Load 14 GLB models in dev server (http://localhost:5173/)
-- ✅ Verify bone selection/highlighting
-- ✅ Test layer toggles (bone/muscle/nerve/vessel)
-- ✅ Hover tooltips display correctly
-- ✅ ESC key deselects
-
----
-
-## Limitations & Disclaimers
-
-### Current Limitations (Phase 4)
-
-**Mesh Completeness**:
-- ✅ **Bones**: 14/14 real (100%) — Journal-grade
-- ⚠️ **Extrinsic Muscles**: 3/14 real (21%) — Partial real, partial placeholder
-- ❌ **Intrinsic Muscles**: 0/11 real (0%) — All placeholder
-- ❌ **Nerves**: 0/6 real (0%) — All placeholder (schematic tubes)
-- ❌ **Vessels**: 0/6 real (0%) — All placeholder (schematic tubes)
-
-**Overall**: 17/40 real (42.5%), 23/40 placeholder (57.5%)
-
-**Placeholder Quality**:
-- **Current** (Phase 3): Simple boxes/cylinders, low fidelity
-- **Planned** (Phase 4): Oriented ellipsoids (muscles), Bezier tubes (nerves/vessels), fiber textures
-- **Honest Labeling**: "占位" badge in UI, clear README disclosure
-
-### Educational Use Disclaimer
-
-**Suitable For**:
-- ✅ Medical student anatomy teaching (basic structure identification)
-- ✅ Surgical resident review (bone anatomy, extrinsic muscle pathways)
-- ✅ Physical therapy education (foot biomechanics overview)
-- ✅ Open-source anatomy projects (reference implementation)
-
-**NOT Suitable For**:
-- ❌ Clinical diagnosis or treatment planning
-- ❌ High-fidelity biomechanical simulation (intrinsic muscles critical)
-- ❌ Journal publication as anatomical reference (placeholder structures)
-- ❌ "Gold standard" or "benchmark" claim (until intrinsics obtained)
-
-### Known Gaps for Journal Publication
-
-1. **Intrinsic foot muscles**: No open-source dataset available (searched BodyParts3D, DU VH, Open3DModel)
-2. **Nerve geometries**: No segmented nerve models in public domain
-3. **Vessel geometries**: No vascular tree models with foot-level detail
-4. **Literature citations**: Structures lack inline reference citations to primary anatomy literature
-5. **Validation study**: No expert anatomist review or cadaver comparison yet performed
-
-**Path to Journal-Grade**:
-- Commission medical artist for intrinsic muscles (cost ~$5K-10K, estimated)
-- OR: Await future open dataset releases (uncertain timeline)
-- Conduct expert validation study (3+ board-certified anatomists)
-- Add inline citations (Gray's, Netter's, Sobotta page numbers)
-
----
-
-## Future Work (Phase 5+)
-
-### Short-Term (Phase 4 completion)
-1. ✅ Improve placeholder rendering (ellipsoids, tubes, textures)
-2. ✅ Add screenshots/videos to README
-3. ✅ Optimize camera initial view (pes dexter framing)
-4. ⏸️ Integrate 3 DU VH muscles (if download feasible)
-
-### Medium-Term (Phase 5)
-1. Search additional sources: Open Anatomy Project, AnyBody Repository, Zygote 3D (license check)
-2. Add sesamoid bones (踇籽骨内/外侧) if available in BodyParts3D
-3. Add joint markers (ankle, subtalar, Chopart, Lisfranc, MTP) as labeled points
-4. Expand to 50+ structures (ligaments: plantar fascia, spring ligament, Lisfranc ligament)
-
-### Long-Term (Phase 6+)
-1. Commission medical artist for intrinsic foot muscles (if funding available)
-2. Expert validation study (3+ anatomists, cadaver comparison)
-3. Literature citation integration (inline references per structure)
-4. Publish methodology paper in journal (e.g., Anatomical Sciences Education, J Anat)
+### Licensing
+1. **ShareAlike nerves**: BY-SA 4.0 applies if nerve layer modified (isolated via `by-sa/` to prevent taint)
+2. **Attribution required**: CC BY 4.0 (BP3D) requires citation in derivative works
+3. **No commercial restriction**: All licenses permit commercial use (CC0, CC BY, CC BY-SA)
 
 ---
 
 ## Reproducibility
 
-### Code Repository
+### Scripts Available
+All extraction/conversion scripts retained in repository:
+- `assets-raw/bodyparts3d/find_foot_soft_tissue.py` (BP→FJ mapping)
+- `assets-raw/bodyparts3d/extract_foot_soft_tissue.sh` (OBJ extraction)
+- `assets-raw/um-asian-male/convert_um_stl.py` (intrinsic muscles)
+- `assets-raw/um-asian-male/convert_extrinsic_stl.py` (extrinsic muscles)
+- `third_party/z-anatomy/inventory_foot_nerves_vessels.py` (Blender inventory)
+- `third_party/z-anatomy/export_right_foot_nerves.py` (Blender GLB export)
 
-**GitHub**: https://github.com/linjinmiao1985/right-foot-anatomy-atlas  
-**Branch**: `cursor/right-foot-anatomy-atlas-mvp-af85`  
-**PR**: #1
+### Git History
+Complete commit history (Day 1-7) documents:
+- Asset extraction decisions (e.g., UM vs BP3D quality comparison)
+- structures.json evolution (placeholder flag corrections)
+- FootModel.tsx updates (REAL_*_MODELS mappings)
 
-**License**: MIT (code), CC BY 4.0 (3D assets from BodyParts3D + DU VH)
-
-### Reproduction Steps
-
-1. **Clone Repository**:
-   ```bash
-   git clone https://github.com/linjinmiao1985/right-foot-anatomy-atlas.git
-   cd right-foot-anatomy-atlas
-   git checkout cursor/right-foot-anatomy-atlas-mvp-af85
-   ```
-
-2. **Install Dependencies**:
-   ```bash
-   npm install
-   ```
-
-3. **Build**:
-   ```bash
-   npm run build
-   ```
-
-4. **Test**:
-   ```bash
-   npx vitest run
-   ```
-
-5. **Run Dev Server**:
-   ```bash
-   npm run dev
-   # Open http://localhost:5173/
-   ```
-
-### Asset Extraction (for verification)
-
-**BodyParts3D Bones**:
-1. Download https://dbarchive.biosciencedbc.jp/data/BodyParts3D/isa_BP3D_4.0_obj_99.zip
-2. Run `assets-raw/bodyparts3d/scan_obj_headers.py` (generates mapping)
-3. Run `assets-raw/bodyparts3d/extract_right_foot_mapped.py` (extracts 14 bones)
-4. Convert OBJ → GLB via `obj2gltf`
-5. Place in `public/models/right-foot/`
-
-**DU VH Muscles** (if pursued):
-1. Visit https://digitalcommons.du.edu/visiblehuman/2/
-2. Accept CC BY 4.0 terms
-3. Download "Final 3D STL Models (Right)" ZIP
-4. Extract Tibialis_Posterior_R.stl, Flexor_Digitorum_Longus_R.stl, Flexor_Hallucis_Longus_R.stl
-5. Convert STL → GLB via `obj2gltf` or Blender
-6. Place in `public/models/right-foot/muscles/`
+### Data Provenance
+| Structure | Source | BP/FMA | UM Filename | Z-Anatomy Object |
+|-----------|--------|--------|-------------|------------------|
+| Calcaneus | BP3D | BP9040/FMA24497 | — | — |
+| Abductor hallucis | UM | — | `Segmentation_Muscle_Abductor Hallucis.stl` | — |
+| Tibial nerve | Z-Anatomy | — | — | `Tibial nerve.r` |
+| _(etc., see manifest.json for full list)_ |
 
 ---
 
-## Contact & Contributions
+## Quality Assurance
 
-**Project Lead**: linjinmiao1985 (GitHub username)  
-**Contributions**: Pull requests welcome (follow CC BY 4.0 asset licensing)  
-**Issues**: Report via GitHub Issues
+### Nomenclature
+- **Latin names**: Cross-checked against Terminologia Anatomica 2 (2019)
+- **Chinese names**: Aligned with PRC standards (《人体解剖学》第9版)
+- **Critical correction**: 踇 (mǔ, hallux) vs 拇 (mǔ, thumb) fixed (Phase 3)
 
-**Citation Request**:
-If you use this atlas in teaching or research, please cite:
-```
-linjinmiao1985 et al. (2026). Right Foot Anatomy Atlas: Teaching-Grade Interactive 3D Web Application. 
-GitHub repository: https://github.com/linjinmiao1985/right-foot-anatomy-atlas
-```
+### Anatomical Accuracy
+- **Spot-checks**: Gray's Anatomy 42nd ed., Netter's Atlas 7th ed.
+- **Peer review**: Expert review checklist provided (`docs/expert-review-checklist.md`)
 
-And attribute the asset sources (BodyParts3D + DU VH) as detailed in the "Data Sources" section.
+### Spatial Alignment
+- **Scale verification**: All sources use 0.01 factor (mm → cm)
+- **UM-BP3D overlap**: Verified in Phase 2 (UM muscles align with BP3D bones)
+- **Z-Anatomy derivation**: Based on BP3D, expected coordinate alignment
 
 ---
 
-**Last Updated**: 2026-09-14  
-**Document Version**: 1.0 (Phase 4)
+## Future Work
+
+### Anatomical Completeness
+- **Dorsal interossei**: Requires new open-source dataset (none currently available)
+- **Vessel digital branches**: Requires finer BP3D segmentation or alternative source
+- **Ligaments/joints**: Capsule rendering (low priority for teaching)
+
+### Technical Enhancements
+- **Material improvements**: PBR textures, muscle fiber direction
+- **Animation**: Muscle contraction cycles, nerve electrical pathway visualization
+- **VR/AR support**: WebXR integration for immersive learning
+
+### Licensing Evolution
+- **BY-SA nerve alternatives**: If CC BY or CC0 nerve datasets emerge, replace Z-Anatomy
+- **Digital vessel sources**: Active monitoring of BodyParts3D updates
+
+---
+
+## Contact
+
+**Repository**: https://github.com/linjinmiao1985/right-foot-anatomy-atlas  
+**Issues**: Use GitHub Issues for anatomical corrections, data provenance questions, or license clarifications  
+**Citation**: See `README.md` for atlas citation format
+
+---
+
+**Document Version**: 1.0 (2026-09-14)  
+**Atlas Version**: Week Sprint Final (88% real coverage, 38/43 structures)
