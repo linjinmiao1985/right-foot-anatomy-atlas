@@ -77,39 +77,41 @@
 
 ---
 
-### Day 4 (Thu): UM Integration (Batch 2) + Extrinsics
-**Focus**: Complete remaining intrinsics + add extrinsics
+### Day 4 (Thu): ✅ COMPLETED — Z-Anatomy Evaluation + Data Integrity
+**Focus**: Evaluate Z-Anatomy for nerves/vessels; fix structures.json placeholder inconsistencies
 
-**Tasks**:
-1. ✅ Convert remaining 6 intrinsic muscles STL → GLB
-2. ✅ Convert 3 extrinsic muscles STL → GLB (tib post, flex dig/hal longus)
-3. ✅ Update `structures.json` + `manifest.json`
-4. ✅ Wire all 14 muscles into `FootModel.tsx`
-5. ✅ Test selection/highlight/hover for all 14 real muscle meshes
-6. ✅ Verify layer toggle correctness (bone vs muscle raycasting)
+**Actual Tasks**:
+1. ✅ Cloned Z-Anatomy repo (CC BY-SA 4.0) → documented Blender-internal blocker
+2. ✅ Evaluated nerve/vessel extraction cost (requires Blender 3.x, ~800MB + manual UI)
+3. ✅ Fixed `structures.json` placeholder flags:
+   - Extrinsic muscles (tibialis_posterior, FDL, FHL): `false → true` (no real meshes)
+   - Dorsal interossei: `false → true` (BP3D/UM both lack)
+4. ✅ Updated `assets-research-round2.md`:
+   - Summary Table aligned with reality (17 muscles, 5 vessels, 0 nerves)
+   - Added "Current Integration Status" section (29/35 structures, 83% real)
+5. ✅ Updated `.gitignore` to exclude Z-Anatomy source files (206MB)
+6. ✅ All tests + build green; pushed to PR #1
 
-**Deliverable**: 14/14 real muscles integrated (11 intrinsics + 3 extrinsics)
+**Deliverable**: Z-Anatomy evaluated + documented; data integrity restored
 
-**Success Metric**: Muscle layer 100% real, 0% placeholder
+**Success Metric**: ✅ structures.json placeholder flags = FootModel.tsx reality (10/11 intrinsic muscles real)
 
 ---
 
-### Day 5 (Fri): License Verification + Secondary Sources
-**Focus**: Complete ≥10 source asset-research, evaluate best-of-rest
+### Day 5 (Fri): Polish + Documentation
+**Focus**: Product quality improvements, documentation completeness
 
 **Tasks**:
-1. ✅ Clone Z-Anatomy repo → inventory nerve/vessel curve files
-2. ✅ Verify license: CC BY-SA 4.0 confirmed, assess SA-taint risk
-3. ✅ Check Zenodo DOI 10.5281/zenodo.20231308 (muscles) → verify license
-4. ✅ Check Zenodo DOI 10.5281/zenodo.1056750 (nerves) → verify license
-5. ✅ Search SPARC portal dataset 307 → assess foot nerve/vessel detail
-6. ✅ Search NIH 3D Print Exchange ("foot muscle", "foot nerve") → catalog CC0/CC BY entries
-7. ✅ Update `docs/assets-research-round2.md` with verified findings
-8. ✅ Decision: Integrate Z-Anatomy nerves/vessels (if BY-SA acceptable) OR keep schematic
+1. ⏳ Optional: Attempt remaining BP3D vessel extraction (deep plantar arch digital branches if BP codes exist)
+2. ⏳ Update `docs/methods.md` with nerve layer limitation disclosure
+3. ⏳ Final quality pass on schematic nerve rendering (emissive yellow, thin cylinders)
+4. ⏳ Camera/lighting refinements (if needed)
+5. ⏳ README screenshots update (if product visuals improved)
+6. ⏳ Verify all tests green; push to PR #1
 
-**Deliverable**: Complete ≥10 source comparison table with verified licenses
+**Deliverable**: Teaching product ready for end-of-week review
 
-**Decision Point**: Nerve/vessel strategy (real BY-SA vs improved schematic vs wait for CC0/CC BY)
+**Nerve/Vessel Strategy Locked**: Keep improved schematic nerves (honest 占位); BP3D vessels (5/6, 83%); Open3D/Z-Anatomy deferred due to blockers
 
 ---
 

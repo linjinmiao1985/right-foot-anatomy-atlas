@@ -149,7 +149,62 @@ Phase 4 claimed "no open intrinsic foot muscles exist" based on insufficient sea
 
 ---
 
-## Day 4-7 — See week-plan.md
+## Day 4 — Z-Anatomy Evaluation + Data Integrity (2026-09-14)
+
+**Focus**: Evaluate Z-Anatomy for nerves/vessels; align assets-research-round2.md with reality; fix structures.json placeholder inconsistencies
+
+**Progress** ✅:
+1. **Z-Anatomy repository evaluation** (`third_party/z-anatomy/EVALUATION.md`)
+   - Cloned https://github.com/Z-Anatomy/Models-of-human-anatomy (CC BY-SA 4.0)
+   - Confirmed content is **Blender-internal** (Startup.blend, 306MB)
+   - Nerve/vessel geometry requires Blender 3.x installation + manual export
+   - **Decision**: Defer extraction (800MB install + manual UI workflow breaks scriptable automation)
+   - TA2.csv metadata exists (47 foot nerve entries), but 3D geometry availability unconfirmed
+   - BY-NC references in credits (Inner Ear, Kidney) → caution required if extracting
+2. **structures.json placeholder fixes** (4 corrections)
+   - Extrinsic muscles (tibialis_posterior, flexor_digitorum_longus, flexor_hallucis_longus): `placeholder: false → true` (no real meshes)
+   - Dorsal interossei: `placeholder: false → true` (BP3D and UM both lack this muscle)
+   - **Final intrinsic muscle status**: 10/11 real (91%), 1 placeholder (dorsal interossei)
+3. **assets-research-round2.md alignment** (Summary Table + Current Integration Status)
+   - Updated Summary Table: BP3D "12 GLB", UM "5 GLB", verdicts "✅ INTEGRATED" / "⏸️ BLOCKED"
+   - Added "Current Integration Status" section:
+     * Bones: 14/14 (100%)
+     * Intrinsic Muscles: 10/11 (91%) — 17 GLB total (BP3D 12 + UM 5)
+     * Vessels: 5/6 (83%)
+     * Nerves: 0/6 (0%) — schematic only
+   - Documented blockers: Open3DModel (404), Z-Anatomy (Blender-only)
+   - Teaching product metrics: 29/35 structures (83%) real meshes
+4. **.gitignore update** for Z-Anatomy source files (206MB repo, can be re-cloned)
+
+**Blockers** ⏸️:
+- **Z-Anatomy**: Requires Blender installation (not performed; manual extraction deferred)
+- **Open3DModel**: Download still blocked (404 errors, see Day 3 DOWNLOAD_BLOCKER.md)
+- **Dorsal interossei**: No open-source meshes found (BP3D, UM, Open3D, Z-Anatomy all lack)
+
+**Commits**:
+- Total: 1 commit (efc3c43)
+- Key: `Day 4: Z-Anatomy evaluation + structures.json placeholder fixes`
+
+**Tests/Build**: ✅ GREEN
+- `npm run build`: ✅ PASS (dist/ generated)
+- `npx vitest run`: ✅ PASS (7/7 tests)
+
+**Tomorrow (Day 5)** 📋:
+1. Optional: Attempt remaining BP3D vessel coverage (deep plantar arch digital branches if BP codes exist)
+2. Update `docs/methods.md` with nerve layer limitation disclosure
+3. Update `docs/week-plan.md` for Days 5-7 focus (polish, documentation, screenshots)
+4. Consider: Final quality pass on schematic nerve rendering (emissive yellow, thin cylinders)
+5. No new asset downloads unless user provides stable URLs
+
+**Key Insight** 💡:
+- **Blender-internal content** (Z-Anatomy, potentially other academic projects) is a major accessibility barrier for scriptable automation
+- Week sprint strategy correctly prioritizes **scriptable, reproducible paths** over manual GUI workflows
+- **Honest placeholder labeling** + gap documentation is more valuable than fake "complete" claims
+- Data integrity matters: `structures.json` placeholder flags must reflect actual `FootModel.tsx` mappings
+
+---
+
+## Day 5-7 — See week-plan.md
 
 Detailed plans in `docs/week-plan.md`
 
