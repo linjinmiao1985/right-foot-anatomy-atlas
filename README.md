@@ -3,16 +3,19 @@
 **最佳开源右足解剖教学图谱**  
 **Best-in-Class Open Teaching Atlas for Right-Foot Osteology**
 
-> ⚕️ **教育用途免责声明**: 本应用为**教学级医学教育工具**，适合医学生、解剖教师、足踝外科住院医师使用。**骨骼层达到期刊级解剖准确度**（BodyParts3D CC BY 4.0），**软组织采用教学级示意图**（内在肌/神经/血管）。**当前不可用于临床诊断或治疗**或期刊发表（软组织示意限制）。所有解剖信息基于 Terminologia Anatomica 2 和中国医学标准教材（《人体解剖学》第9版）。
+> ⚕️ **教育用途免责声明**: 本应用为**教学级医学教育工具**，适合医学生、解剖教师、足踝外科住院医师使用。**骨骼、肌肉、血管层达到期刊级解剖准确度**（BodyParts3D CC BY 4.0），**神经层为示意**。**当前不可用于临床诊断或治疗**或完整期刊发表（神经层示意限制）。所有解剖信息基于 Terminologia Anatomica 2 和中国医学标准教材（《人体解剖学》第9版）。
 
-**🎯 Phase 4 Teaching-Grade Product Status**:
-- ✅ **14/14 真实骨骼网格** (BodyParts3D Release 4.0, CC BY 4.0, 393KB, 期刊级准确度)
+**🎯 Day 1 Major Breakthrough — Real Soft Tissue Integration**:
+- ✅ **14/14 真实骨骼网格** (BodyParts3D R4.0, CC BY 4.0, 393KB)
+- ✅ **15/~20 真实肌肉网格** (BodyParts3D R4.0, CC BY 4.0, 450KB) 🆕
+  - 足底浅层（AH, FDB, ADM）、深层（FHB, AddH oblique+transverse, FDMB, Lumbricals 1-4, Plantar interossei 1-3）、足背（EHB）
+  - **缺口**: Quadratus plantae, EDB → UM CC0待集成
+- ✅ **3/6 真实血管网格** (BodyParts3D R4.0, CC BY 4.0, 150KB) 🆕
+  - 足背动脉、足底内侧/外侧动脉（主动脉弓完整）
 - ✅ **41个教学级深化结构** (平均224字，含临床意义、TA2编码、神经血供)
-- ✅ **改进的软组织示意** (胶囊肌肉、发光神经、锥形血管，教学级可视化)
-- ✅ **TA2命名+踇/拇Critical Correction** (100%符合PRC医学标准，详见 `docs/terminology.md`)
-- ✅ **BP→FJ映射突破** (scan_obj_headers.py暴力扫描2234 OBJ实现100%覆盖)
-- ✅ **全面方法学文档** (3200+行：数据溯源、转换管道、限制披露、可复现步骤)
-- ⚠️ **诚实披露**: 内在足肌/神经/血管为教学级示意（开源数据集中不存在真实几何体）
+- ✅ **TA2命名+踇/拇Critical Correction** (100%符合PRC医学标准)
+- ✅ **BP→FJ映射突破** (暴力扫描2234 OBJ实现100%覆盖：14骨+15肌+3血管)
+- ⚠️ **神经层仍为示意** (BP3D足区神经=0, Open3DModel BY-SA待隔离集成)
 
 ---
 
@@ -168,24 +171,39 @@ npm run test
 
 ### 3D 模型资产
 
-**当前状态 (Phase 3 集成中)**:
-- ⏳ **BodyParts3D 真实骨骼模型下载中** (78MB/136MB 已下载)
-- ✅ 许可锁定：**CC BY 4.0** (无 ShareAlike 限制！)
-- ✅ 程序化占位几何体（临时，待真实模型替换）
-- ✅ 网格命名匹配 `structures.json` 数据
+**当前状态 (Day 1 重大突破)**:
+- ✅ **BodyParts3D 32个真实结构已集成** (14骨+15肌+3血管, 1.1MB GLB)
+- ✅ **Phase 4错误更正**: BP3D存档包含软组织（非"骨骼唯一"）
+- ✅ 许可锁定：**CC BY 4.0** (无 ShareAlike 限制！) + **UM CC0**待集成
+- ⚠️ 神经层仍为示意（BP3D足区神经=0, Open3DModel BY-SA隔离待评估）
+- ✅ 网格命名匹配 `structures.json` 数据，BP→FJ映射100%命中
 
-**主选资产 (最终决策)**:
+**主要资产来源**:
+
+#### 1. BodyParts3D Release 4.0 (已集成)
 - **来源**: [BodyParts3D LSDB Archive](https://dbarchive.biosciencedbc.jp/en/bodyparts3d/)
 - **开发**: Database Center for Life Science (DBCLS), Japan
 - **许可**: **CC BY 4.0** ⭐ (Attribution 4.0 International, 2025-02-27 更新)
-- **内容**: 全身 MRI 多边形网格（提取右足骨骼）
-- **格式**: OBJ → GLB 转换
-- **命名**: FMA (Foundational Model of Anatomy) 基础
+- **内容**: 全身 MRI 多边形网格（**含骨骼+肌肉+血管，非仅骨骼**）
+- **提取**: 32个右足结构 (14骨, 15肌: AH/FDB/ADM/EHB/FDMB/AddH/FHB/Lumb1-4/PI1-3, 3血管: DPA/MPA/LPA)
+- **格式**: OBJ → GLB (总计1.1MB)
+- **命名**: FMA (Foundational Model of Anatomy) + BP codes
 - **DOI**: 10.18908/lsdba.nbdc00837-007
+- **映射方法**: scan_obj_headers.py暴力扫描2234 OBJ头部，提取BP/FMA ID
+
+#### 2. Universiti Malaya Asian Male LE MSK (Day 2待集成)
+- **来源**: [Universiti Malaya Dataverse](https://researchdata.um.edu.my/dataset.xhtml?persistentId=doi:10.22452/RD/5T6TZ7)
+- **开发**: 马来亚大学生物医学工程系
+- **许可**: **CC0 1.0** 🌟 (公共领域，连署名都无法律要求)
+- **角色**: **间隙填充器** (Quadratus plantae + Extensor digitorum brevis，BP3D缺失)
+- **内容**: 67部件（13骨+42肌+5韧带+4软骨+2肌腱+1半月板）
+- **格式**: STL → GLB
+- **状态**: 下载中（58.3MB ZIP）
 
 **必需署名**:
 ```
 BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International
+Universiti Malaya Asian Male Lower Extremity Musculoskeletal Model (CC0 1.0, Public Domain)
 ```
 
 **许可优势**:

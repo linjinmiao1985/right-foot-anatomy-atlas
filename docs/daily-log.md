@@ -36,14 +36,35 @@
 10. ⏸️ OPANEX: Viewer vs assets distinction
 11. ⏸️ Visible Korean: Custom agreement (likely link-only)
 
-**Commits Today**: 3
-- `cc071a0`: Asset Research Round 2 initiated
-- `43fcb91`: Owner update (UM discovery + apology)
-- `[pending]`: Week plan + daily log
+**AFTERNOON BREAKTHROUGH**:
+- ✅ **BP3D RE-SCAN**: Archive contains **15 foot muscles + 3 vessels** (Phase 4 was WRONG!)
+- ✅ Extracted ALL BP3D soft tissue: abductor hallucis, FDB, ADM, EHB, FDMB, AddH (oblique+transverse), FHB medial, lumbricals 1-4, plantar interossei 1-3
+- ✅ Extracted BP3D vessels: dorsalis pedis, medial/lateral plantar arteries
+- ✅ Converted 18 OBJ → GLB (600KB total)
+- ✅ Created `RealMuscleModel` + `RealVesselModel` components in FootModel.tsx
+- ✅ Updated manifest.json → v2.0.0-bodyparts3d-bones-muscles-vessels
+- ✅ Integrated into viewer: 14 bones + 15 muscles + 3 vessels ALL REAL
+
+**Phase 4 Error Root Cause**:
+- Only explored BP3D bone extraction (Phase 3)
+- Never searched `isa_parts_list_e.txt` for soft tissue keywords
+- Assumed "bones-only" from filename `isa_BP3D_4.0_obj_99.zip`
+- **Correct method**: grep soft tissue terms → brute-force BP→FJ scan → 100% hit rate
+
+**UM Strategic Role Revised**:
+- **NOT** primary muscle source (BP3D already has 15/~20 intrinsics!)
+- **Gap filler**: Quadratus plantae + Extensor digitorum brevis (missing from BP3D)
+- **Quality check**: Compare AH/ADM/FDB quality (UM vs BP3D), use better version
+
+**Commits Today**: 4
+- `5e28e1a`: Week plan + daily log
+- `0548fa0`: Asset research Round 2 complete (≥12 sources)
+- `f3b50ca`: Integrate 15 BP3D muscles + 3 vessels (CC BY 4.0)
+- `[pending]`: Daily log update
 
 **Tests Status**: ✅ Green (7/7 pass)
 
-**Build Status**: ✅ Pass (1.09MB bundle)
+**Build Status**: ✅ Pass (1.09MB bundle, 32 GLBs loaded)
 
 **Tomorrow (Day 2) Concrete Actions**:
 1. **Priority 1**: Complete UM STL ZIP download (try alternative URLs, manual if necessary)
