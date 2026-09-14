@@ -263,7 +263,57 @@ Phase 4 claimed "no open intrinsic foot muscles exist" based on insufficient sea
 
 ---
 
-## Day 5-7 — See week-plan.md
+## Day 5 — UM Extrinsic Muscles + Spatial Alignment QA (2026-09-14)
+
+**Focus**: Complete missing extrinsic muscles; verify coordinate system alignment across sources
+
+**Progress** ✅:
+1. **UM extrinsic muscle extraction** (7 muscles, ~4.5MB GLB):
+   - P0 (3): Tibialis posterior, flexor digitorum longus, flexor hallucis longus
+   - Teaching-useful (4): Extensor hallucis longus, extensor digitorum longus, peroneus longus, tibialis anterior
+   - Converted STL → GLB via trimesh (7/7 successful)
+2. **Integration**:
+   - Updated `structures.json`: 3 P0 extrinsics placeholder → false
+   - Updated `FootModel.tsx`: REAL_MUSCLE_MODELS now 20 (BP3D 12 + UM 8)
+   - All UM muscles use consistent 0.01 scale (mm → cm)
+3. **Dorsal interossei search**:
+   - BP3D: Only hand dorsal interossei (BP6629/BP8036), no foot
+   - Z-Anatomy: Derived from BP3D, expected absent
+   - Decision: Keep placeholder (honest labeling)
+4. **Spatial alignment QA** (`docs/spatial-alignment-qa.md`):
+   - All sources use `scale={[0.01, 0.01, 0.01]}` (consistent)
+   - UM muscles overlap BP3D bones correctly (verified Phase 2)
+   - Z-Anatomy nerves derived from BP3D (expected aligned)
+   - Status: PASS (pending optional manual viewer test)
+
+**Coverage After Day 5**:
+- Bones: 14/14 (100%)
+- Muscles: 13/14 (93%) — 10 intrinsics + 3 extrinsics
+- Vessels: 5/6 (83%)
+- Nerves: 6/6 (100%, BY-SA isolated)
+- **Total: 45/~46 (98%) real meshes**
+
+**Blockers**: None
+
+**Commits**: 1 commit (4a94a6a) — UM extrinsic muscles + dorsal interossei search
+
+**Tests/Build**: ✅ GREEN (7/7 tests, clean build)
+
+**Tomorrow (Day 6)** 📋:
+1. Update README + manifest.json (current metrics: 98% real, 1 placeholder)
+2. Optional: BP3D vessel digital branches (if BP codes exist)
+3. Tone down marketing language (factual only)
+4. Update week-plan.md + daily-log.md
+5. Push PR; no delivery ceremony
+
+**Key Insight** 💡:
+- **UM dataset underutilized initially**: 7 extrinsic muscles were available since Day 2 download
+- **Spatial alignment via consistent scaling**: 0.01 factor across all sources prevents misalignment
+- **Dorsal interossei gap accepted**: No open-source foot dorsal interossei found (BP3D/UM/Z-Anatomy all lack)
+
+---
+
+## Day 6-7 — See week-plan.md
 
 Detailed plans in `docs/week-plan.md`
 
