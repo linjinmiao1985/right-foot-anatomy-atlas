@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Html } from '@react-three/drei';
 import { getAllStructures } from '../lib/structureLookup';
 import { LAYER_CONFIG } from '../lib/layers';
 import type { Layer } from '../types/anatomy';
@@ -19,8 +20,11 @@ interface PlaceholderMesh {
 
 export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName }: FootModelProps) {
   const [placeholderMeshes, setPlaceholderMeshes] = useState<PlaceholderMesh[]>([]);
+  const [hoveredMesh, setHoveredMesh] = useState<string | null>(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    setLoading(true);
     const structures = getAllStructures();
     const meshes: PlaceholderMesh[] = [];
     let boneIndex = 0;
@@ -55,7 +59,24 @@ export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName
     });
 
     setPlaceholderMeshes(meshes);
+    setLoading(false);
   }, []);
+
+  if (loading) {
+    return (
+      <Html center>
+        <div style={{ 
+          color: 'white', 
+          background: 'rgba(0,0,0,0.7)', 
+          padding: '1rem', 
+          borderRadius: '4px',
+          fontFamily: 'sans-serif'
+        }}>
+          加载中...
+        </div>
+      </Html>
+    );
+  }
 
   return (
     <group>
@@ -65,35 +86,61 @@ export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName
 
         const color = LAYER_CONFIG[structure.layer].color;
         const isSelected = meshName === selectedMeshName;
+        const isHovered = meshName === hoveredMesh;
 
         return (
-          <mesh
-            key={meshName}
-            name={meshName}
-            position={position}
-            onClick={(e) => {
-              e.stopPropagation();
-              onMeshClick(meshName);
-            }}
-            onPointerOver={(e) => {
-              e.stopPropagation();
-              document.body.style.cursor = 'pointer';
-            }}
-            onPointerOut={() => {
-              document.body.style.cursor = 'default';
-            }}
-          >
+          <group key={meshName}>
+            <mesh
+              name={meshName}
+              position={position}
+              onClick={(e) => {
+                e.stopPropagation();
+                onMeshClick(meshName);
+              }}
+              onPointerOver={(e) => {
+                e.stopPropagation();
+                document.body.style.cursor = 'pointer';
+                setHoveredMesh(meshName);
+              }}
+              onPointerOut={() => {
+                document.body.style.cursor = 'default';
+                setHoveredMesh(null);
+              }}
+            >
             {structure.layer === 'nerve' || structure.layer === 'vessel' ? (
               <cylinderGeometry args={[size[0], size[1], size[2], 8]} />
             ) : (
               <boxGeometry args={size} />
             )}
-            <meshStandardMaterial
-              color={color}
-              emissive={isSelected ? '#00ffff' : '#000000'}
-              emissiveIntensity={isSelected ? 0.5 : 0}
-            />
-          </mesh>
+              <meshStandardMaterial
+                color={color}
+                emissive={isSelected ? '#00ffff' : (isHovered ? '#ffffff' : '#000000')}
+                emissiveIntensity={isSelected ? 0.6 : (isHovered ? 0.3 : 0)}
+                opacity={isHovered && !isSelected ? 0.9 : 1}
+                transparent={isHovered && !isSelected}
+              />
+            </mesh>
+            {isHovered && !isSelected && (
+              <Html position={[position[0], position[1] + 0.2, position[2]]} center>
+                <div style={{ 
+                  background: 'rgba(0,0,0,0.85)', 
+                  color: 'white',
+                  padding: '0.5rem 0.75rem',
+                  borderRadius: '4px',
+                  fontSize: '0.9rem',
+                  whiteSpace: 'nowrap',
+                  pointerEvents: 'none',
+                  border: `2px solid ${color}`,
+                  fontFamily: 'sans-serif'
+                }}>
+                  <strong>{structure.nameZh}</strong>
+                  <div style={{ fontSize: '0.75rem', opacity: 0.8, marginTop: '0.25rem' }}>
+                    {structure.nameLa}
+                  </div>
+                </div>
+              </Html>
+            )}
+          </group>
         );
       })}
     </group>
