@@ -36,6 +36,38 @@ const REAL_BONE_MODELS: Record<string, string> = {
   'distal_phalanx_1': '/models/right-foot/distal_phalanx_1_BP9282.glb',
 };
 
+// Real muscle GLB models - 15 right foot muscles from BodyParts3D (CC BY 4.0)
+const REAL_MUSCLE_MODELS: Record<string, string> = {
+  'abductor_hallucis': '/models/right-foot/abductor_hallucis.glb',
+  'flexor_digitorum_brevis': '/models/right-foot/flexor_digitorum_brevis.glb',
+  'abductor_digiti_minimi': '/models/right-foot/abductor_digiti_minimi.glb',
+  'extensor_hallucis_brevis': '/models/right-foot/extensor_hallucis_brevis.glb',
+  'flexor_digiti_minimi_brevis': '/models/right-foot/flexor_digiti_minimi_brevis.glb',
+  'adductor_hallucis': '/models/right-foot/adductor_hallucis_oblique.glb', // oblique head
+  'flexor_hallucis_brevis': '/models/right-foot/flexor_hallucis_brevis_medial.glb',
+  'lumbrical_1': '/models/right-foot/lumbrical_1st.glb',
+  'lumbrical_2': '/models/right-foot/lumbrical_2nd.glb',
+  'lumbrical_3': '/models/right-foot/lumbrical_3rd.glb',
+  'lumbrical_4': '/models/right-foot/lumbrical_4th.glb',
+  'plantar_interosseous_1': '/models/right-foot/plantar_interosseous_1st.glb',
+  'plantar_interosseous_2': '/models/right-foot/plantar_interosseous_2nd.glb',
+  'plantar_interosseous_3': '/models/right-foot/plantar_interosseous_3rd.glb',
+};
+
+// Additional muscle heads as separate meshes
+const ADDITIONAL_MUSCLE_PARTS: Record<string, string[]> = {
+  'adductor_hallucis': [
+    '/models/right-foot/adductor_hallucis_transverse.glb',
+  ],
+};
+
+// Real vessel GLB models - 3 right foot arteries from BodyParts3D (CC BY 4.0)
+const REAL_VESSEL_MODELS: Record<string, string> = {
+  'dorsalis_pedis_artery': '/models/right-foot/dorsalis_pedis_artery.glb',
+  'plantar_artery_medial': '/models/right-foot/medial_plantar_artery.glb',
+  'plantar_artery_lateral': '/models/right-foot/lateral_plantar_artery.glb',
+};
+
 export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName }: FootModelProps) {
   const [placeholderMeshes, setPlaceholderMeshes] = useState<PlaceholderMesh[]>([]);
   const [hoveredMesh, setHoveredMesh] = useState<string | null>(null);
@@ -114,16 +146,53 @@ export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName
         const isHovered = meshName === hoveredMesh;
         
         // Check if this structure has a real GLB model
-        const hasRealModel = structure.layer === 'bone' && REAL_BONE_MODELS[structure.id];
+        const hasRealBone = structure.layer === 'bone' && REAL_BONE_MODELS[structure.id];
+        const hasRealMuscle = structure.layer === 'muscle' && REAL_MUSCLE_MODELS[structure.id];
+        const hasRealVessel = structure.layer === 'vessel' && REAL_VESSEL_MODELS[structure.id];
 
         // Render real GLB model for bones with available meshes
-        if (hasRealModel) {
+        if (hasRealBone) {
           return (
             <RealBoneModel
               key={meshName}
               structure={structure}
               meshName={meshName}
               modelPath={REAL_BONE_MODELS[structure.id]}
+              color={color}
+              isSelected={isSelected}
+              isHovered={isHovered}
+              onMeshClick={onMeshClick}
+              onHoverChange={setHoveredMesh}
+            />
+          );
+        }
+
+        // Render real GLB model for muscles with available meshes
+        if (hasRealMuscle) {
+          return (
+            <RealMuscleModel
+              key={meshName}
+              structure={structure}
+              meshName={meshName}
+              modelPath={REAL_MUSCLE_MODELS[structure.id]}
+              additionalParts={ADDITIONAL_MUSCLE_PARTS[structure.id]}
+              color={color}
+              isSelected={isSelected}
+              isHovered={isHovered}
+              onMeshClick={onMeshClick}
+              onHoverChange={setHoveredMesh}
+            />
+          );
+        }
+
+        // Render real GLB model for vessels with available meshes
+        if (hasRealVessel) {
+          return (
+            <RealVesselModel
+              key={meshName}
+              structure={structure}
+              meshName={meshName}
+              modelPath={REAL_VESSEL_MODELS[structure.id]}
               color={color}
               isSelected={isSelected}
               isHovered={isHovered}
@@ -310,7 +379,204 @@ function RealBoneModel({
   );
 }
 
+// Component for rendering real GLB muscle models
+interface RealMuscleModelProps {
+  structure: AnatomyStructure;
+  meshName: string;
+  modelPath: string;
+  additionalParts?: string[];
+  color: string;
+  isSelected: boolean;
+  isHovered: boolean;
+  onMeshClick: (meshName: string) => void;
+  onHoverChange: (meshName: string | null) => void;
+}
+
+function RealMuscleModel({
+  structure,
+  meshName,
+  modelPath,
+  additionalParts,
+  color,
+  isSelected,
+  isHovered,
+  onMeshClick,
+  onHoverChange,
+}: RealMuscleModelProps) {
+  const { scene } = useGLTF(modelPath);
+  const additionalScenes = (additionalParts || []).map(path => useGLTF(path).scene);
+  
+  // Clone scenes to avoid sharing materials
+  const clonedScene = scene.clone();
+  const clonedAdditional = additionalScenes.map(s => s.clone());
+  
+  // Apply materials to all meshes
+  useEffect(() => {
+    [clonedScene, ...clonedAdditional].forEach(scn => {
+      scn.traverse((node) => {
+        if ((node as any).isMesh) {
+          const mesh = node as any;
+          mesh.material = mesh.material.clone();
+          mesh.material.color.set(color);
+          mesh.material.emissive.set(isSelected ? '#ff6600' : (isHovered ? '#ffffff' : '#000000'));
+          mesh.material.emissiveIntensity = isSelected ? 0.4 : (isHovered ? 0.2 : 0);
+          mesh.material.transparent = true;
+          mesh.material.opacity = isHovered && !isSelected ? 0.85 : 0.75;
+          mesh.material.roughness = 0.7;
+          mesh.material.needsUpdate = true;
+        }
+      });
+    });
+  }, [clonedScene, clonedAdditional, color, isSelected, isHovered]);
+  
+  return (
+    <group
+      name={meshName}
+      scale={[0.01, 0.01, 0.01]} // BodyParts3D models are in mm
+      onClick={(e) => {
+        e.stopPropagation();
+        onMeshClick(meshName);
+      }}
+      onPointerOver={(e) => {
+        e.stopPropagation();
+        document.body.style.cursor = 'pointer';
+        onHoverChange(meshName);
+      }}
+      onPointerOut={() => {
+        document.body.style.cursor = 'default';
+        onHoverChange(null);
+      }}
+    >
+      <primitive object={clonedScene} />
+      {clonedAdditional.map((s, i) => (
+        <primitive key={i} object={s} />
+      ))}
+      {isHovered && !isSelected && (
+        <Html position={[0, 200, 0]} center>
+          <div style={{ 
+            background: 'rgba(0,0,0,0.85)', 
+            color: 'white',
+            padding: '0.5rem 0.75rem',
+            borderRadius: '4px',
+            fontSize: '0.9rem',
+            whiteSpace: 'nowrap',
+            pointerEvents: 'none',
+            border: `2px solid ${color}`,
+            fontFamily: 'sans-serif'
+          }}>
+            <strong>{structure.nameZh}</strong>
+            <div style={{ fontSize: '0.75rem', opacity: 0.8, marginTop: '0.25rem' }}>
+              {structure.nameLa}
+            </div>
+            <div style={{ fontSize: '0.7rem', color: '#ff8800', marginTop: '0.25rem' }}>
+              BodyParts3D
+            </div>
+          </div>
+        </Html>
+      )}
+    </group>
+  );
+}
+
+// Component for rendering real GLB vessel models
+interface RealVesselModelProps {
+  structure: AnatomyStructure;
+  meshName: string;
+  modelPath: string;
+  color: string;
+  isSelected: boolean;
+  isHovered: boolean;
+  onMeshClick: (meshName: string) => void;
+  onHoverChange: (meshName: string | null) => void;
+}
+
+function RealVesselModel({
+  structure,
+  meshName,
+  modelPath,
+  color,
+  isSelected,
+  isHovered,
+  onMeshClick,
+  onHoverChange,
+}: RealVesselModelProps) {
+  const { scene } = useGLTF(modelPath);
+  
+  const clonedScene = scene.clone();
+  
+  // Apply vessel-specific materials (slightly translucent red)
+  useEffect(() => {
+    clonedScene.traverse((node) => {
+      if ((node as any).isMesh) {
+        const mesh = node as any;
+        mesh.material = mesh.material.clone();
+        mesh.material.color.set(color);
+        mesh.material.emissive.set(isSelected ? '#ff0000' : (isHovered ? '#ff6666' : '#330000'));
+        mesh.material.emissiveIntensity = isSelected ? 0.3 : (isHovered ? 0.2 : 0.1);
+        mesh.material.transparent = true;
+        mesh.material.opacity = 0.8;
+        mesh.material.metalness = 0.2;
+        mesh.material.needsUpdate = true;
+      }
+    });
+  }, [clonedScene, color, isSelected, isHovered]);
+  
+  return (
+    <group
+      name={meshName}
+      scale={[0.01, 0.01, 0.01]} // BodyParts3D models are in mm
+      onClick={(e) => {
+        e.stopPropagation();
+        onMeshClick(meshName);
+      }}
+      onPointerOver={(e) => {
+        e.stopPropagation();
+        document.body.style.cursor = 'pointer';
+        onHoverChange(meshName);
+      }}
+      onPointerOut={() => {
+        document.body.style.cursor = 'default';
+        onHoverChange(null);
+      }}
+    >
+      <primitive object={clonedScene} />
+      {isHovered && !isSelected && (
+        <Html position={[0, 200, 0]} center>
+          <div style={{ 
+            background: 'rgba(0,0,0,0.85)', 
+            color: 'white',
+            padding: '0.5rem 0.75rem',
+            borderRadius: '4px',
+            fontSize: '0.9rem',
+            whiteSpace: 'nowrap',
+            pointerEvents: 'none',
+            border: `2px solid ${color}`,
+            fontFamily: 'sans-serif'
+          }}>
+            <strong>{structure.nameZh}</strong>
+            <div style={{ fontSize: '0.75rem', opacity: 0.8, marginTop: '0.25rem' }}>
+              {structure.nameLa}
+            </div>
+            <div style={{ fontSize: '0.7rem', color: '#ff3333', marginTop: '0.25rem' }}>
+              BodyParts3D
+            </div>
+          </div>
+        </Html>
+      )}
+    </group>
+  );
+}
+
 // Preload all GLB models
 Object.values(REAL_BONE_MODELS).forEach(path => {
+  useGLTF.preload(path);
+});
+Object.values(REAL_MUSCLE_MODELS).forEach(path => {
+  useGLTF.preload(path);
+});
+Object.values(ADDITIONAL_MUSCLE_PARTS).flat().forEach(path => {
+  useGLTF.preload(path);
+});
+Object.values(REAL_VESSEL_MODELS).forEach(path => {
   useGLTF.preload(path);
 });
