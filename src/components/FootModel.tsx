@@ -36,14 +36,17 @@ const REAL_BONE_MODELS: Record<string, string> = {
   'distal_phalanx_1': '/models/right-foot/distal_phalanx_1_BP9282.glb',
 };
 
-// Real muscle GLB models - 17 right foot muscles (BP3D 12 + UM CC0 5)
+// Real muscle GLB models - 20 right foot muscles (BP3D 12 + UM CC0 8)
 const REAL_MUSCLE_MODELS: Record<string, string> = {
-  // UM CC0 (5): Higher resolution or BP3D gaps
+  // UM CC0 (8): Intrinsics (5) + Extrinsics (3)
   'abductor_hallucis': '/models/right-foot/abductor_hallucis.glb', // UM (8.7x BP3D)
   'flexor_digitorum_brevis': '/models/right-foot/flexor_digitorum_brevis.glb', // UM (2.4x BP3D)
   'abductor_digiti_minimi': '/models/right-foot/abductor_digiti_minimi.glb', // UM (4.5x BP3D)
   'quadratus_plantae': '/models/right-foot/quadratus_plantae.glb', // UM (BP3D gap)
   'extensor_digitorum_brevis': '/models/right-foot/extensor_digitorum_brevis.glb', // UM (BP3D gap)
+  'tibialis_posterior': '/models/right-foot/tibialis_posterior.glb', // UM extrinsic
+  'flexor_digitorum_longus': '/models/right-foot/flexor_digitorum_longus.glb', // UM extrinsic
+  'flexor_hallucis_longus': '/models/right-foot/flexor_hallucis_longus.glb', // UM extrinsic
   
   // BP3D CC BY 4.0 (12): Remaining intrinsics
   'extensor_hallucis_brevis': '/models/right-foot/extensor_hallucis_brevis.glb',

@@ -191,7 +191,7 @@
     "nameZh": "胫骨后肌",
     "nameLa": "M. tibialis posterior",
     "summaryZh": "小腿深后群最深层肌，是足内侧纵弓最重要的动态稳定器。起点：胫骨后面上2/3、腓骨内侧面和骨间膜。肌腱经内踝后方进入足，主要止点为舟骨粗隆（最主要），并有多条分支止于三块楔骨、骰骨、第2-4跖骨底足底面。作用：足跖屈和内翻，维持内侧纵弓，控制足旋前（pronation）。支配：胫神经（L4-L5）。临床意义：胫骨后肌腱功能不全（PTTD，posterior tibial tendon dysfunction）是成人获得性扁平足的主要原因，Johnson分期I-IV级，晚期需要跟骨截骨或三关节融合；内踝后方腱鞘炎；腱止点撕脱性骨折（舟骨粗隆）。TA2编码：M. tibialis posterior。",
-    "placeholder": true
+    "placeholder": false
   },
   {
     "id": "flexor_digitorum_longus",
@@ -203,7 +203,7 @@
     "nameZh": "趾长屈肌",
     "nameLa": "M. flexor digitorum longus",
     "summaryZh": "小腿深后群肌，是第2-5趾的主要长屈肌。起点：胫骨后面中1/3。肌腱经内踝后方、跟骨内侧和足底深筋膜下进入足底中部，在足底与趾长屈肌腱交叉（chiasma tendinum），然后分为4条肌腱，每腱穿过趾短屈肌腱（腱鞘，类似手部指深屈肌），止于第2-5趾远节趾骨底足底面。作用：屈第2-5趾远侧趾间关节（DIP），辅助屈近侧趾间关节和跖趾关节，辅助踝跖屈和足内翻。支配：胫神经（L5-S1）。临床意义：腱鞘炎或腱炎引起足底内侧痛；在足底与趾长屈肌腱交叉处摩擦；跖管综合征（tarsal tunnel syndrome）可压迫本肌腱；腱止点撕脱致远节趾间关节伸直畸形（mallet toe）。",
-    "placeholder": true
+    "placeholder": false
   },
   {
     "id": "flexor_hallucis_longus",
@@ -215,7 +215,7 @@
     "nameZh": "踇长屈肌",
     "nameLa": "M. flexor hallucis longus",
     "summaryZh": "小腿深后群肌，是踇趾的主要长屈肌，行走推进期的关键肌。起点：腓骨后面下2/3和骨间膜下部。肌腱经距骨后突（踇长屈肌沟）、内踝后下方深面进入足底，走行于距下关节和跟骨之间的骨纤维隧道（knot of Henry处与趾长屈肌腱交叉），继续前行于第1跖骨底和两个籽骨之间的纤维鞘管内，止于踇趾远节趾骨底足底面。作用：屈踇趾趾间关节（IP），辅助屈第1跖趾关节，推进行走，辅助踝跖屈和足内翻。支配：胫神经（S1-S2）。临床意义：踇长屈肌腱炎或腱鞘炎（舞蹈演员常见，os trigonum syndrome距骨后突综合征）；籽骨间腱鞘炎；腱止点撕脱致踇趾IP关节伸直无力；草皮趾损伤（turf toe）累及本腱。",
-    "placeholder": true
+    "placeholder": false
   },
   {
     "id": "abductor_hallucis",
