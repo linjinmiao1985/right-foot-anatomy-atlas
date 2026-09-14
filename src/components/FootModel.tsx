@@ -75,6 +75,17 @@ const REAL_VESSEL_MODELS: Record<string, string> = {
   'arcuate_artery': '/models/right-foot/arcuate_artery.glb',
 };
 
+// Real nerve GLB models - 6 right foot nerves from Z-Anatomy (CC BY-SA 4.0)
+// Isolated in by-sa/ subdirectory due to ShareAlike license requirement
+const REAL_NERVE_MODELS: Record<string, string> = {
+  'tibial_nerve': '/models/right-foot/by-sa/tibial_nerve.glb',
+  'medial_plantar_nerve': '/models/right-foot/by-sa/medial_plantar_nerve.glb',
+  'lateral_plantar_nerve': '/models/right-foot/by-sa/lateral_plantar_nerve.glb',
+  'deep_fibular_nerve': '/models/right-foot/by-sa/deep_fibular_nerve.glb',
+  'superficial_fibular_nerve': '/models/right-foot/by-sa/superficial_fibular_nerve.glb',
+  'sural_nerve': '/models/right-foot/by-sa/sural_nerve.glb',
+};
+
 export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName }: FootModelProps) {
   const [placeholderMeshes, setPlaceholderMeshes] = useState<PlaceholderMesh[]>([]);
   const [hoveredMesh, setHoveredMesh] = useState<string | null>(null);
@@ -156,6 +167,7 @@ export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName
         const hasRealBone = structure.layer === 'bone' && REAL_BONE_MODELS[structure.id];
         const hasRealMuscle = structure.layer === 'muscle' && REAL_MUSCLE_MODELS[structure.id];
         const hasRealVessel = structure.layer === 'vessel' && REAL_VESSEL_MODELS[structure.id];
+        const hasRealNerve = structure.layer === 'nerve' && REAL_NERVE_MODELS[structure.id];
 
         // Render real GLB model for bones with available meshes
         if (hasRealBone) {
@@ -200,6 +212,23 @@ export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName
               structure={structure}
               meshName={meshName}
               modelPath={REAL_VESSEL_MODELS[structure.id]}
+              color={color}
+              isSelected={isSelected}
+              isHovered={isHovered}
+              onMeshClick={onMeshClick}
+              onHoverChange={setHoveredMesh}
+            />
+          );
+        }
+
+        // Render real GLB model for nerves with available meshes (CC BY-SA 4.0)
+        if (hasRealNerve) {
+          return (
+            <RealNerveModel
+              key={meshName}
+              structure={structure}
+              meshName={meshName}
+              modelPath={REAL_NERVE_MODELS[structure.id]}
               color={color}
               isSelected={isSelected}
               isHovered={isHovered}
@@ -574,6 +603,98 @@ function RealVesselModel({
   );
 }
 
+// Component for rendering real GLB nerve models (CC BY-SA 4.0)
+interface RealNerveModelProps {
+  structure: AnatomyStructure;
+  meshName: string;
+  modelPath: string;
+  color: string;
+  isSelected: boolean;
+  isHovered: boolean;
+  onMeshClick: (meshName: string) => void;
+  onHoverChange: (meshName: string | null) => void;
+}
+
+function RealNerveModel({
+  structure,
+  meshName,
+  modelPath,
+  color,
+  isSelected,
+  isHovered,
+  onMeshClick,
+  onHoverChange,
+}: RealNerveModelProps) {
+  const { scene } = useGLTF(modelPath);
+  
+  const clonedScene = scene.clone();
+  
+  // Apply nerve-specific materials (yellow, slightly emissive)
+  useEffect(() => {
+    clonedScene.traverse((node) => {
+      if ((node as any).isMesh) {
+        const mesh = node as any;
+        mesh.material = mesh.material.clone();
+        mesh.material.color.set(color);
+        mesh.material.emissive.set(isSelected ? '#ffff00' : (isHovered ? '#ffff66' : '#666600'));
+        mesh.material.emissiveIntensity = isSelected ? 0.5 : (isHovered ? 0.3 : 0.2);
+        mesh.material.transparent = false;
+        mesh.material.metalness = 0.1;
+        mesh.material.roughness = 0.8;
+        mesh.material.needsUpdate = true;
+      }
+    });
+  }, [clonedScene, color, isSelected, isHovered]);
+  
+  return (
+    <group
+      scale={[0.01, 0.01, 0.01]}
+      onClick={(e) => {
+        e.stopPropagation();
+        onMeshClick(meshName);
+      }}
+      onPointerOver={(e) => {
+        e.stopPropagation();
+        onHoverChange(meshName);
+      }}
+      onPointerOut={(e) => {
+        e.stopPropagation();
+        onHoverChange(null);
+      }}
+    >
+      <primitive object={clonedScene} />
+      {(isHovered || isSelected) && (
+        <Html position={[0, 20, 0]} center distanceFactor={150}>
+          <div style={{
+            background: 'rgba(0, 0, 0, 0.85)',
+            color: '#fff',
+            padding: '8px 12px',
+            borderRadius: '6px',
+            fontSize: '13px',
+            whiteSpace: 'nowrap',
+            pointerEvents: 'none',
+            border: '1px solid rgba(255, 255, 0, 0.5)',
+            boxShadow: '0 2px 8px rgba(0,0,0,0.3)',
+          }}>
+            <div style={{ fontWeight: 'bold' }}>{structure.nameZh}</div>
+            <div style={{ fontSize: '11px', opacity: 0.8, marginTop: '2px' }}>{structure.nameLa}</div>
+            <div style={{ 
+              fontSize: '10px', 
+              marginTop: '4px', 
+              padding: '2px 6px', 
+              background: 'rgba(255, 255, 0, 0.2)',
+              borderRadius: '3px',
+              border: '1px solid rgba(255, 255, 0, 0.4)',
+            }}>
+              Z-Anatomy (BY-SA 4.0)
+            </div>
+          </div>
+        </Html>
+      )}
+    </group>
+  );
+}
+
 // Preload all GLB models
 Object.values(REAL_BONE_MODELS).forEach(path => {
   useGLTF.preload(path);
@@ -585,5 +706,8 @@ Object.values(ADDITIONAL_MUSCLE_PARTS).flat().forEach(path => {
   useGLTF.preload(path);
 });
 Object.values(REAL_VESSEL_MODELS).forEach(path => {
+  useGLTF.preload(path);
+});
+Object.values(REAL_NERVE_MODELS).forEach(path => {
   useGLTF.preload(path);
 });
