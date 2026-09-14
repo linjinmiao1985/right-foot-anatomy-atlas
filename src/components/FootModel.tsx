@@ -36,11 +36,16 @@ const REAL_BONE_MODELS: Record<string, string> = {
   'distal_phalanx_1': '/models/right-foot/distal_phalanx_1_BP9282.glb',
 };
 
-// Real muscle GLB models - 15 right foot muscles from BodyParts3D (CC BY 4.0)
+// Real muscle GLB models - 17 right foot muscles (BP3D 12 + UM CC0 5)
 const REAL_MUSCLE_MODELS: Record<string, string> = {
-  'abductor_hallucis': '/models/right-foot/abductor_hallucis.glb',
-  'flexor_digitorum_brevis': '/models/right-foot/flexor_digitorum_brevis.glb',
-  'abductor_digiti_minimi': '/models/right-foot/abductor_digiti_minimi.glb',
+  // UM CC0 (5): Higher resolution or BP3D gaps
+  'abductor_hallucis': '/models/right-foot/abductor_hallucis.glb', // UM (8.7x BP3D)
+  'flexor_digitorum_brevis': '/models/right-foot/flexor_digitorum_brevis.glb', // UM (2.4x BP3D)
+  'abductor_digiti_minimi': '/models/right-foot/abductor_digiti_minimi.glb', // UM (4.5x BP3D)
+  'quadratus_plantae': '/models/right-foot/quadratus_plantae.glb', // UM (BP3D gap)
+  'extensor_digitorum_brevis': '/models/right-foot/extensor_digitorum_brevis.glb', // UM (BP3D gap)
+  
+  // BP3D CC BY 4.0 (12): Remaining intrinsics
   'extensor_hallucis_brevis': '/models/right-foot/extensor_hallucis_brevis.glb',
   'flexor_digiti_minimi_brevis': '/models/right-foot/flexor_digiti_minimi_brevis.glb',
   'adductor_hallucis': '/models/right-foot/adductor_hallucis_oblique.glb', // oblique head
@@ -61,11 +66,12 @@ const ADDITIONAL_MUSCLE_PARTS: Record<string, string[]> = {
   ],
 };
 
-// Real vessel GLB models - 3 right foot arteries from BodyParts3D (CC BY 4.0)
+// Real vessel GLB models - 4 right foot arteries from BodyParts3D (CC BY 4.0)
 const REAL_VESSEL_MODELS: Record<string, string> = {
   'dorsalis_pedis_artery': '/models/right-foot/dorsalis_pedis_artery.glb',
   'plantar_artery_medial': '/models/right-foot/medial_plantar_artery.glb',
   'plantar_artery_lateral': '/models/right-foot/lateral_plantar_artery.glb',
+  'plantar_arch': '/models/right-foot/plantar_arch.glb',
 };
 
 export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName }: FootModelProps) {

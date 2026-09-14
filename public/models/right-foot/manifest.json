@@ -1,8 +1,14 @@
 {
-  "version": "2.0.0-bodyparts3d-bones-muscles-vessels",
-  "source": "BodyParts3D Release 4.0 (DBCLS Japan)",
-  "license": "CC BY 4.0",
-  "attribution": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International",
+  "version": "2.1.0-hybrid-bp3d-um-complete-muscles",
+  "sources": [
+    "BodyParts3D Release 4.0 (DBCLS Japan)",
+    "Universiti Malaya Asian Male LE MSK"
+  ],
+  "licenses": {
+    "BodyParts3D": "CC BY 4.0",
+    "UM": "CC0 1.0"
+  },
+  "attribution": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International; Universiti Malaya Asian Male Lower Extremity Musculoskeletal Model (CC0 1.0, Public Domain)",
   "date_extracted": "2026-09-14",
   "bones": [
     {"id": "calcaneus", "file": "calcaneus_BP9040.glb", "bp": "BP9040", "fma": "FMA24497", "name_zh": "跟骨", "name_la": "Calcaneus"},
@@ -21,32 +27,40 @@
     {"id": "distal_phalanx_1", "file": "distal_phalanx_1_BP9282.glb", "bp": "BP9282", "fma": "FMA32650", "name_zh": "踇趾远节趾骨", "name_la": "Phalanx distalis hallucis"}
   ],
   "muscles": [
-    {"id": "abductor_hallucis", "file": "abductor_hallucis.glb", "bp": "BP5054", "fma": "FMA37459", "name_zh": "踇展肌", "name_la": "Abductor hallucis"},
-    {"id": "flexor_digitorum_brevis", "file": "flexor_digitorum_brevis.glb", "bp": "BP5048", "fma": "FMA37461", "name_zh": "趾短屈肌", "name_la": "Flexor digitorum brevis"},
-    {"id": "abductor_digiti_minimi", "file": "abductor_digiti_minimi.glb", "bp": "BP5056", "fma": "FMA37463", "name_zh": "小趾展肌", "name_la": "Abductor digiti minimi pedis"},
-    {"id": "extensor_hallucis_brevis", "file": "extensor_hallucis_brevis.glb", "bp": "BP5059", "fma": "FMA51144", "name_zh": "踇短伸肌", "name_la": "Extensor hallucis brevis"},
-    {"id": "flexor_digiti_minimi_brevis", "file": "flexor_digiti_minimi_brevis.glb", "bp": "BP5050", "fma": "FMA37471", "name_zh": "小趾短屈肌", "name_la": "Flexor digiti minimi brevis pedis"},
-    {"id": "adductor_hallucis_oblique", "file": "adductor_hallucis_oblique.glb", "bp": "BP5578", "fma": "FMA46018", "name_zh": "踇收肌斜头", "name_la": "Adductor hallucis caput obliquum"},
-    {"id": "adductor_hallucis_transverse", "file": "adductor_hallucis_transverse.glb", "bp": "BP5580", "fma": "FMA46020", "name_zh": "踇收肌横头", "name_la": "Adductor hallucis caput transversum"},
-    {"id": "flexor_hallucis_brevis_medial", "file": "flexor_hallucis_brevis_medial.glb", "bp": "BP5546", "fma": "FMA45971", "name_zh": "踇短屈肌内侧头", "name_la": "Flexor hallucis brevis caput mediale"},
-    {"id": "lumbrical_1", "file": "lumbrical_1st.glb", "bp": "BP5044", "fma": "FMA37717", "name_zh": "第1蚓状肌", "name_la": "Lumbricalis I"},
-    {"id": "lumbrical_2", "file": "lumbrical_2nd.glb", "bp": "BP5040", "fma": "FMA37719", "name_zh": "第2蚓状肌", "name_la": "Lumbricalis II"},
-    {"id": "lumbrical_3", "file": "lumbrical_3rd.glb", "bp": "BP5038", "fma": "FMA37485", "name_zh": "第3蚓状肌", "name_la": "Lumbricalis III"},
-    {"id": "lumbrical_4", "file": "lumbrical_4th.glb", "bp": "BP5042", "fma": "FMA37483", "name_zh": "第4蚓状肌", "name_la": "Lumbricalis IV"},
-    {"id": "plantar_interosseous_1", "file": "plantar_interosseous_1st.glb", "bp": "BP5035", "fma": "FMA37745", "name_zh": "第1足底骨间肌", "name_la": "Interosseus plantaris I"},
-    {"id": "plantar_interosseous_2", "file": "plantar_interosseous_2nd.glb", "bp": "BP5033", "fma": "FMA37743", "name_zh": "第2足底骨间肌", "name_la": "Interosseus plantaris II"},
-    {"id": "plantar_interosseous_3", "file": "plantar_interosseous_3rd.glb", "bp": "BP5031", "fma": "FMA37741", "name_zh": "第3足底骨间肌", "name_la": "Interosseus plantaris III"}
+    {"id": "abductor_hallucis", "file": "abductor_hallucis.glb", "source": "UM", "fma": "FMA37459", "name_zh": "踇展肌", "name_la": "Abductor hallucis", "note": "UM CC0 replaces BP3D (8.7x resolution)"},
+    {"id": "flexor_digitorum_brevis", "file": "flexor_digitorum_brevis.glb", "source": "UM", "fma": "FMA37461", "name_zh": "趾短屈肌", "name_la": "Flexor digitorum brevis", "note": "UM CC0 replaces BP3D (2.4x resolution)"},
+    {"id": "abductor_digiti_minimi", "file": "abductor_digiti_minimi.glb", "source": "UM", "fma": "FMA37463", "name_zh": "小趾展肌", "name_la": "Abductor digiti minimi pedis", "note": "UM CC0 replaces BP3D (4.5x resolution)"},
+    {"id": "quadratus_plantae", "file": "quadratus_plantae.glb", "source": "UM", "fma": "FMA37454", "name_zh": "跖方肌", "name_la": "Quadratus plantae", "note": "UM CC0 fills BP3D gap"},
+    {"id": "extensor_digitorum_brevis", "file": "extensor_digitorum_brevis.glb", "source": "UM", "fma": "FMA51142", "name_zh": "趾短伸肌", "name_la": "Extensor digitorum brevis", "note": "UM CC0 fills BP3D gap"},
+    {"id": "extensor_hallucis_brevis", "file": "extensor_hallucis_brevis.glb", "source": "BP3D", "bp": "BP5059", "fma": "FMA51144", "name_zh": "踇短伸肌", "name_la": "Extensor hallucis brevis"},
+    {"id": "flexor_digiti_minimi_brevis", "file": "flexor_digiti_minimi_brevis.glb", "source": "BP3D", "bp": "BP5050", "fma": "FMA37471", "name_zh": "小趾短屈肌", "name_la": "Flexor digiti minimi brevis pedis"},
+    {"id": "adductor_hallucis_oblique", "file": "adductor_hallucis_oblique.glb", "source": "BP3D", "bp": "BP5578", "fma": "FMA46018", "name_zh": "踇收肌斜头", "name_la": "Adductor hallucis caput obliquum"},
+    {"id": "adductor_hallucis_transverse", "file": "adductor_hallucis_transverse.glb", "source": "BP3D", "bp": "BP5580", "fma": "FMA46020", "name_zh": "踇收肌横头", "name_la": "Adductor hallucis caput transversum"},
+    {"id": "flexor_hallucis_brevis_medial", "file": "flexor_hallucis_brevis_medial.glb", "source": "BP3D", "bp": "BP5546", "fma": "FMA45971", "name_zh": "踇短屈肌内侧头", "name_la": "Flexor hallucis brevis caput mediale"},
+    {"id": "lumbrical_1", "file": "lumbrical_1st.glb", "source": "BP3D", "bp": "BP5044", "fma": "FMA37717", "name_zh": "第1蚓状肌", "name_la": "Lumbricalis I"},
+    {"id": "lumbrical_2", "file": "lumbrical_2nd.glb", "source": "BP3D", "bp": "BP5040", "fma": "FMA37719", "name_zh": "第2蚓状肌", "name_la": "Lumbricalis II"},
+    {"id": "lumbrical_3", "file": "lumbrical_3rd.glb", "source": "BP3D", "bp": "BP5038", "fma": "FMA37485", "name_zh": "第3蚓状肌", "name_la": "Lumbricalis III"},
+    {"id": "lumbrical_4", "file": "lumbrical_4th.glb", "source": "BP3D", "bp": "BP5042", "fma": "FMA37483", "name_zh": "第4蚓状肌", "name_la": "Lumbricalis IV"},
+    {"id": "plantar_interosseous_1", "file": "plantar_interosseous_1st.glb", "source": "BP3D", "bp": "BP5035", "fma": "FMA37745", "name_zh": "第1足底骨间肌", "name_la": "Interosseus plantaris I"},
+    {"id": "plantar_interosseous_2", "file": "plantar_interosseous_2nd.glb", "source": "BP3D", "bp": "BP5033", "fma": "FMA37743", "name_zh": "第2足底骨间肌", "name_la": "Interosseus plantaris II"},
+    {"id": "plantar_interosseous_3", "file": "plantar_interosseous_3rd.glb", "source": "BP3D", "bp": "BP5031", "fma": "FMA37741", "name_zh": "第3足底骨间肌", "name_la": "Interosseus plantaris III"}
   ],
   "vessels": [
-    {"id": "dorsalis_pedis_artery", "file": "dorsalis_pedis_artery.glb", "bp": "BP6027", "fma": "FMA43916", "name_zh": "足背动脉", "name_la": "Arteria dorsalis pedis"},
-    {"id": "medial_plantar_artery", "file": "medial_plantar_artery.glb", "bp": "BP6062", "fma": "FMA43929", "name_zh": "足底内侧动脉", "name_la": "Arteria plantaris medialis"},
-    {"id": "lateral_plantar_artery", "file": "lateral_plantar_artery.glb", "bp": "BP6065", "fma": "FMA43931", "name_zh": "足底外侧动脉", "name_la": "Arteria plantaris lateralis"}
+    {"id": "dorsalis_pedis_artery", "file": "dorsalis_pedis_artery.glb", "source": "BP3D", "bp": "BP6027", "fma": "FMA43916", "name_zh": "足背动脉", "name_la": "Arteria dorsalis pedis"},
+    {"id": "medial_plantar_artery", "file": "medial_plantar_artery.glb", "source": "BP3D", "bp": "BP6062", "fma": "FMA43929", "name_zh": "足底内侧动脉", "name_la": "Arteria plantaris medialis"},
+    {"id": "lateral_plantar_artery", "file": "lateral_plantar_artery.glb", "source": "BP3D", "bp": "BP6065", "fma": "FMA43931", "name_zh": "足底外侧动脉", "name_la": "Arteria plantaris lateralis"},
+    {"id": "plantar_arch", "file": "plantar_arch.glb", "source": "BP3D", "bp": "BP6014", "fma": "FMA43943", "name_zh": "足底动脉弓", "name_la": "Arcus plantaris"}
   ],
-  "note": "14 bones + 15 muscles + 3 vessels from BodyParts3D (CC BY 4.0). Nerves still placeholder.",
+  "note": "14 bones (BP3D) + 17 muscles (BP3D 12 + UM 5) + 4 vessels (BP3D). Nerves still placeholder.",
   "stats": {
-    "bones": "14/14 (100%)",
-    "muscles": "15/14 (107%, includes separate heads)",
-    "vessels": "3/6 (50%, main arteries)",
+    "bones": "14/14 (100%, BP3D CC BY 4.0)",
+    "muscles": "17/~20 (85%, BP3D 12 + UM CC0 5, quality-optimized hybrid)",
+    "vessels": "4/6 (67%, BP3D main arteries + arch)",
     "nerves": "0/6 (0%)"
+  },
+  "quality_decisions": {
+    "overlapping_muscles": "UM CC0 chosen over BP3D for AH/ADM/FDB (2.4-8.7x resolution)",
+    "gap_filling": "UM CC0 adds Quadratus plantae + Extensor digitorum brevis (BP3D absent)",
+    "remaining_muscles": "BP3D CC BY 4.0 (FDMB, AddH oblique/transverse, FHB medial, Lumbricals, Plantar interossei, EHB)"
   }
 }
