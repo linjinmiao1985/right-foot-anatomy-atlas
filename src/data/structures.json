@@ -1,0 +1,182 @@
+[
+  {
+    "id": "calcaneus",
+    "meshNames": ["Calcaneus_R", "Bone_Calcaneus_Right"],
+    "layer": "bone",
+    "nameZh": "跟骨",
+    "nameLa": "Calcaneus",
+    "summaryZh": "足部最大的跗骨，形成足跟，承担站立时的主要负重，与距骨形成距下关节",
+    "placeholder": false
+  },
+  {
+    "id": "talus",
+    "meshNames": ["Talus_R", "Bone_Talus_Right"],
+    "layer": "bone",
+    "nameZh": "距骨",
+    "nameLa": "Talus",
+    "summaryZh": "位于跟骨上方，上接胫骨腓骨形成踝关节，下与跟骨构成距下关节，无肌肉附着",
+    "placeholder": false
+  },
+  {
+    "id": "navicular",
+    "meshNames": ["Navicular_R", "Os_Naviculare_Right"],
+    "layer": "bone",
+    "nameZh": "舟骨",
+    "nameLa": "Os naviculare",
+    "summaryZh": "舟状骨，位于距骨头与三块楔骨之间，内侧舟骨粗隆为胫骨后肌附着点",
+    "placeholder": false
+  },
+  {
+    "id": "cuboid",
+    "meshNames": ["Cuboid_R", "Os_Cuboideum_Right"],
+    "layer": "bone",
+    "nameZh": "骰骨",
+    "nameLa": "Os cuboideum",
+    "summaryZh": "立方形骨，位于跟骨前方、第4、5跖骨底后方，下方有腓骨长肌沟",
+    "placeholder": false
+  },
+  {
+    "id": "cuneiform_medial",
+    "meshNames": ["Cuneiform_Medial_R", "Os_Cuneiforme_Mediale_Right"],
+    "layer": "bone",
+    "nameZh": "内侧楔骨",
+    "nameLa": "Os cuneiforme mediale",
+    "summaryZh": "三块楔骨中最大者，位于舟骨与第1跖骨之间，参与维持足内侧纵弓",
+    "placeholder": false
+  },
+  {
+    "id": "cuneiform_intermediate",
+    "meshNames": ["Cuneiform_Intermediate_R", "Os_Cuneiforme_Intermedium_Right"],
+    "layer": "bone",
+    "nameZh": "中间楔骨",
+    "nameLa": "Os cuneiforme intermedium",
+    "summaryZh": "三块楔骨中最小者，位于内侧楔骨与外侧楔骨之间，与第2跖骨相接",
+    "placeholder": false
+  },
+  {
+    "id": "cuneiform_lateral",
+    "meshNames": ["Cuneiform_Lateral_R", "Os_Cuneiforme_Laterale_Right"],
+    "layer": "bone",
+    "nameZh": "外侧楔骨",
+    "nameLa": "Os cuneiforme laterale",
+    "summaryZh": "位于中间楔骨外侧，舟骨与第3跖骨之间，内侧面接中间楔骨和第2跖骨底",
+    "placeholder": false
+  },
+  {
+    "id": "metatarsal_1",
+    "meshNames": ["Metatarsal_I_R", "Metatarsal_1_Right"],
+    "layer": "bone",
+    "nameZh": "第一跖骨",
+    "nameLa": "Os metatarsi I",
+    "summaryZh": "五根跖骨中最粗短者，位于拇趾侧，与内侧楔骨相接，头部下方有籽骨",
+    "placeholder": false
+  },
+  {
+    "id": "metatarsal_5",
+    "meshNames": ["Metatarsal_V_R", "Metatarsal_5_Right"],
+    "layer": "bone",
+    "nameZh": "第五跖骨",
+    "nameLa": "Os metatarsi V",
+    "summaryZh": "最外侧跖骨，底部向后外伸出第5跖骨粗隆，为腓骨短肌附着点",
+    "placeholder": false
+  },
+  {
+    "id": "tibialis_posterior",
+    "meshNames": ["Tibialis_Posterior_R", "M_Tibialis_Posterior_Right"],
+    "layer": "muscle",
+    "nameZh": "胫骨后肌",
+    "nameLa": "M. tibialis posterior",
+    "summaryZh": "小腿深后群最深层肌，起自胫腓骨后面和骨间膜，止于舟骨粗隆和楔骨，作用为足内翻和跖屈，动态支撑内侧纵弓",
+    "placeholder": false
+  },
+  {
+    "id": "flexor_digitorum_longus",
+    "meshNames": ["Flexor_Digitorum_Longus_R", "M_Flexor_Digitorum_Longus_Right"],
+    "layer": "muscle",
+    "nameZh": "趾长屈肌",
+    "nameLa": "M. flexor digitorum longus",
+    "summaryZh": "起自胫骨后面，经内踝后方入足底，分为4腱止于第2-5趾远节趾骨底，屈第2-5趾并辅助跖屈",
+    "placeholder": false
+  },
+  {
+    "id": "flexor_hallucis_longus",
+    "meshNames": ["Flexor_Hallucis_Longus_R", "M_Flexor_Hallucis_Longus_Right"],
+    "layer": "muscle",
+    "nameZh": "拇长屈肌",
+    "nameLa": "M. flexor hallucis longus",
+    "summaryZh": "起自腓骨后面下2/3，肌腱经距骨后方内踝后下至足底，止于拇趾远节趾骨底，屈拇趾并辅助跖屈",
+    "placeholder": false
+  },
+  {
+    "id": "gastrocnemius",
+    "meshNames": ["Gastrocnemius_R", "M_Gastrocnemius_Medial_R", "M_Gastrocnemius_Lateral_R"],
+    "layer": "muscle",
+    "nameZh": "腓肠肌",
+    "nameLa": "M. gastrocnemius",
+    "summaryZh": "小腿后群浅层，内外侧头起自股骨内外侧髁，与比目鱼肌共同形成小腿三头肌，经跟腱止于跟骨结节，主要作用为跖屈踝关节",
+    "placeholder": false
+  },
+  {
+    "id": "tibial_nerve",
+    "meshNames": ["Tibial_Nerve_R", "N_Tibialis_Right"],
+    "layer": "nerve",
+    "nameZh": "胫神经",
+    "nameLa": "N. tibialis",
+    "summaryZh": "坐骨神经较大终支(L4-S3)，沿小腿后面下行，经内踝后方屈肌支持带深面入足底，分为足底内外侧神经，支配小腿后群肌和足底肌",
+    "placeholder": false
+  },
+  {
+    "id": "medial_plantar_nerve",
+    "meshNames": ["Medial_Plantar_Nerve_R", "N_Plantaris_Medialis_Right"],
+    "layer": "nerve",
+    "nameZh": "足底内侧神经",
+    "nameLa": "N. plantaris medialis",
+    "summaryZh": "胫神经终支之一，与足底内侧动脉伴行，分布于足底内侧肌群及内侧3.5趾跖面皮肤，类似于手部正中神经",
+    "placeholder": false
+  },
+  {
+    "id": "lateral_plantar_nerve",
+    "meshNames": ["Lateral_Plantar_Nerve_R", "N_Plantaris_Lateralis_Right"],
+    "layer": "nerve",
+    "nameZh": "足底外侧神经",
+    "nameLa": "N. plantaris lateralis",
+    "summaryZh": "胫神经终支之一，分布于足底中间和外侧肌群及外侧1.5趾跖面皮肤，类似于手部尺神经",
+    "placeholder": false
+  },
+  {
+    "id": "dorsalis_pedis_artery",
+    "meshNames": ["Dorsalis_Pedis_Artery_R", "A_Dorsalis_Pedis_Right"],
+    "layer": "vessel",
+    "nameZh": "足背动脉",
+    "nameLa": "A. dorsalis pedis",
+    "summaryZh": "胫前动脉延续，沿足背至第1跖骨间隙，分为第1跖背动脉和足底深支，发出跗内外侧动脉和弓状动脉",
+    "placeholder": false
+  },
+  {
+    "id": "posterior_tibial_artery",
+    "meshNames": ["Posterior_Tibial_Artery_R", "A_Tibialis_Posterior_Right"],
+    "layer": "vessel",
+    "nameZh": "胫后动脉",
+    "nameLa": "A. tibialis posterior",
+    "summaryZh": "腘动脉终支之一，沿小腿后面下行，经内踝后方入足底，在跟骨结节内侧分为足底内外侧动脉",
+    "placeholder": false
+  },
+  {
+    "id": "medial_plantar_artery",
+    "meshNames": ["Medial_Plantar_Artery_R", "A_Plantaris_Medialis_Right"],
+    "layer": "vessel",
+    "nameZh": "足底内侧动脉",
+    "nameLa": "A. plantaris medialis",
+    "summaryZh": "胫后动脉终支，沿足内侧缘前行，分布于足内侧和拇展肌、趾短屈肌，发出趾支至拇趾",
+    "placeholder": false
+  },
+  {
+    "id": "lateral_plantar_artery",
+    "meshNames": ["Lateral_Plantar_Artery_R", "A_Plantaris_Lateralis_Right"],
+    "layer": "vessel",
+    "nameZh": "足底外侧动脉",
+    "nameLa": "A. plantaris lateralis",
+    "summaryZh": "胫后动脉终支，斜向外前行至足外侧，与足背动脉足底深支吻合形成足底动脉弓，发出跖底动脉供应趾部",
+    "placeholder": false
+  }
+]
