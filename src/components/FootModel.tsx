@@ -66,12 +66,13 @@ const ADDITIONAL_MUSCLE_PARTS: Record<string, string[]> = {
   ],
 };
 
-// Real vessel GLB models - 4 right foot arteries from BodyParts3D (CC BY 4.0)
+// Real vessel GLB models - 5 right foot arteries from BodyParts3D (CC BY 4.0)
 const REAL_VESSEL_MODELS: Record<string, string> = {
   'dorsalis_pedis_artery': '/models/right-foot/dorsalis_pedis_artery.glb',
   'plantar_artery_medial': '/models/right-foot/medial_plantar_artery.glb',
   'plantar_artery_lateral': '/models/right-foot/lateral_plantar_artery.glb',
   'plantar_arch': '/models/right-foot/plantar_arch.glb',
+  'arcuate_artery': '/models/right-foot/arcuate_artery.glb',
 };
 
 export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName }: FootModelProps) {
