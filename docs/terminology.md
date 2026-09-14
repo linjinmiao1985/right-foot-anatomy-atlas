@@ -14,8 +14,21 @@
 **发布**: Federative International Programme for Anatomical Terminology (FIPAT), 国际解剖学家联合会 (IFAA)  
 **版本**: TA2 (2nd Edition, 2.07 发布于2019年，持续更新)  
 **权威来源**: 
-- 在线数据库: https://ifaa.unifr.ch/Public/TNAEntryPage/
-- PDF文档: https://cdn.dal.ca/content/dam/dalhousie/pdf/library/FIPAT/TA2/
+- TA2 官方库: https://fipat.library.dal.ca/TA2/
+- TA2Viewer (交互式): https://ta2viewer.openanatomy.org/
+- FIPAT 主页: https://ifaa.unifr.ch/Public/TNAEntryPage/
+
+**TA2 代码系统**:
+- **Ossa pedis (足部骨骼)**: 1446 开始
+  - Talus: 1448
+  - Calcaneus: 1468
+  - Os naviculare: 1484
+  - Os cuneiforme mediale/intermedium/laterale: 1486-1488
+  - Os cuboideum: 1489
+  - Ossa metatarsi: 1495
+  - Phalanges pedis: 1504
+- **Laterality (侧别)**: TA2 Section 7 (Dexter 右侧) / Section 8 (Sinister 左侧)
+  - 注意：侧别为元数据，不嵌入每个骨骼拉丁文名称中
 
 **TA2原则**:
 - 拉丁文为官方术语语言
@@ -28,13 +41,30 @@
 **主要参考**:
 1. **《人体解剖学》第9版**，人民卫生出版社，全国高等医学院校教材
 2. **《系统解剖学》**, 中国医学标准教材
-3. **临床常用术语**: 基于中国足踝外科和骨科临床实践
+3. **PRC 解剖学命名**: 中华人民共和国解剖学名词审定标准
+4. **临床常用术语**: 基于中国足踝外科和骨科临床实践
 
 **原则**:
 - 优先使用国家标准教材术语
 - 临床常用名称优先于直译
 - 保持与TA2拉丁文一一对应
 - 避免地域方言和非标准简称
+
+**⚠️ 关键术语辨析**:
+- **踇 vs 拇**: 
+  - ✅ 正确：**拇趾** (hallux) — 标准术语
+  - ❌ 错误：踇趾 — 非标准，避免使用
+  - 本图谱使用：拇趾、拇展肌、拇短屈肌等
+- **腓骨肌 vs 排骨肌**:
+  - ✅ 现代标准：**腓骨长肌/腓骨短肌** (M. fibularis longus/brevis)
+  - ⚠️ 旧译名：排骨长肌/排骨短肌 (M. peroneus) — 已废弃
+  - TA2更新：fibularis (拉丁文) 取代 peroneus
+- **跟腱**:
+  - ✅ 标准：**跟腱** (tendo calcaneus) 或 **跟腱** (tendo Achillis)
+  - 临床常用：Achilles tendon 跟腱
+- **足底神经/动脉**:
+  - ✅ 足底内侧神经/动脉 (n./a. plantaris medialis)
+  - ✅ 足底外侧神经/动脉 (n./a. plantaris lateralis)
 
 ---
 
@@ -102,9 +132,16 @@
 **神经层验证总结**: 6/6 ✅ 全部通过TA2和节段验证
 
 **命名注意事项**:
-- **旧译名**: "腓"的旧译为"排"或"腓骨"，现代标准统一为"腓" (fibular/fibularis)
+- **TA2术语更新**: 
+  - ✅ **fibularis** (现代) 取代 peroneus (古典)
+  - M. fibularis longus/brevis/tertius (腓骨长/短/第三肌)
+  - N. fibularis communis/profundus/superficialis (腓总/深/浅神经)
+- **Laterality 元数据**: 
+  - 右足 = pes dexter
+  - 侧别不嵌入单个骨骼名称（例如：Talus，非 Talus dexter）
+  - 作为元数据或网格命名后缀（Talus_R, Talus_Right）
 - **正中/尺神经类比**: 足底内侧神经类比于手正中神经（支配内侧+中间），足底外侧神经类比于尺神经（支配外侧+深层）
-- **皮神经**: 腓肠神经（sural nerve）主要为皮神经，少量运动纤维
+- **皮神经**: 腓肠神经（n. suralis）主要为皮神经，少量运动纤维
 
 ### 血管层 (Vasa)
 
