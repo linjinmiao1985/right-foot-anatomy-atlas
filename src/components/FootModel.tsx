@@ -18,10 +18,12 @@ interface PlaceholderMesh {
   size: [number, number, number];
 }
 
-// Real bone GLB models available (11/14 bones)
+// Real bone GLB models - ALL 14 right foot bones from BodyParts3D (CC BY 4.0)
 const REAL_BONE_MODELS: Record<string, string> = {
   'calcaneus': '/models/right-foot/calcaneus_BP9040.glb',
+  'talus': '/models/right-foot/talus_BP8033.glb',
   'navicular': '/models/right-foot/navicular_BP9133.glb',
+  'cuboid': '/models/right-foot/cuboid_BP8533.glb',
   'cuneiform_medial': '/models/right-foot/cuneiform_medial_BP8774.glb',
   'cuneiform_intermediate': '/models/right-foot/cuneiform_intermediate_BP9205.glb',
   'cuneiform_lateral': '/models/right-foot/cuneiform_lateral_BP8472.glb',
@@ -31,6 +33,7 @@ const REAL_BONE_MODELS: Record<string, string> = {
   'metatarsal_4': '/models/right-foot/metatarsal_4_BP9130.glb',
   'metatarsal_5': '/models/right-foot/metatarsal_5_BP7912.glb',
   'proximal_phalanx_1': '/models/right-foot/phalanx_prox_1_BP8488.glb',
+  'distal_phalanx_1': '/models/right-foot/distal_phalanx_1_BP9282.glb',
 };
 
 export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName }: FootModelProps) {
