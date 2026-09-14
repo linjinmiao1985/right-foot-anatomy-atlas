@@ -19,16 +19,29 @@
 
 ---
 
-## Phase 2 深度比较分析
+## Phase 2-3 深度比较分析（最终版）
 
-**更新日期**: 2026-09-14 10:17 UTC  
-**研究扩展**: 系统比较≥3个候选来源的许可、质量、覆盖范围
+**更新日期**: 2026-09-14 10:31 UTC  
+**Literature Scout 验证**: 官方许可页面已确认  
+**关键发现**: ⭐ **BodyParts3D 许可升级为 CC BY 4.0** (2025-02-27 更新) — 无 ShareAlike 限制！
 
-### 快速对比表
+### 🔒 最终资产决策
 
-| 标准 | Open3DModel | BodyParts3D | NIH 3D Print | U. Dundee Sketchfab |
-|------|-------------|-------------|--------------|---------------------|
-| **许可** | CC BY-SA 4.0 ✅ | CC BY-SA 2.1-JP ✅ | 多种（模型特定）⚠️ | 未明确/NoAI 标记 ⚠️ |
+**主选资产**: **BodyParts3D LSDB Archive — CC BY 4.0** ✅
+
+**理由**: 
+- ✅ 许可最宽松（CC BY 4.0，无 SA/NC 限制）
+- ✅ 官方归档，DOI 标识，学术可信
+- ✅ 全身 MRI 多边形，覆盖完整骨骼
+- ✅ FMA 标准命名，laterality 明确标注（dexter）
+- ✅ 可修改、GitHub 发布、期刊图表使用
+- ⚠️ 需裁剪右足子集（全身模型）
+
+### 快速对比表（更新）
+
+| 标准 | BodyParts3D (主选) | DU Visible Human | AnatomyTOOL Open3D | NIH 3D / U. Dundee |
+|------|-------------------|-----------------|-------------------|-------------------|
+| **许可** | **CC BY 4.0** ⭐ | CC BY 4.0 ✅ | CC BY-SA 4.0 ⚠️ | 多种/未明确 ⚠️ |
 | **商业使用** | ✅ 允许 | ✅ 允许 | 取决于模型 | 未知 |
 | **教育使用** | ✅ 设计目的 | ✅ 允许 | ✅ 允许 | ✅ 允许 |
 | **期刊发表/再分发** | ✅ 允许（署名+SA） | ✅ 允许（署名+SA） | 取决于模型 | 未知 |
@@ -96,9 +109,91 @@
 
 ## 候选资源对比
 
-### 1. Open3DModel - AnatomyTOOL ⭐ **推荐**
+### 1. BodyParts3D LSDB Archive ⭐ **主选（最终决策）**
 
-**来源**: AnatomyTOOL (https://anatomytool.org/open3dmodel-create)
+**来源**: Database Center for Life Science (DBCLS), Japan  
+**官方归档**: https://dbarchive.biosciencedbc.jp/en/bodyparts3d/  
+**许可页面**: https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html (更新于 2025-02-27)
+
+**许可证**: **CC BY 4.0** ⭐ (Attribution 4.0 International)  
+- 官方链接: https://creativecommons.org/licenses/by/4.0/
+- **重大改进**: 之前为 CC BY-SA 2.1-JP，现已升级为国际标准 CC BY 4.0
+- **无 ShareAlike 限制** — 可与任何许可证组合，GitHub MIT/Apache 友好
+- **无 NonCommercial 限制** — 可商业使用
+
+**必需署名**:
+```
+BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International
+```
+
+**技术规格**:
+- **数据来源**: 全身 MRI 扫描多边形数据
+- **版本**: Release 4.0 (2013 年几何数据，2025 年许可更新)
+- **格式**: Wavefront OBJ (99% 简化)
+- **命名**: FMA (Foundational Model of Anatomy) ID
+- **Laterality**: 明确标注 dexter (右侧) / sinister (左侧)
+- **文件**: 
+  - `isa_BP3D_4.0_obj_99.zip` (136 MB, 2,234 entries)
+  - `isa_parts_list_e.txt` (126 KB, 2,905 entries, FMA 映射)
+- **DOI**: 10.18908/lsdba.nbdc00837-007
+
+**质量评估**:
+- **解剖准确性**: ⭐⭐⭐⭐ (MRI 基础，医学级)
+- **足部覆盖**: ⭐⭐⭐⭐ (骨骼完整，软组织需补充)
+- **网格质量**: ⭐⭐⭐⭐ (99% 简化，web 适用)
+- **文档完整性**: ⭐⭐⭐⭐⭐ (DOI, FMA, 官方归档)
+- **许可友好度**: ⭐⭐⭐⭐⭐ (CC BY 4.0, 无 SA/NC)
+
+**⚠️ 重要警告**:
+- **Anatomography 网站混淆**: https://lifesciencedb.jp/bp3d/ 仍标注 **CC BY-SA 2.1 JP**
+- **不要混用**: Anatomography 网站图像 = BY-SA；LSDB Archive 网格数据 = BY 4.0
+- **本项目使用**: 仅使用 LSDB Archive 的 OBJ 网格（CC BY 4.0），不使用 Anatomography 渲染图
+
+**下载步骤**:
+```bash
+# Parts list (FMA 映射)
+wget https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_parts_list_e.txt
+
+# OBJ 包 (136 MB, 全身)
+wget https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_BP3D_4.0_obj_99.zip
+
+# 提取右足相关 OBJ (基于 FMA ID)
+# 足部骨骼 FMA: talus 9708, calcaneus 24496, navicular 24500, etc.
+```
+
+**集成计划**:
+1. 下载 parts list → 识别右足 FMA ID
+2. 下载 OBJ 包 → 解压
+3. 筛选右足骨骼 OBJ 文件（Python 脚本）
+4. 合并为单一 GLB（Blender 或 gltf-pipeline）
+5. 更新 `manifest.json` 和署名
+
+---
+
+### 2. DU Visible Human Lower-Limb MSK (Andreassen 2023) — **备选A**
+
+**来源**: University of Denver + National Library of Medicine  
+**数据仓库**: https://digitalcommons.du.edu/visiblehuman/  
+**学术论文**: Andreassen et al. Sci Data 2023 https://doi.org/10.1038/s41597-022-01905-2
+
+**许可证**: **CC BY 4.0** ✅  
+- 论文和数据集声明 CC BY 4.0
+- **必须验证**: Digital Commons "View License" 页面
+- **NLM 条款**: 需遵守 https://www.nlm.nih.gov/databases/download/terms_and_conditions.html
+
+**技术规格**:
+- **数据来源**: Visible Human Project CT/MRI 分割
+- **内容**: 高质量下肢骨骼和肌肉模型
+- **优势**: 学术发表级质量，MSK 详细
+- **劣势**: 神经血管细支较弱（不如教学图谱需求）
+
+**评估**: ⭐⭐⭐⭐ 高质量 MSK，但足部神经血管不足教学需求
+
+---
+
+### 3. AnatomyTOOL Open3DModel Ankle and Foot — **备选B（隔离使用）**
+
+**来源**: AnatomyTOOL (https://anatomytool.org/content/open3dmodel-ankle-and-foot-english-labels)
 
 **项目背景**:
 - **开发者**: 荷兰/比利时医学院联盟（Leiden LUMC, Utrecht UMC, Maastricht UM, KU Leuven等）
