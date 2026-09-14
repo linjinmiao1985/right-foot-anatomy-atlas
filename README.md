@@ -154,27 +154,36 @@ npm run test
 
 ### 3D 模型资产
 
-**当前状态 (v1.0.0-placeholder)**:
-- ✅ 使用程序化占位几何体（盒子、圆柱）
-- ✅ 网格命名匹配 \`structures.json\` 数据
-- ✅ UI 明确标注「占位」徽章（当前无占位，所有 placeholder: false）
-- 🔄 **计划替换为**: Open3DModel Lower Limb 真实解剖模型
+**当前状态 (Phase 3 集成中)**:
+- ⏳ **BodyParts3D 真实骨骼模型下载中** (78MB/136MB 已下载)
+- ✅ 许可锁定：**CC BY 4.0** (无 ShareAlike 限制！)
+- ✅ 程序化占位几何体（临时，待真实模型替换）
+- ✅ 网格命名匹配 `structures.json` 数据
 
-**目标资产**:
-- **来源**: [Open3DModel - Lower Limb](https://anatomytool.org/open3dmodel-create)
-- **开发**: 荷兰/比利时医学院联盟 (Leiden LUMC, Radboud UMC等)
-- **许可**: CC BY-SA 4.0
-- **内容**: 骨骼 + 肌肉 + 神经 + 血管 完整右足解剖
-- **格式**: GLB (Web 优化)
-- **状态**: 需提取右足子集并重命名，详见 \`docs/assets-research.md\`
+**主选资产 (最终决策)**:
+- **来源**: [BodyParts3D LSDB Archive](https://dbarchive.biosciencedbc.jp/en/bodyparts3d/)
+- **开发**: Database Center for Life Science (DBCLS), Japan
+- **许可**: **CC BY 4.0** ⭐ (Attribution 4.0 International, 2025-02-27 更新)
+- **内容**: 全身 MRI 多边形网格（提取右足骨骼）
+- **格式**: OBJ → GLB 转换
+- **命名**: FMA (Foundational Model of Anatomy) 基础
+- **DOI**: 10.18908/lsdba.nbdc00837-007
 
-**引用**:
-\`\`\`
-"Open3DModel - Lower Limb - English labels"
-by Open3D project, Jan Kooloos (RadboudUMC), Eungyeol Lee (LUMC) et al
-License: CC BY-SA 4.0
-Source: https://anatomytool.org/open3dmodel-create
-\`\`\`
+**必需署名**:
+```
+BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International
+```
+
+**许可优势**:
+- ✅ 无 ShareAlike (可与 MIT 代码组合)
+- ✅ 无 NonCommercial (可商业使用)
+- ✅ GitHub 友好，期刊发表友好
+- ✅ 官方归档，DOI 标识，学术可信
+
+**详细许可文档**:
+- `LICENSE-ASSETS` - BodyParts3D CC BY 4.0 完整条款
+- `NOTICE` - 第三方归属和引用
+- `docs/assets-research.md` - 资产比较和决策记录
 
 ---
 
