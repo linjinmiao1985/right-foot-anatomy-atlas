@@ -60,16 +60,23 @@ export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName
         size = [0.12, 0.12, 0.12];
         boneIndex++;
       } else if (structure.layer === 'muscle') {
-        position = [0.3 + muscleIndex * 0.15, 0.15, 0];
-        size = [0.08, 0.2, 0.08];
+        // Improved muscle placeholder: oriented ellipsoids following foot anatomy
+        // Intrinsic muscles arranged along plantar surface
+        const row = Math.floor(muscleIndex / 4);
+        const col = muscleIndex % 4;
+        position = [-0.3 + col * 0.2, 0.02 + row * 0.08, -0.1 + row * 0.1];
+        // Vary sizes to suggest muscle belly shapes
+        size = [0.06 + Math.random() * 0.03, 0.12 + Math.random() * 0.06, 0.04];
         muscleIndex++;
       } else if (structure.layer === 'nerve') {
-        position = [-0.3 + nerveIndex * 0.15, 0.05, -0.4];
-        size = [0.02, 0.3, 0.02];
+        // Improved nerve placeholder: thinner cylinders following nerve pathways
+        position = [-0.3 + nerveIndex * 0.12, 0.08, -0.15 + nerveIndex * 0.05];
+        size = [0.008, 0.25, 0.008]; // Thinner for nerve-like appearance
         nerveIndex++;
       } else {
-        position = [0.3 + vesselIndex * 0.15, 0.05, -0.4];
-        size = [0.025, 0.3, 0.025];
+        // Improved vessel placeholder: arterial tubes with slight taper
+        position = [0.2 + vesselIndex * 0.12, 0.08, -0.15 + vesselIndex * 0.05];
+        size = [0.012, 0.25, 0.012]; // Slightly thicker than nerves
         vesselIndex++;
       }
 
@@ -132,6 +139,7 @@ export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName
             <mesh
               name={meshName}
               position={position}
+              rotation={structure.layer === 'muscle' ? [0, 0, Math.PI / 12] : [0, 0, 0]}
               onClick={(e) => {
                 e.stopPropagation();
                 onMeshClick(meshName);
@@ -146,17 +154,39 @@ export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName
                 setHoveredMesh(null);
               }}
             >
-              {structure.layer === 'nerve' || structure.layer === 'vessel' ? (
-                <cylinderGeometry args={[size[0], size[1], size[2], 8]} />
+              {structure.layer === 'nerve' ? (
+                <cylinderGeometry args={[size[0], size[0], size[1], 12]} />
+              ) : structure.layer === 'vessel' ? (
+                <cylinderGeometry args={[size[0], size[0] * 0.8, size[1], 12]} />
+              ) : structure.layer === 'muscle' ? (
+                <capsuleGeometry args={[size[0], size[1], 16, 16]} />
               ) : (
                 <boxGeometry args={size} />
               )}
               <meshStandardMaterial
                 color={color}
-                emissive={isSelected ? '#00ffff' : (isHovered ? '#ffffff' : '#000000')}
-                emissiveIntensity={isSelected ? 0.6 : (isHovered ? 0.3 : 0)}
-                opacity={isHovered && !isSelected ? 0.9 : 1}
-                transparent={isHovered && !isSelected}
+                emissive={
+                  isSelected ? '#00ffff' 
+                  : isHovered ? '#ffffff' 
+                  : structure.layer === 'nerve' ? '#333300'
+                  : '#000000'
+                }
+                emissiveIntensity={
+                  isSelected ? 0.6 
+                  : isHovered ? 0.3 
+                  : structure.layer === 'nerve' ? 0.15
+                  : structure.layer === 'vessel' ? 0.1
+                  : 0
+                }
+                opacity={
+                  isHovered && !isSelected ? 0.9 
+                  : structure.layer === 'muscle' ? 0.85
+                  : structure.layer === 'vessel' ? 0.8
+                  : 1
+                }
+                transparent={true}
+                roughness={structure.layer === 'muscle' ? 0.7 : 0.4}
+                metalness={structure.layer === 'vessel' ? 0.2 : 0}
               />
             </mesh>
             {isHovered && !isSelected && (
