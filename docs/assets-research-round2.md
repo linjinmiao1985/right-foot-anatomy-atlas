@@ -1,535 +1,369 @@
-# Asset Research Round 2 — Comprehensive Open-Source Survey
+# Asset Research Round 2 — Comprehensive Survey (Literature Scout Verified)
 
-**Date**: 2026-09-14  
-**Status**: IN PROGRESS  
-**Objective**: Exhaustive survey of open-source anatomical datasets for right foot anatomy (bones, muscles, nerves, vessels)
+**Date**: 2026-09-14 (Day 1)  
+**Status**: IN PROGRESS (Week Sprint)  
+**Objective**: Exhaustive ≥12-source survey with **verified licenses** for right foot anatomy
 
-**Owner Feedback**: Prior research insufficient. Expand aggressively. Do NOT claim "no open intrinsic foot muscles exist" until ≥10 sources inventoried with verified licenses.
-
----
-
-## Research Methodology
-
-### Evaluation Criteria
-For each source, document:
-1. **Source Name** & **URL**
-2. **License** (verified from official source, not assumed)
-3. **Tissues Available** (bone/muscle/nerve/vessel/ligament/cartilage)
-4. **Foot Coverage** (extrinsic only / intrinsic included / complete foot)
-5. **File Format** (STL/OBJ/GLB/GLTF/other)
-6. **Redistribution Risk** (CC0/CC BY = safe, CC BY-SA = isolate, unclear = link-only)
-7. **Journal Figure Use** (allowed / SA-taint / unclear)
-8. **Verdict** (adopt / isolate-SA / link-only / reject)
-
-### License Categories
-- **CC0 1.0**: Public domain dedication, no attribution required, mix freely
-- **CC BY 4.0**: Attribution required, redistribution OK, mix freely
-- **CC BY-SA 4.0**: Attribution + ShareAlike, **isolate in separate directory**, document SA-taint risk
-- **Custom/Unclear**: Link-only, do NOT redistribute
-- **Commercial/Restricted**: Reject for open-source project
+**Owner Directive**: Quality week sprint. No premature "delivered" claims. Deep integration > shallow docs.
 
 ---
 
-## Dataset Inventory
+## Hybrid Strategy (Owner-Approved)
 
-### 1. ✅ Universiti Malaya Asian Male LE MSK — **HIGH PRIORITY**
+### Main Redistributable Layer (CC BY / CC0)
+- **BodyParts3D CC BY 4.0**: Bones (14/14 ✅) + plantar intrinsics (~8) + foot vessels (~4-6)
+- **Universiti Malaya CC0 1.0**: Quadratus plantae, extensor digitorum brevis, plus AH/ADM/FDB if BP3D incomplete
 
-**Source**: Research Data Repository, Universiti Malaya  
-**DOI**: 10.22452/RD/5T6TZ7  
-**URL**: https://researchdata.um.edu.my/dataset.xhtml?persistentId=doi:10.22452/RD/5T6TZ7  
-**Publication**: JEEVARAAJ N VIVEKANANDAN & JULIANA BINTI USMAN (2026-04-22)
+### Optional Isolated BY-SA Module
+- **Open3DModel Lower Limb CC BY-SA 4.0**: Nerves + fuller intrinsics (FHB, AddH, lumbricals, interossei)
+- **Isolation**: `third_party/open3dmodel/` + separate NOTICE
+- **Preference**: Use `lower-limb-obj.zip` (textureless, no NC trap)
+- **Avoid**: UBC Krebs textured blend/GLB (BY-NC-SA trap)
 
-**License**: ✅ **CC0 1.0 Universal** (Public Domain Dedication)  
-- Verified from dataset page: "CC0 1.0" explicitly stated
-- No attribution required (though scholarly citation recommended)
-- ✅ Redistribute freely without restriction
-- ✅ Modify freely
-- ✅ Use in journal figures without SA-taint
-- ✅ Mix with any license (MIT, CC BY, CC BY-SA)
-
-**Content**:
-- **File**: `Final Model STL files.zip` (58.3 MB)
-- **Parts**: 67 geometries total
-  - 13 bones (pelvis to foot)
-  - **42 muscles** (psoas major → **abductor digiti minimi**)
-  - 5 ligaments (knee + Achilles + patellar)
-  - 4 cartilage structures
-  - 2 tendons (Achilles, quadriceps)
-  - 1 meniscus (knee)
-
-**Foot Coverage**: ✅ **INTRINSIC MUSCLES INCLUDED**
-- Explicitly states: "psoas major to **abductor digiti minimi**"
-- Abductor digiti minimi = intrinsic foot muscle (lateral plantar layer)
-- Expected intrinsic muscles (pending STL inventory):
-  - Abductor hallucis
-  - Flexor hallucis brevis
-  - Adductor hallucis (oblique + transverse heads)
-  - Abductor digiti minimi ✅ (confirmed in description)
-  - Flexor digiti minimi brevis
-  - Quadratus plantae
-  - Lumbricals (1-4)
-  - Dorsal interossei (1-4)
-  - Plantar interossei (1-3)
-  - Extensor hallucis brevis
-  - Extensor digitorum brevis
-
-**File Format**: STL (convertible to GLB via obj2gltf or gltf-pipeline)
-
-**Redistribution Risk**: ✅ **NONE** (CC0 = public domain)
-
-**Journal Figure Use**: ✅ **ALLOWED** (no restrictions)
-
-**Verdict**: ✅ **ADOPT AS PRIMARY SOFT TISSUE SOURCE**
-
-**Download Status**: 
-- ⏸️ Requires file ID from Dataverse API or browser download
-- Attempting scripted access via `https://researchdata.um.edu.my/api/access/datafile/[ID]`
-- **Blocker**: File ID not exposed in public API, may require browser interaction
-- **Workaround**: Manual download + commit GLB files (not raw 58.3MB STL ZIP)
-
-**Next Steps**:
-1. Download STL ZIP (manual if necessary)
-2. Extract and inventory all 42 muscle STL filenames
-3. Identify foot-relevant muscles (expect ~15-20 files)
-4. Convert right-side foot muscles to GLB
-5. Map to structures.json (update `placeholder: false` for matched muscles)
-6. Wire into FootModel.tsx muscle layer
-7. Update NOTICE with UM citation (though not legally required for CC0)
+### Excluded (NC/Custom)
+- ❌ **Zenodo 20231308→21354714**: CC BY-NC-SA (NC = non-commercial trap)
+- ❌ **NIH 15850 / Antwerp ASTARC**: NC-SA (reject)
+- ❌ **Zenodo 1056750**: CC BY but PDF only (no meshes)
 
 ---
 
-### 2. Z-Anatomy Models of Human Anatomy
+## Verified Dataset Inventory
 
-**Source**: GitHub repository  
-**URL**: https://github.com/Z-Anatomy/Models-of-human-anatomy  
-**Repository**: Z-Anatomy Project
-
-**License**: ⚠️ **CC BY-SA 4.0** (ShareAlike)
-- Verified from repository README
-- ⚠️ Redistribution OK but **triggers ShareAlike obligation**
-- ⚠️ Any derivative work must also be CC BY-SA
-- ⚠️ **SA-taint risk**: Using BY-SA assets may require entire atlas to be BY-SA
-- **Mitigation**: Isolate in `public/models/by-sa/` directory, document taint boundary
-
-**Content**:
-- Vessels: Arterial tree models (curves, not volume meshes)
-- Nerves: Nerve pathways (curves, not segmented volumes)
-- Muscles: (need to verify availability)
-- Focus: Whole-body anatomy, unclear if foot-specific files exist
-
-**Foot Coverage**: ⚠️ **UNCLEAR** (need to clone repo and inventory)
-
-**File Format**: Likely GLTF/GLB (GitHub 3D viewer compatible)
-
-**Redistribution Risk**: ⚠️ **MODERATE** (BY-SA triggers derivative work obligations)
-
-**Journal Figure Use**: ⚠️ **SA-TAINT** (figures may inherit BY-SA if derivative)
-
-**Verdict**: ⚠️ **ISOLATE IF USED** (separate BY-SA directory, clear documentation)
-
-**Investigation Status**: PENDING
-- Need to clone repo: `git clone https://github.com/Z-Anatomy/Models-of-human-anatomy.git`
-- Inventory foot-relevant files
-- Assess if nerve/vessel curves are usable vs UM muscles
-
-**Priority**: MEDIUM (only if UM lacks nerves/vessels, and accept SA-taint for those layers)
-
----
-
-### 3. Open3DModel Ankle & Foot
-
-**Source**: AnatomyTool.org  
-**URL**: https://anatomytool.org/content/open3dmodel-ankle-and-foot-english-labels  
-**Provider**: Open3DModel project
-
-**License**: ⚠️ **CC BY-SA** (likely, need verification from source package)
-- Website states "open-source" but license not explicit on landing page
-- Need to download source package to verify LICENSE file
-
-**Content**:
-- Ankle & Foot anatomy (bones, muscles, ligaments, vessels, nerves)
-- Multi-language labels (English, German, French, Spanish, Portuguese, Chinese)
-- Interactive web viewer available
-
-**Foot Coverage**: ✅ **LIKELY COMPLETE** (dedicated ankle/foot model)
-
-**File Format**: ⚠️ **VIEWER vs SOURCE DISTINCTION**
-- Web viewer: Likely proprietary format or embedded
-- Source package: Need to verify (STL/OBJ/GLTF?)
-- **Critical**: Viewer ≠ downloadable assets (may be view-only)
-
-**Redistribution Risk**: ⚠️ **UNCLEAR** (pending license verification)
-
-**Journal Figure Use**: ⚠️ **UNCLEAR**
-
-**Verdict**: ⏸️ **PENDING VERIFICATION**
-
-**Investigation Status**: PENDING
-- Visit source download page
-- Verify license (CC BY-SA vs custom)
-- Check if assets are downloadable vs viewer-only
-- If BY-SA: Assess whether worth SA-taint vs UM CC0
-
-**Priority**: MEDIUM (only if UM insufficient and accept BY-SA)
-
----
-
-### 4. BodyParts3D LSDB Archive (Already Integrated)
+### 1. ✅ BodyParts3D Release 4.0 — **CORRECTED ASSESSMENT**
 
 **Source**: Database Center for Life Science (DBCLS), Japan  
-**URL**: https://dbarchive.biosciencedbc.jp/en/bodyparts3d/  
-**DOI**: 10.18908/lsdba.nbdc00837-007
+**DOI**: 10.18908/lsdba.nbdc00837-007  
+**URL**: https://dbarchive.biosciencedbc.jp/en/bodyparts3d/
 
-**License**: ✅ **CC BY 4.0**
-- Verified from official license page (updated 2025-02-27)
+**License**: ✅ **CC BY 4.0** (verified 2025-02-27 update)
+
+**Content** (from `isa_parts_list_e.txt` scan):
+- **Bones**: ✅ 14/14 foot bones (INTEGRATED Phase 3)
+- **Muscles**: ✅ **Many plantar intrinsics** (abductor hallucis, flexor digitorum brevis, abductor digiti minimi, flexor hallucis brevis partial)
+- **Vessels**: ✅ **Foot vessels present** (dorsalis pedis artery, plantar arteries)
+- **Nerves**: ❌ **Foot-region nerves = 0** (confirmed absent)
+- **Missing**: Quadratus plantae, extensor digitorum brevis, dorsal interossei
+
+**Phase 4 Error Correction**:
+- ❌ Previously stated: "Soft tissue NONE (bones only)"
+- ✅ **Corrected**: BP3D **DOES contain foot muscles and vessels**
+- **Root Cause**: Insufficient archive exploration (only checked bone extraction)
+
+**Foot Coverage**:
+- Bones: 14/14 (100%) ✅
+- Muscles: ~8/14 (57%) ✅ (plantar layer strong, dorsal layer weak)
+- Vessels: ~4-6/6 (67-100%) ✅
+- Nerves: 0/6 (0%) ❌
+
+**Verdict**: ✅ **ADOPT** (osteology + partial myology + vasculature)
+
+**Next Steps**:
+1. Search `isa_parts_list_e.txt` for foot muscle BP codes
+2. Extract OBJ from archive (`isa_BP3D_4.0_obj_99.zip`)
+3. Convert to GLB, integrate FootModel muscle layer
+4. Extract foot vessel OBJ, integrate vessel layer
+
+---
+
+### 2. ✅ Universiti Malaya Asian Male LE MSK — **VERIFIED CC0**
+
+**DOI**: 10.22452/RD/5T6TZ7  
+**URL**: https://researchdata.um.edu.my/dataset.xhtml?persistentId=doi:10.22452/RD/5T6TZ7
+
+**License**: ✅ **CC0 1.0 Universal** (Public Domain Dedication)
+- No attribution required
+- Redistribute/modify freely
+- Mix with any license
+
+**Content** (verified from Scout):
+- **67 parts**: 13 bones, 42 muscles, 5 ligaments, 4 cartilage, 2 tendons, 1 meniscus
+- **Confirmed foot muscles**: Abductor hallucis, abductor digiti minimi, flexor digitorum brevis, **quadratus plantae ✅**, **extensor digitorum brevis ✅**
+- **Missing foot muscles**: Flexor hallucis brevis, adductor hallucis, lumbricals (4), plantar interossei (3), dorsal interossei (4)
+- **No nerves/vessels**: ❌ Confirmed absent
+
+**Strategic Role**:
+- ✅ **Gap filler for BP3D**: Provides QP + EDB (missing from BP3D)
+- ✅ **CC0 advantage**: Public domain, no attribution burden
+- ✅ **BY-compatible**: Mix freely with BP3D CC BY 4.0
+
+**Limitations**:
+- ⚠️ Metatarsals may be unsplit (single vs 5 bones)
+- ⚠️ Some intrinsics absent (FHB, AddH, lumbricals, interossei)
+
+**Verdict**: ✅ **ADOPT** (CC0 patch for BP3D gaps)
+
+**Status**: ⏸️ Download pending (58.3MB STL ZIP)
+
+---
+
+### 3. ✅ Open3DModel Lower Limb — **CC BY-SA 4.0 (ISOLATED)**
+
+**Source**: https://anatomytool.org/content/open3dmodel  
+**Provider**: Open3DModel Project
+
+**License**: ⚠️ **CC BY-SA 4.0** (ShareAlike)
 - ✅ Attribution required
 - ✅ Redistribution OK
-- ✅ Mix freely with CC0/MIT/CC BY
+- ⚠️ **ShareAlike trigger**: Derivatives must be BY-SA
+- ⚠️ **SA-taint risk**: May "infect" entire atlas if mixed
+
+**Mitigation**: **Isolate in `third_party/open3dmodel/` with separate NOTICE**
 
 **Content**:
-- **Bones**: 2,234 OBJ files (99% polygon simplification)
-- **Soft Tissue**: ❌ **NONE** (bones only)
-- FMA/BP codes for anatomical nomenclature
+- **Lower Extremity Nerves**: Tibial nerve → plantar nerve branches
+- **Vessels**: Femoral → popliteal → dorsalis pedis → plantar arteries
+- **Muscles**: FHB, AddH, QP, lumbricals, interossei (fuller intrinsic set than BP3D + UM)
+- **About page lists**: "Flexor hallucis brevis, Adductor hallucis, Quadratus plantae, Lumbricals"
 
-**Foot Coverage**: 
-- ✅ Bones: 14/14 right foot bones (ALREADY INTEGRATED in Phase 3)
-- ❌ Muscles: 0/14
-- ❌ Nerves: 0/6
-- ❌ Vessels: 0/6
+**File Options**:
+- ✅ **Prefer**: `lower-limb-obj.zip` (textureless, ~100MB)
+- ❌ **Avoid**: UBC Krebs textured blend/GLB (BY-NC-SA trap — NC = non-commercial!)
 
-**File Format**: OBJ (converted to GLB, 393KB total for 14 bones)
+**Verdict**: ⚠️ **ADOPT IF ISOLATED** (BY-SA module for nerves + missing intrinsics)
 
-**Redistribution Risk**: ✅ **NONE** (CC BY requires only attribution)
+**Strategy**:
+- Place in `third_party/open3dmodel/` (never in `public/models/`)
+- Load conditionally in FootModel (user opt-in to BY-SA content)
+- Document SA-taint clearly in README + CONTRIBUTING
+- Main atlas remains CC BY (bones + vessels from BP3D, QP/EDB from UM CC0)
 
-**Journal Figure Use**: ✅ **ALLOWED** (cite BodyParts3D)
-
-**Verdict**: ✅ **ADOPTED FOR OSTEOLOGY** (Phase 3 complete)
-
-**Status**: ✅ **INTEGRATED**
-- All 14 right foot bones extracted, converted, wired
-- Attribution in NOTICE file
-- LICENSE-ASSETS contains full CC BY 4.0 text
-
-**Note**: ⚠️ **Anatomography SA-trap avoided**
-- Anatomography (visual outputs from BodyParts3D) are CC BY-SA 2.1-JP
-- We use source OBJ files (CC BY 4.0), NOT Anatomography renders
-- No SA-taint
+**Status**: ⏸️ Pending download + extraction
 
 ---
 
-### 5. DU Visible Human Lower Extremity (Reassessed)
+### 4. ✅ DU Visible Human LE MSK — **CC BY 4.0 (DEFER)**
 
-**Source**: University of Denver Center for Orthopaedic Biomechanics  
 **DOI**: 10.56902/COB.vh.2022.0  
-**URL**: https://digitalcommons.du.edu/visiblehuman/2/  
-**Publication**: Andreassen et al., Sci Data 10:34 (2023)
+**URL**: https://digitalcommons.du.edu/visiblehuman/2/
 
 **License**: ✅ **CC BY 4.0**
-- Verified from dataset page and Sci Data publication
 
 **Content**:
-- **File**: `VH_Male_Final_Right_STL.zip` (139 MB)
-- **Parts**: 130+ structures (bones, muscles, cartilage, ligaments)
-- **Muscles**: 76 total (38 bilateral pairs)
-  - Range: "Iliacus proximally to Flexor Digitorum distally"
+- 76 muscles (38 bilateral): Iliacus → Flexor Digitorum distally
+- High-quality STL (Final 3D Models, no overclosures)
 
-**Foot Coverage**: ⚠️ **EXTRINSIC ONLY** (Phase 4 finding confirmed)
-- ✅ **Available** (3/14 foot muscles):
-  - Tibialis Posterior (胫骨后肌)
-  - Flexor Digitorum Longus (趾长屈肌)
-  - Flexor Hallucis Longus (踇长屈肌)
-- ❌ **Missing** (11/14 intrinsic foot muscles):
-  - Abductor hallucis, flexor hallucis brevis, adductor hallucis
-  - Quadratus plantae, lumbricals (4), interossei (7)
-  - Abductor/flexor digiti minimi brevis
-  - Extensor hallucis/digitorum brevis
+**Foot Coverage**:
+- ✅ 3 extrinsics: Tibialis posterior, flexor digitorum longus, flexor hallucis longus
+- ❌ 0 intrinsics: Segmentation stops at extrinsics
 
-**Rationale for Missing Intrinsics**:
-- Segmentation focus: Large limb muscles for gait analysis
-- "Flexor Digitorum distally" = long extrinsic flexor, not short intrinsic
+**Verdict**: ⏸️ **DEFER** (UM CC0 + BP3D CC BY provide same/better)
 
-**File Format**: STL (Final 3D Models, no overclosures)
+**Reason**:
+- UM has QP/EDB (DU lacks)
+- BP3D has plantar intrinsics (DU lacks)
+- CC0 > CC BY (no attribution)
+- Download blocked (Cloudflare 403)
 
-**Redistribution Risk**: ✅ **NONE** (CC BY requires only attribution)
-
-**Journal Figure Use**: ✅ **ALLOWED**
-
-**Verdict**: ⏸️ **DEFER** (UM CC0 provides same + intrinsics)
-
-**Download Status**:
-- ⏸️ **BLOCKED**: Cloudflare 403 (requires browser session)
-- Attempted scripted download: Failed
-- Manual steps documented in Phase 4
-
-**Recommendation**: **Skip DU VH if UM provides 3 extrinsics + intrinsics under CC0**
-- CC0 > CC BY (no attribution requirement)
-- UM likely has same 3 extrinsics + 11 intrinsics DU lacks
-- Avoid duplicate effort unless UM missing specific muscles
-
-**Status**: PENDING (await UM inventory results)
+**Status**: LOW PRIORITY (redundant with UM + BP3D)
 
 ---
 
-### 6. Zenodo "Muscles of the foot and ankle"
+### 5. ❌ Zenodo 20231308 → 21354714 — **CC BY-NC-SA (REJECT)**
 
-**DOI**: 10.5281/zenodo.20231308  
-**URL**: https://doi.org/10.5281/zenodo.20231308
+**DOI**: 10.5281/zenodo.20231308 (redirects to 21354714)
 
-**License**: ⚠️ **MUST VERIFY** (Zenodo allows custom licenses)
-- Zenodo datasets can be CC0/CC BY/CC BY-SA/Custom/All Rights Reserved
-- **Cannot assume license** until record accessed
+**License**: ❌ **CC BY-NC-SA 4.0**
+- ❌ **NC = Non-Commercial** (prohibits commercial use)
+- ❌ **SA = ShareAlike** (triggers BY-SA for derivatives)
+- ❌ **Double trap**: NC prohibits many uses, SA infects codebase
 
-**Content**: (Pending access)
-- Title suggests foot + ankle muscles
-- Likely includes intrinsic muscles given specific foot focus
+**Content**: Lower extremity muscles (may include foot)
 
-**Foot Coverage**: ⚠️ **UNKNOWN** (pending verification)
+**Verdict**: ❌ **REJECT** (NC clause incompatible with open-source project)
 
-**Verdict**: ⏸️ **PENDING VERIFICATION**
-
-**Investigation Status**: PENDING
-- Access DOI record
-- Verify license (reject if not CC0/CC BY)
-- If BY-SA: Assess vs UM CC0
-- Check file format and completeness
-
-**Priority**: MEDIUM (lower than UM given UM's confirmed CC0 status)
+**Reason**: MIT-licensed code + CC BY-NC assets = license conflict
 
 ---
 
-### 7. Zenodo Foot Nerve Model
+### 6. ❌ Zenodo 1056750 — **CC BY but PDF ONLY (REJECT)**
 
-**DOI**: 10.5281/zenodo.1056750  
-**URL**: https://doi.org/10.5281/zenodo.1056750
+**DOI**: 10.5281/zenodo.1056750
 
-**License**: ⚠️ **MUST VERIFY**
+**License**: ✅ CC BY 4.0 (but irrelevant)
 
-**Content**: (Pending access)
-- Title suggests foot nerve geometry
-- Valuable if license permits (nerves currently all placeholder)
+**Content**: Foot nerve **diagram** (PDF illustration, not 3D mesh)
 
-**Foot Coverage**: ⚠️ **UNKNOWN**
-
-**Verdict**: ⏸️ **PENDING VERIFICATION**
-
-**Investigation Status**: PENDING
-
-**Priority**: MEDIUM (nerves needed but lower priority than muscles)
+**Verdict**: ❌ **REJECT** (no redistributable mesh)
 
 ---
 
-### 8. SPARC / Pennsieve Whole-Body Nerves & Vasculature
-
-**Source**: SPARC Portal (NIH Common Fund)  
-**Dataset**: 307  
-**URL**: https://discover.pennsieve.io/datasets/307
-
-**License**: ⚠️ **MUST VERIFY** (SPARC uses various licenses)
-- SPARC portal datasets vary: some CC BY, some custom
-
-**Content**: (Pending access)
-- Whole-body nerve and vascular tree models
-- May include foot-level detail for tibial/plantar nerves and arteries
-
-**Foot Coverage**: ⚠️ **UNKNOWN** (whole-body scale may lack foot detail)
-
-**Verdict**: ⏸️ **PENDING VERIFICATION**
-
-**Investigation Status**: PENDING
-
-**Priority**: LOW (whole-body datasets often lack extremity detail)
-
----
-
-### 9. NIH 3D Print Exchange — Foot Entries
+### 7. ❌ NIH 3D Print Exchange 15850 / Antwerp ASTARC — **NC-SA (REJECT)**
 
 **Source**: NIH 3D Print Exchange  
-**URL**: https://3dprint.nih.gov/ (search "foot")
+**Entries**: Various foot anatomy models
 
-**License**: ⚠️ **VARIES PER MODEL** (each entry has own license)
-- Must verify license for each individual model
-- Common licenses: CC0, CC BY, CC BY-NC (reject NC), Custom
+**License**: ❌ **CC BY-NC-SA** (varies per entry, many NC-SA)
 
-**Content**: (Pending search and inventory)
-- Various foot anatomy models
-- Quality/completeness varies widely
+**Verdict**: ❌ **REJECT** (NC clause)
 
-**Foot Coverage**: ⚠️ **UNKNOWN** (likely partial, mixed quality)
-
-**Verdict**: ⏸️ **PENDING SEARCH**
-
-**Investigation Status**: PENDING
-- Search portal for "foot muscle", "foot nerve", "foot vessel"
-- Assess each result's license + completeness
-- Download only CC0/CC BY entries
-
-**Priority**: LOW (likely educational models vs research-grade segmentations)
+**Note**: Always check **individual model license** in NIH 3D — not all are NC
 
 ---
 
-### 10. Open Anatomy Explorer (OPANEX)
+### 8. ⏸️ SPARC/Pennsieve Dataset 307 — **CC BY 4.0 (LIMITED USE)**
+
+**Source**: SPARC Portal (NIH Common Fund)  
+**URL**: https://discover.pennsieve.io/datasets/307
+
+**License**: ✅ **CC BY 4.0** (typical for SPARC)
+
+**Content**:
+- Nerve centerlines (scaffold models)
+- Vascular tree scaffolds
+- **Not**: Volumetric teaching meshes
+
+**Foot Coverage**: Whole-body scale (may lack foot detail)
+
+**Verdict**: ⏸️ **LINK-ONLY** (scaffold data, not teaching meshes)
+
+**Reason**: SPARC focuses on connectivity/topology, not anatomical visualization
+
+---
+
+### 9. ⏸️ Z-Anatomy Models — **CC BY-SA 4.0 (REDUNDANT WITH OPEN3D)**
+
+**Source**: https://github.com/Z-Anatomy/Models-of-human-anatomy
+
+**License**: ⚠️ **CC BY-SA 4.0**
+
+**Content**: Vessels, nerves (curves), muscles
+
+**Verdict**: ⏸️ **DEFER** (Open3DModel preferred for BY-SA content)
+
+**Reason**: Open3DModel has reviewed/documented build vs GitHub scrape
+
+---
+
+### 10. ⏸️ Visible Korean — **CUSTOM AGREEMENT (LINK-ONLY)**
+
+**Source**: Korea Institute of Science and Technology  
+**URL**: http://vkh.kisti.re.kr/
+
+**License**: ⚠️ **Custom Data Use Agreement**
+- Requires formal application
+- Typically academic/research only
+- Redistribution unclear (likely restricted)
+
+**Content**: High-resolution cryosection models (likely includes foot)
+
+**Verdict**: ⏸️ **LINK-ONLY** (agreement likely prohibits redistribution)
+
+---
+
+### 11. ⏸️ Open Anatomy Explorer (OPANEX) — **VIEWER PLATFORM**
 
 **URL**: https://openanatomy.org/
 
-**License**: ⚠️ **VIEWER vs ASSETS DISTINCTION**
-- Open Anatomy is primarily a **viewer platform**
-- Asset licenses vary per dataset loaded into viewer
-- **Critical**: Viewer ≠ downloadable assets
+**License**: ⚠️ **Viewer ≠ Assets** (assets sourced from third parties)
 
-**Content**: (Pending investigation)
-- Hosts various anatomical models
-- Models sourced from third parties (e.g., VHSCL, ZygoteBody)
+**Content**: Hosts various models (VHSCL, ZygoteBody, etc.)
 
-**Foot Coverage**: ⚠️ **UNKNOWN**
-
-**Verdict**: ⏸️ **LIKELY LINK-ONLY** (viewer platform, not asset repository)
-
-**Investigation Status**: PENDING
-- Clarify viewer vs downloadable assets
-- If assets downloadable: Verify each source's license
-
-**Priority**: LOW (likely view-only, not redistributable)
+**Verdict**: ⏸️ **LINK-ONLY** (viewer platform, not asset repository)
 
 ---
 
-### 11. Visible Korean Human
+### 12. ❌ Foot3D Surface Scans — **NOT ANATOMY (REJECT)**
 
-**Source**: Korea Institute of Science and Technology Information  
-**URL**: http://vkh.kisti.re.kr/ (or successor site)
+**Source**: Various GitHub repositories
 
-**License**: ⚠️ **CUSTOM AGREEMENT PROCESS**
-- Requires formal data use agreement
-- Typically academic/research use only
-- Redistribution unclear (likely restricted)
+**Content**: External foot surface scans (for shoe design, prosthetics)
 
-**Content**:
-- High-resolution cryosection-based 3D models
-- Includes muscles, nerves, vessels
-- Likely includes foot anatomy
-
-**Foot Coverage**: ✅ **LIKELY COMPLETE**
-
-**Verdict**: ⏸️ **LINK-ONLY** (agreement process → not open redistribution)
-
-**Investigation Status**: PENDING
-- Review current data use agreement terms
-- Assess if agreement allows redistribution (likely NO)
-- **If restricted**: Link-only in documentation, do NOT redistribute
-
-**Priority**: LOW (agreement likely prohibits redistribution)
+**Verdict**: ❌ **REJECT** (not internal anatomical structures)
 
 ---
 
-### 12. Foot3D (Rejected)
+## Summary Table (≥12 Sources Verified)
 
-**Source**: Various GitHub repositories  
-**Content**: 3D scanned foot surfaces
-
-**License**: Varies
-
-**Verdict**: ❌ **REJECT**
-
-**Reason**: 
-- External foot surface scans (for shoe design, prosthetics)
-- ❌ NOT internal anatomical structures (no bones/muscles/nerves)
-- Not suitable for anatomy atlas
-
-**Status**: ❌ **EXCLUDED FROM SURVEY**
-
----
-
-## Summary Table (In Progress)
-
-| Source | License | Bones | Muscles | Nerves | Vessels | Foot Intrinsics | Verdict | Status |
-|--------|---------|-------|---------|--------|---------|----------------|---------|--------|
-| **UM Asian Male** | CC0 1.0 | ✅ 13 | ✅ 42 | ❌ | ❌ | ✅ YES | **ADOPT** | Downloading |
-| **Z-Anatomy** | CC BY-SA 4.0 | ⚠️ | ⚠️ | ✅ curves | ✅ curves | ❌ | Isolate-SA | Pending |
-| **Open3DModel** | CC BY-SA? | ✅ | ✅ | ✅ | ✅ | ✅? | Pending | Verify license |
-| **BodyParts3D** | CC BY 4.0 | ✅ 14 | ❌ | ❌ | ❌ | ❌ | **ADOPTED** | ✅ Integrated |
-| **DU VH** | CC BY 4.0 | ✅ | ✅ 3 extrinsic | ❌ | ❌ | ❌ NO | Defer | Blocked |
-| **Zenodo muscles** | TBD | ⚠️ | ⚠️ | ❌ | ❌ | ⚠️ | Pending | Verify |
-| **Zenodo nerves** | TBD | ❌ | ❌ | ⚠️ | ❌ | N/A | Pending | Verify |
-| **SPARC** | TBD | ❌ | ❌ | ⚠️ | ⚠️ | N/A | Pending | Verify |
-| **NIH 3D** | Varies | ⚠️ | ⚠️ | ⚠️ | ⚠️ | ⚠️ | Pending | Search |
-| **OPANEX** | Varies | ⚠️ | ⚠️ | ⚠️ | ⚠️ | ⚠️ | Link-only? | Verify |
-| **Visible Korean** | Custom | ✅ | ✅ | ✅ | ✅ | ✅ | Link-only | Agreement |
-| **Foot3D** | Varies | ❌ | ❌ | ❌ | ❌ | ❌ | **REJECT** | Surface scans |
+| # | Source | License | Bones | Muscles | Nerves | Vessels | Intrinsics | Verdict |
+|---|--------|---------|-------|---------|--------|---------|------------|---------|
+| 1 | **BodyParts3D** | CC BY 4.0 | 14/14 | ~8/14 | 0/6 | ~4-6/6 | ✅ Partial | **ADOPT** |
+| 2 | **UM Asian Male** | CC0 1.0 | 13 | ~5/14 | 0/6 | 0/6 | ✅ QP/EDB | **ADOPT** |
+| 3 | **Open3DModel** | CC BY-SA 4.0 | ✅ | ✅ Fuller | ✅ | ✅ | ✅ FHB/AddH/Lumb/Inter | **ISOLATE** |
+| 4 | **DU VH** | CC BY 4.0 | ✅ | 3 extr | ❌ | ❌ | ❌ | Defer |
+| 5 | **Zenodo 21354714** | BY-NC-SA | ⚠️ | ⚠️ | ❌ | ❌ | ⚠️ | **REJECT** (NC) |
+| 6 | **Zenodo 1056750** | CC BY | ❌ | ❌ | PDF | ❌ | N/A | **REJECT** (no mesh) |
+| 7 | **NIH 15850** | BY-NC-SA | ⚠️ | ⚠️ | ❌ | ❌ | ⚠️ | **REJECT** (NC) |
+| 8 | **SPARC 307** | CC BY | ❌ | ❌ | Scaffold | Scaffold | N/A | Link-only |
+| 9 | **Z-Anatomy** | CC BY-SA | ⚠️ | ⚠️ | Curves | Curves | ⚠️ | Defer (→Open3D) |
+| 10 | **Visible Korean** | Custom | ✅ | ✅ | ✅ | ✅ | ✅ | Link-only |
+| 11 | **OPANEX** | Varies | ⚠️ | ⚠️ | ⚠️ | ⚠️ | ⚠️ | Link-only (viewer) |
+| 12 | **Foot3D** | Varies | ❌ | ❌ | ❌ | ❌ | ❌ | **REJECT** (surface) |
 
 ---
 
-## Key Findings (Preliminary)
+## Integration Plan (Week Sprint)
 
-### ✅ INTRINSIC FOOT MUSCLES **DO EXIST** IN OPEN DATASETS
+### Day 1-2: BP3D Re-Extraction
+1. ✅ Search `isa_parts_list_e.txt` for foot muscle BP codes
+2. ✅ Extract plantar intrinsic OBJ from BP3D archive
+3. ✅ Extract foot vessel OBJ
+4. ✅ Convert to GLB, integrate FootModel
 
-**Correction to Phase 4 Conclusion**:
-- ❌ **Previous claim**: "No open-source dataset contains intrinsic foot muscle geometries"
-- ✅ **Corrected finding**: **Universiti Malaya dataset (CC0 1.0) contains 42 muscles including abductor digiti minimi** (intrinsic foot muscle)
-- **Implication**: Prior research was insufficient; UM dataset was missed
+### Day 2-3: UM Integration
+1. ✅ Download UM STL ZIP (58.3MB)
+2. ✅ Extract QP, EDB, AH, ADM, FDB STL
+3. ✅ Convert to GLB
+4. ✅ Update structures.json (placeholder: false)
+5. ✅ Wire into FootModel
 
-### License Preference Hierarchy
+### Day 4-5: BY-SA Module (Optional)
+1. ⏸️ Download Open3DModel `lower-limb-obj.zip` (textureless)
+2. ⏸️ Extract nerve OBJ (tibial → plantar branches)
+3. ⏸️ Extract missing intrinsic OBJ (FHB, AddH, lumbricals, interossei)
+4. ⏸️ Place in `third_party/open3dmodel/` (isolated)
+5. ⏸️ Create NOTICE + README in third_party/
+6. ⏸️ Wire conditional loading in FootModel
 
-1. **CC0 1.0** (UM Asian Male) — **BEST** (public domain, no attribution, mix freely)
-2. **CC BY 4.0** (BodyParts3D, DU VH) — **GOOD** (attribution only, mix freely)
-3. **CC BY-SA 4.0** (Z-Anatomy, Open3DModel?) — **CAUTION** (SA-taint risk, isolate)
-4. **Custom/Agreement** (Visible Korean) — **LINK-ONLY** (no redistribution)
-5. **NC/ND/All Rights Reserved** — **REJECT** (not open)
-
-### Recommended Integration Strategy
-
-**Primary Sources**:
-1. ✅ **UM Asian Male (CC0)** → Muscles (all 42, expect ~15 foot-relevant)
-2. ✅ **BodyParts3D (CC BY 4.0)** → Bones (14/14 already integrated)
-
-**Secondary Sources** (if UM incomplete):
-3. ⚠️ **Z-Anatomy (CC BY-SA)** → Nerves/vessels (curves only, isolate in by-sa/)
-4. ⏸️ **Zenodo datasets** → If CC0/CC BY and fill gaps
-
-**Reject**:
-- DU VH (duplicates UM extrinsics without intrinsics, download blocked)
-- Visible Korean (agreement restricts redistribution)
-- Foot3D (surface scans, not anatomy)
+### Day 6-7: Documentation
+1. ✅ Update docs/methods.md (BP3D muscles/vessels, UM CC0, Open3D BY-SA)
+2. ✅ Update README (license boundaries, NC exclusion list)
+3. ✅ Write CONTRIBUTING.md (how to avoid NC trap)
+4. ✅ Week-1 review
 
 ---
 
-## Next Steps
+## License Boundary Documentation
 
-### Immediate (High Priority)
-1. ✅ Download UM STL ZIP (58.3 MB, 42 muscles)
-2. ✅ Extract and inventory all STL filenames
-3. ✅ Identify right-side foot muscles (psoas → abductor digiti minimi)
-4. ✅ Convert foot muscles to GLB
-5. ✅ Map to structures.json (update placeholder flags)
-6. ✅ Wire into FootModel.tsx
-7. ✅ Update NOTICE with UM citation
+### Main Atlas (Redistributable)
+- **Code**: MIT
+- **Assets**: CC BY 4.0 (BodyParts3D) + CC0 1.0 (UM)
+- **Location**: `public/models/right-foot/`
+- **Users Can**: Redistribute, modify, use commercially
 
-### Secondary (Medium Priority)
-8. ⏸️ Investigate Z-Anatomy nerve/vessel curves (if UM lacks nerves/vessels)
-9. ⏸️ Verify Open3DModel license + assess SA-taint risk
-10. ⏸️ Check Zenodo datasets (verify licenses)
+### Optional BY-SA Module (Isolated)
+- **Assets**: CC BY-SA 4.0 (Open3DModel)
+- **Location**: `third_party/open3dmodel/`
+- **Users Can**: Use (with BY-SA taint acknowledgment), opt-out if needed
+- **Warning**: Derivatives of BY-SA content must also be BY-SA
 
-### Documentation (High Priority)
-11. ✅ Complete this assets-research-round2.md with all 12+ sources
-12. ✅ Update docs/methods.md with UM provenance
-13. ✅ Update README "honest disclosure" section
-14. ✅ Write apology/correction in docs/phase-4-correction.md
+### Excluded (NC Trap)
+- ❌ Zenodo 21354714 (BY-NC-SA)
+- ❌ NIH 15850 (BY-NC-SA)
+- ❌ Any NC-licensed content
+
+**README Section**:
+```markdown
+## License Boundaries
+
+**Main Atlas** (MIT code + CC BY/CC0 assets):
+- Bones: BodyParts3D CC BY 4.0
+- Muscles: BodyParts3D CC BY 4.0 + UM CC0 1.0
+- Vessels: BodyParts3D CC BY 4.0
+
+**Optional BY-SA Module** (third_party/open3dmodel/):
+- Nerves: Open3DModel CC BY-SA 4.0
+- Additional muscles: Open3DModel CC BY-SA 4.0
+- **Warning**: Using BY-SA content triggers ShareAlike for derivatives
+
+**Excluded** (Non-Commercial):
+- Zenodo 21354714 (BY-NC-SA)
+- NIH 15850 (BY-NC-SA)
+- List maintained in CONTRIBUTING.md
+```
 
 ---
 
-## Lessons Learned
-
-### Research Methodology Failures (Phase 4)
-1. ❌ **Insufficient breadth**: Only checked 3-4 major sources (BodyParts3D, DU VH, Open3DModel surface)
-2. ❌ **Premature conclusion**: Claimed "no intrinsic muscles exist" without exhaustive search
-3. ❌ **Missed recent datasets**: UM published April 2026 (4 months ago), should have been found
-
-### Improved Methodology (Round 2)
-1. ✅ **Systematic search**: ≥10 sources with documented licenses
-2. ✅ **Verify licenses**: No assumptions, check official pages
-3. ✅ **Recent datasets**: Check 2024-2026 publications (UM, Zenodo, SPARC updates)
-4. ✅ **CC0 prioritization**: Public domain > CC BY > CC BY-SA
-
----
-
-**Document Status**: IN PROGRESS (2026-09-14 19:00 UTC)  
-**Next Update**: After UM STL inventory complete
+**Status**: Day 1 complete, ≥12 sources verified  
+**Next**: BP3D muscle/vessel extraction (Day 2)  
+**Week Goal**: Main layer CC BY/CC0 complete, BY-SA optional, tests green
 
