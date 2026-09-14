@@ -1,0 +1,273 @@
+# Week Sprint Plan — Right Foot Anatomy Atlas Quality Project
+
+**Start**: 2026-09-14 (Day 1)  
+**Duration**: 7 days  
+**Goal**: Deep work on asset integration, license verification, real content maximization
+
+**Owner Directive**: This is a **week-long quality project**, not same-day delivery. Prefer deep work over shallow docs. No premature "delivered/finished" claims.
+
+---
+
+## Current Status (Day 1, Evening)
+
+### Completed Today
+- ✅ Asset Research Round 2 initiated (docs/assets-research-round2.md, 12+ sources)
+- ✅ **Key finding**: Universiti Malaya CC0 dataset (42 muscles, intrinsics confirmed)
+- ✅ Phase 4 conclusion corrected (intrinsic muscles DO exist in open datasets)
+- ✅ Owner update + apology for insufficient Phase 4 research
+
+### In Progress
+- ⏸️ UM STL ZIP download (58.3MB, 42 muscles) — requires file ID or browser
+- ⏸️ License verification for Zenodo, SPARC, Z-Anatomy, Open3DModel
+- ⏸️ FootModel.tsx muscle layer wiring (awaiting UM inventory)
+
+---
+
+## Week Plan (Days 2-7)
+
+### Day 2 (Tue): UM Download + Inventory
+**Focus**: Complete UM muscle acquisition + catalog
+
+**Tasks**:
+1. ✅ Download UM `Final Model STL files.zip` (scripted or manual browser download)
+2. ✅ Extract ZIP → list all 42 muscle STL filenames
+3. ✅ Identify foot-relevant muscles:
+   - Extrinsics: tibialis ant/post, flex/ext digitorum/hallucis longus, peroneus, gastrocnemius, soleus, plantaris
+   - **Intrinsics**: abductor hallucis, flexor hallucis brevis, adductor hallucis, abductor/flexor digiti minimi, quadratus plantae, lumbricals (4), interossei (7), ext hallucis/digitorum brevis
+4. ✅ Document inventory in `assets-raw/um-asian-male/UM_MUSCLE_INVENTORY.md`
+5. ✅ Assess laterality (right vs left) and file naming conventions
+
+**Deliverable**: Complete muscle inventory + mapping table (UM filename → structures.json ID)
+
+**Blocker Contingency**: If UM download blocked, move to Z-Anatomy cloning + inventory
+
+---
+
+### Day 3 (Wed): UM Conversion + Integration (Batch 1)
+**Focus**: Convert + wire first 5 intrinsic muscles
+
+**Tasks**:
+1. ✅ Convert 5 intrinsic muscle STL → GLB (optimize for web, target <2MB each)
+   - Prioritize: abductor hallucis, flexor hallucis brevis, adductor hallucis, quadratus plantae, lumbricals group
+2. ✅ Place GLB in `public/models/right-foot/muscles/`
+3. ✅ Update `structures.json`: Set `placeholder: false` for converted muscles
+4. ✅ Update `public/models/right-foot/manifest.json` with UM CC0 attribution
+5. ✅ Wire into `FootModel.tsx`:
+   - Extend `REAL_MUSCLE_MODELS` constant
+   - Create `RealMuscleModel` component (similar to `RealBoneModel`)
+   - Handle scale/position (UM likely in different unit/orientation than BodyParts3D)
+
+**Deliverable**: 5 real intrinsic muscles rendering in viewer + tests green
+
+**Success Metric**: Layer toggle → muscle layer shows 5 real meshes + 9 schematic
+
+---
+
+### Day 4 (Thu): UM Integration (Batch 2) + Extrinsics
+**Focus**: Complete remaining intrinsics + add extrinsics
+
+**Tasks**:
+1. ✅ Convert remaining 6 intrinsic muscles STL → GLB
+2. ✅ Convert 3 extrinsic muscles STL → GLB (tib post, flex dig/hal longus)
+3. ✅ Update `structures.json` + `manifest.json`
+4. ✅ Wire all 14 muscles into `FootModel.tsx`
+5. ✅ Test selection/highlight/hover for all 14 real muscle meshes
+6. ✅ Verify layer toggle correctness (bone vs muscle raycasting)
+
+**Deliverable**: 14/14 real muscles integrated (11 intrinsics + 3 extrinsics)
+
+**Success Metric**: Muscle layer 100% real, 0% placeholder
+
+---
+
+### Day 5 (Fri): License Verification + Secondary Sources
+**Focus**: Complete ≥10 source asset-research, evaluate best-of-rest
+
+**Tasks**:
+1. ✅ Clone Z-Anatomy repo → inventory nerve/vessel curve files
+2. ✅ Verify license: CC BY-SA 4.0 confirmed, assess SA-taint risk
+3. ✅ Check Zenodo DOI 10.5281/zenodo.20231308 (muscles) → verify license
+4. ✅ Check Zenodo DOI 10.5281/zenodo.1056750 (nerves) → verify license
+5. ✅ Search SPARC portal dataset 307 → assess foot nerve/vessel detail
+6. ✅ Search NIH 3D Print Exchange ("foot muscle", "foot nerve") → catalog CC0/CC BY entries
+7. ✅ Update `docs/assets-research-round2.md` with verified findings
+8. ✅ Decision: Integrate Z-Anatomy nerves/vessels (if BY-SA acceptable) OR keep schematic
+
+**Deliverable**: Complete ≥10 source comparison table with verified licenses
+
+**Decision Point**: Nerve/vessel strategy (real BY-SA vs improved schematic vs wait for CC0/CC BY)
+
+---
+
+### Day 6 (Sat): Nerve/Vessel Integration OR Camera/UX Polish
+**Focus**: Either integrate nerves/vessels OR improve viewer experience
+
+**Option A** (if Z-Anatomy BY-SA acceptable):
+1. ✅ Extract Z-Anatomy nerve curves (foot-relevant: tibial → plantar branches)
+2. ✅ Convert curves → tube meshes (TubeGeometry in three.js)
+3. ✅ Place in `public/models/by-sa/` (isolated directory)
+4. ✅ Update structures.json + manifest (mark BY-SA taint)
+5. ✅ Wire into FootModel (conditional BY-SA vs schematic)
+6. ✅ Document SA-taint risk in README + NOTICE
+
+**Option B** (if BY-SA rejected):
+1. ✅ Enhance schematic nerve rendering (anatomically informed Bezier paths)
+2. ✅ Enhance schematic vessel rendering (arterial branching patterns)
+3. ✅ Improve camera framing (multiple preset views: dorsal, plantar, medial, lateral)
+4. ✅ Add structure search/filter UI
+5. ✅ Performance optimization (LOD, frustum culling)
+
+**Deliverable**: Either 6/6 real nerves + 6/6 real vessels OR polished schematic + UX
+
+---
+
+### Day 7 (Sun): Documentation + Self-Review
+**Focus**: Comprehensive documentation, honest assessment, week summary
+
+**Tasks**:
+1. ✅ Update `docs/methods.md`:
+   - UM CC0 provenance (citation, DOI, file list)
+   - STL → GLB conversion pipeline
+   - Scale/orientation handling
+   - BY-SA isolation strategy (if applicable)
+2. ✅ Update `README.md`:
+   - Remove "teaching-grade product delivered" language
+   - Replace with "Week 1 progress: 14 real bones + X real muscles integrated"
+   - Honest status: "In-progress quality project, targeting journal-grade muscle layer"
+3. ✅ Write `docs/week-1-review.md`:
+   - What was integrated (bones, muscles, nerves?, vessels?)
+   - What remains schematic
+   - Gaps identified (e.g., sesamoids, ligaments, joint markers)
+   - Quality assessment (anatomical accuracy, nomenclature, citations)
+   - Next week priorities
+4. ✅ Update PR #1 description (progress update, not "complete")
+5. ✅ Push all changes
+
+**Deliverable**: Honest week-1 summary + clear week-2 roadmap
+
+**No**: "Delivered", "Complete", "Ready for use", "Teaching-grade product"
+
+**Yes**: "Week 1 progress", "In development", "Targeting journal-grade", "Gaps remain"
+
+---
+
+## Hard Problems to Solve (This Week)
+
+### P0: UM Muscle Integration
+- **Challenge**: 42 muscles in single STL ZIP, unclear naming, laterality, scale/orientation
+- **Approach**: Systematic inventory → batch conversion → incremental wiring → test each batch
+- **Success**: 14/14 foot muscles real (11 intrinsics + 3 extrinsics)
+
+### P1: License Verification
+- **Challenge**: Zenodo/SPARC custom licenses, Z-Anatomy BY-SA taint, Visible Korean agreements
+- **Approach**: Manual verification from official sources, document exact license terms
+- **Success**: ≥10 sources with verified licenses, clear adopt/isolate/reject verdicts
+
+### P2: BY-SA Taint Decision
+- **Challenge**: Z-Anatomy nerves/vessels attractive but trigger ShareAlike
+- **Approach**: Isolate in by-sa/ directory, document taint boundary, assess risk vs benefit
+- **Success**: Clear policy documented, either integrated (isolated) or rejected (keep schematic)
+
+### P3: Scale/Orientation Handling
+- **Challenge**: UM meshes likely different scale/orientation than BodyParts3D bones
+- **Approach**: Load sample muscle, measure bounding box, compare to known anatomy, apply correction
+- **Success**: Muscles + bones aligned correctly in viewer
+
+---
+
+## Metrics (Week 1 Target)
+
+### Real Content
+- Bones: 14/14 (100%) ✅ (already integrated)
+- **Muscles: 0/14 → 14/14 (100%)** 🎯 PRIMARY GOAL
+- Nerves: 0/6 → 0-6/6 (0-100%) ⚠️ (depends on BY-SA decision)
+- Vessels: 0/6 → 0-6/6 (0-100%) ⚠️ (depends on BY-SA decision)
+
+**Week 1 Goal**: **28-34/40 structures real (70-85%)**
+
+### Documentation
+- Asset research: 3-4 sources (Phase 4) → **≥10 sources verified** (Round 2)
+- Methods: BodyParts3D only → **BodyParts3D + UM CC0 + (Z-Anatomy BY-SA?)** provenance
+- Honest assessment: "Teaching-grade" premature → **"Week 1 in-progress, targeting journal-grade"**
+
+### Build Quality
+- Tests: 7/7 pass → maintain 100%
+- Build: <1.1MB → maintain (optimize GLB sizes)
+- Performance: Smooth 60fps → verify with 28-34 real meshes
+
+---
+
+## Blocker Contingencies
+
+### If UM Download Blocked (Day 2)
+- **Plan B**: Focus on Z-Anatomy (clone repo, inventory, assess BY-SA taint)
+- **Plan C**: Deep-dive Zenodo datasets (verify licenses, download if CC0/CC BY)
+- **Plan D**: Enhance schematic rendering to "teaching-grade-plus" (anatomically informed)
+
+### If Z-Anatomy BY-SA Rejected (Day 6)
+- **Plan B**: Keep improved schematic for nerves/vessels
+- **Plan C**: Continue asset search (SPARC, NIH 3D, institutional repos)
+- **Plan D**: Commission artist for nerves/vessels (document cost/timeline)
+
+### If Tests Fail (Any Day)
+- **Priority**: Fix tests before continuing integration
+- **Approach**: Isolate failing component, add unit tests, verify fix
+- **No**: Commit broken tests with "TODO: fix later"
+
+---
+
+## Daily Check-In Questions
+
+At end of each day, answer:
+1. What **one hard problem** made durable progress today?
+2. What is blocked? (Be specific: file missing, license unclear, download failed)
+3. What is the **concrete next action** for tomorrow morning?
+4. Is the PR up to date with today's work?
+5. Are tests green?
+
+---
+
+## Week-End Success Criteria
+
+**Minimum (Week 1)**:
+- ✅ 14/14 muscles real (100%)
+- ✅ ≥10 sources verified in asset-research
+- ✅ Tests green
+- ✅ Honest documentation (no premature "complete" claims)
+
+**Stretch (Week 1)**:
+- ✅ 6/6 nerves real (Z-Anatomy curves → tubes, BY-SA isolated)
+- ✅ 6/6 vessels real (Z-Anatomy curves → tubes, BY-SA isolated)
+- ✅ Sesamoid bones added (hallux medial/lateral, if BodyParts3D contains)
+
+**Not This Week**:
+- ❌ "Delivered"
+- ❌ "Teaching-grade product ready"
+- ❌ "Journal-ready"
+- ❌ Mark PR as "Complete"
+
+**This Week**:
+- ✅ "Week 1 progress"
+- ✅ "In development"
+- ✅ "Targeting journal-grade muscle layer"
+- ✅ "Gaps remain (document specifics)"
+
+---
+
+## Pause Points
+
+When ending a run, update:
+1. This `docs/week-plan.md` → mark completed tasks, update blockers
+2. `docs/daily-log.md` → brief entry (what was done, what's next)
+3. PR description → progress update
+4. Tests → must be green before pausing
+
+**No**: Write "DELIVERED" or "FINAL" files  
+**Yes**: Write progress notes + concrete next steps
+
+---
+
+**Current Status**: Day 1 complete (asset research Round 2 initiated, UM identified)  
+**Tomorrow (Day 2)**: UM download + complete 42-muscle inventory  
+**This Week Goal**: 14/14 muscles real, ≥10 sources verified, honest progress documentation
+
