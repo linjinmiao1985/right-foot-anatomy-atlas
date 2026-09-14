@@ -19,6 +19,81 @@
 
 ---
 
+## Phase 2 深度比较分析
+
+**更新日期**: 2026-09-14 10:17 UTC  
+**研究扩展**: 系统比较≥3个候选来源的许可、质量、覆盖范围
+
+### 快速对比表
+
+| 标准 | Open3DModel | BodyParts3D | NIH 3D Print | U. Dundee Sketchfab |
+|------|-------------|-------------|--------------|---------------------|
+| **许可** | CC BY-SA 4.0 ✅ | CC BY-SA 2.1-JP ✅ | 多种（模型特定）⚠️ | 未明确/NoAI 标记 ⚠️ |
+| **商业使用** | ✅ 允许 | ✅ 允许 | 取决于模型 | 未知 |
+| **教育使用** | ✅ 设计目的 | ✅ 允许 | ✅ 允许 | ✅ 允许 |
+| **期刊发表/再分发** | ✅ 允许（署名+SA） | ✅ 允许（署名+SA） | 取决于模型 | 未知 |
+| **格式** | GLB, OBJ, Blender | OBJ | GLB, STL, X3D | GLB (下载) |
+| **足部覆盖** | 完整（骨+肌+神+血） | 完整骨骼 | 主要骨骼 | 骨骼（扫描） |
+| **肌肉/软组织** | ✅ 完整 | ❌ 无 | ❌ 少 | ❌ 无 |
+| **神经/血管** | ✅ 包含 | ❌ 无 | ❌ 无 | ❌ 无 |
+| **右足可分离** | ✅ Blender提取 | ✅ FMA ID筛选 | ✅ 已有单足 | ⚠️ 未验证 |
+| **网格质量（教学）** | ⭐⭐⭐⭐⭐ 医学级 | ⭐⭐⭐⭐ 简化99% | ⭐⭐⭐⭐ CT基础 | ⭐⭐⭐⭐ 扫描 |
+| **命名标准** | TA2基础 | FMA (Foundational Model) | 多样 | 标记（英文）|
+| **文档/出处** | 完整学术机构 | 日本DBCLS DOI | NIH官方 | 大学CAHID |
+| **最后更新** | 2025年7-11月 | 2013年（v4.0） | 持续更新 | 2018年+ |
+| **文件大小** | GLB ~大 (完整肢体) | OBJ 136MB（全身） | 适中 | 适中 |
+| **下载URL** | anatomytool.org/create | dbarchive.biosciencedbc.jp | 3d.nih.gov | sketchfab.com/dundee |
+| **推荐度** | ⭐⭐⭐⭐⭐ **首选** | ⭐⭐⭐⭐ 骨骼备选 | ⭐⭐⭐ 补充 | ⭐⭐ 需许可确认 |
+
+### 详细评估标准
+
+#### 1. 许可证合规性（期刊发表关键）
+
+| 资源 | 许可证 | 允许修改 | 允许再分发 | 允许商业 | 期刊发表 | ShareAlike要求 | 署名要求 |
+|------|--------|---------|----------|---------|---------|---------------|---------|
+| **Open3DModel** | CC BY-SA 4.0 | ✅ | ✅ | ✅ | ✅ | ✅ 衍生需SA | ✅ 详细 |
+| **BodyParts3D** | CC BY-SA 2.1-JP | ✅ | ✅ | ✅ | ✅ | ✅ 衍生需SA | ✅ DBCLS |
+| **NIH 3D - Entry 15850** | CC0/MIT (需验证) | ✅ | ✅ | ⚠️ 检查 | ⚠️ 检查 | 取决于 | 取决于 |
+| **NIH 3D - Entry 3DPX-016838** | CC BY | ✅ | ✅ | ✅ | ✅ | ❌ 无需 | ✅ MySegmenter |
+| **Dundee CAHID** | 未明确/NoAI | ⚠️ | ⚠️ | ❌ | ⚠️ | N/A | ✅ 需要 |
+
+**结论**: Open3DModel 和 BodyParts3D 都有**明确的学术友好许可**，允许期刊发表。NIH 部分模型可用但需逐个验证。Dundee 模型有 NoAI 标记，教育许可未明确。
+
+#### 2. 足部解剖覆盖范围
+
+| 资源 | 骨骼 | 肌肉 | 神经 | 血管 | 韧带 | 总评 |
+|------|------|------|------|------|------|------|
+| **Open3DModel** | ✅ 全部跗/跖/趾 | ✅ 外在+内在 | ✅ 胫神经分支 | ✅ 足背/底动脉 | ⚠️ 部分 | **最完整** |
+| **BodyParts3D** | ✅ 全部骨骼 | ❌ 无 | ❌ 无 | ❌ 无 | ❌ 无 | 骨骼专用 |
+| **NIH 3D (多源)** | ✅ 主要骨骼 | ❌ 少/无 | ❌ 无 | ❌ 无 | ❌ 无 | 骨骼为主 |
+| **Dundee** | ✅ 扫描骨骼 | ❌ 无 | ❌ 无 | ❌ 无 | ❌ 无 | 骨骼扫描 |
+
+**结论**: **仅 Open3DModel 提供四层系统**（bone/muscle/nerve/vessel）所需的完整数据。其他资源可作为骨骼层的参考或补充。
+
+#### 3. 网格质量与教学适用性
+
+| 资源 | 几何精度 | 拓扑质量 | 纹理/材质 | Web优化 | 命名规范 | 教学适用 |
+|------|---------|---------|----------|---------|---------|---------|
+| **Open3DModel** | 医学艺术家建模 | 清洁拓扑 | ✅ 法线+纹理 | ✅ GLB优化 | TA2 | ⭐⭐⭐⭐⭐ |
+| **BodyParts3D** | CAD生成 | 99%简化 | ❌ 无 | ⚠️ 需转换 | FMA ID | ⭐⭐⭐⭐ |
+| **NIH 3D** | 扫描/建模混合 | 多样 | 部分 | ✅ GLB | 英文标签 | ⭐⭐⭐⭐ |
+| **Dundee** | Artec扫描 | 高密度 | ⚠️ 扫描纹理 | ✅ GLB | 英文 | ⭐⭐⭐⭐ |
+
+**结论**: Open3DModel 在**教学清晰度和web性能**之间取得最佳平衡。BodyParts3D 几何准确但缺纹理。扫描模型真实但密度高。
+
+#### 4. 右足可分离性评估
+
+| 资源 | 方法 | 工具需求 | 难度 | 自动化可能 | 时间估算 |
+|------|------|---------|------|-----------|---------|
+| **Open3DModel** | Blender按层/名称选择 | Blender | 中 | ✅ Python脚本 | 2-4h |
+| **BodyParts3D** | FMA ID筛选 + OBJ合并 | Python/Blender | 中 | ✅ 脚本 | 3-5h |
+| **NIH 3D** | 已有单足模型 | 无/最小 | 低 | N/A | <1h |
+| **Dundee** | 需验证结构 | Blender | 未知 | ⚠️ | 未知 |
+
+**结论**: Open3DModel 和 NIH 都可行。Open3DModel 提供最完整数据但需提取；NIH 部分模型已是单足但层不全。
+
+---
+
 ## 候选资源对比
 
 ### 1. Open3DModel - AnatomyTOOL ⭐ **推荐**
@@ -416,6 +491,136 @@ FIPAT/IFAA, https://ifaa.unifr.ch/
 
 ---
 
-**研究完成日期**: 2026-09-14  
-**更新**: 后续如发现更优资源或许可变更，将更新本文档  
+---
+
+## Phase 2 最终推荐与执行路径
+
+### 推荐方案：Open3DModel Lower Limb (主要) + BodyParts3D (骨骼备选)
+
+**理由**:
+1. **四层完整**: 唯一提供 bone/muscle/nerve/vessel 四层的开源资源
+2. **教学级质量**: 医学院联盟开发，解剖学家审核
+3. **许可明确**: CC BY-SA 4.0，明确允许教育/研究/商业/发表
+4. **Web优化**: GLB格式，法线贴图，适合R3F
+5. **可追溯**: 有DOI、贡献者名单、机构背书
+
+### 下载链接（Phase 2 实施）
+
+#### 主要资产：Open3DModel Lower Limb
+
+```bash
+# GLB (Web优化，首选)
+wget https://anatomytool.org/sites/default/files/open3dmodel/lower-limb-glb.zip
+
+# OBJ (备选，无纹理)
+wget https://anatomytool.org/sites/default/files/open3dmodel/lower-limb-obj.zip
+
+# Blender源文件（高级编辑）
+wget https://anatomytool.org/sites/default/files/open3dmodel/lower-limb-blender.zip
+```
+
+**注意**: 实际URL需访问 https://anatomytool.org/open3dmodel-create 页面获取最新下载链接。页面可能需手动点击下载（非直接wget）。
+
+#### 备选资产：BodyParts3D (仅骨骼层补充)
+
+```bash
+# 完整OBJ包（136MB）
+wget https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_BP3D_4.0_obj_99.zip
+
+# 结构列表（FMA映射）
+wget https://dbarchive.biosciencedbc.jp/data/bodyparts3d/LATEST/isa_parts_list_e.txt
+```
+
+**用途**: 如Open3DModel骨骼网格有问题，BodyParts3D提供高质量FMA标准的骨骼备份。
+
+#### 补充：NIH 3D 单足模型（快速原型）
+
+- Entry 3DPX-016838: 左足骨骼（CC BY，可镜像）
+- Entry 15850: 解剖足部（许可待验证）
+- 访问: https://3d.nih.gov/ 搜索 "foot bones"
+
+### 提取和集成工作流（Phase 2执行中）
+
+#### 步骤 1: 下载和解压
+
+```bash
+mkdir -p /workspace/assets-raw/open3dmodel
+cd /workspace/assets-raw/open3dmodel
+# 下载lower-limb-glb.zip (手动或wget，取决于网站)
+unzip lower-limb-glb.zip
+```
+
+#### 步骤 2: 在Blender中提取右足（或使用GLB直接）
+
+**方案A**: GLB直接提取（推荐，如GLB包含分组对象）
+
+```python
+# Blender Python脚本
+import bpy
+
+# 加载GLB
+bpy.ops.import_scene.gltf(filepath="/path/to/lower-limb.glb")
+
+# 选择右足相关对象（假设命名约定）
+foot_keywords = ["talus", "calcaneus", "navicular", "cuboid", "cuneiform", 
+                 "metatarsal", "phalanges", "foot", "_R", "right"]
+
+objects_to_keep = []
+for obj in bpy.context.scene.objects:
+    if any(kw.lower() in obj.name.lower() for kw in foot_keywords):
+        objects_to_keep.append(obj)
+        
+# 删除其他对象
+for obj in bpy.context.scene.objects:
+    if obj not in objects_to_keep:
+        bpy.data.objects.remove(obj)
+        
+# 导出
+bpy.ops.export_scene.gltf(filepath="/workspace/public/models/right-foot.glb", 
+                           export_format='GLB')
+```
+
+**方案B**: 如提取困难，暂用占位 + 记录blockers
+
+如下载/提取遇到技术障碍（网站限制、文件格式问题），诚实记录在 `docs/phase-2-self-review.md`，使用当前占位继续其他改进（结构扩展、命名QA等）。
+
+### 许可合规检查清单
+
+使用Open3DModel前确认：
+
+- [ ] README 包含完整署名
+- [ ] 应用内About页面显示：
+  - 来源: "Open3DModel - Lower limb - English labels"
+  - 作者: "Open3D project, Jan Kooloos (RadboudUMC), Eungyeol Lee (LUMC) et al"
+  - 许可: "CC BY-SA 4.0"
+  - 链接: https://anatomytool.org/open3dmodel
+- [ ] 修改记录在文档: "提取右足子集，重命名为中文+拉丁文TA2标准"
+- [ ] 衍生作品（本应用）也采用 CC BY-SA 4.0 或兼容许可（代码可MIT，3D资产CC BY-SA）
+
+### 替代方案（如Open3DModel不可得）
+
+1. **BodyParts3D 骨骼 + 自制占位肌肉/神经/血管**
+   - 使用 BP3D OBJ 作为骨骼层（高质量）
+   - 保留程序化占位用于软组织（诚实标注）
+   - 优势: 骨骼真实，许可明确
+   - 劣势: 软组织仍占位
+
+2. **NIH 3D 骨骼 + 占位**
+   - 类似方案，使用NIH单足模型
+   - 优势: 已是单足，免提取
+   - 劣势: 许可需逐个验证，软组织仍占位
+
+3. **纯占位 + 超强文档**
+   - 保持当前占位几何
+   - 投入精力于：40-50结构扩展、TA2命名QA、中文术语审查、教学摘要深化
+   - 优势: 无法律风险，快速迭代
+   - 劣势: 视觉教学效果受限
+
+**决策**: Phase 2 尝试集成 Open3DModel，如2小时内无法完成，切换到方案1（BodyParts3D骨骼）或方案3（占位+内容强化）。
+
+---
+
+**研究完成日期**: 2026-09-14 (Phase 1)  
+**Phase 2 更新**: 2026-09-14 10:17 UTC - 添加深度比较表和执行路径  
+**下次更新**: Phase 2完成后记录实际下载/集成结果  
 **审查者**: [待指定解剖学专家顾问]
