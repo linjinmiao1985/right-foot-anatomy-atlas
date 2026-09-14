@@ -1,8 +1,82 @@
+import { useState } from 'react';
+import Viewport from './components/Viewport';
+import LayerToggles from './components/LayerToggles';
+import StructurePanel from './components/StructurePanel';
+import { getAllLayers } from './lib/layers';
+import { getStructureByMeshName } from './lib/structureLookup';
+import type { Layer } from './types/anatomy';
+import type { AnatomyStructure } from './types/anatomy';
+
 function App() {
+  const [visibleLayers, setVisibleLayers] = useState<Set<Layer>>(new Set(getAllLayers()));
+  const [selectedStructure, setSelectedStructure] = useState<AnatomyStructure | null>(null);
+
+  const handleLayerToggle = (layer: Layer) => {
+    setVisibleLayers((prev) => {
+      const next = new Set(prev);
+      if (next.has(layer)) {
+        next.delete(layer);
+      } else {
+        next.add(layer);
+      }
+      return next;
+    });
+  };
+
+  const handleMeshClick = (meshName: string) => {
+    const structure = getStructureByMeshName(meshName);
+    if (structure) {
+      setSelectedStructure(structure);
+    } else {
+      setSelectedStructure({
+        id: 'unmapped',
+        meshNames: [meshName],
+        layer: 'bone',
+        nameZh: '未标注结构',
+        nameLa: 'Unmapped Structure',
+        summaryZh: '该网格尚未映射到解剖结构数据库',
+        placeholder: false,
+      });
+    }
+  };
+
+  const placeholderCount = { bone: 0, muscle: 0, nerve: 0, vessel: 0 };
+
   return (
-    <div style={{ padding: '2rem' }}>
-      <h1>右足解剖图谱 · MVP</h1>
-      <p>React + TypeScript + R3F 应用骨架</p>
+    <div style={{ width: '100vw', height: '100vh', position: 'relative' }}>
+      <div
+        style={{
+          position: 'fixed',
+          top: '20px',
+          left: '20px',
+          zIndex: 100,
+          color: '#e0e0e0',
+          background: 'rgba(26, 26, 26, 0.8)',
+          padding: '12px 20px',
+          borderRadius: '8px',
+          border: '1px solid #444',
+        }}
+      >
+        <h1 style={{ fontSize: '20px', fontWeight: 600, margin: 0 }}>右足解剖图谱 · MVP</h1>
+      </div>
+
+      <LayerToggles visibleLayers={visibleLayers} onToggle={handleLayerToggle} placeholderCount={placeholderCount} />
+
+      <Viewport onMeshClick={handleMeshClick} visibleLayers={visibleLayers} />
+
+      <StructurePanel structure={selectedStructure} onClose={() => setSelectedStructure(null)} />
+
+      <div
+        style={{
+          position: 'fixed',
+          bottom: '10px',
+          left: '10px',
+          fontSize: '11px',
+          color: '#666',
+        }}
+      >
+        提示: 鼠标拖动旋转 | 滚轮缩放 | 右键平移 | Esc 取消选择
+      </div>
     </div>
   );
 }
