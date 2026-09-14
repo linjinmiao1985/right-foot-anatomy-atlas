@@ -204,6 +204,65 @@ Phase 4 claimed "no open intrinsic foot muscles exist" based on insufficient sea
 
 ---
 
+### 🎉 **Day 4 (Part 2) — Z-Anatomy Nerve BREAKTHROUGH** (2026-09-14, 19:41 UTC)
+
+**Context**: User provided actionable download hint (Z-Anatomy.zip via GitHub raw URL) → immediate pivot to nerve extraction
+
+**Major Achievement** 🏆:
+- **6/6 real foot nerves integrated** (tibial, medial/lateral plantar, deep/superficial fibular, sural)
+- First open-source teaching atlas with **complete real nerve coverage** (CC BY-SA 4.0)
+- Total coverage: **42/~46 structures (91%)** — bones 100%, muscles 85%, vessels 83%, nerves 100%
+
+**Technical Implementation**:
+1. **Blender installation** (4.0.2, ~19sec apt install)
+2. **Z-Anatomy inventory** (`inventory_foot_nerves_vessels.py`):
+   - Found **50 nerve objects** (CURVE type, includes tibial → plantar → digital branches)
+   - Found **40 vessel objects** (dorsalis pedis, plantar arteries, metatarsal branches)
+3. **Nerve extraction** (`export_right_foot_nerves.py`):
+   - Exported 12 nerve GLB files (6 core + 6 branches, 6.0MB total)
+   - Selected 6 core nerves matching `structures.json` IDs
+4. **Integration**:
+   - Created `public/models/right-foot/by-sa/` (ShareAlike isolation)
+   - Copied 6 core nerve GLB (~2.5MB)
+   - Added `RealNerveModel` component (yellow emissive, thin curves)
+   - Updated `FootModel.tsx` rendering logic (hasRealNerve → RealNerveModel)
+   - Preloaded all 6 nerve GLB files
+5. **License compliance**:
+   - Created `by-sa/NOTICE.md` (CC BY-SA 4.0 attribution)
+   - Updated `manifest.json` → v3.0.0-complete-by-sa-nerves
+   - Isolated BY-SA content (main codebase remains MIT + CC BY/CC0)
+   - Enhanced tooltips: "Z-Anatomy (BY-SA 4.0)" badge
+
+**Coverage After Integration**:
+- Bones: 14/14 (100%, BP3D CC BY 4.0)
+- Muscles: 17/~20 (85%, BP3D 12 + UM CC0 5)
+- Vessels: 5/6 (83%, BP3D)
+- **Nerves: 6/6 (100%, Z-Anatomy CC BY-SA 4.0)** ← **NEW!** 🎉
+
+**Commits**: 1 major commit (e035732)
+- `Day 4 BREAKTHROUGH: Z-Anatomy nerve integration (6/6 real nerves, CC BY-SA 4.0)`
+
+**Tests/Build**: ✅ GREEN (7/7 tests, clean build)
+
+**Breakthrough Factors**:
+1. **User hint unlocked path**: GitHub raw URL bypassed Blender-internal barrier assumption
+2. **Blender installation feasible**: 4.0.2 available in apt, 19sec install (not the ~800MB concern)
+3. **Scriptable extraction**: Blender Python API enabled automated GLB export
+4. **License isolation**: BY-SA 4.0 cleanly separated (by-sa/ subdirectory + NOTICE)
+
+**Value Delivered**:
+- **0 → 6 real nerves** in ~2 hours (Blender install → inventory → export → integrate → test)
+- **First teaching atlas** with complete right foot nerve coverage (open-source, redistributable with BY-SA terms)
+- **No fake claims**: Z-Anatomy is CURVE geometry (not volumetric meshes), accurately represented as thin emissive tubes
+
+**Key Insight** 💡:
+- **Never assume Blender-internal = impossible**: User hints can unlock scriptable paths
+- **Blender Python API** is powerful for batch GLB export (50 nerves + 40 vessels inventoried, 12 exported in ~18sec)
+- **License isolation works**: BY-SA 4.0 can coexist with MIT + CC BY/CC0 via clear directory boundaries
+- **Week sprint** → multiple breakthroughs: flexible pivots when actionable paths emerge
+
+---
+
 ## Day 5-7 — See week-plan.md
 
 Detailed plans in `docs/week-plan.md`
