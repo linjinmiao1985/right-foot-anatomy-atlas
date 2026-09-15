@@ -969,3 +969,20 @@ Each day:
 - Prefer CC0/CC BY replacements for Open3D SA soft tissue later.
 
 **Tests/Build**: integrity-audit + vitest + build in same commit.
+
+---
+
+## Week 2 Day 4j — BP3D tarsal ID fix (2026-09-15)
+
+### Problem
+Open3D Kabsch had excluded BP3D cuboid / medial & intermediate cuneiform as "centroid outliers." Investigation against official `isa_parts_list_e.txt` + OBJ headers showed **wrong part IDs**, not registration drift.
+
+### Actions
+- Downloaded LSDB `isa_BP3D_4.0_obj_99.zip`; extracted FJ3364/3377/3370/3373.
+- Replaced GLBs; updated `FootModel.tsx` + `manifest.json` (v3.2.0-bp3d-tarsal-id-fix).
+- Documented root cause in `docs/spatial-alignment-qa.md`.
+- Appended ≥3 new open-anatomy projects to learning log (license-verified).
+- integrity-audit + vitest + build.
+
+### Not claimed finished
+Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills unchanged.

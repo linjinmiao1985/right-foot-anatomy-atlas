@@ -1,5 +1,5 @@
 {
-  "version": "3.1.0-open3d-bysa-aligned",
+  "version": "3.2.0-bp3d-tarsal-id-fix",
   "sources": [
     "BodyParts3D Release 4.0 (DBCLS Japan)",
     "Universiti Malaya Asian Male LE MSK",
@@ -41,33 +41,33 @@
     },
     {
       "id": "cuboid",
-      "file": "cuboid_BP8533.glb",
-      "bp": "BP8533",
-      "fma": "FMA24498",
+      "file": "cuboid_BP8873.glb",
+      "bp": "BP8873",
+      "fma": "FMA24528",
       "name_zh": "骰骨",
       "name_la": "Os cuboideum"
     },
     {
       "id": "cuneiform_medial",
-      "file": "cuneiform_medial_BP8774.glb",
-      "bp": "BP8774",
-      "fma": "FMA24519",
+      "file": "cuneiform_medial_BP8830.glb",
+      "bp": "BP8830",
+      "fma": "FMA24521",
       "name_zh": "内侧楔骨",
       "name_la": "Os cuneiforme mediale"
     },
     {
       "id": "cuneiform_intermediate",
-      "file": "cuneiform_intermediate_BP9205.glb",
-      "bp": "BP9205",
-      "fma": "FMA24520",
+      "file": "cuneiform_intermediate_BP9110.glb",
+      "bp": "BP9110",
+      "fma": "FMA24523",
       "name_zh": "中间楔骨",
       "name_la": "Os cuneiforme intermedium"
     },
     {
       "id": "cuneiform_lateral",
-      "file": "cuneiform_lateral_BP8472.glb",
-      "bp": "BP8472",
-      "fma": "FMA24521",
+      "file": "cuneiform_lateral_BP8730.glb",
+      "bp": "BP8730",
+      "fma": "FMA24525",
       "name_zh": "外侧楔骨",
       "name_la": "Os cuneiforme laterale"
     },
@@ -525,5 +525,8 @@
       "name_la": "Mm. interossei dorsales pedis",
       "note": "4 right DI GLBs; one structures.json entry; BY-SA isolate; Kabsch-aligned to BP3D mm"
     }
+  ],
+  "notes": [
+    "2026-09-15: replaced mislabelled cuboid/cuneiforms (were left calcaneus / left medial cuneiform / pharyngeal constrictor / distal phalanx II) with correct ISA right-foot elemental meshes BP8873/8830/9110/8730"
   ]
 }

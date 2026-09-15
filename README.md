@@ -29,7 +29,7 @@ Interactive web-based teaching atlas for right foot anatomy.
 
 ### Remaining soft-tissue caveats (not “gaps” in placeholder sense)
 - Prefer future **CC0/CC BY** replacements for Open3D BY-SA DI + proximal arteries
-- Some BP3D bone GLBs outside the Calcaneus/Talus/Navicular/MT1–5 cluster remain individually mis-centered (pre-existing; not introduced by Open3D bake)
+- Cuboid + 3 cuneiforms remapped to correct ISA right-foot BP IDs (Day 4j). Remaining: hallux proximal phalanx ID suspect (`BP8488`); UM distal phalanges 2–5 on separate frame
 - Teaching-grade atlas in progress — **no finished-product claim**
 
 ---

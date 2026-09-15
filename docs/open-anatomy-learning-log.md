@@ -306,6 +306,66 @@ No new CC0/CC BY DI or proximal-artery candidates found this session.
 
 ---
 
+
+
+---
+
+## Session additions (2026-09-15 · Day 4j — tarsal ID fix + dig)
+
+### 15. Handfish/R3F_AnnotationTool
+
+| Field | Value |
+|-------|-------|
+| **Name** | BodyParts3D / Anatomography Annotation Tool (R3F) |
+| **URL** | https://github.com/Handfish/R3F_AnnotationTool |
+| **Official license** | **MIT** (LICENSE verified: Kenneth Udovic et al.) |
+| **What to learn** | CRA→modern R3F annotation / pick workflow; candidate Vite port notes |
+| **Foot atlas applicability** | Tooling pattern only; no curated right-foot soft-tissue pack. |
+| **Action** | **UX-borrow** (annotation/pick ideas). **reject** as mesh source. |
+
+### 16. JohanBellander/BodyExplorer
+
+| Field | Value |
+|-------|-------|
+| **Name** | Body Explorer (écorché + skeleton) |
+| **URL** | https://github.com/JohanBellander/BodyExplorer |
+| **Official license** | Code: **MIT** (README License section); meshes: BodyParts3D **CC BY-SA 2.1 JP** + Z-Anatomy **CC BY-SA 4.0** (Attribution section) |
+| **What to learn** | Muscle-group filters (incl. foot); hide/restore deeper layers; dual opacity (muscle vs skeleton); preset camera views |
+| **Foot atlas applicability** | Foot muscle group UX reference. Mesh stack is SA — not for main-tree DI/artery fill. |
+| **Action** | **UX-borrow** (group filter / hide-restore). Meshes: **isolate-SA** only if ever extracted. |
+
+### 17. toby-bridges/brain-architecture-studio
+
+| Field | Value |
+|-------|-------|
+| **Name** | Brain Architecture Studio |
+| **URL** | https://github.com/toby-bridges/brain-architecture-studio |
+| **Official license** | Code **MIT** (LICENSE verified); BodyParts3D brain GLBs attributed **CC BY-SA 2.1 JP** in README badge/text |
+| **What to learn** | Real clipping-plane cross-section; imaging-mode material metaphors; dual-view compare; Playwright inventory walker |
+| **Foot atlas applicability** | Brain-only meshes — **no foot**. Cross-section / dual-view UX transferable later. |
+| **Action** | **UX-borrow**. **reject** as foot mesh source. |
+
+### 18. dkaloger/medstudy-anatomy
+
+| Field | Value |
+|-------|-------|
+| **Name** | MedStudy anatomy models (USDZ packs) |
+| **URL** | https://github.com/dkaloger/medstudy-anatomy |
+| **Official license** | README: **CC BY-SA 4.0** (Z-Anatomy / BodyParts3D lineage); no separate SPDX LICENSE file via API |
+| **What to learn** | On-demand release-asset distribution of region packs |
+| **Foot atlas applicability** | SA packs — possible foot content in Z-Anatomy lineage but ShareAlike only. |
+| **Action** | **monitor** / **isolate-SA**. Prefer LSDB Archive CC BY for main tree. |
+
+### NEW pipeline lesson (actioned this session)
+
+| Field | Value |
+|-------|-------|
+| **Find** | BP3D “spatial drift” for cuboid + cuneiforms was **ISA ID confusion** (left calcaneus / left medial cuneiform / pharyngeal constrictor / distal phalanx II), not Kabsch failure. |
+| **Verify** | Always cross-check `isa_parts_list_e.txt` + OBJ `# Representation ID` / `# Concept ID` headers before trusting filename BP tags. |
+| **Action** | **integrated** correct FJ3364/3377/3370/3373 → BP8873/8830/9110/8730 GLBs. |
+
+No new CC0/CC BY foot DI or proximal-artery candidates in this dig.
+
 ## Next dig targets
 
 - Prefer CC0/CC BY replacements for Open3D BY-SA DI + proximal arteries (relicense or alternate segmentations).  

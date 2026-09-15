@@ -139,3 +139,53 @@ scale={[0.01, 0.01, 0.01]} // Blender units → cm (verified from BP3D base)
 - **Excluded landmarks**: BP3D cuboid / medial & intermediate cuneiform centroids look individually mis-centered in current GLBs — not used for the fit
 - **Artifacts**: Transform at `third_party/open3dmodel/open3d_to_bp3d_transform.json`
 - **Status**: Scale/frame mismatch vs BP3D foot **corrected for Open3D DI + proximal arteries**; teaching-grade, not pixel-perfect surgical registration
+
+
+---
+
+## BP3D tarsal ID remapping (Week 2 Day 4j · 2026-09-15)
+
+### Root cause (not a rigid transform drift)
+
+Centroid outliers for cuboid / medial / intermediate / lateral cuneiform were **wrong elemental meshes**, not Kabsch frame error:
+
+| Atlas id (was) | Wrong ISA BP / FMA | Actual anatomy (OBJ header) | Evidence |
+|----------------|--------------------|-----------------------------|----------|
+| cuboid `BP8533` / FMA24498 | left calcaneus | Mirror of right calcaneus; diag≈102 mm vs true cuboid ≈55 mm | centroid X≈+76 vs foot cluster X≈−70…−130 |
+| cuneiform_medial `BP8774` / FMA24519 | left medial cuneiform | X sign flipped vs right medial | centroid X≈+81 |
+| cuneiform_intermediate `BP9205` / FMA24520 | left inferior pharyngeal constrictor | Z≈1406 mm (neck) | 4424 verts |
+| cuneiform_lateral `BP8472` / FMA24521 | distal phalanx of right 2nd toe | near toe cluster | small diag≈18 mm |
+
+Phase 3 extraction note `FJ3256 → BP8533, FMA24498` for cuboid is the same error (FJ3256 = left calcaneus per `isa_element_parts.txt`).
+
+### Fix (LSDB Archive ISA 4.0, 99% OBJ)
+
+Verified via `isa_parts_list_e.txt` + `isa_element_parts.txt` + OBJ headers:
+
+| Atlas id | FJ | BP | FMA | English |
+|----------|----|----|-----|---------|
+| cuboid | FJ3364 | BP8873 | FMA24528 | Right cuboid bone |
+| cuneiform_medial | FJ3377 | BP8830 | FMA24521 | Right medial cuneiform bone |
+| cuneiform_intermediate | FJ3370 | BP9110 | FMA24523 | Right intermediate cuneiform bone |
+| cuneiform_lateral | FJ3373 | BP8730 | FMA24525 | Right lateral cuneiform bone |
+
+Converted with project `obj2gltf`; filenames updated in `FootModel.tsx` + `manifest.json` v3.2.0.
+
+### Post-fix centroid QA (vs Calcaneus/Talus/Navicular/MT1–5 mean)
+
+| Mesh | Dist to ref mean |
+|------|------------------|
+| cuboid_BP8873 | ≈20.5 mm |
+| cuneiform_medial_BP8830 | ≈20.7 mm |
+| cuneiform_intermediate_BP9110 | ≈16.5 mm |
+| cuneiform_lateral_BP8730 | ≈11.1 mm |
+
+Previously: cuboid/medial ≈180 mm; intermediate ≈1449 mm.
+
+### Remaining spatial caveats (not fixed this pass)
+
+- `proximal_phalanx_1` still maps to `phalanx_prox_1_BP8488.glb` — ISA BP8488 is **middle phalanx of right 2nd toe** (identical centroid to `middle_phalanx_2`); hallux proximal should be BP8785 / FMA43253.
+- UM distal phalanges 2–5 remain on a separate Y≈−850 frame (pre-existing UM placement).
+- Open3D Kabsch landmarks can now **include** cuboid + cuneiforms if a re-bake is ever needed; current by-sa bake still used the 8-landmark fit from Day 4i+.
+
+**Verdict**: tarsal mis-ID **fixed** for cuboid + 3 cuneiforms. Teaching-grade atlas in progress — no finished-product claim.
