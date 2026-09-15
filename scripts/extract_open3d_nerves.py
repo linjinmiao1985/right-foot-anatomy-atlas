@@ -22,12 +22,21 @@ XFORM = ROOT / "third_party/open3dmodel/open3d_to_bp3d_transform.json"
 RAW_OUT = ROOT / "third_party/open3dmodel/extracted"
 BYSA = ROOT / "public/models/right-foot/by-sa"
 
-# Max 4 new atlas nerve entries this pass (prefer quality).
+# Day 4x + 4y cumulative Open3D nerve targets (re-run regenerates all).
+# 4x: common/proper plantar digitals + deep LPN. 4y: cutaneous/calcaneal/superficial LPN + dorsal digitals.
 TARGETS = {
+    # Day 4x
     "Common_plantar_digital_nerves.r": "common_plantar_digital_nerves",
     "Proper_plantar_digital_branches_(Medial_plantar_nerve).r": "proper_plantar_digital_nerves_medial",
     "Proper_plantar_digital_branches_(Lateral_plantar_nerve).r": "proper_plantar_digital_nerves_lateral",
     "Deep_branch_of_Lateral_plantar_nerve.r": "deep_branch_lateral_plantar_nerve",
+    # Day 4y
+    "Medial_dorsal_cutaneous_nerve.r": "medial_dorsal_cutaneous_nerve",
+    "Lateral_dorsal_cutaneous_nerve.r": "lateral_dorsal_cutaneous_nerve",
+    "Medial_calcaneal_branches_of_Tibial_nerve.r": "medial_calcaneal_branches",
+    "Lateral_calcaneal_nerves.r": "lateral_calcaneal_nerves",
+    "Superficial_branch_of_Lateral_plantar_nerve.r": "superficial_branch_lateral_plantar_nerve",
+    "Dorsal_digital_branches_of_superficial_fibular_nerve.r": "dorsal_digital_superficial_fibular",
 }
 
 
@@ -181,7 +190,7 @@ def main() -> int:
             {
                 "source": str(src),
                 "transform": str(XFORM.relative_to(ROOT)),
-                "method": "reuse Open3D→BP3D Kabsch (Day 4m; same donor as DI/arteries/ligaments); Day 4x nerves",
+                "method": "reuse Open3D→BP3D Kabsch (Day 4m; same donor as DI/arteries/ligaments); Day 4x+4y nerves",
                 "kabsch_mean_residual_mm": xf.get("mean_residual_mm"),
                 "targets": TARGETS,
                 "aabb_bp3d_mm": aabb_report,

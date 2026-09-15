@@ -712,3 +712,32 @@ Soft-tissue under ligament toggle = **1 ligament + 1 tendon**. Still missing pla
 | Dorsal MTA | Still grouped-only ceiling |
 | Lesson | Compare Open3D nerves to **Open3D** plantar trunks (same frame), not Z-Anatomy CURVE GLBs |
 
+
+## Session additions (2026-09-15 · Day 4y — deferred nerves + license dig)
+
+### Nerve wire (same Open3D donor)
+
+| Item | Note |
+|------|------|
+| Medial + lateral dorsal cutaneous | Integrated (BY-SA Kabsch; teaching cutaneous map) |
+| Medial + lateral calcaneal nn. | Integrated (heel sensory teaching) |
+| Superficial branch LPN | Complements Day 4x deep LPN |
+| Dorsal digitals (sup. fibular) | One grouped dorsal digital set |
+| Still deferred | Sural→LDC continuity; deep-fibular dorsal digitals |
+| Lesson | Prefer complementary sensory territories over redundant continuity meshes when capping volume |
+
+### NEW license-verified projects
+
+| Project | URL | License verified | Foot relevance | Decision |
+|---------|-----|------------------|----------------|----------|
+| **Blender Studio Human Base Meshes — foot** (Dan Ulrich et al.; Wikimedia STL mirror) | https://commons.wikimedia.org/wiki/File:Blender_Foot_realistic_by_Dan_Ulrich_(CC0).stl · source bundle https://www.blender.org/download/demo/asset-bundles/human-base-meshes/ | **CC0 1.0** (Commons + Blender demo asset bundle) | High-res **skin/surface** foot mesh only — no named intrinsics, nerves, or vessels | **reject** (anatomy teaching DI/NV) / **monitor** for surface silhouette UX only |
+| **ASTARC (University of Antwerp) — Right lower extremity bone scans** on AnatomyTOOL | https://anatomytool.org/content/antwerpen-afd-astarc-3d-model-right-lower-extremity-no-labels | **CC BY-NC-SA** (item page credit text; Artec Micro/Spider scans by Marjan Maldoy & Ian Garcia) | Real osteology LE scan set — high fidelity bones | **reject** for main-tree / commercial-redistribution path (**NC**); **monitor** for non-commercial teaching fork only |
+
+### Deepen (same Open3D family)
+
+| Project | URL | License | Note | Action |
+|---------|-----|---------|------|--------|
+| **Open3DModel — Ankle and Foot** (Nov 2025 submodel of July 2025 lower limb) | https://anatomytool.org/content/open3dmodel-ankle-and-foot-english-labels | **CC BY-SA** (same Open3D project credit) | Teaching sub-package / viewer slice — same donor mesh family already used via monolithic lower-limb OBJ | **deepen / isolate-SA** — prefer continuing named-object extracts from lower-limb OBJ rather than re-downloading submodel unless topology differs |
+
+**Honesty**: No new CC0/CC BY fine-nerve or per-ray dorsal MTA candidates. Day 4y expands ShareAlike nerve teaching set only — not a finished peripheral-nerve atlas.
+

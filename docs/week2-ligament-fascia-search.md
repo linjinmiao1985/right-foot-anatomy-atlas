@@ -371,3 +371,33 @@ Dorsal MTA: still grouped only (BP3D FJ2072 / Open3D single `o`).
 
 Nerve layer: 6 Z-Anatomy trunks + 4 Open3D fine/branch = **10** teaching meshes. Commons/proprii remain **grouped**. No finished-product claim.
 
+
+---
+
+## Day 4y — Integrate deferred Open3D cutaneous / calcaneal / superficial LPN + one dorsal digital
+
+**Date**: 2026-09-15  
+**Goal**: Wire up to **6** highest-teaching-value Day 4x volume-deferred RIGHT nerves (Kabsch + structures + FootModel + NOTICE + ZH/LA TA2).
+
+### Integrated (6)
+
+| Mesh | Open3D object | Decision |
+|------|---------------|----------|
+| Medial dorsal cutaneous | `Medial_dorsal_cutaneous_nerve.r` | **Integrated** |
+| Lateral dorsal cutaneous | `Lateral_dorsal_cutaneous_nerve.r` | **Integrated** |
+| Medial calcaneal branches | `Medial_calcaneal_branches_of_Tibial_nerve.r` | **Integrated** |
+| Lateral calcaneal nn. | `Lateral_calcaneal_nerves.r` | **Integrated** |
+| Superficial branch LPN | `Superficial_branch_of_Lateral_plantar_nerve.r` | **Integrated** |
+| Dorsal digitals (sup. fibular) | `Dorsal_digital_branches_of_superficial_fibular_nerve.r` | **Integrated** (grouped) |
+
+### Still deferred
+
+| Mesh | Note |
+|------|------|
+| `Sural_nerve,_Lateral_dorsal_cutaneous_nerve.r` | Continuity object; LDC already wired |
+| `Dorsal_digital_branches_of_deep_fibular_nerve.r` | Second dorsal digital group; cap 6 |
+
+### Honesty
+
+Nerve layer: 6 Z-Anatomy trunks + 10 Open3D = **16** teaching meshes. Some remain grouped. No finished-product claim.
+

@@ -1143,5 +1143,77 @@
     "nameLa": "Ligamenta intercuneiformia dorsalia",
     "summaryZh": "三楔骨背侧楔间韧带带（Open3D Dorsal_intercuneiform_ligaments.r，CC BY-SA 4.0，by-sa/）。教学：中足背侧楔骨复合体稳定。分组网格，非逐条分拆。Kabsch→BP3D mm（Day 4v 附着 QA 接受：中间楔骨约 9.0 mm）。",
     "placeholder": false
+  },
+  {
+    "id": "medial_dorsal_cutaneous_nerve",
+    "meshNames": [
+      "Medial_Dorsal_Cutaneous_Nerve_R",
+      "N_Cutaneus_Dorsalis_Medialis_Right"
+    ],
+    "layer": "nerve",
+    "nameZh": "足背内侧皮神经",
+    "nameLa": "N. cutaneus dorsalis medialis",
+    "summaryZh": "腓浅神经在足背的内侧终支（教学网格）。分布于足背内侧与踇趾/第2趾背侧邻近皮肤。临床：足背内侧切口、踇外翻/第1跖楔关节手术需保护；与腓深神经第1趾蹼皮支毗邻。网格：Open3D BY-SA，Kabsch→BP3D；教学皮支路径，非手术导航级。",
+    "placeholder": false
+  },
+  {
+    "id": "lateral_dorsal_cutaneous_nerve",
+    "meshNames": [
+      "Lateral_Dorsal_Cutaneous_Nerve_R",
+      "N_Cutaneus_Dorsalis_Lateralis_Right"
+    ],
+    "layer": "nerve",
+    "nameZh": "足背外侧皮神经",
+    "nameLa": "N. cutaneus dorsalis lateralis",
+    "summaryZh": "腓肠神经在足外侧缘的延续（亦称足背外侧皮神经；教学网格）。分布于足背外侧、外踝周围与第5趾外侧皮肤。临床：外踝/跟腱外侧切口与足外侧柱手术常累及；与腓肠神经干连续。网格：Open3D BY-SA，Kabsch→BP3D。注：另有 sural→LDC 连续对象仍未接线。",
+    "placeholder": false
+  },
+  {
+    "id": "medial_calcaneal_branches",
+    "meshNames": [
+      "Medial_Calcaneal_Branches_R",
+      "Rr_Calcanei_Mediales_N_Tibialis_Right"
+    ],
+    "layer": "nerve",
+    "nameZh": "胫神经跟内侧支",
+    "nameLa": "Rr. calcanei mediales (n. tibialis)",
+    "summaryZh": "胫神经在内踝后方/跖管近端发出的跟内侧皮支（教学网格）。分布于足跟内侧与足底近侧皮肤。临床：跟骨内侧切口、跟痛症与跖管综合征相关皮支；跟骨结节内侧穿刺/手术需保护。网格：Open3D BY-SA，Kabsch→BP3D。",
+    "placeholder": false
+  },
+  {
+    "id": "lateral_calcaneal_nerves",
+    "meshNames": [
+      "Lateral_Calcaneal_Nerves_R",
+      "Nn_Calcanei_Laterales_Right"
+    ],
+    "layer": "nerve",
+    "nameZh": "跟外侧神经",
+    "nameLa": "Nn. calcanei laterales",
+    "summaryZh": "腓肠神经（或相关外侧皮支）发出的跟外侧支（教学网格）。分布于足跟外侧皮肤。临床：跟骨外侧切口、跟腱止点手术与外踝后切口需保护；跟外侧感觉障碍可定位腓肠系统。网格：Open3D BY-SA，Kabsch→BP3D。",
+    "placeholder": false
+  },
+  {
+    "id": "superficial_branch_lateral_plantar_nerve",
+    "meshNames": [
+      "Superficial_Branch_Lateral_Plantar_Nerve_R",
+      "R_Superficialis_N_Plantaris_Lateralis_Right"
+    ],
+    "layer": "nerve",
+    "nameZh": "足底外侧神经浅支",
+    "nameLa": "R. superficialis nervi plantaris lateralis",
+    "summaryZh": "足底外侧神经的浅支（教学网格）。肌支可至小趾展肌等外侧浅层肌；皮支参与外侧趾足底总/固有神经。与深支分工：浅支偏皮肤与浅层肌，深支偏骨间肌等深层。临床：外侧柱/小趾展肌区手术需辨认。网格：Open3D BY-SA，Kabsch→BP3D；与已接线深支并列教学。",
+    "placeholder": false
+  },
+  {
+    "id": "dorsal_digital_superficial_fibular",
+    "meshNames": [
+      "Dorsal_Digital_Branches_Superficial_Fibular_R",
+      "Nn_Digitales_Dorsales_N_Fibularis_Superficialis_Right"
+    ],
+    "layer": "nerve",
+    "nameZh": "腓浅神经足背趾支",
+    "nameLa": "Nn. digitales dorsales (ex n. fibularis superficialis)",
+    "summaryZh": "腓浅神经在足背发出的趾背神经（教学组合网格）。分布于第2–5趾背侧大部分皮肤（第1趾蹼背侧主要由腓深神经支配）。临床：足背多趾切口、甲沟/趾背手术需保护；与腓深神经第1趾蹼皮支形成分界。网格：Open3D BY-SA，Kabsch→BP3D；分组对象，非逐趾 elemental。腓深神经背侧趾支仍 deferred。",
+    "placeholder": false
   }
 ]

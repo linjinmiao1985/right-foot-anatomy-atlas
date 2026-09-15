@@ -163,44 +163,43 @@
       "dist_open3d_medial_plantar_mm": 62.95,
       "dist_open3d_lateral_plantar_mm": 61.52,
       "nearest_open3d_plantar": "lateral"
-    }
-  },
-  "scanned_not_integrated": {
-    "superficial_branch_lateral_plantar_nerve": {
-      "id": "superficial_branch_lateral_plantar_nerve",
-      "open3d": "Superficial_branch_of_Lateral_plantar_nerve.r",
-      "kind": "scanned_not_integrated",
+    },
+    "medial_dorsal_cutaneous_nerve": {
+      "id": "medial_dorsal_cutaneous_nerve",
+      "open3d": "Medial_dorsal_cutaneous_nerve.r",
+      "kind": "integrated",
       "decision": "accept",
       "reasons": [],
       "centroid_mm": [
-        -126.179,
-        -125.63,
-        -63.657
+        -104.246,
+        -139.378,
+        -20.589
       ],
       "aabb_mm": [
         [
-          -142.719,
-          -139.421,
-          -68.482
+          -118.905,
+          -182.559,
+          -46.401
         ],
         [
-          -111.094,
-          -113.224,
-          -57.406
+          -90.033,
+          -73.192,
+          31.544
         ]
       ],
-      "n_verts": 828,
+      "n_verts": 936,
       "inside_padded_frac": 1.0,
       "wrong_side": false,
       "bone_aabb_overlap": true,
-      "dist_open3d_medial_plantar_mm": 63.15,
-      "dist_open3d_lateral_plantar_mm": 54.34,
-      "nearest_open3d_plantar": "lateral"
+      "dist_open3d_medial_plantar_mm": 56.9,
+      "dist_open3d_lateral_plantar_mm": 62.75,
+      "nearest_open3d_plantar": "medial",
+      "day": "4y"
     },
     "lateral_dorsal_cutaneous_nerve": {
       "id": "lateral_dorsal_cutaneous_nerve",
       "open3d": "Lateral_dorsal_cutaneous_nerve.r",
-      "kind": "scanned_not_integrated",
+      "kind": "integrated",
       "decision": "accept",
       "reasons": [],
       "centroid_mm": [
@@ -226,8 +225,139 @@
       "bone_aabb_overlap": true,
       "dist_open3d_medial_plantar_mm": 50.59,
       "dist_open3d_lateral_plantar_mm": 48.62,
-      "nearest_open3d_plantar": "lateral"
+      "nearest_open3d_plantar": "lateral",
+      "day": "4y"
     },
+    "medial_calcaneal_branches": {
+      "id": "medial_calcaneal_branches",
+      "open3d": "Medial_calcaneal_branches_of_Tibial_nerve.r",
+      "kind": "integrated",
+      "decision": "accept",
+      "reasons": [],
+      "centroid_mm": [
+        -48.432,
+        -48.046,
+        -46.288
+      ],
+      "aabb_mm": [
+        [
+          -56.217,
+          -65.539,
+          -59.226
+        ],
+        [
+          -44.798,
+          -35.771,
+          -29.534
+        ]
+      ],
+      "n_verts": 648,
+      "inside_padded_frac": 1.0,
+      "wrong_side": false,
+      "bone_aabb_overlap": true,
+      "dist_open3d_medial_plantar_mm": 55.15,
+      "dist_open3d_lateral_plantar_mm": 56.95,
+      "nearest_open3d_plantar": "medial",
+      "day": "4y"
+    },
+    "lateral_calcaneal_nerves": {
+      "id": "lateral_calcaneal_nerves",
+      "open3d": "Lateral_calcaneal_nerves.r",
+      "kind": "integrated",
+      "decision": "accept",
+      "reasons": [],
+      "centroid_mm": [
+        -72.086,
+        -36.763,
+        -26.999
+      ],
+      "aabb_mm": [
+        [
+          -89.046,
+          -48.241,
+          -59.364
+        ],
+        [
+          -47.49,
+          -26.685,
+          23.275
+        ]
+      ],
+      "n_verts": 1848,
+      "inside_padded_frac": 1.0,
+      "wrong_side": false,
+      "bone_aabb_overlap": true,
+      "dist_open3d_medial_plantar_mm": 62.29,
+      "dist_open3d_lateral_plantar_mm": 59.67,
+      "nearest_open3d_plantar": "lateral",
+      "day": "4y"
+    },
+    "superficial_branch_lateral_plantar_nerve": {
+      "id": "superficial_branch_lateral_plantar_nerve",
+      "open3d": "Superficial_branch_of_Lateral_plantar_nerve.r",
+      "kind": "integrated",
+      "decision": "accept",
+      "reasons": [],
+      "centroid_mm": [
+        -126.179,
+        -125.63,
+        -63.657
+      ],
+      "aabb_mm": [
+        [
+          -142.719,
+          -139.421,
+          -68.482
+        ],
+        [
+          -111.094,
+          -113.224,
+          -57.406
+        ]
+      ],
+      "n_verts": 828,
+      "inside_padded_frac": 1.0,
+      "wrong_side": false,
+      "bone_aabb_overlap": true,
+      "dist_open3d_medial_plantar_mm": 63.15,
+      "dist_open3d_lateral_plantar_mm": 54.34,
+      "nearest_open3d_plantar": "lateral",
+      "day": "4y"
+    },
+    "dorsal_digital_superficial_fibular": {
+      "id": "dorsal_digital_superficial_fibular",
+      "open3d": "Dorsal_digital_branches_of_superficial_fibular_nerve.r",
+      "kind": "integrated",
+      "decision": "accept",
+      "reasons": [],
+      "centroid_mm": [
+        -134.206,
+        -185.666,
+        -58.179
+      ],
+      "aabb_mm": [
+        [
+          -162.405,
+          -227.693,
+          -68.125
+        ],
+        [
+          -89.761,
+          -142.084,
+          -43.823
+        ]
+      ],
+      "n_verts": 3708,
+      "inside_padded_frac": 1.0,
+      "wrong_side": false,
+      "bone_aabb_overlap": true,
+      "dist_open3d_medial_plantar_mm": 108.4,
+      "dist_open3d_lateral_plantar_mm": 108.0,
+      "nearest_open3d_plantar": "lateral",
+      "day": "4y"
+    }
+  },
+  "scanned_not_integrated": {
     "sural_lateral_dorsal_cutaneous": {
       "id": "sural_lateral_dorsal_cutaneous",
       "open3d": "Sural_nerve,_Lateral_dorsal_cutaneous_nerve.r",
@@ -257,37 +387,6 @@
       "bone_aabb_overlap": true,
       "dist_open3d_medial_plantar_mm": 51.65,
       "dist_open3d_lateral_plantar_mm": 42.75,
-      "nearest_open3d_plantar": "lateral"
-    },
-    "dorsal_digital_superficial_fibular": {
-      "id": "dorsal_digital_superficial_fibular",
-      "open3d": "Dorsal_digital_branches_of_superficial_fibular_nerve.r",
-      "kind": "scanned_not_integrated",
-      "decision": "accept",
-      "reasons": [],
-      "centroid_mm": [
-        -134.206,
-        -185.666,
-        -58.179
-      ],
-      "aabb_mm": [
-        [
-          -162.405,
-          -227.693,
-          -68.125
-        ],
-        [
-          -89.761,
-          -142.084,
-          -43.823
-        ]
-      ],
-      "n_verts": 3708,
-      "inside_padded_frac": 1.0,
-      "wrong_side": false,
-      "bone_aabb_overlap": true,
-      "dist_open3d_medial_plantar_mm": 108.4,
-      "dist_open3d_lateral_plantar_mm": 108.0,
       "nearest_open3d_plantar": "lateral"
     },
     "dorsal_digital_deep_fibular": {
@@ -320,149 +419,20 @@
       "dist_open3d_medial_plantar_mm": 114.54,
       "dist_open3d_lateral_plantar_mm": 117.55,
       "nearest_open3d_plantar": "medial"
-    },
-    "medial_calcaneal_branches": {
-      "id": "medial_calcaneal_branches",
-      "open3d": "Medial_calcaneal_branches_of_Tibial_nerve.r",
-      "kind": "scanned_not_integrated",
-      "decision": "accept",
-      "reasons": [],
-      "centroid_mm": [
-        -48.432,
-        -48.046,
-        -46.288
-      ],
-      "aabb_mm": [
-        [
-          -56.217,
-          -65.539,
-          -59.226
-        ],
-        [
-          -44.798,
-          -35.771,
-          -29.534
-        ]
-      ],
-      "n_verts": 648,
-      "inside_padded_frac": 1.0,
-      "wrong_side": false,
-      "bone_aabb_overlap": true,
-      "dist_open3d_medial_plantar_mm": 55.15,
-      "dist_open3d_lateral_plantar_mm": 56.95,
-      "nearest_open3d_plantar": "medial"
-    },
-    "lateral_calcaneal_nerves": {
-      "id": "lateral_calcaneal_nerves",
-      "open3d": "Lateral_calcaneal_nerves.r",
-      "kind": "scanned_not_integrated",
-      "decision": "accept",
-      "reasons": [],
-      "centroid_mm": [
-        -72.086,
-        -36.763,
-        -26.999
-      ],
-      "aabb_mm": [
-        [
-          -89.046,
-          -48.241,
-          -59.364
-        ],
-        [
-          -47.49,
-          -26.685,
-          23.275
-        ]
-      ],
-      "n_verts": 1848,
-      "inside_padded_frac": 1.0,
-      "wrong_side": false,
-      "bone_aabb_overlap": true,
-      "dist_open3d_medial_plantar_mm": 62.29,
-      "dist_open3d_lateral_plantar_mm": 59.67,
-      "nearest_open3d_plantar": "lateral"
-    },
-    "medial_dorsal_cutaneous_nerve": {
-      "id": "medial_dorsal_cutaneous_nerve",
-      "open3d": "Medial_dorsal_cutaneous_nerve.r",
-      "kind": "scanned_not_integrated",
-      "decision": "accept",
-      "reasons": [],
-      "centroid_mm": [
-        -104.246,
-        -139.378,
-        -20.589
-      ],
-      "aabb_mm": [
-        [
-          -118.905,
-          -182.559,
-          -46.401
-        ],
-        [
-          -90.033,
-          -73.192,
-          31.544
-        ]
-      ],
-      "n_verts": 936,
-      "inside_padded_frac": 1.0,
-      "wrong_side": false,
-      "bone_aabb_overlap": true,
-      "dist_open3d_medial_plantar_mm": 56.9,
-      "dist_open3d_lateral_plantar_mm": 62.75,
-      "nearest_open3d_plantar": "medial"
     }
   },
   "deferred_or_rejected": [
     {
-      "id": "superficial_branch_lateral_plantar_nerve",
-      "decision": "defer_volume",
-      "spatial": "accept",
-      "note": "QA-pass spatially; Day 4x cap \u22644 new nerve entries; prefer common+proper+deep LPN"
-    },
-    {
-      "id": "lateral_dorsal_cutaneous_nerve",
-      "decision": "defer_volume",
-      "spatial": "accept",
-      "note": "QA-pass spatially; Day 4x cap \u22644 new nerve entries; prefer common+proper+deep LPN"
-    },
-    {
       "id": "sural_lateral_dorsal_cutaneous",
       "decision": "defer_volume",
       "spatial": "accept",
-      "note": "QA-pass spatially; Day 4x cap \u22644 new nerve entries; prefer common+proper+deep LPN"
-    },
-    {
-      "id": "dorsal_digital_superficial_fibular",
-      "decision": "defer_volume",
-      "spatial": "accept",
-      "note": "QA-pass spatially; Day 4x cap \u22644 new nerve entries; prefer common+proper+deep LPN"
+      "note": "QA-pass spatially; Day 4y preferred other cutaneous/calcaneal/superficial LPN/dorsal digital (sup. fibular)"
     },
     {
       "id": "dorsal_digital_deep_fibular",
       "decision": "defer_volume",
       "spatial": "accept",
-      "note": "QA-pass spatially; Day 4x cap \u22644 new nerve entries; prefer common+proper+deep LPN"
-    },
-    {
-      "id": "medial_calcaneal_branches",
-      "decision": "defer_volume",
-      "spatial": "accept",
-      "note": "QA-pass spatially; Day 4x cap \u22644 new nerve entries; prefer common+proper+deep LPN"
-    },
-    {
-      "id": "lateral_calcaneal_nerves",
-      "decision": "defer_volume",
-      "spatial": "accept",
-      "note": "QA-pass spatially; Day 4x cap \u22644 new nerve entries; prefer common+proper+deep LPN"
-    },
-    {
-      "id": "medial_dorsal_cutaneous_nerve",
-      "decision": "defer_volume",
-      "spatial": "accept",
-      "note": "QA-pass spatially; Day 4x cap \u22644 new nerve entries; prefer common+proper+deep LPN"
+      "note": "QA-pass spatially; Day 4y preferred other cutaneous/calcaneal/superficial LPN/dorsal digital (sup. fibular)"
     }
   ],
   "day4x_added": [
@@ -470,5 +440,14 @@
     "proper_plantar_digital_nerves_medial",
     "proper_plantar_digital_nerves_lateral",
     "deep_branch_lateral_plantar_nerve"
-  ]
+  ],
+  "day4y_added": [
+    "medial_dorsal_cutaneous_nerve",
+    "lateral_dorsal_cutaneous_nerve",
+    "medial_calcaneal_branches",
+    "lateral_calcaneal_nerves",
+    "superficial_branch_lateral_plantar_nerve",
+    "dorsal_digital_superficial_fibular"
+  ],
+  "day4y_note": "Integrated 6 highest-teaching-value Day 4x volume-deferred nerves: medial+lateral dorsal cutaneous, medial+lateral calcaneal, superficial LPN branch, dorsal digital branches of superficial fibular (grouped). Still deferred: sural\u2192LDC continuity object + dorsal digitals of deep fibular."
 }

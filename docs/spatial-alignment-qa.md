@@ -382,3 +382,18 @@ Reject rule: wrong side / outside padded RIGHT foot bone AABB (±40 mm) / <85% v
 
 Teaching-grade co-registration only — commons/proprii are grouped objects.
 
+## Day 4y — Deferred cutaneous / calcaneal / superficial LPN / dorsal digitals (2026-09-15)
+
+Reuse Day 4m/4x Kabsch. Six prior volume-deferred nerves moved to `integrated` in `nerve_spatial_qa.json` (`day4y_added`). All **accept** (inside_padded=1.0; wrong_side=false; bone AABB overlap).
+
+| Structure | Centroid→Open3D MP / LP (mm) | Decision |
+|-----------|------------------------------|----------|
+| medial_dorsal_cutaneous_nerve | (see QA JSON) | accept → integrated |
+| lateral_dorsal_cutaneous_nerve | ~50.6 / ~48.6 | accept → integrated |
+| medial_calcaneal_branches | (heel cluster) | accept → integrated |
+| lateral_calcaneal_nerves | (heel/lateral) | accept → integrated |
+| superficial_branch_lateral_plantar_nerve | ~63.2 / ~54.3 | accept → integrated |
+| dorsal_digital_superficial_fibular | ~108.4 / ~108.0 | accept → integrated (grouped) |
+
+Still deferred: sural→LDC continuity object; dorsal digitals of deep fibular. Teaching-grade only — not a finished nerve atlas.
+

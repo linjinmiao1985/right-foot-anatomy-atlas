@@ -74,11 +74,17 @@ const OPEN3D_BY_SA = new Set([
   'dorsal_cuneonavicular_ligaments',
   'medial_talocalcaneal_ligament',
   'dorsal_intercuneiform_ligaments',
-  // Day 4x Open3D nerves (volumetric Kabsch→BP3D)
+  // Day 4x + 4y Open3D nerves (volumetric Kabsch→BP3D)
   'common_plantar_digital_nerves',
   'proper_plantar_digital_nerves_medial',
   'proper_plantar_digital_nerves_lateral',
   'deep_branch_lateral_plantar_nerve',
+  'medial_dorsal_cutaneous_nerve',
+  'lateral_dorsal_cutaneous_nerve',
+  'medial_calcaneal_branches',
+  'lateral_calcaneal_nerves',
+  'superficial_branch_lateral_plantar_nerve',
+  'dorsal_digital_superficial_fibular',
 ]);
 
 const BP3D: ProvenanceInfo = {
@@ -140,12 +146,12 @@ export function licenseLabel(license: AssetLicense): string {
 
 /** Persistent footer copy — keep factual, no “complete atlas” claims. */
 export const ATLAS_SOURCE_FOOTER =
-  '网格来源: BodyParts3D CC BY 4.0 · UM CC0 1.0 · Z-Anatomy 干神经 / Open3D DI+动脉+踝足韧带/支持带/足底腱膜+细支神经 CC BY-SA 4.0（by-sa/ 隔离）';
+  '网格来源: BodyParts3D CC BY 4.0 · UM CC0 1.0 · Z-Anatomy 干神经 / Open3D DI+动脉+踝足韧带/支持带/足底腱膜+细支/皮支神经 CC BY-SA 4.0（by-sa/ 隔离）';
 
 /** Short panel copy about mesh fidelity — teaching honesty, not finished-product claims. */
 export function getTeachingMeshNote(structureId: string, layer: string): string | null {
   if (OPEN3D_BY_SA.has(structureId) && layer === 'nerve') {
-    return '网格：Open3DModel lower-limb（CC BY-SA），Kabsch→BP3D mm；足底总/固有趾神经或足底外侧神经深支教学对象（部分为分组），非手术导航级；仅 by-sa/ 加载。';
+    return '网格：Open3DModel lower-limb（CC BY-SA），Kabsch→BP3D mm；足底细支/皮支/跟支/背侧趾支教学对象（部分为分组），非手术导航级；仅 by-sa/ 加载。仍非完整周围神经图谱。';
   }
   if (layer === 'nerve') {
     return '网格：Z-Anatomy 曲线管（CURVE→tube），教学路径示意，非容积解剖分割；CC BY-SA 4.0，仅 by-sa/ 加载。';

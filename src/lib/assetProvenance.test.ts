@@ -36,12 +36,18 @@ describe('assetProvenance', () => {
     expect(p.isolatedBySa).toBe(true);
   });
 
-  it('attributes Open3D fine plantar nerves as isolated BY-SA Open3D', () => {
+  it('attributes Open3D fine/cutaneous nerves as isolated BY-SA Open3D', () => {
     for (const id of [
       'common_plantar_digital_nerves',
       'proper_plantar_digital_nerves_medial',
       'proper_plantar_digital_nerves_lateral',
       'deep_branch_lateral_plantar_nerve',
+      'medial_dorsal_cutaneous_nerve',
+      'lateral_dorsal_cutaneous_nerve',
+      'medial_calcaneal_branches',
+      'lateral_calcaneal_nerves',
+      'superficial_branch_lateral_plantar_nerve',
+      'dorsal_digital_superficial_fibular',
     ]) {
       const p = getStructureProvenance(id, false, 'nerve');
       expect(p.sourceShort).toBe('Open3D');

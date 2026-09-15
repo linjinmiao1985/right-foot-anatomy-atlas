@@ -22,11 +22,11 @@ Interactive web-based teaching atlas for right foot anatomy.
 
 | Claim | Unique count | Contents |
 |-------|--------------|----------|
-| **Main (CC BY 4.0 / CC0)** | **52/92** | 26 bones + 17 unique muscles + 7 vessels + 1 ligament + 1 tendon |
-| **BY-SA isolate (`by-sa/`)** | **40/92** | 1 DI + 2 proximal arteries + 10 nerves (6 Z-Anatomy + 4 Open3D) + 27 ankle/foot ligaments·retinacula·fascia |
-| **Entry-level `structures.json`** | **97/97** `placeholder:false` | Multi-part muscles counted separately (lumbricals/PI) |
+| **Main (CC BY 4.0 / CC0)** | **52/98** | 26 bones + 17 unique muscles + 7 vessels + 1 ligament + 1 tendon |
+| **BY-SA isolate (`by-sa/`)** | **46/98** | 1 DI + 2 proximal arteries + 16 nerves (6 Z-Anatomy + 10 Open3D) + 27 ankle/foot ligaments·retinacula·fascia |
+| **Entry-level `structures.json`** | **103/103** `placeholder:false` | Multi-part muscles counted separately (lumbricals/PI) |
 
-**Note**: Unique framing = **92** (lumbricals×4→1, plantar interossei×3→1). Entry-level = **97** rows. **Honest grouped vessels**: dorsal digital + plantar metatarsal remain BP3D combined meshes (dorsal MTA still grouped only). Open3D DI / PTA / fibular / ligaments / retinacula / plantar fascia / fine nerves are **ShareAlike fills**, Kabsch→BP3D mm — **not** CC BY main-tree. **Ligament + nerve layers: teaching-useful but incomplete** (further tarsal/toe bands and additional nerve terminals still unwired; commons/proprii are grouped teaching meshes).
+**Note**: Unique framing = **98** (lumbricals×4→1, plantar interossei×3→1). Entry-level = **103** rows. **Honest grouped vessels**: dorsal digital + plantar metatarsal remain BP3D combined meshes (dorsal MTA still grouped only). Open3D DI / PTA / fibular / ligaments / retinacula / plantar fascia / fine nerves are **ShareAlike fills**, Kabsch→BP3D mm — **not** CC BY main-tree. **Ligament + nerve layers: teaching-useful but incomplete** (further tarsal/toe bands; sural→LDC + deep-fibular dorsal digitals still unwired; commons/proprii/dorsal digitals are grouped teaching meshes).
 
 ### Remaining soft-tissue caveats (not “gaps” in placeholder sense)
 - Prefer future **CC0/CC BY** replacements for Open3D BY-SA DI + proximal arteries
@@ -44,7 +44,7 @@ Interactive web-based teaching atlas for right foot anatomy.
 | **Code** (`src/`, `vite.config.ts`, etc.) | MIT | ✅ Free, commercial OK |
 | **Bones + most vessels** | CC BY 4.0 (BodyParts3D) | ✅ Free, attribution required |
 | **Muscles** | CC BY 4.0 (BP3D) + CC0 1.0 (UM) | ✅ Free, no strings (UM) |
-| **Nerves** (in `by-sa/` only) | CC BY-SA 4.0 (Z-Anatomy trunks + Open3D fine/branch) | ⚠️ ShareAlike if modified |
+| **Nerves** (in `by-sa/` only) | CC BY-SA 4.0 (Z-Anatomy trunks + Open3D fine/cutaneous/calcaneal) | ⚠️ ShareAlike if modified |
 | **DI + proximal arteries + ankle/foot ligaments/retinacula/fascia + fine nerves** (`by-sa/`) | CC BY-SA 4.0 (Open3DModel) | ⚠️ ShareAlike if modified |
 | **Ligament + tendon** (long plantar + Achilles) | CC BY 4.0 (BodyParts3D) | ✅ Attribution; soft-tissue incomplete |
 

@@ -128,11 +128,18 @@ const REAL_NERVE_MODELS: Record<string, string> = {
   'deep_fibular_nerve': '/models/right-foot/by-sa/deep_fibular_nerve.glb',
   'superficial_fibular_nerve': '/models/right-foot/by-sa/superficial_fibular_nerve.glb',
   'sural_nerve': '/models/right-foot/by-sa/sural_nerve.glb',
-  // Open3DModel / AnatomyTOOL — Day 4x (Kabsch→BP3D mm)
+  // Open3DModel / AnatomyTOOL — Day 4x + 4y (Kabsch→BP3D mm)
   'common_plantar_digital_nerves': '/models/right-foot/by-sa/common_plantar_digital_nerves.glb',
   'proper_plantar_digital_nerves_medial': '/models/right-foot/by-sa/proper_plantar_digital_nerves_medial.glb',
   'proper_plantar_digital_nerves_lateral': '/models/right-foot/by-sa/proper_plantar_digital_nerves_lateral.glb',
   'deep_branch_lateral_plantar_nerve': '/models/right-foot/by-sa/deep_branch_lateral_plantar_nerve.glb',
+  // Day 4y — deferred cutaneous / calcaneal / superficial LPN / dorsal digitals
+  'medial_dorsal_cutaneous_nerve': '/models/right-foot/by-sa/medial_dorsal_cutaneous_nerve.glb',
+  'lateral_dorsal_cutaneous_nerve': '/models/right-foot/by-sa/lateral_dorsal_cutaneous_nerve.glb',
+  'medial_calcaneal_branches': '/models/right-foot/by-sa/medial_calcaneal_branches.glb',
+  'lateral_calcaneal_nerves': '/models/right-foot/by-sa/lateral_calcaneal_nerves.glb',
+  'superficial_branch_lateral_plantar_nerve': '/models/right-foot/by-sa/superficial_branch_lateral_plantar_nerve.glb',
+  'dorsal_digital_superficial_fibular': '/models/right-foot/by-sa/dorsal_digital_superficial_fibular.glb',
 };
 
 // Soft-tissue under ligament toggle — incomplete set (not a finished ligament atlas).
@@ -829,7 +836,7 @@ function RealNerveModel({
               borderRadius: '3px',
               border: '1px solid rgba(255, 255, 0, 0.4)',
             }}>
-              {modelPath.includes('common_plantar') || modelPath.includes('proper_plantar') || modelPath.includes('deep_branch_lateral')
+              {/common_plantar|proper_plantar|deep_branch_lateral|dorsal_cutaneous|calcaneal|superficial_branch_lateral|dorsal_digital_superficial/.test(modelPath)
                 ? 'Open3D (BY-SA 4.0)'
                 : 'Z-Anatomy (BY-SA 4.0)'}
             </div>

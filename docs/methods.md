@@ -1,7 +1,7 @@
 # Methods
 
 **Project**: Right Foot Anatomy Atlas (Teaching-Grade Interactive 3D)  
-**Version**: Week 2 Day 4w (93 structures.json placeholder:false; ligament/tendon = BP3D long plantar + Achilles + 27 Open3D BY-SA; TA2 soft-tissue still incomplete)  
+**Version**: Week 2 Day 4y (103 structures.json placeholder:false; ligament/tendon = BP3D long plantar + Achilles + 27 Open3D BY-SA; nerves = 6 ZA + 10 Open3D; TA2 soft-tissue still incomplete)  
 **Date**: 2026-09-15  
 **Licenses**: Code MIT | Assets CC BY 4.0 / CC0 1.0 / CC BY-SA 4.0 (isolated)
 
@@ -9,7 +9,7 @@
 
 ## Overview
 
-This atlas integrates open-licensed anatomical meshes from BodyParts3D, Universiti Malaya, Z-Anatomy, and Open3D (BY-SA isolate) for interactive right-foot teaching. Real 3D meshes cover **osteology 26/26**, wired muscles including UM teaching extrinsics (TA/FL/EDL/EHL) + BY-SA DI, vessels including 2 honest BP3D grouped meshes + BY-SA proximal arteries, 6 Z-Anatomy BY-SA trunk nerves + **4 Open3D BY-SA** fine/branch nerves (Day 4x), and soft tissue under the ligament/tendon toggle: **1 BP3D ligament** (long plantar) + **1 BP3D tendon** (Achilles) + **27 Open3D BY-SA** teaching meshes (Day 4s–4w; Kabsch→BP3D). **Entry-level placeholders: 0** — but this is **not** TA2-complete (further tarsal/toe bands unextracted; Lisfranc/retinacula/some midfoot bands grouped; commons/proprii are grouped teaching objects; additional nerve terminals deferred; dorsal metatarsal arteries not individually split). See `docs/week2-ligament-fascia-search.md` Day 4s–4x.
+This atlas integrates open-licensed anatomical meshes from BodyParts3D, Universiti Malaya, Z-Anatomy, and Open3D (BY-SA isolate) for interactive right-foot teaching. Real 3D meshes cover **osteology 26/26**, wired muscles including UM teaching extrinsics (TA/FL/EDL/EHL) + BY-SA DI, vessels including 2 honest BP3D grouped meshes + BY-SA proximal arteries, 6 Z-Anatomy BY-SA trunk nerves + **10 Open3D BY-SA** fine/cutaneous/calcaneal/dorsal-digital nerves (Day 4x–4y), and soft tissue under the ligament/tendon toggle: **1 BP3D ligament** (long plantar) + **1 BP3D tendon** (Achilles) + **27 Open3D BY-SA** teaching meshes (Day 4s–4w; Kabsch→BP3D). **Entry-level placeholders: 0** — but this is **not** TA2-complete (further tarsal/toe bands unextracted; Lisfranc/retinacula/some midfoot bands grouped; commons/proprii/dorsal digitals are grouped teaching objects; sural→LDC continuity + deep-fibular dorsal digitals still deferred; dorsal metatarsal arteries not individually split). See `docs/week2-ligament-fascia-search.md` Day 4s–4y.
 
 **Soft disclaimer (teaching vs clinical)**: Meshes and Kabsch co-registration are intended for **anatomy education** (spatial relationships, named structures, layer exploration). They are **not** validated for clinical diagnosis, treatment planning, surgical navigation, implant sizing, or patient-specific modeling. Landmark residuals (~2–3 mm mean) are teaching-grade only.
 
@@ -352,7 +352,7 @@ Commit history documents asset decisions, `structures.json` evolution, and `Foot
 | Gap | Why still open | Search note |
 |-----|----------------|-------------|
 | Ligaments / plantar fascia / tendon | BP3D long plantar + Achilles; **Day 4s–4w** Open3D BY-SA **27** meshes (isolate). Still incomplete | Monolithic `lower-limb.obj` + attachment QA. Z-Anatomy Zenodo `.blend`; Blender not in apt — recipe only |
-| Finer plantar/digital nerves | Day 4x: Open3D Common + Proper (medial/lateral) + deep LPN branch (BY-SA, Kabsch) | Grouped commons/proprii — not per-web elementals; further terminals deferred (volume). Dorsal MTA still grouped only |
+| Finer plantar/digital/cutaneous nerves | Day 4x–4y: Open3D Common + Proper + deep/superficial LPN + med/lat dorsal cutaneous + calcaneals + dorsal digitals (sup. fibular) | Grouped commons/proprii/dorsal digitals; still deferred: sural→LDC continuity, deep-fibular dorsal digitals. Dorsal MTA still grouped only |
 | Individual dorsal metatarsal arteries | BP3D grouped dorsal digital + plantar metatarsal remain | See Day 4w ceiling — Open3D `Dorsal_metatarsal_arteries.r` is also **grouped**, not per-ray |
 | Plantar interossei | **Present** (BP3D 1st–3rd) | Not a gap |
 
@@ -400,5 +400,18 @@ Commit history documents asset decisions, `structures.json` evolution, and `Foot
 2. Spatial QA (`third_party/open3dmodel/nerve_spatial_qa.json`): vs RIGHT foot bone AABB (±40 mm) + **Open3D** medial/lateral plantar trunks in the **same** Kabsch frame (Z-Anatomy CURVE GLBs are a different frame — not used for residuals). All four **accept** (inside_padded=1.0; trunk centroid distances ≈54–110 mm — distal digitals expected farther).
 3. Scanned further clearly named RIGHT foot nerve parts (superficial LPN branch, dorsal digitals, calcaneal nn., cutaneous terminals): spatial QA-pass but **deferred** (cap ≤4 new nerve entries this pass).
 4. No CC0/BY fine-nerve alternative found; dorsal MTA remains grouped-only ceiling.
-5. Honesty: nerve layer now 10 teaching meshes — **not** a finished peripheral-nerve atlas.
+5. Honesty: nerve layer then 10 teaching meshes — **not** a finished peripheral-nerve atlas.
+
+## Day 4y — Deferred Open3D cutaneous / calcaneal / superficial LPN / dorsal digitals (2026-09-15)
+
+1. Wired six Day 4x volume-deferred QA-pass RIGHT nerves (same Kabsch + `scripts/extract_open3d_nerves.py`):
+   - `Medial_dorsal_cutaneous_nerve.r` → `medial_dorsal_cutaneous_nerve`
+   - `Lateral_dorsal_cutaneous_nerve.r` → `lateral_dorsal_cutaneous_nerve`
+   - `Medial_calcaneal_branches_of_Tibial_nerve.r` → `medial_calcaneal_branches`
+   - `Lateral_calcaneal_nerves.r` → `lateral_calcaneal_nerves`
+   - `Superficial_branch_of_Lateral_plantar_nerve.r` → `superficial_branch_lateral_plantar_nerve`
+   - `Dorsal_digital_branches_of_superficial_fibular_nerve.r` → `dorsal_digital_superficial_fibular` (grouped)
+2. Still deferred (volume / redundancy): `Sural_nerve,_Lateral_dorsal_cutaneous_nerve.r`; `Dorsal_digital_branches_of_deep_fibular_nerve.r`.
+3. Spatial QA reused Day 4x accept criteria (`nerve_spatial_qa.json` `day4y_added`).
+4. Honesty: nerve layer now 16 teaching meshes (6 ZA + 10 Open3D) — **still not** a finished peripheral-nerve atlas.
 

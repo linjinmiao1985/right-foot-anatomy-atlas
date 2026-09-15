@@ -134,6 +134,12 @@
 | proper_plantar_digital_nerves_medial | Nn. digitales plantares proprii (med.) | 足底内侧神经固有趾支 | N. plantaris medialis | ✅ | TA2 / 人解9版 | ✅ Open3D grouped |
 | proper_plantar_digital_nerves_lateral | Nn. digitales plantares proprii (lat.) | 足底外侧神经固有趾支 | N. plantaris lateralis | ✅ | TA2 / 人解9版 | ✅ Open3D grouped |
 | deep_branch_lateral_plantar_nerve | R. profundus n. plantaris lateralis | 足底外侧神经深支 | N. plantaris lateralis | ✅ | TA2 / 人解9版 | ✅ Open3D |
+| medial_dorsal_cutaneous_nerve | N. cutaneus dorsalis medialis | 足背内侧皮神经 | N. fibularis superficialis | ✅ | TA2 / 人解9版 | ✅ Open3D Day 4y |
+| lateral_dorsal_cutaneous_nerve | N. cutaneus dorsalis lateralis | 足背外侧皮神经 | N. suralis 延续 | ✅ | TA2 / 人解9版 | ✅ Open3D Day 4y |
+| medial_calcaneal_branches | Rr. calcanei mediales | 胫神经跟内侧支 | N. tibialis | ✅ | TA2 / 人解9版 | ✅ Open3D Day 4y |
+| lateral_calcaneal_nerves | Nn. calcanei laterales | 跟外侧神经 | N. suralis 系统 | ✅ | TA2 / 人解9版 | ✅ Open3D Day 4y |
+| superficial_branch_lateral_plantar_nerve | R. superficialis n. plantaris lateralis | 足底外侧神经浅支 | N. plantaris lateralis | ✅ | TA2 / 人解9版 | ✅ Open3D Day 4y |
+| dorsal_digital_superficial_fibular | Nn. digitales dorsales (n. fib. superf.) | 腓浅神经足背趾支 | N. fibularis superficialis | ✅ | TA2 / 人解9版 | ✅ Open3D grouped |
 
 **神经层验证总结**: 6/6 ✅ 全部通过TA2和节段验证
 

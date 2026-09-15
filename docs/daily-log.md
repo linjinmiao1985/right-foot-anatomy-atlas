@@ -1135,3 +1135,17 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 - integrity-audit + vitest + build; commit + push.
 - No finished-product claim.
 
+
+## Week 2 Day 4y (2026-09-15) — Deferred Open3D cutaneous / calcaneal / superficial LPN + dorsal digitals
+
+- Wired 6 Day 4x volume-deferred QA-pass RIGHT nerves (Kabsch reuse Day 4m; `scripts/extract_open3d_nerves.py`):
+  - medial + lateral dorsal cutaneous
+  - medial calcaneal branches + lateral calcaneal nn.
+  - superficial branch of lateral plantar nerve
+  - dorsal digital branches of superficial fibular (grouped)
+- Still deferred: sural→LDC continuity object; dorsal digitals of deep fibular.
+- Wired structures.json / FootModel / assetProvenance / NOTICE / ZH+LA TA2; census → 16 nerves / 103 entry-level; dorsal MTA still grouped-only.
+- Learning log: +2 license-verified projects (Blender Studio human-base foot CC0; ASTARC Antwerp LE bones BY-NC-SA) + deepen Open3D ankle/foot Nov 2025 submodel.
+- integrity-audit + vitest + build; commit + push.
+- No finished-product claim.
+
