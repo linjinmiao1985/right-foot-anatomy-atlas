@@ -1,7 +1,13 @@
+import { useState } from 'react';
 import type { AnatomyStructure } from '../types/anatomy';
 import { LAYER_CONFIG } from '../lib/layers';
 import { getStructureProvenance, licenseLabel, getTeachingMeshNote } from '../lib/assetProvenance';
-import { getOntologyIds, hasOntologyIds, formatFma } from '../lib/ontologyIds';
+import {
+  getOntologyIds,
+  hasOntologyIds,
+  formatFma,
+  formatOntologyCopy,
+} from '../lib/ontologyIds';
 
 interface StructurePanelProps {
   structure: AnatomyStructure | null;
@@ -10,9 +16,45 @@ interface StructurePanelProps {
   onToggleIsolate?: () => void;
 }
 
-export default function StructurePanel({ structure, onClose, isolateMode = false, onToggleIsolate }: StructurePanelProps) {
+export default function StructurePanel({
+  structure,
+  onClose,
+  isolateMode = false,
+  onToggleIsolate,
+}: StructurePanelProps) {
+  const [copyFlash, setCopyFlash] = useState(false);
+
   if (!structure) {
-    return null;
+    return (
+      <div
+        style={{
+          position: 'fixed',
+          bottom: '48px',
+          right: '20px',
+          background: 'rgba(26, 26, 26, 0.88)',
+          border: '1px dashed #444',
+          borderRadius: '8px',
+          padding: '14px 16px',
+          minWidth: '280px',
+          maxWidth: '360px',
+          zIndex: 100,
+        }}
+        role="status"
+        aria-live="polite"
+      >
+        <div style={{ fontSize: '12px', fontWeight: 600, color: '#9ca3af', marginBottom: '6px' }}>
+          结构信息 · Structure
+        </div>
+        <p style={{ fontSize: '12px', color: '#888', margin: 0, lineHeight: 1.55 }}>
+          点击网格或用搜索选择结构，查看中文/拉丁名、来源许可与可选本体论 ID（TA2 / FMA / BP）。
+          <br />
+          <span style={{ color: '#666' }}>
+            Click a mesh or use search — panel shows names, license, and sparse ontology IDs when
+            cited.
+          </span>
+        </p>
+      </div>
+    );
   }
 
   const layerConfig = LAYER_CONFIG[structure.layer];
@@ -28,6 +70,19 @@ export default function StructurePanel({ structure, onClose, isolateMode = false
         : provenance.license === 'CC0-1.0'
           ? '#38bdf8'
           : '#22c55e';
+
+  const handleCopyOntology = async () => {
+    if (!ontology) return;
+    const text = formatOntologyCopy(ontology);
+    if (!text) return;
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopyFlash(true);
+      window.setTimeout(() => setCopyFlash(false), 1200);
+    } catch {
+      // Clipboard may be denied; silent fail keeps panel usable
+    }
+  };
 
   return (
     <div
@@ -76,10 +131,37 @@ export default function StructurePanel({ structure, onClose, isolateMode = false
             color: '#c4c4c4',
             lineHeight: 1.55,
           }}
-          title="Partial teaching map — sources: structures.json TA2 notes, docs/terminology.md FMA, BodyParts3D BP IDs. Unknown schemes omitted."
+          title="Partial teaching map — sources: IFAA TA98/FMA, Wikipedia FMA, structures.json, docs/terminology.md, BodyParts3D BP. Unknown schemes omitted."
         >
-          <div style={{ fontSize: '10px', color: '#888', marginBottom: '4px', fontWeight: 600 }}>
-            本体论 ID · Ontology (partial)
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              marginBottom: '4px',
+              gap: '8px',
+            }}
+          >
+            <div style={{ fontSize: '10px', color: '#888', fontWeight: 600 }}>
+              本体论 ID · Ontology (partial)
+            </div>
+            <button
+              type="button"
+              onClick={handleCopyOntology}
+              style={{
+                fontSize: '10px',
+                padding: '2px 7px',
+                background: copyFlash ? '#166534' : '#333',
+                border: '1px solid #555',
+                borderRadius: '4px',
+                color: '#e5e5e5',
+                cursor: 'pointer',
+                flexShrink: 0,
+              }}
+              title="Copy TA2 / FMA / BP line"
+            >
+              {copyFlash ? '已复制' : '复制 · Copy'}
+            </button>
           </div>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px 12px' }}>
             {ontology.ta2 && (

@@ -1296,3 +1296,18 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 3. **Checks**: integrity-audit + vitest + build; commit + push.
 4. **Honesty**: teaching atlas in progress — **no finished-product claim**. Census unchanged 129/124. **No** SA mesh spam.
 
+
+## Day 4as (2026-09-15) — ontology expand (citable) + panel polish
+
+**Target**: Expand `ontologyIds` for major soft tissue already in atlas; one teaching polish; no SA mesh spam.
+
+1. **Ontology** (`src/lib/ontologyIds.ts`): 64/129 (49.6%) → **107/129 (82.9%)**.
+   - Muscles: posterior extrinsics + plantaris (IFAA A04.7.02.049/051–053 + FMA).
+   - Nerves: all 17 (IFAA A14.2.07.*; FMA from Wikipedia infobox — **not** unverified manifest nerve FMA).
+   - Vessels: major arteries + branches from IFAA TAH4339 A2F; **corrected** prior mis-tagged MPA/LPA/dorsal-digital/plantar-metatarsal A-codes; prefer IFAA FMA when manifest off-by-one.
+   - Ligaments: deltoid parts, PTFL, bifurcate, spring, interosseous TC, short plantar; **corrected** ATFL/CFL/spring A-codes to IFAA.
+   - Still omit opponens (no cite), veins, many retinacula/Lisfranc-ish — honest empty.
+2. **UX polish**: StructurePanel empty-state hint + ontology **Copy** button (`formatOntologyCopy`).
+3. Checks: integrity-audit + vitest + build; commit + push.
+4. **Honesty**: sparse cited map — **not** finished-product / TA2-complete soft tissue. **No** SA mesh add.
+

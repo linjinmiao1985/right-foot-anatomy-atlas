@@ -7,19 +7,21 @@
  * - Grouped / approximate codes may set `note` (e.g. "grouped", "approx").
  *
  * Sources (document, do not invent):
- * - TA2: Latin IDs embedded in `structures.json` summaryZh where authored;
- *   cross-check habit vs Terminologia Anatomica 2 / TA2Viewer
- *   (https://ta2viewer.openanatomy.org/, https://fipat.library.dal.ca/TA2/).
- * - FMA (osteology classic): `docs/terminology.md` osteology table when present.
- * - FMA / BP (mesh-linked): `public/models/right-foot/manifest.json` +
- *   BP tags in `FootModel.tsx` REAL_* paths / comments (ISA elemental).
- * - Soft-tissue TA2: `structures.json` summaries where authored (often approx).
+ * - TA A-codes: IFAA TA98 entity pages / partonomic lists (project displays as
+ *   "TA2" for teaching continuity with structures.json). Primary lookups:
+ *   https://ifaa.unifr.ch/Public/EntryPage/ and TAH4339 A2F artery list.
+ * - TA2 term numbers / cross-checks: https://ta2viewer.openanatomy.org/
+ * - FMA: IFAA entity FMA identifier field, or Wikipedia anatomy infobox
+ *   (TA98+TA2+FMA) when IFAA page lacks FMA; prefer FMA for vessels if TA missing.
+ * - Osteology classic FMA: `docs/terminology.md` when present.
+ * - Mesh BP: `public/models/right-foot/manifest.json` + FootModel REAL_* paths.
  *
- * This is a teaching aid map — not a claim of TA2-complete soft-tissue coverage.
+ * Day 4as: corrected several prior "approx" vessel/ligament A-codes that did not
+ * match IFAA (documented inline). Still a sparse teaching map — not TA2-complete.
  */
 
 export interface StructureOntologyIds {
-  /** Terminologia Anatomica 2 code, e.g. A02.5.10.001 */
+  /** Terminologia Anatomica hierarchical A-code (TA98; shown as TA2 in UI) */
   ta2?: string;
   /** Foundational Model of Anatomy ID digits, e.g. 24496 (display as FMA24496) */
   fma?: string;
@@ -34,7 +36,7 @@ export interface StructureOntologyIds {
  * Structures absent from this map → panel shows no ontology block (honest empty).
  */
 export const ONTOLOGY_BY_ID: Readonly<Record<string, StructureOntologyIds>> = {
-  // —— Osteology (26): TA2 from structures.json; classic FMA from terminology.md
+  // —— Osteology (26): TA from structures.json; classic FMA from terminology.md
   //    when listed; mesh BP/FMA from manifest.json + FootModel GLB names ——
   calcaneus: { ta2: 'A02.5.10.001', fma: '24496', bp: 'BP9040' },
   talus: { ta2: 'A02.5.10.002', fma: '9708', bp: 'BP8033' },
@@ -51,7 +53,7 @@ export const ONTOLOGY_BY_ID: Readonly<Record<string, StructureOntologyIds>> = {
   // Hallux: terminology.md FMA; BP from FootModel/manifest (Day 4k BP8785)
   proximal_phalanx_1: { ta2: 'A02.5.17.001', fma: '32951', bp: 'BP8785' },
   distal_phalanx_1: { ta2: 'A02.5.17.002', fma: '32952', bp: 'BP9282' },
-  // Digits II–V: TA2 from structures.json; BP+FMA from manifest.json
+  // Digits II–V: TA from structures.json; BP+FMA from manifest.json
   proximal_phalanx_2: { ta2: 'A02.5.17.002', fma: '32634', bp: 'BP9196' },
   proximal_phalanx_3: { ta2: 'A02.5.18.002', fma: '32636', bp: 'BP8762' },
   proximal_phalanx_4: { ta2: 'A02.5.19.002', fma: '32638', bp: 'BP8281' },
@@ -70,13 +72,22 @@ export const ONTOLOGY_BY_ID: Readonly<Record<string, StructureOntologyIds>> = {
     note: 'grouped hallux sesamoids',
   },
 
-  // —— Muscles (TA2 from structures.json where authored; FMA/BP from manifest) ——
+  // —— Muscles ——
+  // Extrinsic anterior/lateral: TA from structures.json summaries (aligned IFAA A04.7.02.*)
   tibialis_anterior: { ta2: 'A04.7.02.037' },
   extensor_hallucis_longus: { ta2: 'A04.7.02.039' },
   extensor_digitorum_longus: { ta2: 'A04.7.02.040' },
   fibularis_longus: { ta2: 'A04.7.02.041' },
   fibularis_brevis: { ta2: 'A04.7.02.042' },
   fibularis_tertius: { ta2: 'A04.7.02.043' },
+  // Extrinsic posterior + plantaris: IFAA TA98 entity pages (FMA field)
+  // https://ifaa.unifr.ch/Public/EntryPage/TA98%20Tree/Entity%20TA98%20EN/04.7.02.051%20Entity%20TA98%20EN.htm
+  // …049 plantaris, …052 FDL, …053 FHL; TA2Viewer tib. post. id=2666 ↔ FMA51099
+  tibialis_posterior: { ta2: 'A04.7.02.051', fma: '51099' },
+  flexor_digitorum_longus: { ta2: 'A04.7.02.052', fma: '51071' },
+  flexor_hallucis_longus: { ta2: 'A04.7.02.053', fma: '22593' },
+  plantaris: { ta2: 'A04.7.02.049', fma: '22543' },
+  // Intrinsics: FMA/BP from manifest (UM/BP3D); PI TA from structures.json
   abductor_hallucis: { fma: '37459' },
   flexor_digitorum_brevis: { fma: '37461' },
   abductor_digiti_minimi: { fma: '37463' },
@@ -117,54 +128,158 @@ export const ONTOLOGY_BY_ID: Readonly<Record<string, StructureOntologyIds>> = {
     fma: '37451',
     note: 'grouped 1st–4th DI (manifest muscles_by_sa)',
   },
+  // opponens_digiti_minimi: no citable TA/FMA found this pass — omit (honest empty)
 
-  // —— Vessels (TA2 + BP/FMA from structures.json summaries / FootModel / manifest) ——
+  // —— Nerves (major trunks + named branches) ——
+  // TA: IFAA A14.2.07.* hierarchy under n. tibialis / n. fibularis;
+  // FMA: Wikipedia anatomy infobox (TA98+TA2+FMA) — NOT unverified manifest nerve FMA
+  // (manifest FMA19027/19035 conflicted with Wikipedia tibial=19035 / deep fibular=44771).
+  tibial_nerve: { ta2: 'A14.2.07.058', fma: '19035' }, // WP Tibial nerve; TA2Viewer id=6582
+  medial_plantar_nerve: { ta2: 'A14.2.07.066', fma: '44716' }, // WP; TA2Viewer id=6590
+  lateral_plantar_nerve: { ta2: 'A14.2.07.069', fma: '44724' }, // WP Lateral plantar nerve
+  deep_fibular_nerve: { ta2: 'A14.2.07.055', fma: '44771' }, // WP Deep fibular nerve
+  superficial_fibular_nerve: { ta2: 'A14.2.07.050', fma: '44699' }, // WP Superficial fibular nerve
+  sural_nerve: { ta2: 'A14.2.07.062', fma: '44688' }, // WP Sural nerve
+  // Branches: IFAA children of tibial / fibular trunks (TA only unless FMA cited)
+  medial_calcaneal_branches: { ta2: 'A14.2.07.065' },
+  lateral_calcaneal_nerves: { ta2: 'A14.2.07.064' },
+  lateral_dorsal_cutaneous_nerve: { ta2: 'A14.2.07.063' },
+  medial_dorsal_cutaneous_nerve: { ta2: 'A14.2.07.052' },
+  superficial_branch_lateral_plantar_nerve: { ta2: 'A14.2.07.070' },
+  deep_branch_lateral_plantar_nerve: { ta2: 'A14.2.07.073' },
+  common_plantar_digital_nerves: {
+    ta2: 'A14.2.07.067',
+    note: 'grouped; IFAA code = medial commons (lateral commons = A14.2.07.071)',
+  },
+  proper_plantar_digital_nerves_medial: { ta2: 'A14.2.07.068' },
+  proper_plantar_digital_nerves_lateral: { ta2: 'A14.2.07.072' },
+  dorsal_digital_superficial_fibular: {
+    ta2: 'A14.2.07.054',
+    note: 'grouped dorsal digitals of superficial fibular',
+  },
+  dorsal_digital_deep_fibular: {
+    ta2: 'A14.2.07.057',
+    note: 'grouped dorsal digitals of deep fibular',
+  },
+
+  // —— Vessels ——
+  // Corrected Day 4as from IFAA TAH4339 A2F list (prior structures.json "TA2" digits
+  // for MPA/LPA/dorsal digital/plantar metatarsal were off — those codes belong
+  // to other arteries). Prefer IFAA FMA when it differs from manifest by ±1.
+  // https://ifaa.unifr.ch/Public/TNAEntryPage/auto/TA98/EN/TAH4339%20A2F%20EN.htm
+  anterior_tibial_artery: { ta2: 'A12.2.16.042', fma: '43894' }, // IFAA entity
+  dorsalis_pedis_artery: {
+    ta2: 'A12.2.16.048',
+    fma: '43915', // IFAA (manifest had FMA43916)
+    bp: 'BP6027',
+  },
+  lateral_tarsal_artery: { ta2: 'A12.2.16.049' },
+  medial_tarsal_arteries: { ta2: 'A12.2.16.050', note: 'grouped' },
+  arcuate_artery: { ta2: 'A12.2.16.051', fma: '69494', bp: 'BP6054' },
+  dorsal_metatarsal_arteries: { ta2: 'A12.2.16.052', note: 'grouped' },
   dorsal_digital_arteries: {
-    ta2: 'A12.2.16.064',
+    ta2: 'A12.2.16.053', // corrected (was .064 = LPA)
     fma: '44660',
     bp: 'BP6049',
     note: 'grouped mesh',
   },
+  deep_plantar_artery: { ta2: 'A12.2.16.054', fma: '69513' }, // IFAA entity
+  posterior_tibial_artery: {
+    ta2: 'A12.2.16.055',
+    fma: '43895', // IFAA (manifest/prior map FMA43882)
+  },
+  circumflex_fibular_artery: { ta2: 'A12.2.16.056' },
+  medial_calcaneal_artery: {
+    ta2: 'A12.2.16.059',
+    note: 'rr. calcanei of PTA (medial teaching mesh)',
+  },
+  plantar_artery_medial: {
+    ta2: 'A12.2.16.061', // corrected (was .065 = deep plantar arch)
+    fma: '43925', // IFAA (manifest FMA43929)
+    bp: 'BP6062',
+  },
+  deep_branch_medial_plantar_artery: { ta2: 'A12.2.16.062' },
+  superficial_branch_medial_plantar_artery: { ta2: 'A12.2.16.063' },
+  plantar_artery_lateral: {
+    ta2: 'A12.2.16.064', // corrected (was .069 = proper plantar digitals)
+    fma: '43931',
+    bp: 'BP6065',
+  },
+  plantar_arch: {
+    ta2: 'A12.2.16.065',
+    fma: '43943',
+    bp: 'BP6014',
+    note: 'BP3D arch ≈ arcus plantaris profundus',
+  },
+  deep_plantar_arch: {
+    ta2: 'A12.2.16.065',
+    note: 'Open3D detail; same TA as deep plantar arch',
+  },
   plantar_metatarsal_arteries: {
-    ta2: 'A12.2.16.068',
+    ta2: 'A12.2.16.066', // corrected (was .068 = common plantar digitals)
     fma: '43956',
     bp: 'BP6060',
     note: 'grouped mesh',
   },
-  // structures.json ids plantar_artery_*; manifest labels medial/lateral_plantar_artery
-  plantar_artery_medial: {
-    ta2: 'A12.2.16.065',
-    fma: '43929',
-    bp: 'BP6062',
+  perforating_arcuate_deep_plantar: {
+    ta2: 'A12.2.16.067',
+    note: 'rr. perforantes (grouped teaching mesh)',
   },
-  plantar_artery_lateral: {
-    ta2: 'A12.2.16.069',
-    fma: '43931',
-    bp: 'BP6065',
+  common_plantar_digital_arteries: { ta2: 'A12.2.16.068', note: 'grouped' },
+  proper_plantar_digital_arteries: { ta2: 'A12.2.16.069', note: 'grouped' },
+  fibular_artery: { ta2: 'A12.2.16.071', fma: '43905' },
+  lateral_calcaneal_artery: {
+    ta2: 'A12.2.16.075',
+    note: 'rr. calcanei of fibular a. (teaching mesh)',
   },
-  dorsalis_pedis_artery: { fma: '43916', bp: 'BP6027' },
-  plantar_arch: { fma: '43943', bp: 'BP6014' },
-  arcuate_artery: { fma: '69494', bp: 'BP6054' },
-  posterior_tibial_artery: { fma: '43882' },
-  fibular_artery: { fma: '43905' },
+  // Veins: no citable TA/FMA verified this pass — omit
 
-  // —— Ligament / tendon (TA2 approx from summaries; BP/FMA from GLB / manifest) ——
+  // —— Ligament / tendon / aponeurosis ——
+  // Day 4as: corrected ATFL/CFL/spring A-codes (prior .002/.003/.204 were joint /
+  // deltoid / wrong) from IFAA A03.6.10.* entity pages.
+  anterior_talofibular_ligament: {
+    ta2: 'A03.6.10.009',
+    fma: '44083', // IFAA ATFL entity
+  },
+  posterior_talofibular_ligament: {
+    ta2: 'A03.6.10.010',
+    fma: '44084', // IFAA PTFL entity
+  },
+  calcaneofibular_ligament: {
+    ta2: 'A03.6.10.011',
+    fma: '44089', // IFAA CFL entity
+  },
+  // Deltoid parts (IFAA under lig. collaterale mediale)
+  tibionavicular_ligament: { ta2: 'A03.6.10.004' },
+  tibiocalcaneal_ligament: { ta2: 'A03.6.10.005' },
+  anterior_tibiotalar_ligament: { ta2: 'A03.6.10.006' },
+  posterior_tibiotalar_ligament: { ta2: 'A03.6.10.007' },
+  plantar_calcaneonavicular_ligament: {
+    ta2: 'A03.6.10.203', // corrected (was .204)
+    fma: '44254', // IFAA spring ligament entity
+  },
+  interosseous_talocalcaneal_ligament: {
+    ta2: 'A03.6.10.503',
+    fma: '44199',
+  },
+  bifurcate_ligament: { ta2: 'A03.6.10.511', fma: '44216' },
   long_plantar_ligament: {
     ta2: 'A03.6.10.517',
-    fma: '44249',
+    fma: '44248', // IFAA (manifest FMA44249)
     bp: 'BP5093',
-    note: 'approx TA2',
   },
+  plantar_calcaneocuboid_ligament: {
+    ta2: 'A03.6.10.518',
+    fma: '44251',
+  },
+  // Tendo calcaneus: IFAA list A04.7.02.048 (prior .002 was wrong/approx)
   calcaneal_tendon: {
-    ta2: 'A04.7.02.002',
+    ta2: 'A04.7.02.048',
     fma: '258847',
     bp: 'BP5098',
-    note: 'approx TA2',
   },
-  anterior_talofibular_ligament: { ta2: 'A03.6.10.002', note: 'approx TA2' },
-  calcaneofibular_ligament: { ta2: 'A03.6.10.003', note: 'approx TA2' },
-  plantar_calcaneonavicular_ligament: { ta2: 'A03.6.10.204', note: 'approx TA2' },
-  plantar_aponeurosis: { ta2: 'A04.7.03.031', note: 'approx TA2' },
+  // Plantar aponeurosis: keep structures.json-authored A04.7.03.031 (fascia section)
+  plantar_aponeurosis: { ta2: 'A04.7.03.031', note: 'from structures.json summary' },
 };
 
 export function getOntologyIds(structureId: string): StructureOntologyIds | undefined {
@@ -188,5 +303,14 @@ export function formatOntologyLine(ids: StructureOntologyIds): string {
   if (ids.fma) parts.push(formatFma(ids.fma));
   if (ids.bp) parts.push(ids.bp);
   if (ids.note) parts.push(`(${ids.note})`);
+  return parts.join(' · ');
+}
+
+/** Clipboard text for teaching copy button (schemes only, no note). */
+export function formatOntologyCopy(ids: StructureOntologyIds): string {
+  const parts: string[] = [];
+  if (ids.ta2) parts.push(`TA2 ${ids.ta2}`);
+  if (ids.fma) parts.push(formatFma(ids.fma));
+  if (ids.bp) parts.push(ids.bp);
   return parts.join(' · ');
 }
