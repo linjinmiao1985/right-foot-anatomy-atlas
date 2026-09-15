@@ -241,7 +241,7 @@
     "nameZh": "第二趾远节趾骨",
     "nameLa": "Phalanx distalis digiti II pedis",
     "summaryZh": "第二趾的远节（末节）趾骨，趾尖骨，承受地面接触压力，参与推进期最后阶段蹬离。TA2: A02.5.17.004",
-    "placeholder": true
+    "placeholder": false
   },
   {
     "id": "distal_phalanx_3",
@@ -252,7 +252,7 @@
     "nameZh": "第三趾远节趾骨",
     "nameLa": "Phalanx distalis digiti III pedis",
     "summaryZh": "第三趾的远节（末节）趾骨，趾尖骨，与屈趾长肌腱末端附着，参与趾末端触地和推进。TA2: A02.5.18.004",
-    "placeholder": true
+    "placeholder": false
   },
   {
     "id": "distal_phalanx_4",
@@ -274,7 +274,7 @@
     "nameZh": "第五趾远节趾骨",
     "nameLa": "Phalanx distalis digiti V pedis (minimus)",
     "summaryZh": "小趾的远节（末节）趾骨，最小的趾骨，常因鞋挤压而发生鸡眼或变形。TA2: A02.5.20.003",
-    "placeholder": true
+    "placeholder": false
   },
   {
     "id": "distal_phalanx_1",

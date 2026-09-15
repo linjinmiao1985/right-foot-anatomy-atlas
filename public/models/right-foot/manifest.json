@@ -69,13 +69,13 @@
     {"id": "superficial_fibular_nerve", "file": "by-sa/superficial_fibular_nerve.glb", "source": "Z-Anatomy", "license": "CC BY-SA 4.0", "fma": "FMA19034", "name_zh": "腓浅神经", "name_la": "N. fibularis superficialis"},
     {"id": "sural_nerve", "file": "by-sa/sural_nerve.glb", "source": "Z-Anatomy", "license": "CC BY-SA 4.0", "fma": "FMA44314", "name_zh": "腓肠神经", "name_la": "N. suralis"}
   ],
-  "note": "21 bones (hallux + 7 phalanges 2-5, lacking 4 distal) + 13 muscles (BP3D 12 + UM 8) + 5 vessels + 6 nerves (Z-Anatomy BY-SA isolated). Total: 45/59 real (76%).",
+  "note": "24 bones (hallux + 10 phalanges 2-5: BP3D 7 + UM 3 distal, lacking 1 distal_4) + 13 muscles (BP3D 12 + UM 8) + 5 vessels + 6 nerves (Z-Anatomy BY-SA isolated). Total: 48/59 real (81%).",
   "stats": {
-    "bones": "21/25 (84%, BP3D CC BY 4.0: 14 tarsals/metatarsals/hallux + 7 phalanges 2-5, lacking 4 distal 2-5)",
+    "bones": "24/25 (96%, BP3D 14 + UM 3 distal + BP3D 7 phalanges, lacking distal_phalanx_4 only)",
     "muscles": "13/14 (93%, BP3D 12 + UM CC0 8: 5 intrinsic + 3 extrinsic)",
     "vessels": "5/9 (56%, BP3D main arteries, lacking digital branches)",
     "nerves": "6/6 (100%, Z-Anatomy CC BY-SA 4.0, isolated in by-sa/)",
-    "total": "45/59 (76% real meshes, 50 real structures - 5 multi-part AH counted once)"
+    "total": "48/59 (81% real meshes, 53 real structures - 5 multi-part AH counted once)"
   },
   "quality_decisions": {
     "overlapping_muscles": "UM CC0 chosen over BP3D for AH/ADM/FDB (2.4-8.7x resolution)",

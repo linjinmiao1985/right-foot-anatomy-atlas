@@ -498,6 +498,52 @@ Phase 4 claimed "no open intrinsic foot muscles exist" based on insufficient sea
 
 ---
 
+## Week 2 Day 4b — 2026-09-15 ✅ UM Distal Phalanges Discovery (Osteology 96%)
+
+**Focus**: Search UM/Z-Anatomy for distal phalanges 2-5 (user directive: prefer finds over status docs)
+
+**Progress** ✅:
+1. **UM Phalanges.stl discovery**:
+   - Found `Segmentation_Bone_Phalanges.stl` (1.9MB) in UM dataset
+   - Blender separation: 14 disconnected bone components
+2. **Identification via spatial analysis**:
+   - Exported all 14 as GLB with position/size metadata
+   - Sorted by X (medial→lateral) and Z (proximal→distal)
+   - **Found 3/4 distal phalanges**: 2nd, 3rd, 5th (toes)
+   - **Missing**: 4th toe distal (UM limitation)
+3. **Integration**:
+   - Copied 3 GLB to `public/models/right-foot/` (7.7 + 11 + 5.2 KB)
+   - Updated `structures.json`: placeholder True → False for distal 2/3/5
+   - Wired `FootModel.tsx`: added 3 loaders to REAL_BONE_MODELS
+4. **Integrity audit**: PASSED ✅
+   - **53/59 real (89%)** ⬆️ from 50/59 (85%)
+   - 6 placeholders (distal_4 + DI + 4 vessels)
+5. **Tests + Build**: ✅ GREEN (7/7, 1.1MB)
+6. **Documentation updated**:
+   - `manifest.json`: 24/25 bones (96%), total 48/54 (89%) unique structures
+   - `README.md`: Coverage table + gaps (only distal_phalanx_4 missing)
+
+**Coverage After Day 4b**: **53/59 (89%)** ⬆️ +3 real bones
+- **Bones**: 24/25 (96%, ⬆️ from 84%) — NEAR COMPLETE
+- **Muscles**: 13/14 (93%)
+- **Vessels**: 5/9 (56%)
+- **Nerves**: 6/6 (100%)
+
+**Blockers**: Distal phalanx 4 absent in UM Phalanges.stl (limitation documented)
+
+**Z-Anatomy search**: Not needed (UM provided 3/4 distal, stop searching per user directive)
+
+**Commits**: 1 (UM distal phalanges + docs)
+
+**Tests/Build**: ✅ GREEN
+
+**Key Insight** 💡:
+- **UM Phalanges.stl breakthrough**: Grouped STL separable via Blender loose-parts
+- **Spatial heuristic worked**: X/Z coordinates + vertex count correctly identified toe segments
+- **Osteology near-perfect**: 24/25 bones (96%), only 1 distal tip missing
+
+---
+
 ## Week 2 Day 3 — 2026-09-15 🏗️ Design Fix (Unified ID Model)
 
 **Focus**: Expand structures.json to individual entries (no more grouped placeholder compromises)
