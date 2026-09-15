@@ -43,7 +43,7 @@ Under the following terms:
 
 **Source**: Open3D project via AnatomyTOOL create page  
 **License**: CC BY-SA 4.0  
-**Usage**: Dorsal interossei, proximal arteries, ankle/foot ligaments/retinacula/fascia, and Day 4x–4z fine/cutaneous/calcaneal/dorsal-digital nerve meshes under `public/models/right-foot/by-sa/` (Kabsch-aligned). See that directory's NOTICE.md.
+**Usage**: Dorsal interossei, proximal arteries, ankle/foot ligaments/retinacula/fascia, and Day 4x–4z fine/cutaneous/calcaneal/dorsal-digital nerve meshes and Day 4aa fine vessels (deep plantar a./arch, grouped dorsal MTA, medial plantar branches) under `public/models/right-foot/by-sa/` (Kabsch-aligned). See that directory's NOTICE.md.
 
 ### Z-Anatomy nerves (BY-SA isolate)
 

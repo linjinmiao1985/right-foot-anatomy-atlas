@@ -242,7 +242,7 @@ export default function LayerToggles({
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '3px' }}>
           <span style={legendChip('#a78bfa')}>SA</span>
-          <span>BY-SA 隔离（神经 / DI / 近端动脉 / 韧带）</span>
+          <span>BY-SA 隔离（神经 / DI / 近端+细支动脉 / 韧带）</span>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
           <span style={legendChip('#e8dcc8')}>韧/腱</span>
@@ -306,7 +306,7 @@ export default function LayerToggles({
             }}
             title="CC BY-SA 4.0 ShareAlike — see public/models/right-foot/by-sa/NOTICE.md"
           >
-            ⚠️ 当前图层可能加载 <strong>BY-SA</strong> 网格（Z-Anatomy 神经 / Open3D DI · 胫后/腓动脉 ·
+            ⚠️ 当前图层可能加载 <strong>BY-SA</strong> 网格（Z-Anatomy 神经 / Open3D DI · 胫后/腓/足底深支与跖背动脉组合 ·
             踝足韧带/支持带/腱膜）。衍生作品需 ShareAlike；可关闭相关层或删除{' '}
             <code style={{ fontSize: '9px' }}>by-sa/</code> 以保持仅 CC BY/CC0。
           </div>

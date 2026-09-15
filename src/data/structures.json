@@ -794,6 +794,61 @@
     "placeholder": false
   },
   {
+    "id": "deep_plantar_artery",
+    "meshNames": [
+      "Deep_Plantar_Artery_R"
+    ],
+    "layer": "vessel",
+    "nameZh": "足底深动脉",
+    "nameLa": "A. plantaris profunda",
+    "summaryZh": "足背动脉在第1跖骨间隙近端发出的穿支，穿第1背侧骨间肌下行至足底，与足底外侧动脉吻合参与足底深弓。教学：背侧→跖侧吻合关键环节；Lisfranc/第1间隙手术相关。网格：Open3DModel Deep_plantar_artery.r（CC BY-SA 4.0），Kabsch→BP3D，by-sa/ 隔离。教学示意，非介入导航级。",
+    "placeholder": false
+  },
+  {
+    "id": "deep_plantar_arch",
+    "meshNames": [
+      "Deep_Plantar_Arch_R"
+    ],
+    "layer": "vessel",
+    "nameZh": "足底深动脉弓（Open3D）",
+    "nameLa": "Arcus plantaris profundus",
+    "summaryZh": "足底深动脉弓的 Open3D 命名网格（Deep_plantar_arch.r）。与主树 BP3D「足底动脉弓」条目同属深弓教学概念——本网格为 BY-SA 隔离的分割细节，便于对照弓形走行与穿支关系；非声称两套不同解剖弓。网格：CC BY-SA 4.0，Kabsch→BP3D；by-sa/ 隔离。教学级，非手术配准。",
+    "placeholder": false
+  },
+  {
+    "id": "dorsal_metatarsal_arteries",
+    "meshNames": [
+      "Dorsal_Metatarsal_Arteries_Combined_R"
+    ],
+    "layer": "vessel",
+    "nameZh": "跖背动脉（组合）",
+    "nameLa": "Aa. metatarsales dorsales (combined)",
+    "summaryZh": "跖背动脉的 Open3D 组合网格（Dorsal_metatarsal_arteries.r 单一对象）。教学诚实：lower-limb.obj 无 1st–4th 独立命名 elemental，本条目保持（组合），不可伪称逐间隙血管图谱。与 BP3D 足背趾动脉（组合）互补命名层次。网格：CC BY-SA 4.0，Kabsch→BP3D，by-sa/。仍非逐射线拆分。",
+    "placeholder": false
+  },
+  {
+    "id": "deep_branch_medial_plantar_artery",
+    "meshNames": [
+      "Deep_Branch_Medial_Plantar_Artery_R"
+    ],
+    "layer": "vessel",
+    "nameZh": "足底内侧动脉深支",
+    "nameLa": "R. profundus a. plantaris medialis",
+    "summaryZh": "足底内侧动脉深支，参与足底内侧深层供血并与弓侧吻合相关教学。网格：Open3D Deep_branch_of_Medial_plantar_artery.r（CC BY-SA 4.0），Kabsch→BP3D，by-sa/。教学示意。",
+    "placeholder": false
+  },
+  {
+    "id": "superficial_branch_medial_plantar_artery",
+    "meshNames": [
+      "Superficial_Branch_Medial_Plantar_Artery_R"
+    ],
+    "layer": "vessel",
+    "nameZh": "足底内侧动脉浅支",
+    "nameLa": "R. superficialis a. plantaris medialis",
+    "summaryZh": "足底内侧动脉浅支（Open3D 源名拼写 planter→plantar 已在教学拉丁名纠正）。沿踇展肌浅层向前，参与足内侧浅层/踇侧皮肤与浅筋膜供血教学。网格：Superficial_branch_of_Medial_planter_artery.r（CC BY-SA 4.0），Kabsch→BP3D，by-sa/。",
+    "placeholder": false
+  },
+  {
     "id": "long_plantar_ligament",
     "meshNames": [
       "Long_Plantar_Ligament_R",

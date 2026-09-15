@@ -120,6 +120,23 @@ describe('assetProvenance', () => {
     expect(getTeachingMeshNote('common_plantar_digital_nerves', 'nerve')).toMatch(/Open3D|Kabsch/);
     expect(getTeachingMeshNote('dorsal_digital_arteries', 'vessel')).toMatch(/FJ2072|组合/);
     expect(getTeachingMeshNote('plantar_metatarsal_arteries', 'vessel')).toMatch(/FJ2096|组合/);
+    expect(getTeachingMeshNote('dorsal_metatarsal_arteries', 'vessel')).toMatch(/组合|Open3D/);
+    expect(getTeachingMeshNote('deep_plantar_arch', 'vessel')).toMatch(/Deep_plantar_arch|深弓/);
     expect(getTeachingMeshNote('calcaneus', 'bone')).toBeNull();
+  });
+
+  it('marks Day 4aa Open3D vessels as BY-SA isolate', () => {
+    for (const id of [
+      'deep_plantar_artery',
+      'deep_plantar_arch',
+      'dorsal_metatarsal_arteries',
+      'deep_branch_medial_plantar_artery',
+      'superficial_branch_medial_plantar_artery',
+    ]) {
+      const p = getStructureProvenance(id, false, 'vessel');
+      expect(p.sourceShort).toBe('Open3D');
+      expect(p.license).toBe('CC-BY-SA-4.0');
+      expect(p.isolatedBySa).toBe(true);
+    }
   });
 });

@@ -5,7 +5,7 @@ Living log of open-source human anatomy projects studied for the right-foot atla
 (CC0 / CC BY into main tree; BY-SA isolated under `public/models/right-foot/by-sa/` + NOTICE;
 reject NC / unknown / All Rights Reserved).
 
-**Last updated**: 2026-09-15  
+**Last updated**: 2026-09-15 (Day 4aa)  
 **Status**: ongoing research — not a finished catalog.
 
 ---
@@ -740,4 +740,27 @@ Soft-tissue under ligament toggle = **1 ligament + 1 tendon**. Still missing pla
 | **Open3DModel — Ankle and Foot** (Nov 2025 submodel of July 2025 lower limb) | https://anatomytool.org/content/open3dmodel-ankle-and-foot-english-labels | **CC BY-SA** (same Open3D project credit) | Teaching sub-package / viewer slice — same donor mesh family already used via monolithic lower-limb OBJ | **deepen / isolate-SA** — prefer continuing named-object extracts from lower-limb OBJ rather than re-downloading submodel unless topology differs |
 
 **Honesty**: No new CC0/CC BY fine-nerve or per-ray dorsal MTA candidates. Day 4y expands ShareAlike nerve teaching set only — not a finished peripheral-nerve atlas.
+
+## Session additions (2026-09-15 · Day 4aa — Open3D fine vessels + license dig)
+
+### Vessel wire (same Open3D donor)
+
+| Item | Note |
+|------|------|
+| Deep plantar artery | Integrated — dorsalis pedis → plantar arch anastomosis teaching |
+| Deep plantar arch | Integrated as BY-SA **detail** complementary to BP3D `plantar_arch` (same deep-arch concept; not dual anatomical arches) |
+| Dorsal metatarsal arteries | Integrated **grouped** — soft ceiling remains (no 1st–4th elemental in donor OBJ) |
+| Deep + superficial branches of medial plantar a. | Integrated (source spelling *planter* on superficial) |
+| Documented only | Perforating arcuate↔deep arch; med/lat tarsal; calcaneal aa.; Open3D trunks already on BP3D |
+| Lesson | Prefer additive anastomosis/branch detail over dual-wiring of the same named trunk |
+
+### NEW license-verified projects
+
+| Project | URL | License verified | Foot relevance | Decision |
+|---------|-----|------------------|----------------|----------|
+| **Parametric 3D CAD model of human foot** (Franciosa; Warwick) | https://doi.org/10.5281/zenodo.5192129 (Zenodo API `license.id` = `cc-by-4.0`) | **CC BY 4.0** | 19-bone CT→CAD foot (phalanges fused); no named muscles/nerves/vessels | **reject** (NV/DI teaching) / **monitor** for FE/plantar-pressure bone CAD only |
+| **Foot primary functional bone segments SSM** (Grant et al.; Griffith) | https://doi.org/10.5281/zenodo.3464747 (Zenodo API `cc-by-4.0`) | **CC BY 4.0** | MRI-segmented talus/calcaneus/midfoot/1st MT point clouds — shape variation, not soft tissue | **reject** (NV) / **monitor** for osteology SSM / registration research |
+| **Open 3D Man Project** (Eungyeol Lee / LUMC consortium) + **open3dviewer** | https://www.eungyeol-lee.com/open3dman · https://github.com/djansma/open3dviewer | Models: **CC BY-SA** (illustrator page); viewer: **GPL-3.0** (GitHub SPDX) | Remodel/sculpt lineage over BodyParts/Z-Anatomy; LUMC multi-university atlas (ongoing). Viewer is software only | **deepen / isolate-SA** for any future mesh extracts; **UX-borrow** viewer patterns; **do not** confuse GPL viewer with MIT atlas code |
+
+**Honesty**: No new CC0/CC BY per-ray dorsal MTA or digital artery candidates. Day 4aa expands ShareAlike vessel teaching set only — **not** a finished vascular atlas.
 

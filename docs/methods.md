@@ -1,7 +1,7 @@
 # Methods
 
 **Project**: Right Foot Anatomy Atlas (Teaching-Grade Interactive 3D)  
-**Version**: Week 2 Day 4z (104 structures.json placeholder:false; ligament/tendon = BP3D long plantar + Achilles + 27 Open3D BY-SA; nerves = 6 ZA + 11 Open3D; TA2 soft-tissue still incomplete)  
+**Version**: Week 2 Day 4aa (109 structures.json placeholder:false; ligament/tendon = BP3D long plantar + Achilles + 27 Open3D BY-SA; nerves = 6 ZA + 11 Open3D; vessels = 7 BP3D + 7 Open3D BY-SA; TA2 soft-tissue still incomplete)  
 **Date**: 2026-09-15  
 **Licenses**: Code MIT | Assets CC BY 4.0 / CC0 1.0 / CC BY-SA 4.0 (isolated)
 
@@ -9,7 +9,7 @@
 
 ## Overview
 
-This atlas integrates open-licensed anatomical meshes from BodyParts3D, Universiti Malaya, Z-Anatomy, and Open3D (BY-SA isolate) for interactive right-foot teaching. Real 3D meshes cover **osteology 26/26**, wired muscles including UM teaching extrinsics (TA/FL/EDL/EHL) + BY-SA DI, vessels including 2 honest BP3D grouped meshes + BY-SA proximal arteries, 6 Z-Anatomy BY-SA trunk nerves + **11 Open3D BY-SA** fine/cutaneous/calcaneal/dorsal-digital nerves (Day 4x–4z), and soft tissue under the ligament/tendon toggle: **1 BP3D ligament** (long plantar) + **1 BP3D tendon** (Achilles) + **27 Open3D BY-SA** teaching meshes (Day 4s–4w; Kabsch→BP3D). **Entry-level placeholders: 0** — but this is **not** TA2-complete (further tarsal/toe bands unextracted; Lisfranc/retinacula/some midfoot bands grouped; commons/proprii/dorsal digitals are grouped teaching objects; sural→LDC continuity note-only on LDC; dorsal metatarsal arteries not individually split). See `docs/week2-ligament-fascia-search.md` Day 4s–4z.
+This atlas integrates open-licensed anatomical meshes from BodyParts3D, Universiti Malaya, Z-Anatomy, and Open3D (BY-SA isolate) for interactive right-foot teaching. Real 3D meshes cover **osteology 26/26**, wired muscles including UM teaching extrinsics (TA/FL/EDL/EHL) + BY-SA DI, vessels including 2 honest BP3D grouped meshes + BY-SA proximal arteries + **5 Day 4aa Open3D BY-SA** fine/grouped vessels (deep plantar a./arch, grouped dorsal MTA, medial plantar branches), 6 Z-Anatomy BY-SA trunk nerves + **11 Open3D BY-SA** fine/cutaneous/calcaneal/dorsal-digital nerves (Day 4x–4z), and soft tissue under the ligament/tendon toggle: **1 BP3D ligament** (long plantar) + **1 BP3D tendon** (Achilles) + **27 Open3D BY-SA** teaching meshes (Day 4s–4w; Kabsch→BP3D). **Entry-level placeholders: 0** — but this is **not** TA2-complete (further tarsal/toe bands unextracted; Lisfranc/retinacula/some midfoot bands grouped; commons/proprii/dorsal digitals are grouped teaching objects; sural→LDC continuity note-only on LDC; dorsal metatarsal arteries wired as **grouped** Open3D BY-SA only — still not individually split). See `docs/week2-ligament-fascia-search.md` Day 4s–4aa.
 
 **Soft disclaimer (teaching vs clinical)**: Meshes and Kabsch co-registration are intended for **anatomy education** (spatial relationships, named structures, layer exploration). They are **not** validated for clinical diagnosis, treatment planning, surgical navigation, implant sizing, or patient-specific modeling. Landmark residuals (~2–3 mm mean) are teaching-grade only.
 
@@ -421,4 +421,17 @@ Commit history documents asset decisions, `structures.json` evolution, and `Foot
 2. Sural→LDC: Open3D `Sural_nerve,_Lateral_dorsal_cutaneous_nerve.r` has **distinct** transitional verts (Jaccard 0 vs LDC and vs sural). Documented as continuity note on `lateral_dorsal_cutaneous_nerve` rather than wiring a third mesh (avoids dual-source overlap with Z-Anatomy sural + Open3D LDC).
 3. Teaching polish: nerve sub-group filter (8 groups) mirroring ligament sub-groups; README coverage table refreshed from live census (104 entry / 99 unique).
 4. Honesty: nerve layer now **17** teaching meshes (6 ZA + 11 Open3D) — **still not** a finished peripheral-nerve atlas.
+
+## Day 4aa — Open3D fine vessels / plantar-arch detail (2026-09-15)
+
+1. Scanned `lower-limb.obj` RIGHT arterial objects. **No** individually named 1st–4th dorsal/plantar metatarsal or proper digital artery elementals — only grouped plurals.
+2. Integrated **5** BY-SA via `scripts/extract_open3d_vessels.py` + Day 4m Kabsch + `obj2gltf` (spatial QA all **accept** → `vessel_spatial_qa.json`):
+   - `Deep_plantar_artery.r` → `deep_plantar_artery`
+   - `Deep_plantar_arch.r` → `deep_plantar_arch` (BY-SA deep-arch detail; complements BP3D `plantar_arch` concept — not a second anatomical arch)
+   - `Dorsal_metatarsal_arteries.r` → `dorsal_metatarsal_arteries` (**grouped**)
+   - `Deep_branch_of_Medial_plantar_artery.r` → `deep_branch_medial_plantar_artery`
+   - `Superficial_branch_of_Medial_planter_artery.r` → `superficial_branch_medial_plantar_artery` (source spelling *planter*)
+3. Documented-only (not wired): perforating arcuate↔deep arch; lateral/medial tarsal; calcaneal arterial branches; Open3D plantar metatarsal / dorsal digital (BP3D already main-tree); Open3D medial/lateral plantar trunks (BP3D present).
+4. Census: **109** entry / **104** unique; vessels **14** (7 BP3D + 7 Open3D BY-SA).
+5. Honesty: dorsal MTA remains **grouped-only** soft ceiling; vessel layer teaching-expanded — **not** a finished vascular atlas.
 

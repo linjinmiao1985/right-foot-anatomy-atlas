@@ -111,8 +111,8 @@ const ADDITIONAL_MUSCLE_PARTS: Record<string, string[]> = {
   ],
 };
 
-// Real vessel GLB models - 7 right foot arteries from BodyParts3D (CC BY 4.0)
-// Includes 2 honest grouped meshes (dorsal digital + plantar metatarsal, not individually split)
+// Real vessel GLB models — BP3D main-tree arteries + Open3D BY-SA fine/proximal (Day 4aa)
+// Includes honest grouped meshes (BP3D dorsal digital + plantar metatarsal; Open3D dorsal metatarsal)
 const REAL_VESSEL_MODELS: Record<string, string> = {
   'dorsalis_pedis_artery': '/models/right-foot/dorsalis_pedis_artery.glb',
   'plantar_artery_medial': '/models/right-foot/medial_plantar_artery.glb',
@@ -124,6 +124,12 @@ const REAL_VESSEL_MODELS: Record<string, string> = {
   // Open3DModel / AnatomyTOOL CC BY-SA 4.0 — isolated under by-sa/ (not main CC BY claim)
   'posterior_tibial_artery': '/models/right-foot/by-sa/posterior_tibial_artery.glb',
   'fibular_artery': '/models/right-foot/by-sa/fibular_artery.glb',
+  // Day 4aa — deep plantar / arch detail + grouped dorsal MTA + medial plantar branches
+  'deep_plantar_artery': '/models/right-foot/by-sa/deep_plantar_artery.glb',
+  'deep_plantar_arch': '/models/right-foot/by-sa/deep_plantar_arch.glb',
+  'dorsal_metatarsal_arteries': '/models/right-foot/by-sa/dorsal_metatarsal_arteries.glb', // GROUPED
+  'deep_branch_medial_plantar_artery': '/models/right-foot/by-sa/deep_branch_medial_plantar_artery.glb',
+  'superficial_branch_medial_plantar_artery': '/models/right-foot/by-sa/superficial_branch_medial_plantar_artery.glb',
 };
 
 // Real nerve GLBs — Z-Anatomy trunks (CURVE→tube) + Open3D fine/branch (volumetric, Kabsch→BP3D).

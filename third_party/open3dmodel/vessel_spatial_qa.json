@@ -1,0 +1,245 @@
+{
+  "method": "Open3D vessels Kabsch\u2192BP3D mm (Day 4m transform); QA vs RIGHT foot bone AABB (\u00b140 mm pad) + Open3D arterial refs (med/lat plantar, deep arch, dorsalis pedis)",
+  "kabsch_mean_residual_mm": 2.6124537404764445,
+  "foot_bone_aabb_mm": [
+    [
+      -169.32699584960938,
+      -236.04400634765625,
+      -70.39230346679688
+    ],
+    [
+      -44.87580108642578,
+      -24.00510025024414,
+      3.1109299659729004
+    ]
+  ],
+  "padded_foot_aabb_mm": [
+    [
+      -209.32699584960938,
+      -276.04400634765625,
+      -110.39230346679688
+    ],
+    [
+      -4.875801086425781,
+      15.99489974975586,
+      43.1109299659729
+    ]
+  ],
+  "open3d_arterial_ref_centroids_mm": {
+    "Lateral_plantar_artery.r": [
+      -84.486,
+      -92.202,
+      -47.628
+    ],
+    "Dorsal_pedis_artery.r": [
+      -88.661,
+      -117.77,
+      -6.903
+    ],
+    "Deep_plantar_arch.r": [
+      -105.918,
+      -133.478,
+      -44.412
+    ],
+    "Medial_plantar_artery.r": [
+      -72.733,
+      -92.377,
+      -40.365
+    ]
+  },
+  "reject_if": "wrong_side (X>0) OR <85% verts inside pad OR absurd far with no bone overlap",
+  "inventory_note": "No individually named 1st\u20134th dorsal/plantar metatarsal or proper digital artery objects in lower-limb.obj \u2014 only grouped plurals.",
+  "documented_only": {
+    "Perforating_br._between_Arcuate_a._and_Deep_plantar_arch.r": "perforating arcuate\u2194deep plantar arch \u2014 defer",
+    "Lateral_tarsal_artery.r": "overlaps teaching niche of arcuate/dorsalis pedis \u2014 defer",
+    "Medial_tarsal_arteries.r": "grouped tarsals \u2014 defer",
+    "Medial_calcaneal_artery.r": "heel arterial \u2014 defer",
+    "Lateral_calcaneal_branch_of_fibular_artery.r": "heel arterial \u2014 defer",
+    "Plantar_metatarsal_arteries.r": "BP3D plantar_metatarsal already main-tree grouped",
+    "Dorsal_digital_arteries_of_foot.r": "BP3D dorsal_digital already main-tree grouped",
+    "Medial_plantar_artery.r": "BP3D plantar_artery_medial present",
+    "Lateral_plantar_artery.r": "BP3D plantar_artery_lateral present"
+  },
+  "integrated": {
+    "deep_plantar_artery": {
+      "id": "deep_plantar_artery",
+      "open3d": "Deep_plantar_artery.r",
+      "kind": "integrated",
+      "decision": "accept",
+      "reasons": [],
+      "centroid_mm": [
+        -97.605,
+        -145.744,
+        -30.438
+      ],
+      "aabb_mm": [
+        [
+          -101.146,
+          -147.141,
+          -37.123
+        ],
+        [
+          -91.778,
+          -142.909,
+          -22.944
+        ]
+      ],
+      "n_verts": 156,
+      "n_faces": 144,
+      "inside_padded_frac": 1.0,
+      "wrong_side": false,
+      "bone_aabb_overlap": true,
+      "grouped": false,
+      "dist_to_open3d_refs_mm": {
+        "Lateral_plantar_artery.r": 57.74,
+        "Dorsal_pedis_artery.r": 37.64,
+        "Deep_plantar_arch.r": 20.37,
+        "Medial_plantar_artery.r": 59.71
+      }
+    },
+    "deep_plantar_arch": {
+      "id": "deep_plantar_arch",
+      "open3d": "Deep_plantar_arch.r",
+      "kind": "integrated",
+      "decision": "accept",
+      "reasons": [],
+      "centroid_mm": [
+        -105.896,
+        -133.408,
+        -44.432
+      ],
+      "aabb_mm": [
+        [
+          -111.645,
+          -146.921,
+          -54.034
+        ],
+        [
+          -99.88,
+          -115.179,
+          -36.794
+        ]
+      ],
+      "n_verts": 444,
+      "n_faces": 432,
+      "inside_padded_frac": 1.0,
+      "wrong_side": false,
+      "bone_aabb_overlap": true,
+      "grouped": false,
+      "dist_to_open3d_refs_mm": {
+        "Lateral_plantar_artery.r": 46.55,
+        "Dorsal_pedis_artery.r": 44.16,
+        "Deep_plantar_arch.r": 0.08,
+        "Medial_plantar_artery.r": 52.91
+      }
+    },
+    "dorsal_metatarsal_arteries": {
+      "id": "dorsal_metatarsal_arteries",
+      "open3d": "Dorsal_metatarsal_arteries.r",
+      "kind": "integrated",
+      "decision": "accept",
+      "reasons": [],
+      "centroid_mm": [
+        -130.837,
+        -185.94,
+        -59.763
+      ],
+      "aabb_mm": [
+        [
+          -165.069,
+          -228.096,
+          -68.671
+        ],
+        [
+          -85.307,
+          -124.277,
+          -23.514
+        ]
+      ],
+      "n_verts": 8352,
+      "n_faces": 8208,
+      "inside_padded_frac": 1.0,
+      "wrong_side": false,
+      "bone_aabb_overlap": true,
+      "grouped": true,
+      "dist_to_open3d_refs_mm": {
+        "Lateral_plantar_artery.r": 105.27,
+        "Dorsal_pedis_artery.r": 96.02,
+        "Deep_plantar_arch.r": 60.07,
+        "Medial_plantar_artery.r": 111.83
+      }
+    },
+    "deep_branch_medial_plantar_artery": {
+      "id": "deep_branch_medial_plantar_artery",
+      "open3d": "Deep_branch_of_Medial_plantar_artery.r",
+      "kind": "integrated",
+      "decision": "accept",
+      "reasons": [],
+      "centroid_mm": [
+        -88.18,
+        -131.297,
+        -46.81
+      ],
+      "aabb_mm": [
+        [
+          -101.388,
+          -144.297,
+          -52.591
+        ],
+        [
+          -79.216,
+          -117.456,
+          -39.564
+        ]
+      ],
+      "n_verts": 456,
+      "n_faces": 432,
+      "inside_padded_frac": 1.0,
+      "wrong_side": false,
+      "bone_aabb_overlap": true,
+      "grouped": false,
+      "dist_to_open3d_refs_mm": {
+        "Lateral_plantar_artery.r": 39.28,
+        "Dorsal_pedis_artery.r": 42.14,
+        "Deep_plantar_arch.r": 18.03,
+        "Medial_plantar_artery.r": 42.37
+      }
+    },
+    "superficial_branch_medial_plantar_artery": {
+      "id": "superficial_branch_medial_plantar_artery",
+      "open3d": "Superficial_branch_of_Medial_planter_artery.r",
+      "kind": "integrated",
+      "decision": "accept",
+      "reasons": [],
+      "centroid_mm": [
+        -93.749,
+        -189.254,
+        -64.726
+      ],
+      "aabb_mm": [
+        [
+          -116.855,
+          -228.766,
+          -70.915
+        ],
+        [
+          -76.948,
+          -118.639,
+          -47.105
+        ]
+      ],
+      "n_verts": 1020,
+      "n_faces": 1008,
+      "inside_padded_frac": 1.0,
+      "wrong_side": false,
+      "bone_aabb_overlap": true,
+      "grouped": false,
+      "dist_to_open3d_refs_mm": {
+        "Lateral_plantar_artery.r": 98.98,
+        "Dorsal_pedis_artery.r": 92.08,
+        "Deep_plantar_arch.r": 60.6,
+        "Medial_plantar_artery.r": 102.08
+      }
+    }
+  }
+}

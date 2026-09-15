@@ -1156,3 +1156,13 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 - Teaching polish: nerve sub-group filter (8 groups) mirroring ligament sub-groups; README coverage from live census.
 - No finished-product claims.
 
+## Week 2 Day 4aa (2026-09-15) — Open3D fine vessels + 3 license digs
+
+- Pulled branch at 6ebad95 (already current).
+- Scanned Open3D `lower-limb.obj` RIGHT arteries: no individually named 1st–4th MTA/digital aa. (grouped plurals only).
+- Integrated 5 BY-SA vessels (Kabsch Day 4m; `scripts/extract_open3d_vessels.py`; QA all accept): deep plantar a., deep plantar arch (detail vs BP3D plantar_arch), grouped dorsal MTA, deep + superficial medial plantar branches.
+- Learning log: +3 license-verified (Zenodo parametric foot CAD CC BY; Zenodo foot bone SSM CC BY; Open 3D Man BY-SA + open3dviewer GPL-3.0).
+- Census: 109 entry / 104 unique; vessels 14 (7 BP3D + 7 Open3D BY-SA).
+- integrity-audit + vitest + build; commit + push.
+- No finished-product claim.
+

@@ -401,3 +401,16 @@ Nerve layer: 6 Z-Anatomy trunks + 4 Open3D fine/branch = **10** teaching meshes.
 
 Nerve layer: 6 Z-Anatomy trunks + 10 Open3D = **16** teaching meshes. Some remain grouped. No finished-product claim.
 
+## Day 4aa — Open3D fine vessels (2026-09-15)
+
+Scanned RIGHT arterial `o ` names in literature `lower-limb.obj`. **No** 1st–4th dorsal/plantar metatarsal or proper digital artery elementals.
+
+| Object | Stem | QA | Decision |
+|--------|------|----|----------|
+| Deep_plantar_artery.r | deep_plantar_artery | accept | **Integrated** |
+| Deep_plantar_arch.r | deep_plantar_arch | accept | **Integrated** (detail vs BP3D plantar_arch) |
+| Dorsal_metatarsal_arteries.r | dorsal_metatarsal_arteries | accept | **Integrated (grouped)** |
+| Deep_branch_of_Medial_plantar_artery.r | deep_branch_medial_plantar_artery | accept | **Integrated** |
+| Superficial_branch_of_Medial_planter_artery.r | superficial_branch_medial_plantar_artery | accept | **Integrated** |
+
+Soft ceiling: dorsal MTA still **grouped only**. Reports: `vessel_extract_aabb.json`, `vessel_spatial_qa.json`.

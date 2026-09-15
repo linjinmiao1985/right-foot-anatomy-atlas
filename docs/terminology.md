@@ -168,9 +168,14 @@
 | lateral_plantar_artery | A. plantaris lateralis | 足底外侧动脉 | A. tibialis posterior | ✅ | 人解9版 p432 | ✅ |
 | plantar_arch | Arcus plantaris | 足底动脉弓 | A. plantaris lateralis + A. dorsalis pedis | ✅ | 人解9版 p432 | ✅ |
 | plantar_metatarsal_arteries | Aa. metatarsales plantares (combined) | 跖底跖骨动脉（组合） | Arcus plantaris | ✅ | 人解9版 p432；BP3D grouped mesh | ✅ honest grouped |
-| fibular_artery | A. fibularis | 腓动脉 | A. tibialis posterior | ✅ | 人解9版 p431 | ✅ |
+| fibular_artery | A. fibularis | 腓动脉 | A. tibialis posterior | ✅ | 人解9版 p431 | ✅ Open3D BY-SA |
+| deep_plantar_artery | A. plantaris profunda | 足底深动脉 | A. dorsalis pedis | ✅ | 人解9版 / TA2 | ✅ Open3D Day 4aa |
+| deep_plantar_arch | Arcus plantaris profundus | 足底深动脉弓（Open3D） | A. plantaris lat. + A. plantaris profunda | ✅ | 人解9版 p432 | ✅ Open3D BY-SA detail vs BP3D plantar_arch |
+| dorsal_metatarsal_arteries | Aa. metatarsales dorsales (combined) | 跖背动脉（组合） | A. arcuata / A. dorsalis pedis | ✅ | 人解9版 p430 | ✅ Open3D grouped Day 4aa |
+| deep_branch_medial_plantar_artery | R. profundus a. plantaris medialis | 足底内侧动脉深支 | A. plantaris medialis | ✅ | TA2 / 人解9版 | ✅ Open3D Day 4aa |
+| superficial_branch_medial_plantar_artery | R. superficialis a. plantaris medialis | 足底内侧动脉浅支 | A. plantaris medialis | ✅ | TA2 / 人解9版 | ✅ Open3D Day 4aa |
 
-**血管层验证总结**: 9/9 ✅ 全部通过TA2验证
+**血管层验证总结**: 主干 9 + Open3D 细支/组合 5（教学扩展；跖背仍为组合，非逐射线图谱）
 
 **动脉弓系统**:
 - **足背**: 足背动脉 → 弓状动脉 → 跖背动脉 → 趾背动脉

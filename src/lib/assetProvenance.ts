@@ -86,6 +86,12 @@ const OPEN3D_BY_SA = new Set([
   'superficial_branch_lateral_plantar_nerve',
   'dorsal_digital_superficial_fibular',
   'dorsal_digital_deep_fibular',
+  // Day 4aa Open3D vessels
+  'deep_plantar_artery',
+  'deep_plantar_arch',
+  'dorsal_metatarsal_arteries',
+  'deep_branch_medial_plantar_artery',
+  'superficial_branch_medial_plantar_artery',
 ]);
 
 const BP3D: ProvenanceInfo = {
@@ -147,7 +153,7 @@ export function licenseLabel(license: AssetLicense): string {
 
 /** Persistent footer copy — keep factual, no “complete atlas” claims. */
 export const ATLAS_SOURCE_FOOTER =
-  '网格来源: BodyParts3D CC BY 4.0 · UM CC0 1.0 · Z-Anatomy 干神经 / Open3D DI+动脉+踝足韧带/支持带/足底腱膜+细支/皮支/背侧趾支神经 CC BY-SA 4.0（by-sa/ 隔离）';
+  '网格来源: BodyParts3D CC BY 4.0 · UM CC0 1.0 · Z-Anatomy 干神经 / Open3D DI+近端/细支动脉+踝足韧带/支持带/足底腱膜+细支/皮支/背侧趾支神经 CC BY-SA 4.0（by-sa/ 隔离）';
 
 /** Short panel copy about mesh fidelity — teaching honesty, not finished-product claims. */
 export function getTeachingMeshNote(structureId: string, layer: string): string | null {
@@ -165,6 +171,19 @@ export function getTeachingMeshNote(structureId: string, layer: string): string 
   }
   if (structureId === 'posterior_tibial_artery' || structureId === 'fibular_artery') {
     return '网格：Open3DModel lower-limb（CC BY-SA），Kabsch 对齐至 BP3D mm；by-sa/ 隔离，非主树 CC BY 主张。';
+  }
+  if (structureId === 'dorsal_metatarsal_arteries') {
+    return '网格：Open3D Dorsal_metatarsal_arteries.r 组合体——无 1st–4th 独立 elemental。教学级（组合），非逐射线血管图谱；by-sa/。';
+  }
+  if (structureId === 'deep_plantar_arch') {
+    return '网格：Open3D Deep_plantar_arch.r（CC BY-SA）— 与 BP3D 足底动脉弓同属深弓教学概念的隔离分割细节；非两套不同解剖弓。';
+  }
+  if (
+    structureId === 'deep_plantar_artery'
+    || structureId === 'deep_branch_medial_plantar_artery'
+    || structureId === 'superficial_branch_medial_plantar_artery'
+  ) {
+    return '网格：Open3DModel lower-limb（CC BY-SA），Kabsch→BP3D mm；足底深支/内侧动脉分支教学对象；仅 by-sa/ 加载。';
   }
   if (layer === 'vessel') {
     return '网格：BP3D 足部血管多为命名主干；末梢分支常为组合体。教学示意，非介入导航级。';

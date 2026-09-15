@@ -36,7 +36,7 @@ Meshes in this directory are licensed under **CC BY-SA 4.0** (ShareAlike). Deriv
 **License**: CC BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/  
 **Modifications**: Extracted named right-side (`.r`) objects to OBJ, converted to glTF 2.0 Binary (obj2gltf); no topology edits. Vertex positions later **Kabsch-aligned** from Open3D meters into BodyParts3D millimeter frame (landmarks: Calcaneus, Talus, Navicular, Cuboid, medial/intermediate/lateral cuneiform, MT1–5; Day 4m re-fit mean residual ≈2.6 mm vs prior 8-landmark ≈3.0 mm that excluded mis-ID cuboid/cuneiforms) so the atlas `scale={[0.01,0.01,0.01]}` convention applies. Transform JSON: `third_party/open3dmodel/open3d_to_bp3d_transform.json`.
 
-**Inventory note**: Day 4t–4w ligaments/retinacula/fascia wired selectively. Day 4x–4z add Open3D fine plantar / cutaneous / calcaneal / dorsal digital (superficial + deep fibular) nerve meshes. Sural→LDC continuity object remains a teaching note on LDC (distinct transitional geometry; not wired as a third mesh). Same OBJ still has further ligament bands and other nerve terminals not wired.
+**Inventory note**: Day 4t–4w ligaments/retinacula/fascia wired selectively. Day 4x–4z add Open3D fine plantar / cutaneous / calcaneal / dorsal digital (superficial + deep fibular) nerve meshes. Day 4aa adds Open3D fine vessels (deep plantar a./arch, grouped dorsal MTA, medial plantar branches). Sural→LDC continuity object remains a teaching note on LDC. Same OBJ still has further ligament bands, calcaneal/tarsal arteries, and nerve terminals not wired.
 
 
 ### Ankle/foot ligaments, retinacula + plantar fascia (Open3DModel)
@@ -112,6 +112,20 @@ Day 4y wires six Day 4x volume-deferred QA-pass nerves (teaching priority). Stil
 - Main tree (bones / most muscles / most vessels): MIT code + CC BY 4.0 / CC0
 - This `by-sa/` module: optional ShareAlike content (Z-Anatomy trunk nerves + Open3D fine/cutaneous nerves, DI, proximal arteries, ankle/foot ligaments, retinacula, plantar fascia)
 - Do **not** merge these GLBs into a CC BY-only redistribution claim
+
+### Day 4aa — Fine vessels / plantar-arch detail (Open3DModel)
+
+53. `deep_plantar_artery.glb` — from `Deep_plantar_artery.r`
+54. `deep_plantar_arch.glb` — from `Deep_plantar_arch.r` (BY-SA deep-arch detail; complements BP3D `plantar_arch` teaching concept — not a second anatomical arch)
+55. `dorsal_metatarsal_arteries.glb` — from `Dorsal_metatarsal_arteries.r` (**grouped** teaching object — no 1st–4th elemental in donor OBJ)
+56. `deep_branch_medial_plantar_artery.glb` — from `Deep_branch_of_Medial_plantar_artery.r`
+57. `superficial_branch_medial_plantar_artery.glb` — from `Superficial_branch_of_Medial_planter_artery.r` (source spelling *planter*; teaching Latin corrected)
+
+**Pipeline**: `scripts/extract_open3d_vessels.py` + Day 4m Kabsch + `obj2gltf`. Spatial QA: `third_party/open3dmodel/vessel_spatial_qa.json` (all accept). AABB extract: `vessel_extract_aabb.json`.
+
+**Honesty**: Dorsal metatarsal arteries remain **grouped only** (soft ceiling). Medial/lateral plantar trunks, dorsalis pedis, arcuate, plantar metatarsal, and dorsal digital stay on BP3D main tree where already present. No individually named 1st–4th MTA/digital artery objects in donor OBJ.
+
+
 
 ## Removal
 
