@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { getStructureById, getStructureByMeshName } from './structureLookup';
+import { getStructureById, getStructureByMeshName, searchStructures } from './structureLookup';
 
 describe('structureLookup', () => {
   it('should find structure by id', () => {
@@ -23,5 +23,19 @@ describe('structureLookup', () => {
   it('should return undefined for unmapped mesh', () => {
     const structure = getStructureByMeshName('UnmappedMesh_123');
     expect(structure).toBeUndefined();
+  });
+
+  it('searches by Chinese name', () => {
+    const hits = searchStructures('跟骨');
+    expect(hits.some((s) => s.id === 'calcaneus')).toBe(true);
+  });
+
+  it('searches by Latin name fragment', () => {
+    const hits = searchStructures('interossei dorsales');
+    expect(hits.some((s) => s.id === 'interossei_dorsales')).toBe(true);
+  });
+
+  it('returns empty for blank query', () => {
+    expect(searchStructures('   ')).toEqual([]);
   });
 });

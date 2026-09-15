@@ -110,3 +110,19 @@ If Open3DModel remains inaccessible, evaluate Z-Anatomy:
 **Blocker Impact**: Nerve layer remains schematic (6/6 placeholder)  
 **Week Sprint Status**: Not blocking Day 3-4 work (focus on docs + remaining vessels)  
 **Honest Disclosure**: Nerve gap documented in methods.md + README
+
+---
+
+## Resolution (2026-09-15)
+
+Literature Scout provided the real package outside this git tree:
+
+- `/workspace/literature/open3d-assets/lower-limb-obj.zip` (~20 MB)
+- `/workspace/literature/open3d-assets/lower-limb.obj` (~100 MB)
+- `/workspace/literature/open3d-assets/NOTICE.txt` (CC BY-SA 4.0)
+
+**Do not use** this directory’s `lower-limb-obj.zip` stub (~16 KB placeholder).
+
+Extracted teaching meshes (DI 1–4, posterior tibial + fibular arteries) live in
+`public/models/right-foot/by-sa/` with updated NOTICE.md. Intermediate OBJs under
+`third_party/open3dmodel/extracted/`.

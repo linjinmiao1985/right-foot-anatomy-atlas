@@ -7,9 +7,10 @@ interface ViewportProps {
   onMeshClick: (meshName: string) => void;
   visibleLayers: Set<Layer>;
   selectedMeshName: string | null;
+  isolateMode?: boolean;
 }
 
-export default function Viewport({ onMeshClick, visibleLayers, selectedMeshName }: ViewportProps) {
+export default function Viewport({ onMeshClick, visibleLayers, selectedMeshName, isolateMode = false }: ViewportProps) {
   return (
     <Canvas
       camera={{ 
@@ -33,7 +34,12 @@ export default function Viewport({ onMeshClick, visibleLayers, selectedMeshName 
         fadeStrength={0.8}
       />
 
-      <FootModel visibleLayers={visibleLayers} onMeshClick={onMeshClick} selectedMeshName={selectedMeshName} />
+      <FootModel
+        visibleLayers={visibleLayers}
+        onMeshClick={onMeshClick}
+        selectedMeshName={selectedMeshName}
+        isolateMode={isolateMode}
+      />
 
       <OrbitControls 
         enableDamping 

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Html, useGLTF } from '@react-three/drei';
-import { getAllStructures } from '../lib/structureLookup';
+import { getAllStructures, getStructureByMeshName } from '../lib/structureLookup';
 import { LAYER_CONFIG } from '../lib/layers';
 import type { Layer } from '../types/anatomy';
 import type { AnatomyStructure } from '../types/anatomy';
@@ -9,6 +9,8 @@ interface FootModelProps {
   visibleLayers: Set<Layer>;
   onMeshClick: (meshName: string) => void;
   selectedMeshName: string | null;
+  /** When true and a mesh is selected, hide all other structures (GraphAnatomy / Grypa isolate UX-borrow). */
+  isolateMode?: boolean;
 }
 
 interface PlaceholderMesh {
@@ -74,12 +76,19 @@ const REAL_MUSCLE_MODELS: Record<string, string> = {
   'plantar_interosseous_1': '/models/right-foot/plantar_interosseous_1st.glb',
   'plantar_interosseous_2': '/models/right-foot/plantar_interosseous_2nd.glb',
   'plantar_interosseous_3': '/models/right-foot/plantar_interosseous_3rd.glb',
+  // Open3DModel / AnatomyTOOL CC BY-SA 4.0 — isolated under by-sa/
+  'interossei_dorsales': '/models/right-foot/by-sa/dorsal_interosseous_1st.glb',
 };
 
 // Additional muscle heads as separate meshes
 const ADDITIONAL_MUSCLE_PARTS: Record<string, string[]> = {
   'adductor_hallucis': [
     '/models/right-foot/adductor_hallucis_transverse.glb',
+  ],
+  'interossei_dorsales': [
+    '/models/right-foot/by-sa/dorsal_interosseous_2nd.glb',
+    '/models/right-foot/by-sa/dorsal_interosseous_3rd.glb',
+    '/models/right-foot/by-sa/dorsal_interosseous_4th.glb',
   ],
 };
 
@@ -93,6 +102,9 @@ const REAL_VESSEL_MODELS: Record<string, string> = {
   'arcuate_artery': '/models/right-foot/arcuate_artery.glb',
   'dorsal_digital_arteries': '/models/right-foot/dorsal_digital_arteries.glb', // BP3D BP6049/FJ2072 (grouped)
   'plantar_metatarsal_arteries': '/models/right-foot/plantar_metatarsal_arteries_grouped.glb', // BP3D BP6060/FJ2096 (grouped)
+  // Open3DModel / AnatomyTOOL CC BY-SA 4.0 — isolated under by-sa/ (not main CC BY claim)
+  'posterior_tibial_artery': '/models/right-foot/by-sa/posterior_tibial_artery.glb',
+  'fibular_artery': '/models/right-foot/by-sa/fibular_artery.glb',
 };
 
 // Real nerve GLB models - 6 right foot nerves from Z-Anatomy (CC BY-SA 4.0)
@@ -106,7 +118,7 @@ const REAL_NERVE_MODELS: Record<string, string> = {
   'sural_nerve': '/models/right-foot/by-sa/sural_nerve.glb',
 };
 
-export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName }: FootModelProps) {
+export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName, isolateMode = false }: FootModelProps) {
   const [placeholderMeshes, setPlaceholderMeshes] = useState<PlaceholderMesh[]>([]);
   const [hoveredMesh, setHoveredMesh] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
@@ -178,6 +190,15 @@ export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName
       {placeholderMeshes.map(({ structure, meshName, position, size }) => {
         const isVisible = visibleLayers.has(structure.layer);
         if (!isVisible) return null;
+
+        // Isolate: keep selected structure (any of its meshNames) only
+        if (isolateMode && selectedMeshName) {
+          const selectedStruct = getStructureByMeshName(selectedMeshName);
+          const keep =
+            structure.meshNames.includes(selectedMeshName) ||
+            (selectedStruct != null && selectedStruct.id === structure.id);
+          if (!keep) return null;
+        }
 
         const color = LAYER_CONFIG[structure.layer].color;
         const isSelected = meshName === selectedMeshName;
@@ -524,8 +545,8 @@ function RealMuscleModel({
             <div style={{ fontSize: '0.75rem', opacity: 0.8, marginTop: '0.25rem' }}>
               {structure.nameLa}
             </div>
-            <div style={{ fontSize: '0.7rem', color: '#ff8800', marginTop: '0.25rem' }}>
-              BodyParts3D
+            <div style={{ fontSize: '0.7rem', color: modelPath.includes('/by-sa/') ? '#a78bfa' : '#ff8800', marginTop: '0.25rem' }}>
+              {modelPath.includes('/by-sa/') ? 'Open3D BY-SA' : 'BodyParts3D'}
             </div>
           </div>
         </Html>
@@ -613,8 +634,8 @@ function RealVesselModel({
             <div style={{ fontSize: '0.75rem', opacity: 0.8, marginTop: '0.25rem' }}>
               {structure.nameLa}
             </div>
-            <div style={{ fontSize: '0.7rem', color: '#ff3333', marginTop: '0.25rem' }}>
-              BodyParts3D
+            <div style={{ fontSize: '0.7rem', color: modelPath.includes('/by-sa/') ? '#a78bfa' : '#ff3333', marginTop: '0.25rem' }}>
+              {modelPath.includes('/by-sa/') ? 'Open3D BY-SA' : 'BodyParts3D'}
             </div>
           </div>
         </Html>

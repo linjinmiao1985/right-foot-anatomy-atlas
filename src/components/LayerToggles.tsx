@@ -130,7 +130,7 @@ export default function LayerToggles({
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
           <span style={legendChip('#a78bfa')}>SA</span>
-          <span>神经层 BY-SA 隔离加载</span>
+          <span>BY-SA 隔离（神经 / DI / 近端动脉）</span>
         </div>
       </div>
     </div>

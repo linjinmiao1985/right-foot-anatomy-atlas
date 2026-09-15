@@ -131,7 +131,7 @@ reject NC / unknown / All Rights Reserved).
 | HuBMAP HRA organs | CC BY 4.0 | Not foot | No integrate |
 | New Zenodo/NIH hits | mixed | No clear DI CC0/BY | None integrated |
 
-**Still open gaps**: `interossei_dorsales`, `posterior_tibial_artery`, `fibular_artery` remain placeholders. Prefer waiting for clear CC0/CC BY meshes over fake splits.
+**Gap update (later same day)**: Open3DModel lower-limb OBJ supplied CC BY-SA 4.0 meshes for `interossei_dorsales` (1st–4th), `posterior_tibial_artery`, and `fibular_artery` — integrated under `by-sa/` isolation only (not main CC BY claim). Prefer CC0/CC BY replacements if they appear later.
 
 ---
 
@@ -149,7 +149,121 @@ Documented implementations (ideas only — no third-party UI code copied):
    - Show all / hide all quick actions.  
    - Compact legend key distinguishing real mesh vs placeholder.
 
+3. **Structure search ZH/LA + isolate** (from jixiangying/anatomy, BioLens, GraphAnatomy, Grypa-JJ, OMFAtlas)  
+   - Top-left search box matches `nameZh` / `nameLa` / id; selecting opens StructurePanel.  
+   - Panel button **仅此 · Isolate** hides other meshes while selection is active (Esc clears).  
+   - Ideas only — no third-party UI code copied.
+
 ---
+
+
+---
+
+## Session additions (2026-09-15 · continued)
+
+### 7. Grypa-JJ/anatomy-atlas-3d
+
+| Field | Value |
+|-------|-------|
+| **Name** | Anatomy Atlas 3D |
+| **URL** | https://github.com/Grypa-JJ/anatomy-atlas-3d |
+| **Official license** | Repo SPDX **NOASSERTION** / Other; README: geometry from BodyParts3D (**CC BY-SA 2.1 JP**) + Z-Anatomy (**CC BY-SA 4.0**); see ATTRIBUTION.md |
+| **What to learn** | Polish+Latin nomenclature switch; isolate structure + landmarks; explode; exam pin-points; Draco multi-GLB pack |
+| **Foot atlas applicability** | Full-body BY-SA stack — foot DI may exist in Z-Anatomy lineage but SA-only. Isolate UX borrowed this session. |
+| **Action** | **UX-borrow** (isolate). Mesh: **isolate-SA** / verify before any extract. |
+
+### 8. jixiangying/anatomy
+
+| Field | Value |
+|-------|-------|
+| **Name** | Human Anatomy Explorer (BodyParts3D bilingual) |
+| **URL** | https://github.com/jixiangying/anatomy |
+| **Official license** | README badge **MIT** (code) + data **CC BY-SA 2.1 JP** (BodyParts3D); no separate LICENSE file via API |
+| **What to learn** | Global ZH/EN search that opens layers; highlight + fade others; list↔mesh sync |
+| **Foot atlas applicability** | Full-body BP3D explorer; search pattern applied this session. |
+| **Action** | **UX-borrow** (search). Assets already covered by LSDB Archive CC BY path elsewhere. |
+
+### 9. choxos/OMFAtlas
+
+| Field | Value |
+|-------|-------|
+| **Name** | OMF Atlas (oral & maxillofacial) |
+| **URL** | https://github.com/choxos/OMFAtlas |
+| **Official license** | **MIT** (code, LICENSE); BodyParts3D meshes + mixed dental sets (CC BY 4.0 / BY-NC-SA / BY-SA per ASSET files — README documents file-boundary licenses) |
+| **What to learn** | Schematic honesty labels; search + isolation; separation inventory; per-asset license boundaries |
+| **Foot atlas applicability** | Head/neck only — **no foot meshes**. License-boundary discipline transferable. |
+| **Action** | **UX-borrow** / process lesson. **reject** as foot mesh source. |
+
+### 10. desmond9986/open-anatomy-atlas
+
+| Field | Value |
+|-------|-------|
+| **Name** | Open Anatomy Atlas |
+| **URL** | https://github.com/desmond9986/open-anatomy-atlas |
+| **Official license** | **MIT** code (LICENSE verified); assets Z-Anatomy / Open3DModel — see ASSET_LICENSES.md (**CC BY-SA**) |
+| **What to learn** | Z-Anatomy primary + Open3DModel fallback loader; hide/restore selected; system toggles |
+| **Foot atlas applicability** | Confirms Open3DModel as usable BY-SA teaching pack; points at same lineage as DI extract. |
+| **Action** | **UX-borrow** / **isolate-SA** for any Open3D extracts. |
+
+### 11. Kevin-Mattheus-Moerman/BodyParts3D
+
+| Field | Value |
+|-------|-------|
+| **Name** | BodyParts3D STL mirror + Julia helpers |
+| **URL** | https://github.com/Kevin-Mattheus-Moerman/BodyParts3D |
+| **Official license** | Repo **MIT** for code/mirror tooling; README states 3D files **CC BY-SA 2.1 Japan** (Anatomography-era archive note) — **do not confuse with LSDB Archive CC BY 4.0** used by this atlas for BP3D meshes |
+| **What to learn** | FMA-named STL hosting pitfalls; license fork awareness (BY-SA 2.1 JP vs Archive BY 4.0) |
+| **Foot atlas applicability** | Convenient STL mirror only if SA isolation acceptable; our main tree stays on LSDB Archive BY 4.0. |
+| **Action** | **monitor** / document license fork. Prefer LSDB Archive for main tree. |
+
+### 12. morphomuseum/MorphoDig (+ MorphoSource dig)
+
+| Field | Value |
+|-------|-------|
+| **Name** | MorphoDig surface editor; MorphoSource media repo |
+| **URLs** | https://github.com/morphomuseum/MorphoDig · https://www.morphosource.org/ |
+| **Official license** | MorphoDig software: **GPL-2.0-or-later** (LICENSE); MorphoSource: **per-media** (CC / copyright / public domain — must read each media page) |
+| **What to learn** | Landmark/digitization workflow; never assume human foot soft-tissue CC-BY |
+| **Foot atlas applicability** | Sample MorphoSource foot mesh DOIs (e.g. 10.17602/m2/m532409) lack clear DI/artery soft-tissue + open license in this pass; primate calcaneus example often **BY-NC**. **No integrable CC0/BY human foot DI/artery hit.** |
+| **Action** | **monitor** MorphoSource entry-by-entry. **reject** NC examples. |
+
+### 13. OpenSim / SimTK ankle-foot geometry
+
+| Field | Value |
+|-------|-------|
+| **Name** | opensim-org/opensim-models; SimTK ankle-foot / footankle_model |
+| **URLs** | https://github.com/opensim-org/opensim-models · https://simtk.org/projects/ankle-foot · https://simtk.org/projects/footankle_model/ |
+| **Official license** | opensim-models: no clear SPDX on API; SimTK packages labeled “Model” without a verified CC0/CC BY page in this dig — **verify before any mesh copy** |
+| **What to learn** | Multi-segment foot kinematics; ligament/tendon MSK counts — simulation geometry ≠ teaching muscle bellies |
+| **Foot atlas applicability** | Visualization bones/ligaments possible later; **not** a confirmed DI teaching mesh source this session. |
+| **Action** | **monitor** until downloadable license text is clear. |
+
+### 14. atultiwari/sushruta-anatomy
+
+| Field | Value |
+|-------|-------|
+| **Name** | Sushruta |
+| **URL** | https://github.com/atultiwari/sushruta-anatomy |
+| **Official license** | Code **All Rights Reserved** (LICENSE); `assets/` **CC BY-SA 4.0** (assets/LICENSE) |
+| **What to learn** | Isolate / explode / ghost / depth probe; local-first study assistant driving the viewport |
+| **Foot atlas applicability** | Assets SA; code not open for reuse. UX isolate ideas only. |
+| **Action** | **UX-borrow**. **reject** code copy; **isolate-SA** if ever considering assets. |
+
+---
+
+## Mesh integration decisions (continued)
+
+| Candidate | License | DI / vessels? | Decision |
+|-----------|---------|---------------|----------|
+| Open3DModel `lower-limb.obj` DI 1st–4th `.r` | **CC BY-SA 4.0** (AnatomyTOOL create page + local NOTICE.txt) | **Yes — foot DI** | **Integrated** under `public/models/right-foot/by-sa/dorsal_interosseous_*.glb` + structure `interossei_dorsales` |
+| Open3D `Posterior_tibial_artery.r` / `Fibular_artery.r` | CC BY-SA 4.0 | Proximal arteries (prior placeholders) | **Integrated** under `by-sa/` — SA badge; not claimed as CC BY main tree |
+| Open3D `Medial_plantar_nerve.r` | CC BY-SA 4.0 | Nerve | **Skip** — already have Z-Anatomy nerve GLBs |
+| Open3D `Dorsal_metatarsal_arteries.r` | CC BY-SA 4.0 | Vessels | **Skip** — BP3D grouped dorsal digital / plantar metatarsal already in main tree |
+| MorphoSource human foot mesh DOIs | unclear / often NC | No confirmed DI | **Not integrated** |
+| SimTK OpenSim ankle-foot geom | unclear SPDX | Simulation | **Not integrated** |
+
+**Honesty**: BY-SA DI/arteries close soft-tissue gaps for teaching but **ShareAlike-isolate** only; a future CC0/CC BY mesh would be preferred for the main redistributable claim.
+
 
 ## Pipeline lessons (not yet implemented)
 
@@ -162,9 +276,10 @@ Documented implementations (ideas only — no third-party UI code copied):
 
 ## Next dig targets
 
-- NIH 3D entry-by-entry license crawl for foot intrinsic muscles.  
+- Prefer CC0/CC BY replacements for Open3D BY-SA DI + proximal arteries (relicense or alternate segmentations).  
+- MorphoSource human foot media pages one-by-one for clear CC BY soft tissue.  
+- SimTK ankle-foot downloadable license text before any geom reuse.  
 - Cults3D Muskiron license page (if Cloudflare allows).  
 - Contact paths for Zenodo 20228270 relicense (BY without NC).  
-- Blender anatomy addons that ship **original** CC0 foot soft tissue (not BP3D re-exports).  
-- SPARC / Physiome updates beyond dataset 307.
+- NIH 3D entry-by-entry crawl remaining.
 

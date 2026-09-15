@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import Viewport from './components/Viewport';
 import LayerToggles from './components/LayerToggles';
 import StructurePanel from './components/StructurePanel';
+import StructureSearch from './components/StructureSearch';
 import { getAllLayers } from './lib/layers';
 import { getStructureByMeshName, getAllStructures } from './lib/structureLookup';
 import { ATLAS_SOURCE_FOOTER } from './lib/assetProvenance';
@@ -16,6 +17,7 @@ function App() {
   const [visibleLayers, setVisibleLayers] = useState<Set<Layer>>(new Set(getAllLayers()));
   const [selectedStructure, setSelectedStructure] = useState<AnatomyStructure | null>(null);
   const [selectedMeshName, setSelectedMeshName] = useState<string | null>(null);
+  const [isolateMode, setIsolateMode] = useState(false);
 
   const handleLayerToggle = (layer: Layer) => {
     setVisibleLayers((prev) => {
@@ -53,6 +55,12 @@ function App() {
   const handleClose = () => {
     setSelectedStructure(null);
     setSelectedMeshName(null);
+    setIsolateMode(false);
+  };
+
+  const handleSearchSelect = (structure: AnatomyStructure) => {
+    setSelectedStructure(structure);
+    setSelectedMeshName(structure.meshNames[0] ?? null);
   };
 
   useEffect(() => {
@@ -93,6 +101,8 @@ function App() {
         <h1 style={{ fontSize: '20px', fontWeight: 600, margin: 0 }}>右足解剖图谱 · MVP</h1>
       </div>
 
+      <StructureSearch onSelect={handleSearchSelect} />
+
       <LayerToggles
         visibleLayers={visibleLayers}
         onToggle={handleLayerToggle}
@@ -102,9 +112,19 @@ function App() {
         realCount={realCount}
       />
 
-      <Viewport onMeshClick={handleMeshClick} visibleLayers={visibleLayers} selectedMeshName={selectedMeshName} />
+      <Viewport
+        onMeshClick={handleMeshClick}
+        visibleLayers={visibleLayers}
+        selectedMeshName={selectedMeshName}
+        isolateMode={isolateMode}
+      />
 
-      <StructurePanel structure={selectedStructure} onClose={handleClose} />
+      <StructurePanel
+        structure={selectedStructure}
+        onClose={handleClose}
+        isolateMode={isolateMode}
+        onToggleIsolate={() => setIsolateMode((v) => !v)}
+      />
 
       <div
         style={{
@@ -121,7 +141,7 @@ function App() {
         }}
       >
         <div style={{ fontSize: '11px', color: '#666' }}>
-          提示: 鼠标拖动旋转 | 滚轮缩放 | 右键平移 | Esc 取消选择
+          提示: 搜索 ZH/LA | 拖动旋转 | 滚轮缩放 | 右键平移 | 仅此隔离 | Esc 取消
         </div>
         <div
           style={{

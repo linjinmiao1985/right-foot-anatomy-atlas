@@ -5,9 +5,11 @@ import { getStructureProvenance, licenseLabel } from '../lib/assetProvenance';
 interface StructurePanelProps {
   structure: AnatomyStructure | null;
   onClose: () => void;
+  isolateMode?: boolean;
+  onToggleIsolate?: () => void;
 }
 
-export default function StructurePanel({ structure, onClose }: StructurePanelProps) {
+export default function StructurePanel({ structure, onClose, isolateMode = false, onToggleIsolate }: StructurePanelProps) {
   if (!structure) {
     return null;
   }
@@ -118,6 +120,27 @@ export default function StructurePanel({ structure, onClose }: StructurePanelPro
           {provenance.isolatedBySa ? ' · by-sa/ 隔离' : ''}
         </span>
       </div>
+
+      {onToggleIsolate && (
+        <button
+          type="button"
+          onClick={onToggleIsolate}
+          style={{
+            marginBottom: '12px',
+            width: '100%',
+            padding: '6px 10px',
+            background: isolateMode ? '#4c1d95' : '#333',
+            border: isolateMode ? '1px solid #a78bfa' : '1px solid #555',
+            borderRadius: '6px',
+            color: '#e0e0e0',
+            fontSize: '12px',
+            cursor: 'pointer',
+          }}
+          title="隐藏其他结构，仅显示当前选择"
+        >
+          {isolateMode ? '退出隔离 · Exit isolate' : '仅此 · Isolate (hide others)'}
+        </button>
+      )}
 
       <p style={{ fontSize: '14px', lineHeight: '1.6', color: '#ccc', margin: 0 }}>{structure.summaryZh}</p>
     </div>

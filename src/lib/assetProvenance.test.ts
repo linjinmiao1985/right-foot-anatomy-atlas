@@ -3,9 +3,16 @@ import { getStructureProvenance, licenseLabel } from './assetProvenance';
 
 describe('assetProvenance', () => {
   it('marks placeholders', () => {
-    const p = getStructureProvenance('interossei_dorsales', true, 'muscle');
+    const p = getStructureProvenance('any_id', true, 'muscle');
     expect(p.license).toBe('placeholder');
     expect(licenseLabel(p.license)).toBe('占位');
+  });
+
+  it('attributes Open3D DI as isolated BY-SA', () => {
+    const p = getStructureProvenance('interossei_dorsales', false, 'muscle');
+    expect(p.sourceShort).toBe('Open3D');
+    expect(p.license).toBe('CC-BY-SA-4.0');
+    expect(p.isolatedBySa).toBe(true);
   });
 
   it('attributes UM muscles as CC0', () => {

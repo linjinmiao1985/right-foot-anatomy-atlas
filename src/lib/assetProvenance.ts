@@ -40,6 +40,13 @@ const Z_ANATOMY_NERVES = new Set([
   'sural_nerve',
 ]);
 
+/** Open3DModel / AnatomyTOOL meshes isolated under by-sa/ (CC BY-SA 4.0) */
+const OPEN3D_BY_SA = new Set([
+  'interossei_dorsales',
+  'posterior_tibial_artery',
+  'fibular_artery',
+]);
+
 const BP3D: ProvenanceInfo = {
   sourceShort: 'BP3D',
   sourceFull: 'BodyParts3D (DBCLS LSDB Archive)',
@@ -59,6 +66,13 @@ const Z_ANATOMY: ProvenanceInfo = {
   isolatedBySa: true,
 };
 
+const OPEN3D: ProvenanceInfo = {
+  sourceShort: 'Open3D',
+  sourceFull: 'Open3DModel / AnatomyTOOL lower-limb (CC BY-SA 4.0)',
+  license: 'CC-BY-SA-4.0',
+  isolatedBySa: true,
+};
+
 const PLACEHOLDER: ProvenanceInfo = {
   sourceShort: '占位',
   sourceFull: 'Schematic placeholder — no open mesh yet',
@@ -71,6 +85,7 @@ export function getStructureProvenance(
   layer: string,
 ): ProvenanceInfo {
   if (placeholder) return PLACEHOLDER;
+  if (OPEN3D_BY_SA.has(structureId)) return OPEN3D;
   if (Z_ANATOMY_NERVES.has(structureId) || layer === 'nerve') return Z_ANATOMY;
   if (UM_MUSCLES.has(structureId) || UM_BONES.has(structureId)) return UM;
   return BP3D;
@@ -91,4 +106,4 @@ export function licenseLabel(license: AssetLicense): string {
 
 /** Persistent footer copy — keep factual, no “complete atlas” claims. */
 export const ATLAS_SOURCE_FOOTER =
-  '网格来源: BodyParts3D CC BY 4.0 · UM CC0 1.0 · 神经 Z-Anatomy CC BY-SA 4.0（by-sa/ 隔离）';
+  '网格来源: BodyParts3D CC BY 4.0 · UM CC0 1.0 · Z-Anatomy 神经 / Open3D DI+近端动脉 CC BY-SA 4.0（by-sa/ 隔离）';

@@ -1,92 +1,51 @@
-# CC BY-SA 4.0 Assets — Z-Anatomy Nerves
+# CC BY-SA 4.0 Assets — Isolated ShareAlike Module
 
 ⚠️ **ShareAlike License Notice** ⚠️
 
-The nerve models in this directory are licensed under **CC BY-SA 4.0** (ShareAlike), which requires derivatives to use the same license.
+Meshes in this directory are licensed under **CC BY-SA 4.0** (ShareAlike). Derivatives must use the same license. They are **not** part of the main CC BY / CC0 redistributable asset claim.
 
 ---
 
-## Files in This Directory (6 nerves, ~2.5MB)
+## Files
 
-1. `tibial_nerve.glb` — Tibial nerve (胫神经)
-2. `medial_plantar_nerve.glb` — Medial plantar nerve (足底内侧神经)
-3. `lateral_plantar_nerve.glb` — Lateral plantar nerve (足底外侧神经)
-4. `deep_fibular_nerve.glb` — Deep fibular nerve (腓深神经)
-5. `superficial_fibular_nerve.glb` — Superficial fibular nerve (腓浅神经)
-6. `sural_nerve.glb` — Sural nerve (腓肠神经)
+### Nerves (Z-Anatomy)
 
----
+1. `tibial_nerve.glb`
+2. `medial_plantar_nerve.glb`
+3. `lateral_plantar_nerve.glb`
+4. `deep_fibular_nerve.glb`
+5. `superficial_fibular_nerve.glb`
+6. `sural_nerve.glb`
 
-## Source & Attribution
+**Source**: Z-Anatomy — https://github.com/Z-Anatomy/Models-of-human-anatomy  
+**License**: CC BY-SA 4.0  
+**Attribution**: "Z-Anatomy - The libre 3D atlas of anatomy - CC BY-SA 4.0"
 
-### Upstream Project
-- **Z-Anatomy** — The libre 3D atlas of anatomy
-- Repository: https://github.com/Z-Anatomy/Models-of-human-anatomy
-- License: CC BY-SA 4.0
-- Authors: Gauthier Kervyn (design, 3D, anatomy), Marcin Zielinski (Blender addon)
+### Foot dorsal interossei + proximal arteries (Open3DModel)
 
-### Base Model
-- **BodyParts3D** by Database Center for Life Science (DBCLS), Japan
-- License: CC BY-SA 2.1 Japan
-- URL: https://dbarchive.biosciencedbc.jp/en/bodyparts3d/
+7. `dorsal_interosseous_1st.glb` — from `1st_Dorsal_interossei_muscles_of_foot.r`
+8. `dorsal_interosseous_2nd.glb` — from `2nd_Dorsal_interossei_muscles_of_foot.r`
+9. `dorsal_interosseous_3rd.glb` — from `3rd_Dorsal_interossei_muscles_of_foot.r`
+10. `dorsal_interosseous_4th.glb` — from `4th_Dorsal_interossei_muscles_of_foot.r`
+11. `posterior_tibial_artery.glb` — from `Posterior_tibial_artery.r`
+12. `fibular_artery.glb` — from `Fibular_artery.r`
 
-### Attribution String (Required)
-```
-"Z-Anatomy - The libre 3D atlas of anatomy - CC BY-SA 4.0"
-"BodyParts3D" by Database Center for Life Science licensed under CC BY-SA 2.1 Japan
-```
+**Source**: Open3DModel lower-limb OBJ (textureless) via AnatomyTOOL  
+**Create page**: https://anatomytool.org/open3dmodel-create  
+**Package**: `/workspace/literature/open3d-assets/lower-limb.obj` (local research copy)  
+**License**: CC BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/  
+**Modifications**: Extracted named right-side (`.r`) objects to OBJ, converted to glTF 2.0 Binary (obj2gltf); no topology edits.
 
----
-
-## License Terms (CC BY-SA 4.0)
-
-Full license: https://creativecommons.org/licenses/by-sa/4.0/
-
-### You must:
-- ✅ **Attribute** the original authors (see above)
-- ✅ **Indicate changes** if you modify these files
-- ✅ **Use the same license** (CC BY-SA 4.0) if you distribute derivatives
-
-### You may:
-- ✅ Share and redistribute (any medium, any purpose, including commercial)
-- ✅ Adapt, remix, and transform
+**Inventory note (not integrated this session)**: same OBJ also contains `Medial_plantar_nerve.r`, `Dorsal_metatarsal_arteries.r`, `Plantar_interossei_muscles.r` — nerves already covered by Z-Anatomy extracts; plantar interossei / dorsal metatarsals already covered by BP3D CC BY main-tree meshes.
 
 ---
 
 ## Isolation Strategy
 
-To avoid "ShareAlike taint" spreading to the entire codebase:
+- Main tree (bones / most muscles / most vessels): MIT code + CC BY 4.0 / CC0
+- This `by-sa/` module: optional ShareAlike content (nerves, DI, proximal arteries)
+- Do **not** merge these GLBs into a CC BY-only redistribution claim
 
-- **Main redistributable layers** (bones, muscles, vessels): MIT code + CC BY / CC0 assets
-- **Optional BY-SA module** (nerves): Isolated in `by-sa/` subdirectory
-- **User choice**: Load nerve layer → accept BY-SA terms; skip nerve layer → MIT+BY/CC0 only
+## Removal
 
-This project's code (MIT) and non-BY-SA assets (CC BY 4.0 / CC0 1.0) remain freely mixable.
-
----
-
-## Technical Details
-
-- **Format**: glTF 2.0 Binary (.glb)
-- **Geometry**: CURVE objects (Blender) converted to GLB
-- **Modifications**: Extracted right foot nerves only (.r suffix); no topology changes
-- **Export tool**: Blender 4.0.2
-- **Export date**: 2026-09-14
-
----
-
-## Removal Instructions
-
-If you do NOT wish to accept CC BY-SA 4.0 terms:
-
-1. Delete this `by-sa/` directory
-2. Comment out nerve layer loading in `FootModel.tsx`
-3. Set `placeholder: true` for all nerve structures in `structures.json`
-4. Remove Z-Anatomy attribution from README
-
-The atlas will continue working with bones, muscles, and vessels (MIT + CC BY / CC0).
-
----
-
-**Questions?** See `/third_party/z-anatomy/NOTICE` or contact Z-Anatomy upstream:  
-https://github.com/Z-Anatomy/Models-of-human-anatomy/issues
+Delete this directory and remove corresponding `REAL_*` entries / set `placeholder: true` if you decline BY-SA terms.
