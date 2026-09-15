@@ -1276,3 +1276,13 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 5. **Checks**: integrity-audit + vitest + build; commit + push.
 6. **Honesty**: teaching atlas in progress — **no finished-product claim**. Census unchanged 129/124.
 
+
+
+## Day 4ao (2026-09-15) — keyboard help overlay
+
+**Target**: Phase-6 / week remaining teaching polish — keyboard help overlay (prefer over SA mesh spam).
+
+1. **UX**: `src/lib/keyboardHelp.ts` catalog + `KeyboardHelpOverlay` (`?`/`H` or title **? 帮助**); Esc closes help first; dialog a11y; footer tip updated.
+2. **Docs**: README Features · methods Day 4ao · phase-6 UX inventory + progress note · this log.
+3. **Checks**: integrity-audit + vitest + build; commit + push.
+4. **Honesty**: teaching atlas in progress — **no finished-product claim**. Census unchanged 129/124.

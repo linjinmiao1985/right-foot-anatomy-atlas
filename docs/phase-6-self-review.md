@@ -72,6 +72,7 @@ These residuals support **classroom visualization**, not implant planning or int
 | **Lazy GLB preload** | Live | Bones eager; soft-tissue layers preload when visible |
 | **Screenshot pipeline** | Live pack + README embed (Day 4am) + multi-view expand (Day 4an) | `scripts/screenshot-pipeline.mjs` → `docs/screenshots/` (9 shots: 5 layer/clip + 4 camera presets); embedded in README carefully — **not** a product gallery claim |
 | **Camera presets** | Live (Day 4an) | 默认 / 背侧 / 跖侧 / 内侧 / 外侧 · keys `1`–`5`; full polar orbit for plantar sole teaching |
+| **Keyboard help** | Live (Day 4ao) | `?` / `H` + title button; bilingual shortcut sheet; Esc closes help first; dialog a11y |
 
 ---
 
@@ -118,6 +119,12 @@ Recent digs (Day 4ah–4aj) logged UX-borrow / reject sources (LABIM3D, UltraBon
 - **Multi-view screenshots**: Pipeline expanded to **9** shots (`06`–`09` dorsal/plantar/medial bone + lateral all-layers); README table + embeds updated with not-finished-product caveats.
 - **Target #1 dig (continued)**: MedShapeNetCore (CC BY — no foot DI/NV files); FootNet (CC BY — 2D smartphone segmentation only); SimTK OpenSim ankle-foot (license unclear “Model”). **0** meshes integrated; no SA spam.
 - **Methods**: version Day 4an; camera-preset + multi-view protocol; census unchanged 129/124.
+
+## Progress note (Day 4ao)
+
+- **UX**: Keyboard help overlay (`?`/`H` · title **? 帮助**) — bilingual camera / isolate / Esc / pointer sheet; Esc closes help before clearing selection; `role=dialog` + focus close. Prefer teaching polish; **0** new meshes.
+- Census unchanged 129/124. Methods version Day 4ao.
+- Remaining phase-6 / week polish candidates: accessibility pass, TA2 codes on panel, persist UI prefs, journal-facing limitations table, CC0/BY dig (no SA spam).
 
 ## Cloud Agent handback (when quota returns)
 

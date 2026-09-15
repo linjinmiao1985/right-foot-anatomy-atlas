@@ -134,3 +134,14 @@ If issues found during manual testing:
 | Orbit / pick | Still works while clipped; not a clinical MPR claim |
 
 **Source**: UX-borrow ideas only (Open Anatomy Studio / VH Viewer / CT Education Skill). No third-party code copied.
+
+
+---
+
+## Day 4ao addendum — keyboard help overlay
+
+- [x] Title **? 帮助** opens bilingual shortcut dialog
+- [x] `?` / `H` toggles overlay (ignored while typing in search)
+- [x] `Esc` closes help first; second Esc clears selection / isolate / search
+- [x] Catalog covers camera `1`–`5`, isolate `I`, pointer orbit/zoom/pan/click
+- Honesty: teaching controls sheet — not a clinical workstation claim

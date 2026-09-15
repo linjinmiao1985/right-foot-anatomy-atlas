@@ -1,7 +1,7 @@
 # Methods
 
 **Project**: Right Foot Anatomy Atlas (Teaching-Grade Interactive 3D)  
-**Version**: Week 2 Day 4an / Phase 6 (teaching atlas in progress; see README + `docs/phase-6-self-review.md` live census; **129** entries / **124** unique; **53** main-tree / **71** BY-SA; 134 discrete GLBs; camera presets 1–5 + multi-view QA screenshots (9) + label density + sagittal clip lite; TA2 soft-tissue still incomplete — **not a finished product**)  
+**Version**: Week 2 Day 4ao / Phase 6 (teaching atlas in progress; see README + `docs/phase-6-self-review.md` live census; **129** entries / **124** unique; **53** main-tree / **71** BY-SA; 134 discrete GLBs; keyboard help overlay + camera presets 1–5 + multi-view QA screenshots (9) + label density + sagittal clip lite; TA2 soft-tissue still incomplete — **not a finished product**)  
 **Date**: 2026-09-15  
 **Licenses**: Code MIT | Assets CC BY 4.0 / CC0 1.0 / CC BY-SA 4.0 (isolated)
 
@@ -267,6 +267,7 @@ Repo scripts (prefer these over ad-hoc one-offs):
 - `scripts/integrity-audit.py` — `placeholder:false` ↔ `REAL_*_MODELS` ↔ GLB existence (+ orphan allowlist)
 - `scripts/screenshot-pipeline.mjs` — optional teaching QA screenshots → `docs/screenshots/` (`npm run screenshots`; 9-shot pack incl. dorsal/plantar/medial/lateral; **not** a product gallery)
 - `src/lib/cameraPresets.ts` — teaching camera presets (默认/背/跖/内/外); FOOT_TEACHING_TARGET from BP3D bone midfoot
+- `src/lib/keyboardHelp.ts` + `KeyboardHelpOverlay` — bilingual shortcut sheet (`?`/`H`); Esc closes help first
 - `scripts/expand-structures.py` — structures helpers (when used)
 - `update_structures_bp3d.py` / `update_structures_um.py` — historical structure wiring
 - `third_party/z-anatomy/*` — Blender inventory/export **recipes** (Blender 4.2.9 LTS may be local; Zenodo `.blend` gitignored)
@@ -492,3 +493,10 @@ Wrote `docs/phase-6-self-review.md` (census 129/124; 53 main / 71 BY-SA; residua
 2. **Multi-view screenshots**: Pipeline → 9 shots; README embeds updated; **not** a finished-product gallery.
 3. **Dig**: MedShapeNetCore CC BY (no foot soft); FootNet CC BY (2D only); SimTK ankle-foot license unclear — **0** integrate; no SA spam.
 4. Census unchanged **129/124**. Honesty: teaching atlas in progress — **no finished-product claim**.
+
+
+## Day 4ao — keyboard help overlay (2026-09-15)
+
+1. **UX**: Teaching keyboard / pointer help overlay (`?` / `H` or title **? 帮助**); Esc closes help before clearing selection; dialog a11y (`role=dialog`, focus close). Catalog in `src/lib/keyboardHelp.ts`.
+2. **No** new meshes / SA volume. Census unchanged **129/124**.
+3. Honesty: teaching atlas in progress — **no finished-product claim**.

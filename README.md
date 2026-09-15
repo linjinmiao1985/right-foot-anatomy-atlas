@@ -62,12 +62,13 @@ Interactive web-based teaching atlas for right foot anatomy.
 - **Label density**: hover chips 关 / 中文 / 中+拉 (Day 4ai)
 - **Sagittal clip (lite)**: single X-axis teaching cutaway + slider — **not** clinical MPR (Day 4aj)
 - **Camera presets**: 默认 / 背侧 / 跖侧 / 内侧 / 外侧 (keys `1`–`5`) — plantar sole view enabled (Day 4an)
+- **Keyboard help overlay**: `?` / `H` or title **? 帮助** — bilingual shortcut sheet (Day 4ao); Esc closes help first
 - **Click selection**: Shows Chinese name, Latin name (TA2), summary
 - **Click-to-focus**: Camera frames selected mesh AABB (teaching polish)
 - **Hover tooltips**: Quick structure identification
 - **OrbitControls**: Zoom, rotate, pan around foot (full polar range for plantar teaching)
 - **Loading states**: Progress indicators for GLB assets
-- **Keyboard**: `1`–`5` view presets · `I` isolate · `Esc` clears selection + isolate + search
+- **Keyboard**: `?`/`H` help · `1`–`5` view presets · `I` isolate · `Esc` closes help or clears selection + isolate + search
 - **Search**: bilingual ZH/LA includes ligament/tendon entries (e.g. 跖长韧带, 跟腱); results sorted by teaching layer after match score
 - **Screenshot pack** (optional): `npm run screenshots` → `docs/screenshots/` (teaching QA; not a product gallery)
 

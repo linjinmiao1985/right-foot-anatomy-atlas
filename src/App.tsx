@@ -26,6 +26,8 @@ import {
   cameraPresetFromDigitKey,
   type CameraPresetId,
 } from './lib/cameraPresets';
+import KeyboardHelpOverlay from './components/KeyboardHelpOverlay';
+import { isHelpToggleKey } from './lib/keyboardHelp';
 
 function emptyLayerCounts(): Record<Layer, number> {
   return { bone: 0, muscle: 0, nerve: 0, vessel: 0, ligament: 0 };
@@ -54,6 +56,7 @@ function App() {
   const [clipConstant, setClipConstant] = useState(DEFAULT_CLIP_CONSTANT);
   const [cameraPresetId, setCameraPresetId] = useState<CameraPresetId>(DEFAULT_CAMERA_PRESET);
   const [cameraPresetToken, setCameraPresetToken] = useState(0);
+  const [helpOpen, setHelpOpen] = useState(false);
 
   const handleCameraPresetChange = (id: CameraPresetId) => {
     setCameraPresetId(id);
@@ -142,9 +145,13 @@ function App() {
 
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
-      // Escape: clear isolate + selection + search (works even when search input focused)
+      // Escape: close help first; else clear isolate + selection + search
       if (e.key === 'Escape') {
         e.preventDefault();
+        if (helpOpen) {
+          setHelpOpen(false);
+          return;
+        }
         handleClose();
         setSearchClearSignal((n) => n + 1);
         const active = document.activeElement as HTMLElement | null;
@@ -156,6 +163,15 @@ function App() {
       const tag = (e.target as HTMLElement | null)?.tagName;
       if (tag === 'INPUT' || tag === 'TEXTAREA' || (e.target as HTMLElement | null)?.isContentEditable) {
         return;
+      }
+      // Help overlay (? / H) — teaching polish; works even while overlay open
+      if (isHelpToggleKey(e.key)) {
+        e.preventDefault();
+        setHelpOpen((v) => !v);
+        return;
+      }
+      if (helpOpen) {
+        return; // absorb other shortcuts while help is up
       }
       // Keyboard isolate — UX-borrow from GraphAnatomy / Grypa / Sushruta (ideas only)
       if ((e.key === 'i' || e.key === 'I') && selectedStructure) {
@@ -173,7 +189,7 @@ function App() {
     };
     window.addEventListener('keydown', handleKey);
     return () => window.removeEventListener('keydown', handleKey);
-  }, [selectedStructure]);
+  }, [selectedStructure, helpOpen]);
 
   const structures = getAllStructures();
   const placeholderCount = structures.reduce((acc, s) => {
@@ -200,7 +216,27 @@ function App() {
           border: '1px solid #444',
         }}
       >
-        <h1 style={{ fontSize: '20px', fontWeight: 600, margin: 0 }}>右足解剖图谱 · MVP</h1>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '12px' }}>
+          <h1 style={{ fontSize: '20px', fontWeight: 600, margin: 0 }}>右足解剖图谱 · MVP</h1>
+          <button
+            type="button"
+            onClick={() => setHelpOpen(true)}
+            aria-label="打开快捷键说明 Open keyboard help"
+            title="快捷键 Keyboard help (? / H)"
+            style={{
+              background: '#333',
+              border: '1px solid #555',
+              color: '#e0e0e0',
+              borderRadius: '6px',
+              padding: '3px 9px',
+              fontSize: '12px',
+              cursor: 'pointer',
+              flexShrink: 0,
+            }}
+          >
+            ? 帮助
+          </button>
+        </div>
         <div
           style={{ fontSize: '11px', color: '#9ca3af', marginTop: '6px', fontVariantNumeric: 'tabular-nums' }}
           title="structures.json entries · placeholder:false vs placeholder:true (not a completeness claim)"
@@ -263,6 +299,8 @@ function App() {
         onToggleIsolate={() => setIsolateMode((v) => !v)}
       />
 
+      <KeyboardHelpOverlay open={helpOpen} onClose={() => setHelpOpen(false)} />
+
       <div
         style={{
           position: 'fixed',
@@ -278,7 +316,7 @@ function App() {
         }}
       >
         <div style={{ fontSize: '11px', color: '#666' }}>
-          提示: 搜索 ZH/LA | 视角1–5 | 标签密度 | 矢状切面(lite) | 拖动旋转 | 滚轮缩放 | 右键平移 | 点击对焦 | I 隔离/退出 | Esc 取消隔离+搜索
+          提示: ?/H 快捷键 | 搜索 ZH/LA | 视角1–5 | 标签密度 | 矢状切面(lite) | 拖动旋转 | 滚轮缩放 | 右键平移 | 点击对焦 | I 隔离/退出 | Esc 取消
         </div>
         <div
           style={{
