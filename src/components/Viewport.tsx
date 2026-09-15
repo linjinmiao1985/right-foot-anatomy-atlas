@@ -7,6 +7,8 @@ import type { LigamentGroupId } from '../lib/ligamentGroups';
 import type { NerveGroupId } from '../lib/nerveGroups';
 import type { VesselGroupId } from '../lib/vesselGroups';
 import type { MuscleGroupId } from '../lib/muscleGroups';
+import type { LabelDensity } from '../lib/labelDensity';
+import { DEFAULT_LABEL_DENSITY } from '../lib/labelDensity';
 
 interface ViewportProps {
   onMeshClick: (meshName: string) => void;
@@ -17,9 +19,10 @@ interface ViewportProps {
   visibleNerveGroups?: Set<NerveGroupId>;
   visibleVesselGroups?: Set<VesselGroupId>;
   visibleMuscleGroups?: Set<MuscleGroupId>;
+  labelDensity?: LabelDensity;
 }
 
-export default function Viewport({ onMeshClick, visibleLayers, selectedMeshName, isolateMode = false, visibleLigamentGroups, visibleNerveGroups, visibleVesselGroups, visibleMuscleGroups }: ViewportProps) {
+export default function Viewport({ onMeshClick, visibleLayers, selectedMeshName, isolateMode = false, visibleLigamentGroups, visibleNerveGroups, visibleVesselGroups, visibleMuscleGroups, labelDensity = DEFAULT_LABEL_DENSITY }: ViewportProps) {
   return (
     <Canvas
       camera={{ 
@@ -52,6 +55,7 @@ export default function Viewport({ onMeshClick, visibleLayers, selectedMeshName,
         visibleNerveGroups={visibleNerveGroups}
         visibleVesselGroups={visibleVesselGroups}
         visibleMuscleGroups={visibleMuscleGroups}
+        labelDensity={labelDensity}
       />
 
       <CameraFocus selectedMeshName={selectedMeshName} />

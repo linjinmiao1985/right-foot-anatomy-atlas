@@ -12,6 +12,10 @@ import { getStructureByMeshName, getAllStructures } from './lib/structureLookup'
 import { ATLAS_SOURCE_FOOTER } from './lib/assetProvenance';
 import type { Layer } from './types/anatomy';
 import type { AnatomyStructure } from './types/anatomy';
+import {
+  DEFAULT_LABEL_DENSITY,
+  type LabelDensity,
+} from './lib/labelDensity';
 
 function emptyLayerCounts(): Record<Layer, number> {
   return { bone: 0, muscle: 0, nerve: 0, vessel: 0, ligament: 0 };
@@ -35,6 +39,7 @@ function App() {
   const [visibleMuscleGroups, setVisibleMuscleGroups] = useState<Set<MuscleGroupId>>(
     () => new Set(getAllMuscleGroupIds()),
   );
+  const [labelDensity, setLabelDensity] = useState<LabelDensity>(DEFAULT_LABEL_DENSITY);
 
   const handleLayerToggle = (layer: Layer) => {
     setVisibleLayers((prev) => {
@@ -198,6 +203,8 @@ function App() {
         onToggleVesselGroup={handleVesselGroupToggle}
         visibleMuscleGroups={visibleMuscleGroups}
         onToggleMuscleGroup={handleMuscleGroupToggle}
+        labelDensity={labelDensity}
+        onLabelDensityChange={setLabelDensity}
       />
 
       <Viewport
@@ -209,6 +216,7 @@ function App() {
         visibleNerveGroups={visibleNerveGroups}
         visibleVesselGroups={visibleVesselGroups}
         visibleMuscleGroups={visibleMuscleGroups}
+        labelDensity={labelDensity}
       />
 
       <StructurePanel
@@ -233,7 +241,7 @@ function App() {
         }}
       >
         <div style={{ fontSize: '11px', color: '#666' }}>
-          提示: 搜索 ZH/LA | 拖动旋转 | 滚轮缩放 | 右键平移 | 点击对焦 | I 隔离/退出 | Esc 取消隔离+搜索
+          提示: 搜索 ZH/LA | 标签密度 | 拖动旋转 | 滚轮缩放 | 右键平移 | 点击对焦 | I 隔离/退出 | Esc 取消隔离+搜索
         </div>
         <div
           style={{

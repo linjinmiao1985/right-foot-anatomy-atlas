@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Html, useGLTF } from '@react-three/drei';
+import StructureHoverLabel from './StructureHoverLabel';
+import type { LabelDensity } from '../lib/labelDensity';
+import { DEFAULT_LABEL_DENSITY, shouldShowHoverLabel } from '../lib/labelDensity';
 import { getAllStructures, getStructureByMeshName } from '../lib/structureLookup';
 import { LAYER_CONFIG } from '../lib/layers';
 import type { Layer } from '../types/anatomy';
@@ -39,6 +42,8 @@ interface FootModelProps {
   visibleVesselGroups?: Set<VesselGroupId>;
   /** Teaching sub-group filter for muscle layer (defaults: all groups on). */
   visibleMuscleGroups?: Set<MuscleGroupId>;
+  /** Hover label density: off / ZH / ZH+LA (Open Anatomy Studio bilingual UX-borrow). */
+  labelDensity?: LabelDensity;
 }
 
 interface PlaceholderMesh {
@@ -233,7 +238,7 @@ const REAL_LIGAMENT_MODELS: Record<string, string> = {
   'dorsal_intercuneiform_ligaments': '/models/right-foot/by-sa/dorsal_intercuneiform_ligaments.glb',
 };
 
-export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName, isolateMode = false, visibleLigamentGroups, visibleNerveGroups, visibleVesselGroups, visibleMuscleGroups }: FootModelProps) {
+export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName, isolateMode = false, visibleLigamentGroups, visibleNerveGroups, visibleVesselGroups, visibleMuscleGroups, labelDensity = DEFAULT_LABEL_DENSITY }: FootModelProps) {
   const ligGroups = visibleLigamentGroups ?? new Set(getAllLigamentGroupIds());
   const nerveGroups = visibleNerveGroups ?? new Set(getAllNerveGroupIds());
   const vesselGroups = visibleVesselGroups ?? new Set(getAllVesselGroupIds());
@@ -388,6 +393,7 @@ export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName
               isHovered={isHovered}
               onMeshClick={onMeshClick}
               onHoverChange={setHoveredMesh}
+              labelDensity={labelDensity}
             />
           );
         }
@@ -406,6 +412,7 @@ export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName
               isHovered={isHovered}
               onMeshClick={onMeshClick}
               onHoverChange={setHoveredMesh}
+              labelDensity={labelDensity}
             />
           );
         }
@@ -424,6 +431,7 @@ export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName
               isDimmed={isPeerOfSelection}
               onMeshClick={onMeshClick}
               onHoverChange={setHoveredMesh}
+              labelDensity={labelDensity}
             />
           );
         }
@@ -442,6 +450,7 @@ export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName
               isDimmed={isPeerOfSelection}
               onMeshClick={onMeshClick}
               onHoverChange={setHoveredMesh}
+              labelDensity={labelDensity}
             />
           );
         }
@@ -459,6 +468,7 @@ export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName
               isHovered={isHovered}
               onMeshClick={onMeshClick}
               onHoverChange={setHoveredMesh}
+              labelDensity={labelDensity}
             />
           );
         }
@@ -519,29 +529,19 @@ export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName
                 metalness={structure.layer === 'vessel' ? 0.2 : 0}
               />
             </mesh>
-            {isHovered && !isSelected && (
+            {isHovered && !isSelected && shouldShowHoverLabel(labelDensity) && (
               <Html position={[position[0], position[1] + 0.2, position[2]]} center>
-                <div style={{ 
-                  background: 'rgba(0,0,0,0.85)', 
-                  color: 'white',
-                  padding: '0.5rem 0.75rem',
-                  borderRadius: '4px',
-                  fontSize: '0.9rem',
-                  whiteSpace: 'nowrap',
-                  pointerEvents: 'none',
-                  border: `2px solid ${color}`,
-                  fontFamily: 'sans-serif'
-                }}>
-                  <strong>{structure.nameZh}</strong>
-                  <div style={{ fontSize: '0.75rem', opacity: 0.8, marginTop: '0.25rem' }}>
-                    {structure.nameLa}
-                  </div>
-                  {structure.placeholder && (
-                    <div style={{ fontSize: '0.7rem', color: '#ffa500', marginTop: '0.25rem' }}>
-                      占位
-                    </div>
-                  )}
-                </div>
+                <StructureHoverLabel
+                  nameZh={structure.nameZh}
+                  nameLa={structure.nameLa}
+                  density={labelDensity}
+                  borderColor={color}
+                  footnote={
+                    structure.placeholder ? (
+                      <div style={{ fontSize: '0.7rem', color: '#ffa500', marginTop: '0.25rem' }}>占位</div>
+                    ) : null
+                  }
+                />
               </Html>
             )}
           </group>
@@ -561,6 +561,7 @@ interface RealBoneModelProps {
   isHovered: boolean;
   onMeshClick: (meshName: string) => void;
   onHoverChange: (meshName: string | null) => void;
+  labelDensity?: LabelDensity;
 }
 
 function RealBoneModel({
@@ -572,6 +573,7 @@ function RealBoneModel({
   isHovered,
   onMeshClick,
   onHoverChange,
+  labelDensity = DEFAULT_LABEL_DENSITY,
 }: RealBoneModelProps) {
   const { scene } = useGLTF(modelPath);
   
@@ -613,27 +615,15 @@ function RealBoneModel({
       }}
     >
       <primitive object={clonedScene} />
-      {isHovered && !isSelected && (
+      {isHovered && !isSelected && shouldShowHoverLabel(labelDensity) && (
         <Html position={[0, 200, 0]} center>
-          <div style={{ 
-            background: 'rgba(0,0,0,0.85)', 
-            color: 'white',
-            padding: '0.5rem 0.75rem',
-            borderRadius: '4px',
-            fontSize: '0.9rem',
-            whiteSpace: 'nowrap',
-            pointerEvents: 'none',
-            border: `2px solid ${color}`,
-            fontFamily: 'sans-serif'
-          }}>
-            <strong>{structure.nameZh}</strong>
-            <div style={{ fontSize: '0.75rem', opacity: 0.8, marginTop: '0.25rem' }}>
-              {structure.nameLa}
-            </div>
-            <div style={{ fontSize: '0.7rem', color: '#00ff00', marginTop: '0.25rem' }}>
-              BodyParts3D
-            </div>
-          </div>
+          <StructureHoverLabel
+            nameZh={structure.nameZh}
+            nameLa={structure.nameLa}
+            density={labelDensity}
+            borderColor={color}
+            footnote={<div style={{ fontSize: '0.7rem', color: '#00ff00', marginTop: '0.25rem' }}>BodyParts3D</div>}
+          />
         </Html>
       )}
     </group>
@@ -651,6 +641,7 @@ interface RealMuscleModelProps {
   isHovered: boolean;
   onMeshClick: (meshName: string) => void;
   onHoverChange: (meshName: string | null) => void;
+  labelDensity?: LabelDensity;
 }
 
 function RealMuscleModel({
@@ -663,6 +654,7 @@ function RealMuscleModel({
   isHovered,
   onMeshClick,
   onHoverChange,
+  labelDensity = DEFAULT_LABEL_DENSITY,
 }: RealMuscleModelProps) {
   const { scene } = useGLTF(modelPath);
   const additionalScenes = (additionalParts || []).map(path => useGLTF(path).scene);
@@ -712,27 +704,19 @@ function RealMuscleModel({
       {clonedAdditional.map((s, i) => (
         <primitive key={i} object={s} />
       ))}
-      {isHovered && !isSelected && (
+      {isHovered && !isSelected && shouldShowHoverLabel(labelDensity) && (
         <Html position={[0, 200, 0]} center>
-          <div style={{ 
-            background: 'rgba(0,0,0,0.85)', 
-            color: 'white',
-            padding: '0.5rem 0.75rem',
-            borderRadius: '4px',
-            fontSize: '0.9rem',
-            whiteSpace: 'nowrap',
-            pointerEvents: 'none',
-            border: `2px solid ${color}`,
-            fontFamily: 'sans-serif'
-          }}>
-            <strong>{structure.nameZh}</strong>
-            <div style={{ fontSize: '0.75rem', opacity: 0.8, marginTop: '0.25rem' }}>
-              {structure.nameLa}
-            </div>
-            <div style={{ fontSize: '0.7rem', color: modelPath.includes('/by-sa/') ? '#a78bfa' : '#ff8800', marginTop: '0.25rem' }}>
-              {modelPath.includes('/by-sa/') ? 'BY-SA (isolate)' : 'UM / BP3D'}
-            </div>
-          </div>
+          <StructureHoverLabel
+            nameZh={structure.nameZh}
+            nameLa={structure.nameLa}
+            density={labelDensity}
+            borderColor={color}
+            footnote={
+              <div style={{ fontSize: '0.7rem', color: modelPath.includes('/by-sa/') ? '#a78bfa' : '#ff8800', marginTop: '0.25rem' }}>
+                {modelPath.includes('/by-sa/') ? 'BY-SA (isolate)' : 'UM / BP3D'}
+              </div>
+            }
+          />
         </Html>
       )}
     </group>
@@ -750,6 +734,7 @@ interface RealVesselModelProps {
   isDimmed?: boolean;
   onMeshClick: (meshName: string) => void;
   onHoverChange: (meshName: string | null) => void;
+  labelDensity?: LabelDensity;
 }
 
 function RealVesselModel({
@@ -762,6 +747,7 @@ function RealVesselModel({
   isDimmed = false,
   onMeshClick,
   onHoverChange,
+  labelDensity = DEFAULT_LABEL_DENSITY,
 }: RealVesselModelProps) {
   const { scene } = useGLTF(modelPath);
   
@@ -805,27 +791,19 @@ function RealVesselModel({
       }}
     >
       <primitive object={clonedScene} />
-      {isHovered && !isSelected && (
+      {isHovered && !isSelected && shouldShowHoverLabel(labelDensity) && (
         <Html position={[0, 200, 0]} center>
-          <div style={{ 
-            background: 'rgba(0,0,0,0.85)', 
-            color: 'white',
-            padding: '0.5rem 0.75rem',
-            borderRadius: '4px',
-            fontSize: '0.9rem',
-            whiteSpace: 'nowrap',
-            pointerEvents: 'none',
-            border: `2px solid ${color}`,
-            fontFamily: 'sans-serif'
-          }}>
-            <strong>{structure.nameZh}</strong>
-            <div style={{ fontSize: '0.75rem', opacity: 0.8, marginTop: '0.25rem' }}>
-              {structure.nameLa}
-            </div>
-            <div style={{ fontSize: '0.7rem', color: modelPath.includes('/by-sa/') ? '#a78bfa' : '#ff3333', marginTop: '0.25rem' }}>
-              {modelPath.includes('/by-sa/') ? 'BY-SA (isolate)' : 'BodyParts3D'}
-            </div>
-          </div>
+          <StructureHoverLabel
+            nameZh={structure.nameZh}
+            nameLa={structure.nameLa}
+            density={labelDensity}
+            borderColor={color}
+            footnote={
+              <div style={{ fontSize: '0.7rem', color: modelPath.includes('/by-sa/') ? '#a78bfa' : '#ff3333', marginTop: '0.25rem' }}>
+                {modelPath.includes('/by-sa/') ? 'BY-SA (isolate)' : 'BodyParts3D'}
+              </div>
+            }
+          />
         </Html>
       )}
     </group>
@@ -843,6 +821,7 @@ interface RealNerveModelProps {
   isDimmed?: boolean;
   onMeshClick: (meshName: string) => void;
   onHoverChange: (meshName: string | null) => void;
+  labelDensity?: LabelDensity;
 }
 
 function RealNerveModel({
@@ -855,6 +834,7 @@ function RealNerveModel({
   isDimmed = false,
   onMeshClick,
   onHoverChange,
+  labelDensity = DEFAULT_LABEL_DENSITY,
 }: RealNerveModelProps) {
   const { scene } = useGLTF(modelPath);
   
@@ -898,34 +878,29 @@ function RealNerveModel({
       }}
     >
       <primitive object={clonedScene} />
-      {(isHovered || isSelected) && (
+      {(isHovered || isSelected) && shouldShowHoverLabel(labelDensity) && (
         <Html position={[0, 20, 0]} center distanceFactor={150}>
-          <div style={{
-            background: 'rgba(0, 0, 0, 0.85)',
-            color: '#fff',
-            padding: '8px 12px',
-            borderRadius: '6px',
-            fontSize: '13px',
-            whiteSpace: 'nowrap',
-            pointerEvents: 'none',
-            border: '1px solid rgba(255, 255, 0, 0.5)',
-            boxShadow: '0 2px 8px rgba(0,0,0,0.3)',
-          }}>
-            <div style={{ fontWeight: 'bold' }}>{structure.nameZh}</div>
-            <div style={{ fontSize: '11px', opacity: 0.8, marginTop: '2px' }}>{structure.nameLa}</div>
-            <div style={{ 
-              fontSize: '10px', 
-              marginTop: '4px', 
-              padding: '2px 6px', 
-              background: 'rgba(255, 255, 0, 0.2)',
-              borderRadius: '3px',
-              border: '1px solid rgba(255, 255, 0, 0.4)',
-            }}>
-              {/common_plantar|proper_plantar|deep_branch_lateral|dorsal_cutaneous|calcaneal|superficial_branch_lateral|dorsal_digital_/.test(modelPath)
-                ? 'Open3D (BY-SA 4.0)'
-                : 'Z-Anatomy (BY-SA 4.0)'}
-            </div>
-          </div>
+          <StructureHoverLabel
+            nameZh={structure.nameZh}
+            nameLa={structure.nameLa}
+            density={labelDensity}
+            borderColor="rgba(255, 255, 0, 0.5)"
+            style={{ boxShadow: '0 2px 8px rgba(0,0,0,0.3)', fontSize: '13px' }}
+            footnote={
+              <div style={{
+                fontSize: '10px',
+                marginTop: '4px',
+                padding: '2px 6px',
+                background: 'rgba(255, 255, 0, 0.2)',
+                borderRadius: '3px',
+                border: '1px solid rgba(255, 255, 0, 0.4)',
+              }}>
+                {/common_plantar|proper_plantar|deep_branch_lateral|dorsal_cutaneous|calcaneal|superficial_branch_lateral|dorsal_digital_/.test(modelPath)
+                  ? 'Open3D (BY-SA 4.0)'
+                  : 'Z-Anatomy (BY-SA 4.0)'}
+              </div>
+            }
+          />
         </Html>
       )}
     </group>
@@ -943,6 +918,7 @@ interface RealLigamentModelProps {
   isHovered: boolean;
   onMeshClick: (meshName: string) => void;
   onHoverChange: (meshName: string | null) => void;
+  labelDensity?: LabelDensity;
 }
 
 function RealLigamentModel({
@@ -954,6 +930,7 @@ function RealLigamentModel({
   isHovered,
   onMeshClick,
   onHoverChange,
+  labelDensity = DEFAULT_LABEL_DENSITY,
 }: RealLigamentModelProps) {
   const { scene } = useGLTF(modelPath);
   const clonedScene = scene.clone();
@@ -994,29 +971,21 @@ function RealLigamentModel({
       }}
     >
       <primitive object={clonedScene} />
-      {isHovered && !isSelected && (
+      {isHovered && !isSelected && shouldShowHoverLabel(labelDensity) && (
         <Html position={[0, 200, 0]} center>
-          <div style={{
-            background: 'rgba(0,0,0,0.85)',
-            color: 'white',
-            padding: '0.5rem 0.75rem',
-            borderRadius: '4px',
-            fontSize: '0.9rem',
-            whiteSpace: 'nowrap',
-            pointerEvents: 'none',
-            border: `2px solid ${color}`,
-            fontFamily: 'sans-serif'
-          }}>
-            <strong>{structure.nameZh}</strong>
-            <div style={{ fontSize: '0.75rem', opacity: 0.8, marginTop: '0.25rem' }}>
-              {structure.nameLa}
-            </div>
-            <div style={{ fontSize: '0.7rem', color: modelPath.includes('/by-sa/') ? '#a78bfa' : '#e8dcc8', marginTop: '0.25rem' }}>
-              {modelPath.includes('/by-sa/')
-                ? 'BY-SA (isolate) · ligament/fascia'
-                : `BodyParts3D · ${structure.id === 'calcaneal_tendon' ? 'tendon (跟腱)' : 'ligament'}`}
-            </div>
-          </div>
+          <StructureHoverLabel
+            nameZh={structure.nameZh}
+            nameLa={structure.nameLa}
+            density={labelDensity}
+            borderColor={color}
+            footnote={
+              <div style={{ fontSize: '0.7rem', color: modelPath.includes('/by-sa/') ? '#a78bfa' : '#e8dcc8', marginTop: '0.25rem' }}>
+                {modelPath.includes('/by-sa/')
+                  ? 'BY-SA (isolate) · ligament/fascia'
+                  : `BodyParts3D · ${structure.id === 'calcaneal_tendon' ? 'tendon (跟腱)' : 'ligament'}`}
+              </div>
+            }
+          />
         </Html>
       )}
     </group>

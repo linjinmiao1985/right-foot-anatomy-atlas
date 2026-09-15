@@ -5,7 +5,7 @@ Living log of open-source human anatomy projects studied for the right-foot atla
 (CC0 / CC BY into main tree; BY-SA isolated under `public/models/right-foot/by-sa/` + NOTICE;
 reject NC / unknown / All Rights Reserved).
 
-**Last updated**: 2026-09-15 (Day 4ah)  
+**Last updated**: 2026-09-15 (Day 4ai)  
 **Status**: ongoing research — not a finished catalog.
 
 ---
@@ -153,6 +153,9 @@ Documented implementations (ideas only — no third-party UI code copied):
    - Top-left search box matches `nameZh` / `nameLa` / id; selecting opens StructurePanel.  
    - Panel button **仅此 · Isolate** hides other meshes while selection is active (Esc clears).  
    - Ideas only — no third-party UI code copied.
+
+4. **Bilingual label density** (from Open Anatomy Studio + BioLens / LABIM3D; Day 4ai)  
+   - Layer panel: 关 / 中文 / 中+拉 for hover Html chips; Latin only when bilingual.
 
 ---
 
@@ -794,3 +797,24 @@ Soft-tissue under ligament toggle = **1 ligament + 1 tendon**. Still missing pla
 
 No new CC0/CC BY foot DI / per-ray MTA / ligament candidates integrated this pass — dig only + UX/perf. **No finished-product claim.**
 
+
+---
+
+## Session additions (2026-09-15 · Day 4ai — bilingual label density + dig)
+
+### UX applied
+
+| Change | Detail |
+|--------|--------|
+| **Bilingual label density** | Layer panel control: **关 / 中文 / 中+拉** (`off` · `zh` · `bilingual`). Hover Html chips honor density; Latin line only in bilingual. Default remains bilingual. |
+| Source | **UX-borrow** (ideas only) from Open Anatomy Studio bilingual chrome + BioLens / LABIM3D label clarity — no third-party UI code copied. |
+| Files | `src/lib/labelDensity.ts` (+ vitest), `StructureHoverLabel.tsx`, wired App / LayerToggles / Viewport / FootModel |
+
+### NEW license-verified projects (≥2)
+
+| # | Project | URL | License verified | Foot relevance | Decision |
+|---|---------|-----|------------------|----------------|----------|
+| **34** | **Open Twin XR** (Opening-Science/open-twin-xr) | https://github.com/Opening-Science/open-twin-xr | Code **MIT** (README Licensing); anatomy assets per-atlas (BP3D CC BY 4.0, Z-Anatomy BY-SA + **NC components**, HRA CC BY 4.0, TCIA CT CC BY 4.0, OpenEar CC BY 4.0, biv-me Apache-2.0) — README warns bundled Z-Anatomy path is **non-commercial** | Multi-atlas WebXR body viewer; honest absence / in-app provenance / X-ray Fresnel / explode — **no** curated right-foot DI pack identified | **UX-borrow** (honesty + provenance). **reject** mixing NC-tainted Z-Anatomy components into main tree |
+| **35** | **3Dentes** (NateSaindon/3Dentes) | https://github.com/NateSaindon/3Dentes · https://natesaindon.github.io/3Dentes/ | Code **MIT**; anatomy **CC BY-NC 4.0** (own CBCT derivatives — README Licensing) | Oral CBCT atlas (teeth/pulp/PDL/IAN) — **no foot**. Fidelity tiers (measured / derived / schematic) per structure | **UX-borrow** (fidelity-tier honesty). **reject** for foot mesh / main-tree (**NC**) |
+
+No new CC0/CC BY foot DI / per-ray MTA / ligament candidates integrated this pass — dig + UX only. **No finished-product claim.**

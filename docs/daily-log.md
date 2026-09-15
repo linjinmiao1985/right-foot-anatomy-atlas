@@ -1227,3 +1227,10 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 - integrity-audit + vitest + build; commit + push.
 - No finished-product claim.
 
+## Day 4ai (2026-09-15) — bilingual label density + 2 open-anatomy finds
+
+- Pulled `98da848` (already current).
+- UX: bilingual hover **label density** control (关 / 中文 / 中+拉) — Open Anatomy Studio + BioLens ideas; `labelDensity` lib + StructureHoverLabel; vitest.
+- Dig (≥2 NEW): Opening-Science/open-twin-xr (MIT code; multi-license atlases, NC warning); NateSaindon/3Dentes (MIT code; CBCT oral **BY-NC**).
+- No mesh spam / no SA volume add; no finished-product claim.
+- integrity-audit + vitest + build; commit + push.

@@ -5,6 +5,7 @@ import { LIGAMENT_GROUPS, type LigamentGroupId } from '../lib/ligamentGroups';
 import { NERVE_GROUPS, type NerveGroupId } from '../lib/nerveGroups';
 import { VESSEL_GROUPS, type VesselGroupId } from '../lib/vesselGroups';
 import { MUSCLE_GROUPS, type MuscleGroupId } from '../lib/muscleGroups';
+import { LABEL_DENSITY_OPTIONS, type LabelDensity } from '../lib/labelDensity';
 
 interface LayerTogglesProps {
   visibleLayers: Set<Layer>;
@@ -21,6 +22,8 @@ interface LayerTogglesProps {
   onToggleVesselGroup: (group: VesselGroupId) => void;
   visibleMuscleGroups: Set<MuscleGroupId>;
   onToggleMuscleGroup: (group: MuscleGroupId) => void;
+  labelDensity: LabelDensity;
+  onLabelDensityChange: (density: LabelDensity) => void;
 }
 
 /**
@@ -43,6 +46,8 @@ export default function LayerToggles({
   onToggleVesselGroup,
   visibleMuscleGroups,
   onToggleMuscleGroup,
+  labelDensity,
+  onLabelDensityChange,
 }: LayerTogglesProps) {
   const layers = getAllLayers();
 
@@ -73,6 +78,51 @@ export default function LayerToggles({
           <button type="button" onClick={onHideAll} style={quickBtnStyle} title="隐藏全部图层">
             全隐
           </button>
+        </div>
+      </div>
+
+      <div
+        style={{
+          marginBottom: '12px',
+          padding: '8px',
+          background: 'rgba(56, 189, 248, 0.08)',
+          border: '1px solid rgba(56, 189, 248, 0.35)',
+          borderRadius: '6px',
+        }}
+        role="group"
+        aria-label="标签密度 Label density"
+        title="UX-borrow: Open Anatomy Studio bilingual + BioLens label density (ideas only)"
+      >
+        <div style={{ fontSize: '11px', fontWeight: 600, color: '#d6d3d1', marginBottom: '6px' }}>
+          标签密度 · Labels
+          <span style={{ fontWeight: 400, color: '#888', marginLeft: '6px' }}>悬停标注</span>
+        </div>
+        <div style={{ display: 'flex', gap: '4px' }}>
+          {LABEL_DENSITY_OPTIONS.map((opt) => {
+            const active = labelDensity === opt.id;
+            return (
+              <button
+                key={opt.id}
+                type="button"
+                onClick={() => onLabelDensityChange(opt.id)}
+                title={opt.title}
+                aria-pressed={active}
+                style={{
+                  flex: 1,
+                  padding: '4px 6px',
+                  fontSize: '11px',
+                  cursor: 'pointer',
+                  borderRadius: '4px',
+                  border: active ? '1px solid #38bdf8' : '1px solid #555',
+                  background: active ? 'rgba(56, 189, 248, 0.25)' : '#333',
+                  color: active ? '#e0f2fe' : '#ccc',
+                }}
+              >
+                {opt.labelZh}
+                <span style={{ color: '#888', marginLeft: '3px', fontSize: '10px' }}>{opt.labelEn}</span>
+              </button>
+            );
+          })}
         </div>
       </div>
 
