@@ -54,3 +54,7 @@ third_party/andreassen/tmp/
 third_party/henson-sheffield/*.dcm
 third_party/henson-sheffield/downloads/
 third_party/henson-sheffield/sandbox/
+
+# Henson Sheffield one-subject POC outputs (volumes / meshes; keep scripts+QA JSON in git)
+third_party/henson-sheffield/poc/
+.venv-henson/

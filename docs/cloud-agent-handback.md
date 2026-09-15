@@ -1,3 +1,7 @@
+## Day 4bj status addendum (2026-09-15)
+
+Henson Sheffield **Option A** one-subject MC POC completed (`Aug_8`): surfaces OK; BP3D Achilles continuity sketch **FAIL** — **0** wire. See `docs/henson-sheffield-sandbox-feasibility.md` § Day 4bj + `third_party/henson-sheffield/poc_spatial_qa.json`. Andreassen still skipped. Soft gaps dry. Teaching atlas in progress — **no finished-product claim**.
+
 # Cloud Agent handback — Phase 7 resume brief
 
 **Date**: 2026-09-15 · Day **4bh**  
@@ -62,7 +66,7 @@ Osteology complete (26/26). Soft tissue **teaching-useful and incomplete**.
 | Browser / Cloudflare-gated packs | Scripted fetch 403 / session | Cloud Agent browser; verify license page before wire |
 | Zenodo Z-Anatomy `.blend` heavy re-harvest | Large binary; ankle bands absent prior | Re-inventory ATFL/CFL/deltoid/retinacula **only if** new revision claims them |
 | Further multi-view screenshots | 9-shot pack live | Optional angles only — not a marketing gallery |
-| CC0/BY DI / per-ray MTA / nerve·ligament main-tree | Watchlist dry through Day 4bi (#38–#76); Utah Hive **reject** bones; Henson CC0 = masks only (path + **sandbox feasibility** Day 4bi) | Re-check new open CT foot soft segmentations; optional **one-subject** Henson MC (~80 MB, see feasibility note); **skip NC** / “License: Model” |
+| CC0/BY DI / per-ray MTA / nerve·ligament main-tree | Watchlist dry through Day 4bj (#38–#76); Utah Hive **reject** bones; Henson CC0 = masks + **Aug_8 MC POC** (BP3D align FAIL; 0 wire) | Re-check new open CT foot soft segmentations; optional **one-subject** Henson MC (~80 MB, see feasibility note); **skip NC** / “License: Model” |
 
 ---
 
@@ -123,4 +127,11 @@ Osteology complete (26/26). Soft tissue **teaching-useful and incomplete**.
 - `python3 scripts/integrity-audit.py` · `npx vitest run` · `npm run build` (run on commit pass)
 - Commit + push on branch
 
-**Bottom line**: Handback brief current through Day **4bi** (Sheffield sandbox feasibility + digs #71–#76 + 踇 spot-check, 0 wire). Andreassen belly track remains **documented blocked**. Census unchanged. Teaching atlas in progress — **no finished-product claim**.
+
+## Day 4bj done this handoff
+
+- Option A: downloaded **one** Aug_8 label DICOM (~73 MB, gitignored); MC gastroc/soleus → gitignored `poc/meshes/`.
+- BP3D align sketch **FAIL** Achilles continuity — summary `third_party/henson-sheffield/poc_spatial_qa.json`; script `scripts/henson_sheffield_poc_mc.py`.
+- **0** mesh wire; Andreassen skipped; Utah not integrated; no SA spam.
+
+**Bottom line**: Handback brief current through Day **4bj** (Henson Aug_8 MC POC — surfaces OK, BP3D Achilles sketch FAIL, 0 wire). Andreassen belly track remains **documented blocked**. Census unchanged. Teaching atlas in progress — **no finished-product claim**.

@@ -1373,3 +1373,17 @@ Spot-check `structures.json`: **0** `拇` (thumb) tokens; **9** `踇` hallux nam
 - Census unchanged (**129/124**; ontology **126/129**).
 - **0** meshes integrated; **0** SA spam; Andreassen not re-opened; Utah not integrated.
 - **No finished-product claim.**
+
+
+## Session additions (2026-09-15 · Day 4bj — Henson Aug_8 MC POC)
+
+### Option A executed (#66 deepen)
+
+| Step | Result |
+|------|--------|
+| Download | `Aug_8_segmentations.dcm` ~73 MB (CC0) — gitignored |
+| MC | gastroc lat/med + soleus OK → gitignored `poc/meshes/` |
+| BP3D align sketch | **FAIL** Achilles continuity (see `poc_spatial_qa.json`) |
+| Wire | **0** — monitor only |
+
+No new dig IDs this pass (Option A focus). Soft gaps still **dry**. Andreassen **skipped**. **No finished-product claim.**

@@ -82,3 +82,36 @@ Estimated download for that POC: **~80 MB** (labels only) or **~160 MB** (labels
 ## Next agent (optional)
 
 If continuing the belly research track: download **one** `Aug_*_segmentations.dcm` into gitignored `third_party/henson-sheffield/downloads/`, run the pipeline above offline, attach QA JSON — still **0** wire unless gates pass. Prefer CC0/BY DI/NV digs in parallel (`docs/cc0-soft-tissue-watchlist.md`).
+
+---
+
+## Day 4bj — one-subject MC POC executed (Aug_8)
+
+**Downloaded** (gitignored): `third_party/henson-sheffield/downloads/Aug_8_segmentations.dcm` (~72.9 MB; Figshare file id **36572283**; CC0).
+
+**Encoding discovery**: pixel values are **not** raw class IDs 0–37. Observed 37 non-zero greys map as `round(class_id * 255 / 37)` (class **10→69**, **11→76**, **31→214**). Spacing assumed **1×1×1 mm** (Henson et al. PLoS ONE 2023 homogenization).
+
+**Marching cubes** (`scripts/henson_sheffield_poc_mc.py` · skimage):
+
+| Class | Name | Voxels | Verts (approx) | Native extents mm (X/Y/Z) |
+|------:|------|-------:|---------------:|---------------------------|
+| 10 | gastrocnemius lateralis | 32 273 | 15 468 | 44 / 29 / 181 |
+| 11 | gastrocnemius medialis | 110 076 | 33 020 | 56 / 50 / 220 |
+| 31 | soleus | 227 679 | 58 534 | 94 / 49 / 295 |
+
+Surfaces written under gitignored `third_party/henson-sheffield/poc/meshes/` (OBJ+GLB; ~12 MB total). Med/lat centroids separate ~**46 mm** on native X — masks are distinct.
+
+### BP3D align sketch vs live Achilles (`calcaneal_tendon_BP5098.glb`)
+
+Trials: Kabsch on med/lat centroids + distal-Z tips (with/without X flip); translate+scale soleus distal → Achilles low-Z band (scales 0.85/1.0/1.15 × flip). Gates mirrored from Andreassen track: **not** all-X>0; distal10% → Achilles **&lt;15 mm** for all three bellies.
+
+| Result | Value |
+|--------|-------|
+| Trials with right-side OK | 8 / 8 |
+| Trials with Achilles continuity OK (all 3) | **0 / 8** |
+| Best by distal10 sum | translate_scale… flipX=False scale=1.15 — soleus/gastroc_lat distal10≈0.5–0.8 mm but **gastroc_med distal10≈20.7 mm FAIL** |
+| **Wire into atlas** | **NO** |
+
+Committed summary: `third_party/henson-sheffield/poc_spatial_qa.json`. Full raw copy also under gitignored `poc/`.
+
+**Verdict**: Option A **MC success**; BP3D **laterality+Achilles continuity does not clearly pass**. Keep **monitor** — do **not** bake into `public/models/` or `structures.json`. Andreassen remains **skipped**. Soft DI/NV gaps still **dry**.

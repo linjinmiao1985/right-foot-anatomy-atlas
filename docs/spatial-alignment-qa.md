@@ -474,3 +474,13 @@ See `third_party/andreassen/spatial_qa.json`:
 
 **Verdict**: **BLOCKED** — do not wire. Morphology/proportion mismatch under single similarity; handback brief `docs/cloud-agent-handback.md`.
 
+
+
+## Day 4bj — Henson Sheffield Aug_8 MC POC (not wired)
+
+- **Source**: Figshare **10.15131/shef.data.20440203** · `Aug_8_segmentations.dcm` (file id 36572283, ~73 MB, **CC0**)
+- **Surfaces**: marching cubes classes **10/11/31** (gastroc lat/med + soleus); greyscale `round(id*255/37)`; spacing 1 mm isotropic (paper)
+- **Artifacts**: `third_party/henson-sheffield/poc_spatial_qa.json`; meshes gitignored under `poc/meshes/`
+- **BP3D sketch QA**: right-side OK on 8/8 trials; Achilles distal10&lt;15 mm for **all three** bellies = **0/8** (best: gastroc_med distal10≈20.7 mm)
+- **Integrate**: **NO** — registration unproven; do not bake into `public/models/`
+- Andreassen path: still **skipped**

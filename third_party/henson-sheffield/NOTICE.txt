@@ -29,3 +29,11 @@ What is **not** in git:
 Integration status: **NOT wired** to public/models/ or structures.json.
 Masks ≠ elemental foot DI/NV GLBs; calf/thigh-heavy cohort; BP3D Kabsch unproven.
 Prefer this research path over Andreassen similarity Kabsch retry (skipped).
+
+
+Day 4bj POC (not wired):
+  Script: scripts/henson_sheffield_poc_mc.py
+  QA JSON: poc_spatial_qa.json (MC OK; BP3D align sketch FAIL Achilles continuity)
+  Gitignored: downloads/Aug_8_segmentations.dcm · poc/meshes/
+  Decision: do NOT integrate until right-side + Achilles gates clearly pass with a
+  proven registration (bone landmarks / multi-atlas) — current crude sketches fail.

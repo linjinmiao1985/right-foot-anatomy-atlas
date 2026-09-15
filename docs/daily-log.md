@@ -1495,3 +1495,16 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 5. Soft gaps still dry. Andreassen **skipped**. Utah not re-opened. **0** meshes.
 6. Checks: integrity-audit + vitest + build; commit + push.
 7. **Honesty**: teaching atlas in progress — **no finished-product claim**. Census unchanged.
+
+
+## Day 4bj (2026-09-15) — Henson Aug_8 MC POC + BP3D align QA
+
+**Target**: Option A — download ONE small Henson Sheffield label volume; marching-cubes gastroc/soleus only into gitignored `poc/`; document BP3D align success/fail; do **not** wire unless QA clearly passes. integrity-audit + vitest + build; commit docs/code only; push. No finished-product claims; no SA spam; no Andreassen wire.
+
+1. Pulled `1f116d5` (already current).
+2. **Option A**: Downloaded `Aug_8_segmentations.dcm` (~73 MB, Figshare 36572283, CC0) → gitignored `downloads/`. Greyscale↔class map = `round(id*255/37)`. MC (skimage) for classes **10/11/31** → gitignored `poc/meshes/` (~12 MB).
+3. **BP3D QA**: Kabsch + translate/scale sketches vs live Achilles GLB — **FAIL** Achilles continuity (best trial gastroc_med distal10≈20.7 mm). Right-side OK on sketches but **not** enough to wire. Summary: `third_party/henson-sheffield/poc_spatial_qa.json` + feasibility doc § Day 4bj.
+4. Script: `scripts/henson_sheffield_poc_mc.py`. Gitignore `poc/` + `.venv-henson/`.
+5. Soft gaps still dry. Andreassen **skipped**. **0** meshes to `public/models/`.
+6. Checks: integrity-audit + vitest + build; commit + push.
+7. **Honesty**: teaching atlas in progress — **no finished-product claim**. Census unchanged.
