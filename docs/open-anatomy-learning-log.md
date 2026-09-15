@@ -630,3 +630,31 @@ No new CC0/CC BY foot DI or proximal-artery candidates in this dig (atlas-foundr
 
 Soft-tissue under ligament toggle = **1 ligament + 1 tendon**. Still missing plantar fascia and ankle ligament complex. No finished-product claim.
 
+
+## Session additions (2026-09-15 · Day 4r — Z-Anatomy ligament export blocked + teaching polish)
+
+### Path 1 — local Z-Anatomy / OpenAnatomy ligament export
+
+| Item | Result |
+|------|--------|
+| Local `.blend` / Z-Anatomy zip | **Missing** (`third_party/z-anatomy/` = EVALUATION only) |
+| Blender on box | **Not installed** |
+| Open3D lower-limb zip | Still **0** usable ankle ligament / plantar fascia meshes |
+| Prior Z-Anatomy nerve frame | Nerves already in `by-sa/`; same-donor ligament extract **not** possible without blend |
+| Action | **Document blocker**; path 2 only — no new BY-SA ligament GLBs, no Kabsch, no finished-product claim |
+
+### Path 2 — teaching polish (viewer)
+
+| Change | Detail |
+|--------|--------|
+| Non-selected opacity | When a structure is selected (and isolate off), peer **nerve** / **vessel** real meshes dim (~0.2 opacity) so the selection reads clearly |
+| Structure panel | `getTeachingMeshNote()` — short mesh-fidelity lines for nerves (CURVE tubes / BY-SA), grouped vessels, Open3D arteries, ligament/tendon incompleteness |
+| Grouped vessels | `dorsal_digital_arteries` / `plantar_metatarsal_arteries` summaries + notes: BP3D **no** per-ray / dorsal-metatarsal elementals to split (FJ2072 / FJ2096) |
+
+### Mesh decisions
+
+| Candidate | Decision |
+|-----------|----------|
+| Z-Anatomy ligaments / plantar fascia | **Blocked** — assets missing on box |
+| Split dorsal metatarsal arteries | **Impossible** from BP3D ISA elementals — keep honest grouped labels |
+

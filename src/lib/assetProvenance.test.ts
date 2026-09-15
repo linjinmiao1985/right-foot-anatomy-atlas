@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { getStructureProvenance, licenseLabel } from './assetProvenance';
+import { getStructureProvenance, licenseLabel, getTeachingMeshNote } from './assetProvenance';
 
 describe('assetProvenance', () => {
   it('marks placeholders', () => {
@@ -53,5 +53,12 @@ describe('assetProvenance', () => {
     expect(p.sourceShort).toBe('BP3D');
     expect(p.license).toBe('CC-BY-4.0');
     expect(p.isolatedBySa).toBeFalsy();
+  });
+
+  it('provides teaching mesh notes for nerves and grouped vessels', () => {
+    expect(getTeachingMeshNote('tibial_nerve', 'nerve')).toMatch(/CURVE|曲线/);
+    expect(getTeachingMeshNote('dorsal_digital_arteries', 'vessel')).toMatch(/FJ2072|组合/);
+    expect(getTeachingMeshNote('plantar_metatarsal_arteries', 'vessel')).toMatch(/FJ2096|组合/);
+    expect(getTeachingMeshNote('calcaneus', 'bone')).toBeNull();
   });
 });

@@ -109,3 +109,27 @@ export function licenseLabel(license: AssetLicense): string {
 /** Persistent footer copy — keep factual, no “complete atlas” claims. */
 export const ATLAS_SOURCE_FOOTER =
   '网格来源: BodyParts3D CC BY 4.0 · UM CC0 1.0 · Z-Anatomy 神经 / Open3D DI+近端动脉 CC BY-SA 4.0（by-sa/ 隔离）';
+
+/** Short panel copy about mesh fidelity — teaching honesty, not finished-product claims. */
+export function getTeachingMeshNote(structureId: string, layer: string): string | null {
+  if (layer === 'nerve') {
+    return '网格：Z-Anatomy 曲线管（CURVE→tube），教学路径示意，非容积解剖分割；CC BY-SA 4.0，仅 by-sa/ 加载。';
+  }
+  if (structureId === 'dorsal_digital_arteries') {
+    return '网格：BP3D FJ2072 组合体——无分趾 elemental，无法拆成独立跖背动脉。教学级组合标注，非逐趾血管图谱。';
+  }
+  if (structureId === 'plantar_metatarsal_arteries') {
+    return '网格：BP3D FJ2096 组合体——跖底跖骨动脉未按 1–4 间隙分拆。ISA 无独立 dorsal metatarsal elemental。';
+  }
+  if (structureId === 'posterior_tibial_artery' || structureId === 'fibular_artery') {
+    return '网格：Open3DModel lower-limb（CC BY-SA），Kabsch 对齐至 BP3D mm；by-sa/ 隔离，非主树 CC BY 主张。';
+  }
+  if (layer === 'vessel') {
+    return '网格：BP3D 足部血管多为命名主干；末梢分支常为组合体。教学示意，非介入导航级。';
+  }
+  if (structureId === 'long_plantar_ligament' || structureId === 'calcaneal_tendon') {
+    return '韧带/腱层仍不完整：仅 BP3D 跖长韧带 + 跟腱；无足底腱膜 / ATFL / CFL 等。';
+  }
+  return null;
+}
+

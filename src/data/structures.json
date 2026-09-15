@@ -673,7 +673,7 @@
     "layer": "vessel",
     "nameZh": "足背趾动脉（组合）",
     "nameLa": "Aa. digitales dorsales pedis (combined)",
-    "summaryZh": "足背跖骨间隙向趾间延伸的动脉，由足背动脉弓分支形成，供应足趾背侧皮肤和组织。BP3D grouped mesh包含所有足背趾动脉的组合（非单独分离）。TA2: A12.2.16.064",
+    "summaryZh": "足背趾动脉／跖背侧末梢动脉的 BP3D 组合网格（elemental FJ2072 / 概念 BP6049）。供应足趾背侧皮肤与浅层组织，多由弓状动脉或足背动脉分支延续。教学诚实标注：BP3D ISA 无单独「跖背动脉 1–4」elemental，亦无按趾拆分的 dorsal metatarsal 网格——本条目保持（组合），不可伪称逐趾血管图谱。TA2 相关：A12.2.16.064 一带。",
     "placeholder": false
   },
   {
@@ -708,7 +708,7 @@
     "layer": "vessel",
     "nameZh": "跖底跖骨动脉（组合）",
     "nameLa": "Aa. metatarsales plantares (combined)",
-    "summaryZh": "足底跖骨间隙的动脉，由足底外侧动脉分支形成，供应跖底和趾间组织。BP3D grouped mesh包含所有跖底跖骨动脉的组合（非单独分离）。TA2: A12.2.16.068",
+    "summaryZh": "跖底跖骨动脉的 BP3D 组合网格（elemental FJ2096 / 概念 BP6060）。自足底动脉弓发至跖骨间隙跖侧，再续为趾固有动脉。教学诚实标注：ISA 将全部跖底跖骨动脉归入同一 elemental，无 1st–4th 分拆 OBJ；亦无独立 dorsal metatarsal artery 概念可拆。本条目保持（组合）。TA2：A12.2.16.068 一带。",
     "placeholder": false
   },
   {

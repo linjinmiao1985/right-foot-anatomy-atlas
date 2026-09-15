@@ -201,3 +201,13 @@ If nerve layer becomes priority:
 **Status**: Z-Anatomy evaluated, Blender-internal extraction deferred  
 **Nerve Layer Decision**: Keep schematic (honest labeling) for week sprint  
 **Documentation**: Gap disclosed in methods.md + README
+
+
+---
+
+## Day 4r re-check (2026-09-15)
+
+- Local directory still documentation-only (no `Startup.blend` / zip).
+- Nerve GLBs already shipped under `public/models/right-foot/by-sa/` from an earlier extract.
+- **Ligament export**: blocked — no Blender mesh asset on box; Blender not installed.
+- Action: document blocker; no new isolate-SA ligament meshes this pass.

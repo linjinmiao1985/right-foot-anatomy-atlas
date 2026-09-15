@@ -216,6 +216,15 @@ export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName
         const color = LAYER_CONFIG[structure.layer].color;
         const isSelected = meshName === selectedMeshName;
         const isHovered = meshName === hoveredMesh;
+        // Teaching polish: when something is selected (and not isolating), dim peers
+        const selectedStruct = selectedMeshName ? getStructureByMeshName(selectedMeshName) : null;
+        const isPeerOfSelection =
+          Boolean(selectedMeshName) &&
+          !isolateMode &&
+          !(
+            structure.meshNames.includes(selectedMeshName!) ||
+            (selectedStruct != null && selectedStruct.id === structure.id)
+          );
         
         // Check if this structure has a real GLB model
         const hasRealBone = structure.layer === 'bone' && REAL_BONE_MODELS[structure.id];
@@ -270,6 +279,7 @@ export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName
               color={color}
               isSelected={isSelected}
               isHovered={isHovered}
+              isDimmed={isPeerOfSelection}
               onMeshClick={onMeshClick}
               onHoverChange={setHoveredMesh}
             />
@@ -287,6 +297,7 @@ export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName
               color={color}
               isSelected={isSelected}
               isHovered={isHovered}
+              isDimmed={isPeerOfSelection}
               onMeshClick={onMeshClick}
               onHoverChange={setHoveredMesh}
             />
@@ -594,6 +605,7 @@ interface RealVesselModelProps {
   color: string;
   isSelected: boolean;
   isHovered: boolean;
+  isDimmed?: boolean;
   onMeshClick: (meshName: string) => void;
   onHoverChange: (meshName: string | null) => void;
 }
@@ -605,6 +617,7 @@ function RealVesselModel({
   color,
   isSelected,
   isHovered,
+  isDimmed = false,
   onMeshClick,
   onHoverChange,
 }: RealVesselModelProps) {
@@ -612,22 +625,24 @@ function RealVesselModel({
   
   const clonedScene = scene.clone();
   
-  // Apply vessel-specific materials (slightly translucent red)
+  // Apply vessel-specific materials (slightly translucent red); dim peers when a vessel/structure is selected
   useEffect(() => {
     clonedScene.traverse((node) => {
       if ((node as any).isMesh) {
         const mesh = node as any;
         mesh.material = mesh.material.clone();
         mesh.material.color.set(color);
-        mesh.material.emissive.set(isSelected ? '#ff0000' : (isHovered ? '#ff6666' : '#330000'));
-        mesh.material.emissiveIntensity = isSelected ? 0.3 : (isHovered ? 0.2 : 0.1);
+        mesh.material.emissive.set(
+          isSelected ? '#ff0000' : isHovered ? '#ff6666' : isDimmed ? '#1a0000' : '#330000',
+        );
+        mesh.material.emissiveIntensity = isSelected ? 0.35 : isHovered ? 0.22 : isDimmed ? 0.04 : 0.1;
         mesh.material.transparent = true;
-        mesh.material.opacity = 0.8;
+        mesh.material.opacity = isSelected ? 0.92 : isHovered ? 0.85 : isDimmed ? 0.22 : 0.78;
         mesh.material.metalness = 0.2;
         mesh.material.needsUpdate = true;
       }
     });
-  }, [clonedScene, color, isSelected, isHovered]);
+  }, [clonedScene, color, isSelected, isHovered, isDimmed]);
   
   return (
     <group
@@ -683,6 +698,7 @@ interface RealNerveModelProps {
   color: string;
   isSelected: boolean;
   isHovered: boolean;
+  isDimmed?: boolean;
   onMeshClick: (meshName: string) => void;
   onHoverChange: (meshName: string | null) => void;
 }
@@ -694,6 +710,7 @@ function RealNerveModel({
   color,
   isSelected,
   isHovered,
+  isDimmed = false,
   onMeshClick,
   onHoverChange,
 }: RealNerveModelProps) {
@@ -701,22 +718,25 @@ function RealNerveModel({
   
   const clonedScene = scene.clone();
   
-  // Apply nerve-specific materials (yellow, slightly emissive)
+  // Apply nerve-specific materials (yellow, slightly emissive); dim peers when a nerve is selected
   useEffect(() => {
     clonedScene.traverse((node) => {
       if ((node as any).isMesh) {
         const mesh = node as any;
         mesh.material = mesh.material.clone();
         mesh.material.color.set(color);
-        mesh.material.emissive.set(isSelected ? '#ffff00' : (isHovered ? '#ffff66' : '#666600'));
-        mesh.material.emissiveIntensity = isSelected ? 0.5 : (isHovered ? 0.3 : 0.2);
-        mesh.material.transparent = false;
+        mesh.material.emissive.set(
+          isSelected ? '#ffff00' : isHovered ? '#ffff66' : isDimmed ? '#333300' : '#666600',
+        );
+        mesh.material.emissiveIntensity = isSelected ? 0.55 : isHovered ? 0.32 : isDimmed ? 0.06 : 0.2;
+        mesh.material.transparent = true;
+        mesh.material.opacity = isSelected ? 1 : isHovered ? 0.95 : isDimmed ? 0.2 : 0.9;
         mesh.material.metalness = 0.1;
         mesh.material.roughness = 0.8;
         mesh.material.needsUpdate = true;
       }
     });
-  }, [clonedScene, color, isSelected, isHovered]);
+  }, [clonedScene, color, isSelected, isHovered, isDimmed]);
   
   return (
     <group

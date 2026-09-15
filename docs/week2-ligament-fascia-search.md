@@ -107,3 +107,27 @@ Ligament layer remains **1/N** (long plantar only). Exhaustive local BP3D scan f
 
 **BP3D ligament ceiling (unchanged)**: only right long plantar among true foot ligament elementals; plantar fascia / ATFL / CFL / deltoid / spring / short plantar absent.
 
+
+
+## Day 4r — Z-Anatomy / OpenAnatomy local ligament export attempt
+
+**Goal**: Export 2–4 RIGHT foot ligaments or plantar fascia from local Z-Anatomy / OpenAnatomy Blender assets → `by-sa/` + Kabsch/NOTICE if needed.
+
+### Local asset hunt (box)
+
+| Path | Result |
+|------|--------|
+| `third_party/z-anatomy/` | **EVALUATION.md only** — no `Startup.blend`, no Z-Anatomy.zip, no ligament OBJ/GLB |
+| Box-wide `*.blend` | **None** |
+| Existing `public/models/right-foot/by-sa/` | 6 Z-Anatomy **nerve** GLBs + Open3D DI/arteries — **no ligaments** |
+| `third_party/open3dmodel/` | lower-limb OBJ zip present; prior keyword scan: **0** ankle ligaments / plantar fascia |
+| `/tmp/body_anatomy.glb` (hpfrei) | Prior session: no foot DI / not used for ligaments this pass |
+| Blender CLI | **Not installed** (`which blender` empty) |
+
+### Decision
+
+**Path 1 blocked** — cannot script Blender export without the `.blend` (or equivalent mesh) on disk. Did **not** download/install ~800MB Blender + Startup.blend in this pass (same cost tradeoff as Day 4 EVALUATION). No new BY-SA ligament GLBs; no Kabsch; NOTICE unchanged for ligaments.
+
+**Path 2 only** (teaching polish): non-selected nerve/vessel opacity dimming when a structure is selected; StructurePanel mesh-fidelity notes; honesty that BP3D cannot split dorsal metatarsal / dorsal digital into per-ray elementals (FJ2072 / FJ2096 remain grouped).
+
+**Still open**: ATFL / CFL / deltoid / spring / plantar fascia teaching meshes (CC0/BY preferred; Z-Anatomy BY-SA only if `.blend` available + spatial QA).

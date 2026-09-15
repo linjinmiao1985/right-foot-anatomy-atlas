@@ -1,6 +1,6 @@
 import type { AnatomyStructure } from '../types/anatomy';
 import { LAYER_CONFIG } from '../lib/layers';
-import { getStructureProvenance, licenseLabel } from '../lib/assetProvenance';
+import { getStructureProvenance, licenseLabel, getTeachingMeshNote } from '../lib/assetProvenance';
 
 interface StructurePanelProps {
   structure: AnatomyStructure | null;
@@ -16,6 +16,7 @@ export default function StructurePanel({ structure, onClose, isolateMode = false
 
   const layerConfig = LAYER_CONFIG[structure.layer];
   const provenance = getStructureProvenance(structure.id, structure.placeholder, structure.layer);
+  const meshNote = getTeachingMeshNote(structure.id, structure.layer);
   const sourceChipBg =
     provenance.license === 'placeholder'
       ? '#f59e0b'
@@ -143,6 +144,23 @@ export default function StructurePanel({ structure, onClose, isolateMode = false
       )}
 
       <p style={{ fontSize: '14px', lineHeight: '1.6', color: '#ccc', margin: 0 }}>{structure.summaryZh}</p>
+
+      {meshNote && (
+        <p
+          style={{
+            fontSize: '12px',
+            lineHeight: '1.5',
+            color: '#9ca3af',
+            margin: '12px 0 0',
+            padding: '8px 10px',
+            background: 'rgba(55, 65, 81, 0.45)',
+            borderRadius: '6px',
+            borderLeft: '3px solid #6b7280',
+          }}
+        >
+          {meshNote}
+        </p>
+      )}
     </div>
   );
 }
