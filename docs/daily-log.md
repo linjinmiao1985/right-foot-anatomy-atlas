@@ -1286,3 +1286,13 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 2. **Docs**: README Features · methods Day 4ao · phase-6 UX inventory + progress note · this log.
 3. **Checks**: integrity-audit + vitest + build; commit + push.
 4. **Honesty**: teaching atlas in progress — **no finished-product claim**. Census unchanged 129/124.
+
+## Day 4ap (2026-09-15) — teaching UI prefs persist + dig
+
+**Target**: Phase-6 remaining polish — persist UI prefs (listed after Day 4ao); prefer over SA mesh spam.
+
+1. **UX**: `src/lib/teachingPrefs.ts` — localStorage envelope v1 for layer visibility, label density, clip on/off+constant, last camera preset; restore on App boot; vitest (corrupt JSON / SSR-safe / clamp). Wired `App.tsx` save effect.
+2. **Learning log**: NEW #45 Female Atlas (MIT + CC BY HRA/BP3D); #46 slorksmo/Human-Atlas (MIT + CC BY; EN/AR RTL; Andreassen VHF muscles monitor).
+3. **Checks**: integrity-audit + vitest + build; commit + push.
+4. **Honesty**: teaching atlas in progress — **no finished-product claim**. Census unchanged 129/124. **No** SA mesh spam.
+

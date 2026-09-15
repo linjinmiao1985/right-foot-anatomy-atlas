@@ -73,6 +73,7 @@ These residuals support **classroom visualization**, not implant planning or int
 | **Screenshot pipeline** | Live pack + README embed (Day 4am) + multi-view expand (Day 4an) | `scripts/screenshot-pipeline.mjs` → `docs/screenshots/` (9 shots: 5 layer/clip + 4 camera presets); embedded in README carefully — **not** a product gallery claim |
 | **Camera presets** | Live (Day 4an) | 默认 / 背侧 / 跖侧 / 内侧 / 外侧 · keys `1`–`5`; full polar orbit for plantar sole teaching |
 | **Keyboard help** | Live (Day 4ao) | `?` / `H` + title button; bilingual shortcut sheet; Esc closes help first; dialog a11y |
+| **Teaching prefs persist** | Live (Day 4ap) | localStorage: layers · label density · clip · last camera preset; SSR/test-safe restore |
 
 ---
 
@@ -124,7 +125,13 @@ Recent digs (Day 4ah–4aj) logged UX-borrow / reject sources (LABIM3D, UltraBon
 
 - **UX**: Keyboard help overlay (`?`/`H` · title **? 帮助**) — bilingual camera / isolate / Esc / pointer sheet; Esc closes help before clearing selection; `role=dialog` + focus close. Prefer teaching polish; **0** new meshes.
 - Census unchanged 129/124. Methods version Day 4ao.
-- Remaining phase-6 / week polish candidates: accessibility pass, TA2 codes on panel, persist UI prefs, journal-facing limitations table, CC0/BY dig (no SA spam).
+- Remaining phase-6 / week polish candidates: accessibility pass, TA2 codes on panel, journal-facing limitations table, CC0/BY dig (no SA spam). *(persist UI prefs → done Day 4ap)*
+
+## Progress note (Day 4ap)
+
+- **UX**: localStorage teaching prefs (`src/lib/teachingPrefs.ts`) — restore layers / label density / clip / last camera preset on load; vitest covers corrupt JSON + storage throw.
+- **Dig**: #45 Female Atlas; #46 slorksmo/Human-Atlas (EN/AR). **0** meshes; no SA spam. Census unchanged 129/124.
+- Methods version Day 4ap.
 
 ## Cloud Agent handback (when quota returns)
 

@@ -63,6 +63,7 @@ Interactive web-based teaching atlas for right foot anatomy.
 - **Sagittal clip (lite)**: single X-axis teaching cutaway + slider — **not** clinical MPR (Day 4aj)
 - **Camera presets**: 默认 / 背侧 / 跖侧 / 内侧 / 外侧 (keys `1`–`5`) — plantar sole view enabled (Day 4an)
 - **Keyboard help overlay**: `?` / `H` or title **? 帮助** — bilingual shortcut sheet (Day 4ao); Esc closes help first
+- **Teaching prefs persist**: localStorage restores layer visibility, label density, sagittal clip, last camera preset (Day 4ap; teaching chrome only)
 - **Click selection**: Shows Chinese name, Latin name (TA2), summary
 - **Click-to-focus**: Camera frames selected mesh AABB (teaching polish)
 - **Hover tooltips**: Quick structure identification

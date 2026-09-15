@@ -26,6 +26,10 @@ import {
   cameraPresetFromDigitKey,
   type CameraPresetId,
 } from './lib/cameraPresets';
+import {
+  loadTeachingPrefs,
+  saveTeachingPrefs,
+} from './lib/teachingPrefs';
 import KeyboardHelpOverlay from './components/KeyboardHelpOverlay';
 import { isHelpToggleKey } from './lib/keyboardHelp';
 
@@ -34,7 +38,11 @@ function emptyLayerCounts(): Record<Layer, number> {
 }
 
 function App() {
-  const [visibleLayers, setVisibleLayers] = useState<Set<Layer>>(new Set(getAllLayers()));
+  // Boot from localStorage once (SSR/tests: loadTeachingPrefs → null → defaults).
+  const [visibleLayers, setVisibleLayers] = useState<Set<Layer>>(() => {
+    const stored = loadTeachingPrefs();
+    return new Set(stored?.visibleLayers ?? getAllLayers());
+  });
   const [selectedStructure, setSelectedStructure] = useState<AnatomyStructure | null>(null);
   const [selectedMeshName, setSelectedMeshName] = useState<string | null>(null);
   const [isolateMode, setIsolateMode] = useState(false);
@@ -51,12 +59,31 @@ function App() {
   const [visibleMuscleGroups, setVisibleMuscleGroups] = useState<Set<MuscleGroupId>>(
     () => new Set(getAllMuscleGroupIds()),
   );
-  const [labelDensity, setLabelDensity] = useState<LabelDensity>(DEFAULT_LABEL_DENSITY);
-  const [clipEnabled, setClipEnabled] = useState(DEFAULT_CLIP_ENABLED);
-  const [clipConstant, setClipConstant] = useState(DEFAULT_CLIP_CONSTANT);
-  const [cameraPresetId, setCameraPresetId] = useState<CameraPresetId>(DEFAULT_CAMERA_PRESET);
+  const [labelDensity, setLabelDensity] = useState<LabelDensity>(() => {
+    return loadTeachingPrefs()?.labelDensity ?? DEFAULT_LABEL_DENSITY;
+  });
+  const [clipEnabled, setClipEnabled] = useState(() => {
+    return loadTeachingPrefs()?.clipEnabled ?? DEFAULT_CLIP_ENABLED;
+  });
+  const [clipConstant, setClipConstant] = useState(() => {
+    return loadTeachingPrefs()?.clipConstant ?? DEFAULT_CLIP_CONSTANT;
+  });
+  const [cameraPresetId, setCameraPresetId] = useState<CameraPresetId>(() => {
+    return loadTeachingPrefs()?.cameraPresetId ?? DEFAULT_CAMERA_PRESET;
+  });
   const [cameraPresetToken, setCameraPresetToken] = useState(0);
   const [helpOpen, setHelpOpen] = useState(false);
+
+  // Persist teaching prefs (layers / label density / clip / last camera preset).
+  useEffect(() => {
+    saveTeachingPrefs({
+      visibleLayers: [...visibleLayers],
+      labelDensity,
+      clipEnabled,
+      clipConstant,
+      cameraPresetId,
+    });
+  }, [visibleLayers, labelDensity, clipEnabled, clipConstant, cameraPresetId]);
 
   const handleCameraPresetChange = (id: CameraPresetId) => {
     setCameraPresetId(id);

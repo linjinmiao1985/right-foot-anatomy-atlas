@@ -5,7 +5,7 @@ Living log of open-source human anatomy projects studied for the right-foot atla
 (CC0 / CC BY into main tree; BY-SA isolated under `public/models/right-foot/by-sa/` + NOTICE;
 reject NC / unknown / All Rights Reserved).
 
-**Last updated**: 2026-09-15 (Day 4ai)  
+**Last updated**: 2026-09-15 (Day 4ap)  
 **Status**: ongoing research — not a finished catalog.
 
 ---
@@ -910,5 +910,30 @@ Prefer **CC0/CC BY** finds for DI / proximal·fine arteries / nerve·ligament re
 
 - **0** new CC0/CC BY meshes integrated (DI still Open3D BY-SA; per-ray MTA still absent).
 - Camera presets + multi-view QA pack shipped; census unchanged **129/124**.
+- **No finished-product claim.**
+
+---
+
+## Session additions (2026-09-15 · Day 4ap — teaching prefs persist + dig)
+
+### UX applied
+
+| Change | Detail |
+|--------|--------|
+| **localStorage teaching prefs** | Persist layer visibility, label density, sagittal clip on/off+position, last camera preset. Restore on load; corrupt/missing → defaults. SSR/test-safe (no `window` / storage throw → null). |
+| Source | **UX-borrow** (ideas only) from Open Anatomy Studio local progress / favorites habit — no third-party code copied. |
+| Files | `src/lib/teachingPrefs.ts` (+ vitest), wired `App.tsx` |
+| Honesty | Prefs are teaching chrome only — **not** a clinical workstation profile / multi-user sync. |
+
+### NEW license-verified projects (≥2)
+
+| # | Project | URL | License verified | Foot relevance | Decision |
+|---|---------|-----|------------------|----------------|----------|
+| **45** | **Female Atlas** (HiMahendraBeniwal/female-atlas) | https://github.com/HiMahendraBeniwal/female-atlas | Code **MIT** (LICENSE + GitHub SPDX verified 2026-09-15); anatomy **CC BY 4.0** (README: HRA Female v1.5 + BodyParts3D) | Full-depth female explorer (incl. foot bones/muscles in MSK tables) — lineage overlaps BP3D/HRA already in tree; explode / system presets / zoom-to-cursor | **UX-borrow** (system presets + explode packing). **reject** as new foot soft-tissue source (same pool / no DI gap claim) |
+| **46** | **Human Atlas** (slorksmo/Human-Atlas) · demo https://atlas.taim.best | https://github.com/slorksmo/Human-Atlas | Code **MIT** (LICENSE + GitHub SPDX verified 2026-09-15); anatomy **CC BY 4.0** (README: BP3D male + HRA female + Andreassen 2023 VHF lower-limb muscles DOI 10.1038/s41597-022-01905-2; Wikidata Arabic CC0) | EN/AR bilingual + RTL; honest gap-fill (borrowed male foot bones; VHF leg muscles fitted) — **no** curated right-foot DI/NV pack beyond BP3D/HRA | **UX-borrow** (bilingual/RTL + gap-fill honesty). **monitor** Andreassen VHF muscle STL set for future CC BY lower-limb QA. **reject** copying borrowed male foot bones as “female” teaching |
+
+### Outcome
+
+- **0** new meshes integrated; prefs persist shipped; census unchanged **129/124**.
 - **No finished-product claim.**
 
