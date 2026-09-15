@@ -1,0 +1,40 @@
+Andreassen / University of Denver Visible Human Lower-Extremity MSK STLs
+=======================================================================
+
+Source: Center for Orthopaedic Biomechanics, University of Denver
+Digital Commons: https://digitalcommons.du.edu/visiblehuman/2/  (Visible Human Male)
+Dataset DOI: 10.56902/COB.vh.2022.2  (collection 10.56902/COB.vh.2022.0)
+Paper DOI: 10.1038/s41597-022-01905-2
+  Andreassen, T. E., Hume, D. R., Hamilton, L. D., Walker, K. E.,
+  Higinbotham, S. E., & Shelburne, K. B. (2023). Three dimensional lower
+  extremity musculoskeletal geometry of the Visible Human Female and Male.
+  Scientific Data, 10, 34.
+
+License: Creative Commons Attribution 4.0 International (CC BY 4.0)
+  https://creativecommons.org/licenses/by/4.0/
+Verified on Digital Commons STL download pages (license block + liability
+agreement). NLM Visible Human reuse also subject to NLM terms:
+  https://www.nlm.nih.gov/databases/download/terms_and_conditions.html
+
+What we downloaded (Day 4az):
+  Final 3D STL Models-stl.zip via Digital Commons viewcontent
+  (filename=10&article=1000&context=visiblehuman). VHM Right extracts:
+  Calcaneus, Talus, Navicular, Cuboid, 3 cuneiforms (Kabsch landmarks);
+  Gastrocnemius Medial, Gastrocnemius Lateral, Soleus (candidate bellies).
+
+What is in git:
+  vh_to_bp3d_transform.json — Kabsch attempt + BLOCKED status
+  spatial_qa.json — laterality / padded-AABB / attachment QA (fail)
+  NOTICE.txt — this file
+  Raw STL zip / extracts are gitignored (re-download from Digital Commons).
+
+Integration status (Day 4az): **NOT wired** to public/models/ or structures.json.
+Foot-tarsal Kabsch residuals are teaching-grade (~2.3 mm mean) but gastroc
+bellies fail BP3D right-foot laterality (X>0); soleus fails padded-AABB
+fraction. Proximal shared landmarks (tibia/fibula) are absent from this
+right-foot pack. Do not treat as a finished atlas fill.
+
+Changes if/when integrated later: STL→GLB conversion + Kabsch bake into
+BodyParts3D right-foot millimeters; indicate modifications per CC BY 4.0.
+
+Day 4ba Option A: BP3D LE landmarks from local cache + VH donor bones — still BLOCKED (see le_kabsch_option_a_trials.json). 0 GLB wire.

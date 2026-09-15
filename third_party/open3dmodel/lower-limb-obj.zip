@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Generator" content="Drupal 7 (http://drupal.org)" />
+<link rel="shortcut icon" href="https://anatomytool.org/sites/default/files/favicon%20v2_0.ico" type="image/vnd.microsoft.icon" />
+    <title>Page not found | AnatomyTOOL</title>
+    <style type="text/css" media="all">
+@import url("https://anatomytool.org/modules/system/system.base.css?ti46ll");
+@import url("https://anatomytool.org/modules/system/system.menus.css?ti46ll");
+@import url("https://anatomytool.org/modules/system/system.messages.css?ti46ll");
+@import url("https://anatomytool.org/modules/system/system.theme.css?ti46ll");
+</style>
+<style type="text/css" media="all">
+@import url("https://anatomytool.org/profiles/opigno_lms/modules/contrib/calendar/css/calendar_multiday.css?ti46ll");
+@import url("https://anatomytool.org/modules/comment/comment.css?ti46ll");
+@import url("https://anatomytool.org/profiles/opigno_lms/modules/contrib/date/date_api/date.css?ti46ll");
+@import url("https://anatomytool.org/profiles/opigno_lms/modules/contrib/date/date_popup/themes/datepicker.1.7.css?ti46ll");
+@import url("https://anatomytool.org/modules/field/theme/field.css?ti46ll");
+@import url("https://anatomytool.org/sites/all/modules/lumc_backgrounds/css/lumc_backgrounds.css?ti46ll");
+@import url("https://anatomytool.org/modules/node/node.css?ti46ll");
+@import url("https://anatomytool.org/modules/poll/poll.css?ti46ll");
+@import url("https://anatomytool.org/profiles/opigno_lms/modules/contrib/quiz/quiz.css?ti46ll");
+@import url("https://anatomytool.org/modules/search/search.css?ti46ll");
+@import url("https://anatomytool.org/modules/user/user.css?ti46ll");
+@import url("https://anatomytool.org/sites/all/modules/video_filter/video_filter.css?ti46ll");
+@import url("https://anatomytool.org/sites/all/modules/workflow/workflow_admin_ui/workflow_admin_ui.css?ti46ll");
+@import url("https://anatomytool.org/modules/forum/forum.css?ti46ll");
+@import url("https://anatomytool.org/profiles/opigno_lms/modules/contrib/views/css/views.css?ti46ll");
+@import url("https://anatomytool.org/profiles/opigno_lms/css/opigno_lms.css?ti46ll");
+</style>
+<style type="text/css" media="all">
+@import url("https://anatomytool.org/profiles/opigno_lms/modules/contrib/ctools/css/ctools.css?ti46ll");
+@import url("https://anatomytool.org/sites/all/modules/video/css/video.css?ti46ll");
+@import url("https://anatomytool.org/sites/all/modules/node_embed/plugins/node_embed/node_embed.css?ti46ll");
+</style>
+<style type="text/css" media="all">
+<!--/*--><![CDATA[/*><!--*/
+body.front,.theme-gradient{background:-webkit-linear-gradient(top,#2c7e8f,#93c3ca 50%,#82131f);background:-o-linear-gradient(top,#2c7e8f,#93c3ca 50%,#82131f);background:linear-gradient(to bottom,#2c7e8f,#93c3ca 50%,#82131f);background-attachment:fixed;}.theme-gradient:not(.noHover):hover,.theme-gradient:not(.noHover).hover{background:-webkit-linear-gradient(top,#2c7e8f,rgba(147,195,202,0.5),#82131f);background:-o-linear-gradient(top,#2c7e8f,rgba(147,195,202,0.5),#82131f);background:linear-gradient(to bottom,#2c7e8f,rgba(147,195,202,0.5),#82131f);background-attachment:fixed;}
+
+/*]]>*/-->
+</style>
+<style type="text/css" media="all">
+@import url("https://anatomytool.org/profiles/opigno_lms/modules/contrib/quiz_drag_drop/quiz_drag_drop.css?ti46ll");
+</style>
+<style type="text/css" media="all">
+@import url("https://anatomytool.org/sites/all/themes/lumc/dist/styles/main.css?ti46ll");
+@import url("https://anatomytool.org/sites/all/themes/lumc/styles.css?ti46ll");
+</style>
+<style type="text/css" media="all">
+@import url("https://anatomytool.org/profiles/opigno_lms/modules/opigno/opigno_wt_app/css/opigno_wt_app.css?ti46ll");
+</style>
+    <script type="text/javascript" src="https://anatomytool.org/misc/jquery.js?v=1.4.4"></script>
+<script type="text/javascript" src="https://anatomytool.org/misc/jquery-extend-3.4.0.js?v=1.4.4"></script>
+<script type="text/javascript" src="https://anatomytool.org/misc/jquery-html-prefilter-3.5.0-backport.js?v=1.4.4"></script>
+<script type="text/javascript" src="https://anatomytool.org/misc/jquery.once.js?v=1.2"></script>
+<script type="text/javascript" src="https://anatomytool.org/misc/drupal.js?ti46ll"></script>
+<script type="text/javascript" src="https://anatomytool.org/misc/form-single-submit.js?v=7.104"></script>
+<script type="text/javascript" src="https://anatomytool.org/misc/form.js?v=7.104"></script>
+<script type="text/javascript" src="https://anatomytool.org/misc/ajax.js?v=7.104"></script>
+<script type="text/javascript" src="https://anatomytool.org/sites/all/modules/lumc_backgrounds/js/lumc_backgrounds.js?ti46ll"></script>
+<script type="text/javascript" src="https://anatomytool.org/sites/all/modules/video/js/video.js?ti46ll"></script>
+<script type="text/javascript" src="https://anatomytool.org/misc/progress.js?v=7.104"></script>
+<script type="text/javascript" src="https://anatomytool.org/misc/collapse.js?v=7.104"></script>
+<script type="text/javascript" src="https://anatomytool.org/sites/all/themes/lumc/dist/scripts/jquery.js?ti46ll"></script>
+<script type="text/javascript" src="https://anatomytool.org/sites/all/themes/lumc/dist/scripts/jquery-noconflict.js?ti46ll"></script>
+<script type="text/javascript" src="https://anatomytool.org/sites/all/themes/lumc/dist/scripts/main.js?ti46ll"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","setHasJsCookie":0,"ajaxPageState":{"theme":"lumc","theme_token":"Lh3sy2kd6tNrPXFMGa1Y8gv8eIBZPpDXxgc_Mbe2fCE","js":{"misc\/jquery.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery-html-prefilter-3.5.0-backport.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"misc\/form-single-submit.js":1,"misc\/form.js":1,"misc\/ajax.js":1,"sites\/all\/modules\/lumc_backgrounds\/js\/lumc_backgrounds.js":1,"sites\/all\/modules\/video\/js\/video.js":1,"misc\/progress.js":1,"misc\/collapse.js":1,"sites\/all\/themes\/lumc\/dist\/scripts\/jquery.js":1,"sites\/all\/themes\/lumc\/dist\/scripts\/jquery-noconflict.js":1,"sites\/all\/themes\/lumc\/dist\/scripts\/main.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"profiles\/opigno_lms\/modules\/contrib\/calendar\/css\/calendar_multiday.css":1,"modules\/comment\/comment.css":1,"profiles\/opigno_lms\/modules\/contrib\/date\/date_api\/date.css":1,"profiles\/opigno_lms\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/lumc_backgrounds\/css\/lumc_backgrounds.css":1,"modules\/node\/node.css":1,"modules\/poll\/poll.css":1,"profiles\/opigno_lms\/modules\/contrib\/quiz\/quiz.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/video_filter\/video_filter.css":1,"sites\/all\/modules\/workflow\/workflow_admin_ui\/workflow_admin_ui.css":1,"modules\/forum\/forum.css":1,"profiles\/opigno_lms\/modules\/contrib\/views\/css\/views.css":1,"profiles\/opigno_lms\/css\/opigno_lms.css":1,"profiles\/opigno_lms\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/video\/css\/video.css":1,"sites\/all\/modules\/node_embed\/plugins\/node_embed\/node_embed.css":1,"0":1,"profiles\/opigno_lms\/modules\/contrib\/quiz_drag_drop\/quiz_drag_drop.css":1,"sites\/all\/themes\/lumc\/dist\/styles\/main.css":1,"sites\/all\/themes\/lumc\/styles.css":1,"profiles\/opigno_lms\/modules\/opigno\/opigno_wt_app\/css\/opigno_wt_app.css":1}},"urlIsAjaxTrusted":{"\/sites\/default\/files\/open3dmodel\/lower-limb-obj.zip?destination=sites\/default\/files\/open3dmodel\/lower-limb-obj.zip":true}});
+//--><!]]>
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  </head>
+  <body ng-app="lumcApp" class="html not-front not-logged-in no-sidebars page-sites page-sites-default page-sites-default-files page-sites-default-files-open3dmodel page-sites-default-files-open3dmodel-lower-limb-objzip i18n-en role-anonymous-user with-subnav page-sites-default-files-open3dmodel-lower-limb-obj-zip section-sites" >
+    <div id="background-image"></div>
+        <div id="page" class="page with-navigation">
+  <div id="main">
+        <div class="container-fluid">
+      
+<a href="#" class="left-menu-open hidden-sm-down" ng-show="!leftMenuDisplay" ng-click="leftMenuDisplay=true; $event.preventDefault();"></a>
+<nav id="left-nav"
+     click-outside="leftMenuDisplay=false;$event.preventDefault()"
+     ng-show="leftMenuDisplay"
+     ng-cloak>
+  <a href="#" class="left-menu-close" ng-click="leftMenuDisplay=false;$event.preventDefault()"></a>
+  <div class="nav-wrapper">
+    <div class="top-part">
+              <a href="/" title="AnatomyTOOL" rel="home" id="logo">
+          <img src="https://anatomytool.org/sites/default/files/logo_1.png" alt="AnatomyTOOL"/>
+        </a>
+            <a href="/" class="search"></a>
+      <ul class="nav">
+        <li>
+          <a href="/#region">
+            <img src="/sites/all/themes/lumc/dist/images/tabs/region.png" alt="region">
+            Region          </a>
+        </li>
+        <li>
+          <a href="/#systems">
+            <img src="/sites/all/themes/lumc/dist/images/tabs/systems.png" alt="systems">
+            System          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="middle-part">
+      <ul class="nav">
+        <li>
+          <a href="/collections">
+            <img src="/sites/all/themes/lumc/dist/images/tabs/intro.png" alt="info">
+            Collections          </a>
+        </li>
+        <li>
+          <a href="/embryology">
+            <img src="/sites/all/themes/lumc/dist/images/tabs/embryology.png" alt="embryology">
+            Embryology          </a>
+        </li>
+        <li>
+          <a href="/microscopy?f[]=field_di_type:123&f[]=field_di_image_type:697">
+            <img src="/sites/all/themes/lumc/dist/images/tabs/microscopy.png" alt="microscopy">
+            Microscopy          </a>
+        </li>
+        <li>
+          <a href="/dissection">
+            <img src="/sites/all/themes/lumc/dist/images/tabs/dissection.png" alt="dissection">
+            Dissections          </a>
+        </li>
+        <li>
+          <a href="/radiology">
+            <img src="/sites/all/themes/lumc/dist/images/tabs/imaging.png" alt="radiology">
+            Radiology          </a>
+        </li>
+        <li>
+          <a href="/anatomy_in_practice">
+            <img src="/sites/all/themes/lumc/dist/images/tabs/anatomy_in_practice.png" alt="anatomy_in_practice">
+            Clinical Anatomy          </a>
+        </li>
+        <li>
+          <a href="/documents">
+            <img src="/sites/all/themes/lumc/dist/images/tabs/documents.png" alt="documents">
+            Documents          </a>
+        </li>
+        <li>
+          <a href="/images">
+            <img src="/sites/all/themes/lumc/dist/images/tabs/images.png" alt="images">
+            Images          </a>
+        </li>
+        <li>
+          <a href="/videos">
+            <img src="/sites/all/themes/lumc/dist/images/tabs/videos.png" alt="videos">
+            Videos          </a>
+        </li>
+        <li>
+          <a href="/interactive">
+            <img src="/sites/all/themes/lumc/dist/images/tabs/interactive.png" alt="3D models, games">
+            3D models, games          </a>
+        </li>
+        <li>
+          <a href="/quizzes">
+            <img src="/sites/all/themes/lumc/dist/images/tabs/learning-activities.png" alt="lessons, quizzes">
+            Lessons. quizzes          </a>
+        </li>
+              </ul>
+    </div>
+    <div class="bottom-part">
+    <ul class="nav">
+      <li>
+        <a href="/viewers">
+          <img src="/sites/all/themes/lumc/dist/images/tabs/viewers.png" alt="viewers">
+          Viewers        </a>
+      </li>
+      <li>
+        <a href="/do/my-content">
+          <img src="/sites/all/themes/lumc/dist/images/tabs/do.png" alt="do">
+          Create & edit content        </a>
+      </li>
+      <li>
+        <a href="/do/quiz-generator">
+          <img src="/sites/all/themes/lumc/dist/images/tabs/quiz.png" alt="quiz">
+          Take quiz        </a>
+      </li>
+          </ul>
+  </div>
+  </div>
+</nav>
+      <nav id="right-nav" ng-cloak>
+  <button class="right-menu-open btn btn-link" ng-click="rightMenuDisplay=true">
+    <span class="menu-icon">
+      <span class="line top"></span>
+      <span class="line middle"></span>
+      <span class="line bottom"></span>
+    </span>
+  </button>
+  <div id="navigation"
+       class="menu"
+       ng-show="rightMenuDisplay"
+       click-outside="rightMenuDisplay=false">
+    <button class="right-menu-close btn btn-link" ng-click="rightMenuDisplay=false"></button>
+    <form action="/sites/default/files/open3dmodel/lower-limb-obj.zip?destination=sites/default/files/open3dmodel/lower-limb-obj.zip" method="post" id="user-login-form" accept-charset="UTF-8"><div><input type="hidden" name="form_build_id" value="form-uKl_sSpiz5s-mF620wjvdaQRz6CAirFus8LmgN-F6zM" />
+<input type="hidden" name="form_id" value="user_login_block" />
+<fieldset class="form-wrapper" id="edit-user-login-fieldset"><div class="fieldset-wrapper"><div class="form-item form-type-textfield form-item-name">
+ <input placeholder="Username" type="text" id="edit-name" name="name" value="" maxlength="60" class="form-text required" />
+</div>
+<div class="form-item form-type-password form-item-pass">
+ <input placeholder="Password" type="password" id="edit-pass" name="pass" maxlength="128" class="form-text required" />
+</div>
+<div class="form-actions form-wrapper" id="edit-actions"><input type="submit" id="edit-submit" name="op" value="Log in" class="form-submit" /><span class="user-actions"><a href="/user/register">Create account</a> / <a href="/user/password">Forgot password</a></span></div></div></fieldset>
+</div></form>            <ul id="main-menu" class="nav"><li class="nav-item"><a href="/about">About</a></li><li class="nav-item"><a href="/TOOL2">Project Open Anatomy Learning Materials (TOOL2)</a></li><li class="nav-item"><a href="/manuals">Manuals</a></li><li class="nav-item"><a href="/anatomy-learning-resources-which-are-open">Anatomy Learning Resources</a></li><li class="nav-item"><a href="/credits">Credits</a></li><li class="nav-item"><a href="/medical-disclaimer">Medical disclaimer</a></li><li class="nav-item"><a href="/legal-information">Legal information</a></li><li class="nav-item"><a href="/donate">Donate</a></li><li class="nav-item"><a href="/sponsor">Sponsor</a></li><li class="nav-item"><a href="/node/56227">Contact</a></li><li class="nav-item"><a href="/open3dmodel">Open 3D Model</a></li><li class="nav-item"><a href="/news-archive">Archive</a></li><li class="nav-item"><a href="/reviewers">Reviewers - areas of interest anatomists</a></li><li class="nav-item"><a href="/introductions">Information</a></li></ul>  </div>
+</nav>
+      <header id="header">
+                  <a href="/" title="AnatomyTOOL" rel="home" id="logo">
+            <img src="https://anatomytool.org/sites/default/files/logo_1.png" alt="AnatomyTOOL"/>
+          </a>
+              </header>
+      <section id="content">
+                  <div id="content-header">
+                          <h1 class="title">Page not found</h1>
+                                                          </div> <!-- /#content-header -->
+                <div id="content-area">
+                      
+The requested page "/sites/default/files/open3dmodel/lower-limb-obj.zip" could not be found.        </div>
+      </section> <!-- /content-inner /content -->
+          </div>
+  </div> <!-- /main -->
+</div> <!-- /page -->
+      </body>
+</html>

@@ -1,0 +1,269 @@
+/**
+ * Asset provenance for UI source badges.
+ * Mirrors FootModel.tsx REAL_* paths — keep in sync when integrating meshes.
+ * UX-borrow: Open Anatomy Studio / BioLens in-product attribution habit.
+ */
+
+export type AssetLicense = 'CC-BY-4.0' | 'CC0-1.0' | 'CC-BY-SA-4.0' | 'placeholder';
+
+export interface ProvenanceInfo {
+  sourceShort: string;
+  sourceFull: string;
+  license: AssetLicense;
+  isolatedBySa?: boolean;
+}
+
+const UM_MUSCLES = new Set([
+  'abductor_hallucis',
+  'flexor_digitorum_brevis',
+  'abductor_digiti_minimi',
+  'quadratus_plantae',
+  'extensor_digitorum_brevis',
+  'tibialis_posterior',
+  'flexor_digitorum_longus',
+  'flexor_hallucis_longus',
+  'tibialis_anterior',
+  'fibularis_longus',
+  'extensor_digitorum_longus',
+  'extensor_hallucis_longus',
+]);
+
+/** Formerly UM distal phalanges 2–5; now BP3D ISA elemental (Day 4k). */
+const UM_BONES = new Set<string>([
+  // empty — distal_phalanx_2–5 remapped to BP3D BP8472/9005/9261/8695
+]);
+
+const Z_ANATOMY_NERVES = new Set([
+  'tibial_nerve',
+  'medial_plantar_nerve',
+  'lateral_plantar_nerve',
+  'deep_fibular_nerve',
+  'superficial_fibular_nerve',
+  'sural_nerve',
+]);
+
+/** Z-Anatomy soft meshes (non-nerve) isolated under by-sa/ — Day 4ad */
+const Z_ANATOMY_SOFT = new Set([
+  'plantaris',
+  'proper_plantar_digital_arteries',
+  'common_plantar_digital_arteries',
+  'anterior_tibial_artery',
+  'dorsal_venous_arch',
+  'plantar_venous_arch',
+  'plantar_digital_veins',
+  'circumflex_fibular_artery',
+  'medial_plantar_veins',
+  'lateral_plantar_vein',
+  'plantar_metatarsal_veins',
+]);
+
+/** Open3DModel / AnatomyTOOL meshes isolated under by-sa/ (CC BY-SA 4.0) */
+const OPEN3D_BY_SA = new Set([
+  'interossei_dorsales',
+  'fibularis_brevis',
+  'fibularis_tertius',
+  'opponens_digiti_minimi',
+  'posterior_tibial_artery',
+  'fibular_artery',
+  'anterior_talofibular_ligament',
+  'calcaneofibular_ligament',
+  'posterior_talofibular_ligament',
+  'plantar_calcaneonavicular_ligament',
+  'plantar_aponeurosis',
+  'tibionavicular_ligament',
+  'tibiocalcaneal_ligament',
+  'posterior_tibiotalar_ligament',
+  'anterior_tibiotalar_ligament',
+  'plantar_calcaneocuboid_ligament',
+  'bifurcate_ligament',
+  'cuneometatarsal_interosseous_ligaments',
+  'dorsal_tarsometatarsal_ligaments',
+  'plantar_tarsometatarsal_ligaments',
+  'flexor_retinaculum_of_ankle',
+  'superior_extensor_retinaculum',
+  'inferior_extensor_retinaculum',
+  'superior_fibular_retinaculum',
+  'inferior_fibular_retinaculum',
+  'interosseous_talocalcaneal_ligament',
+  'cervical_talocalcaneal_ligament',
+  'talonavicular_ligament',
+  'deep_transverse_metatarsal_ligament',
+  'intercuneiform_interosseous_ligaments',
+  'dorsal_cuneonavicular_ligaments',
+  'medial_talocalcaneal_ligament',
+  'dorsal_intercuneiform_ligaments',
+  // Day 4x + 4y Open3D nerves (volumetric Kabsch→BP3D)
+  'common_plantar_digital_nerves',
+  'proper_plantar_digital_nerves_medial',
+  'proper_plantar_digital_nerves_lateral',
+  'deep_branch_lateral_plantar_nerve',
+  'medial_dorsal_cutaneous_nerve',
+  'lateral_dorsal_cutaneous_nerve',
+  'medial_calcaneal_branches',
+  'lateral_calcaneal_nerves',
+  'superficial_branch_lateral_plantar_nerve',
+  'dorsal_digital_superficial_fibular',
+  'dorsal_digital_deep_fibular',
+  // Day 4aa Open3D vessels
+  'deep_plantar_artery',
+  'deep_plantar_arch',
+  'dorsal_metatarsal_arteries',
+  'deep_branch_medial_plantar_artery',
+  'superficial_branch_medial_plantar_artery',
+  // Day 4ab Open3D vessels
+  'perforating_arcuate_deep_plantar',
+  'lateral_tarsal_artery',
+  'medial_tarsal_arteries',
+  'medial_calcaneal_artery',
+  'lateral_calcaneal_artery',
+]);
+
+const BP3D: ProvenanceInfo = {
+  sourceShort: 'BP3D',
+  sourceFull: 'BodyParts3D (DBCLS LSDB Archive)',
+  license: 'CC-BY-4.0',
+};
+
+const UM: ProvenanceInfo = {
+  sourceShort: 'UM',
+  sourceFull: 'Universiti Malaya Asian Male LE MSK',
+  license: 'CC0-1.0',
+};
+
+const Z_ANATOMY: ProvenanceInfo = {
+  sourceShort: 'Z-Anatomy',
+  sourceFull: 'Z-Anatomy (nerve curves + selective soft meshes)',
+  license: 'CC-BY-SA-4.0',
+  isolatedBySa: true,
+};
+
+const OPEN3D: ProvenanceInfo = {
+  sourceShort: 'Open3D',
+  sourceFull: 'Open3DModel / AnatomyTOOL lower-limb (CC BY-SA 4.0)',
+  license: 'CC-BY-SA-4.0',
+  isolatedBySa: true,
+};
+
+const PLACEHOLDER: ProvenanceInfo = {
+  sourceShort: '占位',
+  sourceFull: 'Schematic placeholder — no open mesh yet',
+  license: 'placeholder',
+};
+
+export function getStructureProvenance(
+  structureId: string,
+  placeholder: boolean,
+  layer: string,
+): ProvenanceInfo {
+  if (placeholder) return PLACEHOLDER;
+  if (OPEN3D_BY_SA.has(structureId)) return OPEN3D;
+  if (Z_ANATOMY_SOFT.has(structureId) || Z_ANATOMY_NERVES.has(structureId) || layer === 'nerve') return Z_ANATOMY;
+  if (UM_MUSCLES.has(structureId) || UM_BONES.has(structureId)) return UM; // UM_BONES currently empty
+  return BP3D;
+}
+
+export function licenseLabel(license: AssetLicense): string {
+  switch (license) {
+    case 'CC-BY-4.0':
+      return 'CC BY 4.0';
+    case 'CC0-1.0':
+      return 'CC0 1.0';
+    case 'CC-BY-SA-4.0':
+      return 'CC BY-SA 4.0';
+    case 'placeholder':
+      return '占位';
+  }
+}
+
+/** Persistent footer copy — keep factual, no “complete atlas” claims. */
+export const ATLAS_SOURCE_FOOTER =
+  '网格来源: BodyParts3D CC BY 4.0 · UM CC0 1.0 · Z-Anatomy 干神经+跖肌/踇短屈肌外侧腹/足底趾动脉+腓回旋支+足静脉示意 / Open3D DI+FB/FT/小趾对掌肌+近端/细支动脉+踝足韧带/支持带/腱膜+细支神经 CC BY-SA 4.0（by-sa/ 隔离）';
+
+/** Short panel copy about mesh fidelity — teaching honesty, not finished-product claims. */
+export function getTeachingMeshNote(structureId: string, layer: string): string | null {
+  if (structureId === 'fibularis_brevis' || structureId === 'fibularis_tertius' || structureId === 'opponens_digiti_minimi') {
+    return '网格：Open3DModel lower-limb（CC BY-SA），Kabsch→BP3D mm；census 缺口补齐；仅 by-sa/ 加载。肌肉层仍不完整。';
+  }
+  if (structureId === 'plantaris') {
+    return '网格：Z-Anatomy Plantaris muscle.r（CC BY-SA），ZA→BP3D Kabsch；by-sa/ 隔离。不代表小腿三头肌完整。';
+  }
+  if (structureId === 'proper_plantar_digital_arteries') {
+    return '网格：Z-Anatomy Proper plantar digital arteries.r（CC BY-SA），分组教学对象，非逐趾分条；by-sa/。';
+  }
+  if (structureId === 'common_plantar_digital_arteries') {
+    return '网格：Z-Anatomy Common plantar digital arteries.r（CC BY-SA），分组教学对象，非逐间隙分条；by-sa/。';
+  }
+  if (structureId === 'anterior_tibial_artery') {
+    return '网格：Z-Anatomy Anterior tibial artery.r（CC BY-SA），ZA→BP3D Kabsch；by-sa/。教学近端来源示意，非小腿全图谱。';
+  }
+  if (structureId === 'circumflex_fibular_artery') {
+    return '网格：Z-Anatomy Circumflex fibular branch of PTA.r（CC BY-SA），ZA→BP3D Kabsch；by-sa/。近端属支教学示意，非膝/小腿全图谱。';
+  }
+  if (
+    structureId === 'dorsal_venous_arch' ||
+    structureId === 'plantar_venous_arch' ||
+    structureId === 'plantar_digital_veins' ||
+    structureId === 'medial_plantar_veins' ||
+    structureId === 'lateral_plantar_vein' ||
+    structureId === 'plantar_metatarsal_veins'
+  ) {
+    return '网格：Z-Anatomy 足静脉示意（CC BY-SA），ZA→BP3D Kabsch；by-sa/。静脉教学对象扩充中，非完整足静脉图谱。';
+  }
+  if (structureId === 'flexor_hallucis_brevis') {
+    return '内侧腹：BP3D CC BY；外侧腹附加件：Z-Anatomy（CC BY-SA，by-sa/）。混合许可结构。';
+  }
+  if (OPEN3D_BY_SA.has(structureId) && layer === 'nerve') {
+    return '网格：Open3DModel lower-limb（CC BY-SA），Kabsch→BP3D mm；足底细支/皮支/跟支/背侧趾支教学对象（部分为分组），非手术导航级；仅 by-sa/ 加载。仍非完整周围神经图谱。';
+  }
+  if (layer === 'nerve') {
+    return '网格：Z-Anatomy 曲线管（CURVE→tube），教学路径示意，非容积解剖分割；CC BY-SA 4.0，仅 by-sa/ 加载。';
+  }
+  if (structureId === 'dorsal_digital_arteries') {
+    return '网格：BP3D FJ2072 组合体——无分趾 elemental，无法拆成独立跖背动脉。教学级组合标注，非逐趾血管图谱。';
+  }
+  if (structureId === 'plantar_metatarsal_arteries') {
+    return '网格：BP3D FJ2096 组合体——跖底跖骨动脉未按 1–4 间隙分拆。ISA 无独立 dorsal metatarsal elemental。';
+  }
+  if (structureId === 'posterior_tibial_artery' || structureId === 'fibular_artery') {
+    return '网格：Open3DModel lower-limb（CC BY-SA），Kabsch 对齐至 BP3D mm；by-sa/ 隔离，非主树 CC BY 主张。';
+  }
+  if (structureId === 'dorsal_metatarsal_arteries') {
+    return '网格：Open3D Dorsal_metatarsal_arteries.r 组合体——无 1st–4th 独立 elemental。教学级（组合），非逐射线血管图谱；by-sa/。';
+  }
+  if (structureId === 'deep_plantar_arch') {
+    return '网格：Open3D Deep_plantar_arch.r（CC BY-SA）— 与 BP3D 足底动脉弓同属深弓教学概念的隔离分割细节；非两套不同解剖弓。';
+  }
+  if (
+    structureId === 'deep_plantar_artery'
+    || structureId === 'deep_branch_medial_plantar_artery'
+    || structureId === 'superficial_branch_medial_plantar_artery'
+  ) {
+    return '网格：Open3DModel lower-limb（CC BY-SA），Kabsch→BP3D mm；足底深支/内侧动脉分支教学对象；仅 by-sa/ 加载。';
+  }
+  if (structureId === 'medial_tarsal_arteries') {
+    return '网格：Open3D Medial_tarsal_arteries.r 组合体——无分条独立 elemental。教学级（组合），非逐支跗内侧图谱；by-sa/。';
+  }
+  if (
+    structureId === 'perforating_arcuate_deep_plantar'
+    || structureId === 'lateral_tarsal_artery'
+    || structureId === 'medial_calcaneal_artery'
+    || structureId === 'lateral_calcaneal_artery'
+  ) {
+    return '网格：Open3DModel lower-limb（CC BY-SA），Kabsch→BP3D mm；跗/跟/穿支动脉教学对象；仅 by-sa/ 加载。';
+  }
+  if (layer === 'vessel') {
+    return '网格：BP3D 足部血管多为命名主干；末梢分支常为组合体。教学示意，非介入导航级。';
+  }
+  if (OPEN3D_BY_SA.has(structureId) && (
+    structureId.includes('ligament')
+    || structureId.includes('aponeurosis')
+    || structureId.includes('retinaculum')
+  )) {
+    return '网格：Open3DModel lower-limb（CC BY-SA），Kabsch→BP3D mm；by-sa/ 隔离。韧带/支持带/腱膜层仍不完整（非手术级；部分为分组带）。';
+  }
+  if (structureId === 'long_plantar_ligament' || structureId === 'calcaneal_tendon') {
+    return 'BP3D CC BY：跖长韧带 + 跟腱；其余踝足韧带/支持带/足底腱膜见 Open3D BY-SA。仍非完整韧带图谱。';
+  }
+  return null;
+}
+

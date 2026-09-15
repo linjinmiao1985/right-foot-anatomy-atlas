@@ -1,0 +1,850 @@
+{
+  "version": "3.10.0-muscle-gaps-za-soft",
+  "sources": [
+    "BodyParts3D Release 4.0 (DBCLS Japan)",
+    "Universiti Malaya Asian Male LE MSK",
+    "Z-Anatomy (Startup.blend)",
+    "Open3DModel / AnatomyTOOL lower-limb (BY-SA isolate)"
+  ],
+  "licenses": {
+    "BodyParts3D": "CC BY 4.0",
+    "UM": "CC0 1.0",
+    "Z-Anatomy": "CC BY-SA 4.0 (isolated in by-sa/ subdirectory)",
+    "Open3DModel": "CC BY-SA 4.0 (isolated in by-sa/ subdirectory)"
+  },
+  "attribution": "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International; Universiti Malaya Asian Male Lower Extremity Musculoskeletal Model (CC0 1.0, Public Domain); Z-Anatomy - The libre 3D atlas of anatomy (CC BY-SA 4.0); Open3DModel / AnatomyTOOL lower-limb (CC BY-SA 4.0)",
+  "date_extracted": "2026-09-15",
+  "bones": [
+    {
+      "id": "calcaneus",
+      "file": "calcaneus_BP9040.glb",
+      "bp": "BP9040",
+      "fma": "FMA24497",
+      "name_zh": "跟骨",
+      "name_la": "Calcaneus"
+    },
+    {
+      "id": "talus",
+      "file": "talus_BP8033.glb",
+      "bp": "BP8033",
+      "fma": "FMA24482",
+      "name_zh": "距骨",
+      "name_la": "Talus"
+    },
+    {
+      "id": "navicular",
+      "file": "navicular_BP9133.glb",
+      "bp": "BP9133",
+      "fma": "FMA24500",
+      "name_zh": "舟骨",
+      "name_la": "Os naviculare"
+    },
+    {
+      "id": "cuboid",
+      "file": "cuboid_BP8873.glb",
+      "bp": "BP8873",
+      "fma": "FMA24528",
+      "name_zh": "骰骨",
+      "name_la": "Os cuboideum"
+    },
+    {
+      "id": "cuneiform_medial",
+      "file": "cuneiform_medial_BP8830.glb",
+      "bp": "BP8830",
+      "fma": "FMA24521",
+      "name_zh": "内侧楔骨",
+      "name_la": "Os cuneiforme mediale"
+    },
+    {
+      "id": "cuneiform_intermediate",
+      "file": "cuneiform_intermediate_BP9110.glb",
+      "bp": "BP9110",
+      "fma": "FMA24523",
+      "name_zh": "中间楔骨",
+      "name_la": "Os cuneiforme intermedium"
+    },
+    {
+      "id": "cuneiform_lateral",
+      "file": "cuneiform_lateral_BP8730.glb",
+      "bp": "BP8730",
+      "fma": "FMA24525",
+      "name_zh": "外侧楔骨",
+      "name_la": "Os cuneiforme laterale"
+    },
+    {
+      "id": "metatarsal_1",
+      "file": "metatarsal_1_BP8230.glb",
+      "bp": "BP8230",
+      "fma": "FMA24507",
+      "name_zh": "第一跖骨",
+      "name_la": "Os metatarsi I"
+    },
+    {
+      "id": "metatarsal_2",
+      "file": "metatarsal_2_BP8627.glb",
+      "bp": "BP8627",
+      "fma": "FMA24509",
+      "name_zh": "第二跖骨",
+      "name_la": "Os metatarsi II"
+    },
+    {
+      "id": "metatarsal_3",
+      "file": "metatarsal_3_BP8802.glb",
+      "bp": "BP8802",
+      "fma": "FMA24511",
+      "name_zh": "第三跖骨",
+      "name_la": "Os metatarsi III"
+    },
+    {
+      "id": "metatarsal_4",
+      "file": "metatarsal_4_BP9130.glb",
+      "bp": "BP9130",
+      "fma": "FMA24513",
+      "name_zh": "第四跖骨",
+      "name_la": "Os metatarsi IV"
+    },
+    {
+      "id": "metatarsal_5",
+      "file": "metatarsal_5_BP7912.glb",
+      "bp": "BP7912",
+      "fma": "FMA24515",
+      "name_zh": "第五跖骨",
+      "name_la": "Os metatarsi V"
+    },
+    {
+      "id": "proximal_phalanx_1",
+      "file": "proximal_phalanx_1_BP8785.glb",
+      "bp": "BP8785",
+      "fma": "FMA43253",
+      "name_zh": "踇趾近节趾骨",
+      "name_la": "Phalanx proximalis hallucis",
+      "note": "ISA right hallux proximal; was mis-ID BP8488 (= middle phalanx II)"
+    },
+    {
+      "id": "distal_phalanx_1",
+      "file": "distal_phalanx_1_BP9282.glb",
+      "bp": "BP9282",
+      "fma": "FMA32650",
+      "name_zh": "踇趾远节趾骨",
+      "name_la": "Phalanx distalis hallucis"
+    },
+    {
+      "id": "sesamoid_bones",
+      "file": "sesamoid_bones.glb",
+      "bp": "BP8756",
+      "fma": "FMA45097",
+      "name_zh": "踇趾籽骨",
+      "name_la": "Ossa sesamoidea hallucis",
+      "note": "Grouped mesh: 2 sesamoids (medial + lateral) under MT1 head"
+    },
+    {
+      "id": "proximal_phalanx_2",
+      "file": "proximal_phalanx_2.glb",
+      "bp": "BP9196",
+      "fma": "FMA32634",
+      "name_zh": "第二趾近节趾骨",
+      "name_la": "Phalanx proximalis digiti II pedis"
+    },
+    {
+      "id": "proximal_phalanx_3",
+      "file": "proximal_phalanx_3.glb",
+      "bp": "BP8762",
+      "fma": "FMA32636",
+      "name_zh": "第三趾近节趾骨",
+      "name_la": "Phalanx proximalis digiti III pedis"
+    },
+    {
+      "id": "proximal_phalanx_4",
+      "file": "proximal_phalanx_4.glb",
+      "bp": "BP8281",
+      "fma": "FMA32638",
+      "name_zh": "第四趾近节趾骨",
+      "name_la": "Phalanx proximalis digiti IV pedis"
+    },
+    {
+      "id": "proximal_phalanx_5",
+      "file": "proximal_phalanx_5.glb",
+      "bp": "BP8417",
+      "fma": "FMA32640",
+      "name_zh": "第五趾近节趾骨",
+      "name_la": "Phalanx proximalis digiti V pedis"
+    },
+    {
+      "id": "middle_phalanx_2",
+      "file": "middle_phalanx_2.glb",
+      "bp": "BP8488",
+      "fma": "FMA32642",
+      "name_zh": "第二趾中节趾骨",
+      "name_la": "Phalanx media digiti II pedis"
+    },
+    {
+      "id": "middle_phalanx_3",
+      "file": "middle_phalanx_3.glb",
+      "bp": "BP9047",
+      "fma": "FMA32644",
+      "name_zh": "第三趾中节趾骨",
+      "name_la": "Phalanx media digiti III pedis"
+    },
+    {
+      "id": "middle_phalanx_4",
+      "file": "middle_phalanx_4.glb",
+      "bp": "BP8576",
+      "fma": "FMA32646",
+      "name_zh": "第四趾中节趾骨",
+      "name_la": "Phalanx media digiti IV pedis"
+    },
+    {
+      "id": "distal_phalanx_2",
+      "file": "distal_phalanx_2_BP8472.glb",
+      "bp": "BP8472",
+      "fma": "FMA32652",
+      "name_zh": "第二趾远节趾骨",
+      "name_la": "Phalanx distalis digiti II pedis",
+      "note": "Replaces UM CC0 mesh (Y≈−850 frame) with BP3D ISA elemental"
+    },
+    {
+      "id": "distal_phalanx_3",
+      "file": "distal_phalanx_3_BP9005.glb",
+      "bp": "BP9005",
+      "fma": "FMA32654",
+      "name_zh": "第三趾远节趾骨",
+      "name_la": "Phalanx distalis digiti III pedis",
+      "note": "Replaces UM CC0 mesh with BP3D ISA elemental"
+    },
+    {
+      "id": "distal_phalanx_4",
+      "file": "distal_phalanx_4_BP9261.glb",
+      "bp": "BP9261",
+      "fma": "FMA32656",
+      "name_zh": "第四趾远节趾骨",
+      "name_la": "Phalanx distalis digiti IV pedis",
+      "note": "Replaces UM CC0 mesh with BP3D ISA elemental"
+    },
+    {
+      "id": "distal_phalanx_5",
+      "file": "distal_phalanx_5_BP8695.glb",
+      "bp": "BP8695",
+      "fma": "FMA32658",
+      "name_zh": "第五趾远节趾骨",
+      "name_la": "Phalanx distalis digiti V pedis",
+      "note": "Replaces UM CC0 mesh with BP3D ISA elemental"
+    }
+  ],
+  "muscles": [
+    {
+      "id": "abductor_hallucis",
+      "file": "abductor_hallucis.glb",
+      "source": "UM",
+      "fma": "FMA37459",
+      "name_zh": "踇展肌",
+      "name_la": "Abductor hallucis",
+      "note": "UM CC0 replaces BP3D (8.7x resolution); Day 4l Kabsch-baked UM→BP3D mm"
+    },
+    {
+      "id": "flexor_digitorum_brevis",
+      "file": "flexor_digitorum_brevis.glb",
+      "source": "UM",
+      "fma": "FMA37461",
+      "name_zh": "趾短屈肌",
+      "name_la": "Flexor digitorum brevis",
+      "note": "UM CC0 replaces BP3D (2.4x resolution); Day 4l Kabsch-baked UM→BP3D mm"
+    },
+    {
+      "id": "abductor_digiti_minimi",
+      "file": "abductor_digiti_minimi.glb",
+      "source": "UM",
+      "fma": "FMA37463",
+      "name_zh": "小趾展肌",
+      "name_la": "Abductor digiti minimi pedis",
+      "note": "UM CC0 replaces BP3D (4.5x resolution); Day 4l Kabsch-baked UM→BP3D mm"
+    },
+    {
+      "id": "quadratus_plantae",
+      "file": "quadratus_plantae.glb",
+      "source": "UM",
+      "fma": "FMA37454",
+      "name_zh": "跖方肌",
+      "name_la": "Quadratus plantae",
+      "note": "UM CC0 fills BP3D gap; Day 4l Kabsch-baked UM→BP3D mm"
+    },
+    {
+      "id": "extensor_digitorum_brevis",
+      "file": "extensor_digitorum_brevis.glb",
+      "source": "UM",
+      "fma": "FMA51142",
+      "name_zh": "趾短伸肌",
+      "name_la": "Extensor digitorum brevis",
+      "note": "UM CC0 fills BP3D gap; Day 4l Kabsch-baked UM→BP3D mm"
+    },
+    {
+      "id": "extensor_hallucis_brevis",
+      "file": "extensor_hallucis_brevis.glb",
+      "source": "BP3D",
+      "bp": "BP5059",
+      "fma": "FMA51144",
+      "name_zh": "踇短伸肌",
+      "name_la": "Extensor hallucis brevis"
+    },
+    {
+      "id": "flexor_digiti_minimi_brevis",
+      "file": "flexor_digiti_minimi_brevis.glb",
+      "source": "BP3D",
+      "bp": "BP5050",
+      "fma": "FMA37471",
+      "name_zh": "小趾短屈肌",
+      "name_la": "Flexor digiti minimi brevis pedis"
+    },
+    {
+      "id": "adductor_hallucis_oblique",
+      "file": "adductor_hallucis_oblique.glb",
+      "source": "BP3D",
+      "bp": "BP5578",
+      "fma": "FMA46018",
+      "name_zh": "踇收肌斜头",
+      "name_la": "Adductor hallucis caput obliquum"
+    },
+    {
+      "id": "adductor_hallucis_transverse",
+      "file": "adductor_hallucis_transverse.glb",
+      "source": "BP3D",
+      "bp": "BP5580",
+      "fma": "FMA46020",
+      "name_zh": "踇收肌横头",
+      "name_la": "Adductor hallucis caput transversum"
+    },
+    {
+      "id": "flexor_hallucis_brevis_medial",
+      "file": "flexor_hallucis_brevis_medial.glb",
+      "source": "BP3D",
+      "bp": "BP5546",
+      "fma": "FMA45971",
+      "name_zh": "踇短屈肌内侧头",
+      "name_la": "Flexor hallucis brevis caput mediale"
+    },
+    {
+      "id": "lumbrical_1",
+      "file": "lumbrical_1st.glb",
+      "source": "BP3D",
+      "bp": "BP5044",
+      "fma": "FMA37717",
+      "name_zh": "第1蚓状肌",
+      "name_la": "Lumbricalis I"
+    },
+    {
+      "id": "lumbrical_2",
+      "file": "lumbrical_2nd.glb",
+      "source": "BP3D",
+      "bp": "BP5040",
+      "fma": "FMA37719",
+      "name_zh": "第2蚓状肌",
+      "name_la": "Lumbricalis II"
+    },
+    {
+      "id": "lumbrical_3",
+      "file": "lumbrical_3rd.glb",
+      "source": "BP3D",
+      "bp": "BP5038",
+      "fma": "FMA37485",
+      "name_zh": "第3蚓状肌",
+      "name_la": "Lumbricalis III"
+    },
+    {
+      "id": "lumbrical_4",
+      "file": "lumbrical_4th.glb",
+      "source": "BP3D",
+      "bp": "BP5042",
+      "fma": "FMA37483",
+      "name_zh": "第4蚓状肌",
+      "name_la": "Lumbricalis IV"
+    },
+    {
+      "id": "plantar_interosseous_1",
+      "file": "plantar_interosseous_1st.glb",
+      "source": "BP3D",
+      "bp": "BP5035",
+      "fma": "FMA37745",
+      "name_zh": "第1足底骨间肌",
+      "name_la": "Interosseus plantaris I"
+    },
+    {
+      "id": "plantar_interosseous_2",
+      "file": "plantar_interosseous_2nd.glb",
+      "source": "BP3D",
+      "bp": "BP5033",
+      "fma": "FMA37743",
+      "name_zh": "第2足底骨间肌",
+      "name_la": "Interosseus plantaris II"
+    },
+    {
+      "id": "plantar_interosseous_3",
+      "file": "plantar_interosseous_3rd.glb",
+      "source": "BP3D",
+      "bp": "BP5031",
+      "fma": "FMA37741",
+      "name_zh": "第3足底骨间肌",
+      "name_la": "Interosseus plantaris III"
+    },
+    {
+      "id": "tibialis_anterior",
+      "file": "tibialis_anterior.glb",
+      "source": "UM",
+      "license": "CC0 1.0",
+      "name_zh": "胫骨前肌",
+      "name_la": "M. tibialis anterior",
+      "note": "Day 4n: orphan GLB Kabsch-baked + wired; teaching extrinsic"
+    },
+    {
+      "id": "fibularis_longus",
+      "file": "peroneus_longus.glb",
+      "source": "UM",
+      "license": "CC0 1.0",
+      "name_zh": "腓骨长肌",
+      "name_la": "M. fibularis longus",
+      "note": "Day 4n: TA2 fibularis; filename keeps peroneus_longus.glb; Kabsch-baked"
+    },
+    {
+      "id": "extensor_digitorum_longus",
+      "file": "extensor_digitorum_longus.glb",
+      "source": "UM",
+      "license": "CC0 1.0",
+      "name_zh": "趾长伸肌",
+      "name_la": "M. extensor digitorum longus",
+      "note": "Day 4n teaching extrinsic; Kabsch-baked"
+    },
+    {
+      "id": "extensor_hallucis_longus",
+      "file": "extensor_hallucis_longus.glb",
+      "source": "UM",
+      "license": "CC0 1.0",
+      "name_zh": "踇长伸肌",
+      "name_la": "M. extensor hallucis longus",
+      "note": "Day 4n teaching extrinsic; Kabsch-baked"
+    }
+  ],
+  "vessels": [
+    {
+      "id": "dorsalis_pedis_artery",
+      "file": "dorsalis_pedis_artery.glb",
+      "source": "BP3D",
+      "bp": "BP6027",
+      "fma": "FMA43916",
+      "name_zh": "足背动脉",
+      "name_la": "Arteria dorsalis pedis"
+    },
+    {
+      "id": "arcuate_artery",
+      "file": "arcuate_artery.glb",
+      "source": "BP3D",
+      "bp": "BP6054",
+      "fma": "FMA69494",
+      "name_zh": "弓状动脉",
+      "name_la": "Arteria arcuata"
+    },
+    {
+      "id": "dorsal_digital_arteries",
+      "file": "dorsal_digital_arteries.glb",
+      "source": "BP3D",
+      "bp": "BP6049",
+      "fma": "FMA44660",
+      "name_zh": "足背趾动脉（组合）",
+      "name_la": "Aa. digitales dorsales pedis (combined)",
+      "note": "Honest grouped mesh: all dorsal digital arteries combined, not individually split per toe"
+    },
+    {
+      "id": "plantar_arch",
+      "file": "plantar_arch.glb",
+      "source": "BP3D",
+      "bp": "BP6014",
+      "fma": "FMA43943",
+      "name_zh": "足底动脉弓",
+      "name_la": "Arcus plantaris"
+    },
+    {
+      "id": "plantar_metatarsal_arteries",
+      "file": "plantar_metatarsal_arteries_grouped.glb",
+      "source": "BP3D",
+      "bp": "BP6060",
+      "fma": "FMA43956",
+      "name_zh": "跖底跖骨动脉（组合）",
+      "name_la": "Aa. metatarsales plantares (combined)",
+      "note": "Honest grouped mesh: all plantar metatarsal arteries combined, not individually split"
+    },
+    {
+      "id": "medial_plantar_artery",
+      "file": "medial_plantar_artery.glb",
+      "source": "BP3D",
+      "bp": "BP6062",
+      "fma": "FMA43929",
+      "name_zh": "足底内侧动脉",
+      "name_la": "Arteria plantaris medialis"
+    },
+    {
+      "id": "lateral_plantar_artery",
+      "file": "lateral_plantar_artery.glb",
+      "source": "BP3D",
+      "bp": "BP6065",
+      "fma": "FMA43931",
+      "name_zh": "足底外侧动脉",
+      "name_la": "Arteria plantaris lateralis"
+    },
+    {
+      "id": "posterior_tibial_artery",
+      "file": "by-sa/posterior_tibial_artery.glb",
+      "source": "Open3DModel",
+      "license": "CC BY-SA 4.0",
+      "fma": "FMA43882",
+      "name_zh": "胫后动脉",
+      "name_la": "Arteria tibialis posterior",
+      "note": "BY-SA isolate; Kabsch-aligned Open3D→BP3D mm (see third_party/open3dmodel/open3d_to_bp3d_transform.json)"
+    },
+    {
+      "id": "fibular_artery",
+      "file": "by-sa/fibular_artery.glb",
+      "source": "Open3DModel",
+      "license": "CC BY-SA 4.0",
+      "fma": "FMA43905",
+      "name_zh": "腓动脉",
+      "name_la": "Arteria fibularis",
+      "note": "BY-SA isolate; Kabsch-aligned Open3D→BP3D mm"
+    }
+  ],
+  "nerves": [
+    {
+      "id": "tibial_nerve",
+      "file": "by-sa/tibial_nerve.glb",
+      "source": "Z-Anatomy",
+      "license": "CC BY-SA 4.0",
+      "fma": "FMA19027",
+      "name_zh": "胫神经",
+      "name_la": "N. tibialis"
+    },
+    {
+      "id": "medial_plantar_nerve",
+      "file": "by-sa/medial_plantar_nerve.glb",
+      "source": "Z-Anatomy",
+      "license": "CC BY-SA 4.0",
+      "fma": "FMA44320",
+      "name_zh": "足底内侧神经",
+      "name_la": "N. plantaris medialis"
+    },
+    {
+      "id": "lateral_plantar_nerve",
+      "file": "by-sa/lateral_plantar_nerve.glb",
+      "source": "Z-Anatomy",
+      "license": "CC BY-SA 4.0",
+      "fma": "FMA44321",
+      "name_zh": "足底外侧神经",
+      "name_la": "N. plantaris lateralis"
+    },
+    {
+      "id": "deep_fibular_nerve",
+      "file": "by-sa/deep_fibular_nerve.glb",
+      "source": "Z-Anatomy",
+      "license": "CC BY-SA 4.0",
+      "fma": "FMA19035",
+      "name_zh": "腓深神经",
+      "name_la": "N. fibularis profundus"
+    },
+    {
+      "id": "superficial_fibular_nerve",
+      "file": "by-sa/superficial_fibular_nerve.glb",
+      "source": "Z-Anatomy",
+      "license": "CC BY-SA 4.0",
+      "fma": "FMA19034",
+      "name_zh": "腓浅神经",
+      "name_la": "N. fibularis superficialis"
+    },
+    {
+      "id": "sural_nerve",
+      "file": "by-sa/sural_nerve.glb",
+      "source": "Z-Anatomy",
+      "license": "CC BY-SA 4.0",
+      "fma": "FMA44314",
+      "name_zh": "腓肠神经",
+      "name_la": "N. suralis"
+    },
+    {
+      "id": "common_plantar_digital_nerves",
+      "file": "by-sa/common_plantar_digital_nerves.glb",
+      "source": "Open3DModel",
+      "license": "CC BY-SA 4.0",
+      "name_zh": "趾足底总神经",
+      "name_la": "Nn. digitales plantares communes",
+      "note": "Day 4x; Kabsch→BP3D; grouped commons teaching mesh"
+    },
+    {
+      "id": "proper_plantar_digital_nerves_medial",
+      "file": "by-sa/proper_plantar_digital_nerves_medial.glb",
+      "source": "Open3DModel",
+      "license": "CC BY-SA 4.0",
+      "name_zh": "足底内侧神经固有趾支",
+      "name_la": "Nn. digitales plantares proprii (ex N. plantaris medialis)",
+      "note": "Day 4x; Kabsch→BP3D; grouped proprii (medial)"
+    },
+    {
+      "id": "proper_plantar_digital_nerves_lateral",
+      "file": "by-sa/proper_plantar_digital_nerves_lateral.glb",
+      "source": "Open3DModel",
+      "license": "CC BY-SA 4.0",
+      "name_zh": "足底外侧神经固有趾支",
+      "name_la": "Nn. digitales plantares proprii (ex N. plantaris lateralis)",
+      "note": "Day 4x; Kabsch→BP3D; grouped proprii (lateral)"
+    },
+    {
+      "id": "deep_branch_lateral_plantar_nerve",
+      "file": "by-sa/deep_branch_lateral_plantar_nerve.glb",
+      "source": "Open3DModel",
+      "license": "CC BY-SA 4.0",
+      "name_zh": "足底外侧神经深支",
+      "name_la": "R. profundus nervi plantaris lateralis",
+      "note": "Day 4x; Kabsch→BP3D; teaching deep branch"
+    }
+  ],
+  "note": "Honest coverage: structures.json 97/97 placeholder:false; unique framing 92 (lumbricals/PI collapsed). Main tree 52 (CC BY/CC0) vs BY-SA isolate 40. Ligament/tendon: BP3D long plantar + Achilles + 27 Open3D BY-SA — teaching-useful, incomplete. Nerves: 6 Z-Anatomy trunks + 4 Open3D fine/branch (Day 4x); commons/proprii grouped. Dorsal MTA still grouped only. No finished-product claim.",
+  "stats": {
+    "bones": "26/26 (100%, all BP3D ISA right-foot elemental)",
+    "muscles_unique": "18 unique (17 main BP3D+UM + 1 Open3D BY-SA DI); 23 structures.json entries",
+    "muscles_entries": "23/23 (incl. lumbricals×4 + PI×3 + teaching extrinsics)",
+    "vessels": "9/9 (7 main BP3D incl. 2 honest grouped + 2 Open3D BY-SA proximal); dorsal MTA grouped only",
+    "nerves": "10 (6 Z-Anatomy trunks + 4 Open3D fine/branch BY-SA); not TA2-complete",
+    "ligaments": "29 under ligament/tendon toggle: 2 main (long plantar + Achilles) + 27 Open3D BY-SA; teaching-useful, incomplete",
+    "main_tree_unique": "52/92 (26 bones + 17 muscles + 7 vessels + 1 ligament + 1 tendon)",
+    "by_sa_unique": "40/92 (1 DI + 2 arteries + 10 nerves + 27 ligaments/retinacula/fascia)",
+    "total_unique": "92 unique / 97 entries — not a finished-product claim",
+    "total_entries": "97/97 structures.json placeholder:false",
+    "main_tree_unique_note": "Main tree CC BY/CC0 only; Open3D/Z-Anatomy fills remain by-sa/ ShareAlike isolates"
+  },
+  "quality_decisions": {
+    "overlapping_muscles": "UM CC0 chosen over BP3D for AH/ADM/FDB (2.4-8.7x resolution)",
+    "gap_filling": "UM CC0 adds Quadratus plantae + Extensor digitorum brevis (BP3D absent)",
+    "remaining_muscles": "BP3D CC BY 4.0 (FDMB, AddH oblique/transverse, FHB medial, Lumbricals, Plantar interossei, EHB)",
+    "open3d_bysa": "DI 1st–4th + posterior tibial + fibular arteries under by-sa/; Kabsch→BP3D mm; prefer future CC0/CC BY replacements",
+    "distal_phalanges_2_5": "BP3D ISA elemental preferred over UM Phalanges.stl (UM on separate Y≈−850 CT frame; BP3D already in foot mm frame)",
+    "proximal_phalanx_1": "BP8785/FMA43253 (right hallux proximal); BP8488 was middle phalanx of right 2nd toe",
+    "um_teaching_extrinsics": "Day 4n wired orphan UM GLBs (TA, fibularis/peroneus longus, EDL, EHL) after Kabsch bake; CC0 main tree; not claimed as TA2-complete",
+    "open3d_fine_nerves_day4x": "Common + Proper plantar digitals + deep LPN branch from Open3D lower-limb; Kabsch Day 4m; spatial QA vs foot bones + Open3D MP/LP trunks; further terminals deferred (cap 4)"
+  },
+  "muscles_by_sa": [
+    {
+      "id": "interossei_dorsales",
+      "files": [
+        "by-sa/dorsal_interosseous_1st.glb",
+        "by-sa/dorsal_interosseous_2nd.glb",
+        "by-sa/dorsal_interosseous_3rd.glb",
+        "by-sa/dorsal_interosseous_4th.glb"
+      ],
+      "source": "Open3DModel",
+      "license": "CC BY-SA 4.0",
+      "fma": "FMA37451",
+      "name_zh": "骨间背侧肌",
+      "name_la": "Mm. interossei dorsales pedis",
+      "note": "4 right DI GLBs; one structures.json entry; BY-SA isolate; Kabsch-aligned to BP3D mm"
+    }
+  ],
+  "notes": [
+    "2026-09-15: replaced mislabelled cuboid/cuneiforms (were left calcaneus / left medial cuneiform / pharyngeal constrictor / distal phalanx II) with correct ISA right-foot elemental meshes BP8873/8830/9110/8730",
+    "2026-09-15: proximal_phalanx_1 remapped BP8488→BP8785/FMA43253 (FJ3310); distal_phalanx_2–5 replaced UM Y≈−850 meshes with BP3D FJ3189/3190/3191/3195 (BP8472/9005/9261/8695) — no Kabsch re-bake needed",
+    "2026-09-15 Day 4n: wired 4 UM CC0 teaching extrinsics (TA/FL/EDL/EHL) after Kabsch; TA2 ligaments/fine digital nn./split dorsal MTA still open",
+    "2026-09-15 Day 4p: brute-force BP3D ISA/cache re-scan — no new RIGHT foot/ankle ligament or plantar aponeurosis beyond FJ1424; Achilles FJ1405 noted as tendon (not ligament layer)",
+    "2026-09-15 Day 4q: Integrated BP3D right calcaneal tendon FJ1405/BP5098 as named tendon under ligament/tendon toggle (CC BY main tree); Path B skipped — Open3D local zip has no ATFL/CFL/spring/plantar fascia meshes; Z-Anatomy ligaments still Blender-only BY-SA",
+    "2026-09-15 Day 4u: quality pass — census 80 unique / 85 entries (main 52 vs BY-SA 28); ligament ZH/LA TA2+PRC rigor (踇/足底/腓骨肌; strip clinical aliases from nameLa); StructurePanel Main vs ShareAlike badge; ligament sub-group filter; Open3D remaining named foot bands scanned, not integrated (rigor over volume)"
+  ],
+  "ligaments": [
+    {
+      "id": "long_plantar_ligament",
+      "file": "long_plantar_ligament_BP5093.glb",
+      "bp": "BP5093",
+      "elemental": "FJ1424",
+      "fma": "FMA44249",
+      "name_zh": "跖长韧带",
+      "name_la": "Ligamentum plantare longum",
+      "license": "CC BY 4.0",
+      "note": "Only BP3D right-foot ligament elemental; ligament layer otherwise BY-SA Open3D — teaching-useful, incomplete"
+    },
+    {
+      "id": "anterior_talofibular_ligament",
+      "file": "by-sa/anterior_talofibular_ligament.glb",
+      "source": "Open3DModel",
+      "license": "CC BY-SA 4.0",
+      "name_zh": "距腓前韧带",
+      "name_la": "Ligamentum talofibulare anterius",
+      "note": "BY-SA isolate; Kabsch→BP3D mm; teaching mesh — not main-tree CC BY"
+    },
+    {
+      "id": "calcaneofibular_ligament",
+      "file": "by-sa/calcaneofibular_ligament.glb",
+      "source": "Open3DModel",
+      "license": "CC BY-SA 4.0",
+      "name_zh": "跟腓韧带",
+      "name_la": "Ligamentum calcaneofibulare",
+      "note": "BY-SA isolate; Kabsch→BP3D mm; teaching mesh — not main-tree CC BY"
+    },
+    {
+      "id": "posterior_talofibular_ligament",
+      "file": "by-sa/posterior_talofibular_ligament.glb",
+      "source": "Open3DModel",
+      "license": "CC BY-SA 4.0",
+      "name_zh": "距腓后韧带",
+      "name_la": "Ligamentum talofibulare posterius",
+      "note": "BY-SA isolate; Kabsch→BP3D mm; teaching mesh — not main-tree CC BY"
+    },
+    {
+      "id": "plantar_calcaneonavicular_ligament",
+      "file": "by-sa/plantar_calcaneonavicular_ligament.glb",
+      "source": "Open3DModel",
+      "license": "CC BY-SA 4.0",
+      "name_zh": "足底跟舟韧带（弹簧韧带）",
+      "name_la": "Ligamentum calcaneonaviculare plantare",
+      "note": "BY-SA isolate; Kabsch→BP3D mm; teaching mesh — not main-tree CC BY"
+    },
+    {
+      "id": "plantar_aponeurosis",
+      "file": "by-sa/plantar_aponeurosis.glb",
+      "source": "Open3DModel",
+      "license": "CC BY-SA 4.0",
+      "name_zh": "足底腱膜",
+      "name_la": "Aponeurosis plantaris",
+      "note": "BY-SA isolate; Kabsch→BP3D mm; teaching mesh — not main-tree CC BY"
+    },
+    {
+      "id": "tibionavicular_ligament",
+      "file": "by-sa/tibionavicular_ligament.glb",
+      "source": "Open3DModel",
+      "license": "CC BY-SA 4.0",
+      "name_zh": "胫舟韧带",
+      "name_la": "Ligamentum tibionaviculare",
+      "note": "BY-SA isolate; Kabsch→BP3D mm; teaching mesh — not main-tree CC BY"
+    },
+    {
+      "id": "tibiocalcaneal_ligament",
+      "file": "by-sa/tibiocalcaneal_ligament.glb",
+      "source": "Open3DModel",
+      "license": "CC BY-SA 4.0",
+      "name_zh": "胫跟韧带",
+      "name_la": "Ligamentum tibiocalcaneum",
+      "note": "BY-SA isolate; Kabsch→BP3D mm; teaching mesh — not main-tree CC BY"
+    },
+    {
+      "id": "posterior_tibiotalar_ligament",
+      "file": "by-sa/posterior_tibiotalar_ligament.glb",
+      "source": "Open3DModel",
+      "license": "CC BY-SA 4.0",
+      "name_zh": "胫距后韧带",
+      "name_la": "Ligamentum tibiotalare posterius",
+      "note": "BY-SA isolate; Kabsch→BP3D mm; teaching mesh — not main-tree CC BY"
+    },
+    {
+      "id": "anterior_tibiotalar_ligament",
+      "file": "by-sa/anterior_tibiotalar_ligament.glb",
+      "source": "Open3DModel",
+      "license": "CC BY-SA 4.0",
+      "name_zh": "胫距前韧带（胫弹簧韧带）",
+      "name_la": "Ligamentum tibiotalare anterius",
+      "note": "BY-SA isolate; Kabsch→BP3D mm; teaching mesh — not main-tree CC BY"
+    },
+    {
+      "id": "plantar_calcaneocuboid_ligament",
+      "file": "by-sa/plantar_calcaneocuboid_ligament.glb",
+      "source": "Open3DModel",
+      "license": "CC BY-SA 4.0",
+      "name_zh": "足底跟骰韧带（跖短韧带）",
+      "name_la": "Ligamentum calcaneocuboideum plantare",
+      "note": "BY-SA isolate; Kabsch→BP3D mm; teaching mesh — not main-tree CC BY"
+    },
+    {
+      "id": "bifurcate_ligament",
+      "file": "by-sa/bifurcate_ligament.glb",
+      "source": "Open3DModel",
+      "license": "CC BY-SA 4.0",
+      "name_zh": "分歧韧带",
+      "name_la": "Ligamentum bifurcatum",
+      "note": "BY-SA isolate; Kabsch→BP3D mm; teaching mesh — not main-tree CC BY"
+    },
+    {
+      "id": "cuneometatarsal_interosseous_ligaments",
+      "file": "by-sa/cuneometatarsal_interosseous_ligaments.glb",
+      "source": "Open3DModel",
+      "license": "CC BY-SA 4.0",
+      "name_zh": "楔跖骨间韧带（Lisfranc 样分组）",
+      "name_la": "Ligamenta cuneometatarsalia interossea",
+      "note": "BY-SA isolate; Kabsch→BP3D mm; teaching mesh — not main-tree CC BY"
+    },
+    {
+      "id": "dorsal_tarsometatarsal_ligaments",
+      "file": "by-sa/dorsal_tarsometatarsal_ligaments.glb",
+      "source": "Open3DModel",
+      "license": "CC BY-SA 4.0",
+      "name_zh": "背侧跗跖韧带（分组）",
+      "name_la": "Ligamenta tarsometatarsalia dorsalia",
+      "note": "BY-SA isolate; Kabsch→BP3D mm; teaching mesh — not main-tree CC BY"
+    },
+    {
+      "id": "plantar_tarsometatarsal_ligaments",
+      "file": "by-sa/plantar_tarsometatarsal_ligaments.glb",
+      "source": "Open3DModel",
+      "license": "CC BY-SA 4.0",
+      "name_zh": "跖侧跗跖韧带（分组）",
+      "name_la": "Ligamenta tarsometatarsalia plantaria",
+      "note": "BY-SA isolate; Kabsch→BP3D mm; teaching mesh — not main-tree CC BY"
+    },
+    {
+      "id": "flexor_retinaculum_of_ankle",
+      "file": "by-sa/flexor_retinaculum_of_ankle.glb",
+      "source": "Open3DModel",
+      "license": "CC BY-SA 4.0",
+      "name_zh": "屈肌支持带",
+      "name_la": "Retinaculum musculorum flexorum",
+      "note": "BY-SA isolate; Kabsch→BP3D mm; teaching mesh — not main-tree CC BY"
+    },
+    {
+      "id": "superior_extensor_retinaculum",
+      "file": "by-sa/superior_extensor_retinaculum.glb",
+      "source": "Open3DModel",
+      "license": "CC BY-SA 4.0",
+      "name_zh": "伸肌上支持带",
+      "name_la": "Retinaculum musculorum extensorum superius",
+      "note": "BY-SA isolate; Kabsch→BP3D mm; teaching mesh — not main-tree CC BY"
+    },
+    {
+      "id": "inferior_extensor_retinaculum",
+      "file": "by-sa/inferior_extensor_retinaculum.glb",
+      "source": "Open3DModel",
+      "license": "CC BY-SA 4.0",
+      "name_zh": "伸肌下支持带",
+      "name_la": "Retinaculum musculorum extensorum inferius",
+      "note": "BY-SA isolate; Kabsch→BP3D mm; teaching mesh — not main-tree CC BY"
+    },
+    {
+      "id": "superior_fibular_retinaculum",
+      "file": "by-sa/superior_fibular_retinaculum.glb",
+      "source": "Open3DModel",
+      "license": "CC BY-SA 4.0",
+      "name_zh": "腓骨肌上支持带",
+      "name_la": "Retinaculum musculorum fibularium superius",
+      "note": "BY-SA isolate; Kabsch→BP3D mm; teaching mesh — not main-tree CC BY"
+    },
+    {
+      "id": "inferior_fibular_retinaculum",
+      "file": "by-sa/inferior_fibular_retinaculum.glb",
+      "source": "Open3DModel",
+      "license": "CC BY-SA 4.0",
+      "name_zh": "腓骨肌下支持带",
+      "name_la": "Retinaculum musculorum fibularium inferius",
+      "note": "BY-SA isolate; Kabsch→BP3D mm; teaching mesh — not main-tree CC BY"
+    }
+  ],
+  "tendons": [
+    {
+      "id": "calcaneal_tendon",
+      "file": "calcaneal_tendon_BP5098.glb",
+      "bp": "BP5098",
+      "elemental": "FJ1405",
+      "fma": "FMA258847",
+      "name_zh": "跟腱",
+      "name_la": "Tendo calcaneus",
+      "license": "CC BY 4.0",
+      "layer_toggle": "ligament",
+      "note": "Tendon under ligament/tendon toggle — not a ligament; native BP3D frame"
+    }
+  ]
+}
