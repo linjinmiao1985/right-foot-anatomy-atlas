@@ -819,5 +819,184 @@
     "nameLa": "Aponeurosis plantaris (plantar fascia)",
     "summaryZh": "足底深层致密腱膜（Open3DModel Plantar_aponeurosis.r，CC BY-SA 4.0，by-sa/）。起自跟骨结节，向前分束至趾。教学：足底筋膜炎、Windlass 机制。BP3D ISA 无此 elemental；本网格非 CC BY 主树。Kabsch→BP3D mm。仍非「完整」软组织图谱。TA2：A04.7.03.031（近似）。",
     "placeholder": false
+  },
+  {
+    "id": "tibionavicular_ligament",
+    "meshNames": [
+      "Tibionavicular_Ligament_R",
+      "Ligamentum_tibionaviculare_Right"
+    ],
+    "layer": "ligament",
+    "nameZh": "胫舟韧带",
+    "nameLa": "Ligamentum tibionaviculare (deltoid part)",
+    "summaryZh": "三角韧带浅层前部（Open3D Tibionavicular_ligament.r，CC BY-SA 4.0，by-sa/）。内踝至舟骨。教学：三角韧带复合体之一。Kabsch→BP3D mm。非完整三角韧带图谱。",
+    "placeholder": false
+  },
+  {
+    "id": "tibiocalcaneal_ligament",
+    "meshNames": [
+      "Tibiocalcaneal_Ligament_R",
+      "Ligamentum_tibiocalcaneum_Right"
+    ],
+    "layer": "ligament",
+    "nameZh": "胫跟韧带",
+    "nameLa": "Ligamentum tibiocalcaneum (deltoid part)",
+    "summaryZh": "三角韧带浅层中部（Open3D Tibiocalcaneal_ligament.r，CC BY-SA 4.0，by-sa/）。内踝至跟骨载距突。教学：三角韧带复合体之一。Kabsch→BP3D mm。",
+    "placeholder": false
+  },
+  {
+    "id": "posterior_tibiotalar_ligament",
+    "meshNames": [
+      "Posterior_Tibiotalar_Ligament_R",
+      "Ligamentum_tibiotalare_posterius_Right"
+    ],
+    "layer": "ligament",
+    "nameZh": "胫距后韧带",
+    "nameLa": "Ligamentum tibiotalare posterius (deltoid part)",
+    "summaryZh": "三角韧带深层后部（Open3D Posterior_tibiotalar_ligament.r，CC BY-SA 4.0，by-sa/）。内踝至距骨后内侧。教学：三角韧带复合体之一。Kabsch→BP3D mm。",
+    "placeholder": false
+  },
+  {
+    "id": "anterior_tibiotalar_ligament",
+    "meshNames": [
+      "Anterior_Tibiotalar_Ligament_R",
+      "Tibiospring_Ligament_R",
+      "Ligamentum_tibiotalare_anterius_Right"
+    ],
+    "layer": "ligament",
+    "nameZh": "胫距前韧带（胫弹簧韧带）",
+    "nameLa": "Ligamentum tibiotalare anterius (tibiospring)",
+    "summaryZh": "三角韧带前/深部（Open3D Anterior_tibiotalar_ligament_(Tibiospring_lig.).r，CC BY-SA 4.0，by-sa/）。教学命名含 tibiospring。Kabsch→BP3D mm。非完整三角韧带。",
+    "placeholder": false
+  },
+  {
+    "id": "plantar_calcaneocuboid_ligament",
+    "meshNames": [
+      "Plantar_Calcaneocuboid_Ligament_R",
+      "Short_Plantar_Ligament_R",
+      "Ligamentum_calcaneocuboideum_plantare_Right"
+    ],
+    "layer": "ligament",
+    "nameZh": "跖跟骰韧带（短跖韧带）",
+    "nameLa": "Ligamentum calcaneocuboideum plantare (short plantar)",
+    "summaryZh": "短跖韧带（Open3D Plantar_calcaneocuboid_ligament.r，CC BY-SA 4.0，by-sa/）。跟骨至骰骨跖面；与跖长韧带协同。BP3D 仅有长跖韧带 elemental。Kabsch→BP3D mm。",
+    "placeholder": false
+  },
+  {
+    "id": "bifurcate_ligament",
+    "meshNames": [
+      "Bifurcate_Ligament_R",
+      "Ligamentum_bifurcatum",
+      "Chopart_Ligament"
+    ],
+    "layer": "ligament",
+    "nameZh": "分歧韧带",
+    "nameLa": "Ligamentum bifurcatum",
+    "summaryZh": "分歧韧带（Open3D Bifurcatum_ligament，无 .r 后缀但质心在右足簇，CC BY-SA 4.0，by-sa/）。跟骨至舟骨/骰骨（Y 形）。Chopart 关节稳定相关。教学级 Kabsch→BP3D。",
+    "placeholder": false
+  },
+  {
+    "id": "posterior_talofibular_ligament",
+    "meshNames": [
+      "Posterior_Talofibular_Ligament_R",
+      "Ligamentum_talofibulare_posterius_Right"
+    ],
+    "layer": "ligament",
+    "nameZh": "距腓后韧带",
+    "nameLa": "Ligamentum talofibulare posterius (PTFL)",
+    "summaryZh": "外侧踝复合体第三韧带（Open3D Posterior_talofibular_ligament.r，CC BY-SA 4.0，by-sa/）。外踝至距骨后外侧突。与 ATFL/CFL 同层教学。Kabsch→BP3D mm。",
+    "placeholder": false
+  },
+  {
+    "id": "cuneometatarsal_interosseous_ligaments",
+    "meshNames": [
+      "Cuneometatarsal_Interosseous_Ligaments_R",
+      "Lisfranc_Ligament_Complex_R"
+    ],
+    "layer": "ligament",
+    "nameZh": "楔跖骨间韧带（Lisfranc 样）",
+    "nameLa": "Ligamenta cuneometatarsalia interossea (Lisfranc-ish)",
+    "summaryZh": "楔骨–跖骨骨间韧带带（Open3D Cuneometatarsal_interosseus_ligaments.r，CC BY-SA 4.0，by-sa/）。Lisfranc 复合体教学示意——分组网格，非逐条解剖命名分拆。Kabsch→BP3D mm。",
+    "placeholder": false
+  },
+  {
+    "id": "dorsal_tarsometatarsal_ligaments",
+    "meshNames": [
+      "Dorsal_Tarsometatarsal_Ligaments_R"
+    ],
+    "layer": "ligament",
+    "nameZh": "背侧跗跖韧带",
+    "nameLa": "Ligamenta tarsometatarsalia dorsalia",
+    "summaryZh": "背侧跗跖韧带带（Open3D Dorsal_tarsometatarsal_ligaments.r，CC BY-SA 4.0，by-sa/）。Lisfranc 关节背侧稳定相关。分组网格。Kabsch→BP3D mm。",
+    "placeholder": false
+  },
+  {
+    "id": "plantar_tarsometatarsal_ligaments",
+    "meshNames": [
+      "Plantar_Tarsometatarsal_Ligaments_R"
+    ],
+    "layer": "ligament",
+    "nameZh": "跖侧跗跖韧带",
+    "nameLa": "Ligamenta tarsometatarsalia plantaria",
+    "summaryZh": "跖侧跗跖韧带带（Open3D Plantar_tarsometatarsal_ligaments.r，CC BY-SA 4.0，by-sa/）。Lisfranc 关节跖侧。分组网格。Kabsch→BP3D mm。",
+    "placeholder": false
+  },
+  {
+    "id": "flexor_retinaculum_of_ankle",
+    "meshNames": [
+      "Flexor_Retinaculum_of_Ankle_R",
+      "Laciniate_Ligament_R"
+    ],
+    "layer": "ligament",
+    "nameZh": "踝屈肌支持带",
+    "nameLa": "Retinaculum musculorum flexorum (ankle)",
+    "summaryZh": "踝屈肌支持带（Open3D Flexor_retinaculum_of_ankle.r，CC BY-SA 4.0，by-sa/）。覆盖跖管。教学：支持带（非韧带本体）。Kabsch→BP3D mm。",
+    "placeholder": false
+  },
+  {
+    "id": "superior_extensor_retinaculum",
+    "meshNames": [
+      "Superior_Extensor_Retinaculum_of_Ankle_R"
+    ],
+    "layer": "ligament",
+    "nameZh": "踝伸肌上支持带",
+    "nameLa": "Retinaculum musculorum extensorum superius",
+    "summaryZh": "踝伸肌上支持带（Open3D Superior_extensor_retinaculum_of_ankle.r，CC BY-SA 4.0，by-sa/）。远端胫腓前方。教学：支持带。Kabsch→BP3D mm；质心略近端于足骨簇属预期。",
+    "placeholder": false
+  },
+  {
+    "id": "inferior_extensor_retinaculum",
+    "meshNames": [
+      "Inferior_Extensor_Retinaculum_R"
+    ],
+    "layer": "ligament",
+    "nameZh": "踝伸肌下支持带",
+    "nameLa": "Retinaculum musculorum extensorum inferius",
+    "summaryZh": "踝伸肌下支持带（Open3D Inferior_extensor_retinaculum.r，CC BY-SA 4.0，by-sa/）。Y/X 形跨足背。教学：支持带。Kabsch→BP3D mm。",
+    "placeholder": false
+  },
+  {
+    "id": "superior_fibular_retinaculum",
+    "meshNames": [
+      "Superior_Fibular_Retinaculum_R",
+      "Superior_Peroneal_Retinaculum_R"
+    ],
+    "layer": "ligament",
+    "nameZh": "腓骨肌上支持带",
+    "nameLa": "Retinaculum musculorum fibularium superius",
+    "summaryZh": "腓骨肌上支持带（Open3D Superior_fibular_retinaculum.r，CC BY-SA 4.0，by-sa/）。外踝后方。教学：支持带。Kabsch→BP3D mm。",
+    "placeholder": false
+  },
+  {
+    "id": "inferior_fibular_retinaculum",
+    "meshNames": [
+      "Inferior_Fibular_Retinaculum_R",
+      "Inferior_Peroneal_Retinaculum_R"
+    ],
+    "layer": "ligament",
+    "nameZh": "腓骨肌下支持带",
+    "nameLa": "Retinaculum musculorum fibularium inferius",
+    "summaryZh": "腓骨肌下支持带（Open3D Inferior_fibular_retinaculum.r，CC BY-SA 4.0，by-sa/）。跟骨外侧面。教学：支持带。Kabsch→BP3D mm。",
+    "placeholder": false
   }
 ]

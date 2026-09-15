@@ -49,8 +49,23 @@ const OPEN3D_BY_SA = new Set([
   'fibular_artery',
   'anterior_talofibular_ligament',
   'calcaneofibular_ligament',
+  'posterior_talofibular_ligament',
   'plantar_calcaneonavicular_ligament',
   'plantar_aponeurosis',
+  'tibionavicular_ligament',
+  'tibiocalcaneal_ligament',
+  'posterior_tibiotalar_ligament',
+  'anterior_tibiotalar_ligament',
+  'plantar_calcaneocuboid_ligament',
+  'bifurcate_ligament',
+  'cuneometatarsal_interosseous_ligaments',
+  'dorsal_tarsometatarsal_ligaments',
+  'plantar_tarsometatarsal_ligaments',
+  'flexor_retinaculum_of_ankle',
+  'superior_extensor_retinaculum',
+  'inferior_extensor_retinaculum',
+  'superior_fibular_retinaculum',
+  'inferior_fibular_retinaculum',
 ]);
 
 const BP3D: ProvenanceInfo = {
@@ -112,7 +127,7 @@ export function licenseLabel(license: AssetLicense): string {
 
 /** Persistent footer copy — keep factual, no “complete atlas” claims. */
 export const ATLAS_SOURCE_FOOTER =
-  '网格来源: BodyParts3D CC BY 4.0 · UM CC0 1.0 · Z-Anatomy 神经 / Open3D DI+动脉+踝韧带/足底腱膜 CC BY-SA 4.0（by-sa/ 隔离）';
+  '网格来源: BodyParts3D CC BY 4.0 · UM CC0 1.0 · Z-Anatomy 神经 / Open3D DI+动脉+踝足韧带/支持带/足底腱膜 CC BY-SA 4.0（by-sa/ 隔离）';
 
 /** Short panel copy about mesh fidelity — teaching honesty, not finished-product claims. */
 export function getTeachingMeshNote(structureId: string, layer: string): string | null {
@@ -131,16 +146,15 @@ export function getTeachingMeshNote(structureId: string, layer: string): string 
   if (layer === 'vessel') {
     return '网格：BP3D 足部血管多为命名主干；末梢分支常为组合体。教学示意，非介入导航级。';
   }
-  if (
-    structureId === 'anterior_talofibular_ligament'
-    || structureId === 'calcaneofibular_ligament'
-    || structureId === 'plantar_calcaneonavicular_ligament'
-    || structureId === 'plantar_aponeurosis'
-  ) {
-    return '网格：Open3DModel lower-limb（CC BY-SA），Kabsch→BP3D mm；by-sa/ 隔离。韧带/腱层仍不完整（无完整三角韧带/ Lisfranc 等）。';
+  if (OPEN3D_BY_SA.has(structureId) && (
+    structureId.includes('ligament')
+    || structureId.includes('aponeurosis')
+    || structureId.includes('retinaculum')
+  )) {
+    return '网格：Open3DModel lower-limb（CC BY-SA），Kabsch→BP3D mm；by-sa/ 隔离。韧带/支持带/腱膜层仍不完整（非手术级；部分为分组带）。';
   }
   if (structureId === 'long_plantar_ligament' || structureId === 'calcaneal_tendon') {
-    return 'BP3D CC BY：跖长韧带 + 跟腱；ATFL/CFL/弹簧韧带/足底腱膜见 Open3D BY-SA。仍非完整韧带图谱。';
+    return 'BP3D CC BY：跖长韧带 + 跟腱；其余踝足韧带/支持带/足底腱膜见 Open3D BY-SA。仍非完整韧带图谱。';
   }
   return null;
 }

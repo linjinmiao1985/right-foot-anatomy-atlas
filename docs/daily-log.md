@@ -1090,3 +1090,14 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 - CC0/CC BY alternatives for those four still dry (BP3D/UM/DU VH knee-only).
 - integrity-audit + vitest + build; commit/push this pass.
 - Honesty: expanded teaching coverage, **not** a finished ligament atlas.
+
+## Week 2 Day 4t (2026-09-15) — More Open3D ligaments / retinacula
+
+- Pulled branch at e5dcc23 (already current).
+- Scanned literature `lower-limb.obj` for deltoid parts, short plantar, bifurcate, Lisfranc-ish TMT bands, clearly named ankle retinacula (+ PTFL).
+- Extracted + Kabsch-baked 15 new BY-SA GLBs via `scripts/extract_open3d_ligaments.py`; attachment QA all **accept** (report: `third_party/open3dmodel/ligament_attachment_qa.json`).
+- Re-QA Day 4s four (ATFL/CFL/spring/fascia): laterality + scale OK — no fix needed.
+- Wired structures / FootModel / provenance / NOTICE; updated week2 search + learning-log honesty.
+- Blender: not installed; apt has no blender package — did not install.
+- integrity-audit + vitest + build; commit/push this pass.
+- Honesty: expanded teaching soft-tissue under 韧带/腱 — **not** a finished ligament atlas.

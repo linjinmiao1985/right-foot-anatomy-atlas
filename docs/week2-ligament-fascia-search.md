@@ -170,4 +170,61 @@ Transform: reuse Day 4m `open3d_to_bp3d_transform.json` (mean residual ≈2.6 mm
 
 ### Honesty
 
-Ligament/tendon layer now: BP3D long plantar + Achilles **plus** 4 Open3D BY-SA teaching meshes. Still **not** a finished ligament atlas (deltoid parts, Lisfranc set, many OBJ bands not extracted).
+Ligament/tendon layer after Day 4s: BP3D long plantar + Achilles **plus** 4 Open3D BY-SA teaching meshes. Still **not** a finished ligament atlas (deltoid / Lisfranc / retinacula deferred → Day 4t).
+
+
+---
+
+## Day 4t — Expand Open3D ligament/retinaculum extract + re-QA Day 4s four
+
+**Date**: 2026-09-15
+
+### Goal
+
+Scan same `lower-limb.obj` for more RIGHT foot/ankle ligaments (deltoid parts, short plantar, bifurcate, Lisfranc-ish, retinacula if clearly named). Extract + Kabsch-bake; spatial QA attachment distances; reject absurd.
+
+### Parallel CC0/CC BY check (still dry for these)
+
+| Source | Result |
+|--------|--------|
+| BP3D ISA | Unchanged: only long plantar among true foot ligament elementals; no deltoid/short plantar/bifurcate/Lisfranc/retinacula |
+| UM CC0 | Knee ligaments + Achilles; foot minor ligaments excluded |
+| DU Visible Human LE MSK | Knee ligaments only — reject |
+| Blender / Z-Anatomy `.blend` | Blender **not** on PATH; `apt-cache` has no `blender` package here — did **not** install |
+
+### Candidates scanned → attachment QA (centroid → expected BP3D bone landmarks)
+
+Reject rule: wrong side (X>0) OR min_expect >55 mm (75 mm for bands/retinacula/plantar fascia) OR outside padded foot AABB.
+
+| Mesh | Open3D object | nearest / min_mm | Decision |
+|------|---------------|------------------|----------|
+| Tibionavicular (deltoid) | `Tibionavicular_ligament.r` | navicular / 21.2 | **Integrated** |
+| Tibiocalcaneal (deltoid) | `Tibiocalcaneal_ligament.r` | talus / 17.9 | **Integrated** |
+| Posterior tibiotalar (deltoid) | `Posterior_tibiotalar_ligament.r` | talus / 19.4 | **Integrated** |
+| Anterior tibiotalar / tibiospring | `Anterior_tibiotalar_ligament_(Tibiospring_lig.).r` | talus / 23.2 | **Integrated** |
+| Short plantar | `Plantar_calcaneocuboid_ligament.r` | calcaneus / 20.9 | **Integrated** |
+| Bifurcate | `Bifurcatum_ligament` (no `.r`) | cuboid / 18.3 | **Integrated** (right-cluster X≈−95.5) |
+| PTFL | `Posterior_talofibular_ligament.r` | talus / 20.4 | **Integrated** |
+| Cuneometatarsal interosseous | `Cuneometatarsal_interosseus_ligaments.r` | cuneiform_int / 12.3 | **Integrated** (grouped) |
+| Dorsal TMT | `Dorsal_tarsometatarsal_ligaments.r` | cuneiform_int / 12.0 | **Integrated** (grouped) |
+| Plantar TMT | `Plantar_tarsometatarsal_ligaments.r` | cuneiform_lat / 16.4 | **Integrated** (grouped) |
+| Flexor retinaculum | `Flexor_retinaculum_of_ankle.r` | talus / 25.4 | **Integrated** |
+| Superior extensor retinaculum | `Superior_extensor_retinaculum_of_ankle.r` | navicular / 39.8 | **Integrated** (proximal band expected) |
+| Inferior extensor retinaculum | `Inferior_extensor_retinaculum.r` | navicular / 15.5 | **Integrated** |
+| Superior fibular retinaculum | `Superior_fibular_retinaculum.r` | calcaneus / 22.6 | **Integrated** |
+| Inferior fibular retinaculum | `Inferior_fibular_retinaculum.r` | calcaneus / 19.2 | **Integrated** |
+
+**Rejected this pass**: none of the scanned named targets failed the rule. Not scanned/extracted: dorsal/plantar cuneonavicular, intercuneiform, cuboideonavicular, toe collaterals, long plantar (BP3D already), etc.
+
+### Day 4s four — visual/centroid re-QA
+
+| Mesh | Check | Result |
+|------|-------|--------|
+| ATFL | lateral vs spring (more neg X); near talus 20.5 mm | **OK** — no side/scale fix |
+| CFL | near calcaneus 17.2 mm; lateral ankle Y | **OK** |
+| Spring | near navicular 17.6 mm; medial vs ATFL | **OK** |
+| Plantar aponeurosis | plantar Z band (−74…−54) below calcaneus Z; large plantar span | **OK** |
+
+### Honesty
+
+Ligament/tendon layer now: BP3D long plantar + Achilles **plus** 19 Open3D BY-SA teaching meshes (4 Day 4s + 15 Day 4t). Still **not** a finished ligament atlas — many OBJ bands remain; Lisfranc/retinacula are grouped teaching meshes; Kabsch mean residual ≈2.6 mm (teaching-grade).

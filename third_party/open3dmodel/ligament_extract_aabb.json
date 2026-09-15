@@ -1,12 +1,27 @@
 {
   "source": "/workspace/literature/open3d-assets/lower-limb.obj",
   "transform": "third_party/open3dmodel/open3d_to_bp3d_transform.json",
-  "method": "reuse Day 4m Open3D\u2192BP3D Kabsch (same donor frame as DI/nerves arteries)",
+  "method": "reuse Open3D\u2192BP3D Kabsch (same donor as DI/arteries); Day 4t expanded",
   "targets": {
     "Anterior_talofibular_ligament.r": "anterior_talofibular_ligament",
     "Calcaneofibular_ligament.r": "calcaneofibular_ligament",
     "Plantar_calcaneonavicular_ligament.r": "plantar_calcaneonavicular_ligament",
-    "Plantar_aponeurosis.r": "plantar_aponeurosis"
+    "Plantar_aponeurosis.r": "plantar_aponeurosis",
+    "Tibionavicular_ligament.r": "tibionavicular_ligament",
+    "Tibiocalcaneal_ligament.r": "tibiocalcaneal_ligament",
+    "Posterior_tibiotalar_ligament.r": "posterior_tibiotalar_ligament",
+    "Anterior_tibiotalar_ligament_(Tibiospring_lig.).r": "anterior_tibiotalar_ligament",
+    "Plantar_calcaneocuboid_ligament.r": "plantar_calcaneocuboid_ligament",
+    "Bifurcatum_ligament": "bifurcate_ligament",
+    "Posterior_talofibular_ligament.r": "posterior_talofibular_ligament",
+    "Cuneometatarsal_interosseus_ligaments.r": "cuneometatarsal_interosseous_ligaments",
+    "Dorsal_tarsometatarsal_ligaments.r": "dorsal_tarsometatarsal_ligaments",
+    "Plantar_tarsometatarsal_ligaments.r": "plantar_tarsometatarsal_ligaments",
+    "Flexor_retinaculum_of_ankle.r": "flexor_retinaculum_of_ankle",
+    "Superior_extensor_retinaculum_of_ankle.r": "superior_extensor_retinaculum",
+    "Inferior_extensor_retinaculum.r": "inferior_extensor_retinaculum",
+    "Superior_fibular_retinaculum.r": "superior_fibular_retinaculum",
+    "Inferior_fibular_retinaculum.r": "inferior_fibular_retinaculum"
   },
   "aabb_bp3d_mm": {
     "anterior_talofibular_ligament": {
@@ -92,6 +107,321 @@
       ],
       "n_verts": 5058,
       "n_faces": 5058
+    },
+    "tibionavicular_ligament": {
+      "x": [
+        -73.05224950383075,
+        -55.74450276916586
+      ],
+      "y": [
+        -109.64761298384862,
+        -93.33513983578067
+      ],
+      "z": [
+        -18.873549064466708,
+        3.955667800296297
+      ],
+      "centroid": [
+        -62.62378584912438,
+        -100.44227587073262,
+        -7.29714205429706
+      ],
+      "n_verts": 500,
+      "n_faces": 498
+    },
+    "tibiocalcaneal_ligament": {
+      "x": [
+        -61.007681614448,
+        -50.54975719286998
+      ],
+      "y": [
+        -90.0466226596917,
+        -79.1296060504007
+      ],
+      "z": [
+        -29.057634327645772,
+        -0.24118773483849054
+      ],
+      "centroid": [
+        -54.306423504651136,
+        -84.9128089230431,
+        -14.583155520889152
+      ],
+      "n_verts": 514,
+      "n_faces": 512
+    },
+    "posterior_tibiotalar_ligament": {
+      "x": [
+        -57.119830578966194,
+        -50.006789333287635
+      ],
+      "y": [
+        -83.0188149600601,
+        -71.37418975883965
+      ],
+      "z": [
+        -24.614375306897642,
+        -1.7382929333084292
+      ],
+      "centroid": [
+        -52.316321209716136,
+        -78.398956957084,
+        -11.412528871562605
+      ],
+      "n_verts": 354,
+      "n_faces": 352
+    },
+    "anterior_tibiotalar_ligament": {
+      "x": [
+        -64.48349737252776,
+        -52.36189073348486
+      ],
+      "y": [
+        -106.46439622207205,
+        -89.51854631840297
+      ],
+      "z": [
+        -28.29856197407836,
+        -1.4500309110658378
+      ],
+      "centroid": [
+        -57.89900209981807,
+        -97.77221835360298,
+        -13.806762673079843
+      ],
+      "n_verts": 314,
+      "n_faces": 312
+    },
+    "plantar_calcaneocuboid_ligament": {
+      "x": [
+        -95.95556790464333,
+        -69.62863095323475
+      ],
+      "y": [
+        -107.66395099478815,
+        -62.91325548855542
+      ],
+      "z": [
+        -56.83266327220754,
+        -36.195539529291544
+      ],
+      "centroid": [
+        -81.49799746766759,
+        -82.16448247712384,
+        -49.64896516790827
+      ],
+      "n_verts": 330,
+      "n_faces": 328
+    },
+    "bifurcate_ligament": {
+      "x": [
+        -103.4227421223686,
+        -91.19496276905888
+      ],
+      "y": [
+        -104.98711594280363,
+        -84.19814198659932
+      ],
+      "z": [
+        -27.259671301382298,
+        -15.307455396109177
+      ],
+      "centroid": [
+        -95.4590279586572,
+        -92.94968902127899,
+        -21.186227060318387
+      ],
+      "n_verts": 370,
+      "n_faces": 368
+    },
+    "posterior_talofibular_ligament": {
+      "x": [
+        -90.4497852587909,
+        -52.41138814783902
+      ],
+      "y": [
+        -67.90210863274885,
+        -53.16774920016323
+      ],
+      "z": [
+        -20.352983727027436,
+        -8.94532785758598
+      ],
+      "centroid": [
+        -68.19006657564921,
+        -59.02790951721638,
+        -12.640279599414828
+      ],
+      "n_verts": 136,
+      "n_faces": 134
+    },
+    "cuneometatarsal_interosseous_ligaments": {
+      "x": [
+        -104.10004455621504,
+        -83.52466291141211
+      ],
+      "y": [
+        -137.1152728539988,
+        -121.61826865396326
+      ],
+      "z": [
+        -35.59014683495188,
+        -27.142139437552878
+      ],
+      "centroid": [
+        -93.4100139967554,
+        -128.72317107612005,
+        -31.48530063291681
+      ],
+      "n_verts": 682,
+      "n_faces": 676
+    },
+    "dorsal_tarsometatarsal_ligaments": {
+      "x": [
+        -117.40537121579304,
+        -74.54547279173039
+      ],
+      "y": [
+        -148.28952993917693,
+        -93.75414243180381
+      ],
+      "z": [
+        -48.260031135405015,
+        -17.549922479426762
+      ],
+      "centroid": [
+        -99.97086717222831,
+        -125.51811015918454,
+        -28.856772208587994
+      ],
+      "n_verts": 2473,
+      "n_faces": 2458
+    },
+    "plantar_tarsometatarsal_ligaments": {
+      "x": [
+        -111.34534178532563,
+        -74.131423820132
+      ],
+      "y": [
+        -141.43198100831248,
+        -95.11952862805599
+      ],
+      "z": [
+        -53.73132182212287,
+        -32.824590897435684
+      ],
+      "centroid": [
+        -93.73769890733165,
+        -121.25839010882244,
+        -43.2613660314427
+      ],
+      "n_verts": 1656,
+      "n_faces": 1646
+    },
+    "flexor_retinaculum_of_ankle": {
+      "x": [
+        -54.065534076681544,
+        -45.09669095961999
+      ],
+      "y": [
+        -94.99118002194523,
+        -40.42909243937254
+      ],
+      "z": [
+        -58.59495327099076,
+        8.800424469995932
+      ],
+      "centroid": [
+        -48.49275994072175,
+        -68.13321225993782,
+        -21.601832262910442
+      ],
+      "n_verts": 554,
+      "n_faces": 552
+    },
+    "superior_extensor_retinaculum": {
+      "x": [
+        -103.47784383311564,
+        -57.472814170900136
+      ],
+      "y": [
+        -103.97434276816938,
+        -65.17666554000354
+      ],
+      "z": [
+        -12.25234230295655,
+        37.15401153654415
+      ],
+      "centroid": [
+        -87.31067632637597,
+        -91.22638051521126,
+        17.74084670992136
+      ],
+      "n_verts": 714,
+      "n_faces": 712
+    },
+    "inferior_extensor_retinaculum": {
+      "x": [
+        -108.77489241637434,
+        -55.342763668041215
+      ],
+      "y": [
+        -142.71455342713347,
+        -58.926985788636884
+      ],
+      "z": [
+        -44.54333414266171,
+        10.848135567928267
+      ],
+      "centroid": [
+        -89.51227638440004,
+        -95.52677682517111,
+        -15.911314329539518
+      ],
+      "n_verts": 1239,
+      "n_faces": 1238
+    },
+    "superior_fibular_retinaculum": {
+      "x": [
+        -97.83694877300228,
+        -76.28717962808753
+      ],
+      "y": [
+        -57.201033213582704,
+        -43.89799834870661
+      ],
+      "z": [
+        -40.41198111283351,
+        -14.760511873475892
+      ],
+      "centroid": [
+        -88.41532095609477,
+        -50.142411640136615,
+        -27.930894903211566
+      ],
+      "n_verts": 698,
+      "n_faces": 696
+    },
+    "inferior_fibular_retinaculum": {
+      "x": [
+        -95.90047466779093,
+        -78.37024974108965
+      ],
+      "y": [
+        -67.53144850593654,
+        -43.07592293122032
+      ],
+      "z": [
+        -59.89361588087094,
+        -35.220797377521336
+      ],
+      "centroid": [
+        -91.19193513636579,
+        -58.91870911115908,
+        -45.47694154398289
+      ],
+      "n_verts": 634,
+      "n_faces": 632
     }
   }
 }

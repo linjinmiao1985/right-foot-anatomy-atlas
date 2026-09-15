@@ -669,3 +669,14 @@ Soft-tissue under ligament toggle = **1 ligament + 1 tendon**. Still missing pla
 **Z-Anatomy**: Zenodo DOI 10.5281/zenodo.4953712 is a legal, scriptable fetch for the `.blend`; without Blender CLI it remains documentation + future recipe, not an integrated mesh path.
 
 **Teaching win**: ATFL / CFL / spring / plantar aponeurosis now selectable under 韧带/腱 with BY-SA badge — still incomplete soft-tissue coverage.
+
+
+## Day 4t — Expand Open3D ligament inventory (2026-09-15)
+
+**Lesson**: Once the monolithic OBJ inventory exists, expanding coverage is a **named-object + attachment-QA** loop — not a new registration. Same Day 4m Kabsch transform applies; reject only if centroid laterality/scale/attachment distance is absurd.
+
+**Integrated (BY-SA isolate)**: 4 deltoid parts, short plantar, bifurcate, PTFL, 3 Lisfranc-ish grouped TMT bands, 5 ankle retinacula (15 new + reconfirmed Day 4s four).
+
+**QA residuals (centroid → nearest expected bone landmark, mm)**: cuneometatarsal 12.3 · dorsal TMT 12.0 · plantar TMT 16.4 · bifurcate 18.3 · CFL 17.2 · short plantar 20.9 · ATFL 20.5 · PTFL 20.4 · deltoid parts 17.9–23.2 · retinacula 15.5–39.8 (superior extensor highest — proximal band expected) · plantar fascia 32.7. Kabsch landmark mean residual unchanged ≈2.6 mm.
+
+**Still honest gaps**: many OBJ bands unextracted (cuneonavicular, intercuneiform, toe collaterals…); Lisfranc/retinacula are **grouped** teaching meshes; no finished ligament atlas claim. Blender still absent from apt — Z-Anatomy `.blend` path remains recipe-only.

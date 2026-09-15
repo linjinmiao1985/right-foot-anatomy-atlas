@@ -125,7 +125,8 @@ const REAL_NERVE_MODELS: Record<string, string> = {
 
 // Soft-tissue under ligament toggle — incomplete set (not a finished ligament atlas).
 // BP3D CC BY (native mm): long plantar + Achilles tendon.
-// Open3D BY-SA (Kabsch→BP3D, by-sa/): ATFL, CFL, spring ligament, plantar aponeurosis.
+// Open3D BY-SA (Kabsch→BP3D, by-sa/): lateral/medial ankle, short plantar, bifurcate,
+// Lisfranc-ish bands, retinacula, plantar aponeurosis (Day 4s–4t).
 const REAL_LIGAMENT_MODELS: Record<string, string> = {
   'long_plantar_ligament': '/models/right-foot/long_plantar_ligament_BP5093.glb',
   // Tendon (not ligament): clear naming in structures.json + tooltip
@@ -133,8 +134,23 @@ const REAL_LIGAMENT_MODELS: Record<string, string> = {
   // Open3DModel / AnatomyTOOL CC BY-SA 4.0 — isolated under by-sa/
   'anterior_talofibular_ligament': '/models/right-foot/by-sa/anterior_talofibular_ligament.glb',
   'calcaneofibular_ligament': '/models/right-foot/by-sa/calcaneofibular_ligament.glb',
+  'posterior_talofibular_ligament': '/models/right-foot/by-sa/posterior_talofibular_ligament.glb',
   'plantar_calcaneonavicular_ligament': '/models/right-foot/by-sa/plantar_calcaneonavicular_ligament.glb',
   'plantar_aponeurosis': '/models/right-foot/by-sa/plantar_aponeurosis.glb',
+  'tibionavicular_ligament': '/models/right-foot/by-sa/tibionavicular_ligament.glb',
+  'tibiocalcaneal_ligament': '/models/right-foot/by-sa/tibiocalcaneal_ligament.glb',
+  'posterior_tibiotalar_ligament': '/models/right-foot/by-sa/posterior_tibiotalar_ligament.glb',
+  'anterior_tibiotalar_ligament': '/models/right-foot/by-sa/anterior_tibiotalar_ligament.glb',
+  'plantar_calcaneocuboid_ligament': '/models/right-foot/by-sa/plantar_calcaneocuboid_ligament.glb',
+  'bifurcate_ligament': '/models/right-foot/by-sa/bifurcate_ligament.glb',
+  'cuneometatarsal_interosseous_ligaments': '/models/right-foot/by-sa/cuneometatarsal_interosseous_ligaments.glb',
+  'dorsal_tarsometatarsal_ligaments': '/models/right-foot/by-sa/dorsal_tarsometatarsal_ligaments.glb',
+  'plantar_tarsometatarsal_ligaments': '/models/right-foot/by-sa/plantar_tarsometatarsal_ligaments.glb',
+  'flexor_retinaculum_of_ankle': '/models/right-foot/by-sa/flexor_retinaculum_of_ankle.glb',
+  'superior_extensor_retinaculum': '/models/right-foot/by-sa/superior_extensor_retinaculum.glb',
+  'inferior_extensor_retinaculum': '/models/right-foot/by-sa/inferior_extensor_retinaculum.glb',
+  'superior_fibular_retinaculum': '/models/right-foot/by-sa/superior_fibular_retinaculum.glb',
+  'inferior_fibular_retinaculum': '/models/right-foot/by-sa/inferior_fibular_retinaculum.glb',
 };
 
 export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName, isolateMode = false }: FootModelProps) {

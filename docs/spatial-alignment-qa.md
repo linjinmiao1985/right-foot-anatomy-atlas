@@ -338,3 +338,20 @@ Reuse Day 4m Open3D→BP3D Kabsch (`open3d_to_bp3d_transform.json`, mean residua
 | Plantar aponeurosis | ≈ (−94.2, −116.6, −65.4) | Plantar Z overlaps calcaneus band; large anteroposterior span |
 
 Teaching-grade co-registration only. Full AABB JSON: `third_party/open3dmodel/ligament_extract_aabb.json`.
+
+## Day 4t — Open3D deltoid / short plantar / bifurcate / Lisfranc-ish / retinacula
+
+Reuse Day 4m Kabsch. Full AABB: `ligament_extract_aabb.json`. Attachment distances: `ligament_attachment_qa.json`.
+
+| Group | Meshes | min centroid→expected bone (mm) |
+|-------|--------|----------------------------------|
+| Deltoid parts | tibionavicular, tibiocalcaneal, post./ant. tibiotalar | 17.9–23.2 |
+| Short plantar | plantar calcaneocuboid | 20.9 → calcaneus |
+| Bifurcate | Bifurcatum_ligament (no `.r`; X≈−95.5 right cluster) | 18.3 → cuboid |
+| PTFL | posterior talofibular | 20.4 → talus |
+| Lisfranc-ish (grouped) | cuneometatarsal IO, dorsal/plantar TMT | 12.0–16.4 |
+| Retinacula | flexor, sup./inf. extensor, sup./inf. fibular | 15.5–39.8 |
+
+**Day 4s re-QA**: ATFL more lateral than spring; plantar fascia Z more plantar than calcaneus; all X<0 — **no side/scale correction**.
+
+Reject rule applied: wrong side / far attachment / outside padded foot AABB — **0 rejects** among scanned named targets. Teaching-grade only.

@@ -60,8 +60,23 @@ describe('assetProvenance', () => {
     for (const id of [
       'anterior_talofibular_ligament',
       'calcaneofibular_ligament',
+      'posterior_talofibular_ligament',
       'plantar_calcaneonavicular_ligament',
       'plantar_aponeurosis',
+      'tibionavicular_ligament',
+      'tibiocalcaneal_ligament',
+      'posterior_tibiotalar_ligament',
+      'anterior_tibiotalar_ligament',
+      'plantar_calcaneocuboid_ligament',
+      'bifurcate_ligament',
+      'cuneometatarsal_interosseous_ligaments',
+      'dorsal_tarsometatarsal_ligaments',
+      'plantar_tarsometatarsal_ligaments',
+      'flexor_retinaculum_of_ankle',
+      'superior_extensor_retinaculum',
+      'inferior_extensor_retinaculum',
+      'superior_fibular_retinaculum',
+      'inferior_fibular_retinaculum',
     ]) {
       const p = getStructureProvenance(id, false, 'ligament');
       expect(p.sourceShort).toBe('Open3D');

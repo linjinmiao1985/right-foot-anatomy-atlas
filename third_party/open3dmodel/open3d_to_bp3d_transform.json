@@ -191,16 +191,31 @@
     "delta_mean_vs_prior_stored_mm": -0.34836215345955956
   },
   "meshes_baked": [
+    "anterior_talofibular_ligament",
+    "anterior_tibiotalar_ligament",
+    "bifurcate_ligament",
+    "calcaneofibular_ligament",
+    "cuneometatarsal_interosseous_ligaments",
     "dorsal_interosseous_1st",
     "dorsal_interosseous_2nd",
     "dorsal_interosseous_3rd",
     "dorsal_interosseous_4th",
-    "posterior_tibial_artery",
+    "dorsal_tarsometatarsal_ligaments",
     "fibular_artery",
-    "anterior_talofibular_ligament",
-    "calcaneofibular_ligament",
+    "flexor_retinaculum_of_ankle",
+    "inferior_extensor_retinaculum",
+    "inferior_fibular_retinaculum",
+    "plantar_aponeurosis",
+    "plantar_calcaneocuboid_ligament",
     "plantar_calcaneonavicular_ligament",
-    "plantar_aponeurosis"
+    "plantar_tarsometatarsal_ligaments",
+    "posterior_talofibular_ligament",
+    "posterior_tibial_artery",
+    "posterior_tibiotalar_ligament",
+    "superior_extensor_retinaculum",
+    "superior_fibular_retinaculum",
+    "tibiocalcaneal_ligament",
+    "tibionavicular_ligament"
   ],
-  "note": "Baked into BY-SA GLB POSITION (+NORMAL rotation) from raw extracted OBJs. Render scale remains 0.01. Teaching-grade, not surgical registration. Day 4s added ATFL/CFL/spring/plantar aponeurosis."
+  "note": "Baked into BY-SA GLB POSITION (+NORMAL rotation) from raw extracted OBJs. Render scale remains 0.01. Teaching-grade, not surgical registration. Day 4s ATFL/CFL/spring/plantar aponeurosis; Day 4t deltoid parts, short plantar, bifurcate, PTFL, Lisfranc-ish bands, ankle retinacula."
 }

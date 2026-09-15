@@ -23,10 +23,30 @@ RAW_OUT = ROOT / "third_party/open3dmodel/extracted"
 BYSA = ROOT / "public/models/right-foot/by-sa"
 
 TARGETS = {
+    # Day 4s
     "Anterior_talofibular_ligament.r": "anterior_talofibular_ligament",
     "Calcaneofibular_ligament.r": "calcaneofibular_ligament",
     "Plantar_calcaneonavicular_ligament.r": "plantar_calcaneonavicular_ligament",
     "Plantar_aponeurosis.r": "plantar_aponeurosis",
+    # Day 4t — deltoid parts
+    "Tibionavicular_ligament.r": "tibionavicular_ligament",
+    "Tibiocalcaneal_ligament.r": "tibiocalcaneal_ligament",
+    "Posterior_tibiotalar_ligament.r": "posterior_tibiotalar_ligament",
+    "Anterior_tibiotalar_ligament_(Tibiospring_lig.).r": "anterior_tibiotalar_ligament",
+    # short plantar + bifurcate + PTFL
+    "Plantar_calcaneocuboid_ligament.r": "plantar_calcaneocuboid_ligament",
+    "Bifurcatum_ligament": "bifurcate_ligament",
+    "Posterior_talofibular_ligament.r": "posterior_talofibular_ligament",
+    # Lisfranc-ish bands
+    "Cuneometatarsal_interosseus_ligaments.r": "cuneometatarsal_interosseous_ligaments",
+    "Dorsal_tarsometatarsal_ligaments.r": "dorsal_tarsometatarsal_ligaments",
+    "Plantar_tarsometatarsal_ligaments.r": "plantar_tarsometatarsal_ligaments",
+    # retinacula (clearly named)
+    "Flexor_retinaculum_of_ankle.r": "flexor_retinaculum_of_ankle",
+    "Superior_extensor_retinaculum_of_ankle.r": "superior_extensor_retinaculum",
+    "Inferior_extensor_retinaculum.r": "inferior_extensor_retinaculum",
+    "Superior_fibular_retinaculum.r": "superior_fibular_retinaculum",
+    "Inferior_fibular_retinaculum.r": "inferior_fibular_retinaculum",
 }
 
 
@@ -179,7 +199,7 @@ def main() -> int:
             {
                 "source": str(src),
                 "transform": str(XFORM.relative_to(ROOT)),
-                "method": "reuse Open3D→BP3D Kabsch (same donor as DI/arteries)",
+                "method": "reuse Open3D→BP3D Kabsch (same donor as DI/arteries); Day 4t expanded",
                 "targets": TARGETS,
                 "aabb_bp3d_mm": aabb_report,
             },
