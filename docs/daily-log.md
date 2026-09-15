@@ -544,6 +544,52 @@ Phase 4 claimed "no open intrinsic foot muscles exist" based on insufficient sea
 
 ---
 
+## Week 2 Day 4c — 2026-09-15 ✅ OSTEOLOGY COMPLETE (100%)
+
+**Focus**: Re-check 14 UM phalanx parts for misclassified distal_4 (user directive: confirm absence vs misclassification)
+
+**Progress** ✅:
+1. **UM parts inventory analysis**:
+   - 14 total components from Phalanges.stl
+   - 11 integrated (3 BP3D preferred + 4 UM distal + 4 unused)
+   - 4 unused identified: phalanx_02/07/11/12
+2. **Spatial re-analysis for distal_4**:
+   - Candidate criteria: X in [-86, -75] (4th toe), verts < 500 (distal), Z < -835
+   - **Found**: phalanx_11 (428 verts, X=-79.6, Z=-838.6) → 🎯 PERFECT MATCH
+3. **Integration**:
+   - Copied phalanx_11.glb → distal_phalanx_4.glb (16 KB)
+   - Updated `structures.json`: placeholder True → False
+   - Wired `FootModel.tsx`: added final bone loader
+4. **Unused parts documented**:
+   - phalanx_02/07/12 → likely duplicates (hallux/middle segments)
+   - Recorded in `assets-raw/um-asian-male/UNUSED_PHALANX_PARTS.md`
+5. **Integrity audit**: PASSED ✅
+   - **54/59 real (91%)** ⬆️ from 53/59 (89%)
+   - **5 placeholders** (1 DI + 4 vessels) — bones ZERO
+6. **Tests + Build**: ✅ GREEN (7/7, 1.1MB)
+7. **Documentation updated**:
+   - `manifest.json`: **25/25 bones (100%)**, total 49/54 (91%)
+   - `README.md`: Coverage table + "OSTEOLOGY COMPLETE ✅"
+
+**Coverage After Day 4c**: **54/59 (91%)** ⬆️ +1 real bone
+- **Bones**: **25/25 (100%)** ✅ — COMPLETE
+- **Muscles**: 13/14 (93%)
+- **Vessels**: 5/9 (56%)
+- **Nerves**: 6/6 (100%) ✅
+
+**Blockers**: None for bones
+
+**Commits**: 1 (final bone + osteology complete)
+
+**Tests/Build**: ✅ GREEN
+
+**Key Insight** 💡:
+- **Hard problem solved**: distal_phalanx_4 was NOT absent, but **misclassified** as "unused" in initial spatial sort
+- **Spatial re-check**: 428 verts + X=-79.6 (4th toe range) + Z=-838.6 (distal) matched perfectly
+- **Right foot osteology complete**: All 25 bones integrated (14 tarsals/metatarsals + 11 phalanges)
+
+---
+
 ## Week 2 Day 3 — 2026-09-15 🏗️ Design Fix (Unified ID Model)
 
 **Focus**: Expand structures.json to individual entries (no more grouped placeholder compromises)

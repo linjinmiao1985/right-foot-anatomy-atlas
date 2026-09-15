@@ -263,7 +263,7 @@
     "nameZh": "第四趾远节趾骨",
     "nameLa": "Phalanx distalis digiti IV pedis",
     "summaryZh": "第四趾的远节（末节）趾骨，较短小，易受鞋前端挤压而变形或甲沟炎。TA2: A02.5.19.004",
-    "placeholder": true
+    "placeholder": false
   },
   {
     "id": "distal_phalanx_5",
