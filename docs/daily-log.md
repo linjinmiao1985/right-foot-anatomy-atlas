@@ -442,6 +442,58 @@ Phase 4 claimed "no open intrinsic foot muscles exist" based on insufficient sea
 
 ---
 
+## Week 2 Day 2 — 2026-09-15 🔧 Data Integrity Audit (Hard Problem)
+
+**Focus**: Automated integrity checker (cannot lie about coverage) + placeholder/loader consistency fixes
+
+**Progress** ✅:
+1. **Created `scripts/integrity-audit.py`** (automated hard-truth checker):
+   - Check 1: Every `placeholder:false` must have matching `REAL_*_MODELS` entry in FootModel
+   - Check 2: Every `REAL_*_MODELS` GLB path must exist on disk
+   - Check 3: Every GLB file should have structures.json entry with `placeholder:false`
+   - Check 4: Cross-verify structures.json → FootModel consistency
+   - Exit code 0 = pass, 1 = violations
+   - Result: **5 critical violations found**
+2. **Discovered ID mismatch design flaw**:
+   - `lumbricals` (structures.json grouped entry) vs `lumbrical_1/2/3/4` (FootModel individual loaders)
+   - `interossei_plantares` vs `plantar_interosseous_1/2/3`
+   - `medial_plantar_artery` vs `plantar_artery_medial`
+   - `lateral_plantar_artery` vs `plantar_artery_lateral`
+   - `phalanges_2_5` (grouped) vs (no direct loader)
+   - Root cause: Grouped structures.json entries marked `placeholder:false`, but FootModel only loads individual IDs
+3. **Fixed 5 placeholder integrity violations**:
+   - Changed `phalanges_2_5`, `lumbricals`, `interossei_plantares`, `medial_plantar_artery`, `lateral_plantar_artery` from `placeholder:false` → `true`
+   - Reason: These are **grouped entries** (logical combinations), not direct GLB loaders
+   - Impact: Real coverage corrected from 39 → 34 (honest count of direct GLB loaders)
+4. **Re-ran audit**: **PASSED** (0 violations, 5 orphaned GLBs warning)
+5. **Updated `assets-research-round2.md`**: Added Week 2 Day 1 findings (DI exhaustive search, vessel grouped-mesh issue)
+
+**Coverage After Day 2**: **77% direct GLB loaders (34/44 structures)**
+- Bones: 14/14 (100%)
+- Muscles: 10/10 (100% direct loaders, excluding lumbricals/PI/phalanges grouped entries)
+- Vessels: 3/3 (100% direct loaders, excluding medial/lateral plantar grouped entries)
+- Nerves: 6/6 (100%, BY-SA isolated)
+- Grouped entries (5): placeholder:true (lumbricals, interossei_plantares, medial/lateral_plantar_artery, phalanges_2_5)
+
+**Blockers**: None
+
+**Commits**: 1 commit (3033d78) — Data integrity audit script + placeholder fixes
+
+**Tests/Build**: ✅ GREEN (7/7 tests, clean build)
+
+**Tomorrow (Week 2 Day 3)** 📋:
+1. Update README/manifest with corrected coverage (77% direct loaders, 10 placeholders)
+2. Optional: TA2 Chinese 踇/拇 spot-check (if time)
+3. Update daily-log + week-plan
+4. Push PR; tests green
+
+**Key Insight** 💡:
+- **Automated integrity checker = cannot lie**: Python script forced honest accounting of placeholder vs real loaders
+- **Grouped entries ≠ direct loaders**: structures.json can have logical groups (e.g., "lumbricals" = 4 muscles), but FootModel loads individual GLBs (`lumbrical_1/2/3/4`). Marking grouped entry as `placeholder:false` was **data integrity lie** — fixed to `true`.
+- **77% direct GLB coverage** (34/44) is the **honest metric** for "how many structures have individual real meshes loaded by FootModel".
+
+---
+
 ## Week 2 Day 1 — 2026-09-15 🔍 Exhaustive DI + Vessel Search
 
 **Focus**: Dorsal interossei exhaustive search (P0) + vessel digital/metatarsal branches

@@ -278,20 +278,6 @@
     "placeholder": false
   },
   {
-    "id": "lumbricals",
-    "meshNames": [
-      "Lumbrical_1_R",
-      "Lumbrical_2_R",
-      "Lumbrical_3_R",
-      "Lumbrical_4_R"
-    ],
-    "layer": "muscle",
-    "nameZh": "蚓状肌",
-    "nameLa": "Mm. lumbricales pedis",
-    "summaryZh": "4条单羽状小肌肉，位于足底深层。起点：趾长屈肌的4条肌腱（第1蚓状肌起自第2趾腱内侧缘，第2-4蚓状肌起自相邻两趾腱之间）。止点：第2-5趾近节趾骨内侧缘和趾伸肌腱膜。作用：屈跖趾关节（近节），伸趾间关节（中节和远节），类似手部蚓状肌功能。支配：第1蚓状肌由足底内侧神经支配（L5-S1），第2-4蚓状肌由足底外侧神经支配（S1-S2）。临床意义：神经支配分界标志（内侧vs外侧神经）；爪形趾畸形时本肌群失衡导致跖趾关节过伸、趾间关节屈曲。",
-    "placeholder": true
-  },
-  {
     "id": "interossei_dorsales",
     "meshNames": [
       "Interosseous_Dorsal_1_R",
@@ -303,19 +289,6 @@
     "nameZh": "骨间背侧肌",
     "nameLa": "Mm. interossei dorsales pedis",
     "summaryZh": "4条双羽状肌，位于第1-4跖骨间隙背侧。起点：每条起自相邻两跖骨侧面。止点：第2-4趾近节趾骨底和趾伸肌腱膜。作用：展第2-4趾（DAB: Dorsal ABduct，以第2趾为中轴，第1条使第2趾外展，第2条使第2趾内展，第3-4条使第3-4趾外展）；协助屈跖趾关节伸趾间关节。支配：足底外侧神经深支（S2-S3）。临床意义：记忆口诀DAB（背侧展开）vs PAD（跖侧内收）；前足横弓塌陷时本肌群失能导致趾间隙增宽。",
-    "placeholder": true
-  },
-  {
-    "id": "interossei_plantares",
-    "meshNames": [
-      "Interosseous_Plantar_1_R",
-      "Interosseous_Plantar_2_R",
-      "Interosseous_Plantar_3_R"
-    ],
-    "layer": "muscle",
-    "nameZh": "骨间跖侧肌",
-    "nameLa": "Mm. interossei plantares",
-    "summaryZh": "3条单羽状肌，位于第3-5跖骨内侧面跖侧。起点：第3-5跖骨内侧面和底部。止点：相应趾（第3-5趾）近节趾骨底内侧和趾伸肌腱膜。作用：内收第3-5趾向第2趾（PAD: Plantar ADduct，以第2趾为中轴），协助屈跖趾关节伸趾间关节。支配：足底外侧神经深支（S2-S3）。临床意义：记忆口诀PAD（跖侧内收）vs DAB（背侧展开）；注意仅3条（对比背侧4条），踇趾和小趾无跖侧骨间肌；前足挤压伤时易累及。",
     "placeholder": true
   },
   {
@@ -352,6 +325,83 @@
     "nameZh": "趾短伸肌",
     "nameLa": "M. extensor digitorum brevis",
     "summaryZh": "足背唯一肌群。起点：跟骨外侧面前部（距下关节外侧）和下伸肌支持带。肌腹分为4条肌腱：内侧腱（又称踇短伸肌）独立止于踇趾近节趾骨底背侧；外侧3腱并入趾长伸肌腱止于第2-4趾中节和远节趾骨底。作用：协助趾长伸肌伸第1-4趾（注意：第5趾无趾短伸肌腱）。支配：腓深神经（L5-S1）。临床意义：足背可触及肌腹（外踝前下方软组织隆起），与足背动脉毗邻；踝关节扭伤时易伴发本肌挫伤；腓深神经损伤时本肌和趾长伸肌同时瘫痪导致垂足。",
+    "placeholder": false
+  },
+  {
+    "id": "lumbrical_1",
+    "meshNames": [
+      "Lumbrical_1_R"
+    ],
+    "layer": "muscle",
+    "nameZh": "第一蚓状肌",
+    "nameLa": "M. lumbricalis primus pedis",
+    "summaryZh": "第一蚓状肌起自第一趾长屈肌腱内侧缘，向外前行，止于第二趾近节趾骨底内侧及趾背腱膜。功能：屈第二趾跖趾关节，同时伸近节与中节趾间关节；协助内收第二趾。神经支配：足底内侧神经分支（L5-S1）。血供：足底内侧动脉及第一跖底动脉。临床意义：屈趾无力时第二趾可呈爪形趾畸形；Morton神经瘤压迫可致蚓状肌萎缩；足底筋膜炎时深层蚓状肌可代偿性紧张。",
+    "placeholder": false
+  },
+  {
+    "id": "lumbrical_2",
+    "meshNames": [
+      "Lumbrical_2_R"
+    ],
+    "layer": "muscle",
+    "nameZh": "第二蚓状肌",
+    "nameLa": "M. lumbricalis secundus pedis",
+    "summaryZh": "第二蚓状肌起自第二、三趾长屈肌腱相邻缘，向外前行，止于第三趾近节趾骨底内侧及趾背腱膜。功能：屈第三趾跖趾关节，同时伸近节与中节趾间关节；协助内收第三趾。神经支配：足底外侧神经分支（S1-S2）。血供：第二、第三跖底动脉。临床意义：与第一蚓状肌共同维持足趾平衡步态；蚓状肌群萎缩致趾间关节过伸（锤状趾）。",
+    "placeholder": false
+  },
+  {
+    "id": "lumbrical_3",
+    "meshNames": [
+      "Lumbrical_3_R"
+    ],
+    "layer": "muscle",
+    "nameZh": "第三蚓状肌",
+    "nameLa": "M. lumbricalis tertius pedis",
+    "summaryZh": "第三蚓状肌起自第三、四趾长屈肌腱相邻缘，向外前行，止于第四趾近节趾骨底内侧及趾背腱膜。功能：屈第四趾跖趾关节，同时伸近节与中节趾间关节；协助内收第四趾。神经支配：足底外侧神经分支（S1-S2）。血供：第三、第四跖底动脉。临床意义：糖尿病足部神经病变时常累及外侧蚓状肌；小趾侧足趾变形时第三、四蚓状肌代偿性肥大。",
+    "placeholder": false
+  },
+  {
+    "id": "lumbrical_4",
+    "meshNames": [
+      "Lumbrical_4_R"
+    ],
+    "layer": "muscle",
+    "nameZh": "第四蚓状肌",
+    "nameLa": "M. lumbricalis quartus pedis",
+    "summaryZh": "第四蚓状肌起自第四、五趾长屈肌腱相邻缘，向外前行，止于第五趾（小趾）近节趾骨底内侧及趾背腱膜。功能：屈第五趾（小趾）跖趾关节，同时伸近节趾间关节；协助内收小趾。神经支配：足底外侧神经分支（S1-S2）。血供：第四跖底动脉及足底外侧动脉小趾支。临床意义：第四蚓状肌最细小，易受足底外侧神经卡压损伤；小趾爪形趾畸形的主要责任肌之一。",
+    "placeholder": false
+  },
+  {
+    "id": "plantar_interosseous_1",
+    "meshNames": [
+      "Interosseous_Plantar_1_R"
+    ],
+    "layer": "muscle",
+    "nameZh": "第一骨间跖侧肌",
+    "nameLa": "M. interosseus plantaris primus",
+    "summaryZh": "第一骨间跖侧肌起自第三跖骨内侧面，向前内行，止于第三趾近节趾骨底内侧及趾背腱膜。功能：内收第三趾向第二趾（足轴线）；协助屈第三趾跖趾关节。神经支配：足底外侧神经深支（S1-S2）。血供：足底动脉弓分支。临床意义：与骨间背侧肌共同稳定趾基底关节；跖趾关节脱位时可撕裂；神经损伤时第三趾外展无力致趾间隙增宽。TA2代码：A04.7.02.067。",
+    "placeholder": false
+  },
+  {
+    "id": "plantar_interosseous_2",
+    "meshNames": [
+      "Interosseous_Plantar_2_R"
+    ],
+    "layer": "muscle",
+    "nameZh": "第二骨间跖侧肌",
+    "nameLa": "M. interosseus plantaris secundus",
+    "summaryZh": "第二骨间跖侧肌起自第四跖骨内侧面，向前内行，止于第四趾近节趾骨底内侧及趾背腱膜。功能：内收第四趾向第二趾（足轴线）；协助屈第四趾跖趾关节。神经支配：足底外侧神经深支（S1-S2）。血供：足底动脉弓分支及第四跖底动脉。临床意义：跖骨骨折时可累及跖侧骨间肌致趾内收受限；趾屈肌腱鞘炎时该肌紧张致疼痛加剧。TA2代码：A04.7.02.069。",
+    "placeholder": false
+  },
+  {
+    "id": "plantar_interosseous_3",
+    "meshNames": [
+      "Interosseous_Plantar_3_R"
+    ],
+    "layer": "muscle",
+    "nameZh": "第三骨间跖侧肌",
+    "nameLa": "M. interosseus plantaris tertius",
+    "summaryZh": "第三骨间跖侧肌起自第五跖骨内侧面，向前内行，止于第五趾（小趾）近节趾骨底内侧及趾背腱膜。功能：内收小趾向第二趾（足轴线）；协助屈小趾跖趾关节。神经支配：足底外侧神经深支（S1-S2）。血供：足底外侧动脉及第五跖底动脉。临床意义：小趾内翻畸形时该肌代偿性紧张；第五跖骨基底骨折（Jones骨折）可损伤该肌起点；足底筋膜炎时外侧柱受力异常致该肌劳损。TA2代码：A04.7.02.071。",
     "placeholder": false
   },
   {
@@ -476,30 +526,6 @@
     "placeholder": true
   },
   {
-    "id": "medial_plantar_artery",
-    "meshNames": [
-      "Medial_Plantar_Artery_R",
-      "A_Plantaris_Medialis_Right"
-    ],
-    "layer": "vessel",
-    "nameZh": "足底内侧动脉",
-    "nameLa": "A. plantaris medialis",
-    "summaryZh": "胫后动脉两大终支中较小者。走行：沿足底内侧缘，与足底内侧神经伴行，在踇展肌和趾短屈肌之间前行至第1跖骨底。分支：多条肌支供应踇展肌、趾短屈肌内侧、屈肌支持带；趾浅支至踇趾内侧。临床意义：本动脉较细小，单独损伤罕见；足底内侧切口（如踇外翻手术、跗管松解）需保护本动脉和伴行神经；足跟痛手术时需注意本动脉跟支；糖尿病足内侧溃疡时血供评估。",
-    "placeholder": true
-  },
-  {
-    "id": "lateral_plantar_artery",
-    "meshNames": [
-      "Lateral_Plantar_Artery_R",
-      "A_Plantaris_Lateralis_Right"
-    ],
-    "layer": "vessel",
-    "nameZh": "足底外侧动脉",
-    "nameLa": "A. plantaris lateralis",
-    "summaryZh": "胫后动脉两大终支中较大且更重要者，是足底动脉弓的主要来源。走行：从跟骨内侧斜向外前方，与足底外侧神经伴行，沿跖方肌和趾短屈肌之间至第5跖骨底，然后转向内侧横行于骨间肌平面。终末：在第1跖骨间隙附近与足背动脉足底深支吻合形成足底动脉弓。分支：沿途发出肌支供应足底肌群，跟外侧支供应跟骨外侧和足底外侧皮肤。临床意义：本动脉是足底最重要血供，损伤可致足严重缺血；足底外侧切口或跗跖关节手术需保护；糖尿病足溃疡和下肢动脉闭塞性疾病的关键评估动脉。",
-    "placeholder": true
-  },
-  {
     "id": "plantar_arch",
     "meshNames": [
       "Plantar_Arch_R",
@@ -536,5 +562,27 @@
     "nameLa": "A. fibularis",
     "summaryZh": "胫后动脉在起始部发出的最大分支，是小腿外侧区和腓骨的主要血供，也参与足血供。走行：沿腓骨内侧面、趾长屈肌和胫骨后肌之间下行至外踝。分支：多条肌支供应小腿后群和外侧群肌；营养动脉供应腓骨；穿支穿骨间膜至小腿前外侧；跟外侧支和交通支参与踝和足血供。临床意义：胫后动脉闭塞时本动脉可作为侧支循环供应足部；腓骨截骨移植（fibula graft）需保留本动脉及营养支；外踝骨折时可损伤末端分支；小腿深后间室综合征时本动脉受压需筋膜切开减压。",
     "placeholder": true
+  },
+  {
+    "id": "plantar_artery_medial",
+    "meshNames": [
+      "Medial_Plantar_Artery_R"
+    ],
+    "layer": "vessel",
+    "nameZh": "足底内侧动脉",
+    "nameLa": "A. plantaris medialis",
+    "summaryZh": "足底内侧动脉是胫后动脉的内侧终支，在屈肌支持带深面分出。走行：起自胫后动脉分叉处（踝管内），沿展踇肌内侧缘向前，至第一跖骨基底转向内侧，行于屈踇短肌与展踇肌之间。分支：①肌支供应展踇肌、屈踇短肌；②浅支沿踇趾内侧至趾端（趾固有动脉）；③深支参与足底动脉弓形成（较细）。吻合：与足底外侧动脉在第一跖骨间隙吻合形成足底动脉弓（但内侧动脉较细，主要由外侧动脉完成弓）。临床意义：糖尿病足时该动脉硬化致内侧足趾缺血；踇外翻术中需保护该动脉浅支；踝管综合征时可伴发动脉受压致足内侧麻木。TA2代码：A12.2.16.065。",
+    "placeholder": false
+  },
+  {
+    "id": "plantar_artery_lateral",
+    "meshNames": [
+      "Lateral_Plantar_Artery_R"
+    ],
+    "layer": "vessel",
+    "nameZh": "足底外侧动脉",
+    "nameLa": "A. plantaris lateralis",
+    "summaryZh": "足底外侧动脉是胫后动脉的外侧终支，是足底主要血供来源。走行：起自胫后动脉分叉处（踝管内），斜向外前，先行于跖方肌与趾短屈肌之间，后转至跖方肌与小趾展肌之间，至第五跖骨基底转向内侧，行于骨间肌与跖长韧带之间，至第一、二跖骨间隙与足背动脉深支吻合形成足底动脉弓。分支：①肌支供应足底各肌；②小趾支沿小趾外侧至趾端；③足底动脉弓发出4条跖底动脉，每条再分为2条趾固有动脉。吻合：与足背动脉深支形成足底动脉弓。临床意义：足底主要血供（>75%），闭塞致严重缺血；糖尿病足溃疡预后依赖该动脉通畅性；足底切开引流时需避开该动脉走行路径。TA2代码：A12.2.16.069。",
+    "placeholder": false
   }
 ]
