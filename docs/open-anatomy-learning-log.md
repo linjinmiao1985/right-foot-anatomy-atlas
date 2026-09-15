@@ -398,3 +398,60 @@ No new CC0/CC BY foot DI or proximal-artery candidates in this dig.
 | **Action** | **baked** into 8 muscle GLBs; transform JSON under `third_party/um/`. |
 | **Lesson** | Shared bone landmarks in the *same* subject/dataset beat guessing translations; Day 5 “overlap confirmed” was premature without landmark residuals. |
 
+
+---
+
+## Session additions (2026-09-15 · Day 4m — Open3D re-fit + dig)
+
+### 19. altucher/atlas-foundry
+
+| Field | Value |
+|-------|-------|
+| **Name** | Atlas Foundry / Explode Anything (+ Corpus `/human`) |
+| **URL** | https://github.com/altucher/atlas-foundry |
+| **Official license** | Code **MIT** (LICENSE verified 2026-09-15); BodyParts3D human edition **CC BY 4.0** (`public/ATTRIBUTION.md`) |
+| **What to learn** | Fidelity labels (verified 3D vs conceptual 2.5D); continuous explode control; sourced component cards; keep generated imagery from claiming hidden geometry |
+| **Foot atlas applicability** | Full-body BP3D explorer at `/human` — **no new foot DI**. Honesty pattern: label ShareAlike fills vs main-tree CC BY/CC0 clearly. |
+| **Action** | **UX-borrow** (fidelity / explode honesty). **reject** as new foot mesh source (same BP3D pool). |
+
+### 20. ood-labs/anatomy-slices
+
+| Field | Value |
+|-------|-------|
+| **Name** | Anatomy Slices (Sentinel sectioning) |
+| **URL** | https://github.com/ood-labs/anatomy-slices |
+| **Official license** | Code **MIT** (LICENSE verified); anatomy volumes derived from BodyParts3D via pinned `ashemag/human-atlas` — **CC BY 4.0** (ATTRIBUTION.md) |
+| **What to learn** | Mesh→SDF / structure-ID volume pipeline; axial/sagittal/coronal/oblique cutaways; provenance.json with SHA pins; explicit “model sections ≠ MRI intensity” disclaimer |
+| **Foot atlas applicability** | Whole-body voxel sectioning — useful for future cutaway UX, **not** a foot soft-tissue mesh gain. |
+| **Action** | **UX-borrow** / process (provenance pins + section honesty). **reject** as DI mesh source. |
+
+### 21. olivercase/body_parts_3d_api
+
+| Field | Value |
+|-------|-------|
+| **Name** | BodyParts3D 4.3 mesh set + downloader / subset selector |
+| **URL** | https://github.com/olivercase/body_parts_3d_api |
+| **Official license** | Code **MIT** (LICENSE verified); mesh data labeled **CC BY-SA 2.1 Japan** (Anatomography / full-res 4.3 path — **not** LSDB Archive CC BY 4.0) |
+| **What to learn** | License **fork awareness**: Anatomography full-res 4.3 ≠ dbarchive R4.0 99% OBJ under CC BY 4.0; FJ→BP lookup pitfalls; subset tooling |
+| **Foot atlas applicability** | Convenient full-res mirror **only if** ShareAlike isolation is acceptable. This atlas main tree stays on **LSDB Archive CC BY 4.0**. |
+| **Action** | **monitor** / document fork. Prefer LSDB Archive for main tree; **isolate-SA** if ever using 4.3 Anatomography meshes. |
+
+### ACTIONED: Open3D Kabsch re-fit (cuboid + cuneiforms)
+
+| Field | Detail |
+|-------|--------|
+| **Find** | After Day 4j tarsal ID fix, Day 4i+ Open3D bake still used 8 landmarks (mean residual ≈2.96 mm). |
+| **Method** | Kabsch similarity on 12 landmarks (Calcaneus/Talus/Navicular/Cuboid/3 cuneiforms/MT1–5) from Open3D meters → BP3D mm; bake from raw extracted OBJs. |
+| **Result** | scale≈926.0; mean residual≈**2.61 mm** (Δ≈−0.35 mm vs prior). DI1–4 + PTA + fibular re-baked under `by-sa/`. |
+| **Action** | **integrated** (alignment re-bake) + keep **isolate-SA**. |
+
+No new CC0/CC BY foot DI or proximal-artery candidates in this dig (atlas-foundry / anatomy-slices reuse BP3D; body_parts_3d_api is BY-SA 2.1 JP fork).
+
+## Next dig targets (updated)
+
+- Prefer CC0/CC BY replacements for Open3D BY-SA DI + proximal arteries.  
+- MorphoSource human foot media pages one-by-one for clear CC BY soft tissue.  
+- SimTK ankle-foot downloadable license text before any geom reuse.  
+- Contact paths for Zenodo 20228270 relicense (BY without NC).  
+- NIH 3D entry-by-entry crawl remaining.  
+- Avoid Anatomography BY-SA 2.1 JP full-res mirrors for main-tree claims.

@@ -284,8 +284,9 @@ Complete commit history (Day 1-7) documents:
 - **Peer review**: Expert review checklist provided (`docs/expert-review-checklist.md`)
 
 ### Spatial Alignment
-- **Scale verification**: All sources use 0.01 factor (mm → cm)
+- **Scale verification**: All sources use 0.01 factor (mm → cm) after baking into BP3D mm
 - **UM-BP3D frame**: Day 4l Kabsch similarity bake (7 tarsal landmarks, mean residual ≈2.2 mm); see `third_party/um/um_to_bp3d_transform.json`
+- **Open3D-BP3D frame**: Day 4m Kabsch similarity re-fit (12 landmarks incl. cuboid + 3 cuneiforms after Day 4j ID fix; mean residual ≈2.6 mm vs prior 8-landmark ≈3.0 mm); see `third_party/open3dmodel/open3d_to_bp3d_transform.json`
 - **Z-Anatomy derivation**: Based on BP3D, expected coordinate alignment
 
 ---
@@ -293,7 +294,7 @@ Complete commit history (Day 1-7) documents:
 ## Future Work
 
 ### Anatomical Completeness
-- **Dorsal interossei**: Requires new open-source dataset (none currently available)
+- **Dorsal interossei**: Open3D BY-SA fill present under `by-sa/`; prefer future CC0/CC BY replacement for main-tree claim
 - **Vessel per-toe splits / proximal arteries**: Grouped digital+metatarsal meshes integrated honestly; posterior tibial + fibular remain out of foot-proper scope unless a finer open source appears
 - **Ligaments/joints**: Capsule rendering (low priority for teaching)
 

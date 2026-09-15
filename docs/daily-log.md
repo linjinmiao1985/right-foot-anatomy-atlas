@@ -1016,6 +1016,22 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 6. integrity-audit + vitest + build; commit; push.
 
 ### Not this pass
-- Open3D Kabsch re-bake with cuboid/cuneiform landmarks (still optional; current by-sa ~3 mm fit OK)
+- Open3D Kabsch re-bake with cuboid/cuneiform landmarks → **done Day 4m**
 
 **No finished-product claim.**
+
+## Week 2 Day 4m — 2026-09-15 ✅ Open3D Kabsch re-fit (cuboid + cuneiforms)
+
+**Focus**: Re-fit Open3D→BP3D Kabsch **including** corrected cuboid + 3 cuneiform landmarks; bake into 6 BY-SA GLBs; refresh learning-log dig.
+
+**Progress**:
+1. **Landmarks**: Open3D `lower-limb.obj` bone centroids (m) vs BP3D GLBs (mm): Calcaneus/Talus/Navicular/**Cuboid**/3 **cuneiforms**/MT1–5 (12).
+2. **Kabsch similarity**: scale≈926.0; mean residual≈**2.61 mm** (max≈4.41 mm, MT1). Prior Day 4i+ (8 landmarks, excluded mis-ID tarsals): mean≈**2.96 mm**.
+3. **Bake**: Raw extracted OBJs → `by-sa/` DI1–4 + PTA + fibular GLBs (POSITION + NORMAL rotation). Render scale `0.01` unchanged.
+4. **Docs**: `open3d_to_bp3d_transform.json` (with prior comparison), spatial-alignment-qa, README, NOTICE, methods.
+5. **Learning log**: ≥3 new license-verified projects (atlas-foundry, anatomy-slices, body_parts_3d_api).
+
+**Honesty**: Teaching-grade registration only — not surgical. BY-SA fills remain ShareAlike-isolated.
+
+**Tests/Build**: integrity-audit + vitest + build (this commit).
+

@@ -116,7 +116,7 @@ Open `http://localhost:5173` to view the atlas.
 - **Create page**: https://anatomytool.org/open3dmodel-create
 - **Coverage**: Foot dorsal interossei (1st–4th) + posterior tibial artery + fibular artery
 - **Isolation**: `public/models/right-foot/by-sa/` + NOTICE.md
-- **Alignment**: Baked Open3D meters → BP3D mm via Kabsch on Calcaneus/Talus/Navicular/MT1–5 (mean residual ≈3 mm); render scale stays `0.01`
+- **Alignment**: Baked Open3D meters → BP3D mm via Kabsch on Calcaneus/Talus/Navicular/Cuboid/3 cuneiforms/MT1–5 (Day 4m re-fit after tarsal ID fix; mean residual ≈2.6 mm, prior 8-landmark ≈3.0 mm); render scale stays `0.01`
 
 ---
 

@@ -136,9 +136,9 @@ scale={[0.01, 0.01, 0.01]} // Blender units → cm (verified from BP3D base)
 - **Fix**: Bake Kabsch similarity (scale ≈924.45, R, t) into DI + PTA + fibular GLBs using bone centroids Calcaneus / Talus / Navicular / MT1–5
 - **Residual**: mean ≈3.0 mm, max ≈4.8 mm on those landmarks
 - **Render convention**: unchanged `scale={[0.01, 0.01, 0.01]}` after bake
-- **Excluded landmarks**: BP3D cuboid / medial & intermediate cuneiform centroids look individually mis-centered in current GLBs — not used for the fit
-- **Artifacts**: Transform at `third_party/open3dmodel/open3d_to_bp3d_transform.json`
-- **Status**: Scale/frame mismatch vs BP3D foot **corrected for Open3D DI + proximal arteries**; teaching-grade, not pixel-perfect surgical registration
+- **Excluded landmarks (Day 4i+)**: BP3D cuboid / medial & intermediate cuneiform centroids looked individually mis-centered — not used for the fit (root cause = wrong ISA IDs; fixed Day 4j)
+- **Artifacts**: Transform at `third_party/open3dmodel/open3d_to_bp3d_transform.json` (**superseded Day 4m** with 12-landmark re-fit)
+- **Status (Day 4i+)**: Scale/frame mismatch vs BP3D foot corrected for Open3D DI + proximal arteries; teaching-grade, not pixel-perfect surgical registration
 
 
 ---
@@ -184,7 +184,7 @@ Previously: cuboid/medial ≈180 mm; intermediate ≈1449 mm.
 
 ### Remaining spatial caveats (not fixed Day 4j)
 
-- Open3D Kabsch landmarks can now **include** cuboid + cuneiforms if a re-bake is ever needed; current by-sa bake still used the 8-landmark fit from Day 4i+.
+- Open3D Kabsch landmarks **can include** cuboid + cuneiforms (done Day 4m).
 
 **Verdict (Day 4j)**: tarsal mis-ID **fixed** for cuboid + 3 cuneiforms. Teaching-grade atlas in progress — no finished-product claim.
 
@@ -258,6 +258,45 @@ UM ZIP includes bone STLs (Calcaneus, Talus, Navicular, Cuboid, 3 cuneiforms). *
 Intrinsics 100% inside expanded foot bone bbox. Extrinsics retain leg→ankle/midfoot extent (UM segmentations are full LE muscle bellies).
 
 ### Why not Open3D re-bake this pass
-UM soft-tissue frame was the main remaining spatial issue. Open3D by-sa bake (Day 4i+, 8 landmarks, ~3 mm residual) remains adequate; cuboid/cuneiforms *could* be added later but were not required for this goal.
+UM soft-tissue frame was the main remaining spatial issue for Day 4l. Open3D by-sa bake still used Day 4i+ 8 landmarks (~3 mm); cuboid/cuneiforms deferred to Day 4m.
 
 **Verdict (Day 4l)**: UM muscle frame **baked into BP3D mm**. Teaching-grade atlas in progress — no finished-product claim.
+
+---
+
+## Day 4m — Open3D Kabsch re-fit with cuboid + cuneiforms (2026-09-15)
+
+### Problem
+Day 4i+ Open3D→BP3D Kabsch excluded cuboid + 3 cuneiforms because BP3D centroids were outliers. Day 4j showed those outliers were **wrong elemental IDs**, not registration failure. Soft-tissue BY-SA GLBs still carried the older 8-landmark bake (mean residual ≈2.96 mm).
+
+### Shared landmarks
+Open3D `lower-limb.obj` named bones (meters) vs current BP3D right-foot GLB centroids (mm):
+
+Calcaneus, Talus, Navicular, **Cuboid**, **medial / intermediate / lateral cuneiform**, MT1–5 (**12 landmarks**).
+
+### Transform
+- **Method**: Kabsch **similarity** (scale + R + t), baked from **raw** extracted OBJs (not from already-baked GLBs)
+- **Scale**: ≈925.997 (prior 8-landmark ≈924.450)
+- **Mean residual**: ≈**2.61 mm** · **Max**: ≈4.41 mm (MT1)
+- **Prior comparison**: stored Day 4i+ mean ≈**2.96 mm** on 8 landmarks; recomputed 8-landmark fit on corrected BP3D bones reproduces ≈2.96 mm
+- **Artifact**: `third_party/open3dmodel/open3d_to_bp3d_transform.json` (includes `prior_fit_day4i` + `comparison`)
+- **Bake**: DI1–4, posterior tibial artery, fibular artery under `public/models/right-foot/by-sa/`; render `scale={[0.01,0.01,0.01]}` unchanged
+
+### Residual table (new 12-landmark fit)
+
+| Landmark | Residual (mm) |
+|----------|---------------|
+| calcaneus | ≈3.63 |
+| talus | ≈1.95 |
+| navicular | ≈3.20 |
+| cuboid | ≈2.41 |
+| cuneiform_medial | ≈1.09 |
+| cuneiform_intermediate | ≈1.04 |
+| cuneiform_lateral | ≈2.52 |
+| metatarsal_1 | ≈4.41 |
+| metatarsal_2 | ≈4.39 |
+| metatarsal_3 | ≈1.84 |
+| metatarsal_4 | ≈1.90 |
+| metatarsal_5 | ≈2.97 |
+
+**Verdict (Day 4m)**: Open3D BY-SA soft tissue **re-baked** with corrected tarsal landmarks. Mean residual improved ≈0.35 mm vs prior 8-landmark fit. Teaching-grade atlas in progress — no finished-product claim.

@@ -1,29 +1,171 @@
 {
-  "method": "Kabsch similarity; landmarks Calcaneus/Talus/Navicular/MT1-5 (excluded misaligned BP3D cuneiforms/cuboid)",
-  "scale": 924.4495730658375,
+  "method": "Kabsch similarity; landmarks Calcaneus/Talus/Navicular/Cuboid/Medial+Intermediate+Lateral Cuneiform/MT1-5 (Day 4m re-fit after BP3D cuboid/cuneiform ID fix)",
+  "source_frame": "Open3DModel lower-limb.obj meters (AnatomyTOOL CC BY-SA 4.0)",
+  "target_frame": "BodyParts3D right-foot mm",
+  "scale": 925.9972876994153,
   "R": [
     [
-      0.974484481684644,
-      -0.004678200699231194,
-      -0.22440612601715582
+      0.9735476726970528,
+      -0.0052719814795039125,
+      -0.2284231494341849
     ],
     [
-      -0.22445274742265134,
-      -0.02467279700803594,
-      -0.9741725808409021
+      -0.22848391902196866,
+      -0.02173470303625312,
+      -0.9733050402788884
     ],
     [
-      -0.0009793519457194089,
-      0.9996846340351633,
-      -0.02509329280402285
+      0.00016653682670030712,
+      0.9997498731658866,
+      -0.022364332547153663
     ]
   ],
   "t_mm": [
-    -14.680423547771866,
-    -126.54685770212457,
-    -77.61263279503042
+    -13.949870760919538,
+    -126.65855915946642,
+    -77.54317525937068
   ],
-  "mean_residual_mm": 2.960815893936004,
+  "mean_residual_mm": 2.6124537404764445,
+  "max_residual_mm": 4.410086777590328,
+  "max_residual_landmark": "metatarsal_1",
+  "per_landmark_residual_mm": {
+    "calcaneus": 3.6279387972046697,
+    "talus": 1.9517565266787649,
+    "navicular": 3.1979940810025065,
+    "cuboid": 2.4100634304033752,
+    "cuneiform_medial": 1.0878428751587101,
+    "cuneiform_intermediate": 1.0430399506255241,
+    "cuneiform_lateral": 2.518545484306336,
+    "metatarsal_1": 4.410086777590328,
+    "metatarsal_2": 4.389095714448348,
+    "metatarsal_3": 1.843288741625344,
+    "metatarsal_4": 1.8981468576445852,
+    "metatarsal_5": 2.9716456490288405
+  },
+  "landmarks_open3d_m": {
+    "calcaneus": [
+      -0.07660328774422738,
+      0.04266030669034928,
+      -0.05112071699230319
+    ],
+    "talus": [
+      -0.073539697758496,
+      0.06615448517715128,
+      -0.03752329501084602
+    ],
+    "navicular": [
+      -0.07262229248658308,
+      0.0612480241502684,
+      -0.005931223613595703
+    ],
+    "cuboid": [
+      -0.09809791382405737,
+      0.04171818402154401,
+      -0.007298177737881516
+    ],
+    "cuneiform_medial": [
+      -0.07051784880000003,
+      0.05179439280000001,
+      0.016624167199999984
+    ],
+    "cuneiform_intermediate": [
+      -0.08372822384701914,
+      0.058931223847019085,
+      0.011120931383577068
+    ],
+    "cuneiform_lateral": [
+      -0.0921549903743315,
+      0.053328297326203186,
+      0.007126701604278077
+    ],
+    "metatarsal_1": [
+      -0.07182526458333334,
+      0.03666696145833329,
+      0.0499861114583333
+    ],
+    "metatarsal_2": [
+      -0.09011422292993633,
+      0.04191462966333017,
+      0.046608636032757035
+    ],
+    "metatarsal_3": [
+      -0.10165045676500509,
+      0.03800745473041712,
+      0.042834001017293934
+    ],
+    "metatarsal_4": [
+      -0.1104145276134123,
+      0.032367733727810655,
+      0.033764866863905306
+    ],
+    "metatarsal_5": [
+      -0.11909405600933479,
+      0.025107858809801598,
+      0.0212584690781797
+    ]
+  },
+  "landmarks_bp3d_mm": {
+    "calcaneus": [
+      -75.79230584956312,
+      -66.53015108327904,
+      -36.9831225042898
+    ],
+    "talus": [
+      -71.00513663550316,
+      -78.84843226371727,
+      -16.585657255565792
+    ],
+    "navicular": [
+      -79.70068816300277,
+      -107.36271813361199,
+      -17.786879518529872
+    ],
+    "cuboid": [
+      -98.89928026006147,
+      -99.68567606889081,
+      -37.79964655670672
+    ],
+    "cuneiform_medial": [
+      -80.88571028050369,
+      -127.32624865276057,
+      -29.03927039169684
+    ],
+    "cuneiform_intermediate": [
+      -91.0583963394165,
+      -119.91377798716228,
+      -23.15708017349243
+    ],
+    "cuneiform_lateral": [
+      -97.57183457386644,
+      -112.93406576808495,
+      -29.70516617449024
+    ],
+    "metatarsal_1": [
+      -90.39366227210162,
+      -161.14393694297817,
+      -46.4914727923878
+    ],
+    "metatarsal_2": [
+      -104.99348904507832,
+      -146.40813586781326,
+      -38.012307387416804
+    ],
+    "metatarsal_3": [
+      -115.413653109936,
+      -144.9858793073794,
+      -44.947032473047855
+    ],
+    "metatarsal_4": [
+      -119.78530232311796,
+      -132.76932483356006,
+      -48.3018725993351
+    ],
+    "metatarsal_5": [
+      -127.46144025260155,
+      -123.58330247161585,
+      -55.4334000491221
+    ]
+  },
   "axis_perm": [
     0,
     1,
@@ -33,5 +175,28 @@
     1,
     1,
     1
-  ]
+  ],
+  "prior_fit_day4i": {
+    "method": "Kabsch similarity; landmarks Calcaneus/Talus/Navicular/MT1-5 (excluded misaligned BP3D cuneiforms/cuboid)",
+    "scale": 924.4495730658375,
+    "mean_residual_mm": 2.960815893936004,
+    "landmarks": "Calcaneus/Talus/Navicular/MT1-5 (excluded cuboid/cuneiforms)",
+    "note": "Excluded because BP3D cuboid/cuneiforms were wrong elemental IDs (fixed Day 4j)"
+  },
+  "comparison": {
+    "prior_stored_mean_residual_mm": 2.960815893936004,
+    "recomputed_8landmark_mean_residual_mm": 2.9608176286825048,
+    "new_12landmark_mean_residual_mm": 2.6124537404764445,
+    "new_transform_on_8landmarks_mean_residual_mm": 3.0362441431529232,
+    "delta_mean_vs_prior_stored_mm": -0.34836215345955956
+  },
+  "meshes_baked": [
+    "dorsal_interosseous_1st",
+    "dorsal_interosseous_2nd",
+    "dorsal_interosseous_3rd",
+    "dorsal_interosseous_4th",
+    "posterior_tibial_artery",
+    "fibular_artery"
+  ],
+  "note": "Baked into BY-SA GLB POSITION (+NORMAL rotation) from raw extracted OBJs. Render scale remains 0.01. Teaching-grade, not surgical registration."
 }
