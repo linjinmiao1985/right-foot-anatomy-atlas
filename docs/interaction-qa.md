@@ -120,3 +120,17 @@ If issues found during manual testing:
 
 - **Escape**: clears selection, isolate mode, **and** structure search query (works while search input focused; blurs input).
 - Isolate toggle `I` unchanged.
+
+## Day 4aj UX (2026-09-15)
+
+### Sagittal clip plane (lite)
+
+| Check | Expected |
+|-------|----------|
+| Clip toggle default | **Off** — full meshes visible |
+| Enable clip | Foot cut by single sagittal (X) plane; soft-tissue/bone holes uncapped (expected teaching look) |
+| Position slider | Moves cut medially/laterally within teaching range (~0.55–1.55 scene units) |
+| Disable clip | Materials clear clippingPlanes; full geometry restored |
+| Orbit / pick | Still works while clipped; not a clinical MPR claim |
+
+**Source**: UX-borrow ideas only (Open Anatomy Studio / VH Viewer / CT Education Skill). No third-party code copied.

@@ -157,6 +157,9 @@ Documented implementations (ideas only — no third-party UI code copied):
 4. **Bilingual label density** (from Open Anatomy Studio + BioLens / LABIM3D; Day 4ai)  
    - Layer panel: 关 / 中文 / 中+拉 for hover Html chips; Latin only when bilingual.
 
+5. **Sagittal clip plane lite** (from Open Anatomy Studio + VH Viewer / CT Education Skill; Day 4aj)  
+   - Single X-axis toggle + position slider; `localClippingEnabled` scene sync. Teaching only — not clinical MPR.
+
 ---
 
 
@@ -816,5 +819,34 @@ No new CC0/CC BY foot DI / per-ray MTA / ligament candidates integrated this pas
 |---|---------|-----|------------------|----------------|----------|
 | **34** | **Open Twin XR** (Opening-Science/open-twin-xr) | https://github.com/Opening-Science/open-twin-xr | Code **MIT** (README Licensing); anatomy assets per-atlas (BP3D CC BY 4.0, Z-Anatomy BY-SA + **NC components**, HRA CC BY 4.0, TCIA CT CC BY 4.0, OpenEar CC BY 4.0, biv-me Apache-2.0) — README warns bundled Z-Anatomy path is **non-commercial** | Multi-atlas WebXR body viewer; honest absence / in-app provenance / X-ray Fresnel / explode — **no** curated right-foot DI pack identified | **UX-borrow** (honesty + provenance). **reject** mixing NC-tainted Z-Anatomy components into main tree |
 | **35** | **3Dentes** (NateSaindon/3Dentes) | https://github.com/NateSaindon/3Dentes · https://natesaindon.github.io/3Dentes/ | Code **MIT**; anatomy **CC BY-NC 4.0** (own CBCT derivatives — README Licensing) | Oral CBCT atlas (teeth/pulp/PDL/IAN) — **no foot**. Fidelity tiers (measured / derived / schematic) per structure | **UX-borrow** (fidelity-tier honesty). **reject** for foot mesh / main-tree (**NC**) |
+
+No new CC0/CC BY foot DI / per-ray MTA / ligament candidates integrated this pass — dig + UX only. **No finished-product claim.**
+
+---
+
+## Session additions (2026-09-15 · Day 4aj — sagittal clip lite + dig)
+
+### UX applied
+
+| Change | Detail |
+|--------|--------|
+| **Sagittal clip plane (lite)** | Layer panel toggle + position slider; single **X** axis via Three.js `localClippingEnabled` + scene material sync (`ClipPlaneSync`). Default mid-foot constant `1.05` (scene units = BP3D mm × 0.01). |
+| Source | **UX-borrow** (ideas only) from Open Anatomy Studio clipping planes + Visible Human Viewer / CT Education Skill cross-section habit — no third-party renderer/UI code copied. |
+| Why not layer-color legend | Legend + per-layer swatches already present (Day 4h); clip was the remaining lower-risk mining-note item that still needed wiring. |
+| Honesty | Teaching cutaway only — **not** clinical MPR / capped CSG. Uncapped clip holes are expected. |
+| Files | `src/lib/clipPlane.ts` (+ vitest), `ClipPlaneSync.tsx`, wired App / LayerToggles / Viewport |
+
+### NEW license-verified projects (≥2)
+
+| # | Project | URL | License verified | Foot relevance | Decision |
+|---|---------|-----|------------------|----------------|----------|
+| **36** | **Visible Human Viewer** (tabutyn/visible-human-viewer) | https://github.com/tabutyn/visible-human-viewer | Code **MIT** (LICENSE + NOTICE.md verified 2026-09-15); underlying NLM Visible Human described as **public-domain** subject to [NLM Terms](https://www.nlm.nih.gov/databases/download/terms_and_conditions.html) — repo ships code/metadata only (no cryosection pixels) | WebGPU registered CT+RGB cross-sections; adjustable cuts / LOD — **no** curated right-foot DI/NV mesh pack | **UX-borrow** (cross-section / consent honesty). **reject** as foot soft-tissue mesh source |
+| **37** | **Anatomy Atlas RU** (zigmyndovi4-ship-it/anatomy-atlas-ru) | https://github.com/zigmyndovi4-ship-it/anatomy-atlas-ru · demo https://zigmyndovi4-ship-it.github.io/anatomy-atlas-ru/ | Code **MIT** (LICENSE); anatomy **CC BY 4.0** BodyParts3D 4.0 (`public/ATTRIBUTION.md` verified 2026-09-15; LSDB lic.html supersedes legacy BY-SA 2.1 JP OBJ comments) | ashemag/human-atlas lineage + full RU localization (3432 concepts) + screenshots of search/isolate/explode — same BP3D pool already in main tree | **UX-borrow** (RU/EN bilingual search + screenshot QA habit). **reject** as new foot mesh source (same BP3D) |
+
+### Related dig (not counted as new foot mesh)
+
+| Project | License | Note |
+|---------|---------|------|
+| **CT Education Skill** (grapeot/ct-education-skill) | Code **MIT** (LICENSE verified) | Local-first chest CT education + RAS x/y/z clipping; uncapped cut honesty — reinforced clip-lite decision. No foot DI pack. |
 
 No new CC0/CC BY foot DI / per-ray MTA / ligament candidates integrated this pass — dig + UX only. **No finished-product claim.**

@@ -6,6 +6,12 @@ import { NERVE_GROUPS, type NerveGroupId } from '../lib/nerveGroups';
 import { VESSEL_GROUPS, type VesselGroupId } from '../lib/vesselGroups';
 import { MUSCLE_GROUPS, type MuscleGroupId } from '../lib/muscleGroups';
 import { LABEL_DENSITY_OPTIONS, type LabelDensity } from '../lib/labelDensity';
+import {
+  CLIP_CONSTANT_MAX,
+  CLIP_CONSTANT_MIN,
+  CLIP_CONSTANT_STEP,
+  DEFAULT_CLIP_CONSTANT,
+} from '../lib/clipPlane';
 
 interface LayerTogglesProps {
   visibleLayers: Set<Layer>;
@@ -24,12 +30,17 @@ interface LayerTogglesProps {
   onToggleMuscleGroup: (group: MuscleGroupId) => void;
   labelDensity: LabelDensity;
   onLabelDensityChange: (density: LabelDensity) => void;
+  clipEnabled: boolean;
+  onClipEnabledChange: (enabled: boolean) => void;
+  clipConstant: number;
+  onClipConstantChange: (constant: number) => void;
 }
 
 /**
- * Layer panel + legend + ligament teaching sub-group filter.
+ * Layer panel + legend + ligament teaching sub-group filter + sagittal clip (lite).
  * UX-borrow (no code copy): human-atlas / hpfrei type-filter counts;
- * BioLens visibility chrome; Open Anatomy Studio bilingual clarity.
+ * BioLens visibility chrome; Open Anatomy Studio bilingual clarity + clipping;
+ * Visible Human Viewer / CT Education Skill cross-section habit.
  */
 export default function LayerToggles({
   visibleLayers,
@@ -48,6 +59,10 @@ export default function LayerToggles({
   onToggleMuscleGroup,
   labelDensity,
   onLabelDensityChange,
+  clipEnabled,
+  onClipEnabledChange,
+  clipConstant,
+  onClipConstantChange,
 }: LayerTogglesProps) {
   const layers = getAllLayers();
 
@@ -123,6 +138,70 @@ export default function LayerToggles({
               </button>
             );
           })}
+        </div>
+      </div>
+
+      <div
+        style={{
+          marginBottom: '12px',
+          padding: '8px',
+          background: clipEnabled ? 'rgba(167, 139, 250, 0.12)' : 'rgba(68, 68, 68, 0.35)',
+          border: clipEnabled ? '1px solid rgba(167, 139, 250, 0.45)' : '1px solid #444',
+          borderRadius: '6px',
+        }}
+        role="group"
+        aria-label="矢状切面 Sagittal clip lite"
+        title="UX-borrow: Open Anatomy Studio / VH Viewer clipping (ideas only) — single X-axis, not clinical MPR"
+      >
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '6px' }}>
+          <div style={{ fontSize: '11px', fontWeight: 600, color: '#d6d3d1' }}>
+            矢状切面 · Clip
+            <span style={{ fontWeight: 400, color: '#888', marginLeft: '6px' }}>X · lite</span>
+          </div>
+          <button
+            type="button"
+            onClick={() => onClipEnabledChange(!clipEnabled)}
+            aria-pressed={clipEnabled}
+            title={clipEnabled ? '关闭切面' : '开启矢状切面（教学 lite）'}
+            style={{
+              padding: '3px 10px',
+              fontSize: '11px',
+              cursor: 'pointer',
+              borderRadius: '4px',
+              border: clipEnabled ? '1px solid #a78bfa' : '1px solid #555',
+              background: clipEnabled ? 'rgba(167, 139, 250, 0.3)' : '#333',
+              color: clipEnabled ? '#ede9fe' : '#ccc',
+            }}
+          >
+            {clipEnabled ? '开' : '关'}
+          </button>
+        </div>
+        <label
+          style={{
+            display: 'block',
+            fontSize: '10px',
+            color: '#9ca3af',
+            opacity: clipEnabled ? 1 : 0.55,
+          }}
+        >
+          位置 · Position
+          <span style={{ marginLeft: '6px', fontVariantNumeric: 'tabular-nums', color: '#c4b5fd' }}>
+            {clipConstant.toFixed(2)}
+          </span>
+          <input
+            type="range"
+            min={CLIP_CONSTANT_MIN}
+            max={CLIP_CONSTANT_MAX}
+            step={CLIP_CONSTANT_STEP}
+            value={clipConstant}
+            disabled={!clipEnabled}
+            onChange={(e) => onClipConstantChange(Number(e.target.value))}
+            aria-label="矢状切面位置"
+            style={{ width: '100%', marginTop: '4px', cursor: clipEnabled ? 'pointer' : 'not-allowed' }}
+          />
+        </label>
+        <div style={{ fontSize: '9px', color: '#777', marginTop: '4px', lineHeight: 1.35 }}>
+          单轴教学切面（非临床 MPR）。默认中足 X≈−{DEFAULT_CLIP_CONSTANT.toFixed(2)}（场景单位）。
         </div>
       </div>
 

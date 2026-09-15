@@ -1234,3 +1234,12 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 - Dig (≥2 NEW): Opening-Science/open-twin-xr (MIT code; multi-license atlases, NC warning); NateSaindon/3Dentes (MIT code; CBCT oral **BY-NC**).
 - No mesh spam / no SA volume add; no finished-product claim.
 - integrity-audit + vitest + build; commit + push.
+
+## Day 4aj (2026-09-15) — sagittal clip lite + 2 open-anatomy finds
+
+**Focus**: Quality UX (least-risk mining-note item) + license dig; no SA mesh spam.
+
+1. **UX**: Single-axis **sagittal (X) clipping plane toggle (lite)** — layer panel on/off + position slider; `ClipPlaneSync` enables `localClippingEnabled` and syncs one Three.js `Plane` onto scene materials (avoids touching every FootModel material path). Legend already existed (Day 4h) so clip was chosen over redoing swatches.
+2. **Learning log**: NEW #36 Visible Human Viewer (MIT + NLM VH terms); #37 Anatomy Atlas RU (MIT + BP3D CC BY 4.0). Related: grapeot/ct-education-skill (MIT) clip honesty.
+3. **Checks**: integrity-audit + vitest + build.
+4. **Honesty**: No finished-product claim; no new SA mesh integrate this pass.

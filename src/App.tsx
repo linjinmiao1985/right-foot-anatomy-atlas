@@ -16,6 +16,11 @@ import {
   DEFAULT_LABEL_DENSITY,
   type LabelDensity,
 } from './lib/labelDensity';
+import {
+  DEFAULT_CLIP_CONSTANT,
+  DEFAULT_CLIP_ENABLED,
+  clampClipConstant,
+} from './lib/clipPlane';
 
 function emptyLayerCounts(): Record<Layer, number> {
   return { bone: 0, muscle: 0, nerve: 0, vessel: 0, ligament: 0 };
@@ -40,6 +45,8 @@ function App() {
     () => new Set(getAllMuscleGroupIds()),
   );
   const [labelDensity, setLabelDensity] = useState<LabelDensity>(DEFAULT_LABEL_DENSITY);
+  const [clipEnabled, setClipEnabled] = useState(DEFAULT_CLIP_ENABLED);
+  const [clipConstant, setClipConstant] = useState(DEFAULT_CLIP_CONSTANT);
 
   const handleLayerToggle = (layer: Layer) => {
     setVisibleLayers((prev) => {
@@ -205,6 +212,10 @@ function App() {
         onToggleMuscleGroup={handleMuscleGroupToggle}
         labelDensity={labelDensity}
         onLabelDensityChange={setLabelDensity}
+        clipEnabled={clipEnabled}
+        onClipEnabledChange={setClipEnabled}
+        clipConstant={clipConstant}
+        onClipConstantChange={(v) => setClipConstant(clampClipConstant(v))}
       />
 
       <Viewport
@@ -217,6 +228,8 @@ function App() {
         visibleVesselGroups={visibleVesselGroups}
         visibleMuscleGroups={visibleMuscleGroups}
         labelDensity={labelDensity}
+        clipEnabled={clipEnabled}
+        clipConstant={clipConstant}
       />
 
       <StructurePanel
@@ -241,7 +254,7 @@ function App() {
         }}
       >
         <div style={{ fontSize: '11px', color: '#666' }}>
-          提示: 搜索 ZH/LA | 标签密度 | 拖动旋转 | 滚轮缩放 | 右键平移 | 点击对焦 | I 隔离/退出 | Esc 取消隔离+搜索
+          提示: 搜索 ZH/LA | 标签密度 | 矢状切面(lite) | 拖动旋转 | 滚轮缩放 | 右键平移 | 点击对焦 | I 隔离/退出 | Esc 取消隔离+搜索
         </div>
         <div
           style={{

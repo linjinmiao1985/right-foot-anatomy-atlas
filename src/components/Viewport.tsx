@@ -2,6 +2,7 @@ import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Grid } from '@react-three/drei';
 import FootModel from './FootModel';
 import CameraFocus from './CameraFocus';
+import ClipPlaneSync from './ClipPlaneSync';
 import type { Layer } from '../types/anatomy';
 import type { LigamentGroupId } from '../lib/ligamentGroups';
 import type { NerveGroupId } from '../lib/nerveGroups';
@@ -9,6 +10,10 @@ import type { VesselGroupId } from '../lib/vesselGroups';
 import type { MuscleGroupId } from '../lib/muscleGroups';
 import type { LabelDensity } from '../lib/labelDensity';
 import { DEFAULT_LABEL_DENSITY } from '../lib/labelDensity';
+import {
+  DEFAULT_CLIP_CONSTANT,
+  DEFAULT_CLIP_ENABLED,
+} from '../lib/clipPlane';
 
 interface ViewportProps {
   onMeshClick: (meshName: string) => void;
@@ -20,9 +25,11 @@ interface ViewportProps {
   visibleVesselGroups?: Set<VesselGroupId>;
   visibleMuscleGroups?: Set<MuscleGroupId>;
   labelDensity?: LabelDensity;
+  clipEnabled?: boolean;
+  clipConstant?: number;
 }
 
-export default function Viewport({ onMeshClick, visibleLayers, selectedMeshName, isolateMode = false, visibleLigamentGroups, visibleNerveGroups, visibleVesselGroups, visibleMuscleGroups, labelDensity = DEFAULT_LABEL_DENSITY }: ViewportProps) {
+export default function Viewport({ onMeshClick, visibleLayers, selectedMeshName, isolateMode = false, visibleLigamentGroups, visibleNerveGroups, visibleVesselGroups, visibleMuscleGroups, labelDensity = DEFAULT_LABEL_DENSITY, clipEnabled = DEFAULT_CLIP_ENABLED, clipConstant = DEFAULT_CLIP_CONSTANT }: ViewportProps) {
   return (
     <Canvas
       camera={{ 
@@ -59,6 +66,8 @@ export default function Viewport({ onMeshClick, visibleLayers, selectedMeshName,
       />
 
       <CameraFocus selectedMeshName={selectedMeshName} />
+
+      <ClipPlaneSync enabled={clipEnabled} constant={clipConstant} />
 
       <OrbitControls 
         makeDefault
