@@ -23,6 +23,8 @@ export interface HonestyBadge {
   label: string;
   /** Native title / tooltip */
   title: string;
+  /** Accessible name (screen readers): short label + teaching meaning */
+  ariaLabel: string;
 }
 
 export interface SchematicHonesty {
@@ -54,22 +56,31 @@ const BADGE_META: Record<HonestyKind, Omit<HonestyBadge, 'kind'>> = {
   'by-sa': {
     label: 'BY-SA · 隔离',
     title: 'CC BY-SA ShareAlike isolate (by-sa/) — not main-tree CC BY/CC0',
+    ariaLabel:
+      'BY-SA isolate · ShareAlike: CC BY-SA content under by-sa/, not main-tree CC BY or CC0',
   },
   grouped: {
     label: '组合 · Grouped',
     title: 'Grouped teaching mesh — not per-ray / per-toe elemental split',
+    ariaLabel:
+      'Grouped teaching mesh: combined structures, not per-ray or per-toe elemental split',
   },
   'additional-part': {
     label: '附加件 · ADDITIONAL',
     title: 'Multi-part structure: primary mesh + ADDITIONAL part(s) (may mix licenses)',
+    ariaLabel:
+      'ADDITIONAL part composite: primary mesh plus additional part or parts; licenses may mix',
   },
   placeholder: {
     label: '占位 · Schematic',
     title: 'Schematic placeholder — no open segmented mesh yet',
+    ariaLabel: 'Schematic placeholder: no open segmented mesh yet',
   },
   'pathway-schematic': {
     label: '路径示意 · Pathway',
     title: 'Pathway schematic (CURVE→tube) — teaching course, not volumetric segmentation',
+    ariaLabel:
+      'Pathway schematic: CURVE to tube teaching course, not volumetric segmentation',
   },
 };
 
@@ -131,3 +142,13 @@ export function getSchematicHonesty(
     show: kinds.length > 0,
   };
 }
+
+/** Region accessible name for panel / footer honesty chrome. */
+export function honestyRegionAriaLabel(honesty: SchematicHonesty): string {
+  if (!honesty.show || honesty.badges.length === 0) {
+    return 'Schematic versus source honesty';
+  }
+  const kinds = honesty.badges.map((b) => b.label).join(', ');
+  return `Schematic versus source honesty · 示意≠来源: ${kinds}`;
+}
+

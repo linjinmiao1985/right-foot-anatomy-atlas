@@ -153,3 +153,11 @@ If issues found during manual testing:
 - [x] Esc clears selection / isolate / search (and help first) — **does not** clear per-structure hides
 - [x] Explicit reveal: chip bar / Restore all / `X` toggle; hides re-saved into teaching prefs
 - Honesty: teaching dissection state only — not a clinical workstation profile
+
+## Day 4bd addendum — honesty badge accessibility
+
+- [x] Schematic honesty region (`data-testid="schematic-honesty"`): `role="note"`, `aria-label` via `honestyRegionAriaLabel()`, `aria-describedby` → disclaimer
+- [x] Each honesty badge chip: `aria-label` (English teaching meaning) + `title` tooltip; `role="list"/"listitem"` in StructurePanel
+- [x] Footer chips (`schematic-honesty-footer`): `role="note"` + per-badge `aria-label` / `title`
+- [x] License tree chip (主树 · Main / ShareAlike): `aria-label` distinguishing isolate vs main tree
+- Honesty: teaching a11y polish only — **not** a finished-product / WCAG certification claim

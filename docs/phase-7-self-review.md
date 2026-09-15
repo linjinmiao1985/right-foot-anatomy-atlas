@@ -96,7 +96,7 @@ These residuals support **classroom visualization**, not implant planning or int
 
 ## Open mining count highlights
 
-Living log: `docs/open-anatomy-learning-log.md` — **62** numbered license-verified projects (#1–#62) as of Day 4bc (OMFAtlas schematic honesty UX shipped).
+Living log: `docs/open-anatomy-learning-log.md` — **62** numbered license-verified projects (#1–#62) as of Day 4bd (honesty badge ARIA polish after Day 4bc UX).
 
 | Window | Highlights | Mesh integrate |
 |--------|------------|----------------|
@@ -199,3 +199,8 @@ Phase 7 freezes a week-quality honest board: census **129** / **124**; ontology 
 ## Progress note (Day 4bc)
 
 OMFAtlas schematic-vs-source honesty UX (`schematicHonesty` + StructurePanel + footer chips). Dig **#62** hra-ui (MIT). Soft gaps still dry. **0** meshes; Andreassen skipped. **No finished-product claim.**
+
+## Progress note (Day 4bd)
+
+- Accessibility polish on schematic honesty badges (panel + footer ARIA; license-tree chip label).
+- Census unchanged **129/124**; ontology **126/129**. **0** meshes. Teaching atlas in progress — **no finished-product claim**.

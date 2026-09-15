@@ -1425,3 +1425,14 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 4. **Learning log**: #62 hubmapconsortium/hra-ui (MIT code; HRA CC BY organs — reject foot soft). Soft gaps still dry.
 5. Checks: integrity-audit + vitest + build; commit + push.
 6. **Honesty**: teaching atlas in progress — **no finished-product claim**. Census unchanged. **0** meshes / no SA spam / Andreassen skipped.
+
+## Day 4bd (2026-09-15) — Honesty badge accessibility (ARIA)
+
+**Target**: Week-quality loop — accessibility on Day 4bc schematic honesty badges (prefer quality; no SA spam; no Andreassen).
+
+1. Pulled `0fff3c5` (already current).
+2. **a11y**: Extended `schematicHonesty` with per-badge `ariaLabel` + `honestyRegionAriaLabel()`; StructurePanel honesty `role="note"` + `aria-describedby` disclaimer; badge list semantics; footer note ARIA; Main/ShareAlike license chip `aria-label`.
+3. **Tests**: +2 cases (ariaLabel coverage; quiet region label).
+4. Docs: interaction-qa / methods / phase-7 / handback pointers. Census unchanged.
+5. Checks: integrity-audit + vitest + build; commit + push.
+6. **Honesty**: teaching atlas in progress — **no finished-product claim**. **0** meshes / no SA spam / Andreassen skipped.

@@ -10,7 +10,7 @@ import { getAllVesselGroupIds, type VesselGroupId } from './lib/vesselGroups';
 import { getAllMuscleGroupIds, type MuscleGroupId } from './lib/muscleGroups';
 import { getStructureByMeshName, getAllStructures } from './lib/structureLookup';
 import { ATLAS_SOURCE_FOOTER } from './lib/assetProvenance';
-import { getSchematicHonesty } from './lib/schematicHonesty';
+import { getSchematicHonesty, honestyRegionAriaLabel } from './lib/schematicHonesty';
 import type { Layer } from './types/anatomy';
 import type { AnatomyStructure } from './types/anatomy';
 import {
@@ -470,6 +470,8 @@ function App() {
               return (
                 <div
                   data-testid="schematic-honesty-footer"
+                  role="note"
+                  aria-label={honestyRegionAriaLabel(h)}
                   style={{
                     display: 'flex',
                     flexWrap: 'wrap',
@@ -483,6 +485,9 @@ function App() {
                   {h.badges.map((b) => (
                     <span
                       key={b.kind}
+                      title={b.title}
+                      aria-label={b.ariaLabel}
+                      data-honesty-kind={b.kind}
                       style={{
                         padding: '1px 6px',
                         background: '#4c1d95',

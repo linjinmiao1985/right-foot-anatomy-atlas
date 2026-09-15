@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import {
   getSchematicHonesty,
+  honestyRegionAriaLabel,
   ADDITIONAL_PART_IDS,
   PATHWAY_SCHEMATIC_NERVE_IDS,
 } from './schematicHonesty';
@@ -62,5 +63,32 @@ describe('schematicHonesty (OMFAtlas UX-borrow)', () => {
   it('stays quiet for UM CC0 muscle without ADDITIONAL/grouped', () => {
     const h = getSchematicHonesty('quadratus_plantae', false, 'muscle');
     expect(h.show).toBe(false);
+  });
+
+  it('exposes non-empty ariaLabel on every badge kind', () => {
+    const samples: Array<[string, boolean, string]> = [
+      ['posterior_tibial_artery', false, 'vessel'],
+      ['dorsal_digital_arteries', false, 'vessel'],
+      ['flexor_hallucis_brevis', false, 'muscle'],
+      ['interossei_dorsales', false, 'muscle'],
+      ['any_future_gap', true, 'nerve'],
+      ['tibial_nerve', false, 'nerve'],
+    ];
+    for (const [id, ph, layer] of samples) {
+      const h = getSchematicHonesty(id, ph, layer);
+      expect(h.show).toBe(true);
+      for (const b of h.badges) {
+        expect(b.ariaLabel.length).toBeGreaterThan(12);
+        expect(b.ariaLabel).toMatch(/[A-Za-z]/); // English accessible name
+      }
+      const region = honestyRegionAriaLabel(h);
+      expect(region).toMatch(/Schematic versus source/i);
+      expect(region).toMatch(/示意≠来源/);
+    }
+  });
+
+  it('honestyRegionAriaLabel stays generic when quiet', () => {
+    const h = getSchematicHonesty('calcaneus', false, 'bone');
+    expect(honestyRegionAriaLabel(h)).toBe('Schematic versus source honesty');
   });
 });

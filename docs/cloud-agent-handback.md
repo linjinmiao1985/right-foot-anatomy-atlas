@@ -19,7 +19,7 @@ Prefer **CC0 / CC BY** over further ShareAlike volume. Update census in README /
 
 ---
 
-## Live census freeze (unchanged through Day 4bc)
+## Live census freeze (unchanged through Day 4bd)
 
 | Metric | Value |
 |--------|-------|
@@ -62,7 +62,7 @@ Osteology complete (26/26). Soft tissue **teaching-useful and incomplete**.
 | Browser / Cloudflare-gated packs | Scripted fetch 403 / session | Cloud Agent browser; verify license page before wire |
 | Zenodo Z-Anatomy `.blend` heavy re-harvest | Large binary; ankle bands absent prior | Re-inventory ATFL/CFL/deltoid/retinacula **only if** new revision claims them |
 | Further multi-view screenshots | 9-shot pack live | Optional angles only — not a marketing gallery |
-| CC0/BY DI / per-ray MTA / nerve·ligament main-tree | Watchlist dry through Day 4bc (#38–#62) | Re-check new open CT foot soft segmentations; **skip NC** / “License: Model” |
+| CC0/BY DI / per-ray MTA / nerve·ligament main-tree | Watchlist dry through Day 4bd (#38–#62); Day 4bd = honesty badge a11y | Re-check new open CT foot soft segmentations; **skip NC** / “License: Model” |
 
 ---
 
@@ -70,6 +70,10 @@ Osteology complete (26/26). Soft tissue **teaching-useful and incomplete**.
 
 - Open mining **#58–#61** (OMFAtlas / Anatria-3D / OPANEX / ICL LE bones) — **0** mesh wire; soft gaps still dry.
 - Andreassen Kabsch **not** re-opened.
+
+## Day 4bd done this handoff
+
+- Honesty badge **ARIA** (panel + footer + Main/ShareAlike chip). **0** mesh wire; Andreassen not re-opened.
 
 ## Suggested next agent priorities (pick one; quality over volume)
 

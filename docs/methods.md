@@ -1,7 +1,7 @@
 # Methods
 
 **Project**: Right Foot Anatomy Atlas (Teaching-Grade Interactive 3D)  
-**Version**: Week 2 Day 4bc / Phase 7 (teaching atlas in progress; see README + `docs/phase-7-self-review.md` live census; **129** entries / **124** unique; **53** main-tree / **71** BY-SA; ontology **126/129** citable; 134 discrete GLBs; expert-review checklist v2.0 scoped teaching-useful/incomplete; per-structure hide persist + Esc policy + keyboard help + camera presets 1–5 + multi-view QA screenshots (9) + label density + sagittal clip lite; Andreassen VHM belly Kabsch Day 4az+4ba blocked (laterality then LE Option A; see third_party/andreassen/ + docs/cloud-agent-handback.md) — TA2 soft-tissue still incomplete — **not a finished product**)  
+**Version**: Week 2 Day 4bd / Phase 7 (teaching atlas in progress; see README + `docs/phase-7-self-review.md` live census; **129** entries / **124** unique; **53** main-tree / **71** BY-SA; ontology **126/129** citable; 134 discrete GLBs; expert-review checklist v2.0 scoped teaching-useful/incomplete; per-structure hide persist + Esc policy + keyboard help + camera presets 1–5 + multi-view QA screenshots (9) + label density + sagittal clip lite; Andreassen VHM belly Kabsch Day 4az+4ba blocked (laterality then LE Option A; see third_party/andreassen/ + docs/cloud-agent-handback.md) — TA2 soft-tissue still incomplete — **not a finished product**)  
 **Date**: 2026-09-15  
 **Licenses**: Code MIT | Assets CC BY 4.0 / CC0 1.0 / CC BY-SA 4.0 (isolated)
 
@@ -364,7 +364,7 @@ Commit history documents asset decisions, `structures.json` evolution, and `Foot
 ---
 
 **Document Version**: 1.5 (2026-09-15)  
-**Atlas Version**: Week 2 Day 4bc / Phase 7 (teaching-grade in progress; no finished-product claim)
+**Atlas Version**: Week 2 Day 4bd / Phase 7 (teaching-grade in progress; no finished-product claim)
 
 
 ---
@@ -586,3 +586,9 @@ Downloaded Andreassen VHM Final STLs (CC BY 4.0). Documented Kabsch + spatial QA
 1. StructurePanel + footer badge when selected structure is BY-SA / grouped / ADDITIONAL-part / pathway-schematic / placeholder (`src/lib/schematicHonesty.ts`).
 2. Learning-log dig #62 hubmapconsortium/hra-ui (MIT code; HRA CC BY organs — reject foot soft).
 3. Version pointer Day 4bc / Phase 7. **No finished-product claim.** **0** meshes.
+
+## Day 4bd — Honesty badge accessibility (2026-09-15)
+
+1. **a11y**: `HonestyBadge.ariaLabel` + `honestyRegionAriaLabel()`; StructurePanel note region + footer chips expose ARIA; Main/ShareAlike license chip labeled.
+2. Tests assert non-empty `ariaLabel` across honesty kinds. **0** meshes / SA spam; Andreassen not re-opened.
+3. Version pointer Day 4bd / Phase 7. **No finished-product claim.**

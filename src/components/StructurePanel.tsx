@@ -2,7 +2,7 @@ import { useState } from 'react';
 import type { AnatomyStructure } from '../types/anatomy';
 import { LAYER_CONFIG } from '../lib/layers';
 import { getStructureProvenance, licenseLabel, getTeachingMeshNote } from '../lib/assetProvenance';
-import { getSchematicHonesty } from '../lib/schematicHonesty';
+import { getSchematicHonesty, honestyRegionAriaLabel } from '../lib/schematicHonesty';
 import {
   getOntologyIds,
   hasOntologyIds,
@@ -263,6 +263,11 @@ export default function StructurePanel({
               ? 'CC BY-SA ShareAlike isolate (by-sa/) — not main-tree CC BY/CC0'
               : 'Main tree (CC BY 4.0 / CC0) — redistributable with attribution where required'
           }
+          aria-label={
+            provenance.isolatedBySa
+              ? 'License tree: ShareAlike isolate under by-sa/, not main-tree CC BY or CC0'
+              : 'License tree: Main tree CC BY 4.0 or CC0'
+          }
         >
           {provenance.isolatedBySa ? 'ShareAlike' : '主树 · Main'}
         </span>
@@ -284,6 +289,8 @@ export default function StructurePanel({
           }}
           data-testid="schematic-honesty"
           role="note"
+          aria-label={honestyRegionAriaLabel(honesty)}
+          aria-describedby="schematic-honesty-disclaimer"
         >
           <div
             style={{
@@ -293,6 +300,8 @@ export default function StructurePanel({
               marginBottom: '6px',
               alignItems: 'center',
             }}
+            role="list"
+            aria-label="Honesty badges"
           >
             <span style={{ fontSize: '10px', color: '#c4b5fd', fontWeight: 700 }}>
               示意≠来源 · Schematic ≠ source
@@ -300,7 +309,10 @@ export default function StructurePanel({
             {honesty.badges.map((b) => (
               <span
                 key={b.kind}
+                role="listitem"
                 title={b.title}
+                aria-label={b.ariaLabel}
+                data-honesty-kind={b.kind}
                 style={{
                   padding: '2px 7px',
                   background:
@@ -322,6 +334,7 @@ export default function StructurePanel({
             ))}
           </div>
           <p
+            id="schematic-honesty-disclaimer"
             style={{
               margin: 0,
               fontSize: '11px',
