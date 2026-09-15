@@ -1,7 +1,7 @@
 # Methods
 
 **Project**: Right Foot Anatomy Atlas (Teaching-Grade Interactive 3D)  
-**Version**: Week 2 Day 4 (91% real coverage, 54/59 structures, OSTEOLOGY COMPLETE)  
+**Version**: Week 2 Day 4g (57/60 structures real ≈95% entry-level; unique-structure framing 52/55 ≈95%)  
 **Date**: 2026-09-15  
 **Licenses**: Code MIT | Assets CC BY 4.0 / CC0 1.0 / CC BY-SA 4.0 (isolated)
 
@@ -9,7 +9,7 @@
 
 ## Overview
 
-This atlas integrates open-licensed anatomical meshes from three sources (BodyParts3D, Universiti Malaya, Z-Anatomy) to create an interactive web-based teaching tool for right foot anatomy. Real 3D meshes achieve **100% osteology coverage (25/25 bones)** plus 93% muscles (13/14), 56% vessels (5/9), and 100% nerves (6/6). Placeholder geometry represents 5 unavailable structures (1 muscle + 4 vessels).
+This atlas integrates open-licensed anatomical meshes from three sources (BodyParts3D, Universiti Malaya, Z-Anatomy) to create an interactive web-based teaching tool for right foot anatomy. Real 3D meshes achieve **100% osteology coverage (26/26 bones including sesamoids)** plus 93% muscles (13/14 unique), 78% vessels (7/9; includes 2 honest BP3D grouped meshes), and 100% nerves (6/6). Placeholder geometry represents 3 unavailable structures (1 muscle + 2 proximal vessels).
 
 **Target Audience**: Medical students, anatomy instructors, foot/ankle residents, physical therapists.  
 **NOT for**: Clinical diagnosis, treatment planning, surgical navigation, or patient-specific modeling.
@@ -228,7 +228,7 @@ const REAL_NERVE_MODELS: Record<string, string> = {
 ### Anatomical
 1. **Teaching-grade, not patient-specific**: Generic anatomy from cadaver scans (BP3D) or segmented CT (UM)
 2. **Dorsal interossei absent**: No open-source foot dorsal interossei found in BP3D, UM, or Z-Anatomy
-3. **Vessel fine detail lacking**: 4/9 vessels placeholder (BP3D does not segment digital branches)
+3. **Vessel proximal + per-toe detail**: 2/9 vessels still placeholder (posterior tibial, fibular — proximal to foot proper). Digital/metatarsal branches are present as honest BP3D **grouped** meshes (combined, not per-toe split; labeled （组合）)
 4. **Nerve geometry simplified**: CURVE tubes (not volumetric meshes), suitable for pathway teaching but not cross-sectional detail
 5. **Extrinsic muscle extent**: Shown from leg origin to foot insertion (teaching context, not isolated foot-only)
 
@@ -294,7 +294,7 @@ Complete commit history (Day 1-7) documents:
 
 ### Anatomical Completeness
 - **Dorsal interossei**: Requires new open-source dataset (none currently available)
-- **Vessel digital branches**: Requires finer BP3D segmentation or alternative source
+- **Vessel per-toe splits / proximal arteries**: Grouped digital+metatarsal meshes integrated honestly; posterior tibial + fibular remain out of foot-proper scope unless a finer open source appears
 - **Ligaments/joints**: Capsule rendering (low priority for teaching)
 
 ### Technical Enhancements

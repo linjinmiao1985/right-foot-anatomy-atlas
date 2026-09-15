@@ -151,12 +151,12 @@
 |----|-------------|---------|------|--------|---------|-----|
 | dorsalis_pedis_artery | A. dorsalis pedis | 足背动脉 | A. tibialis anterior | ✅ | 人解9版 p429 | ✅ |
 | arcuate_artery | A. arcuata | 弓状动脉 | A. dorsalis pedis | ✅ | 人解9版 p430 | ✅ |
-| dorsal_metatarsal_arteries | Aa. metatarsales dorsales | 跖背动脉 | A. arcuata | ✅ | 人解9版 p430 | ✅ |
+| dorsal_digital_arteries | Aa. digitales dorsales pedis (combined) | 足背趾动脉（组合） | A. arcuata / Aa. metatarsales dorsales | ✅ | 人解9版 p430；BP3D grouped mesh | ✅ honest grouped |
 | posterior_tibial_artery | A. tibialis posterior | 胫后动脉 | A. poplitea | ✅ | 人解9版 p431 | ✅ |
 | medial_plantar_artery | A. plantaris medialis | 足底内侧动脉 | A. tibialis posterior | ✅ | 人解9版 p432 | ✅ |
 | lateral_plantar_artery | A. plantaris lateralis | 足底外侧动脉 | A. tibialis posterior | ✅ | 人解9版 p432 | ✅ |
 | plantar_arch | Arcus plantaris | 足底动脉弓 | A. plantaris lateralis + A. dorsalis pedis | ✅ | 人解9版 p432 | ✅ |
-| plantar_metatarsal_arteries | Aa. metatarsales plantares | 跖底动脉 | Arcus plantaris | ✅ | 人解9版 p432 | ✅ |
+| plantar_metatarsal_arteries | Aa. metatarsales plantares (combined) | 跖底跖骨动脉（组合） | Arcus plantaris | ✅ | 人解9版 p432；BP3D grouped mesh | ✅ honest grouped |
 | fibular_artery | A. fibularis | 腓动脉 | A. tibialis posterior | ✅ | 人解9版 p431 | ✅ |
 
 **血管层验证总结**: 9/9 ✅ 全部通过TA2验证

@@ -72,13 +72,13 @@
     {"id": "superficial_fibular_nerve", "file": "by-sa/superficial_fibular_nerve.glb", "source": "Z-Anatomy", "license": "CC BY-SA 4.0", "fma": "FMA19034", "name_zh": "腓浅神经", "name_la": "N. fibularis superficialis"},
     {"id": "sural_nerve", "file": "by-sa/sural_nerve.glb", "source": "Z-Anatomy", "license": "CC BY-SA 4.0", "fma": "FMA44314", "name_zh": "腓肠神经", "name_la": "N. suralis"}
   ],
-  "note": "26 bones + 13 muscles + 7 vessels (2 honest grouped) + 6 nerves. Total: 52/60 real (87%). Honest grouped: dorsal digital + plantar metatarsal arteries are BP3D combined meshes.",
+  "note": "26 bones + 13 unique muscles (18 real muscle entries) + 7 vessels (2 honest grouped) + 6 nerves. structures.json: 57/60 real (95%), 3 placeholders. Unique-structure framing ≈52/55 (95%). Honest grouped: dorsal digital + plantar metatarsal arteries are BP3D combined meshes (not per-toe).",
   "stats": {
     "bones": "26/26 (100%, BP3D 22 + UM 4 distal)",
     "muscles": "13/14 (93%, BP3D 12 + UM CC0 8)",
     "vessels": "7/9 (78%, BP3D: 5 individual + 2 honest grouped, lacking 2 proximal arteries)",
     "nerves": "6/6 (100%, Z-Anatomy CC BY-SA 4.0, isolated in by-sa/)",
-    "total": "52/60 (87% real meshes, 57 structures with placeholder:false - some grouped)"
+    "total": "57/60 entry-level (95% placeholder:false); unique-structure framing ≈52/55 (95%)"
   },
   "quality_decisions": {
     "overlapping_muscles": "UM CC0 chosen over BP3D for AH/ADM/FDB (2.4-8.7x resolution)",

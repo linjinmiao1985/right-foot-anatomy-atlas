@@ -62,12 +62,14 @@
 - [ ] **Origins/insertions anatomically plausible**: Spot-check 3 muscles (e.g., AH origin = calcaneus medial tuberosity)
 
 ### Angiology (Vessels)
-- [ ] **5/9 real vessels**:
+- [ ] **7/9 real vessels** (5 individual + 2 honest grouped):
   - [ ] Dorsalis pedis artery ✅ (continuation of anterior tibial)
   - [ ] Arcuate artery ✅ (branch of dorsalis pedis)
+  - [ ] Dorsal digital arteries ✅ (BP3D grouped mesh BP6049/FJ2072; labeled （组合）, not per-toe)
   - [ ] Medial/lateral plantar arteries ✅ (branches of posterior tibial)
   - [ ] Plantar arch ✅ (anastomosis)
-- [ ] **4/9 placeholder** (digital branches, fine detail): Documented as gap ✅
+  - [ ] Plantar metatarsal arteries ✅ (BP3D grouped mesh BP6060/FJ2096; labeled （组合）, not per-toe)
+- [ ] **2/9 placeholder** (posterior tibial, fibular — proximal to foot proper): Documented as gap ✅
 
 ### Neurology (Nerves)
 - [ ] **6/6 real nerves** (Z-Anatomy CURVE geometry):
@@ -115,12 +117,12 @@
 
 ### Accepted Limitations
 - [ ] **Dorsal interossei**: Documented as absent in BP3D/UM/Z-Anatomy (placeholder ✅)
-- [ ] **Vessel digital branches**: 4/9 vessels placeholder (BP3D lacks fine detail)
+- [ ] **Proximal vessels**: 2/9 placeholder (posterior tibial, fibular). Digital/metatarsal present as honest grouped meshes (not per-toe)
 - [ ] **Nerve geometry**: CURVE tubes, not volumetric meshes (teaching-appropriate)
 - [ ] **Extrinsic muscle extent**: Full leg-to-foot (teaching context, not foot-only isolation)
 
 ### Not a Gap (By Design)
-- [ ] **Sesamoids**: Not included (2 hallux sesamoids rare in open datasets, low teaching priority)
+- [ ] **Sesamoids**: Included as grouped real mesh (Week 2 Day 4f)
 - [ ] **Ligaments/joints**: Not included (focus: osteo/myo/angio/neuro only)
 - [ ] **Skin/fascia**: Not included (deep anatomy focus)
 

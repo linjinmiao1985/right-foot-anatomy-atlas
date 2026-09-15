@@ -920,3 +920,17 @@ Each day:
 
 **Next Hard Focus**: Update expert-review-checklist and week-plan with Week 2 Day 4 comprehensive osteology + vessel honesty; prepare Week 2 substantive self-review (no delivery claims).
 
+
+---
+
+### Handoff verification (box agent, post Cloud Agent exhaustion)
+
+**Focus**: Confirm Week 2 Day 4g honest grouped vessels landed on remote PR branch; finish doc wrap-up.
+
+**Findings**:
+- Remote `cursor/right-foot-anatomy-atlas-mvp-af85` already at `1766f09` with GLBs + FootModel + structures.json present (push had succeeded before wrap-up error).
+- Integrity audit: 57 real / 3 placeholder / 0 critical violations (5 orphaned teaching GLBs remain).
+- Vitest 7/7 green.
+
+**Doc sync** (this commit): methods, expert-review-checklist, interaction-qa, terminology, week-plan status, manifest note — factual 7/9 vessels + honest grouped language; no delivery claims.
+

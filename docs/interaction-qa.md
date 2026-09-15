@@ -8,10 +8,10 @@
 ## Test Scenarios
 
 ### 1. Layer Toggle Functionality
-- [x] **Bone layer** toggle hides/shows all 14 bones
+- [x] **Bone layer** toggle hides/shows all 26 bones
 - [x] **Muscle layer** toggle hides/shows all 13 real muscles + 1 placeholder
 - [x] **Nerve layer** toggle hides/shows all 6 real nerves (BY-SA)
-- [x] **Vessel layer** toggle hides/shows all 5 real vessels + 4 placeholders
+- [x] **Vessel layer** toggle hides/shows all 7 real vessels (incl. 2 honest grouped) + 2 placeholders
 - [x] **Multiple layers** can be enabled simultaneously
 - [ ] **Raycast correctness**: Hidden layers not clickable (verify via onClick stopPropagation)
 
@@ -43,7 +43,7 @@
 ### Low Priority
 1. **Extrinsic muscle extent**: Tibialis posterior/FDL/FHL extend beyond foot (teaching context, not bug)
 2. **Placeholder geometry**: Dorsal interossei uses capsule (no real mesh available)
-3. **Vessel digital branches**: 4/9 vessels placeholder (BP3D lacks fine detail)
+3. **Proximal vessels**: 2/9 placeholder (posterior tibial, fibular). Digital/metatarsal are honest grouped meshes
 
 ### Fixed (Previous Phases)
 - ✅ Hover tooltip z-fighting (Phase 4b: improved HTML positioning)

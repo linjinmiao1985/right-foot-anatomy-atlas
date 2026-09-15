@@ -330,24 +330,18 @@ When ending a run, update:
 
 ---
 
-**Current Status**: Week 2 Day 1 complete (dorsal interossei exhaustive search, negative result documented)  
-**Week 2 Outcome So Far**: 88% real coverage unchanged (38/43 structures), DI/vessel gaps confirmed unavoidable with current open sources  
+**Current Status**: Week 2 Day 4g complete on branch (osteology 26/26 + honest grouped vessels)  
+**Week 2 Outcome So Far**: **57/60 real (95%)** in `structures.json`; unique-structure framing ≈52/55 (95%). Placeholders: dorsal interossei + posterior tibial + fibular.  
 **Week 2 Remaining Focus**:
 1. TA2 + Chinese 踇/拇 consistency spot-check (P1 QA)
-2. Placeholder flags vs REAL_*_MODELS data integrity verification
-3. Optional: Schematic dorsal interossei + vessel branches teaching-quality improvement
-4. Update `assets-research-round2.md` with Week 2 findings
-5. Monitor new datasets: Zenodo 2026-Q4, SPARC updates, Visible Korean license changes
+2. Substantive Week 2 self-review (no delivery claims)
+3. Optional: schematic dorsal interossei teaching-quality improvement (still no legal real mesh)
+4. Monitor new datasets: Zenodo 2026-Q4, SPARC updates, Visible Korean license changes
 
-**Dorsal Interossei Status**: ❌ **BLOCKED** — All legal sources exhausted:
-- Zenodo 20228270: BY-NC-SA 4.0 (NC clause)
-- Visible Korean: All Rights Reserved (KISTI proprietary)
-- Cults3D: License unknown (Cloudflare block)
-- SPARC/Pennsieve: Uses BP3D (no foot DI)
-- DU Visible Human: Ankle-level only (no intrinsic foot muscles)
+**Dorsal Interossei Status**: ❌ **BLOCKED** — All legal sources exhausted (NC / proprietary / absent). Placeholder remains.
 
-**Vessel Digital/Metatarsal Branches Status**: ⏸️ **INCOMPATIBLE** — BP3D has grouped meshes (all arteries in one OBJ), NOT toe-segmented (1st/2nd/3rd/4th). Integrating would cause meshNames mismatch → false labeling.
+**Vessel Digital/Metatarsal Branches Status**: ✅ **HONEST GROUPED** — BP3D FJ2072/BP6049 → `dorsal_digital_arteries.glb`; FJ2096/BP6060 → `plantar_metatarsal_arteries_grouped.glb`. Labeled （组合）/combined; not claimed as per-toe splits. Remaining vessel gaps: posterior tibial + fibular (proximal).
 
 **NOT claiming**: "Finished product", "Journal-ready", "100% coverage possible"  
-**Accurate status**: "Week 1-2 quality sprint: 88% real coverage, 2 structures blocked by licensing/segmentation gaps"
+**Accurate status**: "Week 1-2 quality sprint: ~95% real coverage; DI blocked by licensing; 2 proximal vessels out of foot-proper scope"
 
