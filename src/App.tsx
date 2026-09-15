@@ -4,8 +4,13 @@ import LayerToggles from './components/LayerToggles';
 import StructurePanel from './components/StructurePanel';
 import { getAllLayers } from './lib/layers';
 import { getStructureByMeshName, getAllStructures } from './lib/structureLookup';
+import { ATLAS_SOURCE_FOOTER } from './lib/assetProvenance';
 import type { Layer } from './types/anatomy';
 import type { AnatomyStructure } from './types/anatomy';
+
+function emptyLayerCounts(): Record<Layer, number> {
+  return { bone: 0, muscle: 0, nerve: 0, vessel: 0 };
+}
 
 function App() {
   const [visibleLayers, setVisibleLayers] = useState<Set<Layer>>(new Set(getAllLayers()));
@@ -23,6 +28,9 @@ function App() {
       return next;
     });
   };
+
+  const handleShowAll = () => setVisibleLayers(new Set(getAllLayers()));
+  const handleHideAll = () => setVisibleLayers(new Set());
 
   const handleMeshClick = (meshName: string) => {
     setSelectedMeshName(meshName);
@@ -61,7 +69,11 @@ function App() {
   const placeholderCount = structures.reduce((acc, s) => {
     if (s.placeholder) acc[s.layer]++;
     return acc;
-  }, { bone: 0, muscle: 0, nerve: 0, vessel: 0 } as Record<Layer, number>);
+  }, emptyLayerCounts());
+  const realCount = structures.reduce((acc, s) => {
+    if (!s.placeholder) acc[s.layer]++;
+    return acc;
+  }, emptyLayerCounts());
 
   return (
     <div style={{ width: '100vw', height: '100vh', position: 'relative' }}>
@@ -81,7 +93,14 @@ function App() {
         <h1 style={{ fontSize: '20px', fontWeight: 600, margin: 0 }}>右足解剖图谱 · MVP</h1>
       </div>
 
-      <LayerToggles visibleLayers={visibleLayers} onToggle={handleLayerToggle} placeholderCount={placeholderCount} />
+      <LayerToggles
+        visibleLayers={visibleLayers}
+        onToggle={handleLayerToggle}
+        onShowAll={handleShowAll}
+        onHideAll={handleHideAll}
+        placeholderCount={placeholderCount}
+        realCount={realCount}
+      />
 
       <Viewport onMeshClick={handleMeshClick} visibleLayers={visibleLayers} selectedMeshName={selectedMeshName} />
 
@@ -92,11 +111,34 @@ function App() {
           position: 'fixed',
           bottom: '10px',
           left: '10px',
-          fontSize: '11px',
-          color: '#666',
+          right: '10px',
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'flex-end',
+          gap: '12px',
+          pointerEvents: 'none',
+          zIndex: 90,
         }}
       >
-        提示: 鼠标拖动旋转 | 滚轮缩放 | 右键平移 | Esc 取消选择
+        <div style={{ fontSize: '11px', color: '#666' }}>
+          提示: 鼠标拖动旋转 | 滚轮缩放 | 右键平移 | Esc 取消选择
+        </div>
+        <div
+          style={{
+            fontSize: '10px',
+            color: '#888',
+            background: 'rgba(26, 26, 26, 0.85)',
+            border: '1px solid #333',
+            borderRadius: '6px',
+            padding: '6px 10px',
+            maxWidth: '520px',
+            textAlign: 'right',
+            lineHeight: 1.4,
+          }}
+          title="Asset attribution — see NOTICE and public/models/right-foot/by-sa/NOTICE.md"
+        >
+          {ATLAS_SOURCE_FOOTER}
+        </div>
       </div>
     </div>
   );

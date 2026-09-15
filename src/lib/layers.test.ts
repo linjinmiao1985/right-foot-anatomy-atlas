@@ -14,10 +14,14 @@ describe('layers', () => {
     expect(layers).toEqual(['bone', 'muscle', 'nerve', 'vessel']);
   });
 
-  it('should have Chinese labels', () => {
+  it('should have Chinese and English labels', () => {
     expect(LAYER_CONFIG.bone.label).toBe('骨骼');
     expect(LAYER_CONFIG.muscle.label).toBe('肌肉');
     expect(LAYER_CONFIG.nerve.label).toBe('神经');
     expect(LAYER_CONFIG.vessel.label).toBe('血管');
+    expect(LAYER_CONFIG.bone.labelEn).toBe('Bone');
+    expect(LAYER_CONFIG.muscle.labelEn).toBe('Muscle');
+    expect(LAYER_CONFIG.nerve.labelEn).toBe('Nerve');
+    expect(LAYER_CONFIG.vessel.labelEn).toBe('Vessel');
   });
 });

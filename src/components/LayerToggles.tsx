@@ -1,13 +1,29 @@
+import type { CSSProperties } from 'react';
 import type { Layer } from '../types/anatomy';
 import { LAYER_CONFIG, getAllLayers } from '../lib/layers';
 
 interface LayerTogglesProps {
   visibleLayers: Set<Layer>;
   onToggle: (layer: Layer) => void;
+  onShowAll: () => void;
+  onHideAll: () => void;
   placeholderCount: Record<Layer, number>;
+  realCount: Record<Layer, number>;
 }
 
-export default function LayerToggles({ visibleLayers, onToggle, placeholderCount }: LayerTogglesProps) {
+/**
+ * Layer panel + legend.
+ * UX-borrow (no code copy): human-atlas / hpfrei type-filter counts;
+ * BioLens visibility chrome; Open Anatomy Studio bilingual clarity.
+ */
+export default function LayerToggles({
+  visibleLayers,
+  onToggle,
+  onShowAll,
+  onHideAll,
+  placeholderCount,
+  realCount,
+}: LayerTogglesProps) {
   const layers = getAllLayers();
 
   return (
@@ -20,15 +36,29 @@ export default function LayerToggles({ visibleLayers, onToggle, placeholderCount
         border: '1px solid #444',
         borderRadius: '8px',
         padding: '16px',
-        minWidth: '180px',
+        minWidth: '220px',
         zIndex: 100,
       }}
+      role="region"
+      aria-label="图层与图例"
     >
-      <h3 style={{ marginBottom: '12px', fontSize: '14px', fontWeight: 600, color: '#e0e0e0' }}>图层</h3>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
+        <h3 style={{ margin: 0, fontSize: '14px', fontWeight: 600, color: '#e0e0e0' }}>图层 · Layers</h3>
+        <div style={{ display: 'flex', gap: '6px' }}>
+          <button type="button" onClick={onShowAll} style={quickBtnStyle} title="显示全部图层">
+            全显
+          </button>
+          <button type="button" onClick={onHideAll} style={quickBtnStyle} title="隐藏全部图层">
+            全隐
+          </button>
+        </div>
+      </div>
+
       {layers.map((layer) => {
         const config = LAYER_CONFIG[layer];
         const isVisible = visibleLayers.has(layer);
         const placeholders = placeholderCount[layer] || 0;
+        const reals = realCount[layer] || 0;
 
         return (
           <label
@@ -46,6 +76,7 @@ export default function LayerToggles({ visibleLayers, onToggle, placeholderCount
               checked={isVisible}
               onChange={() => onToggle(layer)}
               style={{ marginRight: '8px', cursor: 'pointer' }}
+              aria-label={`${config.label} ${config.labelEn}`}
             />
             <div
               style={{
@@ -55,27 +86,77 @@ export default function LayerToggles({ visibleLayers, onToggle, placeholderCount
                 borderRadius: '2px',
                 marginRight: '8px',
                 border: '1px solid #666',
+                flexShrink: 0,
               }}
             />
-            <span style={{ color: '#e0e0e0' }}>{config.label}</span>
-            {placeholders > 0 && (
-              <span
-                style={{
-                  marginLeft: '8px',
-                  padding: '2px 6px',
-                  background: '#f59e0b',
-                  color: '#000',
-                  borderRadius: '3px',
-                  fontSize: '10px',
-                  fontWeight: 600,
-                }}
-              >
-                占位
-              </span>
-            )}
+            <span style={{ color: '#e0e0e0', flex: 1 }}>
+              {config.label}
+              <span style={{ color: '#888', fontSize: '11px', marginLeft: '4px' }}>{config.labelEn}</span>
+            </span>
+            <span
+              style={{
+                fontSize: '10px',
+                color: '#9ca3af',
+                fontVariantNumeric: 'tabular-nums',
+                marginLeft: '6px',
+              }}
+              title="真实网格 / 占位"
+            >
+              {reals}
+              {placeholders > 0 ? <span style={{ color: '#f59e0b' }}> · {placeholders}占</span> : null}
+            </span>
           </label>
         );
       })}
+
+      <div
+        style={{
+          marginTop: '8px',
+          paddingTop: '10px',
+          borderTop: '1px solid #333',
+          fontSize: '10px',
+          color: '#888',
+          lineHeight: 1.5,
+        }}
+      >
+        <div style={{ fontWeight: 600, color: '#aaa', marginBottom: '4px' }}>图例 · Legend</div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '3px' }}>
+          <span style={legendChip('#22c55e')}>实</span>
+          <span>真实网格（可点击）</span>
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '3px' }}>
+          <span style={legendChip('#f59e0b')}>占</span>
+          <span>占位示意（缺开源网格）</span>
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+          <span style={legendChip('#a78bfa')}>SA</span>
+          <span>神经层 BY-SA 隔离加载</span>
+        </div>
+      </div>
     </div>
   );
+}
+
+const quickBtnStyle: CSSProperties = {
+  background: '#333',
+  border: '1px solid #555',
+  color: '#ccc',
+  borderRadius: '4px',
+  fontSize: '10px',
+  padding: '2px 6px',
+  cursor: 'pointer',
+};
+
+function legendChip(bg: string): CSSProperties {
+  return {
+    display: 'inline-block',
+    minWidth: '18px',
+    textAlign: 'center',
+    padding: '1px 4px',
+    background: bg,
+    color: '#111',
+    borderRadius: '3px',
+    fontWeight: 700,
+    fontSize: '9px',
+  };
 }

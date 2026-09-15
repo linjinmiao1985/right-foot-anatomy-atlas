@@ -934,3 +934,20 @@ Each day:
 
 **Doc sync** (this commit): methods, expert-review-checklist, interaction-qa, terminology, week-plan status, manifest note — factual 7/9 vessels + honest grouped language; no delivery claims.
 
+
+---
+
+### Week 2 Day 4h: Open anatomy learning log + UX borrow (source/legend)
+
+**Focus**: Continuously learn from open anatomy projects; improve layer/source UI without unsafe mesh merges.
+
+**Progress**:
+1. Created `docs/open-anatomy-learning-log.md` (living log: BP3D/UM/Z-Anatomy baseline + HuBMAP CCF, hpfrei viewer, Open Anatomy Studio, BioLens, GraphAnatomy, OpenAnatomy/SlicerOpenAnatomy, plus digs).
+2. Inspected hpfrei `body.glb`: hand DI only — **no foot dorsal interossei**; no BY-SA isolate for DI.
+3. No new CC0/CC BY DI or unsplit vessel meshes found → no mesh integration this session.
+4. UX-borrow (ideas only): bilingual layer labels, real/placeholder counts, show/hide all, legend chips, structure source badge, persistent attribution footer (`assetProvenance.ts`).
+
+**Blockers**: DI / proximal PTA+fibular still lack clear CC0/BY meshes (Zenodo NC, VK proprietary, Cults unknown).
+
+**Tests/Build**: integrity-audit 0 critical; vitest 11/11; build pending in same commit.
+
