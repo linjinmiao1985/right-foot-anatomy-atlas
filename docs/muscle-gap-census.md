@@ -2,7 +2,7 @@
 
 **Date**: 2026-09-15  
 **Status**: Research census + Open3D BY-SA gap fills (FB/FT/opponens) + ZA plantaris/FHB lateral — **not** a TA2-complete muscle atlas  
-**Live entry count after Day 4ad**: 28 muscle rows / **23 unique** (lumbricals×4→1, PI×3→1; +FB +FT +opponens +plantaris)
+**Live entry count after Day 4ad/4ae**: 28 muscle rows / **23 unique** (lumbricals×4→1, PI×3→1; +FB +FT +opponens +plantaris). Day 4ae added **no** new muscles (vessel/vein pass only).
 
 ---
 
@@ -63,3 +63,10 @@
 ## Honesty
 
 Osteology remains complete. Muscle layer is **teaching-useful and incomplete**. Day 4ad closes FB/FT/opponens census gaps via Open3D BY-SA and adds ZA plantaris/FHB lateral; it does **not** graduate the atlas to TA2 muscle completeness.
+
+## Dig this pass (Day 4ae)
+
+- **No muscle meshes added.** Teaching muscle set remains Day 4ad state (FB/FT/opponens/plantaris/FHB lateral closed vs prior census gaps).
+- Still open: DI per-ray separate ids; gastrocnemius/soleus bellies (intentional tendon+plantaris only); FHB mixed-license lateral.
+- **Honesty**: Muscle layer remains **teaching-useful and incomplete** — Day 4ae does **not** claim TA2 muscle completeness or “nearly closed” graduation beyond the Day 4ad census fills already disclosed.
+

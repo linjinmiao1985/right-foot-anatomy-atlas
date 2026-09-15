@@ -6,7 +6,7 @@ import {
 } from './vesselGroups';
 
 describe('vesselGroups', () => {
-  it('covers nine teaching sub-groups', () => {
+  it('covers ten teaching sub-groups', () => {
     expect(getAllVesselGroupIds()).toEqual([
       'dorsal_main',
       'dorsal_distal',
@@ -17,13 +17,14 @@ describe('vesselGroups', () => {
       'plantar_distal',
       'perforators',
       'calcaneal',
+      'veins',
     ]);
   });
 
-  it('partitions 20 vessel ids without overlap', () => {
+  it('partitions 25 vessel ids without overlap', () => {
     const ids = VESSEL_GROUPS.flatMap((g) => [...g.structureIds]);
-    expect(ids).toHaveLength(20);
-    expect(new Set(ids).size).toBe(20);
+    expect(ids).toHaveLength(25);
+    expect(new Set(ids).size).toBe(25);
   });
 
   it('filters by visible groups', () => {

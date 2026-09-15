@@ -796,6 +796,17 @@
     "placeholder": false
   },
   {
+    "id": "anterior_tibial_artery",
+    "meshNames": [
+      "Anterior_Tibial_Artery_R"
+    ],
+    "layer": "vessel",
+    "nameZh": "胫前动脉",
+    "nameLa": "A. tibialis anterior",
+    "summaryZh": "腘动脉终支之一，沿小腿前骨筋膜室下行，至踝前方延续为足背动脉。教学：理解足背动脉近端来源与踝前触诊背景。网格：Z-Anatomy Anterior tibial artery.r（CC BY-SA 4.0），by-sa/ 隔离；ZA→BP3D Kabsch。教学路径示意，非介入导航级；不代表小腿全段血管图谱。",
+    "placeholder": false
+  },
+  {
     "id": "plantar_arch",
     "meshNames": [
       "Plantar_Arch_R",
@@ -816,6 +827,17 @@
     "nameZh": "跖底跖骨动脉（组合）",
     "nameLa": "Aa. metatarsales plantares (combined)",
     "summaryZh": "跖底跖骨动脉的 BP3D 组合网格（elemental FJ2096 / 概念 BP6060）。自足底动脉弓发至跖骨间隙跖侧，再续为趾固有动脉。教学诚实标注：ISA 将全部跖底跖骨动脉归入同一 elemental，无 1st–4th 分拆 OBJ；亦无独立 dorsal metatarsal artery 概念可拆。本条目保持（组合）。TA2：A12.2.16.068 一带。",
+    "placeholder": false
+  },
+  {
+    "id": "common_plantar_digital_arteries",
+    "meshNames": [
+      "Common_Plantar_Digital_Arteries_R"
+    ],
+    "layer": "vessel",
+    "nameZh": "足底趾总动脉",
+    "nameLa": "Aa. digitales plantares communes",
+    "summaryZh": "足底跖骨动脉在跖骨头近端附近延续为的趾足底总动脉（复数教学网格）。再分为两条足底固有趾动脉至相邻趾。教学：与趾足底总神经伴行，Morton 神经瘤间隙的血供背景。网格：Z-Anatomy Common plantar digital arteries.r（CC BY-SA 4.0），by-sa/ 隔离；ZA→BP3D Kabsch（骨标志均值残差约1.8 mm）。分组教学对象，非逐间隙分条；非完整足底动脉图谱。",
     "placeholder": false
   },
   {
@@ -971,6 +993,39 @@
     "nameZh": "跟外侧动脉（腓动脉支）",
     "nameLa": "A. calcanea lateralis (ex a. fibulari)",
     "summaryZh": "腓动脉发出的跟外侧支，供应跟骨外侧及足跟外侧皮肤。教学：与跟内侧动脉对照的跟区外侧血供。网格：Open3D Lateral_calcaneal_branch_of_fibular_artery.r（CC BY-SA 4.0），Kabsch→BP3D，by-sa/。教学示意。",
+    "placeholder": false
+  },
+  {
+    "id": "dorsal_venous_arch",
+    "meshNames": [
+      "Dorsal_Venous_Arch_of_Foot_R"
+    ],
+    "layer": "vessel",
+    "nameZh": "足背静脉弓",
+    "nameLa": "Arcus venosus dorsalis pedis",
+    "summaryZh": "足背浅静脉在跖骨头水平汇成的弓形静脉网，向两侧续为大隐/小隐静脉近端属支。教学：体表可见的足背静脉弓；静脉穿刺与浅静脉回流示意。网格：Z-Anatomy Dorsal venous arch of foot.r（CC BY-SA 4.0），by-sa/ 隔离；ZA→BP3D Kabsch。教学示意，非完整足静脉图谱。",
+    "placeholder": false
+  },
+  {
+    "id": "plantar_venous_arch",
+    "meshNames": [
+      "Plantar_Venous_Arch_R"
+    ],
+    "layer": "vessel",
+    "nameZh": "足底静脉弓",
+    "nameLa": "Arcus venosus plantaris",
+    "summaryZh": "足底深静脉在跖骨近端水平形成的静脉弓，与足底动脉弓伴行并回流至胫后静脉系统。教学：足底深静脉回流与动脉弓对照。网格：Z-Anatomy Plantar venous arch.r（CC BY-SA 4.0），by-sa/ 隔离；ZA→BP3D Kabsch。教学示意，非完整深静脉图谱。",
+    "placeholder": false
+  },
+  {
+    "id": "plantar_digital_veins",
+    "meshNames": [
+      "Plantar_Digital_Veins_R"
+    ],
+    "layer": "vessel",
+    "nameZh": "足底趾静脉",
+    "nameLa": "Vv. digitales plantares",
+    "summaryZh": "趾跖侧浅/深静脉属支（复数教学网格），向近端汇入足底跖骨静脉/静脉弓。教学：趾静脉回流与足底固有趾动脉伴行关系。网格：Z-Anatomy Plantar digital veins.r（CC BY-SA 4.0），by-sa/ 隔离；ZA→BP3D Kabsch。分组教学对象，非逐趾分条；非完整足静脉图谱。",
     "placeholder": false
   },
   {

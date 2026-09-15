@@ -154,3 +154,18 @@ Skipped Open3D FHB heads / FDMB / FL — BP3D CC BY or UM CC0 already cover thos
 - `proper_plantar_digital_arteries.glb` — `Proper plantar digital arteries.r` (grouped plural)
 
 Attribution: "Z-Anatomy - The libre 3D atlas of anatomy - CC BY-SA 4.0"; Open3D as above.
+
+### Day 4ae — ZA unique vessels / first veins (2026-09-15)
+
+**Z-Anatomy (CC BY-SA 4.0)** — mesh-API OBJ → `za_to_bp3d_transform.json` Kabsch (mean residual ≈1.8 mm) → GLB; QA all accept (`za_unique_mesh_qa.json`).
+
+- `common_plantar_digital_arteries.glb` — `Common plantar digital arteries.r` (grouped)
+- `anterior_tibial_artery.glb` — `Anterior tibial artery.r`
+- `dorsal_venous_arch.glb` — `Dorsal venous arch of foot.r`
+- `plantar_venous_arch.glb` — `Plantar venous arch.r`
+- `plantar_digital_veins.glb` — `Plantar digital veins.r` (grouped)
+
+**Skipped (duplicates / lower gain)**: Fibularis*/Opponens*/DI (Open3D); long plantar / Achilles (BP3D); plantaris/FHB lat/PPDA (Day 4ad); deep plantar / dorsalis / fibular / PTA / plantar aa / MTA (Open3D/BP3D); calcaneal arterial branches (overlap Open3D med/lat calcaneal); circumflex fibular; other ZA veins deferred.
+
+Attribution: "Z-Anatomy - The libre 3D atlas of anatomy - CC BY-SA 4.0". **Not** a finished venous atlas.
+

@@ -1199,3 +1199,12 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 - Wired Open3D BY-SA: fibularis_brevis, fibularis_tertius, opponens_digiti_minimi (Kabsch Day 4m, QA pass).
 - ZA→BP3D bone Kabsch ≈1.8 mm; wired plantaris + FHB lateral ADDITIONAL + proper plantar digital arteries (mesh-API OBJ path).
 - integrity-audit + vitest + build; no finished-product claims.
+
+## Day 4ae (2026-09-15) — ZA unique vessels + first veins
+
+- Pulled `e3b61cb`; reused `za_to_bp3d_transform.json` (≈1.8 mm).
+- From uncovered ZA soft list, wired 5 QA-pass BY-SA meshes: common plantar digital arteries, anterior tibial a., dorsal venous arch, plantar venous arch, plantar digital veins.
+- Skipped Open3D/BP3D duplicates and calcaneal arterial branch overlaps; other ZA veins deferred.
+- Vessel sub-group `veins` added; plantar_distal / proximal_leg updated. Muscle census unchanged (no new muscles).
+- Honesty: first venous teaching fill — **not** finished-product / TA2-complete.
+

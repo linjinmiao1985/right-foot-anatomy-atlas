@@ -318,3 +318,24 @@ Then Kabsch / NOTICE / `by-sa/` isolation as for Open3D — **only if** geometry
 **Uncovered ZA foot soft list (deferred)**: Common plantar digital arteries; calcaneal arterial branches; plantar/dorsal digital veins; anterior tibial a.; Fibularis*/Opponens* (covered via Open3D); dorsal interossei of foot (Open3D DI); insertion-only fragments.
 
 **Honesty**: Pipeline for ZA soft harvest works. **Not** finished-product; **not** bulk replace of Open3D/BP3D.
+
+
+---
+
+## Day 4ae — ZA unique vessels + first veins (2026-09-15)
+
+**Transform**: reuse `za_to_bp3d_transform.json` (mean residual ≈1.8 mm). Mesh-API OBJ path only.
+
+**Wired (BY-SA `by-sa/`, QA-pass)**:
+| Object | File | Notes |
+|--------|------|-------|
+| `Common plantar digital arteries.r` | `common_plantar_digital_arteries.glb` | Grouped; proximal to Day 4ad PPDA |
+| `Anterior tibial artery.r` | `anterior_tibial_artery.glb` | Proximal continuity → dorsalis pedis |
+| `Dorsal venous arch of foot.r` | `dorsal_venous_arch.glb` | First dorsal vein teaching mesh |
+| `Plantar venous arch.r` | `plantar_venous_arch.glb` | Deep plantar venous arch |
+| `Plantar digital veins.r` | `plantar_digital_veins.glb` | Grouped plural |
+
+**Skipped**: Open3D/BP3D duplicates (FB/FT/opponens/DI; long plantar/Achilles; named arteries already wired); calcaneal arterial branches (overlap Open3D med/lat calcaneal); circumflex fibular; remaining ZA veins (med/lat plantar, dorsal digital/metatarsal, intercapitular) deferred.
+
+**Honesty**: First venous teaching fill. **Not** finished-product; **not** complete foot venous atlas; muscle census unchanged this pass.
+

@@ -173,8 +173,16 @@ describe('assetProvenance', () => {
     expect(getTeachingMeshNote('perforating_arcuate_deep_plantar', 'vessel')).toMatch(/Open3D|Kabsch/);
   });
 
-  it('attributes ZA plantaris and PPDA as isolated BY-SA Z-Anatomy', () => {
-    for (const [id, layer] of [['plantaris', 'muscle'], ['proper_plantar_digital_arteries', 'vessel']] as const) {
+  it('attributes ZA plantaris and soft vessels as isolated BY-SA Z-Anatomy', () => {
+    for (const [id, layer] of [
+      ['plantaris', 'muscle'],
+      ['proper_plantar_digital_arteries', 'vessel'],
+      ['common_plantar_digital_arteries', 'vessel'],
+      ['anterior_tibial_artery', 'vessel'],
+      ['dorsal_venous_arch', 'vessel'],
+      ['plantar_venous_arch', 'vessel'],
+      ['plantar_digital_veins', 'vessel'],
+    ] as const) {
       const p = getStructureProvenance(id, false, layer);
       expect(p.sourceShort).toBe('Z-Anatomy');
       expect(p.license).toBe('CC-BY-SA-4.0');

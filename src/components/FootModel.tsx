@@ -151,6 +151,11 @@ const REAL_VESSEL_MODELS: Record<string, string> = {
   'medial_calcaneal_artery': '/models/right-foot/by-sa/medial_calcaneal_artery.glb',
   'lateral_calcaneal_artery': '/models/right-foot/by-sa/lateral_calcaneal_artery.glb',
   'proper_plantar_digital_arteries': '/models/right-foot/by-sa/proper_plantar_digital_arteries.glb', // ZA BY-SA Day 4ad
+  'common_plantar_digital_arteries': '/models/right-foot/by-sa/common_plantar_digital_arteries.glb', // ZA BY-SA Day 4ae
+  'anterior_tibial_artery': '/models/right-foot/by-sa/anterior_tibial_artery.glb', // ZA BY-SA Day 4ae
+  'dorsal_venous_arch': '/models/right-foot/by-sa/dorsal_venous_arch.glb', // ZA BY-SA Day 4ae
+  'plantar_venous_arch': '/models/right-foot/by-sa/plantar_venous_arch.glb', // ZA BY-SA Day 4ae
+  'plantar_digital_veins': '/models/right-foot/by-sa/plantar_digital_veins.glb', // ZA BY-SA Day 4ae
 };
 
 // Real nerve GLBs — Z-Anatomy trunks (CURVE→tube) + Open3D fine/branch (volumetric, Kabsch→BP3D).

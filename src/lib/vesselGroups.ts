@@ -12,7 +12,8 @@ export type VesselGroupId =
   | 'plantar_deep'
   | 'plantar_distal'
   | 'perforators'
-  | 'calcaneal';
+  | 'calcaneal'
+  | 'veins';
 
 export interface VesselGroup {
   id: VesselGroupId;
@@ -44,7 +45,7 @@ export const VESSEL_GROUPS: readonly VesselGroup[] = [
     id: 'proximal_leg',
     labelZh: '小腿近端',
     labelEn: 'Proximal leg',
-    structureIds: ['posterior_tibial_artery', 'fibular_artery'],
+    structureIds: ['posterior_tibial_artery', 'anterior_tibial_artery', 'fibular_artery'],
   },
   {
     id: 'plantar_main',
@@ -67,7 +68,7 @@ export const VESSEL_GROUPS: readonly VesselGroup[] = [
     id: 'plantar_distal',
     labelZh: '足底远端（分组）',
     labelEn: 'Plantar distal (grouped)',
-    structureIds: ['plantar_metatarsal_arteries', 'proper_plantar_digital_arteries'],
+    structureIds: ['plantar_metatarsal_arteries', 'common_plantar_digital_arteries', 'proper_plantar_digital_arteries'],
   },
   {
     id: 'perforators',
@@ -80,6 +81,12 @@ export const VESSEL_GROUPS: readonly VesselGroup[] = [
     labelZh: '跟支动脉',
     labelEn: 'Calcaneal',
     structureIds: ['medial_calcaneal_artery', 'lateral_calcaneal_artery'],
+  },
+  {
+    id: 'veins',
+    labelZh: '足静脉（示意）',
+    labelEn: 'Veins (schematic)',
+    structureIds: ['dorsal_venous_arch', 'plantar_venous_arch', 'plantar_digital_veins'],
   },
 ] as const;
 

@@ -46,6 +46,11 @@ const Z_ANATOMY_NERVES = new Set([
 const Z_ANATOMY_SOFT = new Set([
   'plantaris',
   'proper_plantar_digital_arteries',
+  'common_plantar_digital_arteries',
+  'anterior_tibial_artery',
+  'dorsal_venous_arch',
+  'plantar_venous_arch',
+  'plantar_digital_veins',
 ]);
 
 /** Open3DModel / AnatomyTOOL meshes isolated under by-sa/ (CC BY-SA 4.0) */
@@ -168,7 +173,7 @@ export function licenseLabel(license: AssetLicense): string {
 
 /** Persistent footer copy — keep factual, no “complete atlas” claims. */
 export const ATLAS_SOURCE_FOOTER =
-  '网格来源: BodyParts3D CC BY 4.0 · UM CC0 1.0 · Z-Anatomy 干神经+跖肌/踇短屈肌外侧腹/足底固有趾动脉 / Open3D DI+FB/FT/小趾对掌肌+近端/细支动脉+踝足韧带/支持带/腱膜+细支神经 CC BY-SA 4.0（by-sa/ 隔离）';
+  '网格来源: BodyParts3D CC BY 4.0 · UM CC0 1.0 · Z-Anatomy 干神经+跖肌/踇短屈肌外侧腹/足底趾动脉+足静脉弓示意 / Open3D DI+FB/FT/小趾对掌肌+近端/细支动脉+踝足韧带/支持带/腱膜+细支神经 CC BY-SA 4.0（by-sa/ 隔离）';
 
 /** Short panel copy about mesh fidelity — teaching honesty, not finished-product claims. */
 export function getTeachingMeshNote(structureId: string, layer: string): string | null {
@@ -180,6 +185,15 @@ export function getTeachingMeshNote(structureId: string, layer: string): string 
   }
   if (structureId === 'proper_plantar_digital_arteries') {
     return '网格：Z-Anatomy Proper plantar digital arteries.r（CC BY-SA），分组教学对象，非逐趾分条；by-sa/。';
+  }
+  if (structureId === 'common_plantar_digital_arteries') {
+    return '网格：Z-Anatomy Common plantar digital arteries.r（CC BY-SA），分组教学对象，非逐间隙分条；by-sa/。';
+  }
+  if (structureId === 'anterior_tibial_artery') {
+    return '网格：Z-Anatomy Anterior tibial artery.r（CC BY-SA），ZA→BP3D Kabsch；by-sa/。教学近端来源示意，非小腿全图谱。';
+  }
+  if (structureId === 'dorsal_venous_arch' || structureId === 'plantar_venous_arch' || structureId === 'plantar_digital_veins') {
+    return '网格：Z-Anatomy 足静脉示意（CC BY-SA），ZA→BP3D Kabsch；by-sa/。首批静脉教学对象，非完整足静脉图谱。';
   }
   if (structureId === 'flexor_hallucis_brevis') {
     return '内侧腹：BP3D CC BY；外侧腹附加件：Z-Anatomy（CC BY-SA，by-sa/）。混合许可结构。';
