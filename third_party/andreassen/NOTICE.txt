@@ -36,3 +36,5 @@ right-foot pack. Do not treat as a finished atlas fill.
 
 Changes if/when integrated later: STL→GLB conversion + Kabsch bake into
 BodyParts3D right-foot millimeters; indicate modifications per CC BY 4.0.
+
+Day 4ba Option A: BP3D LE landmarks from local cache + VH donor bones — still BLOCKED (see le_kabsch_option_a_trials.json). 0 GLB wire.

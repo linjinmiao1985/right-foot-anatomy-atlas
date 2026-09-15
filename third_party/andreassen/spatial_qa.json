@@ -134,6 +134,13 @@
       "extrinsic_belly": true
     }
   },
-  "verdict": "BLOCKED \u2014 do not wire gastrocnemius_medial / gastrocnemius_lateral / soleus to main tree",
-  "date": "2026-09-15"
+  "verdict": "BLOCKED \u2014 do not wire gastrocnemius_medial / gastrocnemius_lateral / soleus to main tree (Day 4az + Option A Day 4ba)",
+  "date": "2026-09-15",
+  "option_a_day4ba": {
+    "method": "Real BP3D LE OBJs (FJ3387/3366/3381/3365) + VH tibia/fibula/patella/femur landmarks; multi-set Kabsch similarity",
+    "trials_artifact": "le_kabsch_option_a_trials.json",
+    "best_near_miss": "H_ankle_focus (calcaneus/talus/tibia_distal/fibula_distal/patella): right-side OK; soleus Achilles\u22480.2 mm; gastroc med distal10\u22489.7 mm; gastroc lat distal10\u224821.6 mm FAIL; foot mean\u22488.8 / max\u224811.9 mm FAIL teaching-grade",
+    "verdict": "BLOCKED_DO_NOT_INTEGRATE",
+    "integrate": false
+  }
 }

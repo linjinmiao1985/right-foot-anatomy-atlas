@@ -1391,3 +1391,14 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 5. **0 wire**: no GLB under `public/models/`, no structures/FootModel/ontology/muscle-group changes. Watchlist → **blocked (alignment)**.
 6. Checks: integrity-audit + vitest + build; commit + push.
 7. **Honesty**: teaching atlas in progress — **no finished-product claim**. Census unchanged.
+
+## Day 4ba (2026-09-15) — Andreassen Option A LE Kabsch retry (blocked) + handback doc
+
+**Target**: Option A — retry gastroc/soleus registration with **real** BP3D tibia/fibula/patella/femur from local BP3D cache + VH muscle donor bones; integrate **only** if QA pass. If fail → Option B phase-7 handback doc (no force-wire).
+
+1. Confirmed BP3D LE elemental OBJs in `/tmp/bp3d` zip: **FJ3387** right tibia, **FJ3366** right fibula, **FJ3381** right patella, **FJ3365** right femur (same mm frame as foot pack).
+2. Extracted VH Right tibia (ASCII STL), fibula/femur/patella (binary) from Andreassen Final STL zip.
+3. Multi-set Kabsch similarity (tarsals ± LE centroids / distal endpoints / ankle-focus). Artifact: `third_party/andreassen/le_kabsch_option_a_trials.json`.
+4. **QA FAIL all sets** — no integrate: tarsal-only still gastroc wrong-side; LE-augmented sets fix laterality but foot mean residuals ≈**7–16 mm** and/or gastroc Achilles distal10 ≥15 mm (best near-miss `H_ankle_focus`: foot ≈8.8/11.9 mm; gastroc lat Achilles ≈21.6 mm).
+5. **Option B**: wrote `docs/cloud-agent-handback.md` (phase-7 target #2); refreshed watchlist / phase-7 / methods / spatial QA / muscle census. **0** GLB wire; **0** SA spam; **no** finished-product claim.
+

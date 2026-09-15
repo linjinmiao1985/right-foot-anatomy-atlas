@@ -131,11 +131,13 @@
     "VHM_Right_Bone_LateralCuneiform_smooth.stl": "6508ccd3482fc011714f1a4b219d385e74062927ae32146f2370669fe81c5a9a"
   },
   "status": "BLOCKED_DO_NOT_INTEGRATE",
-  "blocker": "Foot-tarsal Kabsch residuals are teaching-grade (mean \u22482.3 mm, max \u22484.3 mm talus \u2014 comparable to UM\u2192BP3D), but VHM gastrocnemius med/lat bellies land entirely at X>0 (wrong_side vs BP3D right-foot convention X\u22640). Soleus is only partially inside a 40 mm-padded foot AABB (frac \u226a 0.85) with centroid X>0. Root cause: 7 co-located tarsal landmarks (~50 mm span) leave long-axis angular freedom; calf bellies ~250\u2013350 mm proximal amplify small rotation error into large lateral offset (leverage). Trial adding synthetic BP3D distal tibia/fibula landmarks improved laterality but blew foot residuals (mean \u22488.3 mm, max \u224817.8 mm) \u2014 unacceptable. No BP3D tibia/fibula meshes exist in this right-foot pack for a proper LE Kabsch. Do NOT wire main-tree until proximal shared landmarks or an alternate registration is available.",
+  "blocker": "Day 4az: 7-tarsal Kabsch teaching-grade on foot (mean\u22482.3 mm) but gastroc laterality FAIL (all X>0); soleus padded-AABB fail. Day 4ba Option A: extracted real BP3D right tibia/fibula/patella/femur (FJ3387/FJ3366/FJ3381/FJ3365) from local /tmp/bp3d cache plus VH donor bones (tibia ASCII STL; fibula/femur/patella binary). Multiple LE-augmented landmark sets (centroids / distal endpoints / ankle-focus) flip laterality in several trials but inflate foot residuals (mean\u22487\u201316 mm) and/or leave gastroc Achilles distal gap \u226515 mm \u2014 same failure class as Day 4az synthetic proximal landmarks. No set passed integrate gate (foot mean\u22645 & max\u226410 mm AND right-side AND Achilles distal10 <15 mm for all three bellies). See le_kabsch_option_a_trials.json. Do NOT wire main-tree.",
   "meshes_evaluated_not_baked": [
     "gastrocnemius_medial",
     "gastrocnemius_lateral",
     "soleus"
   ],
-  "note": "Day 4az attempt. Teaching atlas in progress \u2014 not a finished-product claim. Transform recorded for reproducibility of the blocker; GLBs not published under public/models/."
+  "note": "Day 4az + 4ba attempts. Teaching atlas in progress \u2014 not a finished-product claim. Transform recorded for reproducibility of the blocker; GLBs not published under public/models/.",
+  "option_a_day": "4ba",
+  "option_a_artifact": "le_kabsch_option_a_trials.json"
 }

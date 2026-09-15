@@ -122,7 +122,7 @@ Living log: `docs/open-anatomy-learning-log.md` — **57** numbered license-veri
 
 ### 2. Cloud Agent handback (when quota returns)
 
-Resume only with green local gates (`python3 scripts/integrity-audit.py`, `npx vitest run`, `npm run build`). Prefer CC0/CC BY over SA volume. Prep refreshed Day **4az** after Andreassen Kabsch blocker.
+Resume only with green local gates (`python3 scripts/integrity-audit.py`, `npx vitest run`, `npm run build`). Prefer CC0/CC BY over SA volume. Prep refreshed Day **4ba** after Option A LE Kabsch blocker — see `docs/cloud-agent-handback.md`.
 
 | Deferred item | Why deferred | Suggested resume |
 |---------------|--------------|------------------|
@@ -130,13 +130,13 @@ Resume only with green local gates (`python3 scripts/integrity-audit.py`, `npx v
 | Zenodo Z-Anatomy `.blend` heavy re-harvest | Large binary; ankle bands absent in prior blend | Re-inventory named ATFL/CFL/deltoid/retinacula only if new revision claims them |
 | Further multi-view screenshots | 9-shot pack already live | Optional angles only; still not a marketing gallery |
 | Further CC0/BY DI / per-ray MTA dig | Day 4al–4ay dry (0 integrate; TotalSeg CT/MRI still grouped bones) | Re-check new open CT foot soft segmentations; skip NC; see `docs/cc0-soft-tissue-watchlist.md` |
-| **Andreassen gastroc/soleus (CC BY)** | Day **4az**: Final STL downloaded; 7-tarsal Kabsch mean≈2.3 mm but **laterality FAIL** (gastroc X>0); no BP3D tibia/fibula for LE Kabsch | Resume only with proximal shared landmarks or better registration; see `third_party/andreassen/spatial_qa.json` — **do not** force-wire |
+| **Andreassen gastroc/soleus (CC BY)** | Day **4az** laterality FAIL; Day **4ba** Option A with real BP3D LE (FJ3387/3366/3381/3365) + VH bones still FAIL (foot residual inflate / Achilles gap) | See `docs/cloud-agent-handback.md` + `le_kabsch_option_a_trials.json` — **do not** force-wire; need non-similarity / alternate donor |
 
 **Handback rule**: integrity-audit + vitest + build green; update census in README/methods/phase-7 if anything wires; **no** finished-product claims; **no** low-value SA mesh spam.
 
 ### 3. CC0 soft-tissue watchlist
 
-Maintain a short **monitor/reject** list (see `docs/cc0-soft-tissue-watchlist.md`) for DI, per-ray MTA, gastroc/soleus, nerve/ligament main-tree replacements. **Day 4az**: Andreassen belly Kabsch **blocked** on laterality/leverage (transform JSON recorded; **0** wire). DI/per-ray MTA still dry. Never treat NC or “License: Model” as main-tree OK.
+Maintain a short **monitor/reject** list (see `docs/cc0-soft-tissue-watchlist.md`) for DI, per-ray MTA, gastroc/soleus, nerve/ligament main-tree replacements. **Day 4az + 4ba**: Andreassen belly Kabsch **blocked** (laterality then LE-residual/Achilles); trials JSON recorded; **0** wire. DI/per-ray MTA still dry. Never treat NC or “License: Model” as main-tree OK.
 
 **Do not**: claim TA2 completeness; re-add Open3D duplicates of BP3D main-tree vessels; treat residuals as surgical registration.
 
@@ -183,3 +183,10 @@ Maintain a short **monitor/reject** list (see `docs/cc0-soft-tissue-watchlist.md
 ## Bottom line
 
 Phase 7 freezes a week-quality honest board: census **129** / **124**; ontology **126** / **129**; UX (prefs · hide · help · clip · cameras · sub-groups · screenshots) live; BY-SA **71/124**; open mining through **#57** with **0** late soft integrates. Treat this as a **checkpoint for journal prep / handback / CC0 watch** — **no finished-product claim**.
+
+## Progress note (Day 4ba)
+
+- **Option A**: Real BP3D LE landmarks + VH donor bones Kabsch retry — **blocked** (`le_kabsch_option_a_trials.json`); **0** wire.
+- **Option B / target #2**: New `docs/cloud-agent-handback.md` resume brief (gates, census freeze, Andreassen exhausted track, deferred table).
+- **No** SA spam; **no** finished-product claim.
+

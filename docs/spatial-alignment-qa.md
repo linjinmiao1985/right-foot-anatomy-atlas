@@ -455,3 +455,22 @@ See `third_party/andreassen/spatial_qa.json`:
 
 ### Verdict
 **Do not integrate.** Teaching atlas in progress — no finished-product claim. Resume only with real proximal shared landmarks (or alternate registration) that keep foot residuals teaching-grade **and** pass laterality.
+
+## Day 4ba — Andreassen Option A LE Kabsch retry (blocked)
+
+**Goal**: Retry VH gastroc/soleus → BP3D with **real** proximal LE landmarks (not synthetic).
+
+**BP3D cache**: FJ3387 right tibia · FJ3366 right fibula · FJ3381 right patella · FJ3365 right femur (same mm frame as foot).  
+**VH donors**: tibia (ASCII STL) · fibula / femur / patella (binary) from Final STL package.
+
+**Trials**: `third_party/andreassen/le_kabsch_option_a_trials.json` (9 sets).
+
+| Set (abbrev) | Foot mean/max mm | Laterality | Achilles (worst belly distal10) | Integrate |
+|--------------|------------------|------------|----------------------------------|-----------|
+| A tarsals7 | 2.3 / 4.3 | FAIL (gastroc X>0) | ≈109 mm | no |
+| B +tib/fib centroids | 11.2 / 23.2 | OK | ≈35 mm | no |
+| C +tib/fib distal | 3.6 / 7.0 | FAIL (gastroc med) | ≈88 mm | no |
+| H ankle-focus | 8.8 / 11.9 | OK | ≈21.6 mm (gastroc lat) | no |
+
+**Verdict**: **BLOCKED** — do not wire. Morphology/proportion mismatch under single similarity; handback brief `docs/cloud-agent-handback.md`.
+

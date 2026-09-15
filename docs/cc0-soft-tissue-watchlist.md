@@ -1,8 +1,8 @@
 # CC0 / CC BY soft-tissue watchlist (monitor · not integrated)
 
-**Date**: 2026-09-15 · Day 4az / Phase 7  
+**Date**: 2026-09-15 · Day 4ba / Phase 7  
 **Policy**: Prefer **CC0 / CC BY** main-tree replacements that shrink ShareAlike surface. Dig + verify license page / SPDX / Zenodo `license.id` **before** any wire. **Reject** NC, unclear “License: Model”, and All Rights Reserved. BY-SA only under `by-sa/` + NOTICE — do not spam SA volume for its own sake.  
-**Status**: Living watchlist — **0** new soft-tissue meshes integrated from this list as of Day **4az**. Andreassen gastroc/soleus **download + Kabsch attempted**; **blocked** on laterality/leverage (see `third_party/andreassen/`). Teaching atlas in progress — **not** a finished-product claim.
+**Status**: Living watchlist — **0** new soft-tissue meshes integrated from this list as of Day **4ba**. Andreassen gastroc/soleus **download + Kabsch + Option A LE retry**; **blocked** (see `third_party/andreassen/`). Teaching atlas in progress — **not** a finished-product claim.
 
 Companion: `docs/open-anatomy-learning-log.md` (#38–#57 and earlier), `docs/phase-7-self-review.md`.
 
@@ -14,7 +14,7 @@ Companion: `docs/open-anatomy-learning-log.md` (#38–#57 and earlier), `docs/ph
 |-----|----------------------|----------------|---------|
 | **Dorsal interossei (DI)** | Open3D BY-SA grouped under `by-sa/` | CC0 / CC BY elemental or clear DI pack | No license-clean DI pack found (UMLUB Sketchfab unclear; Embodi3D NC-SA) |
 | **Per-ray 1st–4th MTA / digital aa.** | BP3D + Open3D **grouped** only | CC0 / CC BY per-ray segmentation | Soft inventory ceiling — TotalSegmentator CT/MRI lack named foot vessels |
-| **Gastroc / soleus bellies** | Absent (Achilles + plantaris only) | CC0 / CC BY bellies | **BLOCKED Day 4az**: Andreassen VHM Final STL (CC BY 4.0) downloaded; 7-tarsal Kabsch mean≈2.3 mm but gastroc **wrong_side X>0** / soleus padded-AABB fail — no BP3D tibia/fibula proximal landmarks. Artifacts: `third_party/andreassen/vh_to_bp3d_transform.json` + `spatial_qa.json`. **Not wired** |
+| **Gastroc / soleus bellies** | Absent (Achilles + plantaris only) | CC0 / CC BY bellies | **BLOCKED Day 4az + 4ba**: 7-tarsal laterality FAIL; Option A real BP3D LE (FJ3387/3366/3381/3365) + VH bones still FAIL (foot residual / Achilles). Artifacts: `vh_to_bp3d_transform.json`, `spatial_qa.json`, `le_kabsch_option_a_trials.json`. **Not wired** |
 | **Nerve / ligament SA surface** | 17 nerves + 27 lig·retinacula Open3D/ZA BY-SA | CC0 / CC BY replacements | Prefer shrink SA (~71/124 unique) over more isolate volume |
 | **Named ankle bands in ZA.blend** | Open3D BY-SA ATFL/CFL/deltoid set | Same or better under BY/CC0 | Prior Zenodo `.blend` lacked named ATFL/CFL/deltoid/retinacula |
 
@@ -29,7 +29,7 @@ Companion: `docs/open-anatomy-learning-log.md` (#38–#57 and earlier), `docs/ph
 | **#57** TotalSegmentator MRI (Zenodo 10.5281/zenodo.22688334) | Dataset **CC BY 4.0** (Zenodo API Day 4ay) | 50 MRI regions; appendicular still grouped foot bones; thigh packs lack gastroc/soleus/foot DI | Same soft ceiling as CT pack | **monitor** catalog; **reject** DI/NV/per-ray MTA / extrinsic belly source |
 | **#39** HRA / CCF 3D Reference Object Library | **CC BY 4.0** | Whole-body VH united GLBs | Organ/CCF scale; watch if foot soft parts ever appear as named packs | **monitor**; **reject** as current DI/MTA source |
 | **#42** MedShapeNetCore (Zenodo 10.5281/zenodo.10609965) | **CC BY 4.0** (`cc-by-4.0` **re-verified Day 4ay**) | Multi-organ NPZ packs | Future search API — no foot DI/NV in listed files | **monitor** catalog; **reject** foot soft now |
-| **#46 / Andreassen 2023 VHF+VHM LE muscles** (Digital Commons @ DU · DOI 10.56902/COB.vh.2022.2 Male Final STL · Sci Data 10.1038/s41597-022-01905-2) | **CC BY 4.0** (Digital Commons + package README; re-verified Day 4az download) | VHM Right Final STL: gastroc med/lat + soleus + tarsals extracted | Day **4az** Kabsch→BP3D attempted; **spatial QA FAIL** (gastroc all X>0; soleus frac_inside_pad≈0.09). Transform JSON recorded; **0 GLB wire** | **blocked (alignment)** for belly integrate until proximal LE landmarks or better registration; still **reject** as DI/NV/per-ray MTA source |
+| **#46 / Andreassen 2023 VHF+VHM LE muscles** (Digital Commons @ DU · DOI 10.56902/COB.vh.2022.2 Male Final STL · Sci Data 10.1038/s41597-022-01905-2) | **CC BY 4.0** (Digital Commons + package README; re-verified Day 4az download) | VHM Right Final STL: gastroc med/lat + soleus + tarsals extracted | Day **4az** + **4ba** Option A (real BP3D LE + VH bones) Kabsch attempted; **spatial QA FAIL**. Trials JSON recorded; **0 GLB wire** | **blocked (alignment)** — LE landmarks available but single similarity cannot hold foot+calf; need alternate registration/donor; still **reject** as DI/NV/per-ray MTA source |
 | **#50** HuBMAP Female v1.5 / Femora | **CC BY 4.0** | Female whole-body united GLB | Foot coverage vs our BP3D male foot — naming only unless elemental soft appears | **monitor**; **reject** united GLB as right-foot substitute |
 | **#55** Grant et al. foot bone SSMs (Zenodo 10.5281/zenodo.3464747) | **CC BY 4.0** (Zenodo API Day 4ay) | MRI-derived STLs: talus / calcaneus / midfoot / 1st MT (L/R cohorts) | Osteology SSM QA only — **0** soft files in record | **monitor** bones; **reject** soft teaching |
 | Blender Studio Human Base Meshes — foot (Commons CC0 STL) | **CC0 1.0** | High-res **skin/surface** foot | Silhouette UX only — no named DI/NV | **monitor** surface; **reject** anatomy teaching DI/NV |
@@ -65,6 +65,16 @@ Companion: `docs/open-anatomy-learning-log.md` (#38–#57 and earlier), `docs/ph
 
 ---
 
+## Day 4ba Option A LE retry
+
+| Item | Result |
+|------|--------|
+| BP3D cache parts | FJ3387 tibia · FJ3366 fibula · FJ3381 patella · FJ3365 femur (local `/tmp/bp3d` zip) |
+| VH donor bones | Tibia (ASCII STL) · fibula/femur/patella (binary) from Final STL zip |
+| Trials | 9 landmark sets in `le_kabsch_option_a_trials.json` — **0** pass integrate gate |
+| Best near-miss | `H_ankle_focus`: right-side OK; gastroc lat Achilles≈21.6 mm FAIL; foot mean≈8.8 mm FAIL |
+| Wire | **0** |
+
 ## Day 4az Andreassen belly attempt
 
 | Check | Result |
@@ -85,7 +95,7 @@ Companion: `docs/open-anatomy-learning-log.md` (#38–#57 and earlier), `docs/ph
 2. Confirm content is **named** soft tissue (not grouped surface / 2D masks / game skin only).
 3. Run spatial QA gates (padded AABB, laterality X≤0, attachment rules) before `structures.json` wire.
 4. Prefer **replacing** an existing `by-sa/` teaching mesh over adding net SA count.
-5. **Andreassen belly path (blocked)**: need BP3D-compatible **proximal LE landmarks** (tibia/fibula) or alternate registration before retry; do **not** force-wire on foot-only Kabsch. Re-read `third_party/andreassen/spatial_qa.json`.
+5. **Andreassen belly path (blocked after Option A)**: real BP3D LE landmarks **tried** Day 4ba — still fail; need non-similarity / alternate donor. Do **not** force-wire. Re-read `le_kabsch_option_a_trials.json` + `docs/cloud-agent-handback.md`.
 6. Gates: `python3 scripts/integrity-audit.py` · `npx vitest run` · `npm run build`.
 7. Update census in README / methods / phase-7 if anything wires — **no** finished-product claim.
 
@@ -93,4 +103,4 @@ Companion: `docs/open-anatomy-learning-log.md` (#38–#57 and earlier), `docs/ph
 
 ## Bottom line
 
-Watchlist tracks **where a CC0/BY soft find would matter** (DI, per-ray MTA, bellies, SA shrink). Day **4az** legally downloaded Andreassen VHM Final STLs and attempted VH→BP3D Kabsch — **alignment blocker** (laterality/leverage); **0** meshes integrated. DI / per-ray MTA / nerve·ligament main-tree replacements remain **dry**. **No finished-product claim**.
+Watchlist tracks **where a CC0/BY soft find would matter** (DI, per-ray MTA, bellies, SA shrink). Day **4az** download + Kabsch and Day **4ba** Option A LE retry — **alignment blocker**; **0** meshes integrated. Handback: `docs/cloud-agent-handback.md`. DI / per-ray MTA / nerve·ligament main-tree replacements remain **dry**. **No finished-product claim**.

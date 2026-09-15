@@ -51,7 +51,7 @@ Day 4ad adds fibularis brevis/tertius + opponens digiti minimi muscle GLBs (Kabs
 
 **Source**: University of Denver Center for Orthopaedic Biomechanics (Andreassen et al. Sci Data 2023)  
 **License**: CC BY 4.0 · Digital Commons https://digitalcommons.du.edu/visiblehuman/2/  
-**Usage**: Day 4az download + Kabsch attempt only. Transform/QA under `third_party/andreassen/` (`BLOCKED_DO_NOT_INTEGRATE`). Gastroc/soleus **not** shipped under `public/models/`. See that NOTICE.txt.
+**Usage**: Day 4az download + Kabsch; Day 4ba Option A LE retry — still blocked. Transform/QA/trials under `third_party/andreassen/` (`BLOCKED_DO_NOT_INTEGRATE`). Gastroc/soleus **not** shipped under `public/models/`. See that NOTICE.txt + `docs/cloud-agent-handback.md`.
 
 ### Z-Anatomy nerves (BY-SA isolate)
 

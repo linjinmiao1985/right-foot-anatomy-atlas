@@ -46,7 +46,7 @@
 | Gap | License-clean mesh in-tree? | Note |
 |-----|-----------------------------|------|
 | DI as **per-ray** 1–4 separate structures | Open3D BY-SA parts exist as ADDITIONAL_MUSCLE_PARTS under one id | Prefer future CC0/BY replacement for DI |
-| Gastrocnemius / soleus bellies | Only **calcaneal tendon** + plantaris | Day **4az**: Andreassen VHM CC BY Final STL Kabsch **blocked** (laterality); still absent from viewer |
+| Gastrocnemius / soleus bellies | Only **calcaneal tendon** + plantaris | Day **4az**+**4ba**: Andreassen CC BY Kabsch **blocked** (laterality then LE residual/Achilles); still absent from viewer |
 | FHB medial+lateral as single CC BY tree | Lateral is ZA BY-SA additional | Mixed-license structure disclosed |
 
 ---
