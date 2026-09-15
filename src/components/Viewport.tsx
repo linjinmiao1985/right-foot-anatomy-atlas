@@ -4,6 +4,7 @@ import FootModel from './FootModel';
 import CameraFocus from './CameraFocus';
 import type { Layer } from '../types/anatomy';
 import type { LigamentGroupId } from '../lib/ligamentGroups';
+import type { NerveGroupId } from '../lib/nerveGroups';
 
 interface ViewportProps {
   onMeshClick: (meshName: string) => void;
@@ -11,9 +12,10 @@ interface ViewportProps {
   selectedMeshName: string | null;
   isolateMode?: boolean;
   visibleLigamentGroups?: Set<LigamentGroupId>;
+  visibleNerveGroups?: Set<NerveGroupId>;
 }
 
-export default function Viewport({ onMeshClick, visibleLayers, selectedMeshName, isolateMode = false, visibleLigamentGroups }: ViewportProps) {
+export default function Viewport({ onMeshClick, visibleLayers, selectedMeshName, isolateMode = false, visibleLigamentGroups, visibleNerveGroups }: ViewportProps) {
   return (
     <Canvas
       camera={{ 
@@ -43,6 +45,7 @@ export default function Viewport({ onMeshClick, visibleLayers, selectedMeshName,
         selectedMeshName={selectedMeshName}
         isolateMode={isolateMode}
         visibleLigamentGroups={visibleLigamentGroups}
+        visibleNerveGroups={visibleNerveGroups}
       />
 
       <CameraFocus selectedMeshName={selectedMeshName} />

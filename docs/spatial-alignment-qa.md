@@ -395,5 +395,18 @@ Reuse Day 4m/4x Kabsch. Six prior volume-deferred nerves moved to `integrated` i
 | superficial_branch_lateral_plantar_nerve | ~63.2 / ~54.3 | accept → integrated |
 | dorsal_digital_superficial_fibular | ~108.4 / ~108.0 | accept → integrated (grouped) |
 
-Still deferred: sural→LDC continuity object; dorsal digitals of deep fibular. Teaching-grade only — not a finished nerve atlas.
+Day 4y still deferred then: sural→LDC continuity object; dorsal digitals of deep fibular (resolved Day 4z). Teaching-grade only — not a finished nerve atlas.
+
+## Day 4z — Deep-fibular dorsal digitals + sural→LDC continuity note (2026-09-15)
+
+Reuse Day 4m/4x/4y Kabsch. Moved `dorsal_digital_deep_fibular` from `scanned_not_integrated` → `integrated` (`nerve_spatial_qa.json` `day4z_added`). Spatial: inside_padded=1.0; wrong_side=false; bone AABB overlap; centroid→Open3D MP/LP ≈114.5 / 117.6 mm (distal dorsal digitals expected farther).
+
+| Structure | Decision |
+|-----------|----------|
+| dorsal_digital_deep_fibular | accept → integrated (grouped teaching mesh) |
+| sural→LDC (`Sural_nerve,_Lateral_dorsal_cutaneous_nerve.r`) | continuity_note_only on `lateral_dorsal_cutaneous_nerve` |
+
+Sural→LDC geometry check: Jaccard 0 vs both `Sural_nerve.r` and `Lateral_dorsal_cutaneous_nerve.r` (distinct transitional segment). Not wired as a third mesh — Z-Anatomy sural trunk + Open3D LDC already present; continuity documented in LDC summaryZh + terminology.
+
+Teaching-grade only — not a finished nerve atlas.
 

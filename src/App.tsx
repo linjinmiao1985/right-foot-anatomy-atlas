@@ -5,6 +5,7 @@ import StructurePanel from './components/StructurePanel';
 import StructureSearch from './components/StructureSearch';
 import { getAllLayers } from './lib/layers';
 import { getAllLigamentGroupIds, type LigamentGroupId } from './lib/ligamentGroups';
+import { getAllNerveGroupIds, type NerveGroupId } from './lib/nerveGroups';
 import { getStructureByMeshName, getAllStructures } from './lib/structureLookup';
 import { ATLAS_SOURCE_FOOTER } from './lib/assetProvenance';
 import type { Layer } from './types/anatomy';
@@ -22,6 +23,9 @@ function App() {
   const [searchClearSignal, setSearchClearSignal] = useState(0);
   const [visibleLigamentGroups, setVisibleLigamentGroups] = useState<Set<LigamentGroupId>>(
     () => new Set(getAllLigamentGroupIds()),
+  );
+  const [visibleNerveGroups, setVisibleNerveGroups] = useState<Set<NerveGroupId>>(
+    () => new Set(getAllNerveGroupIds()),
   );
 
   const handleLayerToggle = (layer: Layer) => {
@@ -41,6 +45,15 @@ function App() {
 
   const handleLigamentGroupToggle = (group: LigamentGroupId) => {
     setVisibleLigamentGroups((prev) => {
+      const next = new Set(prev);
+      if (next.has(group)) next.delete(group);
+      else next.add(group);
+      return next;
+    });
+  };
+
+  const handleNerveGroupToggle = (group: NerveGroupId) => {
+    setVisibleNerveGroups((prev) => {
       const next = new Set(prev);
       if (next.has(group)) next.delete(group);
       else next.add(group);
@@ -153,6 +166,8 @@ function App() {
         realCount={realCount}
         visibleLigamentGroups={visibleLigamentGroups}
         onToggleLigamentGroup={handleLigamentGroupToggle}
+        visibleNerveGroups={visibleNerveGroups}
+        onToggleNerveGroup={handleNerveGroupToggle}
       />
 
       <Viewport
@@ -161,6 +176,7 @@ function App() {
         selectedMeshName={selectedMeshName}
         isolateMode={isolateMode}
         visibleLigamentGroups={visibleLigamentGroups}
+        visibleNerveGroups={visibleNerveGroups}
       />
 
       <StructurePanel

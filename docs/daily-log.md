@@ -1149,3 +1149,10 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 - integrity-audit + vitest + build; commit + push.
 - No finished-product claim.
 
+## Week 2 Day 4z (2026-09-15) — Deep-fibular dorsal digitals + nerve sub-groups
+
+- Integrated Open3D `Dorsal_digital_branches_of_deep_fibular_nerve.r` → `dorsal_digital_deep_fibular` (Kabsch Day 4m; QA accept).
+- Sural→LDC: continuity note on `lateral_dorsal_cutaneous_nerve` only (distinct transitional verts, Jaccard 0 vs LDC/sural; not duplicated mesh).
+- Teaching polish: nerve sub-group filter (8 groups) mirroring ligament sub-groups; README coverage from live census.
+- No finished-product claims.
+

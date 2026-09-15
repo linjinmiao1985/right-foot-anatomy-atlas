@@ -36,7 +36,7 @@ Meshes in this directory are licensed under **CC BY-SA 4.0** (ShareAlike). Deriv
 **License**: CC BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/  
 **Modifications**: Extracted named right-side (`.r`) objects to OBJ, converted to glTF 2.0 Binary (obj2gltf); no topology edits. Vertex positions later **Kabsch-aligned** from Open3D meters into BodyParts3D millimeter frame (landmarks: Calcaneus, Talus, Navicular, Cuboid, medial/intermediate/lateral cuneiform, MT1–5; Day 4m re-fit mean residual ≈2.6 mm vs prior 8-landmark ≈3.0 mm that excluded mis-ID cuboid/cuneiforms) so the atlas `scale={[0.01,0.01,0.01]}` convention applies. Transform JSON: `third_party/open3dmodel/open3d_to_bp3d_transform.json`.
 
-**Inventory note**: Day 4t–4w ligaments/retinacula/fascia wired selectively. Day 4x–4y add Open3D fine plantar / cutaneous / calcaneal / dorsal digital nerve meshes (below). Same OBJ still has further ligament bands and additional nerve terminals (sural→LDC continuity; deep-fibular dorsal digitals) not wired this pass.
+**Inventory note**: Day 4t–4w ligaments/retinacula/fascia wired selectively. Day 4x–4z add Open3D fine plantar / cutaneous / calcaneal / dorsal digital (superficial + deep fibular) nerve meshes. Sural→LDC continuity object remains a teaching note on LDC (distinct transitional geometry; not wired as a third mesh). Same OBJ still has further ligament bands and other nerve terminals not wired.
 
 
 ### Ankle/foot ligaments, retinacula + plantar fascia (Open3DModel)
@@ -103,7 +103,7 @@ Same Kabsch pipeline as DI/arteries/ligaments (`open3d_to_bp3d_transform.json`, 
 46. `medial_calcaneal_branches.glb` — from `Medial_calcaneal_branches_of_Tibial_nerve.r`
 47. `lateral_calcaneal_nerves.glb` — from `Lateral_calcaneal_nerves.r`
 48. `superficial_branch_lateral_plantar_nerve.glb` — from `Superficial_branch_of_Lateral_plantar_nerve.r`
-49. `dorsal_digital_superficial_fibular.glb` — from `Dorsal_digital_branches_of_superficial_fibular_nerve.r` (grouped)
+49. `dorsal_digital_superficial_fibular / dorsal_digital_deep_fibular.glb` — from `Dorsal_digital_branches_of_superficial_fibular_nerve.r` (grouped)
 
 Day 4y wires six Day 4x volume-deferred QA-pass nerves (teaching priority). Still deferred: `Sural_nerve,_Lateral_dorsal_cutaneous_nerve.r` continuity object; `Dorsal_digital_branches_of_deep_fibular_nerve.r`. Not a finished peripheral-nerve atlas.
 

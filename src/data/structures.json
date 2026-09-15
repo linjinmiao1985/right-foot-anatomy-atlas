@@ -1165,7 +1165,7 @@
     "layer": "nerve",
     "nameZh": "足背外侧皮神经",
     "nameLa": "N. cutaneus dorsalis lateralis",
-    "summaryZh": "腓肠神经在足外侧缘的延续（亦称足背外侧皮神经；教学网格）。分布于足背外侧、外踝周围与第5趾外侧皮肤。临床：外踝/跟腱外侧切口与足外侧柱手术常累及；与腓肠神经干连续。网格：Open3D BY-SA，Kabsch→BP3D。注：另有 sural→LDC 连续对象仍未接线。",
+    "summaryZh": "腓肠神经在足外侧缘的延续（亦称足背外侧皮神经；教学网格）。分布于足背外侧、外踝周围与第5趾外侧皮肤。临床：外踝/跟腱外侧切口与足外侧柱手术常累及；与腓肠神经干连续。网格：Open3D BY-SA，Kabsch→BP3D。连续性注：Open3D 另有命名对象 Sural_nerve,_Lateral_dorsal_cutaneous_nerve.r（过渡段，顶点数与 LDC/腓肠干均不相交，Jaccard=0）；本 pass 不另接线以免与 Z-Anatomy 腓肠干 + Open3D LDC 双源重叠，教学上以本条目为腓肠→LDC 延续说明。",
     "placeholder": false
   },
   {
@@ -1213,7 +1213,19 @@
     "layer": "nerve",
     "nameZh": "腓浅神经足背趾支",
     "nameLa": "Nn. digitales dorsales (ex n. fibularis superficialis)",
-    "summaryZh": "腓浅神经在足背发出的趾背神经（教学组合网格）。分布于第2–5趾背侧大部分皮肤（第1趾蹼背侧主要由腓深神经支配）。临床：足背多趾切口、甲沟/趾背手术需保护；与腓深神经第1趾蹼皮支形成分界。网格：Open3D BY-SA，Kabsch→BP3D；分组对象，非逐趾 elemental。腓深神经背侧趾支仍 deferred。",
+    "summaryZh": "腓浅神经在足背发出的趾背神经（教学组合网格）。分布于第2–5趾背侧大部分皮肤（第1趾蹼背侧主要由腓深神经支配）。临床：足背多趾切口、甲沟/趾背手术需保护；与腓深神经第1趾蹼皮支形成分界。网格：Open3D BY-SA，Kabsch→BP3D；分组对象，非逐趾 elemental。腓深神经背侧趾支见 dorsal_digital_deep_fibular。",
+    "placeholder": false
+  },
+  {
+    "id": "dorsal_digital_deep_fibular",
+    "meshNames": [
+      "Dorsal_Digital_Branches_Deep_Fibular_R",
+      "Nn_Digitales_Dorsales_N_Fibularis_Profundus_Right"
+    ],
+    "layer": "nerve",
+    "nameZh": "腓深神经足背趾支",
+    "nameLa": "Nn. digitales dorsales (ex n. fibularis profundus)",
+    "summaryZh": "腓深神经在足背发出的趾背神经（教学组合网格）。主要分布于第1趾蹼背侧皮肤（踇趾外侧与第2趾内侧），是腓深神经最重要的皮支终末。临床：前跗管综合征、第1趾蹼切口与踇外翻/第1–2跖骨间手术需保护；与腓浅神经足背趾支形成感觉分界。网格：Open3D BY-SA，Kabsch→BP3D；分组对象，非逐趾 elemental。",
     "placeholder": false
   }
 ]

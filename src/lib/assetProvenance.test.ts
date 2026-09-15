@@ -48,6 +48,7 @@ describe('assetProvenance', () => {
       'lateral_calcaneal_nerves',
       'superficial_branch_lateral_plantar_nerve',
       'dorsal_digital_superficial_fibular',
+      'dorsal_digital_deep_fibular',
     ]) {
       const p = getStructureProvenance(id, false, 'nerve');
       expect(p.sourceShort).toBe('Open3D');

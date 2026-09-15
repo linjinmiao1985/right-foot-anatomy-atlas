@@ -14,19 +14,19 @@ Interactive web-based teaching atlas for right foot anatomy.
 | **Bones** | **26/26 (100%)** | 0 | 26 | BP3D (26) — **main tree** |
 | **Muscles** | **18 unique / 23 entries** | 0 | 18 | Main: BP3D + UM (17 unique) · **BY-SA**: Open3D DI (1) |
 | **Vessels** | **9/9 (100%)** | 0 | 9 | Main: BP3D 7 (incl. 2 honest grouped) · **BY-SA**: Open3D PTA + fibular (2) |
-| **Nerves** | **10** | 0 | 10 | Z-Anatomy trunks 6 + Open3D fine/branch 4 (BY-SA `by-sa/`); **not** TA2-complete |
+| **Nerves** | **17** | 0 | 17 | Z-Anatomy trunks 6 + Open3D fine/cutaneous/calcaneal/dorsal digitals 11 (BY-SA `by-sa/`); **not** TA2-complete |
 | **Ligaments / tendons** | **29** | 0 | 29 | Main: BP3D long plantar + Achilles · **BY-SA**: Open3D 27; **teaching-useful, incomplete** |
-| **Unique total** | **92 real** | **0** | **92** | See main vs BY-SA split below |
+| **Unique total** | **99 real** | **0** | **99** | See main vs BY-SA split below (live census 2026-09-15) |
 
 ### Main tree vs BY-SA isolate (honest split)
 
 | Claim | Unique count | Contents |
 |-------|--------------|----------|
-| **Main (CC BY 4.0 / CC0)** | **52/98** | 26 bones + 17 unique muscles + 7 vessels + 1 ligament + 1 tendon |
-| **BY-SA isolate (`by-sa/`)** | **46/98** | 1 DI + 2 proximal arteries + 16 nerves (6 Z-Anatomy + 10 Open3D) + 27 ankle/foot ligaments·retinacula·fascia |
-| **Entry-level `structures.json`** | **103/103** `placeholder:false` | Multi-part muscles counted separately (lumbricals/PI) |
+| **Main (CC BY 4.0 / CC0)** | **52/99** | 26 bones + 17 unique muscles + 7 vessels + 1 ligament + 1 tendon |
+| **BY-SA isolate (`by-sa/`)** | **47/99** | 1 DI + 2 proximal arteries + 17 nerves (6 Z-Anatomy + 11 Open3D) + 27 ankle/foot ligaments·retinacula·fascia |
+| **Entry-level `structures.json`** | **104/104** `placeholder:false` | Multi-part muscles counted separately (lumbricals/PI) |
 
-**Note**: Unique framing = **98** (lumbricals×4→1, plantar interossei×3→1). Entry-level = **103** rows. **Honest grouped vessels**: dorsal digital + plantar metatarsal remain BP3D combined meshes (dorsal MTA still grouped only). Open3D DI / PTA / fibular / ligaments / retinacula / plantar fascia / fine nerves are **ShareAlike fills**, Kabsch→BP3D mm — **not** CC BY main-tree. **Ligament + nerve layers: teaching-useful but incomplete** (further tarsal/toe bands; sural→LDC + deep-fibular dorsal digitals still unwired; commons/proprii/dorsal digitals are grouped teaching meshes).
+**Note**: Unique framing = **99** (lumbricals×4→1, plantar interossei×3→1). Entry-level = **104** rows. **Honest grouped vessels**: dorsal digital + plantar metatarsal remain BP3D combined meshes (dorsal MTA still grouped only). Open3D DI / PTA / fibular / ligaments / retinacula / plantar fascia / fine nerves are **ShareAlike fills**, Kabsch→BP3D mm — **not** CC BY main-tree. **Ligament + nerve layers: teaching-useful but incomplete** (further tarsal/toe bands; sural→LDC continuity documented on LDC without duplicate mesh; commons/proprii/dorsal digitals are grouped teaching meshes). Nerve UI has teaching sub-group filters (not a finished nerve atlas).
 
 ### Remaining soft-tissue caveats (not “gaps” in placeholder sense)
 - Prefer future **CC0/CC BY** replacements for Open3D BY-SA DI + proximal arteries

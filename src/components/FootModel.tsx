@@ -9,6 +9,11 @@ import {
   structureInVisibleLigamentGroups,
   type LigamentGroupId,
 } from '../lib/ligamentGroups';
+import {
+  getAllNerveGroupIds,
+  structureInVisibleNerveGroups,
+  type NerveGroupId,
+} from '../lib/nerveGroups';
 
 interface FootModelProps {
   visibleLayers: Set<Layer>;
@@ -18,6 +23,8 @@ interface FootModelProps {
   isolateMode?: boolean;
   /** Teaching sub-group filter for ligament/tendon layer (defaults: all groups on). */
   visibleLigamentGroups?: Set<LigamentGroupId>;
+  /** Teaching sub-group filter for nerve layer (defaults: all groups on). */
+  visibleNerveGroups?: Set<NerveGroupId>;
 }
 
 interface PlaceholderMesh {
@@ -140,6 +147,8 @@ const REAL_NERVE_MODELS: Record<string, string> = {
   'lateral_calcaneal_nerves': '/models/right-foot/by-sa/lateral_calcaneal_nerves.glb',
   'superficial_branch_lateral_plantar_nerve': '/models/right-foot/by-sa/superficial_branch_lateral_plantar_nerve.glb',
   'dorsal_digital_superficial_fibular': '/models/right-foot/by-sa/dorsal_digital_superficial_fibular.glb',
+  // Day 4z — deep-fibular dorsal digitals
+  'dorsal_digital_deep_fibular': '/models/right-foot/by-sa/dorsal_digital_deep_fibular.glb',
 };
 
 // Soft-tissue under ligament toggle — incomplete set (not a finished ligament atlas).
@@ -180,8 +189,9 @@ const REAL_LIGAMENT_MODELS: Record<string, string> = {
   'dorsal_intercuneiform_ligaments': '/models/right-foot/by-sa/dorsal_intercuneiform_ligaments.glb',
 };
 
-export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName, isolateMode = false, visibleLigamentGroups }: FootModelProps) {
+export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName, isolateMode = false, visibleLigamentGroups, visibleNerveGroups }: FootModelProps) {
   const ligGroups = visibleLigamentGroups ?? new Set(getAllLigamentGroupIds());
+  const nerveGroups = visibleNerveGroups ?? new Set(getAllNerveGroupIds());
   const [placeholderMeshes, setPlaceholderMeshes] = useState<PlaceholderMesh[]>([]);
   const [hoveredMesh, setHoveredMesh] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
@@ -257,6 +267,13 @@ export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName
         if (
           structure.layer === 'ligament' &&
           !structureInVisibleLigamentGroups(structure.id, ligGroups)
+        ) {
+          return null;
+        }
+
+        if (
+          structure.layer === 'nerve' &&
+          !structureInVisibleNerveGroups(structure.id, nerveGroups)
         ) {
           return null;
         }
@@ -836,7 +853,7 @@ function RealNerveModel({
               borderRadius: '3px',
               border: '1px solid rgba(255, 255, 0, 0.4)',
             }}>
-              {/common_plantar|proper_plantar|deep_branch_lateral|dorsal_cutaneous|calcaneal|superficial_branch_lateral|dorsal_digital_superficial/.test(modelPath)
+              {/common_plantar|proper_plantar|deep_branch_lateral|dorsal_cutaneous|calcaneal|superficial_branch_lateral|dorsal_digital_/.test(modelPath)
                 ? 'Open3D (BY-SA 4.0)'
                 : 'Z-Anatomy (BY-SA 4.0)'}
             </div>

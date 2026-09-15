@@ -4,8 +4,8 @@ apply third_party/open3dmodel/open3d_to_bp3d_transform.json Kabsch, write
 raw OBJ under third_party/open3dmodel/extracted/ and GLB under
 public/models/right-foot/by-sa/ via obj2gltf.
 
-Day 4x — common + proper plantar digitals + deep branch of lateral plantar
-(max 4 new nerve entries; quality over volume).
+Day 4x–4z — plantar digitals / cutaneous / calcaneal / dorsal digitals (superficial + deep fibular).
+Sural→LDC continuity object documented on LDC, not duplicated as mesh.
 """
 from __future__ import annotations
 
@@ -22,8 +22,11 @@ XFORM = ROOT / "third_party/open3dmodel/open3d_to_bp3d_transform.json"
 RAW_OUT = ROOT / "third_party/open3dmodel/extracted"
 BYSA = ROOT / "public/models/right-foot/by-sa"
 
-# Day 4x + 4y cumulative Open3D nerve targets (re-run regenerates all).
-# 4x: common/proper plantar digitals + deep LPN. 4y: cutaneous/calcaneal/superficial LPN + dorsal digitals.
+# Day 4x + 4y + 4z cumulative Open3D nerve targets (re-run regenerates all).
+# 4x: common/proper plantar digitals + deep LPN.
+# 4y: cutaneous/calcaneal/superficial LPN + superficial-fibular dorsal digitals.
+# 4z: deep-fibular dorsal digitals (named). Sural→LDC continuity: continuity note on LDC only
+#     (distinct transitional verts — not same geometry as LDC; not wired to avoid dual-source overlap).
 TARGETS = {
     # Day 4x
     "Common_plantar_digital_nerves.r": "common_plantar_digital_nerves",
@@ -37,6 +40,8 @@ TARGETS = {
     "Lateral_calcaneal_nerves.r": "lateral_calcaneal_nerves",
     "Superficial_branch_of_Lateral_plantar_nerve.r": "superficial_branch_lateral_plantar_nerve",
     "Dorsal_digital_branches_of_superficial_fibular_nerve.r": "dorsal_digital_superficial_fibular",
+    # Day 4z
+    "Dorsal_digital_branches_of_deep_fibular_nerve.r": "dorsal_digital_deep_fibular",
 }
 
 
@@ -190,7 +195,7 @@ def main() -> int:
             {
                 "source": str(src),
                 "transform": str(XFORM.relative_to(ROOT)),
-                "method": "reuse Open3D→BP3D Kabsch (Day 4m; same donor as DI/arteries/ligaments); Day 4x+4y nerves",
+                "method": "reuse Open3D→BP3D Kabsch (Day 4m; same donor as DI/arteries/ligaments); Day 4x+4y+4z nerves",
                 "kabsch_mean_residual_mm": xf.get("mean_residual_mm"),
                 "targets": TARGETS,
                 "aabb_bp3d_mm": aabb_report,

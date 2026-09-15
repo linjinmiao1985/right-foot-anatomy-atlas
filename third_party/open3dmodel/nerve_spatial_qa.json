@@ -355,44 +355,11 @@
       "dist_open3d_lateral_plantar_mm": 108.0,
       "nearest_open3d_plantar": "lateral",
       "day": "4y"
-    }
-  },
-  "scanned_not_integrated": {
-    "sural_lateral_dorsal_cutaneous": {
-      "id": "sural_lateral_dorsal_cutaneous",
-      "open3d": "Sural_nerve,_Lateral_dorsal_cutaneous_nerve.r",
-      "kind": "scanned_not_integrated",
-      "decision": "accept",
-      "reasons": [],
-      "centroid_mm": [
-        -124.05,
-        -108.829,
-        -41.517
-      ],
-      "aabb_mm": [
-        [
-          -161.108,
-          -168.009,
-          -63.636
-        ],
-        [
-          -96.969,
-          -57.421,
-          -23.438
-        ]
-      ],
-      "n_verts": 468,
-      "inside_padded_frac": 1.0,
-      "wrong_side": false,
-      "bone_aabb_overlap": true,
-      "dist_open3d_medial_plantar_mm": 51.65,
-      "dist_open3d_lateral_plantar_mm": 42.75,
-      "nearest_open3d_plantar": "lateral"
     },
     "dorsal_digital_deep_fibular": {
       "id": "dorsal_digital_deep_fibular",
       "open3d": "Dorsal_digital_branches_of_deep_fibular_nerve.r",
-      "kind": "scanned_not_integrated",
+      "kind": "integrated",
       "decision": "accept",
       "reasons": [],
       "centroid_mm": [
@@ -421,18 +388,46 @@
       "nearest_open3d_plantar": "medial"
     }
   },
+  "scanned_not_integrated": {
+    "sural_lateral_dorsal_cutaneous": {
+      "id": "sural_lateral_dorsal_cutaneous",
+      "open3d": "Sural_nerve,_Lateral_dorsal_cutaneous_nerve.r",
+      "kind": "scanned_not_integrated",
+      "decision": "continuity_note_only",
+      "reasons": [],
+      "centroid_mm": [
+        -124.05,
+        -108.829,
+        -41.517
+      ],
+      "aabb_mm": [
+        [
+          -161.108,
+          -168.009,
+          -63.636
+        ],
+        [
+          -96.969,
+          -57.421,
+          -23.438
+        ]
+      ],
+      "n_verts": 468,
+      "inside_padded_frac": 1.0,
+      "wrong_side": false,
+      "bone_aabb_overlap": true,
+      "dist_open3d_medial_plantar_mm": 51.65,
+      "dist_open3d_lateral_plantar_mm": 42.75,
+      "nearest_open3d_plantar": "lateral",
+      "note": "Spatially accept (inside_padded=1.0). Distinct transitional verts vs LDC and vs sural (Jaccard 0 with both). Day 4z: document sural\u2192LDC continuity on lateral_dorsal_cutaneous_nerve summary/terminology rather than wiring a third mesh (Z-Anatomy sural trunk + Open3D LDC already present; avoids dual-source visual overlap)."
+    }
+  },
   "deferred_or_rejected": [
     {
       "id": "sural_lateral_dorsal_cutaneous",
-      "decision": "defer_volume",
+      "decision": "continuity_note_only",
       "spatial": "accept",
-      "note": "QA-pass spatially; Day 4y preferred other cutaneous/calcaneal/superficial LPN/dorsal digital (sup. fibular)"
-    },
-    {
-      "id": "dorsal_digital_deep_fibular",
-      "decision": "defer_volume",
-      "spatial": "accept",
-      "note": "QA-pass spatially; Day 4y preferred other cutaneous/calcaneal/superficial LPN/dorsal digital (sup. fibular)"
+      "note": "Spatially accept (inside_padded=1.0). Distinct transitional verts vs LDC and vs sural (Jaccard 0 with both). Day 4z: document sural\u2192LDC continuity on lateral_dorsal_cutaneous_nerve summary/terminology rather than wiring a third mesh (Z-Anatomy sural trunk + Open3D LDC already present; avoids dual-source visual overlap)."
     }
   ],
   "day4x_added": [
@@ -449,5 +444,9 @@
     "superficial_branch_lateral_plantar_nerve",
     "dorsal_digital_superficial_fibular"
   ],
-  "day4y_note": "Integrated 6 highest-teaching-value Day 4x volume-deferred nerves: medial+lateral dorsal cutaneous, medial+lateral calcaneal, superficial LPN branch, dorsal digital branches of superficial fibular (grouped). Still deferred: sural\u2192LDC continuity object + dorsal digitals of deep fibular."
+  "day4y_note": "Integrated 6 Day 4x volume-deferred nerves (Day 4y). Day 4z later added deep-fibular dorsal digitals; sural\u2192LDC kept as continuity note on LDC.",
+  "day4z_added": [
+    "dorsal_digital_deep_fibular"
+  ],
+  "day4z_note": "Integrated dorsal digital branches of deep fibular (named Open3D object). Sural\u2192LDC continuity object remains continuity-note-only on lateral_dorsal_cutaneous (distinct geometry, not same as LDC; not duplicated)."
 }

@@ -1,7 +1,7 @@
 {
   "source": "/workspace/literature/open3d-assets/lower-limb.obj",
   "transform": "third_party/open3dmodel/open3d_to_bp3d_transform.json",
-  "method": "reuse Open3D\u2192BP3D Kabsch (Day 4m; same donor as DI/arteries/ligaments); Day 4x+4y nerves",
+  "method": "reuse Open3D\u2192BP3D Kabsch (Day 4m; same donor as DI/arteries/ligaments); Day 4x+4y+4z nerves",
   "kabsch_mean_residual_mm": 2.6124537404764445,
   "targets": {
     "Common_plantar_digital_nerves.r": "common_plantar_digital_nerves",
@@ -13,7 +13,8 @@
     "Medial_calcaneal_branches_of_Tibial_nerve.r": "medial_calcaneal_branches",
     "Lateral_calcaneal_nerves.r": "lateral_calcaneal_nerves",
     "Superficial_branch_of_Lateral_plantar_nerve.r": "superficial_branch_lateral_plantar_nerve",
-    "Dorsal_digital_branches_of_superficial_fibular_nerve.r": "dorsal_digital_superficial_fibular"
+    "Dorsal_digital_branches_of_superficial_fibular_nerve.r": "dorsal_digital_superficial_fibular",
+    "Dorsal_digital_branches_of_deep_fibular_nerve.r": "dorsal_digital_deep_fibular"
   },
   "aabb_bp3d_mm": {
     "common_plantar_digital_nerves": {
@@ -235,6 +236,28 @@
       "n_verts": 3708,
       "n_faces": 3596,
       "open3d_object": "Dorsal_digital_branches_of_superficial_fibular_nerve.r"
+    },
+    "dorsal_digital_deep_fibular": {
+      "x": [
+        -135.53494334694693,
+        -102.40291901965882
+      ],
+      "y": [
+        -226.28859158446403,
+        -169.5944903022905
+      ],
+      "z": [
+        -66.91186028694342,
+        -43.44254313016449
+      ],
+      "centroid": [
+        -117.49930853498526,
+        -201.76178605414466,
+        -57.891591229577365
+      ],
+      "n_verts": 1656,
+      "n_faces": 1624,
+      "open3d_object": "Dorsal_digital_branches_of_deep_fibular_nerve.r"
     }
   }
 }

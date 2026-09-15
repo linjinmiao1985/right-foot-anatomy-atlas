@@ -2,6 +2,7 @@ import type { CSSProperties } from 'react';
 import type { Layer } from '../types/anatomy';
 import { LAYER_CONFIG, getAllLayers } from '../lib/layers';
 import { LIGAMENT_GROUPS, type LigamentGroupId } from '../lib/ligamentGroups';
+import { NERVE_GROUPS, type NerveGroupId } from '../lib/nerveGroups';
 
 interface LayerTogglesProps {
   visibleLayers: Set<Layer>;
@@ -12,6 +13,8 @@ interface LayerTogglesProps {
   realCount: Record<Layer, number>;
   visibleLigamentGroups: Set<LigamentGroupId>;
   onToggleLigamentGroup: (group: LigamentGroupId) => void;
+  visibleNerveGroups: Set<NerveGroupId>;
+  onToggleNerveGroup: (group: NerveGroupId) => void;
 }
 
 /**
@@ -28,6 +31,8 @@ export default function LayerToggles({
   realCount,
   visibleLigamentGroups,
   onToggleLigamentGroup,
+  visibleNerveGroups,
+  onToggleNerveGroup,
 }: LayerTogglesProps) {
   const layers = getAllLayers();
 
@@ -164,6 +169,54 @@ export default function LayerToggles({
         </div>
       )}
 
+      {visibleLayers.has('nerve') && (
+        <div
+          style={{
+            marginBottom: '10px',
+            padding: '8px',
+            background: 'rgba(167, 139, 250, 0.08)',
+            border: '1px solid rgba(167, 139, 250, 0.35)',
+            borderRadius: '6px',
+          }}
+          role="group"
+          aria-label="神经教学亚组筛选"
+        >
+          <div style={{ fontSize: '11px', fontWeight: 600, color: '#d6d3d1', marginBottom: '6px' }}>
+            神经亚组 · Sub-groups
+            <span style={{ fontWeight: 400, color: '#888', marginLeft: '6px' }}>教学筛选 · 非完整图谱</span>
+          </div>
+          {NERVE_GROUPS.map((g) => {
+            const on = visibleNerveGroups.has(g.id);
+            return (
+              <label
+                key={g.id}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  marginBottom: '5px',
+                  cursor: 'pointer',
+                  fontSize: '11px',
+                  color: '#e0e0e0',
+                }}
+              >
+                <input
+                  type="checkbox"
+                  checked={on}
+                  onChange={() => onToggleNerveGroup(g.id)}
+                  style={{ marginRight: '6px', cursor: 'pointer' }}
+                  aria-label={`${g.labelZh} ${g.labelEn}`}
+                />
+                <span style={{ flex: 1 }}>
+                  {g.labelZh}
+                  <span style={{ color: '#888', marginLeft: '4px' }}>{g.labelEn}</span>
+                </span>
+                <span style={{ color: '#9ca3af', fontVariantNumeric: 'tabular-nums' }}>{g.structureIds.length}</span>
+              </label>
+            );
+          })}
+        </div>
+      )}
+
       <div
         style={{
           marginTop: '8px',
@@ -212,6 +265,26 @@ export default function LayerToggles({
           >
             ℹ️ 韧带/腱层<strong>教学有用但不完整</strong>：主树 BP3D 跖长韧带 + 跟腱；BY-SA Open3D 19（外侧踝 / 三角 /
             足底腱膜 / Lisfranc 样分组 / 支持带等）。仍缺多数跗骨间细带与趾侧副韧带。可用上方亚组筛选。
+          </div>
+        )}
+
+        {visibleLayers.has('nerve') && (
+          <div
+            role="status"
+            style={{
+              marginTop: '8px',
+              padding: '6px 8px',
+              background: 'rgba(167, 139, 250, 0.12)',
+              border: '1px solid rgba(167, 139, 250, 0.45)',
+              borderRadius: '4px',
+              color: '#c4b5fd',
+              fontSize: '10px',
+              lineHeight: 1.45,
+            }}
+            title="Nerve soft-tissue layer — teaching incomplete"
+          >
+            ℹ️ 神经层<strong>教学有用但不完整</strong>：Z-Anatomy 干神经 6 + Open3D 细支/皮支/跟支/背侧趾支。
+            腓肠→LDC 以连续性说明（未另接线）；仍非完整周围神经图谱。可用上方亚组筛选。
           </div>
         )}
 

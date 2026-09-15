@@ -43,13 +43,13 @@ Under the following terms:
 
 **Source**: Open3D project via AnatomyTOOL create page  
 **License**: CC BY-SA 4.0  
-**Usage**: Dorsal interossei, proximal arteries, ankle/foot ligaments/retinacula/fascia, and Day 4x–4y fine/cutaneous/calcaneal nerve meshes under `public/models/right-foot/by-sa/` (Kabsch-aligned). See that directory's NOTICE.md.
+**Usage**: Dorsal interossei, proximal arteries, ankle/foot ligaments/retinacula/fascia, and Day 4x–4z fine/cutaneous/calcaneal/dorsal-digital nerve meshes under `public/models/right-foot/by-sa/` (Kabsch-aligned). See that directory's NOTICE.md.
 
 ### Z-Anatomy nerves (BY-SA isolate)
 
 **Source**: Z-Anatomy  
 **License**: CC BY-SA 4.0  
-**Usage**: Six trunk nerve GLBs under `by-sa/` only. Fine plantar/cutaneous/calcaneal / dorsal digital branches are Open3D (above), not Z-Anatomy.
+**Usage**: Six trunk nerve GLBs under `by-sa/` only. Fine plantar/cutaneous/calcaneal / dorsal digital (superficial + deep fibular) branches are Open3D (above), not Z-Anatomy. Sural→LDC continuity is a teaching note on LDC (no extra mesh).
 
 ## Software Libraries
 
