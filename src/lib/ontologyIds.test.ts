@@ -85,4 +85,20 @@ describe('ontologyIds', () => {
     expect(n).toBeGreaterThan(20);
     expect(n).toBeLessThan(total);
   });
+
+  it('covers 126/129 live structures with three named honest empties (Day 4at)', () => {
+    const n = Object.keys(ONTOLOGY_BY_ID).length;
+    const total = getAllStructures().length;
+    expect(total).toBe(129);
+    expect(n).toBe(126);
+    const empty = [
+      'cervical_talocalcaneal_ligament',
+      'medial_plantar_veins',
+      'lateral_plantar_vein',
+    ];
+    for (const id of empty) {
+      expect(getOntologyIds(id), id).toBeUndefined();
+    }
+    expect(n + empty.length).toBe(total);
+  });
 });

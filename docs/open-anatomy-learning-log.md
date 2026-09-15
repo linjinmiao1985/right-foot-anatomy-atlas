@@ -5,7 +5,7 @@ Living log of open-source human anatomy projects studied for the right-foot atla
 (CC0 / CC BY into main tree; BY-SA isolated under `public/models/right-foot/by-sa/` + NOTICE;
 reject NC / unknown / All Rights Reserved).
 
-**Last updated**: 2026-09-15 (Day 4au per-structure hide UX + dig)  
+**Last updated**: 2026-09-15 (Day 4aw Phase 7 checkpoint + CC0 soft-tissue watchlist; digs through #54)  
 **Status**: ongoing research — not a finished catalog.
 
 ---

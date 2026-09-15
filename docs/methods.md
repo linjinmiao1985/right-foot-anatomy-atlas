@@ -1,7 +1,7 @@
 # Methods
 
 **Project**: Right Foot Anatomy Atlas (Teaching-Grade Interactive 3D)  
-**Version**: Week 2 Day 4av / Phase 6 (teaching atlas in progress; see README + `docs/phase-6-self-review.md` live census; **129** entries / **124** unique; **53** main-tree / **71** BY-SA; 134 discrete GLBs; per-structure hide (X) persisted in teaching prefs + Esc clear policy + keyboard help + camera presets 1–5 + multi-view QA screenshots (9) + label density + sagittal clip lite; TA2 soft-tissue still incomplete — **not a finished product**)  
+**Version**: Week 2 Day 4aw / Phase 7 (teaching atlas in progress; see README + `docs/phase-7-self-review.md` live census; **129** entries / **124** unique; **53** main-tree / **71** BY-SA; ontology **126/129** citable; 134 discrete GLBs; per-structure hide persist + Esc policy + keyboard help + camera presets 1–5 + multi-view QA screenshots (9) + label density + sagittal clip lite; CC0 soft-tissue watchlist — TA2 soft-tissue still incomplete — **not a finished product**)  
 **Date**: 2026-09-15  
 **Licenses**: Code MIT | Assets CC BY 4.0 / CC0 1.0 / CC BY-SA 4.0 (isolated)
 
@@ -25,9 +25,9 @@ This atlas integrates open-licensed anatomical meshes from BodyParts3D, Universi
 | **Grouped vessels** | Several arteries/nerves are **combined** meshes (e.g. dorsal digital, plantar/dorsal metatarsal) labeled （组合）/grouped | Do not treat as per-ray / per-toe elemental atlas; no license-clean per-ray MTA found |
 | **BY-SA share** | ≈**71/124** unique structures live under ShareAlike isolate | Prefer future CC0/CC BY replacements; do not equate isolate volume with main-tree completeness |
 | **No clinical claim** | Atlas is anatomy **education** (named structures, layers, classroom cutaways) | **Not** for diagnosis, treatment planning, interventional guidance, or patient-specific modeling |
-| **Ontology IDs partial** | Optional TA2 / FMA / BP codes in `src/lib/ontologyIds.ts` when citable; omitted when unknown | Panel shows codes only when present — honest empty otherwise; not TA2-complete soft tissue |
+| **Ontology IDs partial** | **126/129** structures have ≥1 citable TA2 / FMA / BP in `src/lib/ontologyIds.ts`; **3** honest empties (cervical TC; med/lat plantar veins TNA-only) | Panel shows codes only when present — honest empty otherwise; not TA2-complete soft tissue |
 
-Full census, UX inventory, and open-data ceilings: `docs/phase-6-self-review.md`. Ontology source notes: `src/lib/ontologyIds.ts` header + `docs/terminology.md`.
+Full census, UX inventory, and open-data ceilings: `docs/phase-7-self-review.md` (week checkpoint; phase-6 retained as prior board). CC0/BY soft watchlist: `docs/cc0-soft-tissue-watchlist.md`. Ontology source notes: `src/lib/ontologyIds.ts` header + `docs/terminology.md`.
 
 ---
 
@@ -540,3 +540,11 @@ Wrote `docs/phase-6-self-review.md` (census 129/124; 53 main / 71 BY-SA; residua
 2. **Esc policy (documented)**: Esc closes help first, else clears selection + isolate + search — **does not** clear per-structure hides (persist across reload; clear via chip / Restore all / X toggle).
 3. **Dig**: #53 MnemoAtlas (MIT + CC BY); #54 human-atlas-ar (MIT + CC BY Arabic RTL). **0** mesh integrate; no SA spam.
 4. Census unchanged **129/124**. Honesty: teaching atlas in progress — **no finished-product claim**.
+
+
+## Day 4aw — Phase 7 week checkpoint + CC0 soft-tissue watchlist (2026-09-15)
+
+1. Wrote `docs/phase-7-self-review.md` (census 129/124; ontology 126/129; UX inventory; license ceilings; mining through #54; next targets).
+2. Added `docs/cc0-soft-tissue-watchlist.md` (monitor/reject table for DI / per-ray MTA / bellies / SA shrink) — **0** meshes integrated.
+3. Journal-limitations ontology row synced to 126/129; version Day 4aw / Phase 7.
+4. **Honesty**: teaching atlas in progress — **no finished-product claim**.

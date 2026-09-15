@@ -1343,3 +1343,15 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 2. **Learning log**: NEW #53 Mnemosyne-OS/MnemoAtlas; #54 maghrebme/human-atlas-ar.
 3. Checks: integrity-audit + vitest + build; commit + push.
 4. **Honesty**: teaching atlas in progress — **no finished-product claim**. Census unchanged. **No** SA mesh add.
+
+## Day 4aw (2026-09-15) — Phase 7 week checkpoint + CC0 soft-tissue watchlist
+
+**Target**: Week-quality self-review (phase-7) + one small next target (CC0 soft-tissue watchlist); no SA mesh spam.
+
+1. Pulled `d09d53d` (already current).
+2. Wrote `docs/phase-7-self-review.md`: census **129/124**, ontology **126/129**, UX inventory (prefs · hide · help · clip · cameras · sub-groups · screenshots), license ceilings, open mining through **#54**, next targets (journal readiness / Cloud Agent handback / CC0 watchlist).
+3. Implemented next-target **#3**: `docs/cc0-soft-tissue-watchlist.md` (monitor/reject for DI / per-ray MTA / bellies / SA shrink).
+4. Synced `docs/methods.md` journal-limitations ontology row + version Day 4aw / Phase 7; ontology vitest asserts 126/129 + named empties.
+5. Checks: integrity-audit + vitest + build; commit + push.
+6. **Honesty**: teaching atlas in progress — **no finished-product claim**. Census unchanged. **0** meshes.
+
