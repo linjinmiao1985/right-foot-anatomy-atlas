@@ -64,14 +64,24 @@ function App() {
   };
 
   useEffect(() => {
-    const handleEscape = (e: KeyboardEvent) => {
+    const handleKey = (e: KeyboardEvent) => {
+      const tag = (e.target as HTMLElement | null)?.tagName;
+      if (tag === 'INPUT' || tag === 'TEXTAREA' || (e.target as HTMLElement | null)?.isContentEditable) {
+        return;
+      }
       if (e.key === 'Escape') {
         handleClose();
+        return;
+      }
+      // Keyboard isolate — UX-borrow from GraphAnatomy / Grypa / Sushruta (ideas only)
+      if ((e.key === 'i' || e.key === 'I') && selectedStructure) {
+        e.preventDefault();
+        setIsolateMode((v) => !v);
       }
     };
-    window.addEventListener('keydown', handleEscape);
-    return () => window.removeEventListener('keydown', handleEscape);
-  }, []);
+    window.addEventListener('keydown', handleKey);
+    return () => window.removeEventListener('keydown', handleKey);
+  }, [selectedStructure]);
 
   const structures = getAllStructures();
   const placeholderCount = structures.reduce((acc, s) => {
@@ -99,6 +109,16 @@ function App() {
         }}
       >
         <h1 style={{ fontSize: '20px', fontWeight: 600, margin: 0 }}>右足解剖图谱 · MVP</h1>
+        <div
+          style={{ fontSize: '11px', color: '#9ca3af', marginTop: '6px', fontVariantNumeric: 'tabular-nums' }}
+          title="structures.json entries · placeholder:false vs placeholder:true (not a completeness claim)"
+        >
+          结构 {structures.length} · 实网格 {structures.length - Object.values(placeholderCount).reduce((a, b) => a + b, 0)}
+          {Object.values(placeholderCount).reduce((a, b) => a + b, 0) > 0
+            ? ` · 占位 ${Object.values(placeholderCount).reduce((a, b) => a + b, 0)}`
+            : ''}
+          {isolateMode ? ' · 隔离中 (I)' : ''}
+        </div>
       </div>
 
       <StructureSearch onSelect={handleSearchSelect} />
@@ -141,7 +161,7 @@ function App() {
         }}
       >
         <div style={{ fontSize: '11px', color: '#666' }}>
-          提示: 搜索 ZH/LA | 拖动旋转 | 滚轮缩放 | 右键平移 | 仅此隔离 | Esc 取消
+          提示: 搜索 ZH/LA | 拖动旋转 | 滚轮缩放 | 右键平移 | I 隔离/退出 | Esc 取消
         </div>
         <div
           style={{

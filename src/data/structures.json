@@ -337,6 +337,52 @@
     "placeholder": false
   },
   {
+    "id": "extensor_hallucis_longus",
+    "meshNames": [
+      "Extensor_Hallucis_Longus_R"
+    ],
+    "layer": "muscle",
+    "nameZh": "踇长伸肌",
+    "nameLa": "M. extensor hallucis longus",
+    "summaryZh": "小腿前群外在肌，肌腱止于踇趾远节趾骨底背面。功能：伸踇趾、辅助踝背伸。临床：踇长伸肌腱断裂/腱鞘炎；肌力检查用于评估深腓神经功能。UM CC0，已 Kabsch→BP3D mm。教学补充。TA2：A04.7.02.039。",
+    "placeholder": false
+  },
+  {
+    "id": "extensor_digitorum_longus",
+    "meshNames": [
+      "Extensor_Digitorum_Longus_R"
+    ],
+    "layer": "muscle",
+    "nameZh": "趾长伸肌",
+    "nameLa": "M. extensor digitorum longus",
+    "summaryZh": "小腿前群外在肌，肌腱经足背分为四束止于第2–5趾伸肌扩张。功能：伸第2–5趾、辅助踝背伸。可与第三腓骨肌伴行。UM CC0，已 Kabsch→BP3D mm。教学补充。TA2：A04.7.02.040。",
+    "placeholder": false
+  },
+  {
+    "id": "fibularis_longus",
+    "meshNames": [
+      "Fibularis_Longus_R",
+      "Peroneus_Longus_R"
+    ],
+    "layer": "muscle",
+    "nameZh": "腓骨长肌",
+    "nameLa": "M. fibularis longus",
+    "summaryZh": "小腿外侧群外在肌（TA2 用 fibularis，旧称 peroneus）。肌腱绕外踝后方、经骰骨沟斜行至足底，止于内侧楔骨与第1跖骨底。功能：足外翻、跖屈辅助、维持足横弓。临床：腓骨长短肌腱脱位/腱鞘炎。UM CC0；网格文件名保留 peroneus_longus.glb。已 Kabsch→BP3D mm。TA2：A04.7.02.041。",
+    "placeholder": false
+  },
+  {
+    "id": "tibialis_anterior",
+    "meshNames": [
+      "Tibialis_Anterior_R",
+      "Muscle_Tibialis_Anterior"
+    ],
+    "layer": "muscle",
+    "nameZh": "胫骨前肌",
+    "nameLa": "M. tibialis anterior",
+    "summaryZh": "小腿前群外在肌，起自胫骨外侧面与骨间膜，肌腱经伸肌支持带深面止于内侧楔骨与第1跖骨底内侧。主要功能：踝背伸、足内翻。临床：足下垂鉴别、胫前肌肌腱炎。UM CC0 网格，已 Kabsch→BP3D mm。教学补充外在肌（非占位）。TA2：A04.7.02.037。",
+    "placeholder": false
+  },
+  {
     "id": "abductor_hallucis",
     "meshNames": [
       "Abductor_Hallucis_R",

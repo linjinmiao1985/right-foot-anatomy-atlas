@@ -1,5 +1,5 @@
 {
-  "version": "3.4.0-um-kabsch-bake",
+  "version": "3.5.0-um-teaching-extrinsics",
   "sources": [
     "BodyParts3D Release 4.0 (DBCLS Japan)",
     "Universiti Malaya Asian Male LE MSK",
@@ -383,6 +383,42 @@
       "fma": "FMA37741",
       "name_zh": "第3足底骨间肌",
       "name_la": "Interosseus plantaris III"
+    },
+    {
+      "id": "tibialis_anterior",
+      "file": "tibialis_anterior.glb",
+      "source": "UM",
+      "license": "CC0 1.0",
+      "name_zh": "胫骨前肌",
+      "name_la": "M. tibialis anterior",
+      "note": "Day 4n: orphan GLB Kabsch-baked + wired; teaching extrinsic"
+    },
+    {
+      "id": "fibularis_longus",
+      "file": "peroneus_longus.glb",
+      "source": "UM",
+      "license": "CC0 1.0",
+      "name_zh": "腓骨长肌",
+      "name_la": "M. fibularis longus",
+      "note": "Day 4n: TA2 fibularis; filename keeps peroneus_longus.glb; Kabsch-baked"
+    },
+    {
+      "id": "extensor_digitorum_longus",
+      "file": "extensor_digitorum_longus.glb",
+      "source": "UM",
+      "license": "CC0 1.0",
+      "name_zh": "趾长伸肌",
+      "name_la": "M. extensor digitorum longus",
+      "note": "Day 4n teaching extrinsic; Kabsch-baked"
+    },
+    {
+      "id": "extensor_hallucis_longus",
+      "file": "extensor_hallucis_longus.glb",
+      "source": "UM",
+      "license": "CC0 1.0",
+      "name_zh": "踇长伸肌",
+      "name_la": "M. extensor hallucis longus",
+      "note": "Day 4n teaching extrinsic; Kabsch-baked"
     }
   ],
   "vessels": [
@@ -528,17 +564,18 @@
       "name_la": "N. suralis"
     }
   ],
-  "note": "Honest coverage (unique-structure framing 55): main tree CC BY/CC0 = 46 (26 bones all BP3D + 13 muscles + 7 vessels); BY-SA isolate = 9 (1 DI muscle + 2 proximal arteries + 6 nerves). structures.json entry-level 60/60 placeholder:false (multi-part muscles counted separately). Honest grouped vessels remain: dorsal digital + plantar metatarsal (BP3D combined). Open3D DI/PTA/fibular baked to BP3D mm via Kabsch on Calcaneus/Talus/Navicular/MT1–5 (mean residual ≈3 mm); still teaching-grade, not a finished atlas.",
+  "note": "Honest coverage: entry-level structures.json 64/64 placeholder:false after Day 4n (+4 UM CC0 teaching extrinsics: TA/FL/EDL/EHL, Kabsch→BP3D). Unique soft-tissue still incomplete vs TA2 (no ligament layer; digital nerves finer; dorsal metatarsal arteries still BP3D grouped). BY-SA fills remain isolate-only. Not a finished atlas.",
   "stats": {
     "bones": "26/26 (100%, all BP3D ISA right-foot elemental; was BP3D 22 + UM 4 distal)",
-    "muscles_unique": "14/14 (100% real meshes; 13 main CC BY/CC0 + 1 DI BY-SA isolate)",
-    "muscles_entries": "19/19 structures.json muscle entries (incl. lumbricals/PI parts)",
+    "muscles_unique": "18/18 wired unique muscle structures (17 prior + fibularis/TA/EDL/EHL teaching; DI still BY-SA)",
+    "muscles_entries": "23/23 structures.json muscle entries (incl. lumbricals/PI parts + 4 teaching extrinsics)",
     "vessels": "9/9 (100% real; 7 main BP3D incl. 2 honest grouped + 2 Open3D BY-SA proximal)",
     "nerves": "6/6 (100%, Z-Anatomy CC BY-SA 4.0, by-sa/)",
-    "main_tree_unique": "46/55 (CC BY 4.0 / CC0 only — bones all BP3D + non-SA muscles/vessels)",
+    "main_tree_unique": "50/59 approx (CC BY/CC0 bones+muscles+vessels; +4 UM extrinsics; BY-SA still separate)",
     "by_sa_unique": "9/55 (DI + PTA + fibular + 6 nerves; ShareAlike isolate)",
-    "total_unique": "55/55 real meshes with BY-SA fills (not a finished-product claim)",
-    "total_entries": "60/60 structures.json placeholder:false"
+    "total_unique": "wired entry meshes with BY-SA fills (not a finished-product claim)",
+    "total_entries": "64/64 structures.json placeholder:false",
+    "main_tree_unique_note": "Day 4n added 4 UM CC0 extrinsics to main tree; ligaments / fine digital nn. / split dorsal metatarsals still absent"
   },
   "quality_decisions": {
     "overlapping_muscles": "UM CC0 chosen over BP3D for AH/ADM/FDB (2.4-8.7x resolution)",
@@ -546,7 +583,8 @@
     "remaining_muscles": "BP3D CC BY 4.0 (FDMB, AddH oblique/transverse, FHB medial, Lumbricals, Plantar interossei, EHB)",
     "open3d_bysa": "DI 1st–4th + posterior tibial + fibular arteries under by-sa/; Kabsch→BP3D mm; prefer future CC0/CC BY replacements",
     "distal_phalanges_2_5": "BP3D ISA elemental preferred over UM Phalanges.stl (UM on separate Y≈−850 CT frame; BP3D already in foot mm frame)",
-    "proximal_phalanx_1": "BP8785/FMA43253 (right hallux proximal); BP8488 was middle phalanx of right 2nd toe"
+    "proximal_phalanx_1": "BP8785/FMA43253 (right hallux proximal); BP8488 was middle phalanx of right 2nd toe",
+    "um_teaching_extrinsics": "Day 4n wired orphan UM GLBs (TA, fibularis/peroneus longus, EDL, EHL) after Kabsch bake; CC0 main tree; not claimed as TA2-complete"
   },
   "muscles_by_sa": [
     {
@@ -567,6 +605,7 @@
   ],
   "notes": [
     "2026-09-15: replaced mislabelled cuboid/cuneiforms (were left calcaneus / left medial cuneiform / pharyngeal constrictor / distal phalanx II) with correct ISA right-foot elemental meshes BP8873/8830/9110/8730",
-    "2026-09-15: proximal_phalanx_1 remapped BP8488→BP8785/FMA43253 (FJ3310); distal_phalanx_2–5 replaced UM Y≈−850 meshes with BP3D FJ3189/3190/3191/3195 (BP8472/9005/9261/8695) — no Kabsch re-bake needed"
+    "2026-09-15: proximal_phalanx_1 remapped BP8488→BP8785/FMA43253 (FJ3310); distal_phalanx_2–5 replaced UM Y≈−850 meshes with BP3D FJ3189/3190/3191/3195 (BP8472/9005/9261/8695) — no Kabsch re-bake needed",
+    "2026-09-15 Day 4n: wired 4 UM CC0 teaching extrinsics (TA/FL/EDL/EHL) after Kabsch; TA2 ligaments/fine digital nn./split dorsal MTA still open"
   ]
 }

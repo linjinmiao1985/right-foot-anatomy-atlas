@@ -22,6 +22,10 @@ const UM_MUSCLES = new Set([
   'tibialis_posterior',
   'flexor_digitorum_longus',
   'flexor_hallucis_longus',
+  'tibialis_anterior',
+  'fibularis_longus',
+  'extensor_digitorum_longus',
+  'extensor_hallucis_longus',
 ]);
 
 /** Formerly UM distal phalanges 2–5; now BP3D ISA elemental (Day 4k). */

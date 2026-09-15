@@ -21,6 +21,14 @@ describe('assetProvenance', () => {
     expect(p.license).toBe('CC0-1.0');
   });
 
+  it('attributes newly wired UM teaching extrinsics as CC0', () => {
+    for (const id of ['tibialis_anterior', 'fibularis_longus', 'extensor_digitorum_longus', 'extensor_hallucis_longus']) {
+      const p = getStructureProvenance(id, false, 'muscle');
+      expect(p.sourceShort).toBe('UM');
+      expect(p.license).toBe('CC0-1.0');
+    }
+  });
+
   it('attributes nerves as isolated BY-SA', () => {
     const p = getStructureProvenance('tibial_nerve', false, 'nerve');
     expect(p.license).toBe('CC-BY-SA-4.0');

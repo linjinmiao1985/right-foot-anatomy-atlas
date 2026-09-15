@@ -455,3 +455,67 @@ No new CC0/CC BY foot DI or proximal-artery candidates in this dig (atlas-foundr
 - Contact paths for Zenodo 20228270 relicense (BY without NC).  
 - NIH 3D entry-by-entry crawl remaining.  
 - Avoid Anatomography BY-SA 2.1 JP full-res mirrors for main-tree claims.
+
+---
+
+## Session additions (2026-09-15 · Day 4n — TA2 gap pass + UM orphans)
+
+### Gap analysis (entry-level `placeholder:false` ≠ TA2-complete)
+
+| Status | Detail |
+|--------|--------|
+| **placeholders in structures.json** | **0** (64/64 `placeholder:false` after wiring 4 UM teaching extrinsics) |
+| **Addressed this pass** | Orphan UM CC0 GLBs for *M. tibialis anterior*, *M. fibularis longus* (file `peroneus_longus.glb`), *M. extensor digitorum longus*, *M. extensor hallucis longus* — Kabsch-rebaked with Day 4l transform, wired to main tree |
+| **Still missing vs TA2 teaching foot** | **Ligament / fascia layer** (ATFL, CFL, deltoid, spring / plantar calcaneonavicular, plantar aponeurosis, …) — no CC0/CC BY meshes found |
+| | **Finer plantar / digital nerves** (nn. digitales plantares communes/proprii, etc.) — only trunk nerves in `by-sa/` |
+| | **Dorsal metatarsal arteries detail** — BP3D still ships **grouped** dorsal digital + plantar metatarsal; individual Aa. metatarsales dorsales not split |
+| | Plantar interossei **already present** (BP3D 1st–3rd) — not a gap |
+| **Search (no new CC0/CC BY integrate)** | AnatomyTOOL/Open3D lower-limb zip local stub unusable; Open3D `Dorsal_metatarsal_arteries` previously skipped (grouped BP3D exists); Z-Anatomy/Anatomy Engine **ligamentous** system is **CC BY-SA only** → would require `by-sa/` extract (heavy .blend; deferred); Zenodo 20228270 still **BY-NC-SA**; SimTK ankle-foot license still unclear for geom reuse; MorphoSource NC/unclear soft tissue |
+| **Honesty** | Zero placeholders ≠ finished atlas. Prefer future CC0/CC BY for ligaments & fine vessels/nerves before expanding BY-SA isolate set. |
+
+### 22. AJFUTURES/anatomy-engine
+
+| Field | Value |
+|-------|-------|
+| **Name** | Anatomy Engine (MCP + inline 3D viewer) |
+| **URL** | https://github.com/AJFUTURES/anatomy-engine |
+| **Official license** | **Code & authored data: MIT** (LICENSE verified 2026-09-15); **3D meshes: CC BY-SA 4.0** Z-Anatomy / BodyParts3D (NOTICE verified) |
+| **What to learn** | MCP tool surface over anatomy graph; **ligamentous** system among 7 Z-Anatomy systems; isolate + articulate postures; dual-license NOTICE discipline; clinician-approval honesty banners |
+| **Foot atlas applicability** | Ligament meshes exist in Z-Anatomy lineage but **ShareAlike only** — candidate future `by-sa/` extract, not main-tree. MCP/graph ideas are UX/data-model only. |
+| **Action** | **UX-borrow** (isolate keyboard habit applied this session). Meshes: **isolate-SA** / monitor for CC0/BY replacements. **reject** mixing SA ligaments into main CC BY claim. |
+
+### 23. itayinbarr/brainproject
+
+| Field | Value |
+|-------|-------|
+| **Name** | Brain Atlas / brainproject |
+| **URL** | https://github.com/itayinbarr/brainproject |
+| **Official license** | Viewer code **Apache-2.0**; 3D assets **CC BY-SA 4.0** (Z-Anatomy/BP3D) — LICENSE dual notice verified 2026-09-15 |
+| **What to learn** | Explicit dual-license LICENSE appendix; atlas-registration honesty (~7 mm educational); imaging-derived nuclei remain SA; screenshot/export pipeline |
+| **Foot atlas applicability** | Brain-only meshes — **no foot ligaments/DI**. Process lesson: keep NOTICE + “approximate / educational” language when filling gaps. |
+| **Action** | **UX-borrow** / process (dual-license clarity). **reject** as foot mesh source. |
+
+### 24. biocat-ugent/Open-Anatomy-Explorer (deepened)
+
+| Field | Value |
+|-------|-------|
+| **Name** | OPANEX — Open Anatomy Explorer |
+| **URL** | https://github.com/biocat-ugent/Open-Anatomy-Explorer |
+| **Official license** | Viewer **Apache-2.0** (repo license SPDX); anatomical **assets are institute uploads** — not a redistributable CC0/BY foot pack |
+| **What to learn (actionable borrow)** | Student vs instructor UI split; quiz/label workflows; **import/export of labeled models** between institutes — motivates keeping `structures.json` + `manifest.json` exportable without bundling SA into the default share |
+| **Foot atlas applicability** | No integrable right-foot ligament/digital-nerve CC0/BY pack identified. Architecture only. |
+| **Action** | **UX-borrow** (label/quiz later). **monitor** asset library licenses entry-by-entry. **reject** assuming OPANEX models are free to vendor. |
+
+### UX applied this session
+
+1. **Keyboard isolate `I`** (GraphAnatomy / Grypa / Anatomy Engine / Sushruta ideas) — toggles isolate when a structure is selected; Esc clears; hint + panel button updated.  
+2. **Structure count badge** under title — entry counts + isolate status; title attribute states this is **not** a completeness claim.
+
+### Mesh decisions
+
+| Candidate | License | Decision |
+|-----------|---------|----------|
+| UM orphan TA / FL / EDL / EHL GLBs | **CC0 1.0** | **Integrated** (Kabsch bake + structures + FootModel) |
+| Z-Anatomy / Anatomy Engine ligaments | BY-SA 4.0 | **Not integrated** this pass (blend extract cost; prefer CC0/BY) |
+| New CC0/BY ligaments / digital nn. / split dorsal MTA | — | **None found** |
+

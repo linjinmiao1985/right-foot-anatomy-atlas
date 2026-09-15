@@ -1,7 +1,7 @@
 # Methods
 
 **Project**: Right Foot Anatomy Atlas (Teaching-Grade Interactive 3D)  
-**Version**: Week 2 Day 4g (57/60 structures real ≈95% entry-level; unique-structure framing 52/55 ≈95%)  
+**Version**: Week 2 Day 4n (64/64 structures.json placeholder:false; TA2 soft-tissue still incomplete)  
 **Date**: 2026-09-15  
 **Licenses**: Code MIT | Assets CC BY 4.0 / CC0 1.0 / CC BY-SA 4.0 (isolated)
 
@@ -9,7 +9,7 @@
 
 ## Overview
 
-This atlas integrates open-licensed anatomical meshes from three sources (BodyParts3D, Universiti Malaya, Z-Anatomy) to create an interactive web-based teaching tool for right foot anatomy. Real 3D meshes achieve **100% osteology coverage (26/26 bones including sesamoids)** plus 93% muscles (13/14 unique), 78% vessels (7/9; includes 2 honest BP3D grouped meshes), and 100% nerves (6/6). Placeholder geometry represents 3 unavailable structures (1 muscle + 2 proximal vessels).
+This atlas integrates open-licensed anatomical meshes from three sources (BodyParts3D, Universiti Malaya, Z-Anatomy) to create an interactive web-based teaching tool for right foot anatomy. Real 3D meshes cover **osteology 26/26**, wired muscles including UM teaching extrinsics (TA/FL/EDL/EHL) + BY-SA DI, vessels including 2 honest BP3D grouped meshes + BY-SA proximal arteries, and 6 BY-SA trunk nerves. **Entry-level placeholders: 0** — but this is **not** TA2-complete (no ligaments/fascia layer; no fine digital nerves; dorsal metatarsal arteries not individually split). See learning-log Day 4n gap table.
 
 **Target Audience**: Medical students, anatomy instructors, foot/ankle residents, physical therapists.  
 **NOT for**: Clinical diagnosis, treatment planning, surgical navigation, or patient-specific modeling.
@@ -319,3 +319,20 @@ Complete commit history (Day 1-7) documents:
 
 **Document Version**: 1.0 (2026-09-14)  
 **Atlas Version**: Week Sprint Final (88% real coverage, 38/43 structures)
+
+
+---
+
+## Day 4n — TA2 teaching gaps (2026-09-15)
+
+**placeholders**: none in `structures.json` (64 entries, all `placeholder:false`).
+
+| Gap | Why still open | Search note |
+|-----|----------------|-------------|
+| Ligaments / plantar fascia | No CC0/CC BY teaching meshes located | Z-Anatomy / Anatomy Engine ligamentous = BY-SA only; SimTK OpenSim geom license unclear; Zenodo CT foot muscles BY-NC-SA |
+| Finer plantar/digital nerves | Only trunk nerves (Z-Anatomy BY-SA) | Prefer future CC0/BY over expanding SA isolate |
+| Individual dorsal metatarsal arteries | BP3D grouped dorsal digital + plantar metatarsal remain | Open3D had dorsal MTA (BY-SA); skipped earlier to avoid SA duplication of grouped teaching vessels |
+| Plantar interossei | **Present** (BP3D 1st–3rd) | Not a gap |
+
+**Integrated this day**: 4 orphan UM CC0 extrinsic GLBs (tibialis anterior, fibularis longus / peroneus_longus.glb, EDL, EHL) Kabsch-baked with `third_party/um/um_to_bp3d_transform.json`.
+

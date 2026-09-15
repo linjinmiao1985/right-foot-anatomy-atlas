@@ -93,6 +93,16 @@ def main():
         footmodel_content = f.read()
     real_models = extract_real_models(footmodel_content)
     glb_files = get_glb_files()
+    # ADDITIONAL_MUSCLE_PARTS (multi-part muscles) are referenced but not in REAL_* maps
+    additional_paths = set(re.findall(
+        r"ADDITIONAL_MUSCLE_PARTS.*?\{(.*?)\};",
+        footmodel_content,
+        re.DOTALL,
+    ))
+    additional_glbs = set()
+    for block in additional_paths:
+        for m in re.findall(r"['\"](/models/right-foot/[^'\"]+\.glb)['\"]", block):
+            additional_glbs.add(m)
     
     # Statistics
     total_structures = len(structures)
@@ -152,7 +162,7 @@ def main():
     
     # Check 3: Every GLB must have a structures.json entry with placeholder: false
     print(f"{BLUE}Check 3: GLB files → structures.json placeholder:false{RESET}")
-    referenced_glbs = {glb_path for layer in real_models.values() for _, glb_path in layer}
+    referenced_glbs = {glb_path for layer in real_models.values() for _, glb_path in layer} | additional_glbs
     orphaned_glbs = glb_files - referenced_glbs
     
     if orphaned_glbs:

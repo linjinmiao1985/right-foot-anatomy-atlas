@@ -52,9 +52,9 @@ const REAL_BONE_MODELS: Record<string, string> = {
   'distal_phalanx_5': '/models/right-foot/distal_phalanx_5_BP8695.glb', // BP3D
 };
 
-// Real muscle GLB models - 20 right foot muscles (BP3D 12 + UM CC0 8)
+// Real muscle GLB models - BP3D intrinsics + UM CC0 (8 prior + 4 teaching extrinsics)
 const REAL_MUSCLE_MODELS: Record<string, string> = {
-  // UM CC0 (8): Intrinsics (5) + Extrinsics (3)
+  // UM CC0: Intrinsics (5) + Extrinsics (3 P0 + 4 teaching)
   'abductor_hallucis': '/models/right-foot/abductor_hallucis.glb', // UM (8.7x BP3D)
   'flexor_digitorum_brevis': '/models/right-foot/flexor_digitorum_brevis.glb', // UM (2.4x BP3D)
   'abductor_digiti_minimi': '/models/right-foot/abductor_digiti_minimi.glb', // UM (4.5x BP3D)
@@ -63,6 +63,10 @@ const REAL_MUSCLE_MODELS: Record<string, string> = {
   'tibialis_posterior': '/models/right-foot/tibialis_posterior.glb', // UM extrinsic
   'flexor_digitorum_longus': '/models/right-foot/flexor_digitorum_longus.glb', // UM extrinsic
   'flexor_hallucis_longus': '/models/right-foot/flexor_hallucis_longus.glb', // UM extrinsic
+  'tibialis_anterior': '/models/right-foot/tibialis_anterior.glb', // UM extrinsic (Day 4n Kabsch)
+  'fibularis_longus': '/models/right-foot/peroneus_longus.glb', // UM; TA2 fibularis, file keeps peroneus
+  'extensor_digitorum_longus': '/models/right-foot/extensor_digitorum_longus.glb', // UM extrinsic
+  'extensor_hallucis_longus': '/models/right-foot/extensor_hallucis_longus.glb', // UM extrinsic
   
   // BP3D CC BY 4.0 (12): Remaining intrinsics
   'extensor_hallucis_brevis': '/models/right-foot/extensor_hallucis_brevis.glb',

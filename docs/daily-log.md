@@ -1035,3 +1035,17 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 
 **Tests/Build**: integrity-audit + vitest + build (this commit).
 
+
+## Day 4n (Tue 2026-09-15) — TA2 gap pass + UM teaching extrinsics
+
+**Focus**: Gap analysis vs TA2; prefer CC0/BY fills; UX keyboard isolate; learning-log dig.
+
+**Done**:
+- Gap doc: 0 placeholders; ligaments / fine digital nn. / split dorsal MTA still open; plantar interossei already present
+- Wired 4 UM CC0 orphan GLBs (TA, fibularis longus, EDL, EHL) after Kabsch rebake
+- UX: `I` keyboard isolate + header structure-count badge (not a completeness claim)
+- Learning log: +3 projects (anatomy-engine, brainproject, OPANEX deepened)
+- integrity-audit + vitest + build; commit/push
+
+**Not claimed**: finished product / TA2-complete atlas.
+

@@ -138,7 +138,7 @@ export default function StructurePanel({ structure, onClose, isolateMode = false
           }}
           title="隐藏其他结构，仅显示当前选择"
         >
-          {isolateMode ? '退出隔离 · Exit isolate' : '仅此 · Isolate (hide others)'}
+          {isolateMode ? '退出隔离 · Exit isolate (I)' : '仅此 · Isolate (I / hide others)'}
         </button>
       )}
 

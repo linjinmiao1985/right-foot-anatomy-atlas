@@ -120,5 +120,12 @@
     "flexor_digitorum_longus",
     "flexor_hallucis_longus"
   ],
-  "note": "Baked into muscle GLB POSITION (+NORMAL rotation). Render scale remains 0.01. Teaching-grade, not surgical registration."
+  "note": "Baked into muscle GLB POSITION (+NORMAL rotation). Render scale remains 0.01. Teaching-grade, not surgical registration.",
+  "also_baked": [
+    "tibialis_anterior.glb",
+    "peroneus_longus.glb",
+    "extensor_digitorum_longus.glb",
+    "extensor_hallucis_longus.glb"
+  ],
+  "also_baked_note": "Day 4n: teaching extrinsics were on raw UM frame; rebaked with same Kabsch as Day 4l 8 muscles; raw copies under third_party/um/raw_pre_kabsch/"
 }
