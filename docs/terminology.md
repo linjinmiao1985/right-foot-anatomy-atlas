@@ -2,7 +2,7 @@
 
 **文档目的**: 记录本图谱使用的解剖学命名标准、交叉验证方法和术语来源
 
-**最后更新**: 2026-09-14 Phase 2
+**最后更新**: 2026-09-15 Week 2 Day 4u (ligament terminology pass)
 
 ---
 
@@ -88,8 +88,8 @@
 | metatarsal_3 | Os metatarsi III | 第三跖骨 | 24494 | ✅ | 人解9版 p168 | ✅ |
 | metatarsal_4 | Os metatarsi IV | 第四跖骨 | 24495 | ✅ | 人解9版 p168 | ✅ |
 | metatarsal_5 | Os metatarsi V | 第五跖骨 | 24491 | ✅ | 人解9版 p168 | ✅ |
-| proximal_phalanx_1 | Phalanx proximalis hallucis | 拇趾近节趾骨 | 32951 | ✅ | 人解9版 p168 | ✅ |
-| distal_phalanx_1 | Phalanx distalis hallucis | 拇趾远节趾骨 | 32952 | ✅ | 人解9版 p168 | ✅ |
+| proximal_phalanx_1 | Phalanx proximalis hallucis | 踇趾近节趾骨 | 32951 | ✅ | 人解9版 p168 | ✅ |
+| distal_phalanx_1 | Phalanx distalis hallucis | 踇趾远节趾骨 | 32952 | ✅ | 人解9版 p168 | ✅ |
 | phalanges_2_5 | Phalanges digitorum pedis II-V | 第2-5趾趾骨 | 组合 | ✅ | 人解9版 p168 | ✅ |
 
 **骨骼层验证总结**: 15/15 ✅ 全部通过TA2和中文标准验证
@@ -100,10 +100,10 @@
 |----|-------------|---------|--------|---------|---------|-----|
 | tibialis_posterior | M. tibialis posterior | 胫骨后肌 | ✅ | 人解9版 小腿后群 | N. tibialis | ✅ |
 | flexor_digitorum_longus | M. flexor digitorum longus | 趾长屈肌 | ✅ | 人解9版 小腿后群 | N. tibialis | ✅ |
-| flexor_hallucis_longus | M. flexor hallucis longus | 拇长屈肌 | ✅ | 人解9版 小腿后群 | N. tibialis | ✅ |
-| abductor_hallucis | M. abductor hallucis | 拇展肌 | ✅ | 人解9版 足底内侧群 | N. plantaris medialis | ✅ |
-| flexor_hallucis_brevis | M. flexor hallucis brevis | 拇短屈肌 | ✅ | 人解9版 足底内侧群 | N. plantaris medialis | ✅ |
-| adductor_hallucis | M. adductor hallucis | 拇收肌 | ✅ | 人解9版 足底深层 | N. plantaris lateralis | ✅ |
+| flexor_hallucis_longus | M. flexor hallucis longus | 踇长屈肌 | ✅ | 人解9版 小腿后群 | N. tibialis | ✅ |
+| abductor_hallucis | M. abductor hallucis | 踇展肌 | ✅ | 人解9版 足底内侧群 | N. plantaris medialis | ✅ |
+| flexor_hallucis_brevis | M. flexor hallucis brevis | 踇短屈肌 | ✅ | 人解9版 足底内侧群 | N. plantaris medialis | ✅ |
+| adductor_hallucis | M. adductor hallucis | 踇收肌 | ✅ | 人解9版 足底深层 | N. plantaris lateralis | ✅ |
 | flexor_digitorum_brevis | M. flexor digitorum brevis | 趾短屈肌 | ✅ | 人解9版 足底中间群 | N. plantaris medialis | ✅ |
 | quadratus_plantae | M. quadratus plantae | 足底方肌 | ✅ | 人解9版 足底中间群 | N. plantaris lateralis | ✅ |
 | lumbricals | Mm. lumbricales pedis | 蚓状肌 | ✅ | 人解9版 足底深层 | 混合 | ✅ |
@@ -168,6 +168,44 @@
 
 ---
 
+
+### 韧带 / 腱膜 / 支持带 / 肌腱层 (Ligamenta · Aponeuroses · Retinacula · Tendines)
+
+> **诚实声明**: 本层教学有用但不完整（主树 BP3D 2 + BY-SA Open3D 19）。拉丁文对齐 TA2 风格；中文优先人解/PRC 名词（踇、腓骨肌、足底/跖侧）。临床俗称（弹簧韧带、ATFL、跟腱）可出现在 `summaryZh`，`nameLa` 保持 TA2 拉丁。
+
+| ID | 拉丁文 (TA2-oriented) | 中文标准 | 亚组 | 许可 | 状态 |
+|----|----------------------|---------|------|------|------|
+| long_plantar_ligament | Ligamentum plantare longum | 跖长韧带 | 足底/足弓 | CC BY 主树 | ✅ |
+| calcaneal_tendon | Tendo calcaneus | 跟腱 | 肌腱 | CC BY 主树 | ✅ 肌腱非韧带 |
+| anterior_talofibular_ligament | Ligamentum talofibulare anterius | 距腓前韧带 | 外侧踝 | BY-SA | ✅ |
+| calcaneofibular_ligament | Ligamentum calcaneofibulare | 跟腓韧带 | 外侧踝 | BY-SA | ✅ |
+| posterior_talofibular_ligament | Ligamentum talofibulare posterius | 距腓后韧带 | 外侧踝 | BY-SA | ✅ |
+| tibionavicular_ligament | Ligamentum tibionaviculare | 胫舟韧带 | 三角韧带 | BY-SA | ✅ 部分 |
+| tibiocalcaneal_ligament | Ligamentum tibiocalcaneum | 胫跟韧带 | 三角韧带 | BY-SA | ✅ 部分 |
+| posterior_tibiotalar_ligament | Ligamentum tibiotalare posterius | 胫距后韧带 | 三角韧带 | BY-SA | ✅ 部分 |
+| anterior_tibiotalar_ligament | Ligamentum tibiotalare anterius | 胫距前韧带（胫弹簧韧带） | 三角韧带 | BY-SA | ✅ 部分 |
+| plantar_calcaneonavicular_ligament | Ligamentum calcaneonaviculare plantare | 足底跟舟韧带（弹簧韧带） | 足底/足弓 | BY-SA | ✅ |
+| plantar_calcaneocuboid_ligament | Ligamentum calcaneocuboideum plantare | 足底跟骰韧带（跖短韧带） | 足底/足弓 | BY-SA | ✅ |
+| plantar_aponeurosis | Aponeurosis plantaris | 足底腱膜 | 足底/足弓 | BY-SA | ✅ 腱膜非韧带 |
+| bifurcate_ligament | Ligamentum bifurcatum | 分歧韧带 | 足底/足弓 | BY-SA | ✅ |
+| cuneometatarsal_interosseous_ligaments | Ligamenta cuneometatarsalia interossea | 楔跖骨间韧带（Lisfranc 样分组） | Lisfranc/TMT | BY-SA | ⚠️ 分组网格 |
+| dorsal_tarsometatarsal_ligaments | Ligamenta tarsometatarsalia dorsalia | 背侧跗跖韧带（分组） | Lisfranc/TMT | BY-SA | ⚠️ 分组网格 |
+| plantar_tarsometatarsal_ligaments | Ligamenta tarsometatarsalia plantaria | 跖侧跗跖韧带（分组） | Lisfranc/TMT | BY-SA | ⚠️ 分组网格 |
+| flexor_retinaculum_of_ankle | Retinaculum musculorum flexorum | 屈肌支持带 | 支持带 | BY-SA | ✅ |
+| superior_extensor_retinaculum | Retinaculum musculorum extensorum superius | 伸肌上支持带 | 支持带 | BY-SA | ✅ |
+| inferior_extensor_retinaculum | Retinaculum musculorum extensorum inferius | 伸肌下支持带 | 支持带 | BY-SA | ✅ |
+| superior_fibular_retinaculum | Retinaculum musculorum fibularium superius | 腓骨肌上支持带 | 支持带 | BY-SA | ✅ TA2 fibularis |
+| inferior_fibular_retinaculum | Retinaculum musculorum fibularium inferius | 腓骨肌下支持带 | 支持带 | BY-SA | ✅ TA2 fibularis |
+
+**韧带层术语要点**:
+- **踇 vs 拇**: 足部一律用 **踇**（hallux）；手部拇指为拇（pollex）——不得混用。
+- **腓骨肌 vs 腓侧**: 支持带/肌用 **腓骨肌**（Mm. fibulares）；方向词用外侧/内侧，避免「腓侧支持带」口语。
+- **足底 vs 跖**: `plantare` → 优先 **足底**（人解）或 **跖侧**（方向）；本图谱韧带名用「足底跟舟/跟骰」，跗跖方向词用「跖侧」。
+- **临床俗称**: ATFL/CFL/PTFL、弹簧韧带、跟腱、Lisfranc — 可写入摘要，不替代 `nameLa`。
+- **未纳入**: 多数背/跖侧楔舟、楔间、骰舟、距跟骨间细带、趾侧副韧带等 — Open3D OBJ 仍有命名对象，本 pass 未扩量（质量优先）。
+
+---
+
 ## 命名一致性规则
 
 ### 1. 方向术语标准化
@@ -184,7 +222,7 @@
 ### 2. 缩写和简称（不使用于本图谱）
 
 **避免使用**:
-- ❌ "拇屈" → ✅ "拇短屈肌" （完整术语）
+- ❌ "踇屈" → ✅ "踇短屈肌" （完整术语）
 - ❌ "趾屈" → ✅ "趾短屈肌" or "趾长屈肌"
 - ❌ "TP" → ✅ "胫骨后肌" （英文缩写不用于中文）
 
@@ -213,7 +251,7 @@
 - [ ] 添加FMA概念ID到每个结构
 - [ ] 扩展summaryZh字段，添加临床意义（例如：常见损伤、触诊标志）
 - [ ] 为每个肌肉添加起止点详细描述
-- [ ] 添加关节和韧带（当前版本未包含）
+- [x] 韧带/腱膜/支持带教学层已起步（仍不完整；见上表）
 - [ ] 邀请解剖学专家审查（待联系）
 
 ---

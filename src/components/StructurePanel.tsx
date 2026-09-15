@@ -116,6 +116,23 @@ export default function StructurePanel({ structure, onClose, isolateMode = false
         >
           {provenance.sourceShort}
         </span>
+        <span
+          style={{
+            padding: '2px 7px',
+            background: provenance.isolatedBySa ? '#7c3aed' : '#15803d',
+            color: '#f8fafc',
+            borderRadius: '3px',
+            fontSize: '10px',
+            fontWeight: 700,
+          }}
+          title={
+            provenance.isolatedBySa
+              ? 'CC BY-SA ShareAlike isolate (by-sa/) — not main-tree CC BY/CC0'
+              : 'Main tree (CC BY 4.0 / CC0) — redistributable with attribution where required'
+          }
+        >
+          {provenance.isolatedBySa ? 'ShareAlike' : '主树 · Main'}
+        </span>
         <span style={{ fontSize: '11px', color: '#bbb', lineHeight: 1.4 }}>
           {licenseLabel(provenance.license)}
           {provenance.isolatedBySa ? ' · by-sa/ 隔离' : ''}

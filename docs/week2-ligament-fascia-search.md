@@ -228,3 +228,47 @@ Reject rule: wrong side (X>0) OR min_expect >55 mm (75 mm for bands/retinacula/p
 ### Honesty
 
 Ligament/tendon layer now: BP3D long plantar + Achilles **plus** 19 Open3D BY-SA teaching meshes (4 Day 4s + 15 Day 4t). Still **not** a finished ligament atlas — many OBJ bands remain; Lisfranc/retinacula are grouped teaching meshes; Kabsch mean residual ≈2.6 mm (teaching-grade).
+
+---
+
+## Day 4u — Quality pass (census · terminology · UX; no new mesh volume)
+
+**Date**: 2026-09-15  
+**Goal**: Shift from ligament volume to rigor after Day 4t expansion.
+
+### Census (honest)
+
+| Framing | Count | Split |
+|---------|-------|-------|
+| Unique | **80** | Main **52** (CC BY/CC0) · BY-SA **28** |
+| `structures.json` entries | **85** | Main 57 · BY-SA 28 |
+| Ligament/tendon layer | **21** | BP3D 2 + Open3D BY-SA 19 — **teaching-useful, incomplete** |
+
+Unique collapse: lumbricals×4→1, plantar interossei×3→1. Muscles unique = 18 (not the older 14 claim).
+
+### Terminology
+
+- Verified all 21 ligament/tendon `nameZh` / `nameLa` against TA2-oriented Latin + PRC/人解 Chinese.
+- Fixes: strip clinical aliases from `nameLa` (ATFL/CFL/spring/deltoid part); `跖跟舟/跖跟骰` → `足底跟舟/足底跟骰`; retinacula drop redundant `踝` prefix; `腓骨肌` support bands kept (not 腓侧).
+- Global 拇→踇 in `structures.json` hallux contexts (e.g. dorsalis pedis summary). `docs/terminology.md` ligament table added; bone/muscle tables corrected to 踇.
+
+### UX / teaching
+
+- StructurePanel: explicit **主树 · Main** vs **ShareAlike** license badge.
+- Ligament sub-group filter: lateral ankle / deltoid / plantar-arch / Lisfranc / retinacula / tendon.
+
+### Optional Open3D rescan (no integrate)
+
+`/workspace/literature/open3d-assets/lower-limb.obj` still contains clearly named RIGHT foot bands **not** wired, including e.g.:
+
+- Talonavicular; dorsal/plantar cuneonavicular; intercuneiform (dorsal/plantar/interosseous); dorsal/plantar cuboideonavicular; dorsal calcaneocuboid; plantar cuneocuboid
+- Interosseous / medial / posterior / anterior / cervical talocalcaneal
+- Deep / superficial transverse metatarsal; dorsal/plantar metatarsal; metatarsal interosseous; intersesamoid
+- Long_plantar_ligament.r (skipped — BP3D main-tree already)
+- MTP “palmar” (plantar plate) bands — naming QA needed before any wire
+
+**Decision**: **do not integrate** this pass — rigor over volume; prefer future per-band spatial QA + census honesty first.
+
+### Honesty
+
+No finished-product claim. Ligament layer remains incomplete teaching set.

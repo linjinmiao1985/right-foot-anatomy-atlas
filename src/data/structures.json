@@ -650,7 +650,7 @@
     "layer": "vessel",
     "nameZh": "足背动脉",
     "nameLa": "A. dorsalis pedis",
-    "summaryZh": "胫前动脉在踝关节前方的延续，是足背主要供血动脉。走行：经下伸肌支持带深面至足背，与腓深神经伴行，沿第1-2跖骨间隙至第1跖骨间隙近端。分支：跗内侧动脉、跗外侧动脉、弓状动脉、第1跖背动脉、足底深支（穿第1跖骨间隙至足底与足底动脉弓吻合）。临床意义：足背动脉搏动是重要体格检查（在拇长伸肌腱和趾长伸肌腱之间触及），搏动减弱提示下肢动脉闭塞；约10-15%人群足背动脉发育不良或缺如，此时足底血供依赖胫后动脉；足背皮瓣（dorsalis pedis flap）以本动脉为蒂；足背动脉造影评估下肢血供。",
+    "summaryZh": "胫前动脉在踝关节前方的延续，是足背主要供血动脉。走行：经下伸肌支持带深面至足背，与腓深神经伴行，沿第1-2跖骨间隙至第1跖骨间隙近端。分支：跗内侧动脉、跗外侧动脉、弓状动脉、第1跖背动脉、足底深支（穿第1跖骨间隙至足底与足底动脉弓吻合）。临床意义：足背动脉搏动是重要体格检查（在踇长伸肌腱和趾长伸肌腱之间触及），搏动减弱提示下肢动脉闭塞；约10-15%人群足背动脉发育不良或缺如，此时足底血供依赖胫后动脉；足背皮瓣（dorsalis pedis flap）以本动脉为蒂；足背动脉造影评估下肢血供。",
     "placeholder": false
   },
   {
@@ -766,7 +766,7 @@
     ],
     "layer": "ligament",
     "nameZh": "跟腱",
-    "nameLa": "Tendo calcaneus (tendo Achillis)",
+    "nameLa": "Tendo calcaneus",
     "summaryZh": "跟腱（BP3D 右足 elemental FJ1405 / BP5098 / FMA258847，CC BY 4.0）。由腓肠肌与比目鱼肌肌腱汇合形成，止于跟骨结节。教学归类：置于「韧带/腱」图层，明确标注为**肌腱**（非韧带）。临床：跟腱断裂、止点病、Haglund 畸形相关。TA2：A04.7.02.002（近似）。教学级示意，非手术导航级配准。",
     "placeholder": false
   },
@@ -778,7 +778,7 @@
     ],
     "layer": "ligament",
     "nameZh": "距腓前韧带",
-    "nameLa": "Ligamentum talofibulare anterius (ATFL)",
+    "nameLa": "Ligamentum talofibulare anterius",
     "summaryZh": "踝关节外侧复合体最常损伤的韧带（Open3DModel lower-limb Anterior_talofibular_ligament.r，CC BY-SA 4.0，by-sa/ 隔离）。连接外踝前缘与距骨颈外侧。教学：内翻扭伤首发结构。Kabsch 对齐至 BP3D mm（同 DI/近端动脉 transform，均值残差约 2.6 mm）。非 BP3D CC BY 主树；非完整韧带图谱。TA2：A03.6.10.002（近似）。",
     "placeholder": false
   },
@@ -790,7 +790,7 @@
     ],
     "layer": "ligament",
     "nameZh": "跟腓韧带",
-    "nameLa": "Ligamentum calcaneofibulare (CFL)",
+    "nameLa": "Ligamentum calcaneofibulare",
     "summaryZh": "外侧踝复合体第二韧带（Open3DModel Calcaneofibular_ligament.r，CC BY-SA 4.0，by-sa/）。外踝尖至跟骨外侧面；内翻时与 ATFL 协同。教学级 Kabsch→BP3D；非手术配准。TA2：A03.6.10.003（近似）。",
     "placeholder": false
   },
@@ -802,8 +802,8 @@
       "Spring_Ligament_R"
     ],
     "layer": "ligament",
-    "nameZh": "跖跟舟韧带（弹簧韧带）",
-    "nameLa": "Ligamentum calcaneonaviculare plantare (spring ligament)",
+    "nameZh": "足底跟舟韧带（弹簧韧带）",
+    "nameLa": "Ligamentum calcaneonaviculare plantare",
     "summaryZh": "维持内侧纵弓的关键韧带（Open3DModel Plantar_calcaneonavicular_ligament.r，CC BY-SA 4.0，by-sa/）。跟骨载距突至舟骨跖面，承托距骨头。教学：平足/弹簧韧带复合体损伤相关。Kabsch→BP3D mm。非完整足弓韧带集。TA2：A03.6.10.204（近似）。",
     "placeholder": false
   },
@@ -816,7 +816,7 @@
     ],
     "layer": "ligament",
     "nameZh": "足底腱膜",
-    "nameLa": "Aponeurosis plantaris (plantar fascia)",
+    "nameLa": "Aponeurosis plantaris",
     "summaryZh": "足底深层致密腱膜（Open3DModel Plantar_aponeurosis.r，CC BY-SA 4.0，by-sa/）。起自跟骨结节，向前分束至趾。教学：足底筋膜炎、Windlass 机制。BP3D ISA 无此 elemental；本网格非 CC BY 主树。Kabsch→BP3D mm。仍非「完整」软组织图谱。TA2：A04.7.03.031（近似）。",
     "placeholder": false
   },
@@ -828,7 +828,7 @@
     ],
     "layer": "ligament",
     "nameZh": "胫舟韧带",
-    "nameLa": "Ligamentum tibionaviculare (deltoid part)",
+    "nameLa": "Ligamentum tibionaviculare",
     "summaryZh": "三角韧带浅层前部（Open3D Tibionavicular_ligament.r，CC BY-SA 4.0，by-sa/）。内踝至舟骨。教学：三角韧带复合体之一。Kabsch→BP3D mm。非完整三角韧带图谱。",
     "placeholder": false
   },
@@ -840,7 +840,7 @@
     ],
     "layer": "ligament",
     "nameZh": "胫跟韧带",
-    "nameLa": "Ligamentum tibiocalcaneum (deltoid part)",
+    "nameLa": "Ligamentum tibiocalcaneum",
     "summaryZh": "三角韧带浅层中部（Open3D Tibiocalcaneal_ligament.r，CC BY-SA 4.0，by-sa/）。内踝至跟骨载距突。教学：三角韧带复合体之一。Kabsch→BP3D mm。",
     "placeholder": false
   },
@@ -852,7 +852,7 @@
     ],
     "layer": "ligament",
     "nameZh": "胫距后韧带",
-    "nameLa": "Ligamentum tibiotalare posterius (deltoid part)",
+    "nameLa": "Ligamentum tibiotalare posterius",
     "summaryZh": "三角韧带深层后部（Open3D Posterior_tibiotalar_ligament.r，CC BY-SA 4.0，by-sa/）。内踝至距骨后内侧。教学：三角韧带复合体之一。Kabsch→BP3D mm。",
     "placeholder": false
   },
@@ -865,7 +865,7 @@
     ],
     "layer": "ligament",
     "nameZh": "胫距前韧带（胫弹簧韧带）",
-    "nameLa": "Ligamentum tibiotalare anterius (tibiospring)",
+    "nameLa": "Ligamentum tibiotalare anterius",
     "summaryZh": "三角韧带前/深部（Open3D Anterior_tibiotalar_ligament_(Tibiospring_lig.).r，CC BY-SA 4.0，by-sa/）。教学命名含 tibiospring。Kabsch→BP3D mm。非完整三角韧带。",
     "placeholder": false
   },
@@ -877,8 +877,8 @@
       "Ligamentum_calcaneocuboideum_plantare_Right"
     ],
     "layer": "ligament",
-    "nameZh": "跖跟骰韧带（短跖韧带）",
-    "nameLa": "Ligamentum calcaneocuboideum plantare (short plantar)",
+    "nameZh": "足底跟骰韧带（跖短韧带）",
+    "nameLa": "Ligamentum calcaneocuboideum plantare",
     "summaryZh": "短跖韧带（Open3D Plantar_calcaneocuboid_ligament.r，CC BY-SA 4.0，by-sa/）。跟骨至骰骨跖面；与跖长韧带协同。BP3D 仅有长跖韧带 elemental。Kabsch→BP3D mm。",
     "placeholder": false
   },
@@ -903,7 +903,7 @@
     ],
     "layer": "ligament",
     "nameZh": "距腓后韧带",
-    "nameLa": "Ligamentum talofibulare posterius (PTFL)",
+    "nameLa": "Ligamentum talofibulare posterius",
     "summaryZh": "外侧踝复合体第三韧带（Open3D Posterior_talofibular_ligament.r，CC BY-SA 4.0，by-sa/）。外踝至距骨后外侧突。与 ATFL/CFL 同层教学。Kabsch→BP3D mm。",
     "placeholder": false
   },
@@ -914,8 +914,8 @@
       "Lisfranc_Ligament_Complex_R"
     ],
     "layer": "ligament",
-    "nameZh": "楔跖骨间韧带（Lisfranc 样）",
-    "nameLa": "Ligamenta cuneometatarsalia interossea (Lisfranc-ish)",
+    "nameZh": "楔跖骨间韧带（Lisfranc 样分组）",
+    "nameLa": "Ligamenta cuneometatarsalia interossea",
     "summaryZh": "楔骨–跖骨骨间韧带带（Open3D Cuneometatarsal_interosseus_ligaments.r，CC BY-SA 4.0，by-sa/）。Lisfranc 复合体教学示意——分组网格，非逐条解剖命名分拆。Kabsch→BP3D mm。",
     "placeholder": false
   },
@@ -925,7 +925,7 @@
       "Dorsal_Tarsometatarsal_Ligaments_R"
     ],
     "layer": "ligament",
-    "nameZh": "背侧跗跖韧带",
+    "nameZh": "背侧跗跖韧带（分组）",
     "nameLa": "Ligamenta tarsometatarsalia dorsalia",
     "summaryZh": "背侧跗跖韧带带（Open3D Dorsal_tarsometatarsal_ligaments.r，CC BY-SA 4.0，by-sa/）。Lisfranc 关节背侧稳定相关。分组网格。Kabsch→BP3D mm。",
     "placeholder": false
@@ -936,7 +936,7 @@
       "Plantar_Tarsometatarsal_Ligaments_R"
     ],
     "layer": "ligament",
-    "nameZh": "跖侧跗跖韧带",
+    "nameZh": "跖侧跗跖韧带（分组）",
     "nameLa": "Ligamenta tarsometatarsalia plantaria",
     "summaryZh": "跖侧跗跖韧带带（Open3D Plantar_tarsometatarsal_ligaments.r，CC BY-SA 4.0，by-sa/）。Lisfranc 关节跖侧。分组网格。Kabsch→BP3D mm。",
     "placeholder": false
@@ -948,8 +948,8 @@
       "Laciniate_Ligament_R"
     ],
     "layer": "ligament",
-    "nameZh": "踝屈肌支持带",
-    "nameLa": "Retinaculum musculorum flexorum (ankle)",
+    "nameZh": "屈肌支持带",
+    "nameLa": "Retinaculum musculorum flexorum",
     "summaryZh": "踝屈肌支持带（Open3D Flexor_retinaculum_of_ankle.r，CC BY-SA 4.0，by-sa/）。覆盖跖管。教学：支持带（非韧带本体）。Kabsch→BP3D mm。",
     "placeholder": false
   },
@@ -959,7 +959,7 @@
       "Superior_Extensor_Retinaculum_of_Ankle_R"
     ],
     "layer": "ligament",
-    "nameZh": "踝伸肌上支持带",
+    "nameZh": "伸肌上支持带",
     "nameLa": "Retinaculum musculorum extensorum superius",
     "summaryZh": "踝伸肌上支持带（Open3D Superior_extensor_retinaculum_of_ankle.r，CC BY-SA 4.0，by-sa/）。远端胫腓前方。教学：支持带。Kabsch→BP3D mm；质心略近端于足骨簇属预期。",
     "placeholder": false
@@ -970,7 +970,7 @@
       "Inferior_Extensor_Retinaculum_R"
     ],
     "layer": "ligament",
-    "nameZh": "踝伸肌下支持带",
+    "nameZh": "伸肌下支持带",
     "nameLa": "Retinaculum musculorum extensorum inferius",
     "summaryZh": "踝伸肌下支持带（Open3D Inferior_extensor_retinaculum.r，CC BY-SA 4.0，by-sa/）。Y/X 形跨足背。教学：支持带。Kabsch→BP3D mm。",
     "placeholder": false

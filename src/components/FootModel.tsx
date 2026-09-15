@@ -4,6 +4,11 @@ import { getAllStructures, getStructureByMeshName } from '../lib/structureLookup
 import { LAYER_CONFIG } from '../lib/layers';
 import type { Layer } from '../types/anatomy';
 import type { AnatomyStructure } from '../types/anatomy';
+import {
+  getAllLigamentGroupIds,
+  structureInVisibleLigamentGroups,
+  type LigamentGroupId,
+} from '../lib/ligamentGroups';
 
 interface FootModelProps {
   visibleLayers: Set<Layer>;
@@ -11,6 +16,8 @@ interface FootModelProps {
   selectedMeshName: string | null;
   /** When true and a mesh is selected, hide all other structures (GraphAnatomy / Grypa isolate UX-borrow). */
   isolateMode?: boolean;
+  /** Teaching sub-group filter for ligament/tendon layer (defaults: all groups on). */
+  visibleLigamentGroups?: Set<LigamentGroupId>;
 }
 
 interface PlaceholderMesh {
@@ -153,7 +160,8 @@ const REAL_LIGAMENT_MODELS: Record<string, string> = {
   'inferior_fibular_retinaculum': '/models/right-foot/by-sa/inferior_fibular_retinaculum.glb',
 };
 
-export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName, isolateMode = false }: FootModelProps) {
+export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName, isolateMode = false, visibleLigamentGroups }: FootModelProps) {
+  const ligGroups = visibleLigamentGroups ?? new Set(getAllLigamentGroupIds());
   const [placeholderMeshes, setPlaceholderMeshes] = useState<PlaceholderMesh[]>([]);
   const [hoveredMesh, setHoveredMesh] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
@@ -225,6 +233,13 @@ export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName
       {placeholderMeshes.map(({ structure, meshName, position, size }) => {
         const isVisible = visibleLayers.has(structure.layer);
         if (!isVisible) return null;
+
+        if (
+          structure.layer === 'ligament' &&
+          !structureInVisibleLigamentGroups(structure.id, ligGroups)
+        ) {
+          return null;
+        }
 
         // Isolate: keep selected structure (any of its meshNames) only
         if (isolateMode && selectedMeshName) {

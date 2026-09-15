@@ -4,6 +4,7 @@ import LayerToggles from './components/LayerToggles';
 import StructurePanel from './components/StructurePanel';
 import StructureSearch from './components/StructureSearch';
 import { getAllLayers } from './lib/layers';
+import { getAllLigamentGroupIds, type LigamentGroupId } from './lib/ligamentGroups';
 import { getStructureByMeshName, getAllStructures } from './lib/structureLookup';
 import { ATLAS_SOURCE_FOOTER } from './lib/assetProvenance';
 import type { Layer } from './types/anatomy';
@@ -18,6 +19,9 @@ function App() {
   const [selectedStructure, setSelectedStructure] = useState<AnatomyStructure | null>(null);
   const [selectedMeshName, setSelectedMeshName] = useState<string | null>(null);
   const [isolateMode, setIsolateMode] = useState(false);
+  const [visibleLigamentGroups, setVisibleLigamentGroups] = useState<Set<LigamentGroupId>>(
+    () => new Set(getAllLigamentGroupIds()),
+  );
 
   const handleLayerToggle = (layer: Layer) => {
     setVisibleLayers((prev) => {
@@ -33,6 +37,15 @@ function App() {
 
   const handleShowAll = () => setVisibleLayers(new Set(getAllLayers()));
   const handleHideAll = () => setVisibleLayers(new Set());
+
+  const handleLigamentGroupToggle = (group: LigamentGroupId) => {
+    setVisibleLigamentGroups((prev) => {
+      const next = new Set(prev);
+      if (next.has(group)) next.delete(group);
+      else next.add(group);
+      return next;
+    });
+  };
 
   const handleMeshClick = (meshName: string) => {
     setSelectedMeshName(meshName);
@@ -130,6 +143,8 @@ function App() {
         onHideAll={handleHideAll}
         placeholderCount={placeholderCount}
         realCount={realCount}
+        visibleLigamentGroups={visibleLigamentGroups}
+        onToggleLigamentGroup={handleLigamentGroupToggle}
       />
 
       <Viewport
@@ -137,6 +152,7 @@ function App() {
         visibleLayers={visibleLayers}
         selectedMeshName={selectedMeshName}
         isolateMode={isolateMode}
+        visibleLigamentGroups={visibleLigamentGroups}
       />
 
       <StructurePanel

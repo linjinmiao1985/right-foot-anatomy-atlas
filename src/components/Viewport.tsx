@@ -3,15 +3,17 @@ import { OrbitControls, Grid } from '@react-three/drei';
 import FootModel from './FootModel';
 import CameraFocus from './CameraFocus';
 import type { Layer } from '../types/anatomy';
+import type { LigamentGroupId } from '../lib/ligamentGroups';
 
 interface ViewportProps {
   onMeshClick: (meshName: string) => void;
   visibleLayers: Set<Layer>;
   selectedMeshName: string | null;
   isolateMode?: boolean;
+  visibleLigamentGroups?: Set<LigamentGroupId>;
 }
 
-export default function Viewport({ onMeshClick, visibleLayers, selectedMeshName, isolateMode = false }: ViewportProps) {
+export default function Viewport({ onMeshClick, visibleLayers, selectedMeshName, isolateMode = false, visibleLigamentGroups }: ViewportProps) {
   return (
     <Canvas
       camera={{ 
@@ -40,6 +42,7 @@ export default function Viewport({ onMeshClick, visibleLayers, selectedMeshName,
         onMeshClick={onMeshClick}
         selectedMeshName={selectedMeshName}
         isolateMode={isolateMode}
+        visibleLigamentGroups={visibleLigamentGroups}
       />
 
       <CameraFocus selectedMeshName={selectedMeshName} />

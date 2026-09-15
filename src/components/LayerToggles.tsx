@@ -1,6 +1,7 @@
 import type { CSSProperties } from 'react';
 import type { Layer } from '../types/anatomy';
 import { LAYER_CONFIG, getAllLayers } from '../lib/layers';
+import { LIGAMENT_GROUPS, type LigamentGroupId } from '../lib/ligamentGroups';
 
 interface LayerTogglesProps {
   visibleLayers: Set<Layer>;
@@ -9,10 +10,12 @@ interface LayerTogglesProps {
   onHideAll: () => void;
   placeholderCount: Record<Layer, number>;
   realCount: Record<Layer, number>;
+  visibleLigamentGroups: Set<LigamentGroupId>;
+  onToggleLigamentGroup: (group: LigamentGroupId) => void;
 }
 
 /**
- * Layer panel + legend.
+ * Layer panel + legend + ligament teaching sub-group filter.
  * UX-borrow (no code copy): human-atlas / hpfrei type-filter counts;
  * BioLens visibility chrome; Open Anatomy Studio bilingual clarity.
  */
@@ -23,6 +26,8 @@ export default function LayerToggles({
   onHideAll,
   placeholderCount,
   realCount,
+  visibleLigamentGroups,
+  onToggleLigamentGroup,
 }: LayerTogglesProps) {
   const layers = getAllLayers();
 
@@ -36,7 +41,9 @@ export default function LayerToggles({
         border: '1px solid #444',
         borderRadius: '8px',
         padding: '16px',
-        minWidth: '220px',
+        minWidth: '240px',
+        maxHeight: 'calc(100vh - 100px)',
+        overflowY: 'auto',
         zIndex: 100,
       }}
       role="region"
@@ -109,6 +116,54 @@ export default function LayerToggles({
         );
       })}
 
+      {visibleLayers.has('ligament') && (
+        <div
+          style={{
+            marginBottom: '10px',
+            padding: '8px',
+            background: 'rgba(232, 220, 200, 0.08)',
+            border: '1px solid rgba(232, 220, 200, 0.35)',
+            borderRadius: '6px',
+          }}
+          role="group"
+          aria-label="韧带教学亚组筛选"
+        >
+          <div style={{ fontSize: '11px', fontWeight: 600, color: '#d6d3d1', marginBottom: '6px' }}>
+            韧带亚组 · Sub-groups
+            <span style={{ fontWeight: 400, color: '#888', marginLeft: '6px' }}>教学筛选 · 非完整图谱</span>
+          </div>
+          {LIGAMENT_GROUPS.map((g) => {
+            const on = visibleLigamentGroups.has(g.id);
+            return (
+              <label
+                key={g.id}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  marginBottom: '5px',
+                  cursor: 'pointer',
+                  fontSize: '11px',
+                  color: '#e0e0e0',
+                }}
+              >
+                <input
+                  type="checkbox"
+                  checked={on}
+                  onChange={() => onToggleLigamentGroup(g.id)}
+                  style={{ marginRight: '6px', cursor: 'pointer' }}
+                  aria-label={`${g.labelZh} ${g.labelEn}`}
+                />
+                <span style={{ flex: 1 }}>
+                  {g.labelZh}
+                  <span style={{ color: '#888', marginLeft: '4px' }}>{g.labelEn}</span>
+                </span>
+                <span style={{ color: '#9ca3af', fontVariantNumeric: 'tabular-nums' }}>{g.structureIds.length}</span>
+              </label>
+            );
+          })}
+        </div>
+      )}
+
       <div
         style={{
           marginTop: '8px',
@@ -129,12 +184,16 @@ export default function LayerToggles({
           <span>占位示意（缺开源网格）</span>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '3px' }}>
+          <span style={legendChip('#15803d')}>主</span>
+          <span>主树 CC BY / CC0</span>
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '3px' }}>
           <span style={legendChip('#a78bfa')}>SA</span>
-          <span>BY-SA 隔离（神经 / DI / 近端动脉）</span>
+          <span>BY-SA 隔离（神经 / DI / 近端动脉 / 韧带）</span>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
           <span style={legendChip('#e8dcc8')}>韧/腱</span>
-          <span>韧带/腱层（跖长韧带 + 跟腱；非完整软组织图谱）</span>
+          <span>韧带/腱层（教学有用但不完整）</span>
         </div>
         {visibleLayers.has('ligament') && (
           <div
@@ -151,14 +210,15 @@ export default function LayerToggles({
             }}
             title="Ligament/tendon soft-tissue layer — see docs/week2-ligament-fascia-search.md"
           >
-            ℹ️ 韧带/腱层<strong>不完整</strong>：BP3D 跖长韧带（真韧带）+ 跟腱（肌腱，非韧带）。仍缺足底腱膜 /
-            ATFL / CFL / 三角韧带 / 弹簧韧带。隔离(I)与搜索可用。
+            ℹ️ 韧带/腱层<strong>教学有用但不完整</strong>：主树 BP3D 跖长韧带 + 跟腱；BY-SA Open3D 19（外侧踝 / 三角 /
+            足底腱膜 / Lisfranc 样分组 / 支持带等）。仍缺多数跗骨间细带与趾侧副韧带。可用上方亚组筛选。
           </div>
         )}
 
         {(visibleLayers.has('nerve') ||
           visibleLayers.has('muscle') ||
-          visibleLayers.has('vessel')) && (
+          visibleLayers.has('vessel') ||
+          visibleLayers.has('ligament')) && (
           <div
             role="status"
             style={{
@@ -173,8 +233,8 @@ export default function LayerToggles({
             }}
             title="CC BY-SA 4.0 ShareAlike — see public/models/right-foot/by-sa/NOTICE.md"
           >
-            ⚠️ 当前图层可能加载 <strong>BY-SA</strong> 网格（Z-Anatomy 神经 /
-            Open3D DI · 胫后/腓动脉）。衍生作品需 ShareAlike；可关闭肌/脉管/神经层或删除{' '}
+            ⚠️ 当前图层可能加载 <strong>BY-SA</strong> 网格（Z-Anatomy 神经 / Open3D DI · 胫后/腓动脉 ·
+            踝足韧带/支持带/腱膜）。衍生作品需 ShareAlike；可关闭相关层或删除{' '}
             <code style={{ fontSize: '9px' }}>by-sa/</code> 以保持仅 CC BY/CC0。
           </div>
         )}
