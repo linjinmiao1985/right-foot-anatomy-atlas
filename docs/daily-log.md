@@ -632,6 +632,41 @@ Phase 4 claimed "no open intrinsic foot muscles exist" based on insufficient sea
 
 ---
 
+## Week 2 Day 4e — 2026-09-15 📄 Documentation Accuracy Fix (Osteology 100%)
+
+**Focus**: Update methods.md + expert-review-checklist for substantive doc accuracy (user directive: prefer hard doc fix over verification)
+
+**Progress** ✅:
+1. **methods.md updated**:
+   - Version: Week 2 Day 4 (91% real coverage, 54/59, OSTEOLOGY COMPLETE)
+   - BodyParts3D coverage: **21 bones** (7 tarsals, 5 metatarsals, 2 hallux, 7 phalanges 2-5)
+   - UM coverage: **4 bones** (distal phalanges 2-5 from Phalanges.stl separation)
+   - Added extraction method details for UM Phalanges.stl (Blender loose-parts + spatial analysis)
+2. **expert-review-checklist.md updated**:
+   - Osteology section: **25/25 (100% COMPLETE ✅)**
+   - Detailed phalanx breakdown (2 hallux + 11 toes 2-5)
+   - Added spatial alignment verification item
+   - Source attribution (BP3D vs UM) for each bone group
+3. **Unused UM parts review**:
+   - phalanx_02/07/12 analyzed for hallux/sesamoid potential
+   - Verdict: All duplicates or wrong scale for sesamoids
+   - Sesamoids (2 small bones under MT1 head) not in current structures.json (potential future expansion)
+4. **Integrity-audit file existence**:
+   - Existing Check 2 already verifies all REAL_*_MODELS GLB paths exist on disk
+   - No code changes needed
+5. **Tests**: ✅ GREEN (7/7)
+
+**Coverage**: **UNCHANGED** 54/59 (91%) — documentation accuracy fix, no new integrations
+
+**Commits**: 1 (methods + checklist hard accuracy fixes)
+
+**Key Insight** 💡:
+- **Documentation lag corrected**: methods.md + checklist now reflect Week 2 osteology achievements (25/25, 100%)
+- **Substantive doc work**: Updated extraction methods, spatial analysis details, source attributions
+- **Sesamoids identified as future work**: Not critical for teaching-grade foot osteology, but anatomically present
+
+---
+
 ## Week 2 Day 3 — 2026-09-15 🏗️ Design Fix (Unified ID Model)
 
 **Focus**: Expand structures.json to individual entries (no more grouped placeholder compromises)

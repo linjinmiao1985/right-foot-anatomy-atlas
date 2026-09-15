@@ -1,15 +1,15 @@
 # Methods
 
 **Project**: Right Foot Anatomy Atlas (Teaching-Grade Interactive 3D)  
-**Version**: Week Sprint Final (88% real coverage, 38/43 structures)  
-**Date**: 2026-09-14  
+**Version**: Week 2 Day 4 (91% real coverage, 54/59 structures, OSTEOLOGY COMPLETE)  
+**Date**: 2026-09-15  
 **Licenses**: Code MIT | Assets CC BY 4.0 / CC0 1.0 / CC BY-SA 4.0 (isolated)
 
 ---
 
 ## Overview
 
-This atlas integrates open-licensed anatomical meshes from three sources (BodyParts3D, Universiti Malaya, Z-Anatomy) to create an interactive web-based teaching tool for right foot anatomy. Real 3D meshes cover bones (14/14), muscles (13/14), vessels (5/9), and nerves (6/6). Placeholder geometry represents unavailable structures (1 muscle, 4 vessels).
+This atlas integrates open-licensed anatomical meshes from three sources (BodyParts3D, Universiti Malaya, Z-Anatomy) to create an interactive web-based teaching tool for right foot anatomy. Real 3D meshes achieve **100% osteology coverage (25/25 bones)** plus 93% muscles (13/14), 56% vessels (5/9), and 100% nerves (6/6). Placeholder geometry represents 5 unavailable structures (1 muscle + 4 vessels).
 
 **Target Audience**: Medical students, anatomy instructors, foot/ankle residents, physical therapists.  
 **NOT for**: Clinical diagnosis, treatment planning, surgical navigation, or patient-specific modeling.
@@ -27,7 +27,7 @@ This atlas integrates open-licensed anatomical meshes from three sources (BodyPa
 **Last Updated**: 2025-02-27 (R4.0)
 
 **Coverage**:
-- 14 bones (tarsals, metatarsals, hallux phalanges)
+- **21 bones** (7 tarsals, 5 metatarsals, 2 hallux phalanges, 7 phalanges 2-5: 4 proximal + 3 middle)
 - 12 muscles (plantar intrinsics: AH oblique/transverse heads, FHB medial, lumbricals 1-4, plantar interossei 1-3, EHB, FDMB)
 - 5 vessels (dorsalis pedis, arcuate, medial/lateral plantar, plantar arch)
 
@@ -48,13 +48,16 @@ CC Attribution 4.0 International.
 **Release**: 2026-03-24
 
 **Coverage**:
+- **4 bones** (distal phalanges 2-5, separated from grouped Phalanges.stl via Blender loose-parts)
 - 8 muscles (STL, high-resolution):
   - 5 intrinsic: Abductor hallucis, flexor digitorum brevis, abductor digiti minimi, quadratus plantae, extensor digitorum brevis
   - 3 extrinsic: Tibialis posterior, flexor digitorum longus, flexor hallucis longus
 
-**Format**: STL (binary, 42 muscles total in dataset, 8 foot-relevant extracted)
+**Format**: STL (binary, 42 muscles + 1 grouped phalanges STL in dataset)
 
 **Quality**: 2.4-8.7× higher resolution than BP3D for overlapping muscles (verified via vertex count: UM 15k-45k vertices vs BP3D 5k-8k)
+
+**Extraction Method**: `Segmentation_Bone_Phalanges.stl` (1.9MB) separated into 14 components via Blender → separate by loose parts. Spatial analysis (X/Z coordinates, vertex count) identified 4 distal phalanges for toes 2-5
 
 ### 3. Z-Anatomy (CC BY-SA 4.0, isolated)
 
