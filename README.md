@@ -11,7 +11,7 @@ Interactive web-based teaching atlas for right foot anatomy.
 
 | Layer | Real Meshes | Placeholder | Total | Sources |
 |-------|-------------|-------------|-------|---------|
-| **Bones** | **26/26 (100%)** | 0 | 26 | BP3D (22) + UM (4) — **main tree** |
+| **Bones** | **26/26 (100%)** | 0 | 26 | BP3D (26) — **main tree** |
 | **Muscles** | **14/14 (100%)** | 0 | 14 | Main: BP3D + UM (13) · **BY-SA**: Open3D DI (1) |
 | **Vessels** | **9/9 (100%)** | 0 | 9 | Main: BP3D 7 (incl. 2 honest grouped) · **BY-SA**: Open3D PTA + fibular (2) |
 | **Nerves** | **6/6 (100%)** | 0 | 6 | Z-Anatomy (CC BY-SA 4.0, `by-sa/` only) |
@@ -29,7 +29,7 @@ Interactive web-based teaching atlas for right foot anatomy.
 
 ### Remaining soft-tissue caveats (not “gaps” in placeholder sense)
 - Prefer future **CC0/CC BY** replacements for Open3D BY-SA DI + proximal arteries
-- Cuboid + 3 cuneiforms remapped to correct ISA right-foot BP IDs (Day 4j). Remaining: hallux proximal phalanx ID suspect (`BP8488`); UM distal phalanges 2–5 on separate frame
+- Cuboid + 3 cuneiforms remapped (Day 4j). Hallux proximal remapped `BP8488`→`BP8785` (Day 4k). Distal phalanges 2–5: UM Y≈−850 meshes replaced with BP3D ISA elemental (same pass) — no Kabsch re-bake required
 - Teaching-grade atlas in progress — **no finished-product claim**
 
 ---

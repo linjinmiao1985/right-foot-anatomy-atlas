@@ -986,3 +986,19 @@ Open3D Kabsch had excluded BP3D cuboid / medial & intermediate cuneiform as "cen
 
 ### Not claimed finished
 Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills unchanged.
+
+## Week 2 Day 4k — 2026-09-15 ✅ Hallux proximal + distal 2–5 BP3D ID fix
+
+**Focus**: Replace remaining known bone ID/frame errors after Day 4j tarsals.
+
+### Done
+1. **`proximal_phalanx_1`**: BP8488 (middle phalanx II) → **BP8785 / FMA43253 / FJ3310**; OBJ→GLB via `obj2gltf`; FootModel + manifest + remove old GLB.
+2. **UM distal phalanges 2–5**: Investigated Y≈−850 CT frame. **Replaced** with BP3D elemental FJ3189/3190/3191/3195 (BP8472/9005/9261/8695) — already in BP3D foot mm frame; **no Kabsch re-bake**.
+3. Updated `assetProvenance` (UM_BONES empty), README coverage (bones 26/26 all BP3D), spatial-alignment-qa.
+4. integrity-audit + vitest + build; commit; push.
+
+### Not this pass
+- UM muscle native-frame alignment (AH etc. still UM CT coords)
+- Open3D Kabsch re-bake with cuboid/cuneiform landmarks
+
+**No finished-product claim.**

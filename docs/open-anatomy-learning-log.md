@@ -375,3 +375,15 @@ No new CC0/CC BY foot DI or proximal-artery candidates in this dig.
 - Contact paths for Zenodo 20228270 relicense (BY without NC).  
 - NIH 3D entry-by-entry crawl remaining.
 
+## Session finds — 2026-09-15 (Day 4k phalanx ID / frame)
+
+### NEW: BP3D already has right-foot distal phalanges 2–5 (actioned)
+
+| Field | Detail |
+|-------|--------|
+| **Find** | UM distal 2–5 sat on Y≈−850 CT frame; ISA 4.0 elemental OBJs **FJ3189/3190/3191/3195** (BP8472/9005/9261/8695) are already in BP3D foot mm. Prefer replace over Kabsch-rebake of UM. |
+| **Related** | Hallux proximal was BP8488 (= middle II); correct **BP8785 / FMA43253 / FJ3310**. |
+| **Method** | `isa_parts_list_e.txt` + `isa_element_parts.txt` + OBJ headers; `obj2gltf`. |
+| **Action** | **integrated** (main tree CC BY). UM Phalanges.stl remains historical source only. |
+| **License** | BP3D LSDB Archive CC BY 4.0 (same as other bones). |
+

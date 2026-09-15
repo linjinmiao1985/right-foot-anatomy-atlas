@@ -1,5 +1,5 @@
 {
-  "version": "3.2.0-bp3d-tarsal-id-fix",
+  "version": "3.3.0-bp3d-phalanx-id-fix",
   "sources": [
     "BodyParts3D Release 4.0 (DBCLS Japan)",
     "Universiti Malaya Asian Male LE MSK",
@@ -113,11 +113,12 @@
     },
     {
       "id": "proximal_phalanx_1",
-      "file": "phalanx_prox_1_BP8488.glb",
-      "bp": "BP8488",
-      "fma": "FMA32951",
+      "file": "proximal_phalanx_1_BP8785.glb",
+      "bp": "BP8785",
+      "fma": "FMA43253",
       "name_zh": "踇趾近节趾骨",
-      "name_la": "Phalanx proximalis hallucis"
+      "name_la": "Phalanx proximalis hallucis",
+      "note": "ISA right hallux proximal; was mis-ID BP8488 (= middle phalanx II)"
     },
     {
       "id": "distal_phalanx_1",
@@ -191,6 +192,42 @@
       "fma": "FMA32646",
       "name_zh": "第四趾中节趾骨",
       "name_la": "Phalanx media digiti IV pedis"
+    },
+    {
+      "id": "distal_phalanx_2",
+      "file": "distal_phalanx_2_BP8472.glb",
+      "bp": "BP8472",
+      "fma": "FMA32652",
+      "name_zh": "第二趾远节趾骨",
+      "name_la": "Phalanx distalis digiti II pedis",
+      "note": "Replaces UM CC0 mesh (Y≈−850 frame) with BP3D ISA elemental"
+    },
+    {
+      "id": "distal_phalanx_3",
+      "file": "distal_phalanx_3_BP9005.glb",
+      "bp": "BP9005",
+      "fma": "FMA32654",
+      "name_zh": "第三趾远节趾骨",
+      "name_la": "Phalanx distalis digiti III pedis",
+      "note": "Replaces UM CC0 mesh with BP3D ISA elemental"
+    },
+    {
+      "id": "distal_phalanx_4",
+      "file": "distal_phalanx_4_BP9261.glb",
+      "bp": "BP9261",
+      "fma": "FMA32656",
+      "name_zh": "第四趾远节趾骨",
+      "name_la": "Phalanx distalis digiti IV pedis",
+      "note": "Replaces UM CC0 mesh with BP3D ISA elemental"
+    },
+    {
+      "id": "distal_phalanx_5",
+      "file": "distal_phalanx_5_BP8695.glb",
+      "bp": "BP8695",
+      "fma": "FMA32658",
+      "name_zh": "第五趾远节趾骨",
+      "name_la": "Phalanx distalis digiti V pedis",
+      "note": "Replaces UM CC0 mesh with BP3D ISA elemental"
     }
   ],
   "muscles": [
@@ -491,14 +528,14 @@
       "name_la": "N. suralis"
     }
   ],
-  "note": "Honest coverage (unique-structure framing 55): main tree CC BY/CC0 = 46 (26 bones + 13 muscles + 7 vessels); BY-SA isolate = 9 (1 DI muscle + 2 proximal arteries + 6 nerves). structures.json entry-level 60/60 placeholder:false (multi-part muscles counted separately). Honest grouped vessels remain: dorsal digital + plantar metatarsal (BP3D combined). Open3D DI/PTA/fibular baked to BP3D mm via Kabsch on Calcaneus/Talus/Navicular/MT1–5 (mean residual ≈3 mm); still teaching-grade, not a finished atlas.",
+  "note": "Honest coverage (unique-structure framing 55): main tree CC BY/CC0 = 46 (26 bones all BP3D + 13 muscles + 7 vessels); BY-SA isolate = 9 (1 DI muscle + 2 proximal arteries + 6 nerves). structures.json entry-level 60/60 placeholder:false (multi-part muscles counted separately). Honest grouped vessels remain: dorsal digital + plantar metatarsal (BP3D combined). Open3D DI/PTA/fibular baked to BP3D mm via Kabsch on Calcaneus/Talus/Navicular/MT1–5 (mean residual ≈3 mm); still teaching-grade, not a finished atlas.",
   "stats": {
-    "bones": "26/26 (100%, main: BP3D 22 + UM 4 distal)",
+    "bones": "26/26 (100%, all BP3D ISA right-foot elemental; was BP3D 22 + UM 4 distal)",
     "muscles_unique": "14/14 (100% real meshes; 13 main CC BY/CC0 + 1 DI BY-SA isolate)",
     "muscles_entries": "19/19 structures.json muscle entries (incl. lumbricals/PI parts)",
     "vessels": "9/9 (100% real; 7 main BP3D incl. 2 honest grouped + 2 Open3D BY-SA proximal)",
     "nerves": "6/6 (100%, Z-Anatomy CC BY-SA 4.0, by-sa/)",
-    "main_tree_unique": "46/55 (CC BY 4.0 / CC0 only — bones + non-SA muscles/vessels)",
+    "main_tree_unique": "46/55 (CC BY 4.0 / CC0 only — bones all BP3D + non-SA muscles/vessels)",
     "by_sa_unique": "9/55 (DI + PTA + fibular + 6 nerves; ShareAlike isolate)",
     "total_unique": "55/55 real meshes with BY-SA fills (not a finished-product claim)",
     "total_entries": "60/60 structures.json placeholder:false"
@@ -507,7 +544,9 @@
     "overlapping_muscles": "UM CC0 chosen over BP3D for AH/ADM/FDB (2.4-8.7x resolution)",
     "gap_filling": "UM CC0 adds Quadratus plantae + Extensor digitorum brevis (BP3D absent)",
     "remaining_muscles": "BP3D CC BY 4.0 (FDMB, AddH oblique/transverse, FHB medial, Lumbricals, Plantar interossei, EHB)",
-    "open3d_bysa": "DI 1st–4th + posterior tibial + fibular arteries under by-sa/; Kabsch→BP3D mm; prefer future CC0/CC BY replacements"
+    "open3d_bysa": "DI 1st–4th + posterior tibial + fibular arteries under by-sa/; Kabsch→BP3D mm; prefer future CC0/CC BY replacements",
+    "distal_phalanges_2_5": "BP3D ISA elemental preferred over UM Phalanges.stl (UM on separate Y≈−850 CT frame; BP3D already in foot mm frame)",
+    "proximal_phalanx_1": "BP8785/FMA43253 (right hallux proximal); BP8488 was middle phalanx of right 2nd toe"
   },
   "muscles_by_sa": [
     {
@@ -527,6 +566,7 @@
     }
   ],
   "notes": [
-    "2026-09-15: replaced mislabelled cuboid/cuneiforms (were left calcaneus / left medial cuneiform / pharyngeal constrictor / distal phalanx II) with correct ISA right-foot elemental meshes BP8873/8830/9110/8730"
+    "2026-09-15: replaced mislabelled cuboid/cuneiforms (were left calcaneus / left medial cuneiform / pharyngeal constrictor / distal phalanx II) with correct ISA right-foot elemental meshes BP8873/8830/9110/8730",
+    "2026-09-15: proximal_phalanx_1 remapped BP8488→BP8785/FMA43253 (FJ3310); distal_phalanx_2–5 replaced UM Y≈−850 meshes with BP3D FJ3189/3190/3191/3195 (BP8472/9005/9261/8695) — no Kabsch re-bake needed"
   ]
 }

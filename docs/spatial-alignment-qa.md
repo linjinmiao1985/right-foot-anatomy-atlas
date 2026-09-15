@@ -182,10 +182,46 @@ Converted with project `obj2gltf`; filenames updated in `FootModel.tsx` + `manif
 
 Previously: cuboid/medial ≈180 mm; intermediate ≈1449 mm.
 
-### Remaining spatial caveats (not fixed this pass)
+### Remaining spatial caveats (not fixed Day 4j)
 
-- `proximal_phalanx_1` still maps to `phalanx_prox_1_BP8488.glb` — ISA BP8488 is **middle phalanx of right 2nd toe** (identical centroid to `middle_phalanx_2`); hallux proximal should be BP8785 / FMA43253.
-- UM distal phalanges 2–5 remain on a separate Y≈−850 frame (pre-existing UM placement).
 - Open3D Kabsch landmarks can now **include** cuboid + cuneiforms if a re-bake is ever needed; current by-sa bake still used the 8-landmark fit from Day 4i+.
 
-**Verdict**: tarsal mis-ID **fixed** for cuboid + 3 cuneiforms. Teaching-grade atlas in progress — no finished-product claim.
+**Verdict (Day 4j)**: tarsal mis-ID **fixed** for cuboid + 3 cuneiforms. Teaching-grade atlas in progress — no finished-product claim.
+
+---
+
+## Day 4k — Hallux proximal + distal phalanges 2–5 (2026-09-15)
+
+### `proximal_phalanx_1` mis-ID (same class of bug as Day 4j)
+
+| Was | Actual anatomy | Fix |
+|-----|----------------|-----|
+| `phalanx_prox_1_BP8488.glb` / BP8488 / (manifest FMA32951) | **Middle phalanx of right 2nd toe** (identical centroid to `middle_phalanx_2`) | `proximal_phalanx_1_BP8785.glb` — FJ3310 / BP8785 / FMA43253 — *Proximal phalanx of right big toe* |
+
+Post-fix centroid ≈ (−103.3, −202.3, −61.7) mm — between MT1 and distal_phalanx_1 on the hallux ray.
+
+### UM distal phalanges 2–5 Y≈−850 frame — investigation
+
+| Mesh (old UM) | Centroid Y (mm) | Notes |
+|---------------|-----------------|-------|
+| distal_phalanx_2..5 | ≈ −839…−850 | From UM `Segmentation_Bone_Phalanges.stl` loose-parts; CT/segment frame ≠ BP3D foot mm |
+| UM muscles (e.g. AH) | Y≈+24, Z≈−764 | Also native UM frame (pre-existing; not re-baked this pass) |
+
+**Preferred fix this pass**: not a Kabsch re-bake of UM. Local BP3D cache already contains correct **right-foot distal** elemental OBJs:
+
+| Atlas id | FJ | BP | FMA | English |
+|----------|----|----|-----|---------|
+| distal_phalanx_2 | FJ3189 | BP8472 | FMA32652 | Distal phalanx of right second toe |
+| distal_phalanx_3 | FJ3190 | BP9005 | FMA32654 | Distal phalanx of right third toe |
+| distal_phalanx_4 | FJ3191 | BP9261 | FMA32656 | Distal phalanx of right fourth toe |
+| distal_phalanx_5 | FJ3195 | BP8695 | FMA32658 | Distal phalanx of right little toe |
+
+Note: BP8472 is the same ISA ID previously mis-used as `cuneiform_lateral` (Day 4j) — now correctly assigned as distal II.
+
+### Post-fix toe-chain centroids (BP3D mm)
+
+Proximal → middle → distal progress continuously for toes 2–4; toe 5 proximal → distal continuous (no middle mesh in atlas). Example toe 2: PP (−123,−199,−62) → MP (−133,−217,−65) → DP (−138,−227,−67).
+
+**Why not Kabsch-rebake UM this pass**: BP3D replacements are already in the shared foot frame; re-baking UM would only preserve a lower-priority CC0 duplicate. UM intrinsic/extrinsic **muscles** remain on their native frame (separate known issue; out of scope).
+
+**Verdict (Day 4k)**: hallux proximal + distal 2–5 **fixed** via ISA IDs. Teaching-grade atlas in progress — no finished-product claim.

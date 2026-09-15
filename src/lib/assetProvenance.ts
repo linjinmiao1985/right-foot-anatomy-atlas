@@ -24,11 +24,9 @@ const UM_MUSCLES = new Set([
   'flexor_hallucis_longus',
 ]);
 
-const UM_BONES = new Set([
-  'distal_phalanx_2',
-  'distal_phalanx_3',
-  'distal_phalanx_4',
-  'distal_phalanx_5',
+/** Formerly UM distal phalanges 2–5; now BP3D ISA elemental (Day 4k). */
+const UM_BONES = new Set<string>([
+  // empty — distal_phalanx_2–5 remapped to BP3D BP8472/9005/9261/8695
 ]);
 
 const Z_ANATOMY_NERVES = new Set([
@@ -87,7 +85,7 @@ export function getStructureProvenance(
   if (placeholder) return PLACEHOLDER;
   if (OPEN3D_BY_SA.has(structureId)) return OPEN3D;
   if (Z_ANATOMY_NERVES.has(structureId) || layer === 'nerve') return Z_ANATOMY;
-  if (UM_MUSCLES.has(structureId) || UM_BONES.has(structureId)) return UM;
+  if (UM_MUSCLES.has(structureId) || UM_BONES.has(structureId)) return UM; // UM_BONES currently empty
   return BP3D;
 }
 
