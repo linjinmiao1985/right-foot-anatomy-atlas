@@ -169,3 +169,12 @@ If issues found during manual testing:
 - [x] Named empties (cervical TC; med/lat plantar veins) show bilingual reason strings — IDs **not** invented
 - [x] Mapped structures still show partial ontology block + copy
 - Honesty: teaching nomenclature honesty — **not** a finished ontology / TA2-complete claim
+
+
+## Day 4bg addendum — lazy layer load progress
+
+- [x] Soft layers still visibility-gated (`preloadLayerAssets` on toggle; bones preloaded at module init)
+- [x] `FootModel` wrapped in `<Suspense fallback={null}>` so GLB fetch suspends cleanly
+- [x] Outside-canvas bilingual overlay (`data-testid="layer-load-progress"`) via drei `useProgress` — percent bar + optional layer chip + loaded/total detail
+- [x] Idle / `total===0` → overlay hidden (no stuck 100% flash)
+- Honesty: teaching asset-fetch chrome — **not** a clinical workstation / finished-product claim

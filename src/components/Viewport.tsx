@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Grid } from '@react-three/drei';
 import FootModel from './FootModel';
@@ -79,18 +80,20 @@ export default function Viewport({
         fadeStrength={0.8}
       />
 
-      <FootModel
-        visibleLayers={visibleLayers}
-        onMeshClick={onMeshClick}
-        selectedMeshName={selectedMeshName}
-        isolateMode={isolateMode}
-        visibleLigamentGroups={visibleLigamentGroups}
-        visibleNerveGroups={visibleNerveGroups}
-        visibleVesselGroups={visibleVesselGroups}
-        visibleMuscleGroups={visibleMuscleGroups}
-        labelDensity={labelDensity}
-        hiddenStructureIds={hiddenStructureIds}
-      />
+      <Suspense fallback={null}>
+        <FootModel
+          visibleLayers={visibleLayers}
+          onMeshClick={onMeshClick}
+          selectedMeshName={selectedMeshName}
+          isolateMode={isolateMode}
+          visibleLigamentGroups={visibleLigamentGroups}
+          visibleNerveGroups={visibleNerveGroups}
+          visibleVesselGroups={visibleVesselGroups}
+          visibleMuscleGroups={visibleMuscleGroups}
+          labelDensity={labelDensity}
+          hiddenStructureIds={hiddenStructureIds}
+        />
+      </Suspense>
 
       <CameraFocus selectedMeshName={selectedMeshName} />
       <CameraPresetApply presetId={cameraPresetId} applyToken={cameraPresetToken} />

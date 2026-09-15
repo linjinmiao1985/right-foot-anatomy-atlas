@@ -473,7 +473,7 @@ Commit history documents asset decisions, `structures.json` evolution, and `Foot
 | **On-disk GLB count** | **134** discrete teaching meshes (~**13 MB** total): **59** main tree (`public/models/right-foot/*.glb`) + **75** ShareAlike isolate (`by-sa/`) |
 | **Why discrete files** | Per-structure GLBs keep CC BY/CC0 vs BY-SA license boundaries clear; avoid one monolithic pack that would taint redistribution claims |
 | **Runtime** | React Three Fiber `useGLTF` per mounted mesh; layer toggle **unmounts** hidden layers (no draw / no hook for those paths) |
-| **Preload** | Bones **eager** (`useGLTF.preload`); muscle / vessel / nerve / ligament preload **when that layer is visible** (lazy vs prior preload-all) |
+| **Preload** | Bones **eager** (`useGLTF.preload`); muscle / vessel / nerve / ligament preload **when that layer is visible** (lazy vs prior preload-all); Day **4bg** bilingual load-progress overlay (`LayerLoadProgress` + Suspense) while soft GLBs fetch |
 | **Not claimed** | Meshopt/Draco single-file atlas; streaming LOD; finished soft-tissue completeness |
 
 

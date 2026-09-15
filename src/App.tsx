@@ -32,6 +32,7 @@ import {
   saveTeachingPrefs,
 } from './lib/teachingPrefs';
 import KeyboardHelpOverlay from './components/KeyboardHelpOverlay';
+import LayerLoadProgress from './components/LayerLoadProgress';
 import { isHelpToggleKey } from './lib/keyboardHelp';
 import {
   toggleHiddenStructureId,
@@ -421,6 +422,8 @@ function App() {
           </button>
         </div>
       )}
+
+      <LayerLoadProgress />
 
       <KeyboardHelpOverlay open={helpOpen} onClose={() => setHelpOpen(false)} />
 

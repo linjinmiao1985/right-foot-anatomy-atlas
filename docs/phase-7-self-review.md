@@ -4,6 +4,7 @@
 **Branch**: `cursor/right-foot-anatomy-atlas-mvp-af85`  
 **HEAD baseline**: `d09d53d` (Day 4av) before this review commit  
 **Status**: Teaching-grade atlas **in progress** — **not** a finished-product claim  
+**Day 4bg note**: Lazy layer load progress + digs #66–#68; census **unchanged**; **0** mesh wire.  
 **Scope**: Week-quality census freeze after Day 4af–4av (soft fill + UX polish + ontology expand); UX inventory; license ceilings; open-mining highlights; next targets for journal readiness / Cloud Agent handback / CC0 soft-tissue watchlist
 
 ---

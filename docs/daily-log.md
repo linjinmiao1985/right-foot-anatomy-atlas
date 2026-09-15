@@ -1459,3 +1459,14 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 3. Docs: learning-log #63, watchlist reject row, expert-review checkbox, handback / phase-7 pointer.
 
 **Meshes**: **0**. Andreassen skipped. **No finished-product claim.**
+
+
+## Day 4bg (2026-09-15) — Lazy layer load progress + dig #66–#68
+
+**Target**: Week quality — ≥3 NEW license-verified open anatomy digs **and** one teaching polish (loading progress for lazy layers); prefer quality; 0 SA spam; skip Andreassen; no Utah integrate.
+
+1. Pulled `a991d7e` (already current).
+2. **Teaching polish**: bilingual **layer load progress** overlay (`useProgress` + Suspense around FootModel) when soft layers lazy-fetch GLBs.
+3. **New digs**: #66 Henson Sheffield LE muscle DICOM labels (**CC0**); #67 Auckland Lower Limb Visualiser (**MIT**); #68 CEINMS-RT LowerLimbModel (**Apache-2.0**). Soft gaps still dry; Henson gastroc/soleus = monitor masks only.
+4. Checks: integrity-audit + vitest + build; commit + push.
+5. **Honesty**: teaching atlas in progress — **no finished-product claim**. Census unchanged. **0** meshes / no SA spam / Andreassen skipped / Utah not integrated.

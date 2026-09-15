@@ -1,10 +1,10 @@
 # CC0 / CC BY soft-tissue watchlist (monitor · not integrated)
 
-**Date**: 2026-09-15 · Day 4bf / Phase 7  
+**Date**: 2026-09-15 · Day 4bg / Phase 7  
 **Policy**: Prefer **CC0 / CC BY** main-tree replacements that shrink ShareAlike surface. Dig + verify license page / SPDX / Zenodo `license.id` **before** any wire. **Reject** NC, unclear “License: Model”, and All Rights Reserved. BY-SA only under `by-sa/` + NOTICE — do not spam SA volume for its own sake.  
-**Status**: Living watchlist — **0** new soft-tissue meshes integrated from this list as of Day **4bf**. Andreassen gastroc/soleus still **blocked** (Day 4az+4ba); Day 4bf Utah Hive deep assess → **reject** main-tree bones (pathology/incomplete/wrong frame); soft gaps still dry. Teaching atlas in progress — **not** a finished-product claim.
+**Status**: Living watchlist — **0** new soft-tissue meshes integrated from this list as of Day **4bg**. Andreassen gastroc/soleus still **blocked** (Day 4az+4ba); Day 4bf Utah Hive **reject** bones; Day 4bg Henson **CC0** LE muscle DICOM labels = **monitor** (not GLB-ready); soft gaps still dry. Teaching atlas in progress — **not** a finished-product claim.
 
-Companion: `docs/open-anatomy-learning-log.md` (#38–#65 and earlier), `docs/phase-7-self-review.md`.
+Companion: `docs/open-anatomy-learning-log.md` (#38–#68 and earlier), `docs/phase-7-self-review.md`.
 
 ---
 
@@ -35,6 +35,8 @@ Companion: `docs/open-anatomy-learning-log.md` (#38–#65 and earlier), `docs/ph
 | Blender Studio Human Base Meshes — foot (Commons CC0 STL) | **CC0 1.0** | High-res **skin/surface** foot | Silhouette UX only — no named DI/NV | **monitor** surface; **reject** anatomy teaching DI/NV |
 | **#61** Imperial College London femur+tibia surfaces (Zenodo 10.5281/zenodo.167808) | **CC BY 4.0** (Zenodo API Day 4bb) | MRI LE femur/tibia/fibula surfaces (35 volunteers) | LE osteology / proportion research only — **0** soft | **monitor** LE bones; **reject** soft teaching |
 | Future Zenodo / open CT foot soft segmentations | TBD | Named DI, vessels, ligaments | Only if SPDX CC0/BY and elemental teaching value | **monitor** dig queue |
+| **#66** Henson Sheffield augmented LE muscle segmentations (Figshare **10.15131/shef.data.20440203** + MR **20440164**) | **CC0** (Figshare API Day 4bg) | 69 DICOM label volumes · 37 LE muscle classes incl. gastroc/soleus / long flex-ext / peronei | Masks ≠ elemental foot DI/NV GLBs; possible future extrinsic-belly research | **monitor** masks; **reject** ready teaching mesh wire; **not** Andreassen Kabsch retry |
+| **#68** CEINMS-RT LowerLimbModel | Code **Apache-2.0**; Zenodo 6457662 open / SPDX unset | OpenSim MSK paths (soleus + gastroc + tib_ant …) | Simulation lines, not surface atlas meshes | **monitor** process; **reject** soft GLB substitute |
 
 ---
 
@@ -125,4 +127,13 @@ Companion: `docs/open-anatomy-learning-log.md` (#38–#65 and earlier), `docs/ph
 
 ## Bottom line
 
-Watchlist tracks **where a CC0/BY soft find would matter** (DI, per-ray MTA, bellies, SA shrink). Day **4az**+**4ba** Andreassen alignment blocker unchanged; Day **4bf** Utah Hive **reject** for main-tree bones + soft. Soft gaps remain **dry**. Handback: `docs/cloud-agent-handback.md`. **No finished-product claim**.
+Watchlist tracks **where a CC0/BY soft find would matter** (DI, per-ray MTA, bellies, SA shrink). Day **4az**+**4ba** Andreassen alignment blocker unchanged; Day **4bf** Utah Hive **reject**; Day **4bg** Henson CC0 LE masks **monitor** (not wire). Soft gaps remain **dry**. Handback: `docs/cloud-agent-handback.md`. **No finished-product claim**.
+
+## Day 4bg dig summary
+
+| Check | Result |
+|-------|--------|
+| New CC0/BY soft packs for DI / per-ray MTA / nerves / ligaments | **None** (#66 masks / #67 LE bones UX / #68 MSK paths) |
+| Gastroc/soleus lead | Henson **CC0** DICOM labels — **monitor** only; Andreassen **skipped** |
+| Utah Hive | Not re-opened (still reject) |
+| Meshes integrated | **0** |

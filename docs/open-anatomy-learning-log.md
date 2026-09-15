@@ -1262,3 +1262,39 @@ OMFAtlas labels drawn NV/gland/sinus structures as **schematic** wherever named 
 - **0** meshes integrated; **0** SA spam; Andreassen not re-opened.
 - **No finished-product claim.**
 
+---
+
+## Session additions (2026-09-15 · Day 4bg — lazy layer load progress + dig ≥3)
+
+### Teaching polish (loading progress for lazy layers)
+
+| Change | Detail |
+|--------|--------|
+| **Layer load progress** | When visibility-gated soft layers fetch GLBs, a bilingual overlay shows percent + optional layer chip (muscle/nerve/vessel/ligament/bone) via drei `useProgress` |
+| Suspense | `Viewport` wraps `FootModel` in `<Suspense fallback={null}>` so DefaultLoadingManager drives the chrome |
+| Source | undergravity/human-atlas two-phase system-load habit (ideas only) — no third-party UI code |
+| Files | `src/lib/layerLoadProgress.ts` (+ vitest) · `src/components/LayerLoadProgress.tsx` · `Viewport.tsx` · `App.tsx` |
+| Honesty | Asset-fetch chrome only — **not** a clinical workstation / finished product claim |
+
+### NEW license-verified projects (≥3)
+
+| # | Project | URL | License verified | Foot relevance | Decision |
+|---|---------|-----|------------------|----------------|----------|
+| **66** | **Henson et al. — Augmented lower-limb MR muscle segmentations** (Sheffield ORDA/Figshare) | DOI **10.15131/shef.data.20440203** · companion MR volumes **10.15131/shef.data.20440164** | Figshare API `license.name` = **CC0** verified 2026-09-15 (both records) | 69 DICOM label volumes · **37** LE muscle class IDs incl. gastroc med/lat, soleus, FDL/FHL/EDL/EHL, peronei, tib ant/post — **MRI masks**, not elemental foot DI/NV surface GLBs; **0** intrinsic DI / plantar nerve packs | **monitor** for extrinsic-belly / LE soft research (docs-only). **reject** as ready main-tree teaching mesh substitute. Distinct from NC STL pack **9934055** (already rejected) |
+| **67** | **Lower Limb Visualiser** (lauracarman/llbone_measurement_visualiser · Univ. Auckland eResearch) | https://github.com/lauracarman/llbone_measurement_visualiser | Code **MIT** (`LICENSE` copyright University of Auckland, Center for eResearch — verified 2026-09-15) | PyVista paediatric **pelvis / femur / tibia–fibula** landmark + measurement visualiser — **LE osteology tooling**, **0** named foot soft DI/NV | **UX-borrow** (measurement / landmark teaching chrome). **reject** as right-foot soft-tissue mesh source |
+| **68** | **CEINMS-RT LowerLimbModel** | https://github.com/CEINMS-RT/LowerLimbModel · locomotion data DOI **10.5281/zenodo.6457662** | Code **Apache-2.0** (GitHub SPDX + LICENSE verified 2026-09-15); Zenodo locomotion pack `access_right=open` but **no** `license.id` on record API this pass | OpenSim-style **MSK path** model (tib_ant, soleus, med/lat gastroc, quads, hamstrings) + EMG/kinetic trials — **simulation lines**, not atlas surface meshes | **UX-borrow** / process (MSK path honesty). **reject** soft surface teaching; do **not** treat as Andreassen belly substitute. Zenodo data: **monitor** until SPDX clear |
+
+### Soft-gap check
+
+| Gap | Day 4bg |
+|-----|---------|
+| DI / per-ray MTA / nerve·ligament CC0/BY | **Still dry** |
+| Gastroc/soleus | Henson **CC0 masks** are a **monitor** research lead (not GLB-ready); Andreassen **blocked** — **skipped** |
+| Utah Hive bones | Still **reject** (Day 4bf) — not re-opened |
+
+### Outcome
+
+- Learning log **#66–#68**; lazy layer load progress live; census unchanged (**129/124**; ontology **126/129**).
+- **0** meshes integrated; **0** SA spam; Andreassen not re-opened; Utah not integrated.
+- **No finished-product claim.**
+
