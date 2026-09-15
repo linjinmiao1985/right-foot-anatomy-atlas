@@ -32,6 +32,11 @@ import {
 } from './lib/teachingPrefs';
 import KeyboardHelpOverlay from './components/KeyboardHelpOverlay';
 import { isHelpToggleKey } from './lib/keyboardHelp';
+import {
+  toggleHiddenStructureId,
+  revealStructureId,
+  revealAllHiddenStructures,
+} from './lib/structureVisibility';
 
 function emptyLayerCounts(): Record<Layer, number> {
   return { bone: 0, muscle: 0, nerve: 0, vessel: 0, ligament: 0 };
@@ -46,6 +51,8 @@ function App() {
   const [selectedStructure, setSelectedStructure] = useState<AnatomyStructure | null>(null);
   const [selectedMeshName, setSelectedMeshName] = useState<string | null>(null);
   const [isolateMode, setIsolateMode] = useState(false);
+  /** Per-structure hide (dissection) — independent of isolate / layer toggles. */
+  const [hiddenStructureIds, setHiddenStructureIds] = useState<Set<string>>(() => new Set());
   const [searchClearSignal, setSearchClearSignal] = useState(0);
   const [visibleLigamentGroups, setVisibleLigamentGroups] = useState<Set<LigamentGroupId>>(
     () => new Set(getAllLigamentGroupIds()),
@@ -206,6 +213,12 @@ function App() {
         setIsolateMode((v) => !v);
         return;
       }
+      // Per-structure hide — UX-borrow from undergravity/human-atlas (beyond isolate)
+      if ((e.key === 'x' || e.key === 'X') && selectedStructure && selectedStructure.id !== 'unmapped') {
+        e.preventDefault();
+        setHiddenStructureIds((prev) => toggleHiddenStructureId(prev, selectedStructure.id));
+        return;
+      }
       // Camera presets 1–5
       const preset = cameraPresetFromDigitKey(e.key);
       if (preset) {
@@ -273,6 +286,7 @@ function App() {
             ? ` · 占位 ${Object.values(placeholderCount).reduce((a, b) => a + b, 0)}`
             : ''}
           {isolateMode ? ' · 隔离中 (I)' : ''}
+          {hiddenStructureIds.size > 0 ? ` · 已隐藏 ${hiddenStructureIds.size}` : ''}
         </div>
       </div>
 
@@ -317,6 +331,7 @@ function App() {
         clipConstant={clipConstant}
         cameraPresetId={cameraPresetId}
         cameraPresetToken={cameraPresetToken}
+        hiddenStructureIds={hiddenStructureIds}
       />
 
       <StructurePanel
@@ -324,7 +339,82 @@ function App() {
         onClose={handleClose}
         isolateMode={isolateMode}
         onToggleIsolate={() => setIsolateMode((v) => !v)}
+        structureHidden={
+          selectedStructure != null && hiddenStructureIds.has(selectedStructure.id)
+        }
+        onToggleStructureHidden={
+          selectedStructure && selectedStructure.id !== 'unmapped'
+            ? () =>
+                setHiddenStructureIds((prev) =>
+                  toggleHiddenStructureId(prev, selectedStructure.id),
+                )
+            : undefined
+        }
       />
+
+      {hiddenStructureIds.size > 0 && (
+        <div
+          style={{
+            position: 'fixed',
+            top: '88px',
+            left: '20px',
+            zIndex: 100,
+            display: 'flex',
+            flexWrap: 'wrap',
+            gap: '6px',
+            alignItems: 'center',
+            maxWidth: 'min(420px, calc(100vw - 40px))',
+            background: 'rgba(26, 26, 26, 0.9)',
+            border: '1px solid #555',
+            borderRadius: '8px',
+            padding: '8px 10px',
+          }}
+          role="region"
+          aria-label="Hidden structures 已隐藏结构"
+        >
+          <span style={{ fontSize: '11px', color: '#9ca3af', marginRight: '4px' }}>
+            已隐藏 · Hidden
+          </span>
+          {[...hiddenStructureIds].map((id) => {
+            const struct = structures.find((x) => x.id === id);
+            const label = struct?.nameZh ?? id;
+            return (
+              <button
+                key={id}
+                type="button"
+                onClick={() => setHiddenStructureIds((prev) => revealStructureId(prev, id))}
+                title={`恢复显示 Restore: ${struct?.nameLa ?? id}`}
+                style={{
+                  fontSize: '11px',
+                  padding: '3px 8px',
+                  borderRadius: '999px',
+                  border: '1px solid #f87171',
+                  background: '#450a0a',
+                  color: '#fecaca',
+                  cursor: 'pointer',
+                }}
+              >
+                {label} ×
+              </button>
+            );
+          })}
+          <button
+            type="button"
+            onClick={() => setHiddenStructureIds(revealAllHiddenStructures())}
+            style={{
+              fontSize: '11px',
+              padding: '3px 8px',
+              borderRadius: '6px',
+              border: '1px solid #666',
+              background: '#333',
+              color: '#e0e0e0',
+              cursor: 'pointer',
+            }}
+          >
+            全部恢复 · Restore all
+          </button>
+        </div>
+      )}
 
       <KeyboardHelpOverlay open={helpOpen} onClose={() => setHelpOpen(false)} />
 
@@ -343,7 +433,7 @@ function App() {
         }}
       >
         <div style={{ fontSize: '11px', color: '#666' }}>
-          提示: ?/H 快捷键 | 搜索 ZH/LA | 视角1–5 | 标签密度 | 矢状切面(lite) | 拖动旋转 | 滚轮缩放 | 右键平移 | 点击对焦 | I 隔离/退出 | Esc 取消
+          提示: ?/H 快捷键 | 搜索 ZH/LA | 视角1–5 | 标签密度 | 矢状切面(lite) | 拖动旋转 | 滚轮缩放 | 右键平移 | 点击对焦 | I 隔离/退出 | X 隐藏此结构 | Esc 取消
         </div>
         <div
           style={{

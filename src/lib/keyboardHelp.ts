@@ -1,7 +1,7 @@
 /**
  * Keyboard shortcut catalog for the teaching viewer help overlay.
  * UX-borrow (ideas only): Open Anatomy Studio / BioLens shortcut sheets;
- * GraphAnatomy isolate key habit. No third-party UI code copied.
+ * GraphAnatomy isolate key habit; undergravity/human-atlas per-structure hide. No third-party UI code copied.
  */
 
 export interface KeyboardShortcut {
@@ -64,6 +64,12 @@ export const KEYBOARD_HELP_GROUPS: ReadonlyArray<KeyboardShortcutGroup> = [
         labelZh: '隔离 / 退出隔离',
         labelEn: 'Toggle isolate',
         note: 'Requires a selected structure',
+      },
+      {
+        keys: 'X',
+        labelZh: '隐藏 / 恢复当前结构',
+        labelEn: 'Hide / reveal this structure',
+        note: 'Per-structure dissection hide (beyond isolate)',
       },
       {
         keys: 'Esc',

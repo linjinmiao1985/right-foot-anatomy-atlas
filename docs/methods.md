@@ -1,7 +1,7 @@
 # Methods
 
 **Project**: Right Foot Anatomy Atlas (Teaching-Grade Interactive 3D)  
-**Version**: Week 2 Day 4aq / Phase 6 (teaching atlas in progress; see README + `docs/phase-6-self-review.md` live census; **129** entries / **124** unique; **53** main-tree / **71** BY-SA; 134 discrete GLBs; teaching prefs localStorage + keyboard help + camera presets 1–5 + multi-view QA screenshots (9) + label density + sagittal clip lite; TA2 soft-tissue still incomplete — **not a finished product**)  
+**Version**: Week 2 Day 4au / Phase 6 (teaching atlas in progress; see README + `docs/phase-6-self-review.md` live census; **129** entries / **124** unique; **53** main-tree / **71** BY-SA; 134 discrete GLBs; per-structure hide (X) + teaching prefs + keyboard help + camera presets 1–5 + multi-view QA screenshots (9) + label density + sagittal clip lite; TA2 soft-tissue still incomplete — **not a finished product**)  
 **Date**: 2026-09-15  
 **Licenses**: Code MIT | Assets CC BY 4.0 / CC0 1.0 / CC BY-SA 4.0 (isolated)
 
@@ -527,3 +527,8 @@ Wrote `docs/phase-6-self-review.md` (census 129/124; 53 main / 71 BY-SA; residua
 2. **Methods**: Journal-facing limitations table (license mix, spatial residual, grouped vessels, BY-SA share, no clinical claim, partial ontology).
 3. **No** new meshes / SA spam. Census unchanged **129/124**. Honesty: teaching atlas in progress — **not a finished product**.
 
+## Day 4au — per-structure hide UX (2026-09-15)
+
+1. **UX**: Per-structure hide chip beyond isolate (`structureVisibility.ts`; StructurePanel; chip bar; keyboard `X`) — undergravity/human-atlas dissection habit (ideas only).
+2. **Dig**: #51 Human Atlas XR (MIT + CC BY); #52 Orthopaedic Trauma Atlas (MIT + CC BY; calcaneal traction module).
+3. **No** SA mesh add. **No finished-product claim.**

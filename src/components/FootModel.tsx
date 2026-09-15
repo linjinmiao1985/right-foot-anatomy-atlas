@@ -27,6 +27,7 @@ import {
   structureInVisibleMuscleGroups,
   type MuscleGroupId,
 } from '../lib/muscleGroups';
+import { isStructureHidden } from '../lib/structureVisibility';
 
 interface FootModelProps {
   visibleLayers: Set<Layer>;
@@ -44,6 +45,8 @@ interface FootModelProps {
   visibleMuscleGroups?: Set<MuscleGroupId>;
   /** Hover label density: off / ZH / ZH+LA (Open Anatomy Studio bilingual UX-borrow). */
   labelDensity?: LabelDensity;
+  /** Per-structure hide set (undergravity/human-atlas dissection UX-borrow; beyond isolate). */
+  hiddenStructureIds?: Set<string>;
 }
 
 interface PlaceholderMesh {
@@ -238,7 +241,7 @@ const REAL_LIGAMENT_MODELS: Record<string, string> = {
   'dorsal_intercuneiform_ligaments': '/models/right-foot/by-sa/dorsal_intercuneiform_ligaments.glb',
 };
 
-export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName, isolateMode = false, visibleLigamentGroups, visibleNerveGroups, visibleVesselGroups, visibleMuscleGroups, labelDensity = DEFAULT_LABEL_DENSITY }: FootModelProps) {
+export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName, isolateMode = false, visibleLigamentGroups, visibleNerveGroups, visibleVesselGroups, visibleMuscleGroups, labelDensity = DEFAULT_LABEL_DENSITY, hiddenStructureIds }: FootModelProps) {
   const ligGroups = visibleLigamentGroups ?? new Set(getAllLigamentGroupIds());
   const nerveGroups = visibleNerveGroups ?? new Set(getAllNerveGroupIds());
   const vesselGroups = visibleVesselGroups ?? new Set(getAllVesselGroupIds());
@@ -322,6 +325,11 @@ export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName
       {placeholderMeshes.map(({ structure, meshName, position, size }) => {
         const isVisible = visibleLayers.has(structure.layer);
         if (!isVisible) return null;
+
+        // Per-structure hide (dissection habit) — independent of isolate
+        if (isStructureHidden(hiddenStructureIds, structure.id)) {
+          return null;
+        }
 
         if (
           structure.layer === 'ligament' &&

@@ -5,7 +5,7 @@ Living log of open-source human anatomy projects studied for the right-foot atla
 (CC0 / CC BY into main tree; BY-SA isolated under `public/models/right-foot/by-sa/` + NOTICE;
 reject NC / unknown / All Rights Reserved).
 
-**Last updated**: 2026-09-15 (Day 4at ontology gaps + dig)  
+**Last updated**: 2026-09-15 (Day 4au per-structure hide UX + dig)  
 **Status**: ongoing research — not a finished catalog.
 
 ---
@@ -159,6 +159,10 @@ Documented implementations (ideas only — no third-party UI code copied):
 
 5. **Sagittal clip plane lite** (from Open Anatomy Studio + VH Viewer / CT Education Skill; Day 4aj)  
    - Single X-axis toggle + position slider; `localClippingEnabled` scene sync. Teaching only — not clinical MPR.
+
+6. **Per-structure hide chip** (from undergravity/human-atlas dissection habit; Day 4au)  
+   - StructurePanel **隐藏此结构 · Hide this (X)** chip beyond isolate; chip bar of hidden names + restore / restore-all.  
+   - Ideas only — no third-party UI code copied.
 
 ---
 
@@ -997,4 +1001,37 @@ Prefer **CC0/CC BY** finds for DI / proximal·fine arteries / nerve·ligament re
 
 - Ontology coverage **126/129**; **0** new meshes; **3** honest empties remain.
 - **No finished-product claim.** Prefer IFAA entity FMA/TA over inventing codes for TNA-only veins / cervical synonym.
+
+---
+
+## Session additions (2026-09-15 · Day 4au — per-structure hide UX + dig)
+
+### UX borrow (code)
+
+| Field | Detail |
+|-------|--------|
+| **Source idea** | undergravity/human-atlas per-structure hide/show (dissection habit) — already logged as #49 |
+| **Implementation** | `src/lib/structureVisibility.ts`; StructurePanel hide chip; App chip bar; FootModel skip; keyboard **X** |
+| **Honesty** | Teaching dissection aid — **not** a finished visibility product. Independent of isolate / layer toggles. |
+
+### NEW license-verified projects (≥2)
+
+| # | Project | URL | License verified | Foot relevance | Decision |
+|---|---------|-----|------------------|----------------|----------|
+| **51** | **Human Atlas XR** (sourabhsoni0104/human-atlas-xr) | https://github.com/sourabhsoni0104/human-atlas-xr · demo https://human-atlas-zeta.vercel.app | Code **MIT** (LICENSE file verified 2026-09-15; copyright ashemag); anatomy **CC BY 4.0** BodyParts3D 4.0 (README) | Quest / WebXR passthrough lab on same BP3D male pool — **no** new right-foot soft-tissue meshes | **UX-borrow** (shared anatomy state across desktop+XR; spatial select). **reject** as new foot mesh source |
+| **52** | **Orthopaedic Trauma Atlas** (TUANZIDING/orthopaedic-trauma-atlas) | https://github.com/TUANZIDING/orthopaedic-trauma-atlas · demo https://tuanziding.github.io/orthopaedic-trauma-atlas/ | Code **MIT** (LICENSE verified 2026-09-15); anatomy subset **CC BY 4.0** BodyParts3D 4.0 (ATTRIBUTION.md — pelvis/hip extract) | Modules include **calcaneal traction** teaching (neurovascular risk overlays) — procedure atlas, **not** a right-foot intrinsic soft-tissue pack | **UX-borrow** (NV risk colour + hide-bone-occlusion habit). **reject** as DI/NV teaching mesh source (wrong scope; same BP3D pool) |
+
+### Related dig (not counted as new main-tree candidates)
+
+| Project | License | Note |
+|---------|---------|------|
+| Mohit-Nanda-Krishna/AnatomyAtlas | Geometry **CC BY-SA 4.0** (public/ATTRIBUTION.txt; BP3D BY-SA 2.1 JP + Z-Anatomy); code license unset via API | Full-body workstation with hide/isolate/clip — **isolate-SA** / monitor code SPDX |
+| calvinyu94-debug/mvmt-anatomy | Z-Anatomy inventory + licence EXCLUSIONS (no app SPDX yet) | Rigorous SA exclusion discipline — **monitor** |
+| husam05/husam-body-atlas | License unset; identifiable patient CT/report content | **reject** (privacy + unclear redistribution) |
+| maruakshay/eye-anatomy | No LICENSE file; procedural geometry | **monitor** until SPDX clear |
+
+### Outcome
+
+- UX: per-structure hide beyond isolate. Dig: **2** new license-verified projects (#51–52). **0** new meshes.
+- **No finished-product claim.** No SA mesh spam.
 

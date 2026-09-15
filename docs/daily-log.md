@@ -1325,3 +1325,12 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 3. Checks: integrity-audit + vitest + build; commit + push.
 4. **Honesty**: sparse cited map expanded — **not** finished-product / TA2-complete soft tissue. **No** SA mesh add.
 
+## Day 4au (2026-09-15) — per-structure hide UX + dig
+
+**Target**: Actionable UX borrow from undergravity/human-atlas / Femora lineage; dig ≥2 new open anatomy projects; prefer over SA mesh spam.
+
+1. **UX**: Per-structure **Hide this (X)** chip beyond isolate (`structureVisibility.ts` + StructurePanel chip + hidden chip bar + FootModel skip). undergravity/human-atlas dissection habit — ideas only.
+2. **Learning log**: NEW #51 sourabhsoni0104/human-atlas-xr (MIT + CC BY BP3D XR); #52 TUANZIDING/orthopaedic-trauma-atlas (MIT + CC BY; calcaneal traction module).
+3. Checks: integrity-audit + vitest + build; commit + push.
+4. **Honesty**: teaching atlas in progress — **no finished-product claim**. Census unchanged. **No** SA mesh add.
+

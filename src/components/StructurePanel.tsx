@@ -14,6 +14,10 @@ interface StructurePanelProps {
   onClose: () => void;
   isolateMode?: boolean;
   onToggleIsolate?: () => void;
+  /** True when this structure is in the per-structure hide set. */
+  structureHidden?: boolean;
+  /** Toggle hide for the selected structure (undergravity dissection UX-borrow). */
+  onToggleStructureHidden?: () => void;
 }
 
 export default function StructurePanel({
@@ -21,6 +25,8 @@ export default function StructurePanel({
   onClose,
   isolateMode = false,
   onToggleIsolate,
+  structureHidden = false,
+  onToggleStructureHidden,
 }: StructurePanelProps) {
   const [copyFlash, setCopyFlash] = useState(false);
 
@@ -264,26 +270,75 @@ export default function StructurePanel({
         </span>
       </div>
 
-      {onToggleIsolate && (
-        <button
-          type="button"
-          onClick={onToggleIsolate}
-          style={{
-            marginBottom: '12px',
-            width: '100%',
-            padding: '6px 10px',
-            background: isolateMode ? '#4c1d95' : '#333',
-            border: isolateMode ? '1px solid #a78bfa' : '1px solid #555',
-            borderRadius: '6px',
-            color: '#e0e0e0',
-            fontSize: '12px',
-            cursor: 'pointer',
-          }}
-          title="隐藏其他结构，仅显示当前选择"
-        >
-          {isolateMode ? '退出隔离 · Exit isolate (I)' : '仅此 · Isolate (I / hide others)'}
-        </button>
-      )}
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '6px',
+          marginBottom: '12px',
+        }}
+      >
+        {onToggleIsolate && (
+          <button
+            type="button"
+            onClick={onToggleIsolate}
+            style={{
+              width: '100%',
+              padding: '6px 10px',
+              background: isolateMode ? '#4c1d95' : '#333',
+              border: isolateMode ? '1px solid #a78bfa' : '1px solid #555',
+              borderRadius: '6px',
+              color: '#e0e0e0',
+              fontSize: '12px',
+              cursor: 'pointer',
+            }}
+            title="隐藏其他结构，仅显示当前选择"
+          >
+            {isolateMode ? '退出隔离 · Exit isolate (I)' : '仅此 · Isolate (I / hide others)'}
+          </button>
+        )}
+        {onToggleStructureHidden && (
+          <button
+            type="button"
+            onClick={onToggleStructureHidden}
+            aria-pressed={structureHidden}
+            style={{
+              width: '100%',
+              padding: '6px 10px',
+              background: structureHidden ? '#7f1d1d' : '#2a2a2a',
+              border: structureHidden ? '1px solid #f87171' : '1px solid #555',
+              borderRadius: '6px',
+              color: '#e0e0e0',
+              fontSize: '12px',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              gap: '8px',
+            }}
+            title="隐藏当前结构（解剖剥离习惯；不同于隔离） Hide this structure only — beyond isolate"
+          >
+            <span>
+              {structureHidden
+                ? '已隐藏 · Hidden (X) — 点此恢复'
+                : '隐藏此结构 · Hide this (X)'}
+            </span>
+            <span
+              style={{
+                fontSize: '10px',
+                fontWeight: 700,
+                padding: '2px 7px',
+                borderRadius: '999px',
+                background: structureHidden ? '#fecaca' : '#444',
+                color: structureHidden ? '#7f1d1d' : '#ccc',
+                flexShrink: 0,
+              }}
+            >
+              {structureHidden ? '隐藏中' : '可见'}
+            </span>
+          </button>
+        )}
+      </div>
 
       <p style={{ fontSize: '14px', lineHeight: '1.6', color: '#ccc', margin: 0 }}>{structure.summaryZh}</p>
 

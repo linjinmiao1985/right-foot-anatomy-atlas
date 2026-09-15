@@ -20,10 +20,11 @@ describe('keyboardHelp', () => {
     expect(nav?.shortcuts.map((s) => s.keys)).toEqual(['1', '2', '3', '4', '5']);
   });
 
-  it('documents isolate and escape', () => {
+  it('documents isolate, hide, and escape', () => {
     const sel = KEYBOARD_HELP_GROUPS.find((g) => g.id === 'selection');
     const keys = sel?.shortcuts.map((s) => s.keys) ?? [];
     expect(keys).toContain('I');
+    expect(keys).toContain('X');
     expect(keys).toContain('Esc');
   });
 

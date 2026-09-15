@@ -36,6 +36,8 @@ interface ViewportProps {
   clipConstant?: number;
   cameraPresetId?: CameraPresetId;
   cameraPresetToken?: number;
+  /** Per-structure hide set (beyond isolate). */
+  hiddenStructureIds?: Set<string>;
 }
 
 export default function Viewport({
@@ -52,6 +54,7 @@ export default function Viewport({
   clipConstant = DEFAULT_CLIP_CONSTANT,
   cameraPresetId = DEFAULT_CAMERA_PRESET,
   cameraPresetToken = 0,
+  hiddenStructureIds,
 }: ViewportProps) {
   return (
     <Canvas
@@ -86,6 +89,7 @@ export default function Viewport({
         visibleVesselGroups={visibleVesselGroups}
         visibleMuscleGroups={visibleMuscleGroups}
         labelDensity={labelDensity}
+        hiddenStructureIds={hiddenStructureIds}
       />
 
       <CameraFocus selectedMeshName={selectedMeshName} />
