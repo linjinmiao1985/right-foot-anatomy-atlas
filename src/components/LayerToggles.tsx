@@ -3,6 +3,7 @@ import type { Layer } from '../types/anatomy';
 import { LAYER_CONFIG, getAllLayers } from '../lib/layers';
 import { LIGAMENT_GROUPS, type LigamentGroupId } from '../lib/ligamentGroups';
 import { NERVE_GROUPS, type NerveGroupId } from '../lib/nerveGroups';
+import { VESSEL_GROUPS, type VesselGroupId } from '../lib/vesselGroups';
 
 interface LayerTogglesProps {
   visibleLayers: Set<Layer>;
@@ -15,6 +16,8 @@ interface LayerTogglesProps {
   onToggleLigamentGroup: (group: LigamentGroupId) => void;
   visibleNerveGroups: Set<NerveGroupId>;
   onToggleNerveGroup: (group: NerveGroupId) => void;
+  visibleVesselGroups: Set<VesselGroupId>;
+  onToggleVesselGroup: (group: VesselGroupId) => void;
 }
 
 /**
@@ -33,6 +36,8 @@ export default function LayerToggles({
   onToggleLigamentGroup,
   visibleNerveGroups,
   onToggleNerveGroup,
+  visibleVesselGroups,
+  onToggleVesselGroup,
 }: LayerTogglesProps) {
   const layers = getAllLayers();
 
@@ -217,6 +222,55 @@ export default function LayerToggles({
         </div>
       )}
 
+
+      {visibleLayers.has('vessel') && (
+        <div
+          style={{
+            marginBottom: '10px',
+            padding: '8px',
+            background: 'rgba(139, 0, 0, 0.10)',
+            border: '1px solid rgba(185, 28, 28, 0.45)',
+            borderRadius: '6px',
+          }}
+          role="group"
+          aria-label="血管教学亚组筛选"
+        >
+          <div style={{ fontSize: '11px', fontWeight: 600, color: '#d6d3d1', marginBottom: '6px' }}>
+            血管亚组 · Sub-groups
+            <span style={{ fontWeight: 400, color: '#888', marginLeft: '6px' }}>教学筛选 · 非完整图谱</span>
+          </div>
+          {VESSEL_GROUPS.map((g) => {
+            const on = visibleVesselGroups.has(g.id);
+            return (
+              <label
+                key={g.id}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  marginBottom: '5px',
+                  cursor: 'pointer',
+                  fontSize: '11px',
+                  color: '#e0e0e0',
+                }}
+              >
+                <input
+                  type="checkbox"
+                  checked={on}
+                  onChange={() => onToggleVesselGroup(g.id)}
+                  style={{ marginRight: '6px', cursor: 'pointer' }}
+                  aria-label={`${g.labelZh} ${g.labelEn}`}
+                />
+                <span style={{ flex: 1 }}>
+                  {g.labelZh}
+                  <span style={{ color: '#888', marginLeft: '4px' }}>{g.labelEn}</span>
+                </span>
+                <span style={{ color: '#9ca3af', fontVariantNumeric: 'tabular-nums' }}>{g.structureIds.length}</span>
+              </label>
+            );
+          })}
+        </div>
+      )}
+
       <div
         style={{
           marginTop: '8px',
@@ -285,6 +339,26 @@ export default function LayerToggles({
           >
             ℹ️ 神经层<strong>教学有用但不完整</strong>：Z-Anatomy 干神经 6 + Open3D 细支/皮支/跟支/背侧趾支。
             腓肠→LDC 以连续性说明（未另接线）；仍非完整周围神经图谱。可用上方亚组筛选。
+          </div>
+        )}
+
+        {visibleLayers.has('vessel') && (
+          <div
+            role="status"
+            style={{
+              marginTop: '8px',
+              padding: '6px 8px',
+              background: 'rgba(185, 28, 28, 0.12)',
+              border: '1px solid rgba(185, 28, 28, 0.45)',
+              borderRadius: '4px',
+              color: '#fca5a5',
+              fontSize: '10px',
+              lineHeight: 1.45,
+            }}
+            title="Vessel soft-tissue layer — teaching incomplete"
+          >
+            ℹ️ 血管层<strong>教学有用但不完整</strong>：BP3D 主干 7（含分组足背趾/足底跖）+ Open3D BY-SA 12（近端/深支/跗/跟/穿支；部分分组）。
+            仍无逐射线 1–4 跖背/跖底动脉。可用上方亚组筛选。
           </div>
         )}
 

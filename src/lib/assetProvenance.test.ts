@@ -57,6 +57,13 @@ describe('assetProvenance', () => {
     }
   });
 
+  it('attributes wired BP3D EHB as CC BY (main tree)', () => {
+    const p = getStructureProvenance('extensor_hallucis_brevis', false, 'muscle');
+    expect(p.sourceShort).toBe('BP3D');
+    expect(p.license).toBe('CC-BY-4.0');
+    expect(p.isolatedBySa).toBeFalsy();
+  });
+
   it('defaults bones to BP3D CC BY', () => {
     const p = getStructureProvenance('calcaneus', false, 'bone');
     expect(p.sourceShort).toBe('BP3D');

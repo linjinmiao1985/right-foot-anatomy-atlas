@@ -6,6 +6,7 @@ import StructureSearch from './components/StructureSearch';
 import { getAllLayers } from './lib/layers';
 import { getAllLigamentGroupIds, type LigamentGroupId } from './lib/ligamentGroups';
 import { getAllNerveGroupIds, type NerveGroupId } from './lib/nerveGroups';
+import { getAllVesselGroupIds, type VesselGroupId } from './lib/vesselGroups';
 import { getStructureByMeshName, getAllStructures } from './lib/structureLookup';
 import { ATLAS_SOURCE_FOOTER } from './lib/assetProvenance';
 import type { Layer } from './types/anatomy';
@@ -26,6 +27,9 @@ function App() {
   );
   const [visibleNerveGroups, setVisibleNerveGroups] = useState<Set<NerveGroupId>>(
     () => new Set(getAllNerveGroupIds()),
+  );
+  const [visibleVesselGroups, setVisibleVesselGroups] = useState<Set<VesselGroupId>>(
+    () => new Set(getAllVesselGroupIds()),
   );
 
   const handleLayerToggle = (layer: Layer) => {
@@ -54,6 +58,15 @@ function App() {
 
   const handleNerveGroupToggle = (group: NerveGroupId) => {
     setVisibleNerveGroups((prev) => {
+      const next = new Set(prev);
+      if (next.has(group)) next.delete(group);
+      else next.add(group);
+      return next;
+    });
+  };
+
+  const handleVesselGroupToggle = (group: VesselGroupId) => {
+    setVisibleVesselGroups((prev) => {
       const next = new Set(prev);
       if (next.has(group)) next.delete(group);
       else next.add(group);
@@ -168,6 +181,8 @@ function App() {
         onToggleLigamentGroup={handleLigamentGroupToggle}
         visibleNerveGroups={visibleNerveGroups}
         onToggleNerveGroup={handleNerveGroupToggle}
+        visibleVesselGroups={visibleVesselGroups}
+        onToggleVesselGroup={handleVesselGroupToggle}
       />
 
       <Viewport
@@ -177,6 +192,7 @@ function App() {
         isolateMode={isolateMode}
         visibleLigamentGroups={visibleLigamentGroups}
         visibleNerveGroups={visibleNerveGroups}
+        visibleVesselGroups={visibleVesselGroups}
       />
 
       <StructurePanel

@@ -489,7 +489,19 @@
     "layer": "muscle",
     "nameZh": "趾短伸肌",
     "nameLa": "M. extensor digitorum brevis",
-    "summaryZh": "足背唯一肌群。起点：跟骨外侧面前部（距下关节外侧）和下伸肌支持带。肌腹分为4条肌腱：内侧腱（又称踇短伸肌）独立止于踇趾近节趾骨底背侧；外侧3腱并入趾长伸肌腱止于第2-4趾中节和远节趾骨底。作用：协助趾长伸肌伸第1-4趾（注意：第5趾无趾短伸肌腱）。支配：腓深神经（L5-S1）。临床意义：足背可触及肌腹（外踝前下方软组织隆起），与足背动脉毗邻；踝关节扭伤时易伴发本肌挫伤；腓深神经损伤时本肌和趾长伸肌同时瘫痪导致垂足。",
+    "summaryZh": "足背唯一肌群。起点：跟骨外侧面前部（距下关节外侧）和下伸肌支持带。肌腹分为4条肌腱：内侧腱在传统描述中常称踇短伸肌（TA2 另立 M. extensor hallucis brevis，本图谱已单独建条）并独立止于踇趾近节趾骨底背侧；外侧3腱并入趾长伸肌腱止于第2-4趾中节和远节趾骨底。作用：协助趾长伸肌伸第1-4趾（注意：第5趾无趾短伸肌腱）。支配：腓深神经（L5-S1）。临床意义：足背可触及肌腹（外踝前下方软组织隆起），与足背动脉毗邻；踝关节扭伤时易伴发本肌挫伤；腓深神经损伤时本肌和趾长伸肌同时瘫痪导致垂足。",
+    "placeholder": false
+  },
+  {
+    "id": "extensor_hallucis_brevis",
+    "meshNames": [
+      "Extensor_Hallucis_Brevis_R",
+      "M_Extensor_Hallucis_Brevis_Right"
+    ],
+    "layer": "muscle",
+    "nameZh": "踇短伸肌",
+    "nameLa": "M. extensor hallucis brevis",
+    "summaryZh": "足背肌之一（TA2独立命名；旧称常并入趾短伸肌内侧腱）。起点：跟骨背外侧面、下伸肌支持带。止点：踇趾近节趾骨底背侧。作用：伸踇趾跖趾关节。支配：腓深神经（L5-S1）。临床意义：与趾短伸肌同源邻近，足背外侧可触及；腓深神经损伤时与趾短伸肌一同受累。本条目为已有 BP3D CC BY 网格补接线（此前仅在 FootModel REAL_MUSCLE_MODELS，未入 structures.json）。教学有用，不代表足背肌图谱完整。",
     "placeholder": false
   },
   {

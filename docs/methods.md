@@ -1,7 +1,7 @@
 # Methods
 
 **Project**: Right Foot Anatomy Atlas (Teaching-Grade Interactive 3D)  
-**Version**: Week 2 Day 4aa (109 structures.json placeholder:false; ligament/tendon = BP3D long plantar + Achilles + 27 Open3D BY-SA; nerves = 6 ZA + 11 Open3D; vessels = 7 BP3D + 7 Open3D BY-SA; TA2 soft-tissue still incomplete)  
+**Version**: Week 2 Day 4ac (115 structures.json placeholder:false / 110 unique; muscles = 19 unique incl. BP3D EHB; ligament/tendon = BP3D long plantar + Achilles + 27 Open3D BY-SA; nerves = 6 ZA + 11 Open3D; vessels = 7 BP3D + 12 Open3D BY-SA; vessel+nerve+ligament teaching sub-group filters; TA2 soft-tissue still incomplete)  
 **Date**: 2026-09-15  
 **Licenses**: Code MIT | Assets CC BY 4.0 / CC0 1.0 / CC BY-SA 4.0 (isolated)
 
@@ -434,4 +434,11 @@ Commit history documents asset decisions, `structures.json` evolution, and `Foot
 3. Documented-only (not wired): perforating arcuate↔deep arch; lateral/medial tarsal; calcaneal arterial branches; Open3D plantar metatarsal / dorsal digital (BP3D already main-tree); Open3D medial/lateral plantar trunks (BP3D present).
 4. Census: **109** entry / **104** unique; vessels **14** (7 BP3D + 7 Open3D BY-SA).
 5. Honesty: dorsal MTA remains **grouped-only** soft ceiling; vessel layer teaching-expanded — **not** a finished vascular atlas.
+
+## Day 4ac — Vessel sub-groups + EHB wire + Blender proof (2026-09-15)
+
+1. **Vessel teaching sub-group filter** (mirror nerve/ligament): nine partitions covering all 19 vessel ids — dorsal main/distal, tarsal, proximal leg, plantar main/deep/distal, perforators, calcaneal. UI only; **not** a complete arterial atlas; grouped meshes remain grouped.
+2. **Muscle gap census** (`docs/muscle-gap-census.md`): wired orphan BP3D **EHB** (`extensor_hallucis_brevis.glb` already in REAL_MUSCLE_MODELS) into `structures.json` → 24 muscle entries / 19 unique / main-tree +1. Still open: fibularis brevis, fibularis tertius, opponens digiti minimi (no license-clean mesh claimed).
+3. **Blender**: Official 4.2.9 LTS tarball installed (apt lacked package). Exported Z-Anatomy proof GLBs for long plantar + calcaneal tendon (`third_party/z-anatomy/proof_exports/`, gitignored). No named ATFL/CFL/deltoid/retinacula in that `.blend` — Open3D BY-SA unchanged. Proof **not** wired (BP3D already covers both).
+4. Honesty: teaching-grade in progress — **no finished-product claim**.
 

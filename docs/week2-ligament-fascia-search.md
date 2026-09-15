@@ -414,3 +414,13 @@ Scanned RIGHT arterial `o ` names in literature `lower-limb.obj`. **No** 1st–4
 | Superficial_branch_of_Medial_planter_artery.r | superficial_branch_medial_plantar_artery | accept | **Integrated** |
 
 Soft ceiling: dorsal MTA still **grouped only**. Reports: `vessel_extract_aabb.json`, `vessel_spatial_qa.json`.
+
+---
+
+## Day 4ac — Blender / Z-Anatomy proof (2026-09-15)
+
+1. Installed Blender **4.2.9 LTS** from official linux-x64 tarball (`apt`/`snap`/`flatpak` had no usable blender here).
+2. Opened Zenodo `Z-Anatomy.blend`; exported proof GLBs for `Long plantar ligament.r` + `Calcaneal tendon.r` → `third_party/z-anatomy/proof_exports/` (gitignored).
+3. **No** named lateral-ankle / deltoid / spring / retinacula objects in this blend — Open3D BY-SA teaching set unchanged.
+4. Atlas continues to use BP3D long plantar + Achilles (CC BY main tree). Proof exports are **not** wired into `structures.json`.
+

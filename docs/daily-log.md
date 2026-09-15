@@ -1175,3 +1175,19 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 - Wrote `docs/phase-5-self-review.md` (honest coverage, license split, residuals, gaps, next targets — no finished-product claim).
 - Census: 114 entry / 109 unique; vessels 19 (7 BP3D + 12 Open3D BY-SA).
 - integrity-audit + vitest + build; commit + push.
+
+## Week 2 Day 4ac — Vessel sub-groups + EHB + Blender proof (2026-09-15)
+
+### Chosen research targets
+1. Vessel sub-group filter (mirror nerve/ligament)
+2. Muscle gap census vs TA2 + wire missing BP3D EHB
+3. Blender install (official tarball) + Z-Anatomy proof ligament export
+4. README/methods/phase-5 census sync
+
+### Outcomes
+- `src/lib/vesselGroups.ts` + UI wiring (App / LayerToggles / Viewport / FootModel); 9 groups partition 19 vessels; tests added
+- Wired `extensor_hallucis_brevis` into `structures.json` (BP3D GLB was already present); census → **115** entries / **110** unique / muscles **19** unique
+- `docs/muscle-gap-census.md` — FB / FT / opponens still open (no mesh claimed)
+- Blender **4.2.9 LTS** from download.blender.org tarball; proof-exported ZA `Long plantar ligament.r` + `Calcaneal tendon.r` (gitignored). No ATFL/CFL in that blend
+- README + methods + phase-5 self-review census synced; **no finished-product claim**
+

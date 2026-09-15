@@ -280,3 +280,21 @@ Then Kabsch / NOTICE / `by-sa/` isolation as for Open3D — **only if** geometry
 ### Day 4s decision on Z-Anatomy ligaments
 
 **Not integrated from Z-Anatomy.** Open3DModel monolithic `lower-limb.obj` already exposes named RIGHT ATFL / CFL / spring / plantar aponeurosis as OBJ groups (CC BY-SA 4.0, no Blender). Those were extracted + Kabsch-baked instead. Z-Anatomy zip kept for future nerve/vessel/organs work or cross-check.
+
+---
+
+## Day 4ac — Blender proof export (2026-09-15)
+
+**Blender**: Official `blender-4.2.9-linux-x64` tarball (apt/snap/flatpak unavailable here).  
+**Source**: local `Z-Anatomy.zip` → `extracted_blend/Z-Anatomy.blend` (Zenodo package).  
+**Proof GLBs** (gitignored under `proof_exports/`):
+
+| Object | File | Notes |
+|--------|------|-------|
+| `Long plantar ligament.r` | `Long_plantar_ligament_r.glb` (~69 MB raw glTF dump) | Proof only — atlas already uses BP3D CC BY long plantar |
+| `Calcaneal tendon.r` | `Calcaneal_tendon_r.glb` (~3.4 MB) | Proof only — atlas already uses BP3D CC BY Achilles |
+
+**Negative inventory**: This 2021 `.blend` has **no** named ATFL / CFL / PTFL / deltoid parts / spring / bifurcate / ankle retinacula objects. Open3D BY-SA remains the source for those teaching bands. Soft inventory dump: `proof_exports/right_foot_soft_inventory.txt` (includes common/proper plantar digital arteries — **not** wired this pass; needs Kabsch/QA + ShareAlike policy).
+
+**Honesty**: Pipeline unblocked for future selective harvest. **Not** a bulk ligament replace; **not** finished-product.
+

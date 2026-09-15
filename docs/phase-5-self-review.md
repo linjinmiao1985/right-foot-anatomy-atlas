@@ -3,7 +3,7 @@
 **Date**: 2026-09-15  
 **Branch**: `cursor/right-foot-anatomy-atlas-mvp-af85`  
 **Status**: Teaching-grade atlas **in progress** — **not** a finished-product claim  
-**Scope of this review**: Week 2 Day 4i–4ab Open3D/Z-Anatomy BY-SA fills + Kabsch alignment + license isolation
+**Scope of this review**: Week 2 Day 4i–4ac Open3D/Z-Anatomy BY-SA fills + Kabsch alignment + license isolation + vessel sub-groups + EHB wire + Blender proof
 
 ---
 
@@ -18,11 +18,11 @@ This atlas is a strong **open teaching** resource for right-foot osteology and a
 | Layer | Entries | Unique (honest) | Main (CC BY/CC0) | BY-SA isolate | Placeholder | Teaching ceiling notes |
 |-------|---------|-----------------|------------------|---------------|-------------|------------------------|
 | **Bone** | 26 | 26 | 26 BP3D | 0 | 0 | Complete right-foot osteology (incl. sesamoids) |
-| **Muscle** | 23 | 18 | 17 (BP3D+UM) | 1 DI (Open3D) | 0 | DI is ShareAlike fill; prefer future CC BY/CC0 |
+| **Muscle** | 24 | 19 | 18 (BP3D+UM, incl. EHB Day 4ac) | 1 DI (Open3D) | 0 | DI is ShareAlike fill; prefer future CC BY/CC0; FB/FT still open |
 | **Vessel** | 19 | 19 | 7 BP3D | 12 Open3D | 0 | No per-ray 1st–4th MTA; several **grouped** meshes |
 | **Nerve** | 17 | 17 | 0 | 6 Z-Anatomy + 11 Open3D | 0 | Trunks + fine/cutaneous/calcaneal/dorsal digitals; not TA2-complete |
 | **Ligament/tendon** | 29 | 29 | 2 BP3D (long plantar + Achilles) | 27 Open3D | 0 | Teaching-useful, incomplete toe/band set |
-| **Total** | **114** | **109** | **52** | **57** | **0** | Unique = entries − lumbricals×3 − PI×2 |
+| **Total** | **115** | **110** | **53** | **57** | **0** | Unique = entries − lumbricals×3 − PI×2 |
 
 **Vessel detail (Day 4ab)**:
 - **BP3D main**: dorsalis pedis, arcuate, dorsal digital (grouped), plantar arch, plantar MTA (grouped), med/lat plantar
@@ -41,7 +41,7 @@ This atlas is a strong **open teaching** resource for right-foot osteology and a
 
 Deleting `by-sa/` (and corresponding `REAL_*` wiring) yields MIT + CC BY/CC0 only. UI badges distinguish **主树 · Main** vs **ShareAlike**.
 
-**BY-SA weight**: 57/109 unique structures (~52%) now live under ShareAlike. That is a deliberate teaching trade-off, not a main-tree claim.
+**BY-SA weight**: 57/110 unique structures (~52%) now live under ShareAlike. That is a deliberate teaching trade-off, not a main-tree claim.
 
 ---
 
@@ -61,8 +61,9 @@ These residuals support **classroom visualization**, not implant planning or int
 
 ## Known gaps (explicit)
 
+0. **Vessel teaching sub-group filters** exist (Day 4ac) — UI only; does not add per-ray MTAs.
 1. **No per-ray 1st–4th dorsal/plantar metatarsal arteries** in Open3D `lower-limb.obj` or BP3D ISA — only grouped plurals. Soft inventory ceiling.
-2. **Blender / Z-Anatomy full soft-tissue export blocked** for broader ligament/nerve harvest beyond the six CURVE trunks already wired — documented recipe only; no bulk `.blend` automation in-tree.
+2. **Blender / Z-Anatomy**: Day 4ac unblocked CLI (4.2.9 tarball) + proof-export long plantar / Achilles; **still no** named ATFL/CFL/deltoid/retinacula in Zenodo `.blend` — Open3D remains source for those bands; no bulk replace.
 3. **BY-SA weight** dominates soft tissue (nerves entire layer; most ligaments; 12/19 vessels). Prefer future CC0/CC BY replacements.
 4. **Grouped teaching meshes** remain: BP3D dorsal digital + plantar MTA; Open3D dorsal MTA + medial tarsal arteries; several nerve commons/proprii/dorsal digitals.
 5. **Further Open3D inventory not wired**: e.g. malleolar branches, additional ligament bands, nerve terminals — diminishing teaching return vs ShareAlike cost.

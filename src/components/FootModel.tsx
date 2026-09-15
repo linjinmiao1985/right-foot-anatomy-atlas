@@ -14,6 +14,11 @@ import {
   structureInVisibleNerveGroups,
   type NerveGroupId,
 } from '../lib/nerveGroups';
+import {
+  getAllVesselGroupIds,
+  structureInVisibleVesselGroups,
+  type VesselGroupId,
+} from '../lib/vesselGroups';
 
 interface FootModelProps {
   visibleLayers: Set<Layer>;
@@ -25,6 +30,8 @@ interface FootModelProps {
   visibleLigamentGroups?: Set<LigamentGroupId>;
   /** Teaching sub-group filter for nerve layer (defaults: all groups on). */
   visibleNerveGroups?: Set<NerveGroupId>;
+  /** Teaching sub-group filter for vessel layer (defaults: all groups on). */
+  visibleVesselGroups?: Set<VesselGroupId>;
 }
 
 interface PlaceholderMesh {
@@ -201,9 +208,10 @@ const REAL_LIGAMENT_MODELS: Record<string, string> = {
   'dorsal_intercuneiform_ligaments': '/models/right-foot/by-sa/dorsal_intercuneiform_ligaments.glb',
 };
 
-export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName, isolateMode = false, visibleLigamentGroups, visibleNerveGroups }: FootModelProps) {
+export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName, isolateMode = false, visibleLigamentGroups, visibleNerveGroups, visibleVesselGroups }: FootModelProps) {
   const ligGroups = visibleLigamentGroups ?? new Set(getAllLigamentGroupIds());
   const nerveGroups = visibleNerveGroups ?? new Set(getAllNerveGroupIds());
+  const vesselGroups = visibleVesselGroups ?? new Set(getAllVesselGroupIds());
   const [placeholderMeshes, setPlaceholderMeshes] = useState<PlaceholderMesh[]>([]);
   const [hoveredMesh, setHoveredMesh] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
@@ -286,6 +294,13 @@ export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName
         if (
           structure.layer === 'nerve' &&
           !structureInVisibleNerveGroups(structure.id, nerveGroups)
+        ) {
+          return null;
+        }
+
+        if (
+          structure.layer === 'vessel' &&
+          !structureInVisibleVesselGroups(structure.id, vesselGroups)
         ) {
           return null;
         }
