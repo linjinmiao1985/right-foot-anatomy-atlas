@@ -289,6 +289,18 @@
     "placeholder": false
   },
   {
+    "id": "sesamoid_bones",
+    "meshNames": [
+      "Sesamoid_Bones_MT1_R",
+      "Sesamoid_Hallux_Right"
+    ],
+    "layer": "bone",
+    "nameZh": "踇趾籽骨",
+    "nameLa": "Ossa sesamoidea hallucis",
+    "summaryZh": "位于第一跖骨头下方跖侧的两块小骨（内侧籽骨和外侧籽骨），嵌于踇短屈肌腱内，承受踇趾蹬地时的压力，保护屈肌腱并增加力臂。TA2: A02.5.17.001 (hallux sesamoids)",
+    "placeholder": false
+  },
+  {
     "id": "tibialis_posterior",
     "meshNames": [
       "Tibialis_Posterior_R",

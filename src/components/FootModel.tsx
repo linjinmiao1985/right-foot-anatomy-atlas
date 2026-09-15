@@ -18,8 +18,8 @@ interface PlaceholderMesh {
   size: [number, number, number];
 }
 
-// Real bone GLB models - ALL 25 right foot bones (BP3D CC BY 4.0 + UM CC0 1.0)
-// 14 tarsals/metatarsals (BP3D) + 11 phalanges (BP3D 7 + UM 4 distal) = 100% osteology
+// Real bone GLB models - 26 right foot bones (BP3D CC BY 4.0 + UM CC0 1.0)
+// 14 tarsals/metatarsals (BP3D) + 11 phalanges (BP3D 7 + UM 4 distal) + 1 sesamoid group (BP3D)
 const REAL_BONE_MODELS: Record<string, string> = {
   'calcaneus': '/models/right-foot/calcaneus_BP9040.glb',
   'talus': '/models/right-foot/talus_BP8033.glb',
@@ -35,6 +35,7 @@ const REAL_BONE_MODELS: Record<string, string> = {
   'metatarsal_5': '/models/right-foot/metatarsal_5_BP7912.glb',
   'proximal_phalanx_1': '/models/right-foot/phalanx_prox_1_BP8488.glb',
   'distal_phalanx_1': '/models/right-foot/distal_phalanx_1_BP9282.glb',
+  'sesamoid_bones': '/models/right-foot/sesamoid_bones.glb', // BP3D BP8756 (2 hallux sesamoids grouped)
   // Phalanges 2-5: BP3D (7 proximal/middle) + UM CC0 (4 distal from Phalanges.stl)
   'proximal_phalanx_2': '/models/right-foot/proximal_phalanx_2.glb', // BP3D
   'proximal_phalanx_3': '/models/right-foot/proximal_phalanx_3.glb', // BP3D

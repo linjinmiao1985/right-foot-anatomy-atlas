@@ -667,6 +667,56 @@ Phase 4 claimed "no open intrinsic foot muscles exist" based on insufficient sea
 
 ---
 
+## Week 2 Day 4f — 2026-09-15 ✅ Sesamoid Bones Integration (Real Mesh Gain)
+
+**Focus**: Real mesh gain priority (user directive: sesamoids > honest grouped vessel > docs-only)
+
+**Progress** ✅:
+1. **BP3D sesamoid search**:
+   - Found BP8756 "sesamoid bone of right foot" in parts list
+   - Mapped to FJ3372 (73 vertices, 80 faces)
+   - Small mesh appropriate for 2 small bones under MT1 head
+2. **Extraction + conversion**:
+   - Extracted FJ3372.obj from BP3D archive
+   - Converted to sesamoid_bones.glb (3.7 KB)
+   - Grouped mesh: likely 2 sesamoids (medial + lateral籽骨)
+3. **Integration**:
+   - Added `sesamoid_bones` structure to structures.json (index 25, after distal_phalanx_1)
+   - ZH: 踇趾籽骨, LA: Ossa sesamoidea hallucis
+   - Summary: 位于第一跖骨头下方跖侧，嵌于踇短屈肌腱内，承受蹬地压力
+   - TA2: A02.5.17.001 (hallux sesamoids)
+4. **FootModel.tsx wiring**:
+   - Added sesamoid_bones to REAL_BONE_MODELS
+   - Comment: BP3D BP8756 (2 hallux sesamoids grouped)
+   - Preload automatic
+5. **Integrity audit**: PASSED ✅
+   - **55/60 real (91%)** ⬆️ from 54/59
+   - 5 placeholders (1 DI + 4 vessels)
+   - **Bones: 26/26 (100%)** — sesamoids complete osteology
+6. **Tests + Build**: ✅ GREEN (7/7, 1.1MB)
+7. **Documentation updated**:
+   - `README.md`: Bones 26/26 (100%), Total 50/55 (91%)
+   - `manifest.json`: Sesamoid entry with BP/FMA codes + grouped note
+
+**Coverage After Day 4f**: **55/60 (91%)** ⬆️ +1 real bone structure
+- **Bones**: **26/26 (100%)** ✅ (+1 sesamoid group)
+- **Muscles**: 13/14 (93%)
+- **Vessels**: 5/9 (56%)
+- **Nerves**: 6/6 (100%) ✅
+
+**Blockers**: None
+
+**Commits**: 1 (sesamoid bones integration)
+
+**Tests/Build**: ✅ GREEN
+
+**Key Insight** 💡:
+- **Substantive real mesh gain**: Sesamoids are anatomically significant (承受压力, protect flexor tendon, mechanical advantage)
+- **BP3D sesamoid grouped**: FJ3372 contains 2 sesamoids as one mesh (honest grouped structure, not falsely split)
+- **Osteology beyond 25**: Sesamoids often overlooked in basic teaching but important for foot biomechanics
+
+---
+
 ## Week 2 Day 3 — 2026-09-15 🏗️ Design Fix (Unified ID Model)
 
 **Focus**: Expand structures.json to individual entries (no more grouped placeholder compromises)

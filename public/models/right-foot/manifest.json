@@ -27,6 +27,7 @@
     {"id": "metatarsal_5", "file": "metatarsal_5_BP7912.glb", "bp": "BP7912", "fma": "FMA24515", "name_zh": "第五跖骨", "name_la": "Os metatarsi V"},
     {"id": "proximal_phalanx_1", "file": "phalanx_prox_1_BP8488.glb", "bp": "BP8488", "fma": "FMA32951", "name_zh": "踇趾近节趾骨", "name_la": "Phalanx proximalis hallucis"},
     {"id": "distal_phalanx_1", "file": "distal_phalanx_1_BP9282.glb", "bp": "BP9282", "fma": "FMA32650", "name_zh": "踇趾远节趾骨", "name_la": "Phalanx distalis hallucis"},
+    {"id": "sesamoid_bones", "file": "sesamoid_bones.glb", "bp": "BP8756", "fma": "FMA45097", "name_zh": "踇趾籽骨", "name_la": "Ossa sesamoidea hallucis", "note": "Grouped mesh: 2 sesamoids (medial + lateral) under MT1 head"},
     {"id": "proximal_phalanx_2", "file": "proximal_phalanx_2.glb", "bp": "BP9196", "fma": "FMA32634", "name_zh": "第二趾近节趾骨", "name_la": "Phalanx proximalis digiti II pedis"},
     {"id": "proximal_phalanx_3", "file": "proximal_phalanx_3.glb", "bp": "BP8762", "fma": "FMA32636", "name_zh": "第三趾近节趾骨", "name_la": "Phalanx proximalis digiti III pedis"},
     {"id": "proximal_phalanx_4", "file": "proximal_phalanx_4.glb", "bp": "BP8281", "fma": "FMA32638", "name_zh": "第四趾近节趾骨", "name_la": "Phalanx proximalis digiti IV pedis"},
@@ -69,13 +70,13 @@
     {"id": "superficial_fibular_nerve", "file": "by-sa/superficial_fibular_nerve.glb", "source": "Z-Anatomy", "license": "CC BY-SA 4.0", "fma": "FMA19034", "name_zh": "腓浅神经", "name_la": "N. fibularis superficialis"},
     {"id": "sural_nerve", "file": "by-sa/sural_nerve.glb", "source": "Z-Anatomy", "license": "CC BY-SA 4.0", "fma": "FMA44314", "name_zh": "腓肠神经", "name_la": "N. suralis"}
   ],
-  "note": "25 bones (ALL: hallux + 11 phalanges 2-5 from BP3D 7 + UM 4 distal) + 13 muscles (BP3D 12 + UM 8) + 5 vessels + 6 nerves (Z-Anatomy BY-SA isolated). Total: 49/59 real (83%). OSTEOLOGY COMPLETE.",
+  "note": "26 bones (tarsals/metatarsals/phalanges/sesamoids: BP3D 22 + UM 4) + 13 muscles (BP3D 12 + UM 8) + 5 vessels + 6 nerves (Z-Anatomy BY-SA). Total: 50/60 real (83%).",
   "stats": {
-    "bones": "25/25 (100%, BP3D 14 tarsals/metatarsals/hallux + BP3D 7 phalanges + UM 4 distal from Phalanges.stl)",
+    "bones": "26/26 (100%, BP3D 22: 14 tarsals/metatarsals/hallux + 7 phalanges + 1 sesamoid group; UM 4 distal)",
     "muscles": "13/14 (93%, BP3D 12 + UM CC0 8: 5 intrinsic + 3 extrinsic)",
     "vessels": "5/9 (56%, BP3D main arteries, lacking digital branches)",
     "nerves": "6/6 (100%, Z-Anatomy CC BY-SA 4.0, isolated in by-sa/)",
-    "total": "49/59 (83% real meshes, 54 real structures - 5 multi-part AH counted once)"
+    "total": "50/60 (83% real meshes, 55 real structures - 5 multi-part counted once)"
   },
   "quality_decisions": {
     "overlapping_muscles": "UM CC0 chosen over BP3D for AH/ADM/FDB (2.4-8.7x resolution)",
