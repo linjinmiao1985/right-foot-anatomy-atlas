@@ -598,3 +598,35 @@ No new CC0/CC BY foot DI or proximal-artery candidates in this dig (atlas-foundr
 | **New foot ligament/fascia meshes** | **None** beyond `FJ1424`/`BP5093` (already integrated) |
 | **Side find** | Right calcaneal tendon `FJ1405`/`BP5098` — tendon, not ligament; defer |
 | **Action** | Docs + README honesty; no new main-tree mesh; no finished-product claim |
+
+## Session additions (2026-09-15 · Day 4q — Achilles Path A + BP3D ligament ceiling)
+
+### BP3D ligament / soft-tissue ceiling (brief)
+
+| Fact | Implication for this atlas |
+|------|----------------------------|
+| Exhaustive ISA scan (Day 4p) found **one** right-foot ligament elemental with geometry: long plantar `FJ1424`/`BP5093` | Ligament layer cannot be completed from BP3D alone |
+| Plantar fascia / ATFL / CFL / deltoid / spring / short plantar / Lisfranc / ankle capsules | **Absent** from BP3D ISA elementals |
+| Right calcaneal tendon `FJ1405`/`BP5098` | Present as **tendon** (also parented under some ligament-organ concepts) — usable CC BY teaching mesh, must be labeled tendon not ligament |
+| Lesson | Prefer CC BY native-frame soft tissue when it exists (Achilles); do not invent ligament coverage from BP3D; BY-SA Z-Anatomy ligaments remain optional isolate-only if spatial QA passes |
+
+### Path A integrate
+
+| Field | Value |
+|-------|-------|
+| **Mesh** | `calcaneal_tendon_BP5098.glb` (FJ1405) |
+| **License** | CC BY 4.0 main tree |
+| **UI** | Under `ligament` toggle with labels 韧带/腱; structure named 跟腱 / Tendo calcaneus |
+| **Action** | **adopt** (tendon teaching entry) |
+
+### Path B (not this pass)
+
+| Candidate | Result |
+|-----------|--------|
+| Open3D lower-limb zip | No ATFL/CFL/spring/plantar-fascia named meshes in local extract |
+| Z-Anatomy ligaments | Still Blender-internal BY-SA — deferred |
+
+### Honesty
+
+Soft-tissue under ligament toggle = **1 ligament + 1 tendon**. Still missing plantar fascia and ankle ligament complex. No finished-product claim.
+

@@ -123,10 +123,12 @@ const REAL_NERVE_MODELS: Record<string, string> = {
   'sural_nerve': '/models/right-foot/by-sa/sural_nerve.glb',
 };
 
-// Real ligament GLB — BP3D CC BY 4.0 (elemental FJ1424 / BP5093 right long plantar)
-// Same BP3D mm frame as bones; render scale 0.01. Teaching-grade only (not a full ligament set).
+// Soft-tissue under ligament toggle — BP3D CC BY 4.0, native BP3D mm (scale 0.01).
+// 1 true ligament (long plantar) + 1 named tendon (calcaneal/Achilles). Not a complete set.
 const REAL_LIGAMENT_MODELS: Record<string, string> = {
   'long_plantar_ligament': '/models/right-foot/long_plantar_ligament_BP5093.glb',
+  // Tendon (not ligament): clear naming in structures.json + tooltip
+  'calcaneal_tendon': '/models/right-foot/calcaneal_tendon_BP5098.glb',
 };
 
 export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName, isolateMode = false }: FootModelProps) {
@@ -846,7 +848,7 @@ function RealLigamentModel({
               {structure.nameLa}
             </div>
             <div style={{ fontSize: '0.7rem', color: '#e8dcc8', marginTop: '0.25rem' }}>
-              BodyParts3D · ligament
+              BodyParts3D · {structure.id === 'calcaneal_tendon' ? 'tendon (跟腱)' : 'ligament'}
             </div>
           </div>
         </Html>

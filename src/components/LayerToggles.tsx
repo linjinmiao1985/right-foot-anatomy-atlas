@@ -133,8 +133,8 @@ export default function LayerToggles({
           <span>BY-SA 隔离（神经 / DI / 近端动脉）</span>
         </div>
         <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-          <span style={legendChip('#e8dcc8')}>韧</span>
-          <span>韧带层（BP3D 跖长韧带起步；非完整韧带图谱）</span>
+          <span style={legendChip('#e8dcc8')}>韧/腱</span>
+          <span>韧带/腱层（跖长韧带 + 跟腱；非完整软组织图谱）</span>
         </div>
         {visibleLayers.has('ligament') && (
           <div
@@ -149,10 +149,10 @@ export default function LayerToggles({
               fontSize: '10px',
               lineHeight: 1.45,
             }}
-            title="Ligament layer started — see docs/week2-ligament-fascia-search.md"
+            title="Ligament/tendon soft-tissue layer — see docs/week2-ligament-fascia-search.md"
           >
-            ℹ️ 韧带层已启用但<strong>不完整</strong>（目前仅 BP3D 跖长韧带）。无足底腱膜 /
-            ATFL / CFL / 三角韧带 / 弹簧韧带网格。隔离(I)与搜索对该层可用。
+            ℹ️ 韧带/腱层<strong>不完整</strong>：BP3D 跖长韧带（真韧带）+ 跟腱（肌腱，非韧带）。仍缺足底腱膜 /
+            ATFL / CFL / 三角韧带 / 弹簧韧带。隔离(I)与搜索可用。
           </div>
         )}
 

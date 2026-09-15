@@ -45,4 +45,13 @@ describe('structureLookup', () => {
     const la = searchStructures('plantare longum');
     expect(la.some((s) => s.id === 'long_plantar_ligament')).toBe(true);
   });
+
+  it('searches calcaneal/Achilles tendon under ligament toggle', () => {
+    const zh = searchStructures('跟腱');
+    expect(zh.some((s) => s.id === 'calcaneal_tendon' && s.layer === 'ligament')).toBe(true);
+    const la = searchStructures('tendo calcaneus');
+    expect(la.some((s) => s.id === 'calcaneal_tendon')).toBe(true);
+    const ach = searchStructures('Achillis');
+    expect(ach.some((s) => s.id === 'calcaneal_tendon')).toBe(true);
+  });
 });

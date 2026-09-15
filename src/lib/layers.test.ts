@@ -20,11 +20,11 @@ describe('layers', () => {
     expect(LAYER_CONFIG.muscle.label).toBe('肌肉');
     expect(LAYER_CONFIG.nerve.label).toBe('神经');
     expect(LAYER_CONFIG.vessel.label).toBe('血管');
-    expect(LAYER_CONFIG.ligament.label).toBe('韧带');
+    expect(LAYER_CONFIG.ligament.label).toBe('韧带/腱');
     expect(LAYER_CONFIG.bone.labelEn).toBe('Bone');
     expect(LAYER_CONFIG.muscle.labelEn).toBe('Muscle');
     expect(LAYER_CONFIG.nerve.labelEn).toBe('Nerve');
     expect(LAYER_CONFIG.vessel.labelEn).toBe('Vessel');
-    expect(LAYER_CONFIG.ligament.labelEn).toBe('Ligament');
+    expect(LAYER_CONFIG.ligament.labelEn).toBe('Ligament/Tendon');
   });
 });

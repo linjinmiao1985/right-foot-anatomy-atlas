@@ -87,3 +87,23 @@ Downloaded `readme.txt` (datafile 593). Explicit: geometries excluded include �
 ### Honesty
 
 Ligament layer remains **1/N** (long plantar only). Exhaustive local BP3D scan found **zero** additional CC BY foot ligament / plantar fascia meshes to integrate. Z-Anatomy BY-SA ligaments still deferred (prefer CC0/BY). No finished-product claim.
+
+---
+
+## Day 4q — Achilles tendon integrate (Path A) + Path B check
+
+**Chosen path**: **A** — integrate BP3D right calcaneal tendon (`BP5098` / `FJ1405`) as a **named tendon** under the ligament/tendon layer toggle (CC BY main tree, native frame).
+
+| Item | Detail |
+|------|--------|
+| Mesh | `calcaneal_tendon_BP5098.glb` from `FJ1405.obj` |
+| Layer UI | `ligament` key → labels **韧带/腱** / **Ligament/Tendon**; tooltip says tendon |
+| Honesty | Still **not** a ligament atlas; Achilles is tendon, not ATFL/CFL/fascia fill |
+| Kabsch | None (native BP3D) |
+
+**Path B check (not integrated)**:
+- Open3D local `lower-limb-obj.zip`: keyword scan for liga/fascia/ATFL/CFL/spring/aponeuro → **0** usable meshes
+- Z-Anatomy ligamentous system: still `.blend` / BY-SA; deferred (prefer not expanding SA when Path A CC BY tendon is available)
+
+**BP3D ligament ceiling (unchanged)**: only right long plantar among true foot ligament elementals; plantar fascia / ATFL / CFL / deltoid / spring / short plantar absent.
+

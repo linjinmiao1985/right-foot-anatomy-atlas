@@ -1070,3 +1070,15 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 - Docs/README honesty updated; search test for ligament; layer-toggle incomplete banner when ligament visible
 - integrity-audit + vitest + build; commit/push
 - **Not claimed**: finished ligament atlas / finished product
+
+---
+
+## Day 4q (2026-09-15) — Achilles tendon (Path A)
+
+- **Path A**: Integrated BP3D right calcaneal tendon `FJ1405`/`BP5098` as named **tendon** under ligament/tendon toggle (CC BY main tree; native frame; scale 0.01)
+- Spatial QA: AABB overlaps calcaneus; insertion nearest ≈0.83 mm; proximal bulk +Z — teaching-grade
+- **Path B**: Skipped integrate — Open3D local zip has no ATFL/CFL/spring/plantar fascia meshes; Z-Anatomy ligaments still Blender-only BY-SA
+- Learning-log: brief BP3D ligament ceiling note; layer chrome updated (韧带/腱)
+- integrity-audit + vitest + build; commit/push
+- **Not claimed**: finished soft-tissue / ligament atlas
+

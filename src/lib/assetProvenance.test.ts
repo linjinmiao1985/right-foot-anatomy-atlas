@@ -47,4 +47,11 @@ describe('assetProvenance', () => {
     expect(p.license).toBe('CC-BY-4.0');
     expect(p.isolatedBySa).toBeFalsy();
   });
+
+  it('attributes calcaneal tendon as BP3D CC BY (main tree)', () => {
+    const p = getStructureProvenance('calcaneal_tendon', false, 'ligament');
+    expect(p.sourceShort).toBe('BP3D');
+    expect(p.license).toBe('CC-BY-4.0');
+    expect(p.isolatedBySa).toBeFalsy();
+  });
 });

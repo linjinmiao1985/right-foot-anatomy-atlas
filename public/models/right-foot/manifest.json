@@ -1,5 +1,5 @@
 {
-  "version": "3.6.1-ligament-isa-rescan",
+  "version": "3.7.0-achilles-tendon",
   "sources": [
     "BodyParts3D Release 4.0 (DBCLS Japan)",
     "Universiti Malaya Asian Male LE MSK",
@@ -564,7 +564,7 @@
       "name_la": "N. suralis"
     }
   ],
-  "note": "Honest coverage: structures.json 65/65 placeholder:false. Ligament layer started (1 BP3D long plantar FJ1424/BP5093). Day 4p exhaustive ISA scan: no additional foot ligament/plantar fascia elementals. Fine digital nn. / split dorsal MTA still open. BY-SA fills isolate-only. Not a finished atlas.",
+  "note": "Honest coverage: structures.json 66/66 placeholder:false. Soft-tissue under ligament toggle: 1 BP3D long plantar ligament (FJ1424) + 1 BP3D calcaneal/Achilles tendon (FJ1405/BP5098, named as tendon). BP3D ligament ceiling: no plantar fascia/ATFL/CFL/deltoid/spring. Fine digital nn. / split dorsal MTA still open. BY-SA fills isolate-only. Not a finished atlas.",
   "stats": {
     "bones": "26/26 (100%, all BP3D ISA right-foot elemental; was BP3D 22 + UM 4 distal)",
     "muscles_unique": "18/18 wired unique muscle structures (17 prior + fibularis/TA/EDL/EHL teaching; DI still BY-SA)",
@@ -574,9 +574,9 @@
     "main_tree_unique": "50/59 approx (CC BY/CC0 bones+muscles+vessels; +4 UM extrinsics; BY-SA still separate)",
     "by_sa_unique": "9/55 (DI + PTA + fibular + 6 nerves; ShareAlike isolate)",
     "total_unique": "wired entry meshes with BY-SA fills (not a finished-product claim)",
-    "total_entries": "65/65 structures.json placeholder:false",
-    "main_tree_unique_note": "Main tree includes 1 BP3D ligament; Day 4p ISA re-scan found no further foot ligament/fascia meshes; fine digital nn. / split dorsal metatarsals still absent",
-    "ligaments": "1/N (long plantar only; BP3D ISA has no other right-foot ligament elementals)"
+    "total_entries": "66/66 structures.json placeholder:false",
+    "main_tree_unique_note": "Main tree includes BP3D long plantar + Achilles tendon; BP3D ISA has no further foot ligament/fascia meshes; fine digital nn. / split dorsal metatarsals still absent",
+    "ligaments": "1 ligament + 1 tendon under ligament/tendon toggle (long plantar + Achilles); BP3D has no other right-foot ligament elementals"
   },
   "quality_decisions": {
     "overlapping_muscles": "UM CC0 chosen over BP3D for AH/ADM/FDB (2.4-8.7x resolution)",
@@ -608,7 +608,8 @@
     "2026-09-15: replaced mislabelled cuboid/cuneiforms (were left calcaneus / left medial cuneiform / pharyngeal constrictor / distal phalanx II) with correct ISA right-foot elemental meshes BP8873/8830/9110/8730",
     "2026-09-15: proximal_phalanx_1 remapped BP8488→BP8785/FMA43253 (FJ3310); distal_phalanx_2–5 replaced UM Y≈−850 meshes with BP3D FJ3189/3190/3191/3195 (BP8472/9005/9261/8695) — no Kabsch re-bake needed",
     "2026-09-15 Day 4n: wired 4 UM CC0 teaching extrinsics (TA/FL/EDL/EHL) after Kabsch; TA2 ligaments/fine digital nn./split dorsal MTA still open",
-    "2026-09-15 Day 4p: brute-force BP3D ISA/cache re-scan — no new RIGHT foot/ankle ligament or plantar aponeurosis beyond FJ1424; Achilles FJ1405 noted as tendon (not ligament layer)"
+    "2026-09-15 Day 4p: brute-force BP3D ISA/cache re-scan — no new RIGHT foot/ankle ligament or plantar aponeurosis beyond FJ1424; Achilles FJ1405 noted as tendon (not ligament layer)",
+    "2026-09-15 Day 4q: Integrated BP3D right calcaneal tendon FJ1405/BP5098 as named tendon under ligament/tendon toggle (CC BY main tree); Path B skipped — Open3D local zip has no ATFL/CFL/spring/plantar fascia meshes; Z-Anatomy ligaments still Blender-only BY-SA"
   ],
   "ligaments": [
     {
@@ -621,6 +622,20 @@
       "name_la": "Ligamentum plantare longum",
       "license": "CC BY 4.0",
       "note": "Only BP3D right-foot ligament elemental with usable mesh (Day 4o+4p ISA confirmation); not a complete ligament set"
+    }
+  ],
+  "tendons": [
+    {
+      "id": "calcaneal_tendon",
+      "file": "calcaneal_tendon_BP5098.glb",
+      "bp": "BP5098",
+      "elemental": "FJ1405",
+      "fma": "FMA258847",
+      "name_zh": "跟腱",
+      "name_la": "Tendo calcaneus (tendo Achillis)",
+      "license": "CC BY 4.0",
+      "layer_toggle": "ligament",
+      "note": "Tendon teaching entry under ligament/tendon toggle with clear naming — not a ligament; native BP3D frame"
     }
   ]
 }

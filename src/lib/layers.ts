@@ -33,8 +33,9 @@ export const LAYER_CONFIG: Record<Layer, LayerConfig> = {
     defaultVisible: true,
   },
   ligament: {
-    label: '韧带',
-    labelEn: 'Ligament',
+    // Toggle hosts ligaments + clearly named tendons (e.g. Achilles) — incomplete soft-tissue set
+    label: '韧带/腱',
+    labelEn: 'Ligament/Tendon',
     color: '#e8dcc8',
     defaultVisible: true,
   },

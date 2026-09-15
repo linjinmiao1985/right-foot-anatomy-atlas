@@ -315,3 +315,14 @@ Calcaneus, Talus, Navicular, **Cuboid**, **medial / intermediate / lateral cunei
 ## Day 4p — ISA re-scan (no new ligament mesh)
 
 No additional RIGHT foot/ankle ligament or plantar aponeurosis elemental found in local BP3D cache. Existing FJ1424 spatial QA (Day 4o) unchanged. Achilles FJ1405 noted but not integrated under ligament layer.
+
+## Day 4q — BP3D calcaneal (Achilles) tendon (FJ1405)
+
+- **Source**: `isa_BP3D_4.0_obj_99/FJ1405.obj` → `calcaneal_tendon_BP5098.glb`
+- **Concept**: Right calcaneal tendon `BP5098` / FMA258847 (BP3D also lists FJ1405 under some ligament-organ parents — atlas presents it as **tendon**)
+- **Frame**: Native BP3D mm (same as bones). Render scale remains `0.01`.
+- **AABB (mm)**: X[-97.7, -40.8] Y[-55.3, -24.7] Z[-56.2, 157.8] (3663 verts)
+- **QA vs calcaneus BP9040**: AABB overlap on X/Y/Z; Achilles→calcaneus nearest ≈0.83 mm min; ~23% of verts within 5 mm (insertion band); bulk extends proximally (+Z). Teaching-grade co-location — **not** surgical registration.
+- **Kabsch**: Not required (same source frame as osteology). Residuals: N/A.
+- **Path B note**: Local Open3D `lower-limb-obj.zip` has no ATFL/CFL/spring/plantar-fascia named meshes; Z-Anatomy ligaments remain Blender-only BY-SA — not integrated this pass.
+

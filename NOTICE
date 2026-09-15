@@ -20,7 +20,7 @@ BodyParts3D, © The Database Center for Life Science licensed under CC Attributi
 ```
 
 **Usage in this project**:
-- Right foot bone meshes extracted from BodyParts3D Release 4.0 OBJ data
+- Right foot bone, vessel, muscle, ligament, and calcaneal-tendon meshes extracted from BodyParts3D Release 4.0 OBJ data
 - Files modified: cropped to right foot, converted to GLB format
 - Derivative work: integrated into interactive 3D web viewer
 
@@ -64,5 +64,5 @@ When redistributing or citing this project, please include:
 
 ---
 
-**Last Updated**: 2026-09-14  
+**Last Updated**: 2026-09-15  
 **Maintained By**: Right Foot Anatomy Atlas Project
