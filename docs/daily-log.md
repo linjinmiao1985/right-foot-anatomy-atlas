@@ -1208,3 +1208,13 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 - Vessel sub-group `veins` added; plantar_distal / proximal_leg updated. Muscle census unchanged (no new muscles).
 - Honesty: first venous teaching fill — **not** finished-product / TA2-complete.
 
+
+## Day 4af (2026-09-15) — ZA circumflex fibular + more veins + census polish
+
+- Pulled `f31761a`; reused `za_to_bp3d_transform.json` (≈1.8 mm).
+- From remaining ZA uncovered soft list, wired 4 QA-pass BY-SA meshes: circumflex fibular branch of PTA, medial plantar veins, lateral plantar vein, plantar metatarsal veins.
+- Skipped calcaneal arterial branch overlaps; deferred dorsal digital/metatarsal/intercapitular + ATV/fibular/GSV veins.
+- UX/docs: refreshed README live census + phase-5 after vessel adds (129 entries / 124 unique; vessels 29).
+- Vessel sub-groups: circumflex → proximal_leg; new veins → veins.
+- Honesty: expanded venous/proximal arterial teaching fill — **not** finished-product / TA2-complete.
+

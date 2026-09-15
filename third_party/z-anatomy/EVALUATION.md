@@ -339,3 +339,22 @@ Then Kabsch / NOTICE / `by-sa/` isolation as for Open3D — **only if** geometry
 
 **Honesty**: First venous teaching fill. **Not** finished-product; **not** complete foot venous atlas; muscle census unchanged this pass.
 
+
+
+---
+
+## Day 4af — ZA circumflex fibular + more veins (2026-09-15)
+
+**Transform**: reuse `za_to_bp3d_transform.json` (mean residual ≈1.8 mm). Mesh-API OBJ path only.
+
+**Wired (BY-SA `by-sa/`, QA-pass)**:
+| Object | File | Notes |
+|--------|------|-------|
+| `Circumflex fibular branch of posterior tibial artery.r` | `circumflex_fibular_artery.glb` | Proximal PTA twig; teaching anastomosis context |
+| `Medial plantar veins.r` | `medial_plantar_veins.glb` | Grouped plural |
+| `Lateral plantar vein.r` | `lateral_plantar_vein.glb` | Companion to lat. plantar a. |
+| `Plantar metatarsal veins.r` | `plantar_metatarsal_veins.glb` | Grouped; near plantar venous arch |
+
+**Still deferred**: calcaneal arterial branches (Open3D overlap); dorsal digital/metatarsal/intercapitular veins; anterior tibial / fibular / great saphenous veins.
+
+**Honesty**: Venous teaching fill expanded. **Not** finished-product; **not** complete foot venous atlas.

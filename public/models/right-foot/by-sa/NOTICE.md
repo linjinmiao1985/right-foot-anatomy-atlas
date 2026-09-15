@@ -165,7 +165,20 @@ Attribution: "Z-Anatomy - The libre 3D atlas of anatomy - CC BY-SA 4.0"; Open3D 
 - `plantar_venous_arch.glb` — `Plantar venous arch.r`
 - `plantar_digital_veins.glb` — `Plantar digital veins.r` (grouped)
 
-**Skipped (duplicates / lower gain)**: Fibularis*/Opponens*/DI (Open3D); long plantar / Achilles (BP3D); plantaris/FHB lat/PPDA (Day 4ad); deep plantar / dorsalis / fibular / PTA / plantar aa / MTA (Open3D/BP3D); calcaneal arterial branches (overlap Open3D med/lat calcaneal); circumflex fibular; other ZA veins deferred.
+**Skipped (duplicates / lower gain)**: Fibularis*/Opponens*/DI (Open3D); long plantar / Achilles (BP3D); plantaris/FHB lat/PPDA (Day 4ad); deep plantar / dorsalis / fibular / PTA / plantar aa / MTA (Open3D/BP3D); calcaneal arterial branches (overlap Open3D med/lat calcaneal); other ZA veins deferred at Day 4ae (partially wired Day 4af).
 
 Attribution: "Z-Anatomy - The libre 3D atlas of anatomy - CC BY-SA 4.0". **Not** a finished venous atlas.
 
+
+### Day 4af — ZA circumflex fibular + more veins (2026-09-15)
+
+**Z-Anatomy (CC BY-SA 4.0)** — mesh-API OBJ → `za_to_bp3d_transform.json` Kabsch (mean residual ≈1.8 mm) → GLB; QA all accept (`za_unique_mesh_qa.json`).
+
+- `circumflex_fibular_artery.glb` — `Circumflex fibular branch of posterior tibial artery.r`
+- `medial_plantar_veins.glb` — `Medial plantar veins.r` (grouped)
+- `lateral_plantar_vein.glb` — `Lateral plantar vein.r`
+- `plantar_metatarsal_veins.glb` — `Plantar metatarsal veins.r` (grouped)
+
+**Still deferred**: calcaneal arterial branches (Open3D overlap); dorsal digital/metatarsal/intercapitular veins; anterior tibial/fibular/great saphenous veins (proximal/less foot-specific).
+
+Attribution: "Z-Anatomy - The libre 3D atlas of anatomy - CC BY-SA 4.0". Venous teaching fill expanded — **not** a finished venous atlas.

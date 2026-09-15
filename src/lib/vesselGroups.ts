@@ -45,7 +45,7 @@ export const VESSEL_GROUPS: readonly VesselGroup[] = [
     id: 'proximal_leg',
     labelZh: '小腿近端',
     labelEn: 'Proximal leg',
-    structureIds: ['posterior_tibial_artery', 'anterior_tibial_artery', 'fibular_artery'],
+    structureIds: ['posterior_tibial_artery', 'anterior_tibial_artery', 'fibular_artery', 'circumflex_fibular_artery'],
   },
   {
     id: 'plantar_main',
@@ -86,7 +86,7 @@ export const VESSEL_GROUPS: readonly VesselGroup[] = [
     id: 'veins',
     labelZh: '足静脉（示意）',
     labelEn: 'Veins (schematic)',
-    structureIds: ['dorsal_venous_arch', 'plantar_venous_arch', 'plantar_digital_veins'],
+    structureIds: ['dorsal_venous_arch', 'plantar_venous_arch', 'plantar_digital_veins', 'medial_plantar_veins', 'lateral_plantar_vein', 'plantar_metatarsal_veins'],
   },
 ] as const;
 

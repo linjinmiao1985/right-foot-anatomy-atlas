@@ -1029,6 +1029,50 @@
     "placeholder": false
   },
   {
+    "id": "circumflex_fibular_artery",
+    "meshNames": [
+      "Circumflex_Fibular_Branch_of_PTA_R"
+    ],
+    "layer": "vessel",
+    "nameZh": "腓动脉回旋支（胫后动脉）",
+    "nameLa": "R. circumflexus fibularis (a. tibialis posterior)",
+    "summaryZh": "胫后动脉起始部发出的腓回旋支，绕腓骨颈附近参与膝关节/近端小腿外侧吻合网。教学：胫后–腓动脉近端侧支关系示意。网格：Z-Anatomy Circumflex fibular branch of posterior tibial artery.r（CC BY-SA 4.0），by-sa/ 隔离；ZA→BP3D Kabsch。近端属支教学对象，非膝关节全图谱；非介入导航级。",
+    "placeholder": false
+  },
+  {
+    "id": "medial_plantar_veins",
+    "meshNames": [
+      "Medial_Plantar_Veins_R"
+    ],
+    "layer": "vessel",
+    "nameZh": "足底内侧静脉",
+    "nameLa": "Vv. plantares mediales",
+    "summaryZh": "与足底内侧动脉伴行的足底内侧静脉（复数教学网格），向近端汇入胫后静脉系统。教学：足底内侧动静脉伴行与内侧足底回流。网格：Z-Anatomy Medial plantar veins.r（CC BY-SA 4.0），by-sa/ 隔离；ZA→BP3D Kabsch。教学示意，非完整足静脉图谱。",
+    "placeholder": false
+  },
+  {
+    "id": "lateral_plantar_vein",
+    "meshNames": [
+      "Lateral_Plantar_Vein_R"
+    ],
+    "layer": "vessel",
+    "nameZh": "足底外侧静脉",
+    "nameLa": "V. plantaris lateralis",
+    "summaryZh": "与足底外侧动脉伴行的足底外侧静脉，向近端参与胫后静脉回流。教学：足底外侧动静脉伴行与外侧足底深回流。网格：Z-Anatomy Lateral plantar vein.r（CC BY-SA 4.0），by-sa/ 隔离；ZA→BP3D Kabsch。教学示意，非完整足静脉图谱。",
+    "placeholder": false
+  },
+  {
+    "id": "plantar_metatarsal_veins",
+    "meshNames": [
+      "Plantar_Metatarsal_Veins_R"
+    ],
+    "layer": "vessel",
+    "nameZh": "跖底跖骨静脉（组合）",
+    "nameLa": "Vv. metatarsales plantares (combined)",
+    "summaryZh": "跖骨间隙跖侧静脉属支（复数/组合教学网格），连接趾静脉与足底静脉弓。教学：与跖底动脉伴行层次对照。网格：Z-Anatomy Plantar metatarsal veins.r（CC BY-SA 4.0），by-sa/ 隔离；ZA→BP3D Kabsch。分组教学对象，非逐间隙分条；非完整足静脉图谱。",
+    "placeholder": false
+  },
+  {
     "id": "long_plantar_ligament",
     "meshNames": [
       "Long_Plantar_Ligament_R",

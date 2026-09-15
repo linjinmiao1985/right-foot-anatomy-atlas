@@ -182,6 +182,10 @@ describe('assetProvenance', () => {
       ['dorsal_venous_arch', 'vessel'],
       ['plantar_venous_arch', 'vessel'],
       ['plantar_digital_veins', 'vessel'],
+      ['circumflex_fibular_artery', 'vessel'],
+      ['medial_plantar_veins', 'vessel'],
+      ['lateral_plantar_vein', 'vessel'],
+      ['plantar_metatarsal_veins', 'vessel'],
     ] as const) {
       const p = getStructureProvenance(id, false, layer);
       expect(p.sourceShort).toBe('Z-Anatomy');

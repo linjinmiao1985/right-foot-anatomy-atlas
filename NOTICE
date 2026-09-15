@@ -51,7 +51,7 @@ Day 4ad adds fibularis brevis/tertius + opponens digiti minimi muscle GLBs (Kabs
 
 **Source**: Z-Anatomy  
 **License**: CC BY-SA 4.0  
-**Usage**: Six trunk nerve GLBs under `by-sa/` only; Day 4ad plantaris + FHB lateral head + proper plantar digital arteries; Day 4ae common plantar digital arteries + anterior tibial artery + dorsal/plantar venous arches + plantar digital veins (grouped). Fine plantar/cutaneous/calcaneal / dorsal digital (superficial + deep fibular) branches are Open3D (above), not Z-Anatomy. Sural→LDC continuity is a teaching note on LDC (no extra mesh). Venous set is first teaching fill — **not** complete.
+**Usage**: Six trunk nerve GLBs under `by-sa/` only; Day 4ad plantaris + FHB lateral head + proper plantar digital arteries; Day 4ae common plantar digital arteries + anterior tibial artery + dorsal/plantar venous arches + plantar digital veins (grouped); Day 4af circumflex fibular branch of PTA + medial/lateral plantar veins + plantar metatarsal veins (grouped). Fine plantar/cutaneous/calcaneal / dorsal digital (superficial + deep fibular) branches are Open3D (above), not Z-Anatomy. Sural→LDC continuity is a teaching note on LDC (no extra mesh). Venous set is expanded teaching fill — **not** complete.
 
 ## Software Libraries
 

@@ -156,6 +156,11 @@ const REAL_VESSEL_MODELS: Record<string, string> = {
   'dorsal_venous_arch': '/models/right-foot/by-sa/dorsal_venous_arch.glb', // ZA BY-SA Day 4ae
   'plantar_venous_arch': '/models/right-foot/by-sa/plantar_venous_arch.glb', // ZA BY-SA Day 4ae
   'plantar_digital_veins': '/models/right-foot/by-sa/plantar_digital_veins.glb', // ZA BY-SA Day 4ae
+  // Day 4af — ZA circumflex fibular + medial/lateral plantar veins + plantar metatarsal veins
+  'circumflex_fibular_artery': '/models/right-foot/by-sa/circumflex_fibular_artery.glb', // ZA BY-SA Day 4af
+  'medial_plantar_veins': '/models/right-foot/by-sa/medial_plantar_veins.glb', // ZA BY-SA Day 4af
+  'lateral_plantar_vein': '/models/right-foot/by-sa/lateral_plantar_vein.glb', // ZA BY-SA Day 4af
+  'plantar_metatarsal_veins': '/models/right-foot/by-sa/plantar_metatarsal_veins.glb', // ZA BY-SA Day 4af
 };
 
 // Real nerve GLBs — Z-Anatomy trunks (CURVE→tube) + Open3D fine/branch (volumetric, Kabsch→BP3D).

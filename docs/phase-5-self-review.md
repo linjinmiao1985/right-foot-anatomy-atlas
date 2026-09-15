@@ -3,7 +3,7 @@
 **Date**: 2026-09-15  
 **Branch**: `cursor/right-foot-anatomy-atlas-mvp-af85`  
 **Status**: Teaching-grade atlas **in progress** — **not** a finished-product claim  
-**Scope of this review**: Week 2 Day 4i–4ae Open3D/Z-Anatomy BY-SA fills + Kabsch alignment + license isolation + vessel sub-groups (+ veins) + EHB/muscle-gap wires + Blender ZA harvest
+**Scope of this review**: Week 2 Day 4i–4af Open3D/Z-Anatomy BY-SA fills + Kabsch alignment + license isolation + vessel sub-groups (+ veins) + EHB/muscle-gap wires + Blender ZA harvest
 
 ---
 
@@ -13,22 +13,22 @@ This atlas is a strong **open teaching** resource for right-foot osteology and a
 
 ---
 
-## Coverage by layer (live census 2026-09-15 Day 4ae)
+## Coverage by layer (live census 2026-09-15 Day 4af)
 
 | Layer | Entries | Unique (honest) | Main (CC BY/CC0) | BY-SA isolate | Placeholder | Teaching ceiling notes |
 |-------|---------|-----------------|------------------|---------------|-------------|------------------------|
 | **Bone** | 26 | 26 | 26 BP3D | 0 | 0 | Complete right-foot osteology (incl. sesamoids) |
 | **Muscle** | 28 | 23 | 18 (BP3D+UM, incl. EHB) | 5 (DI+FB+FT+opponens+plantaris; FHB lat ADDITIONAL) | 0 | Teaching-useful; DI ShareAlike; no gastroc/soleus bellies |
-| **Vessel** | 25 | 25 | 7 BP3D | 13 Open3D + 5 ZA | 0 | First veins; no per-ray MTA; several **grouped** meshes |
+| **Vessel** | 29 | 29 | 7 BP3D | 12 Open3D + 10 ZA | 0 | Expanded veins + circumflex fibular; no per-ray MTA; several **grouped** meshes |
 | **Nerve** | 17 | 17 | 0 | 6 Z-Anatomy + 11 Open3D | 0 | Trunks + fine/cutaneous/calcaneal/dorsal digitals; not TA2-complete |
 | **Ligament/tendon** | 29 | 29 | 2 BP3D (long plantar + Achilles) | 27 Open3D | 0 | Teaching-useful, incomplete toe/band set |
-| **Total** | **125** | **120** | **53** | **67** | **0** | Unique ≈ entries − lumbricals×3 − PI×2 |
+| **Total** | **129** | **124** | **53** | **71** | **0** | Unique ≈ entries − lumbricals×3 − PI×2 |
 
-**Vessel detail (Day 4ae)**:
+**Vessel detail (Day 4af)**:
 - **BP3D main**: dorsalis pedis, arcuate, dorsal digital (grouped), plantar arch, plantar MTA (grouped), med/lat plantar
-- **Open3D BY-SA**: PTA, fibular; Day 4aa deep plantar a./arch, grouped dorsal MTA, med. plantar deep/superficial branches; Day 4ab perforating arcuate↔deep arch, lat. tarsal, med. tarsal (**grouped**), med./lat. calcaneal
-- **Z-Anatomy BY-SA**: Day 4ad PPDA; Day 4ae common plantar digitals + anterior tibial a. + dorsal/plantar venous arches + plantar digital veins
-- **Skipped**: Open3D arterial duplicates vs BP3D; ZA calcaneal arterial branches (overlap Open3D); other ZA veins deferred
+- **Open3D BY-SA** (12): PTA, fibular; Day 4aa deep plantar a./arch, grouped dorsal MTA, med. plantar deep/superficial branches; Day 4ab perforating arcuate↔deep arch, lat. tarsal, med. tarsal (**grouped**), med./lat. calcaneal
+- **Z-Anatomy BY-SA** (10): Day 4ad PPDA; Day 4ae common plantar digitals + ATA + dorsal/plantar venous arches + plantar digital veins; Day 4af circumflex fibular + med/lat plantar veins + plantar metatarsal veins
+- **Skipped**: Open3D arterial duplicates vs BP3D; ZA calcaneal arterial branches (overlap Open3D); dorsal digital/metatarsal/intercapitular veins + ATV/fibular/GSV deferred
 
 ---
 
@@ -42,7 +42,7 @@ This atlas is a strong **open teaching** resource for right-foot osteology and a
 
 Deleting `by-sa/` (and corresponding `REAL_*` wiring) yields MIT + CC BY/CC0 only. UI badges distinguish **主树 · Main** vs **ShareAlike**.
 
-**BY-SA weight**: ~67/120 unique structures now live under ShareAlike. That is a deliberate teaching trade-off, not a main-tree claim.
+**BY-SA weight**: ~71/124 unique structures now live under ShareAlike. That is a deliberate teaching trade-off, not a main-tree claim.
 
 ---
 
@@ -70,7 +70,7 @@ These residuals support **classroom visualization**, not implant planning or int
 4. **Grouped teaching meshes** remain: BP3D dorsal digital + plantar MTA; Open3D dorsal MTA + medial tarsal arteries; several nerve commons/proprii/dorsal digitals.
 5. **Further Open3D inventory not wired**: e.g. malleolar branches, additional ligament bands, nerve terminals — diminishing teaching return vs ShareAlike cost.
 6. **No finished-product / TA2-complete claim** for nerve, vessel, or ligament layers.
-7. **Venous layer**: Day 4ae first teaching fill (dorsal/plantar arches + plantar digitals) — **not** complete foot venous atlas; med/lat plantar veins etc. still deferred.
+7. **Venous layer**: Day 4ae–4af teaching fill (arches + plantar digitals + med/lat plantar veins + plantar metatarsal veins) — **not** complete foot venous atlas; dorsal digital/metatarsal/intercapitular + ATV/fibular/GSV still deferred.
 
 ---
 
