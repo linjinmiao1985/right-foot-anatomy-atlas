@@ -1470,3 +1470,15 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 3. **New digs**: #66 Henson Sheffield LE muscle DICOM labels (**CC0**); #67 Auckland Lower Limb Visualiser (**MIT**); #68 CEINMS-RT LowerLimbModel (**Apache-2.0**). Soft gaps still dry; Henson gastroc/soleus = monitor masks only.
 4. Checks: integrity-audit + vitest + build; commit + push.
 5. **Honesty**: teaching atlas in progress — **no finished-product claim**. Census unchanged. **0** meshes / no SA spam / Andreassen skipped / Utah not integrated.
+
+## Day 4bh (2026-09-15) — Auckland view-reset UX + Henson path + dig #69–#70
+
+**Target**: ONE solid UX borrow from Auckland Lower Limb Visualiser notes; expand Henson CC0 DICOM path on watchlist; optional ≥2 digs; gates + commit + push. No finished-product claims; no SA spam; no Andreassen/Utah wire.
+
+1. Pulled `8ad0d0b` (already current).
+2. **UX**: bilingual **复位视角 · Reset view** (button + keys `0`/`Home`) — re-applies active camera preset after free orbit (Auckland measurement visualiser reset habit — ideas only).
+3. **Watchlist**: Henson Sheffield (#66) path detail — ORDA URLs, CC0, DICOM class IDs, why monitor not integrate, next mesh research step.
+4. **New digs**: #69 DeepACSA US CSA (**CC BY 4.0**, reject GLB); #70 Dryad PF windlass (**CC0**, reject mesh). Soft gaps still dry.
+5. Checks: integrity-audit + vitest + build; commit + push.
+6. **Honesty**: teaching atlas in progress — **no finished-product claim**. Census unchanged. **0** meshes / no SA spam / Andreassen skipped / Utah not integrated.
+

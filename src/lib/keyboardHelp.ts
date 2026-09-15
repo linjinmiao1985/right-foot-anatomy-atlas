@@ -52,6 +52,12 @@ export const KEYBOARD_HELP_GROUPS: ReadonlyArray<KeyboardShortcutGroup> = [
         labelZh: '外侧',
         labelEn: 'Lateral',
       },
+      {
+        keys: '0 / Home',
+        labelZh: '复位当前教学视角',
+        labelEn: 'Reset current teaching view',
+        note: 'Re-applies the active preset after free orbit (Auckland LL visualiser reset habit — ideas only)',
+      },
     ],
   },
   {

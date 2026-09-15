@@ -25,6 +25,7 @@ import {
 import {
   DEFAULT_CAMERA_PRESET,
   cameraPresetFromDigitKey,
+  isViewResetKey,
   type CameraPresetId,
 } from './lib/cameraPresets';
 import {
@@ -231,6 +232,12 @@ function App() {
       if (preset) {
         e.preventDefault();
         setCameraPresetId(preset);
+        setCameraPresetToken((n) => n + 1);
+        return;
+      }
+      // View reset — re-apply active teaching preset (Auckland LL visualiser habit)
+      if (isViewResetKey(e.key)) {
+        e.preventDefault();
         setCameraPresetToken((n) => n + 1);
       }
     };

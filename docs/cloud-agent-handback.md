@@ -1,6 +1,6 @@
 # Cloud Agent handback — Phase 7 resume brief
 
-**Date**: 2026-09-15 · Day **4bg**  
+**Date**: 2026-09-15 · Day **4bh**  
 **Branch**: `cursor/right-foot-anatomy-atlas-mvp-af85`  
 **Status**: Teaching-grade atlas **in progress** — **not** a finished-product claim  
 **Companion**: `docs/phase-7-self-review.md`, `docs/cc0-soft-tissue-watchlist.md`, `third_party/andreassen/`
@@ -19,7 +19,7 @@ Prefer **CC0 / CC BY** over further ShareAlike volume. Update census in README /
 
 ---
 
-## Live census freeze (unchanged through Day 4bg)
+## Live census freeze (unchanged through Day 4bh)
 
 | Metric | Value |
 |--------|-------|
@@ -62,7 +62,7 @@ Osteology complete (26/26). Soft tissue **teaching-useful and incomplete**.
 | Browser / Cloudflare-gated packs | Scripted fetch 403 / session | Cloud Agent browser; verify license page before wire |
 | Zenodo Z-Anatomy `.blend` heavy re-harvest | Large binary; ankle bands absent prior | Re-inventory ATFL/CFL/deltoid/retinacula **only if** new revision claims them |
 | Further multi-view screenshots | 9-shot pack live | Optional angles only — not a marketing gallery |
-| CC0/BY DI / per-ray MTA / nerve·ligament main-tree | Watchlist dry through Day 4bg (#38–#68); Utah Hive **reject** bones; Henson CC0 = masks only | Re-check new open CT foot soft segmentations; **skip NC** / “License: Model” |
+| CC0/BY DI / per-ray MTA / nerve·ligament main-tree | Watchlist dry through Day 4bh (#38–#70); Utah Hive **reject** bones; Henson CC0 = masks only (path documented) | Re-check new open CT foot soft segmentations; optional Henson marching-cubes sandbox; **skip NC** / “License: Model” |
 
 ---
 
@@ -86,6 +86,11 @@ Osteology complete (26/26). Soft tissue **teaching-useful and incomplete**.
 ## Day 4bg done this handoff
 
 - Lazy **layer load progress** overlay + digs **#66–#68** (Henson CC0 LE masks / Auckland MIT LE visualiser / CEINMS-RT Apache MSK). **0** mesh wire; Andreassen skipped; Utah not integrated.
+
+## Day 4bh done this handoff
+
+- Auckland **view-reset** UX (button + `0`/`Home`) + Henson (#66) DICOM path detail on watchlist + digs **#69–#70** (DeepACSA CC BY US / Dryad CC0 PF windlass). **0** mesh wire; Andreassen skipped; Utah not integrated.
+
 
 ## Suggested next agent priorities (pick one; quality over volume)
 
@@ -112,4 +117,4 @@ Osteology complete (26/26). Soft tissue **teaching-useful and incomplete**.
 - `python3 scripts/integrity-audit.py` · `npx vitest run` · `npm run build` (run on commit pass)
 - Commit + push on branch
 
-**Bottom line**: Handback brief current through Day **4bg** (lazy layer load progress + digs #66–#68, 0 wire). Andreassen belly track remains **documented blocked**. Census unchanged. Teaching atlas in progress — **no finished-product claim**.
+**Bottom line**: Handback brief current through Day **4bh** (Auckland view-reset UX + Henson path detail + digs #69–#70, 0 wire). Andreassen belly track remains **documented blocked**. Census unchanged. Teaching atlas in progress — **no finished-product claim**.

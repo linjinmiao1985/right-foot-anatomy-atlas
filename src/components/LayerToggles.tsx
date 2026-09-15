@@ -156,7 +156,7 @@ export default function LayerToggles({
         }}
         role="group"
         aria-label="教学视角 Camera presets"
-        title="UX-borrow: week-plan multi-view + Open Anatomy Studio preset habit (ideas only)"
+        title="UX-borrow: week-plan multi-view + Open Anatomy Studio preset habit + Auckland LL visualiser view reset (ideas only)"
       >
         <div style={{ fontSize: '11px', fontWeight: 600, color: '#d6d3d1', marginBottom: '6px' }}>
           视角 · Views
@@ -192,8 +192,29 @@ export default function LayerToggles({
             );
           })}
         </div>
+        <button
+          type="button"
+          data-camera-reset="true"
+          onClick={() => onCameraPresetChange(cameraPresetId)}
+          title="复位当前教学视角 — 自由旋转/平移后回到当前预设（Auckland LL visualiser reset habit · ideas only）"
+          aria-label="复位当前教学视角 Reset current teaching view"
+          style={{
+            marginTop: '6px',
+            width: '100%',
+            padding: '5px 8px',
+            fontSize: '11px',
+            cursor: 'pointer',
+            borderRadius: '4px',
+            border: '1px solid rgba(52, 211, 153, 0.55)',
+            background: 'rgba(52, 211, 153, 0.12)',
+            color: '#d1fae5',
+          }}
+        >
+          复位视角 · Reset view
+          <span style={{ color: '#888', marginLeft: '6px', fontSize: '10px' }}>0 / Home</span>
+        </button>
         <div style={{ fontSize: '9px', color: '#777', marginTop: '4px', lineHeight: 1.35 }}>
-          背/跖/内/外教学预设（可看足底）。点击对焦仍可覆盖。
+          背/跖/内/外教学预设（可看足底）。点击对焦仍可覆盖。复位 = 重应用当前预设（非临床导航）。
         </div>
       </div>
 

@@ -15,9 +15,16 @@ describe('keyboardHelp', () => {
     ]);
   });
 
-  it('lists camera presets 1–5', () => {
+  it('lists camera presets 1–5 plus view reset', () => {
     const nav = KEYBOARD_HELP_GROUPS.find((g) => g.id === 'navigation');
-    expect(nav?.shortcuts.map((s) => s.keys)).toEqual(['1', '2', '3', '4', '5']);
+    expect(nav?.shortcuts.map((s) => s.keys)).toEqual([
+      '1',
+      '2',
+      '3',
+      '4',
+      '5',
+      '0 / Home',
+    ]);
   });
 
   it('documents isolate, hide, and escape', () => {

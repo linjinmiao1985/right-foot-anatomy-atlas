@@ -1298,3 +1298,42 @@ OMFAtlas labels drawn NV/gland/sinus structures as **schematic** wherever named 
 - **0** meshes integrated; **0** SA spam; Andreassen not re-opened; Utah not integrated.
 - **No finished-product claim.**
 
+---
+
+## Session additions (2026-09-15 · Day 4bh — Auckland view-reset UX + Henson path + dig ≥2)
+
+### Teaching polish (ONE UX borrow from #67 Auckland LL Visualiser)
+
+| Change | Detail |
+|--------|--------|
+| **View reset affordance** | Bilingual **复位视角 · Reset view** button under camera presets; keys **0** / **Home** re-apply the *active* teaching preset after free orbit/pan |
+| Source | Auckland Lower Limb Visualiser measurement / home-camera habit (**ideas only**) — MIT code not copied |
+| Files | `src/lib/cameraPresets.ts` (`isViewResetKey`) · `LayerToggles.tsx` · `App.tsx` · `keyboardHelp.ts` (+ vitest) |
+| Honesty | Teaching chrome only — **not** clinical navigation / finished product |
+
+### Henson Sheffield path (#66 deepen — docs only)
+
+See `docs/cc0-soft-tissue-watchlist.md` § Henson Sheffield CC0 DICOM path. ORDA URLs + CC0 + class IDs 10/11/31 + why monitor + next marching-cubes research step. **0** GLB wire.
+
+### NEW license-verified projects (≥2)
+
+| # | Project | URL | License verified | Foot relevance | Decision |
+|---|---------|-----|------------------|----------------|----------|
+| **69** | **DeepACSA training images** (RF / VL / GM·GL ultrasound + binary masks) | https://doi.org/10.5281/zenodo.5799204 | Zenodo API `license.id` = **cc-by-4.0** verified 2026-09-15 | 2D US CSA images/masks for rectus femoris, vastus lateralis, gastroc med/lat — **not** 3D foot soft surface meshes | **reject** teaching GLB; optional US research only |
+| **70** | **Welte et al. — Plantar fascia extensibility / windlass running** (Dryad) | https://doi.org/10.5061/dryad.v9s4mw6sz | DataCite SPDX **cc0-1.0** verified 2026-09-15 | MATLAB scripts + biomechanics timeseries for PF windlass — **0** STL/OBJ/GLB fascia mesh | **reject** soft teaching mesh; biomechanics reference only |
+
+### Soft-gap check
+
+| Gap | Day 4bh |
+|-----|---------|
+| DI / per-ray MTA / nerve·ligament CC0/BY | **Still dry** |
+| Gastroc/soleus | Henson path **documented** (monitor); Andreassen **skipped** |
+| Utah Hive | Still **reject** — not re-opened |
+
+### Outcome
+
+- View-reset UX live; Henson watchlist path expanded; learning log **#69–#70**.
+- Census unchanged (**129/124**; ontology **126/129**).
+- **0** meshes integrated; **0** SA spam; Andreassen not re-opened; Utah not integrated.
+- **No finished-product claim.**
+

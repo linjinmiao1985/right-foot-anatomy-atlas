@@ -6,6 +6,7 @@ import {
   cameraPresetFromDigitKey,
   getCameraPreset,
   isCameraPresetId,
+  isViewResetKey,
 } from './cameraPresets';
 
 describe('cameraPresets', () => {
@@ -67,3 +68,12 @@ describe('cameraPresets', () => {
     expect(cameraPresetFromDigitKey('a')).toBeNull();
   });
 });
+
+  it('recognizes view-reset keys (Auckland reset habit)', () => {
+    expect(isViewResetKey('0')).toBe(true);
+    expect(isViewResetKey('Home')).toBe(true);
+    expect(isViewResetKey('1')).toBe(false);
+    expect(isViewResetKey('r')).toBe(false);
+    expect(isViewResetKey('Escape')).toBe(false);
+  });
+

@@ -104,3 +104,13 @@ export function cameraPresetFromDigitKey(key: string): CameraPresetId | null {
   const idx = Number(key) - 1;
   return CAMERA_PRESETS[idx]?.id ?? null;
 }
+
+/**
+ * Digit 0 / Home — re-apply the active teaching view after free orbit/pan.
+ * UX-borrow (ideas only): Auckland Lower Limb Visualiser measurement chrome
+ * (reset/home camera habit). No third-party camera code copied.
+ */
+export function isViewResetKey(key: string): boolean {
+  return key === '0' || key === 'Home';
+}
+
