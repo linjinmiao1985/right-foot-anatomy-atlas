@@ -1311,3 +1311,17 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 3. Checks: integrity-audit + vitest + build; commit + push.
 4. **Honesty**: sparse cited map — **not** finished-product / TA2-complete soft tissue. **No** SA mesh add.
 
+## Day 4at (2026-09-15) — ontology gaps (citable) + dig
+
+**Target**: Fill remaining `ontologyIds` gaps with IFAA-citable codes only; dig ≥2 new open anatomy projects; no SA mesh spam.
+
+1. **Ontology** (`src/lib/ontologyIds.ts`): 107/129 (82.9%) → **126/129 (97.7%)**.
+   - **Opponens**: IFAA A04.7.02.065 + FMA86033 (inconstant).
+   - **Veins**: dorsal/plantar venous arches + plantar metatarsal/digital veins (IFAA A12.3.11.012/016–018 + FMA).
+   - **Retinacula**: flexor + superior/inferior extensor + superior/inferior fibular (IFAA A04.7.03.025–029).
+   - **Lisfranc-ish / midfoot**: TMT dorsal/plantar + cuneometatarsal IO; medial TC; talonavicular; intercuneiform IO/dorsal; dorsal cuneonavicular; deep transverse metatarsal (IFAA A03.6.10.*).
+   - **Still omit** (honest empty): cervical_talocalcaneal (no distinct TA98); medial_plantar_veins / lateral_plantar_vein (TNA-only, no TA98 A-code / clear FMA this pass).
+2. **Learning log**: NEW #49 undergravity/human-atlas; #50 zer01dollars/female-body-atlas (Femora).
+3. Checks: integrity-audit + vitest + build; commit + push.
+4. **Honesty**: sparse cited map expanded — **not** finished-product / TA2-complete soft tissue. **No** SA mesh add.
+

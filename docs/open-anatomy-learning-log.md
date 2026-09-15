@@ -5,7 +5,7 @@ Living log of open-source human anatomy projects studied for the right-foot atla
 (CC0 / CC BY into main tree; BY-SA isolated under `public/models/right-foot/by-sa/` + NOTICE;
 reject NC / unknown / All Rights Reserved).
 
-**Last updated**: 2026-09-15 (Day 4aq ontology + dig)  
+**Last updated**: 2026-09-15 (Day 4at ontology gaps + dig)  
 **Status**: ongoing research — not a finished catalog.
 
 ---
@@ -970,4 +970,31 @@ Prefer **CC0/CC BY** finds for DI / proximal·fine arteries / nerve·ligament re
 
 - Ontology coverage expanded from cited in-repo sources only; **0** new meshes.
 - **No finished-product claim.** Prefer LSDB Archive CC BY for main-tree BP3D; treat Anatomography BY-SA 2.1 JP mirrors as isolate-only.
+
+---
+
+## Session additions (2026-09-15 · Day 4at — ontology gaps + dig)
+
+### Ontology map expand (code)
+
+| Field | Detail |
+|-------|--------|
+| **File** | `src/lib/ontologyIds.ts` |
+| **Coverage** | **126/129 (97.7%)** — was 107/129 (82.9%) |
+| **Sources** | IFAA TA98 entity pages + section lists (TAH2142 A3 retinacula; TAH1564 A4 foot joints/ligaments; A12.3.11 veins; A04.7.02.065 opponens). Documented inline URL comments. |
+| **Filled** | opponens; 4 named veins with TA98 A-codes; 5 retinacula; 3 Lisfranc-ish TMT groups; medial TC; talonavicular; intercuneiform IO/dorsal; dorsal cuneonavicular; deep transverse metatarsal |
+| **Still empty** | `cervical_talocalcaneal_ligament` (no distinct TA98); `medial_plantar_veins` / `lateral_plantar_vein` (TNA U15825/U15824 only) |
+| **Honesty** | Cited map only — **not** a finished ontology product. |
+
+### NEW license-verified projects (≥2)
+
+| # | Project | URL | License verified | Foot relevance | Decision |
+|---|---------|-----|------------------|----------------|----------|
+| **49** | **Human Atlas (undergravity fork)** | https://github.com/undergravity/human-atlas · demo https://human-atlas-2s7.pages.dev | Code **MIT** (LICENSE verified 2026-09-15; fork of ashemag); anatomy **CC BY 4.0** BodyParts3D 4.0 (README + ATTRIBUTION) | Same BP3D male pool already in tree — **no** new right-foot soft-tissue meshes. **Actionable UX borrow**: EN/ZH bilingual dict; **per-structure** hide/show (dissection habit); two-phase async load (skeleton+muscle first); PWA offline; dark mode + mobile gestures | **UX-borrow** (per-structure toggle + phased system load). **reject** as new foot mesh source |
+| **50** | **Femora Atlas** (zer01dollars/female-body-atlas) | https://github.com/zer01dollars/female-body-atlas · demo https://zer01dollars.github.io/female-body-atlas/ | Code **MIT** (LICENSE verified 2026-09-15); geometry **CC BY 4.0** HuBMAP Female v1.5 united GLB (ATTRIBUTION.md + DOI 10.48539/HBM352.BTSQ.586); FMA naming enrichment from BP3D parts list (CC BY) — **does not** ship BP3D male meshes | Female whole-body explorer (888 meshes); FMA-enriched search — **no** curated right-foot DI/NV/ligament pack beyond HRA/BP3D naming | **UX-borrow** (FMA-enriched search; Meshopt+simplify pipeline notes). **monitor** HuBMAP female foot coverage vs our BP3D male foot. **reject** copying united female GLB as right-foot teaching substitute |
+
+### Outcome
+
+- Ontology coverage **126/129**; **0** new meshes; **3** honest empties remain.
+- **No finished-product claim.** Prefer IFAA entity FMA/TA over inventing codes for TNA-only veins / cervical synonym.
 

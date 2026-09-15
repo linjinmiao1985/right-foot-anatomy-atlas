@@ -19,9 +19,26 @@ describe('ontologyIds', () => {
     expect(hasOntologyIds(ids)).toBe(true);
   });
 
-  it('returns undefined for unmapped structure (honest empty)', () => {
-    expect(getOntologyIds('opponens_digiti_minimi')).toBeUndefined();
+  it('maps opponens digiti minimi from IFAA A04.7.02.065 + FMA86033', () => {
+    const ids = getOntologyIds('opponens_digiti_minimi');
+    expect(ids?.ta2).toBe('A04.7.02.065');
+    expect(ids?.fma).toBe('86033');
+  });
+
+  it('returns undefined for structures without reliable cite (honest empty)', () => {
+    // cervical TC: no distinct TA98; medial/lateral plantar veins: TNA-only
+    expect(getOntologyIds('cervical_talocalcaneal_ligament')).toBeUndefined();
+    expect(getOntologyIds('medial_plantar_veins')).toBeUndefined();
+    expect(getOntologyIds('lateral_plantar_vein')).toBeUndefined();
     expect(hasOntologyIds(undefined)).toBe(false);
+  });
+
+  it('maps retinacula and Lisfranc-ish TMT bands from IFAA', () => {
+    expect(getOntologyIds('flexor_retinaculum_of_ankle')?.ta2).toBe('A04.7.03.026');
+    expect(getOntologyIds('cuneometatarsal_interosseous_ligaments')?.ta2).toBe(
+      'A03.6.10.604',
+    );
+    expect(getOntologyIds('dorsal_venous_arch')?.fma).toBe('44356');
   });
 
   it('maps major nerve trunks with Wikipedia FMA + IFAA TA', () => {

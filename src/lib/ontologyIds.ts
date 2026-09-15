@@ -18,6 +18,10 @@
  *
  * Day 4as: corrected several prior "approx" vessel/ligament A-codes that did not
  * match IFAA (documented inline). Still a sparse teaching map — not TA2-complete.
+ * Day 4at: filled remaining citable gaps (opponens, named veins with TA98 A-codes,
+ * retinacula, Lisfranc-ish TMT bands, midfoot ligaments) from IFAA entity pages.
+ * Still omit cervical TC (no distinct TA98), medial/lateral plantar veins (TNA-only,
+ * no TA98 A-code / clear FMA this pass).
  */
 
 export interface StructureOntologyIds {
@@ -128,7 +132,13 @@ export const ONTOLOGY_BY_ID: Readonly<Record<string, StructureOntologyIds>> = {
     fma: '37451',
     note: 'grouped 1st–4th DI (manifest muscles_by_sa)',
   },
-  // opponens_digiti_minimi: no citable TA/FMA found this pass — omit (honest empty)
+  // IFAA A04.7.02.065 Entity Page (m. opponens digiti minimi / foot; inconstant)
+  // https://ifaa.unifr.ch/Public/EntryPage/TA98%20Tree/Entity%20TA98%20EN/04.7.02.065%20Entity%20TA98%20EN.htm
+  opponens_digiti_minimi: {
+    ta2: 'A04.7.02.065',
+    fma: '86033',
+    note: 'inconstant (IFAA)',
+  },
 
   // —— Nerves (major trunks + named branches) ——
   // TA: IFAA A14.2.07.* hierarchy under n. tibialis / n. fibularis;
@@ -232,7 +242,28 @@ export const ONTOLOGY_BY_ID: Readonly<Record<string, StructureOntologyIds>> = {
     ta2: 'A12.2.16.075',
     note: 'rr. calcanei of fibular a. (teaching mesh)',
   },
-  // Veins: no citable TA/FMA verified this pass — omit
+  // Veins with TA98 A-codes (IFAA A12.3.11.*). Medial/lateral plantar veins are
+  // TNA-only (TAH U15825/U15824) without TA98 A-code / clear FMA — omit this pass.
+  // https://ifaa.unifr.ch/Public/EntryPage/TA98%20Tree/TA98%20EN/12.3.11%20TA98%20EN.htm
+  dorsal_venous_arch: {
+    ta2: 'A12.3.11.012',
+    fma: '44356', // IFAA arcus venosus dorsalis pedis
+  },
+  plantar_venous_arch: {
+    ta2: 'A12.3.11.016',
+    fma: '44489', // IFAA arcus venosus plantaris
+  },
+  plantar_metatarsal_veins: {
+    ta2: 'A12.3.11.017',
+    fma: '70918',
+    note: 'grouped',
+  },
+  plantar_digital_veins: {
+    ta2: 'A12.3.11.018',
+    fma: '70919',
+    note: 'grouped',
+  },
+  // medial_plantar_veins / lateral_plantar_vein: TNA-only — omit (honest empty)
 
   // —— Ligament / tendon / aponeurosis ——
   // Day 4as: corrected ATFL/CFL/spring A-codes (prior .002/.003/.204 were joint /
@@ -280,6 +311,78 @@ export const ONTOLOGY_BY_ID: Readonly<Record<string, StructureOntologyIds>> = {
   },
   // Plantar aponeurosis: keep structures.json-authored A04.7.03.031 (fascia section)
   plantar_aponeurosis: { ta2: 'A04.7.03.031', note: 'from structures.json summary' },
+
+  // Retinacula — IFAA A04.7.03.025–029 (TAH2142 A3 list + entity pages)
+  // https://ifaa.unifr.ch/Public/TNAEntryPage/auto/TA98/EN/TAH2142%20A3%20EN.htm
+  superior_extensor_retinaculum: {
+    ta2: 'A04.7.03.025',
+    fma: '49384', // IFAA entity
+  },
+  flexor_retinaculum_of_ankle: {
+    ta2: 'A04.7.03.026',
+    fma: '49372', // IFAA entity (flexor retinaculum of ankle)
+  },
+  inferior_extensor_retinaculum: {
+    ta2: 'A04.7.03.027',
+    fma: '49385', // IFAA entity
+  },
+  superior_fibular_retinaculum: {
+    ta2: 'A04.7.03.028',
+    fma: '51117', // IFAA entity
+  },
+  inferior_fibular_retinaculum: {
+    ta2: 'A04.7.03.029',
+    // IFAA entity page lists TA only (no FMA field) — omit FMA
+  },
+
+  // Lisfranc-ish TMT bands — IFAA A03.6.10.602–604 (TAH1564 A4)
+  // https://ifaa.unifr.ch/Public/TNAEntryPage/auto/TA98/EN/TAH1564%20A4%20EN.htm
+  dorsal_tarsometatarsal_ligaments: {
+    ta2: 'A03.6.10.602',
+    fma: '44270',
+    note: 'grouped',
+  },
+  plantar_tarsometatarsal_ligaments: {
+    ta2: 'A03.6.10.603',
+    fma: '44271',
+    note: 'grouped',
+  },
+  cuneometatarsal_interosseous_ligaments: {
+    ta2: 'A03.6.10.604',
+    fma: '44272',
+    note: 'grouped; includes Lisfranc band teaching mesh',
+  },
+
+  // Midfoot / subtalar / forefoot — IFAA entity pages (TAH1564 A4)
+  medial_talocalcaneal_ligament: {
+    ta2: 'A03.6.10.103',
+    fma: '44285', // IFAA lig. talocalcaneum mediale
+  },
+  // cervical_talocalcaneal_ligament: no distinct TA98 A-code (clinical synonym
+  // often maps to lateral TC A03.6.10.102) — omit (honest empty)
+  intercuneiform_interosseous_ligaments: {
+    ta2: 'A03.6.10.505',
+    fma: '71413',
+    note: 'grouped',
+  },
+  talonavicular_ligament: {
+    ta2: 'A03.6.10.507',
+    fma: '44213', // IFAA lig. talonaviculare
+  },
+  dorsal_intercuneiform_ligaments: {
+    ta2: 'A03.6.10.508',
+    fma: '44214',
+    note: 'grouped',
+  },
+  dorsal_cuneonavicular_ligaments: {
+    ta2: 'A03.6.10.514',
+    fma: '44239',
+    note: 'grouped',
+  },
+  deep_transverse_metatarsal_ligament: {
+    ta2: 'A03.6.10.804',
+    fma: '44490', // IFAA lig. metatarsale transversum profundum
+  },
 };
 
 export function getOntologyIds(structureId: string): StructureOntologyIds | undefined {
