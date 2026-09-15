@@ -274,6 +274,38 @@ Documented implementations (ideas only — no third-party UI code copied):
 
 ---
 
+---
+
+## Session finds — 2026-09-15 (alignment + coverage honesty)
+
+### NEW: Open3D vs BP3D unit/frame mismatch (actioned)
+
+| Field | Value |
+|-------|-------|
+| **Find** | Open3D lower-limb OBJ stores foot soft tissue in **meters**; BP3D foot GLBs are **mm**. Applying the atlas `0.01` scale to raw Open3D DI/PTA/fibular GLBs left them ~100× too small and near the wrong origin. |
+| **Method** | Kabsch similarity on 8 coherent bone centroids (Calcaneus, Talus, Navicular, MT1–5). Excluded BP3D cuboid / medial & intermediate cuneiform (pre-existing off-cluster centers). |
+| **Result** | scale ≈924.45; mean landmark residual ≈3.0 mm (max ≈4.8 mm). DI centers land ~14 mm from nearest MT; PTA distal ~17 mm from calcaneus centroid. Baked into `by-sa/*.glb`; transform JSON under `third_party/open3dmodel/`. |
+| **Action** | **integrated** (alignment bake) + keep **isolate-SA**. Prefer future CC0/CC BY replacements. |
+
+### NEW: Coverage accounting (docs only)
+
+| Field | Value |
+|-------|-------|
+| **Find** | README/manifest still listed DI + PTA + fibular as *gaps* after Day 4i mesh integration. |
+| **Honest split** | Unique 55/55 real meshes: **main 46** (CC BY/CC0) + **BY-SA 9** (DI + 2 arteries + 6 nerves). Entry-level `structures.json` 60/60 `placeholder:false`. |
+| **Action** | **doc-only** — no finished-product claim; BY-SA fills ≠ main-tree relicensing. |
+
+### NEW: UX — BY-SA layer toggle warning
+
+| Field | Value |
+|-------|-------|
+| **Find** | Muscle/vessel layers now also pull BY-SA (DI, PTA, fibular), not only nerve. |
+| **Action** | **UX-borrow**: Layer panel shows ShareAlike status when muscle/vessel/nerve is visible. |
+
+No new CC0/CC BY DI or proximal-artery candidates found this session.
+
+---
+
 ## Next dig targets
 
 - Prefer CC0/CC BY replacements for Open3D BY-SA DI + proximal arteries (relicense or alternate segmentations).  

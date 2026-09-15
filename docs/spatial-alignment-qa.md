@@ -124,3 +124,18 @@ scale={[0.01, 0.01, 0.01]} // Blender units → cm (verified from BP3D base)
 
 **Date Completed**: 2026-09-14  
 **Verdict**: PASS (pending optional manual verification)
+
+
+---
+
+## Open3DModel BY-SA (Week 2 Day 4i+)
+
+- **Source units**: meters (full lower-limb OBJ)
+- **BP3D units**: millimeters
+- **Problem**: Raw Open3D GLBs under `0.01` render scale were ~100× too small and off-frame vs BP3D foot
+- **Fix**: Bake Kabsch similarity (scale ≈924.45, R, t) into DI + PTA + fibular GLBs using bone centroids Calcaneus / Talus / Navicular / MT1–5
+- **Residual**: mean ≈3.0 mm, max ≈4.8 mm on those landmarks
+- **Render convention**: unchanged `scale={[0.01, 0.01, 0.01]}` after bake
+- **Excluded landmarks**: BP3D cuboid / medial & intermediate cuneiform centroids look individually mis-centered in current GLBs — not used for the fit
+- **Artifacts**: Transform at `third_party/open3dmodel/open3d_to_bp3d_transform.json`
+- **Status**: Scale/frame mismatch vs BP3D foot **corrected for Open3D DI + proximal arteries**; teaching-grade, not pixel-perfect surgical registration

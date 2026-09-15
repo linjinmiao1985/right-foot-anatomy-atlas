@@ -77,6 +77,7 @@ const REAL_MUSCLE_MODELS: Record<string, string> = {
   'plantar_interosseous_2': '/models/right-foot/plantar_interosseous_2nd.glb',
   'plantar_interosseous_3': '/models/right-foot/plantar_interosseous_3rd.glb',
   // Open3DModel / AnatomyTOOL CC BY-SA 4.0 — isolated under by-sa/
+  // GLB vertices baked Open3D meters → BP3D mm (Kabsch); keep scale 0.01 like BP3D
   'interossei_dorsales': '/models/right-foot/by-sa/dorsal_interosseous_1st.glb',
 };
 

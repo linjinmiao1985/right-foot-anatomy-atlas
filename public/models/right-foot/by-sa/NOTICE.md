@@ -34,7 +34,7 @@ Meshes in this directory are licensed under **CC BY-SA 4.0** (ShareAlike). Deriv
 **Create page**: https://anatomytool.org/open3dmodel-create  
 **Package**: `/workspace/literature/open3d-assets/lower-limb.obj` (local research copy)  
 **License**: CC BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/  
-**Modifications**: Extracted named right-side (`.r`) objects to OBJ, converted to glTF 2.0 Binary (obj2gltf); no topology edits.
+**Modifications**: Extracted named right-side (`.r`) objects to OBJ, converted to glTF 2.0 Binary (obj2gltf); no topology edits. Vertex positions later **Kabsch-aligned** from Open3D meters into BodyParts3D millimeter frame (landmarks: Calcaneus, Talus, Navicular, MT1–5; mean residual ≈3 mm) so the atlas `scale={[0.01,0.01,0.01]}` convention applies. Transform JSON: `third_party/open3dmodel/open3d_to_bp3d_transform.json`.
 
 **Inventory note (not integrated this session)**: same OBJ also contains `Medial_plantar_nerve.r`, `Dorsal_metatarsal_arteries.r`, `Plantar_interossei_muscles.r` — nerves already covered by Z-Anatomy extracts; plantar interossei / dorsal metatarsals already covered by BP3D CC BY main-tree meshes.
 

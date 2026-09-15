@@ -132,6 +132,28 @@ export default function LayerToggles({
           <span style={legendChip('#a78bfa')}>SA</span>
           <span>BY-SA 隔离（神经 / DI / 近端动脉）</span>
         </div>
+        {(visibleLayers.has('nerve') ||
+          visibleLayers.has('muscle') ||
+          visibleLayers.has('vessel')) && (
+          <div
+            role="status"
+            style={{
+              marginTop: '8px',
+              padding: '6px 8px',
+              background: 'rgba(167, 139, 250, 0.12)',
+              border: '1px solid rgba(167, 139, 250, 0.45)',
+              borderRadius: '4px',
+              color: '#c4b5fd',
+              fontSize: '10px',
+              lineHeight: 1.45,
+            }}
+            title="CC BY-SA 4.0 ShareAlike — see public/models/right-foot/by-sa/NOTICE.md"
+          >
+            ⚠️ 当前图层可能加载 <strong>BY-SA</strong> 网格（Z-Anatomy 神经 /
+            Open3D DI · 胫后/腓动脉）。衍生作品需 ShareAlike；可关闭肌/脉管/神经层或删除{' '}
+            <code style={{ fontSize: '9px' }}>by-sa/</code> 以保持仅 CC BY/CC0。
+          </div>
+        )}
       </div>
     </div>
   );

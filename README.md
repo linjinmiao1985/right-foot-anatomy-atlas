@@ -11,17 +11,26 @@ Interactive web-based teaching atlas for right foot anatomy.
 
 | Layer | Real Meshes | Placeholder | Total | Sources |
 |-------|-------------|-------------|-------|---------|
-| **Bones** | **26/26 (100%)** ✅ | 0 | 26 | BP3D (22) + UM (4) |
-| **Muscles** | 13/14 (93%) | 1 | 14 | BP3D (12) + UM (8) |
-| **Vessels** | **7/9 (78%)** | 2 | 9 | BodyParts3D (CC BY 4.0) |
-| **Nerves** | 6/6 (100%) ✅ | 0 | 6 | Z-Anatomy (CC BY-SA 4.0, isolated) |
-| **Total** | **52/55 (95%)** | **3** | **55** | MIT code + open assets |
+| **Bones** | **26/26 (100%)** | 0 | 26 | BP3D (22) + UM (4) — **main tree** |
+| **Muscles** | **14/14 (100%)** | 0 | 14 | Main: BP3D + UM (13) · **BY-SA**: Open3D DI (1) |
+| **Vessels** | **9/9 (100%)** | 0 | 9 | Main: BP3D 7 (incl. 2 honest grouped) · **BY-SA**: Open3D PTA + fibular (2) |
+| **Nerves** | **6/6 (100%)** | 0 | 6 | Z-Anatomy (CC BY-SA 4.0, `by-sa/` only) |
+| **Unique total** | **55/55 real** | **0** | **55** | See main vs BY-SA split below |
 
-**Note**: Total structures = 60 in `structures.json` (accounting for multi-part muscles: AH oblique+transverse, FHB medial+lateral, Lumbricals 1-4, Plantar interossei 1-3, Sesamoid bones grouped). Total unique structures = 55 when multi-parts counted once. **Honest grouped vessels**: dorsal digital arteries and plantar metatarsal arteries are BP3D grouped meshes (combined, not per-toe split).
+### Main tree vs BY-SA isolate (honest split)
 
-### Gaps (3 remaining)
-- **Muscles**: Dorsal interossei (1 structure, absent in BP3D, UM, Z-Anatomy)
-- **Vessels**: Posterior tibial artery, fibular artery (2 structures, proximal to foot proper)
+| Claim | Unique count | Contents |
+|-------|--------------|----------|
+| **Main (CC BY 4.0 / CC0)** | **46/55** | 26 bones + 13 muscles + 7 vessels |
+| **BY-SA isolate (`by-sa/`)** | **9/55** | 1 DI + 2 proximal arteries + 6 nerves |
+| **Entry-level `structures.json`** | **60/60** `placeholder:false` | Multi-part muscles counted separately |
+
+**Note**: Unique framing = 55 (multi-part muscles / sesamoids counted once). Entry-level = 60 rows in `structures.json`. **Honest grouped vessels**: dorsal digital + plantar metatarsal remain BP3D combined meshes (not per-toe). Open3D DI / PTA / fibular are **ShareAlike fills**, Kabsch-aligned into BP3D mm so the shared `0.01` render scale applies — **not** claimed as CC BY main-tree assets.
+
+### Remaining soft-tissue caveats (not “gaps” in placeholder sense)
+- Prefer future **CC0/CC BY** replacements for Open3D BY-SA DI + proximal arteries
+- Some BP3D bone GLBs outside the Calcaneus/Talus/Navicular/MT1–5 cluster remain individually mis-centered (pre-existing; not introduced by Open3D bake)
+- Teaching-grade atlas in progress — **no finished-product claim**
 
 ---
 
@@ -33,8 +42,9 @@ Interactive web-based teaching atlas for right foot anatomy.
 | **Bones + most vessels** | CC BY 4.0 (BodyParts3D) | ✅ Free, attribution required |
 | **Muscles** | CC BY 4.0 (BP3D) + CC0 1.0 (UM) | ✅ Free, no strings (UM) |
 | **Nerves** (in `by-sa/` only) | CC BY-SA 4.0 (Z-Anatomy) | ⚠️ ShareAlike if modified |
+| **DI + proximal arteries** (`by-sa/`) | CC BY-SA 4.0 (Open3DModel) | ⚠️ ShareAlike if modified |
 
-**User Choice**: Load nerve layer → accept BY-SA terms. Skip nerve layer → MIT + CC BY/CC0 only.
+**User Choice**: Muscle / vessel / nerve layers may load BY-SA meshes (DI, PTA, fibular, nerves). Skip those layers or delete `by-sa/` → MIT + CC BY/CC0 only.
 
 ---
 
@@ -54,8 +64,8 @@ Interactive web-based teaching atlas for right foot anatomy.
 - **Frontend**: Vite + React 18 + TypeScript 5
 - **3D Engine**: Three.js + React Three Fiber + @react-three/drei
 - **Data**: `structures.json` (60 structures, TA2-compliant naming)
-- **Assets**: 58 GLB meshes (~15.6MB total: 26 bones + 13 muscles + 7 vessels + 6 nerves + 6 muscle parts)
-- **Testing**: Vitest + @testing-library/react (7/7 tests ✅)
+- **Assets**: Main-tree GLBs + 12 `by-sa/` GLBs (6 nerves + 4 DI + 2 proximal arteries)
+- **Testing**: Vitest + integrity-audit.py
 
 ---
 
@@ -100,20 +110,26 @@ Open `http://localhost:5173` to view the atlas.
 - **Isolation**: `public/models/right-foot/by-sa/` + NOTICE.md
 - **Attribution**: "Z-Anatomy - The libre 3D atlas of anatomy - CC BY-SA 4.0"
 
+### Open3DModel / AnatomyTOOL (CC BY-SA 4.0, isolated)
+- **Create page**: https://anatomytool.org/open3dmodel-create
+- **Coverage**: Foot dorsal interossei (1st–4th) + posterior tibial artery + fibular artery
+- **Isolation**: `public/models/right-foot/by-sa/` + NOTICE.md
+- **Alignment**: Baked Open3D meters → BP3D mm via Kabsch on Calcaneus/Talus/Navicular/MT1–5 (mean residual ≈3 mm); render scale stays `0.01`
+
 ---
 
 ## Limitations
 
 ### Anatomical
-- **Dorsal interossei**: No open-source foot dorsal interossei found (BP3D/UM/Z-Anatomy lack)
-- **Vessel fine detail**: Digital branches missing (BP3D does not segment at this granularity)
+- **BY-SA soft tissue**: DI + proximal PTA/fibular are Open3D ShareAlike fills (prefer future CC0/CC BY)
+- **Vessel fine detail**: Per-toe digital splits not available as separate BP3D meshes (honest grouped instead)
 - **Nerve geometry**: CURVE tubes (not volumetric meshes like bones/muscles)
 - **Extrinsic muscles**: Shown in full leg-to-foot extent (teaching context, not foot-only isolation)
 
 ### Technical
 - **Not patient-specific**: Teaching-grade generic anatomy (not CT/MRI-derived)
 - **Not validated for surgery**: Educational tool, not surgical planning software
-- **ShareAlike nerves**: BY-SA 4.0 applies only to `by-sa/` directory (opt-in)
+- **ShareAlike module**: BY-SA 4.0 applies only to `by-sa/` directory (opt-in via layer toggles)
 
 ---
 
@@ -182,6 +198,6 @@ See `CONTRIBUTING.md` for:
 
 ---
 
-**Project Status**: Teaching-grade atlas, week sprint in progress (Day 6/7)  
-**Coverage**: 88% real meshes (38/43 structures)  
+**Project Status**: Teaching-grade atlas in progress (Week 2) — **not a finished product**  
+**Coverage**: 55/55 unique real meshes with honest main (46) vs BY-SA (9) split  
 **Repository**: https://github.com/linjinmiao1985/right-foot-anatomy-atlas

@@ -951,3 +951,21 @@ Each day:
 
 **Tests/Build**: integrity-audit 0 critical; vitest 11/11; build pending in same commit.
 
+---
+
+### Week 2 Day 4i+ (box): Open3D scale bake + honest coverage docs
+
+**Focus**: Verify Open3D DI + PTA + fibular render paths; fix obvious scale/alignment vs BP3D; sync README/manifest; small BY-SA UX polish.
+
+**Progress**:
+1. Confirmed `FootModel.tsx` paths: `interossei_dorsales` (+ parts 2–4), `posterior_tibial_artery`, `fibular_artery` → `by-sa/*.glb`.
+2. **Alignment**: Raw Open3D meters under `0.01` were obviously wrong. Kabsch bake → BP3D mm (Calcaneus/Talus/Navicular/MT1–5; mean residual ≈3 mm). Render scale convention unchanged.
+3. **Docs**: README + `manifest.json` now state main **46** vs BY-SA **9** unique split (55/55 real with SA fills). No finished-product claim.
+4. **UX**: Layer toggles show BY-SA warning when muscle/vessel/nerve visible.
+5. Learning-log: unit mismatch + coverage honesty entries.
+
+**Blockers / notes**:
+- Pre-existing BP3D cuboid / some cuneiform centroid outliers — excluded from fit; not fixed this session.
+- Prefer CC0/CC BY replacements for Open3D SA soft tissue later.
+
+**Tests/Build**: integrity-audit + vitest + build in same commit.
