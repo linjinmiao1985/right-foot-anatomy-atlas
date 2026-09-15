@@ -11,15 +11,18 @@ Interactive web-based teaching atlas for right foot anatomy.
 
 | Layer | Real Meshes | Placeholder | Total | Sources |
 |-------|-------------|-------------|-------|---------|
-| **Bones** | 14/14 (100%) | 0 | 14 | BodyParts3D (CC BY 4.0) |
+| **Bones** | 21/25 (84%) | 4 | 25 | BodyParts3D (CC BY 4.0) |
 | **Muscles** | 13/14 (93%) | 1 | 14 | BP3D (12) + UM (8) |
 | **Vessels** | 5/9 (56%) | 4 | 9 | BodyParts3D (CC BY 4.0) |
 | **Nerves** | 6/6 (100%) | 0 | 6 | Z-Anatomy (CC BY-SA 4.0, isolated) |
-| **Total** | **38/43 (88%)** | **5** | **43** | MIT code + open assets |
+| **Total** | **45/54 (83%)** | **9** | **54** | MIT code + open assets |
+
+**Note**: Total structures = 59 in `structures.json` (accounting for multi-part muscles: AH oblique+transverse, FHB medial+lateral, Lumbricals 1-4, Plantar interossei 1-3). Total unique structures = 54 when multi-parts counted once.
 
 ### Gaps
+- **Bones**: Distal phalanges 2-5 (absent in BP3D OBJ archive, missing FJ codes)
 - **Muscles**: Dorsal interossei (absent in BP3D, UM, Z-Anatomy)
-- **Vessels**: Dorsal/plantar metatarsal digital branches (fine detail, BP3D lacks codes)
+- **Vessels**: Dorsal/plantar metatarsal digital branches (fine detail, BP3D lacks individual codes)
 
 ---
 
@@ -51,8 +54,8 @@ Interactive web-based teaching atlas for right foot anatomy.
 
 - **Frontend**: Vite + React 18 + TypeScript 5
 - **3D Engine**: Three.js + React Three Fiber + @react-three/drei
-- **Data**: `structures.json` (43 structures, TA2-compliant naming)
-- **Assets**: 38 GLB meshes (~15MB total: 14 bones + 13 muscles + 5 vessels + 6 nerves)
+- **Data**: `structures.json` (59 structures, TA2-compliant naming)
+- **Assets**: 51 GLB meshes (~15.2MB total: 21 bones + 13 muscles + 5 vessels + 6 nerves + 6 muscle parts)
 - **Testing**: Vitest + @testing-library/react (7/7 tests ✅)
 
 ---

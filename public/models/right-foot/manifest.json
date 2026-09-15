@@ -26,7 +26,14 @@
     {"id": "metatarsal_4", "file": "metatarsal_4_BP9130.glb", "bp": "BP9130", "fma": "FMA24513", "name_zh": "第四跖骨", "name_la": "Os metatarsi IV"},
     {"id": "metatarsal_5", "file": "metatarsal_5_BP7912.glb", "bp": "BP7912", "fma": "FMA24515", "name_zh": "第五跖骨", "name_la": "Os metatarsi V"},
     {"id": "proximal_phalanx_1", "file": "phalanx_prox_1_BP8488.glb", "bp": "BP8488", "fma": "FMA32951", "name_zh": "踇趾近节趾骨", "name_la": "Phalanx proximalis hallucis"},
-    {"id": "distal_phalanx_1", "file": "distal_phalanx_1_BP9282.glb", "bp": "BP9282", "fma": "FMA32650", "name_zh": "踇趾远节趾骨", "name_la": "Phalanx distalis hallucis"}
+    {"id": "distal_phalanx_1", "file": "distal_phalanx_1_BP9282.glb", "bp": "BP9282", "fma": "FMA32650", "name_zh": "踇趾远节趾骨", "name_la": "Phalanx distalis hallucis"},
+    {"id": "proximal_phalanx_2", "file": "proximal_phalanx_2.glb", "bp": "BP9196", "fma": "FMA32634", "name_zh": "第二趾近节趾骨", "name_la": "Phalanx proximalis digiti II pedis"},
+    {"id": "proximal_phalanx_3", "file": "proximal_phalanx_3.glb", "bp": "BP8762", "fma": "FMA32636", "name_zh": "第三趾近节趾骨", "name_la": "Phalanx proximalis digiti III pedis"},
+    {"id": "proximal_phalanx_4", "file": "proximal_phalanx_4.glb", "bp": "BP8281", "fma": "FMA32638", "name_zh": "第四趾近节趾骨", "name_la": "Phalanx proximalis digiti IV pedis"},
+    {"id": "proximal_phalanx_5", "file": "proximal_phalanx_5.glb", "bp": "BP8417", "fma": "FMA32640", "name_zh": "第五趾近节趾骨", "name_la": "Phalanx proximalis digiti V pedis"},
+    {"id": "middle_phalanx_2", "file": "middle_phalanx_2.glb", "bp": "BP8488", "fma": "FMA32642", "name_zh": "第二趾中节趾骨", "name_la": "Phalanx media digiti II pedis"},
+    {"id": "middle_phalanx_3", "file": "middle_phalanx_3.glb", "bp": "BP9047", "fma": "FMA32644", "name_zh": "第三趾中节趾骨", "name_la": "Phalanx media digiti III pedis"},
+    {"id": "middle_phalanx_4", "file": "middle_phalanx_4.glb", "bp": "BP8576", "fma": "FMA32646", "name_zh": "第四趾中节趾骨", "name_la": "Phalanx media digiti IV pedis"}
   ],
   "muscles": [
     {"id": "abductor_hallucis", "file": "abductor_hallucis.glb", "source": "UM", "fma": "FMA37459", "name_zh": "踇展肌", "name_la": "Abductor hallucis", "note": "UM CC0 replaces BP3D (8.7x resolution)"},
@@ -62,13 +69,13 @@
     {"id": "superficial_fibular_nerve", "file": "by-sa/superficial_fibular_nerve.glb", "source": "Z-Anatomy", "license": "CC BY-SA 4.0", "fma": "FMA19034", "name_zh": "腓浅神经", "name_la": "N. fibularis superficialis"},
     {"id": "sural_nerve", "file": "by-sa/sural_nerve.glb", "source": "Z-Anatomy", "license": "CC BY-SA 4.0", "fma": "FMA44314", "name_zh": "腓肠神经", "name_la": "N. suralis"}
   ],
-  "note": "14 bones + 13 muscles (BP3D 12 + UM 8) + 5 vessels + 6 nerves (Z-Anatomy BY-SA isolated). Total: 38/43 real (88%).",
+  "note": "21 bones (hallux + 7 phalanges 2-5, lacking 4 distal) + 13 muscles (BP3D 12 + UM 8) + 5 vessels + 6 nerves (Z-Anatomy BY-SA isolated). Total: 45/59 real (76%).",
   "stats": {
-    "bones": "14/14 (100%, BP3D CC BY 4.0)",
+    "bones": "21/25 (84%, BP3D CC BY 4.0: 14 tarsals/metatarsals/hallux + 7 phalanges 2-5, lacking 4 distal 2-5)",
     "muscles": "13/14 (93%, BP3D 12 + UM CC0 8: 5 intrinsic + 3 extrinsic)",
     "vessels": "5/9 (56%, BP3D main arteries, lacking digital branches)",
     "nerves": "6/6 (100%, Z-Anatomy CC BY-SA 4.0, isolated in by-sa/)",
-    "total": "38/43 (88% real meshes)"
+    "total": "45/59 (76% real meshes, 50 real structures - 5 multi-part AH counted once)"
   },
   "quality_decisions": {
     "overlapping_muscles": "UM CC0 chosen over BP3D for AH/ADM/FDB (2.4-8.7x resolution)",

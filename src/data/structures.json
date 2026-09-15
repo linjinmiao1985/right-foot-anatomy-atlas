@@ -156,6 +156,127 @@
     "placeholder": false
   },
   {
+    "id": "proximal_phalanx_2",
+    "meshNames": [
+      "proximal_phalanx_2"
+    ],
+    "layer": "bone",
+    "nameZh": "第二趾近节趾骨",
+    "nameLa": "Phalanx proximalis digiti II pedis",
+    "summaryZh": "第二趾的近节趾骨，连接第二跖骨头和第二趾中节趾骨，参与足弓支撑和趾间关节活动。TA2: A02.5.17.002",
+    "placeholder": false
+  },
+  {
+    "id": "proximal_phalanx_3",
+    "meshNames": [
+      "proximal_phalanx_3"
+    ],
+    "layer": "bone",
+    "nameZh": "第三趾近节趾骨",
+    "nameLa": "Phalanx proximalis digiti III pedis",
+    "summaryZh": "第三趾的近节趾骨，位于足纵弓中段，承受行走时的纵向压力。TA2: A02.5.18.002",
+    "placeholder": false
+  },
+  {
+    "id": "proximal_phalanx_4",
+    "meshNames": [
+      "proximal_phalanx_4"
+    ],
+    "layer": "bone",
+    "nameZh": "第四趾近节趾骨",
+    "nameLa": "Phalanx proximalis digiti IV pedis",
+    "summaryZh": "第四趾的近节趾骨，与第四跖骨形成跖趾关节，参与足横弓的维持。TA2: A02.5.19.002",
+    "placeholder": false
+  },
+  {
+    "id": "proximal_phalanx_5",
+    "meshNames": [
+      "proximal_phalanx_5"
+    ],
+    "layer": "bone",
+    "nameZh": "第五趾近节趾骨",
+    "nameLa": "Phalanx proximalis digiti V pedis (minimus)",
+    "summaryZh": "小趾的近节趾骨，较短小，易受鞋挤压变形，与小趾外展肌和屈趾短肌共同维持小趾功能。TA2: A02.5.20.002",
+    "placeholder": false
+  },
+  {
+    "id": "middle_phalanx_2",
+    "meshNames": [
+      "middle_phalanx_2"
+    ],
+    "layer": "bone",
+    "nameZh": "第二趾中节趾骨",
+    "nameLa": "Phalanx media digiti II pedis",
+    "summaryZh": "第二趾的中节趾骨，连接近节和远节趾骨，是趾骨链中的中间环节，参与趾间关节屈伸。TA2: A02.5.17.003",
+    "placeholder": false
+  },
+  {
+    "id": "middle_phalanx_3",
+    "meshNames": [
+      "middle_phalanx_3"
+    ],
+    "layer": "bone",
+    "nameZh": "第三趾中节趾骨",
+    "nameLa": "Phalanx media digiti III pedis",
+    "summaryZh": "第三趾的中节趾骨，位于足趾中段，承受屈趾肌腱的牵拉力，参与推进期蹬地动作。TA2: A02.5.18.003",
+    "placeholder": false
+  },
+  {
+    "id": "middle_phalanx_4",
+    "meshNames": [
+      "middle_phalanx_4"
+    ],
+    "layer": "bone",
+    "nameZh": "第四趾中节趾骨",
+    "nameLa": "Phalanx media digiti IV pedis",
+    "summaryZh": "第四趾的中节趾骨，较第二、三趾短小，易随前足变形而发生锤状趾畸形。TA2: A02.5.19.003",
+    "placeholder": false
+  },
+  {
+    "id": "distal_phalanx_2",
+    "meshNames": [
+      "distal_phalanx_2"
+    ],
+    "layer": "bone",
+    "nameZh": "第二趾远节趾骨",
+    "nameLa": "Phalanx distalis digiti II pedis",
+    "summaryZh": "第二趾的远节（末节）趾骨，趾尖骨，承受地面接触压力，参与推进期最后阶段蹬离。TA2: A02.5.17.004",
+    "placeholder": true
+  },
+  {
+    "id": "distal_phalanx_3",
+    "meshNames": [
+      "distal_phalanx_3"
+    ],
+    "layer": "bone",
+    "nameZh": "第三趾远节趾骨",
+    "nameLa": "Phalanx distalis digiti III pedis",
+    "summaryZh": "第三趾的远节（末节）趾骨，趾尖骨，与屈趾长肌腱末端附着，参与趾末端触地和推进。TA2: A02.5.18.004",
+    "placeholder": true
+  },
+  {
+    "id": "distal_phalanx_4",
+    "meshNames": [
+      "distal_phalanx_4"
+    ],
+    "layer": "bone",
+    "nameZh": "第四趾远节趾骨",
+    "nameLa": "Phalanx distalis digiti IV pedis",
+    "summaryZh": "第四趾的远节（末节）趾骨，较短小，易受鞋前端挤压而变形或甲沟炎。TA2: A02.5.19.004",
+    "placeholder": true
+  },
+  {
+    "id": "distal_phalanx_5",
+    "meshNames": [
+      "distal_phalanx_5"
+    ],
+    "layer": "bone",
+    "nameZh": "第五趾远节趾骨",
+    "nameLa": "Phalanx distalis digiti V pedis (minimus)",
+    "summaryZh": "小趾的远节（末节）趾骨，最小的趾骨，常因鞋挤压而发生鸡眼或变形。TA2: A02.5.20.003",
+    "placeholder": true
+  },
+  {
     "id": "distal_phalanx_1",
     "meshNames": [
       "Phalanx_Dist_Hallux_R",
@@ -166,20 +287,6 @@
     "nameLa": "Phalanx distalis hallucis",
     "summaryZh": "踇趾远节趾骨，是踇趾两节趾骨中的远端一节（终末节），构成踇趾尖端。底（近端）凹陷与踇趾近节趾骨头形成趾间关节（IP），体较短小扁平，远端膨大呈蹄形（tuberositas phalangis distalis），足背面支持趾甲，足底面为踇长屈肌腱止点，末端感觉丰富的指腹。临床意义：踇趾甲沟炎或嵌甲时远节趾骨周围软组织感染；远节趾骨骨折常见于重物砸伤或踢伤，甲床损伤需修复；踇长屈肌腱止点撕脱骨折影响踇趾屈曲；踇趾远节骨质增生或畸形影响鞋具适配。TA2编码：A02.5.17.002。",
     "placeholder": false
-  },
-  {
-    "id": "phalanges_2_5",
-    "meshNames": [
-      "Phalanges_2_R",
-      "Phalanges_3_R",
-      "Phalanges_4_R",
-      "Phalanges_5_R"
-    ],
-    "layer": "bone",
-    "nameZh": "第2-5趾趾骨",
-    "nameLa": "Phalanges digitorum pedis II-V",
-    "summaryZh": "第2-5趾的趾骨，每趾标准为3节（近节、中节、远节，phalanx proximalis/media/distalis），共12块，但第5趾中节和远节常融合为2节。每节结构：底（近端）与上一节或跖骨头形成关节，体（骨干），头（远端）与下一节形成关节。近节趾骨与跖骨头形成跖趾关节（MTP），中节与远节间形成远侧趾间关节（DIP）。趾骨逐节变细变短，远节趾骨末端呈蹄形支持趾甲和指腹。临床意义：锤状趾（hammertoe，近节伸、中节屈）、爪形趾（claw toe，MTP过伸、PIP和DIP屈曲）、槌状趾（mallet toe，DIP屈曲）等畸形；第5趾小趾内翻（curly toe）；趾骨骨折常因踢伤或挤压伤；远节趾骨感染或甲沟炎。TA2编码：A02.5.17.003-014。",
-    "placeholder": true
   },
   {
     "id": "tibialis_posterior",

@@ -18,7 +18,8 @@ interface PlaceholderMesh {
   size: [number, number, number];
 }
 
-// Real bone GLB models - ALL 14 right foot bones from BodyParts3D (CC BY 4.0)
+// Real bone GLB models - 21 right foot bones from BodyParts3D (CC BY 4.0)
+// 14 tarsals + metatarsals + hallux phalanges, plus 7 phalanges 2-5 (4 proximal + 3 middle)
 const REAL_BONE_MODELS: Record<string, string> = {
   'calcaneus': '/models/right-foot/calcaneus_BP9040.glb',
   'talus': '/models/right-foot/talus_BP8033.glb',
@@ -34,6 +35,14 @@ const REAL_BONE_MODELS: Record<string, string> = {
   'metatarsal_5': '/models/right-foot/metatarsal_5_BP7912.glb',
   'proximal_phalanx_1': '/models/right-foot/phalanx_prox_1_BP8488.glb',
   'distal_phalanx_1': '/models/right-foot/distal_phalanx_1_BP9282.glb',
+  // Phalanges 2-5: 7 real (4 proximal + 3 middle), 4 placeholder distal missing from BP3D
+  'proximal_phalanx_2': '/models/right-foot/proximal_phalanx_2.glb',
+  'proximal_phalanx_3': '/models/right-foot/proximal_phalanx_3.glb',
+  'proximal_phalanx_4': '/models/right-foot/proximal_phalanx_4.glb',
+  'proximal_phalanx_5': '/models/right-foot/proximal_phalanx_5.glb',
+  'middle_phalanx_2': '/models/right-foot/middle_phalanx_2.glb',
+  'middle_phalanx_3': '/models/right-foot/middle_phalanx_3.glb',
+  'middle_phalanx_4': '/models/right-foot/middle_phalanx_4.glb',
 };
 
 // Real muscle GLB models - 20 right foot muscles (BP3D 12 + UM CC0 8)

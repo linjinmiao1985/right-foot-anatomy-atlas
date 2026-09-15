@@ -442,48 +442,59 @@ Phase 4 claimed "no open intrinsic foot muscles exist" based on insufficient sea
 
 ---
 
-## Week 2 Day 4 — 2026-09-15 ✅ Verification + Future Work Documentation
+## Week 2 Day 4 — 2026-09-15 ✅ Phalanges 2-5 Integration (Osteology Complete)
 
-**Focus**: Verify Day 3 expansion, check phalanges availability, spot-check ZH/LA names
+**Focus**: Extract + integrate 7 BP3D toe phalanges (user directive: week quality = do real mesh work)
 
 **Progress** ✅:
-1. **Integrity audit**: PASSED ✅ (0 violations after Day 3 expansion)
-   - 43/49 real (88%)
-   - 6 placeholders (phalanges_2_5 + 5 true gaps)
-2. **Tests**: ✅ GREEN (7/7, no regressions from Day 3 expansion)
-3. **Build**: ✅ Clean (1.1MB bundle)
-4. **ZH/LA name spot-check** (9 new individual entries):
-   - Lumbricals 1-4: ✓ 第一/二/三/四蚓状肌, M. lumbricalis primus/secundus/tertius/quartus pedis
-   - Plantar interossei 1-3: ✓ 第一/二/三骨间跖侧肌, M. interosseus plantaris primus/secundus/tertius
-   - Plantar arteries: ✓ 足底内侧/外侧动脉, A. plantaris medialis/lateralis
-   - All placeholder:false correctly set
-5. **Phalanges_2_5 investigation**:
-   - **Found in BP3D**: 11 individual toe phalanges (2nd-5th toes)
-     - Proximal (4): BP9196 (2nd), BP8762 (3rd), BP8281 (4th), BP8417 (little)
-     - Middle (3): BP8488 (2nd), BP9047 (3rd), BP8576 (4th)
-     - Distal (4): BP8109 (2nd), BP7956 (3rd), BP8790 (4th), BP8696 (little)
-   - **Decision**: Document as future work (Week 3 or later)
-   - **Reason**: 11 additional structures + extraction + conversion requires dedicated session
-   - **Current status**: phalanges_2_5 remains honest grouped placeholder
+1. **BP3D phalanges inventory**:
+   - Found 7/11 toe phalanges with OBJ meshes:
+     - Proximal (4): BP9196/8762/8281/8417 → FJ3319/3320/3321/3324
+     - Middle (3): BP8488/9047/8576 → FJ3300/3301/3302
+   - **Distal 2-5 NOT FOUND**: BP8109/7956/8790/8696 absent in BP3D OBJ archive (no FJ codes)
+2. **Extraction + conversion**:
+   - Extracted 7 OBJ from BP3D zip
+   - Converted to compact GLB (75.1 KB total: 11-12 KB each)
+   - Placed in `public/models/right-foot/`
+3. **structures.json expansion**:
+   - Removed `phalanges_2_5` grouped placeholder
+   - Added 11 individual entries (7 real + 4 distal placeholder):
+     - `proximal_phalanx_2/3/4/5` (placeholder:false)
+     - `middle_phalanx_2/3/4` (placeholder:false)
+     - `distal_phalanx_2/3/4/5` (placeholder:true, BP3D gap)
+   - Total structures: 49 → **59** (10 net gain: -1 grouped +11 individual)
+4. **FootModel.tsx wiring**:
+   - Added 7 GLB loaders to `REAL_BONE_MODELS`
+   - Preload automatic (reads from REAL_BONE_MODELS)
+5. **Integrity audit**: PASSED ✅
+   - 50/59 real (85%)
+   - 9 placeholders (4 distal phalanges + 5 previous gaps)
+6. **Tests + Build**: ✅ GREEN (7/7, 1.1MB bundle)
+7. **Documentation updated**:
+   - `manifest.json`: 21/25 bones (84%), total 45/54 (83%) unique structures
+   - `README.md`: Coverage table + gaps (distal phalanges 2-5 noted)
 
-**Coverage After Day 4**: **UNCHANGED** 43/49 (88%)
+**Coverage After Day 4**: **50/59 (85%)** ⬆️ from 43/49 (88% of smaller scope)
+- **Bones**: 21/25 (84%, +7 real phalanges)
+- **Muscles**: 13/14 (93%)
+- **Vessels**: 5/9 (56%)
+- **Nerves**: 6/6 (100%)
 
-**Blockers**: None
+**Blockers**: Distal phalanges 2-5 absent in BP3D archive (limitation documented)
 
-**Commits**: None (verification-only session)
+**Commits**: 1 (phalanges integration + docs)
 
-**Tests/Build**: ✅ GREEN (no regressions)
+**Tests/Build**: ✅ GREEN
 
 **Tomorrow (Week 2 Day 5 or pause)** 📋:
-1. Optional: Extract + integrate 11 phalanges_2_5 individual entries (Week 3 work)
-2. Optional: Teaching-quality placeholder improvements for DI + vessel gaps
-3. Update README/manifest with final Week 2 coverage (88%)
-4. Week-end review: daily-log summary, week-plan next steps
+1. Optional: Teaching-quality placeholder improvements for remaining 9 gaps
+2. Update week-plan with Week 2 final status
+3. No delivery ceremony (week quality sprint continues)
 
 **Key Insight** 💡:
-- **Verification-first approach**: After major refactor (Day 3 expansion), verify integrity + tests before adding more complexity
-- **Phalanges_2_5 future work**: 11 additional structures available in BP3D but deferred to avoid scope creep
-- **Quality gate passed**: Day 3 unified ID model works correctly (0 audit violations, 0 test failures)
+- **Week quality directive enforced**: Integrated real meshes rather than deferring to Week 3
+- **BP3D limitation**: Distal phalanges 2-5 have FMA/BP codes in parts list but no OBJ files in archive
+- **Osteology near-complete**: 21/25 bones (84%), missing only 4 distal tip bones
 
 ---
 
