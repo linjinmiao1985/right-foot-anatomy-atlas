@@ -65,7 +65,7 @@ Interactive web-based teaching atlas for right foot anatomy.
 - **OrbitControls**: Zoom, rotate, pan around foot
 - **Loading states**: Progress indicators for GLB assets
 - **Keyboard**: `I` isolate · `Esc` clears selection + isolate + search
-- **Search**: bilingual ZH/LA includes ligament/tendon entries (e.g. 跖长韧带, 跟腱)
+- **Search**: bilingual ZH/LA includes ligament/tendon entries (e.g. 跖长韧带, 跟腱); results sorted by teaching layer after match score
 
 ---
 
@@ -142,6 +142,7 @@ Open `http://localhost:5173` to view the atlas.
 - **Not patient-specific**: Teaching-grade generic anatomy (not CT/MRI-derived)
 - **Not validated for surgery**: Educational tool, not surgical planning software
 - **ShareAlike module**: BY-SA 4.0 applies only to `by-sa/` directory (opt-in via layer toggles)
+- **Asset load**: **134** discrete GLBs (~13 MB; 59 main + 75 `by-sa/`). Visibility-gated mount; bones eager-preload; other layers lazy-preload when toggled visible — **not** a single Draco pack
 
 ---
 

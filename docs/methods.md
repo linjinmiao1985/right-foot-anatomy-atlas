@@ -1,7 +1,7 @@
 # Methods
 
 **Project**: Right Foot Anatomy Atlas (Teaching-Grade Interactive 3D)  
-**Version**: Week 2 Day 4ac (115 structures.json placeholder:false / 110 unique; muscles = 19 unique incl. BP3D EHB; ligament/tendon = BP3D long plantar + Achilles + 27 Open3D BY-SA; nerves = 6 ZA + 11 Open3D; vessels = 7 BP3D + 12 Open3D BY-SA; vessel+nerve+ligament teaching sub-group filters; TA2 soft-tissue still incomplete)  
+**Version**: Week 2 Day 4ah (teaching atlas in progress; see README live census; 134 discrete GLBs; lazy layer preload + layer-sorted search; TA2 soft-tissue still incomplete — **not a finished product**)  
 **Date**: 2026-09-15  
 **Licenses**: Code MIT | Assets CC BY 4.0 / CC0 1.0 / CC BY-SA 4.0 (isolated)
 
@@ -441,4 +441,14 @@ Commit history documents asset decisions, `structures.json` evolution, and `Foot
 2. **Muscle gap census** (`docs/muscle-gap-census.md`): wired orphan BP3D **EHB** (`extensor_hallucis_brevis.glb` already in REAL_MUSCLE_MODELS) into `structures.json` → 24 muscle entries / 19 unique / main-tree +1. Still open: fibularis brevis, fibularis tertius, opponens digiti minimi (no license-clean mesh claimed).
 3. **Blender**: Official 4.2.9 LTS tarball installed (apt lacked package). Exported Z-Anatomy proof GLBs for long plantar + calcaneal tendon (`third_party/z-anatomy/proof_exports/`, gitignored). No named ATFL/CFL/deltoid/retinacula in that `.blend` — Open3D BY-SA unchanged. Proof **not** wired (BP3D already covers both).
 4. Honesty: teaching-grade in progress — **no finished-product claim**.
+
+## Viewer load strategy (Day 4ah honesty)
+
+| Item | Detail |
+|------|--------|
+| **On-disk GLB count** | **134** discrete teaching meshes (~**13 MB** total): **59** main tree (`public/models/right-foot/*.glb`) + **75** ShareAlike isolate (`by-sa/`) |
+| **Why discrete files** | Per-structure GLBs keep CC BY/CC0 vs BY-SA license boundaries clear; avoid one monolithic pack that would taint redistribution claims |
+| **Runtime** | React Three Fiber `useGLTF` per mounted mesh; layer toggle **unmounts** hidden layers (no draw / no hook for those paths) |
+| **Preload** | Bones **eager** (`useGLTF.preload`); muscle / vessel / nerve / ligament preload **when that layer is visible** (lazy vs prior preload-all) |
+| **Not claimed** | Meshopt/Draco single-file atlas; streaming LOD; finished soft-tissue completeness |
 

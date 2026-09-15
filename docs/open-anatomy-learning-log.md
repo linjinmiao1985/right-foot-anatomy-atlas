@@ -5,7 +5,7 @@ Living log of open-source human anatomy projects studied for the right-foot atla
 (CC0 / CC BY into main tree; BY-SA isolated under `public/models/right-foot/by-sa/` + NOTICE;
 reject NC / unknown / All Rights Reserved).
 
-**Last updated**: 2026-09-15 (Day 4aa)  
+**Last updated**: 2026-09-15 (Day 4ah)  
 **Status**: ongoing research — not a finished catalog.
 
 ---
@@ -763,4 +763,34 @@ Soft-tissue under ligament toggle = **1 ligament + 1 tendon**. Still missing pla
 | **Open 3D Man Project** (Eungyeol Lee / LUMC consortium) + **open3dviewer** | https://www.eungyeol-lee.com/open3dman · https://github.com/djansma/open3dviewer | Models: **CC BY-SA** (illustrator page); viewer: **GPL-3.0** (GitHub SPDX) | Remodel/sculpt lineage over BodyParts/Z-Anatomy; LUMC multi-university atlas (ongoing). Viewer is software only | **deepen / isolate-SA** for any future mesh extracts; **UX-borrow** viewer patterns; **do not** confuse GPL viewer with MIT atlas code |
 
 **Honesty**: No new CC0/CC BY per-ray dorsal MTA or digital artery candidates. Day 4aa expands ShareAlike vessel teaching set only — **not** a finished vascular atlas.
+
+
+---
+
+## Session additions (2026-09-15 · Day 4ah — license dig + lazy preload + layer-sorted search)
+
+### NEW license-verified projects (≥4)
+
+| # | Project | URL | License verified | Foot relevance | Decision |
+|---|---------|-----|------------------|----------------|----------|
+| **29** | **LABIM3D** (FernandandreaTM/labim3d) — TecMedHub, Universidad Austral de Chile | https://github.com/FernandandreaTM/labim3d · https://tmeduca.org/ferlopezmoncada/labim3d | **CC BY 4.0** (README header + design principles; GitHub API SPDX unset — trust README text 2026-09-15) | Curated print/web STL catalog + Three.js viewer; per-model JSON attribution. No named right-foot intrinsic soft-tissue pack identified this pass | **UX-borrow** (catalog attribution discipline). **monitor** local models entry-by-entry before any mesh copy |
+| **30** | **Human Organs** (code4fukui/human_organs) | https://github.com/code4fukui/human_organs | **MIT** (GitHub SPDX verified) for viewer code; assets from **NIH 3D Print Exchange** — **per-entry** NIH licenses (must verify each model page) | Organ GLB/STL explorer — **no** curated foot DI/NV set | **UX-borrow** (NIH per-asset verify habit). **reject** assuming NIH packs are uniformly CC BY |
+| **31** | **Segmented Internal Organs (SIO)** — Visible Human Male (VOXEL-MAN / UKE Hamburg-Eppendorf; NCI IDC Zenodo) | https://www.virtual-body.org/segmented-internal-organs/ · Zenodo DOI **10.5281/zenodo.15882019** | **CC BY 4.0** (Zenodo API `license.id` = `cc-by-4.0` verified 2026-09-15) | High-res **torso** voxel atlas (>200 labeled objects) — **not foot** | **UX-borrow** / process (CC BY cryosection→label honesty). **reject** as foot mesh source |
+| **32** | **UltraBones100k** (luohwu/UltraBones100k) | https://github.com/luohwu/UltraBones100k · HF `luohwu/UltraBones100k` | **CC BY 4.0** (GitHub SPDX + Hugging Face dataset card) | Lower-limb US + CT bone surfaces (`foot.stl` / tibia / fibula per specimen) — osteology surface for US research, **not** named intrinsic soft tissue | **monitor** for bone-surface QA only. **reject** (DI/NV teaching) |
+| **33** | **OpenLimbTT** (abel-research/OpenLimbTT) — University of Southampton et al. | https://github.com/abel-research/OpenLimbTT | Code **MIT** (`CODE-LICENSE`); data **CC BY-SA 4.0** (`DATA-LICENSE` / README badges verified) | Transtibial **residual limb** SSM (not intact foot teaching atlas) | **monitor** / **isolate-SA** if ever using residual-limb STLs. **reject** for intact foot DI |
+
+### Actionable borrow applied this session
+
+1. **Search results sorted by teaching layer** (BodyExplorer muscle-group / human-atlas system-list habit) — after match score, order bone → muscle → ligament → vessel → nerve in `searchStructures`.
+2. **Lazy GLB preload by visible layer** — bones remain eager; muscle/vessel/nerve/ligament `useGLTF.preload` runs when that layer is toggled visible (visibility-gated mount was already partial; module-level preload-all removed).
+
+### Performance / honesty note
+
+| Item | Value |
+|------|-------|
+| On-disk teaching GLBs | **134** (~13 MB): **59** main tree + **75** `by-sa/` |
+| Strategy | Discrete per-structure GLBs (license isolation); React mount only for visible layers; lazy preload soft-tissue layers on toggle |
+| Not claimed | Draco pack / single-file atlas; finished soft-tissue completeness |
+
+No new CC0/CC BY foot DI / per-ray MTA / ligament candidates integrated this pass — dig only + UX/perf. **No finished-product claim.**
 

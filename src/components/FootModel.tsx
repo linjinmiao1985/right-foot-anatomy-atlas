@@ -238,6 +238,14 @@ export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName
   const nerveGroups = visibleNerveGroups ?? new Set(getAllNerveGroupIds());
   const vesselGroups = visibleVesselGroups ?? new Set(getAllVesselGroupIds());
   const muscleGroups = visibleMuscleGroups ?? new Set(getAllMuscleGroupIds());
+
+  // Lazy-preload soft-tissue / vessel / nerve GLBs when those layers become visible
+  useEffect(() => {
+    visibleLayers.forEach((layer) => {
+      if (layer !== 'bone') preloadLayerAssets(layer);
+    });
+  }, [visibleLayers]);
+
   const [placeholderMeshes, setPlaceholderMeshes] = useState<PlaceholderMesh[]>([]);
   const [hoveredMesh, setHoveredMesh] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
@@ -1015,22 +1023,31 @@ function RealLigamentModel({
   );
 }
 
-// Preload all GLB models
-Object.values(REAL_BONE_MODELS).forEach(path => {
+/**
+ * Load strategy (honesty): ~134 discrete teaching GLBs (~13 MB; 59 main + 75 by-sa).
+ * Visibility-gated mount already skips useGLTF for hidden layers.
+ * Preload: bones eager (always-on osteology); other layers on demand when toggled visible
+ * (BodyExplorer / OPANEX “deeper layer” habit — no code copy).
+ */
+function preloadPaths(paths: string[]) {
+  paths.forEach((path) => useGLTF.preload(path));
+}
+
+Object.values(REAL_BONE_MODELS).forEach((path) => {
   useGLTF.preload(path);
 });
-Object.values(REAL_MUSCLE_MODELS).forEach(path => {
-  useGLTF.preload(path);
-});
-Object.values(ADDITIONAL_MUSCLE_PARTS).flat().forEach(path => {
-  useGLTF.preload(path);
-});
-Object.values(REAL_VESSEL_MODELS).forEach(path => {
-  useGLTF.preload(path);
-});
-Object.values(REAL_NERVE_MODELS).forEach(path => {
-  useGLTF.preload(path);
-});
-Object.values(REAL_LIGAMENT_MODELS).forEach(path => {
-  useGLTF.preload(path);
-});
+
+export function preloadLayerAssets(layer: Layer) {
+  if (layer === 'bone') {
+    preloadPaths(Object.values(REAL_BONE_MODELS));
+  } else if (layer === 'muscle') {
+    preloadPaths(Object.values(REAL_MUSCLE_MODELS));
+    preloadPaths(Object.values(ADDITIONAL_MUSCLE_PARTS).flat());
+  } else if (layer === 'vessel') {
+    preloadPaths(Object.values(REAL_VESSEL_MODELS));
+  } else if (layer === 'nerve') {
+    preloadPaths(Object.values(REAL_NERVE_MODELS));
+  } else if (layer === 'ligament') {
+    preloadPaths(Object.values(REAL_LIGAMENT_MODELS));
+  }
+}

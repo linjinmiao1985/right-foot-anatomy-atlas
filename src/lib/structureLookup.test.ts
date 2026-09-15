@@ -55,3 +55,18 @@ describe('structureLookup', () => {
     expect(idHit.some((s) => s.id === 'calcaneal_tendon')).toBe(true);
   });
 });
+
+  it('sorts equal-score hits by teaching layer order (muscle/ligament before nerve)', () => {
+    const hits = searchStructures('plantar', 24);
+    expect(hits.length).toBeGreaterThan(1);
+    const firstNerve = hits.findIndex((s) => s.layer === 'nerve');
+    const firstMuscle = hits.findIndex((s) => s.layer === 'muscle');
+    const firstLig = hits.findIndex((s) => s.layer === 'ligament');
+    if (firstNerve >= 0 && firstMuscle >= 0) {
+      expect(firstMuscle).toBeLessThan(firstNerve);
+    }
+    if (firstNerve >= 0 && firstLig >= 0) {
+      expect(firstLig).toBeLessThan(firstNerve);
+    }
+  });
+

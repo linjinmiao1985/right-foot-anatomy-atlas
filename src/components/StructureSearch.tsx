@@ -12,7 +12,8 @@ interface StructureSearchProps {
 /**
  * Bilingual structure search (ZH / LA).
  * UX-borrow (ideas only): jixiangying/anatomy global search;
- * BioLens / human-atlas / OMFAtlas search chrome.
+ * BioLens / human-atlas / OMFAtlas search chrome;
+ * BodyExplorer / human-atlas — results sorted by teaching layer order after match score.
  */
 export default function StructureSearch({ onSelect, clearSignal = 0 }: StructureSearchProps) {
   const [query, setQuery] = useState('');
