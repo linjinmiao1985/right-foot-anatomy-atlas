@@ -136,6 +136,26 @@ export default function LayerToggles({
           <span style={legendChip('#e8dcc8')}>韧</span>
           <span>韧带层（BP3D 跖长韧带起步；非完整韧带图谱）</span>
         </div>
+        {visibleLayers.has('ligament') && (
+          <div
+            role="status"
+            style={{
+              marginTop: '8px',
+              padding: '6px 8px',
+              background: 'rgba(232, 220, 200, 0.12)',
+              border: '1px solid rgba(232, 220, 200, 0.45)',
+              borderRadius: '4px',
+              color: '#d6d3d1',
+              fontSize: '10px',
+              lineHeight: 1.45,
+            }}
+            title="Ligament layer started — see docs/week2-ligament-fascia-search.md"
+          >
+            ℹ️ 韧带层已启用但<strong>不完整</strong>（目前仅 BP3D 跖长韧带）。无足底腱膜 /
+            ATFL / CFL / 三角韧带 / 弹簧韧带网格。隔离(I)与搜索对该层可用。
+          </div>
+        )}
+
         {(visibleLayers.has('nerve') ||
           visibleLayers.has('muscle') ||
           visibleLayers.has('vessel')) && (

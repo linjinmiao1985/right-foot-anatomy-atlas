@@ -311,3 +311,7 @@ Calcaneus, Talus, Navicular, **Cuboid**, **medial / intermediate / lateral cunei
 - **QA**: Proximal overlaps calcaneus; distal reaches MT-base Y band; plantar Z overlaps calcaneus/cuboid plantar band. Teaching-grade co-location — **not** surgical registration.
 - **Kabsch**: Not required (same source frame as osteology).
 
+
+## Day 4p — ISA re-scan (no new ligament mesh)
+
+No additional RIGHT foot/ankle ligament or plantar aponeurosis elemental found in local BP3D cache. Existing FJ1424 spatial QA (Day 4o) unchanged. Achilles FJ1405 noted but not integrated under ligament layer.

@@ -32,7 +32,7 @@ Interactive web-based teaching atlas for right foot anatomy.
 - Prefer future **CC0/CC BY** replacements for Open3D BY-SA DI + proximal arteries
 - Cuboid + 3 cuneiforms remapped (Day 4j). Hallux proximal remapped `BP8488`→`BP8785` (Day 4k). Distal phalanges 2–5: UM Y≈−850 meshes replaced with BP3D ISA elemental
 - **UM muscles** (8): Kabsch-similarity baked into BP3D mm (Day 4l; mean residual ≈2.2 mm on 7 tarsal landmarks) — teaching-grade, not surgical registration
-- **Ligaments / fascia**: see `docs/week2-ligament-fascia-search.md` — BP3D only ships long plantar among foot ligament elementals searched; Z-Anatomy BY-SA deferred this pass
+- **Ligaments / fascia**: see `docs/week2-ligament-fascia-search.md` — Day 4p exhaustive ISA/cache scan reconfirmed: **only** right long plantar (`FJ1424`/`BP5093`) among foot ligament/fascia elementals; plantar fascia / ATFL / CFL / deltoid / spring / short plantar absent in BP3D; Achilles `FJ1405` is tendon (not filed as ligament); Z-Anatomy BY-SA still deferred
 - Teaching-grade atlas in progress — **no finished-product claim**
 
 ---
@@ -46,6 +46,7 @@ Interactive web-based teaching atlas for right foot anatomy.
 | **Muscles** | CC BY 4.0 (BP3D) + CC0 1.0 (UM) | ✅ Free, no strings (UM) |
 | **Nerves** (in `by-sa/` only) | CC BY-SA 4.0 (Z-Anatomy) | ⚠️ ShareAlike if modified |
 | **DI + proximal arteries** (`by-sa/`) | CC BY-SA 4.0 (Open3DModel) | ⚠️ ShareAlike if modified |
+| **Ligament** (long plantar only) | CC BY 4.0 (BodyParts3D) | ✅ Attribution; layer incomplete |
 
 **User Choice**: Muscle / vessel / nerve layers may load BY-SA meshes (DI, PTA, fibular, nerves). Skip those layers or delete `by-sa/` → MIT + CC BY/CC0 only.
 
@@ -53,13 +54,14 @@ Interactive web-based teaching atlas for right foot anatomy.
 
 ## Features
 
-- **5-layer toggle**: Bone / Muscle / Nerve / Vessel / Ligament visibility control
+- **5-layer toggle**: Bone / Muscle / Nerve / Vessel / Ligament visibility control (ligament layer incomplete — 1 mesh)
 - **Click selection**: Shows Chinese name, Latin name (TA2), summary
 - **Click-to-focus**: Camera frames selected mesh AABB (teaching polish)
 - **Hover tooltips**: Quick structure identification
 - **OrbitControls**: Zoom, rotate, pan around foot
 - **Loading states**: Progress indicators for GLB assets
-- **Keyboard**: `I` isolate · `Esc` to deselect
+- **Keyboard**: `I` isolate · `Esc` to deselect (works with ligament layer)
+- **Search**: bilingual ZH/LA includes ligament entries (e.g. 跖长韧带)
 
 ---
 
@@ -67,7 +69,7 @@ Interactive web-based teaching atlas for right foot anatomy.
 
 - **Frontend**: Vite + React 18 + TypeScript 5
 - **3D Engine**: Three.js + React Three Fiber + @react-three/drei
-- **Data**: `structures.json` (60 structures, TA2-compliant naming)
+- **Data**: `structures.json` (65 entries, TA2-oriented naming; not TA2-complete)
 - **Assets**: Main-tree GLBs (incl. 1 ligament) + 12 `by-sa/` GLBs (6 nerves + 4 DI + 2 proximal arteries)
 - **Testing**: Vitest + integrity-audit.py
 

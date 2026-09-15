@@ -38,4 +38,11 @@ describe('structureLookup', () => {
   it('returns empty for blank query', () => {
     expect(searchStructures('   ')).toEqual([]);
   });
+
+  it('searches ligament layer by Chinese and Latin', () => {
+    const zh = searchStructures('跖长');
+    expect(zh.some((s) => s.id === 'long_plantar_ligament' && s.layer === 'ligament')).toBe(true);
+    const la = searchStructures('plantare longum');
+    expect(la.some((s) => s.id === 'long_plantar_ligament')).toBe(true);
+  });
 });

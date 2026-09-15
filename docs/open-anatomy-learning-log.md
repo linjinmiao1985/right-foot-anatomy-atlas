@@ -589,3 +589,12 @@ No new CC0/CC BY foot DI or proximal-artery candidates in this dig (atlas-foundr
 | UM 5 ligaments | CC0 | **reject** (knee, not foot fascia/ankle complex) |
 | gm-foot / SimTK / Soma3D | unclear / NC / unknown | **monitor** or **reject** |
 
+
+## Session additions (2026-09-15 · Day 4p — BP3D ISA brute-force ligament re-scan)
+
+| Item | Detail |
+|------|--------|
+| **Method** | Mapped all skeletal-ligament elementals → concept names; filtered `right`+(ligament\|fascia\|aponeuro\|retinacul); searched ankle/foot capsules |
+| **New foot ligament/fascia meshes** | **None** beyond `FJ1424`/`BP5093` (already integrated) |
+| **Side find** | Right calcaneal tendon `FJ1405`/`BP5098` — tendon, not ligament; defer |
+| **Action** | Docs + README honesty; no new main-tree mesh; no finished-product claim |

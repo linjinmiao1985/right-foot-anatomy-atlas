@@ -1,7 +1,7 @@
 # Methods
 
 **Project**: Right Foot Anatomy Atlas (Teaching-Grade Interactive 3D)  
-**Version**: Week 2 Day 4o (65/65 structures.json placeholder:false; ligament layer started with 1 BP3D mesh; TA2 soft-tissue still incomplete)  
+**Version**: Week 2 Day 4p (65/65 structures.json placeholder:false; ligament layer still 1 BP3D mesh after exhaustive ISA re-scan; TA2 soft-tissue still incomplete)  
 **Date**: 2026-09-15  
 **Licenses**: Code MIT | Assets CC BY 4.0 / CC0 1.0 / CC BY-SA 4.0 (isolated)
 
@@ -329,7 +329,7 @@ Complete commit history (Day 1-7) documents:
 
 | Gap | Why still open | Search note |
 |-----|----------------|-------------|
-| Ligaments / plantar fascia | **1** BP3D CC BY long plantar integrated (Day 4o); fascia + ankle complex still absent | See `week2-ligament-fascia-search.md`; UM ligaments = knee; Z-Anatomy BY-SA deferred; SimTK/gm-foot license unclear |
+| Ligaments / plantar fascia | **1** BP3D CC BY long plantar (Day 4o); Day 4p ISA re-scan found **no** further foot ligament/fascia elementals; Achilles FJ1405 = tendon (deferred) | See `week2-ligament-fascia-search.md`; Z-Anatomy BY-SA deferred; SimTK/gm-foot license unclear |
 | Finer plantar/digital nerves | Only trunk nerves (Z-Anatomy BY-SA) | Prefer future CC0/BY over expanding SA isolate |
 | Individual dorsal metatarsal arteries | BP3D grouped dorsal digital + plantar metatarsal remain | Open3D had dorsal MTA (BY-SA); skipped earlier to avoid SA duplication of grouped teaching vessels |
 | Plantar interossei | **Present** (BP3D 1st–3rd) | Not a gap |

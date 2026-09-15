@@ -1060,3 +1060,13 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 - Learning-log: ≥2 entries (BP3D deepen, UM deepen, gm-foot NEW, SimTK deepen)
 - Honesty: ligament layer **started** (1 mesh) — not a finished ligament atlas; no finished-product claim
 
+
+---
+
+## Day 4p (2026-09-15) — Ligament ISA brute-force re-scan
+
+- Exhaustive local BP3D scan (`isa_parts_list_e.txt` + `isa_element_parts.txt` + `partof` + zip): **no new** RIGHT foot/ankle ligament or plantar aponeurosis elementals beyond `FJ1424`/`BP5093`
+- Noted Achilles `FJ1405`/`BP5098` (tendon) — not integrated as ligament
+- Docs/README honesty updated; search test for ligament; layer-toggle incomplete banner when ligament visible
+- integrity-audit + vitest + build; commit/push
+- **Not claimed**: finished ligament atlas / finished product
