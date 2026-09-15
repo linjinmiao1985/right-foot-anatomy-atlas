@@ -1,0 +1,116 @@
+{
+  "method": "ZA mesh-API OBJ \u2192 meters*1000 \u2192 Kabsch (za_to_bp3d_transform.json) \u2192 GLB",
+  "kabsch_mean_residual_mm": 1.813981463537448,
+  "aabb_bp3d_mm": {
+    "plantaris": {
+      "centroid": [
+        -65.27159229156437,
+        -45.643137608165475,
+        225.32102026713326
+      ],
+      "aabb": [
+        [
+          -105.14259923380158,
+          -93.33455321228328,
+          -53.610655942540674
+        ],
+        [
+          -38.286903287360985,
+          -29.38404151758273,
+          435.91136381021425
+        ]
+      ],
+      "n_verts": 4701,
+      "n_faces": 9398,
+      "glb_bytes": 113932
+    },
+    "flexor_hallucis_brevis_lateral": {
+      "centroid": [
+        -86.3158749728666,
+        -147.65241790687764,
+        -51.39462058780773
+      ],
+      "aabb": [
+        [
+          -106.09530693047117,
+          -196.25797092304458,
+          -71.37699702495276
+        ],
+        [
+          -67.24384536442763,
+          -119.54050755425915,
+          -33.07031798683956
+        ]
+      ],
+      "n_verts": 964,
+      "n_faces": 1932,
+      "glb_bytes": 24396
+    },
+    "proper_plantar_digital_arteries": {
+      "centroid": [
+        -132.7854751669828,
+        -183.63361658375484,
+        -64.59549588150543
+      ],
+      "aabb": [
+        [
+          -170.51861600749987,
+          -242.46092093530385,
+          -72.40044134961896
+        ],
+        [
+          -84.96287653047406,
+          -92.11427815615788,
+          -58.743760038793866
+        ]
+      ],
+      "n_verts": 820,
+      "n_faces": 1904,
+      "glb_bytes": 22500
+    }
+  },
+  "qa": {
+    "plantaris": {
+      "centroid": [
+        -65.27159230877962,
+        -45.64313762853866,
+        225.321020225481
+      ],
+      "frac_inside_pad": 0.883,
+      "wrong_side": false,
+      "qa_pass": true,
+      "note": "near_achilles_min_mm=9.4",
+      "n_verts": 4701
+    },
+    "flexor_hallucis_brevis_lateral": {
+      "centroid": [
+        -86.31587481201932,
+        -147.6524179070817,
+        -51.39462061442775
+      ],
+      "frac_inside_pad": 1.0,
+      "wrong_side": false,
+      "qa_pass": true,
+      "note": "dist_to_fhb_medial_mm=12.6",
+      "n_verts": 964
+    },
+    "proper_plantar_digital_arteries": {
+      "centroid": [
+        -132.7854750377376,
+        -183.63361658235877,
+        -64.5954959683302
+      ],
+      "frac_inside_pad": 1.0,
+      "wrong_side": false,
+      "qa_pass": true,
+      "note": "dist_to_proximal_phalanx_2_min_mm=3.4; prior fail used BP3D plantar_mta (X>0 odd centroid) as ref",
+      "n_verts": 820
+    }
+  },
+  "wire_decision": {
+    "plantaris": "WIRE",
+    "flexor_hallucis_brevis_lateral": "WIRE",
+    "proper_plantar_digital_arteries": "WIRE"
+  },
+  "note_ppda_ref": "BP3D plantar_metatarsal_arteries_grouped / dorsal_digital centroids have +X (~113/+134) vs right-foot bone frame (\u2212X); not used as laterality refs for ZA PPDA."
+}

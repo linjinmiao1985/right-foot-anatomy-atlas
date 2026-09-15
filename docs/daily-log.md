@@ -1191,3 +1191,11 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 - Blender **4.2.9 LTS** from download.blender.org tarball; proof-exported ZA `Long plantar ligament.r` + `Calcaneal tendon.r` (gitignored). No ATFL/CFL in that blend
 - README + methods + phase-5 self-review census synced; **no finished-product claim**
 
+---
+
+## Day 4ad (2026-09-15) — muscle gaps + ZA unique soft
+
+- Census dig: UM no FB/FT/opponens; Open3D OBJ **has** all three; ZA.blend also names them.
+- Wired Open3D BY-SA: fibularis_brevis, fibularis_tertius, opponens_digiti_minimi (Kabsch Day 4m, QA pass).
+- ZA→BP3D bone Kabsch ≈1.8 mm; wired plantaris + FHB lateral ADDITIONAL + proper plantar digital arteries (mesh-API OBJ path).
+- integrity-audit + vitest + build; no finished-product claims.

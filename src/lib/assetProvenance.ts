@@ -42,9 +42,18 @@ const Z_ANATOMY_NERVES = new Set([
   'sural_nerve',
 ]);
 
+/** Z-Anatomy soft meshes (non-nerve) isolated under by-sa/ — Day 4ad */
+const Z_ANATOMY_SOFT = new Set([
+  'plantaris',
+  'proper_plantar_digital_arteries',
+]);
+
 /** Open3DModel / AnatomyTOOL meshes isolated under by-sa/ (CC BY-SA 4.0) */
 const OPEN3D_BY_SA = new Set([
   'interossei_dorsales',
+  'fibularis_brevis',
+  'fibularis_tertius',
+  'opponens_digiti_minimi',
   'posterior_tibial_artery',
   'fibular_artery',
   'anterior_talofibular_ligament',
@@ -114,7 +123,7 @@ const UM: ProvenanceInfo = {
 
 const Z_ANATOMY: ProvenanceInfo = {
   sourceShort: 'Z-Anatomy',
-  sourceFull: 'Z-Anatomy (nerve curves)',
+  sourceFull: 'Z-Anatomy (nerve curves + selective soft meshes)',
   license: 'CC-BY-SA-4.0',
   isolatedBySa: true,
 };
@@ -139,7 +148,7 @@ export function getStructureProvenance(
 ): ProvenanceInfo {
   if (placeholder) return PLACEHOLDER;
   if (OPEN3D_BY_SA.has(structureId)) return OPEN3D;
-  if (Z_ANATOMY_NERVES.has(structureId) || layer === 'nerve') return Z_ANATOMY;
+  if (Z_ANATOMY_SOFT.has(structureId) || Z_ANATOMY_NERVES.has(structureId) || layer === 'nerve') return Z_ANATOMY;
   if (UM_MUSCLES.has(structureId) || UM_BONES.has(structureId)) return UM; // UM_BONES currently empty
   return BP3D;
 }
@@ -159,10 +168,22 @@ export function licenseLabel(license: AssetLicense): string {
 
 /** Persistent footer copy — keep factual, no “complete atlas” claims. */
 export const ATLAS_SOURCE_FOOTER =
-  '网格来源: BodyParts3D CC BY 4.0 · UM CC0 1.0 · Z-Anatomy 干神经 / Open3D DI+近端/细支/跗跟穿支动脉+踝足韧带/支持带/足底腱膜+细支/皮支/背侧趾支神经 CC BY-SA 4.0（by-sa/ 隔离）';
+  '网格来源: BodyParts3D CC BY 4.0 · UM CC0 1.0 · Z-Anatomy 干神经+跖肌/踇短屈肌外侧腹/足底固有趾动脉 / Open3D DI+FB/FT/小趾对掌肌+近端/细支动脉+踝足韧带/支持带/腱膜+细支神经 CC BY-SA 4.0（by-sa/ 隔离）';
 
 /** Short panel copy about mesh fidelity — teaching honesty, not finished-product claims. */
 export function getTeachingMeshNote(structureId: string, layer: string): string | null {
+  if (structureId === 'fibularis_brevis' || structureId === 'fibularis_tertius' || structureId === 'opponens_digiti_minimi') {
+    return '网格：Open3DModel lower-limb（CC BY-SA），Kabsch→BP3D mm；census 缺口补齐；仅 by-sa/ 加载。肌肉层仍不完整。';
+  }
+  if (structureId === 'plantaris') {
+    return '网格：Z-Anatomy Plantaris muscle.r（CC BY-SA），ZA→BP3D Kabsch；by-sa/ 隔离。不代表小腿三头肌完整。';
+  }
+  if (structureId === 'proper_plantar_digital_arteries') {
+    return '网格：Z-Anatomy Proper plantar digital arteries.r（CC BY-SA），分组教学对象，非逐趾分条；by-sa/。';
+  }
+  if (structureId === 'flexor_hallucis_brevis') {
+    return '内侧腹：BP3D CC BY；外侧腹附加件：Z-Anatomy（CC BY-SA，by-sa/）。混合许可结构。';
+  }
   if (OPEN3D_BY_SA.has(structureId) && layer === 'nerve') {
     return '网格：Open3DModel lower-limb（CC BY-SA），Kabsch→BP3D mm；足底细支/皮支/跟支/背侧趾支教学对象（部分为分组），非手术导航级；仅 by-sa/ 加载。仍非完整周围神经图谱。';
   }

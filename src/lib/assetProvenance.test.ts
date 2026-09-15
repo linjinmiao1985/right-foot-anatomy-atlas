@@ -15,6 +15,15 @@ describe('assetProvenance', () => {
     expect(p.isolatedBySa).toBe(true);
   });
 
+  it('attributes Open3D gap muscles FB/FT/opponens as isolated BY-SA', () => {
+    for (const id of ['fibularis_brevis', 'fibularis_tertius', 'opponens_digiti_minimi']) {
+      const p = getStructureProvenance(id, false, 'muscle');
+      expect(p.sourceShort).toBe('Open3D');
+      expect(p.license).toBe('CC-BY-SA-4.0');
+      expect(p.isolatedBySa).toBe(true);
+    }
+  });
+
   it('attributes UM muscles as CC0', () => {
     const p = getStructureProvenance('quadratus_plantae', false, 'muscle');
     expect(p.sourceShort).toBe('UM');
@@ -163,4 +172,14 @@ describe('assetProvenance', () => {
     expect(getTeachingMeshNote('medial_tarsal_arteries', 'vessel')).toMatch(/组合|Open3D/);
     expect(getTeachingMeshNote('perforating_arcuate_deep_plantar', 'vessel')).toMatch(/Open3D|Kabsch/);
   });
+
+  it('attributes ZA plantaris and PPDA as isolated BY-SA Z-Anatomy', () => {
+    for (const [id, layer] of [['plantaris', 'muscle'], ['proper_plantar_digital_arteries', 'vessel']] as const) {
+      const p = getStructureProvenance(id, false, layer);
+      expect(p.sourceShort).toBe('Z-Anatomy');
+      expect(p.license).toBe('CC-BY-SA-4.0');
+      expect(p.isolatedBySa).toBe(true);
+    }
+  });
+
 });

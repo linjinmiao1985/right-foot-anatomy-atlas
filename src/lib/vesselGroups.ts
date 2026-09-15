@@ -67,7 +67,7 @@ export const VESSEL_GROUPS: readonly VesselGroup[] = [
     id: 'plantar_distal',
     labelZh: '足底远端（分组）',
     labelEn: 'Plantar distal (grouped)',
-    structureIds: ['plantar_metatarsal_arteries'],
+    structureIds: ['plantar_metatarsal_arteries', 'proper_plantar_digital_arteries'],
   },
   {
     id: 'perforators',

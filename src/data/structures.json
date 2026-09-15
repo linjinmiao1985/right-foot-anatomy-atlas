@@ -371,6 +371,42 @@
     "placeholder": false
   },
   {
+    "id": "fibularis_brevis",
+    "meshNames": [
+      "Fibularis_Brevis_R",
+      "Peroneus_Brevis_R"
+    ],
+    "layer": "muscle",
+    "nameZh": "腓骨短肌",
+    "nameLa": "M. fibularis brevis",
+    "summaryZh": "小腿外侧群外在肌（TA2 fibularis，旧称 peroneus）。起点：腓骨外侧面下2/3。肌腱经外踝后方、腓骨肌上/下支持带深面，止于第5跖骨粗隆。作用：足外翻，辅助跖屈。支配：腓浅神经（L5-S1）。临床：腓骨长短肌腱脱位/腱鞘炎；第5跖骨基底撕脱（Jones 相关鉴别）。网格：Open3DModel lower-limb Fibularis_brevis_muscle.r（CC BY-SA 4.0），by-sa/ 隔离；Kabsch→BP3D mm。教学补充，非完整外侧群图谱。TA2：A04.7.02.042。",
+    "placeholder": false
+  },
+  {
+    "id": "fibularis_tertius",
+    "meshNames": [
+      "Fibularis_Tertius_R",
+      "Peroneus_Tertius_R"
+    ],
+    "layer": "muscle",
+    "nameZh": "第三腓骨肌",
+    "nameLa": "M. fibularis tertius",
+    "summaryZh": "小腿前群变异肌（常与趾长伸肌远侧份延续）。起自腓骨远段/骨间膜，肌腱经下伸肌支持带至足背外侧，止于第5跖骨底背侧。作用：足外翻、辅助背伸。支配：腓深神经。临床：缺如常见；外踝前外侧肿物鉴别。网格：Open3DModel Fibularis_tertius_muscle.r（CC BY-SA 4.0），by-sa/ 隔离；Kabsch→BP3D mm。教学有用，不代表人人具备该肌。TA2：A04.7.02.043。",
+    "placeholder": false
+  },
+  {
+    "id": "plantaris",
+    "meshNames": [
+      "Plantaris_R",
+      "M_Plantaris_Right"
+    ],
+    "layer": "muscle",
+    "nameZh": "跖肌",
+    "nameLa": "M. plantaris",
+    "summaryZh": "小腿后群细长肌（常缺如）。起自股骨外上髁附近，肌腹短小，长腱下行于腓肠肌与比目鱼肌之间，止于跟腱内侧缘或跟骨。作用：弱跖屈与屈膝辅助。支配：胫神经。临床：跟腱修复时注意伴行跖肌腱；缺如变异常见。网格：Z-Anatomy Plantaris muscle.r（CC BY-SA 4.0），by-sa/ 隔离；ZA→BP3D Kabsch（骨标志均值残差约1.8 mm）。教学补充，不代表小腿三头肌完整。",
+    "placeholder": false
+  },
+  {
     "id": "tibialis_anterior",
     "meshNames": [
       "Tibialis_Anterior_R",
@@ -403,7 +439,7 @@
     "layer": "muscle",
     "nameZh": "踇短屈肌",
     "nameLa": "M. flexor hallucis brevis",
-    "summaryZh": "足底内侧群深层肌。起点：骰骨足底面、外侧楔骨和胫骨后肌腱鞘。肌腹分为内侧腹和外侧腹，止点：踇趾近节趾骨底两侧，各含一踇籽骨（内侧籽骨和外侧籽骨）。作用：屈踇趾近节（跖趾关节），推进行走。支配：内侧腹由足底内侧神经支配，外侧腹由足底外侧神经深支支配。临床意义：两个籽骨为重要受力点，籽骨炎（sesamoiditis）常见于前足负重运动员；踇趾推进无力提示本肌损伤。",
+    "summaryZh": "足底内侧群深层肌。起点：骰骨足底面、外侧楔骨和胫骨后肌腱鞘。肌腹分为内侧腹和外侧腹，止点：踇趾近节趾骨底两侧，各含一踇籽骨（内侧籽骨和外侧籽骨）。作用：屈踇趾近节（跖趾关节），推进行走。支配：内侧腹由足底内侧神经支配，外侧腹由足底外侧神经深支支配。临床意义：两个籽骨为重要受力点，籽骨炎（sesamoiditis）常见于前足负重运动员；踇趾推进无力提示本肌损伤。 外侧腹网格：Z-Anatomy Lateral head of flexor hallucis brevis.r（CC BY-SA 4.0，by-sa/ 附加件）；内侧腹仍为 BP3D CC BY。混合许可结构，非完整踇短屈肌图谱。",
     "placeholder": false
   },
   {
@@ -478,6 +514,17 @@
     "nameZh": "小趾短屈肌",
     "nameLa": "M. flexor digiti minimi brevis pedis",
     "summaryZh": "足底外侧群深层小肌，是小趾（第5趾）的短屈肌。起点：第5跖骨底足底面和长足底韧带。止点：第5趾近节趾骨底外侧。作用：屈小趾近节趾骨（跖趾关节MTP），辅助维持足外侧纵弓。支配：足底外侧神经浅支（S2-S3）。临床意义：本肌较小，单独损伤罕见；小趾内翻畸形（curly toe或bunionette）时本肌可挛缩；第5跖骨底骨折时本肌起点可撕脱；足底外侧神经损伤时本肌麻痹致小趾屈曲无力。变异：约10%人群本肌缺如或与小趾展肌融合。",
+    "placeholder": false
+  },
+  {
+    "id": "opponens_digiti_minimi",
+    "meshNames": [
+      "Opponens_Digiti_Minimi_Pedis_R"
+    ],
+    "layer": "muscle",
+    "nameZh": "小趾对掌肌",
+    "nameLa": "M. opponens digiti minimi pedis",
+    "summaryZh": "足底外侧群深层小肌（TA2 有记载；人体常不恒定，可与小趾短屈肌部分融合）。起自腓骨长肌腱鞘/骰骨附近与长足底韧带，止于第5跖骨外侧面全长。作用：使第5跖骨轻度屈曲并外展（「对掌」样稳定外侧柱）。支配：足底外侧神经。临床：变异缺如多见。网格：Open3DModel Opponens_digiti_minimi_muscle_of_foot.r（CC BY-SA 4.0），by-sa/ 隔离；Kabsch→BP3D mm。教学补充不恒定内在肌，非完整图谱。",
     "placeholder": false
   },
   {
@@ -769,6 +816,17 @@
     "nameZh": "跖底跖骨动脉（组合）",
     "nameLa": "Aa. metatarsales plantares (combined)",
     "summaryZh": "跖底跖骨动脉的 BP3D 组合网格（elemental FJ2096 / 概念 BP6060）。自足底动脉弓发至跖骨间隙跖侧，再续为趾固有动脉。教学诚实标注：ISA 将全部跖底跖骨动脉归入同一 elemental，无 1st–4th 分拆 OBJ；亦无独立 dorsal metatarsal artery 概念可拆。本条目保持（组合）。TA2：A12.2.16.068 一带。",
+    "placeholder": false
+  },
+  {
+    "id": "proper_plantar_digital_arteries",
+    "meshNames": [
+      "Proper_Plantar_Digital_Arteries_R"
+    ],
+    "layer": "vessel",
+    "nameZh": "足底固有趾动脉",
+    "nameLa": "Aa. digitales plantares propriae",
+    "summaryZh": "足底趾动脉的固有终支（复数教学网格）。走行于趾底两侧至趾端。教学：与跖底动脉/足底弓衔接关系。网格：Z-Anatomy Proper plantar digital arteries.r（CC BY-SA 4.0），by-sa/ 隔离；ZA→BP3D Kabsch。仍为分组教学对象，非逐趾分条；非完整足底动脉图谱。",
     "placeholder": false
   },
   {

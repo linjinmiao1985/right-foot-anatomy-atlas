@@ -20,10 +20,10 @@ describe('vesselGroups', () => {
     ]);
   });
 
-  it('partitions 19 vessel ids without overlap', () => {
+  it('partitions 20 vessel ids without overlap', () => {
     const ids = VESSEL_GROUPS.flatMap((g) => [...g.structureIds]);
-    expect(ids).toHaveLength(19);
-    expect(new Set(ids).size).toBe(19);
+    expect(ids).toHaveLength(20);
+    expect(new Set(ids).size).toBe(20);
   });
 
   it('filters by visible groups', () => {

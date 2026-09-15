@@ -298,3 +298,23 @@ Then Kabsch / NOTICE / `by-sa/` isolation as for Open3D — **only if** geometry
 
 **Honesty**: Pipeline unblocked for future selective harvest. **Not** a bulk ligament replace; **not** finished-product.
 
+
+
+---
+
+## Day 4ad — ZA→BP3D transform + selective soft harvest (2026-09-15)
+
+**Transform**: Shared foot bone centroids (mesh API, world meters×1000) Kabsch→BP3D GLB centroids — mean residual **≈1.8 mm**, max ≈3.5 mm (`za_to_bp3d_transform.json`).
+
+**Unique teaching meshes wired** (BY-SA `by-sa/`, QA-pass):
+| Object | File | Notes |
+|--------|------|-------|
+| `Plantaris muscle.r` | `plantaris.glb` | Extrinsic; not full triceps surae |
+| `Lateral head of flexor hallucis brevis.r` | `flexor_hallucis_brevis_lateral.glb` | ADDITIONAL on BP3D medial FHB (mixed license disclosed) |
+| `Proper plantar digital arteries.r` | `proper_plantar_digital_arteries.glb` | Grouped plural vessel |
+
+**Not wired from ZA this pass**: Fibularis brevis/tertius + Opponens digiti minimi of foot (Open3D lower-limb already filled with proven Day 4m Kabsch). Long plantar / calcaneal tendon remain BP3D CC BY. glTF `use_selection` exports remain bloated (Calcaneus≈71MB) — use mesh-API OBJ path only.
+
+**Uncovered ZA foot soft list (deferred)**: Common plantar digital arteries; calcaneal arterial branches; plantar/dorsal digital veins; anterior tibial a.; Fibularis*/Opponens* (covered via Open3D); dorsal interossei of foot (Open3D DI); insertion-only fragments.
+
+**Honesty**: Pipeline for ZA soft harvest works. **Not** finished-product; **not** bulk replace of Open3D/BP3D.

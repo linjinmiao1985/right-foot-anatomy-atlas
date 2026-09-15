@@ -137,3 +137,20 @@ Day 4y wires six Day 4x volume-deferred QA-pass nerves (teaching priority). Stil
 ## Removal
 
 Delete this directory and remove corresponding `REAL_*` entries / set `placeholder: true` if you decline BY-SA terms.
+
+
+### Day 4ad — muscle gaps (Open3D) + unique ZA soft meshes
+
+**Open3DModel (CC BY-SA 4.0)** — Kabsch Day 4m → BP3D mm; `scripts/extract_open3d_muscles.py`
+- `fibularis_brevis.glb` — `Fibularis_brevis_muscle.r`
+- `fibularis_tertius.glb` — `Fibularis_tertius_muscle.r`
+- `opponens_digiti_minimi.glb` — `Opponens_digiti_minimi_muscle_of_foot.r`
+
+Skipped Open3D FHB heads / FDMB / FL — BP3D CC BY or UM CC0 already cover those niches.
+
+**Z-Anatomy (CC BY-SA 4.0)** — mesh-API OBJ export (avoid bloated glTF selection dumps); `za_to_bp3d_transform.json` (shared foot bones, mean residual ≈1.8 mm)
+- `plantaris.glb` — `Plantaris muscle.r`
+- `flexor_hallucis_brevis_lateral.glb` — `Lateral head of flexor hallucis brevis.r` (ADDITIONAL part on BP3D medial FHB)
+- `proper_plantar_digital_arteries.glb` — `Proper plantar digital arteries.r` (grouped plural)
+
+Attribution: "Z-Anatomy - The libre 3D atlas of anatomy - CC BY-SA 4.0"; Open3D as above.

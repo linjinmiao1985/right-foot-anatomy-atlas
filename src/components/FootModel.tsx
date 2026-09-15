@@ -73,7 +73,7 @@ const REAL_BONE_MODELS: Record<string, string> = {
   'distal_phalanx_5': '/models/right-foot/distal_phalanx_5_BP8695.glb', // BP3D
 };
 
-// Real muscle GLB models - BP3D intrinsics + UM CC0 (8 prior + 4 teaching extrinsics)
+// Real muscle GLB models - BP3D/UM + Open3D BY-SA gap fills (FB/FT/opponens Day 4ad)
 const REAL_MUSCLE_MODELS: Record<string, string> = {
   // UM CC0: Intrinsics (5) + Extrinsics (3 P0 + 4 teaching)
   'abductor_hallucis': '/models/right-foot/abductor_hallucis.glb', // UM (8.7x BP3D)
@@ -86,12 +86,16 @@ const REAL_MUSCLE_MODELS: Record<string, string> = {
   'flexor_hallucis_longus': '/models/right-foot/flexor_hallucis_longus.glb', // UM extrinsic
   'tibialis_anterior': '/models/right-foot/tibialis_anterior.glb', // UM extrinsic (Day 4n Kabsch)
   'fibularis_longus': '/models/right-foot/peroneus_longus.glb', // UM; TA2 fibularis, file keeps peroneus
+  'fibularis_brevis': '/models/right-foot/by-sa/fibularis_brevis.glb', // Open3D BY-SA Day 4ad
+  'fibularis_tertius': '/models/right-foot/by-sa/fibularis_tertius.glb', // Open3D BY-SA Day 4ad
+  'plantaris': '/models/right-foot/by-sa/plantaris.glb', // Z-Anatomy BY-SA Day 4ad
   'extensor_digitorum_longus': '/models/right-foot/extensor_digitorum_longus.glb', // UM extrinsic
   'extensor_hallucis_longus': '/models/right-foot/extensor_hallucis_longus.glb', // UM extrinsic
   
   // BP3D CC BY 4.0 (12): Remaining intrinsics
   'extensor_hallucis_brevis': '/models/right-foot/extensor_hallucis_brevis.glb',
   'flexor_digiti_minimi_brevis': '/models/right-foot/flexor_digiti_minimi_brevis.glb',
+  'opponens_digiti_minimi': '/models/right-foot/by-sa/opponens_digiti_minimi.glb', // Open3D BY-SA Day 4ad
   'adductor_hallucis': '/models/right-foot/adductor_hallucis_oblique.glb', // oblique head
   'flexor_hallucis_brevis': '/models/right-foot/flexor_hallucis_brevis_medial.glb',
   'lumbrical_1': '/models/right-foot/lumbrical_1st.glb',
@@ -110,6 +114,9 @@ const REAL_MUSCLE_MODELS: Record<string, string> = {
 const ADDITIONAL_MUSCLE_PARTS: Record<string, string[]> = {
   'adductor_hallucis': [
     '/models/right-foot/adductor_hallucis_transverse.glb',
+  ],
+  'flexor_hallucis_brevis': [
+    '/models/right-foot/by-sa/flexor_hallucis_brevis_lateral.glb', // ZA BY-SA lateral head
   ],
   'interossei_dorsales': [
     '/models/right-foot/by-sa/dorsal_interosseous_2nd.glb',
@@ -143,6 +150,7 @@ const REAL_VESSEL_MODELS: Record<string, string> = {
   'medial_tarsal_arteries': '/models/right-foot/by-sa/medial_tarsal_arteries.glb', // GROUPED
   'medial_calcaneal_artery': '/models/right-foot/by-sa/medial_calcaneal_artery.glb',
   'lateral_calcaneal_artery': '/models/right-foot/by-sa/lateral_calcaneal_artery.glb',
+  'proper_plantar_digital_arteries': '/models/right-foot/by-sa/proper_plantar_digital_arteries.glb', // ZA BY-SA Day 4ad
 };
 
 // Real nerve GLBs — Z-Anatomy trunks (CURVE→tube) + Open3D fine/branch (volumetric, Kabsch→BP3D).
@@ -689,7 +697,7 @@ function RealMuscleModel({
               {structure.nameLa}
             </div>
             <div style={{ fontSize: '0.7rem', color: modelPath.includes('/by-sa/') ? '#a78bfa' : '#ff8800', marginTop: '0.25rem' }}>
-              {modelPath.includes('/by-sa/') ? 'Open3D BY-SA' : 'BodyParts3D'}
+              {modelPath.includes('/by-sa/') ? 'BY-SA (isolate)' : 'UM / BP3D'}
             </div>
           </div>
         </Html>
@@ -782,7 +790,7 @@ function RealVesselModel({
               {structure.nameLa}
             </div>
             <div style={{ fontSize: '0.7rem', color: modelPath.includes('/by-sa/') ? '#a78bfa' : '#ff3333', marginTop: '0.25rem' }}>
-              {modelPath.includes('/by-sa/') ? 'Open3D BY-SA' : 'BodyParts3D'}
+              {modelPath.includes('/by-sa/') ? 'BY-SA (isolate)' : 'BodyParts3D'}
             </div>
           </div>
         </Html>
@@ -972,7 +980,7 @@ function RealLigamentModel({
             </div>
             <div style={{ fontSize: '0.7rem', color: modelPath.includes('/by-sa/') ? '#a78bfa' : '#e8dcc8', marginTop: '0.25rem' }}>
               {modelPath.includes('/by-sa/')
-                ? 'Open3D BY-SA · ligament/fascia'
+                ? 'BY-SA (isolate) · ligament/fascia'
                 : `BodyParts3D · ${structure.id === 'calcaneal_tendon' ? 'tendon (跟腱)' : 'ligament'}`}
             </div>
           </div>
