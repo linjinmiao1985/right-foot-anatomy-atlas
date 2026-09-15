@@ -442,6 +442,94 @@ Phase 4 claimed "no open intrinsic foot muscles exist" based on insufficient sea
 
 ---
 
+## Week 2 Day 4 — 2026-09-15 ✅ Verification + Future Work Documentation
+
+**Focus**: Verify Day 3 expansion, check phalanges availability, spot-check ZH/LA names
+
+**Progress** ✅:
+1. **Integrity audit**: PASSED ✅ (0 violations after Day 3 expansion)
+   - 43/49 real (88%)
+   - 6 placeholders (phalanges_2_5 + 5 true gaps)
+2. **Tests**: ✅ GREEN (7/7, no regressions from Day 3 expansion)
+3. **Build**: ✅ Clean (1.1MB bundle)
+4. **ZH/LA name spot-check** (9 new individual entries):
+   - Lumbricals 1-4: ✓ 第一/二/三/四蚓状肌, M. lumbricalis primus/secundus/tertius/quartus pedis
+   - Plantar interossei 1-3: ✓ 第一/二/三骨间跖侧肌, M. interosseus plantaris primus/secundus/tertius
+   - Plantar arteries: ✓ 足底内侧/外侧动脉, A. plantaris medialis/lateralis
+   - All placeholder:false correctly set
+5. **Phalanges_2_5 investigation**:
+   - **Found in BP3D**: 11 individual toe phalanges (2nd-5th toes)
+     - Proximal (4): BP9196 (2nd), BP8762 (3rd), BP8281 (4th), BP8417 (little)
+     - Middle (3): BP8488 (2nd), BP9047 (3rd), BP8576 (4th)
+     - Distal (4): BP8109 (2nd), BP7956 (3rd), BP8790 (4th), BP8696 (little)
+   - **Decision**: Document as future work (Week 3 or later)
+   - **Reason**: 11 additional structures + extraction + conversion requires dedicated session
+   - **Current status**: phalanges_2_5 remains honest grouped placeholder
+
+**Coverage After Day 4**: **UNCHANGED** 43/49 (88%)
+
+**Blockers**: None
+
+**Commits**: None (verification-only session)
+
+**Tests/Build**: ✅ GREEN (no regressions)
+
+**Tomorrow (Week 2 Day 5 or pause)** 📋:
+1. Optional: Extract + integrate 11 phalanges_2_5 individual entries (Week 3 work)
+2. Optional: Teaching-quality placeholder improvements for DI + vessel gaps
+3. Update README/manifest with final Week 2 coverage (88%)
+4. Week-end review: daily-log summary, week-plan next steps
+
+**Key Insight** 💡:
+- **Verification-first approach**: After major refactor (Day 3 expansion), verify integrity + tests before adding more complexity
+- **Phalanges_2_5 future work**: 11 additional structures available in BP3D but deferred to avoid scope creep
+- **Quality gate passed**: Day 3 unified ID model works correctly (0 audit violations, 0 test failures)
+
+---
+
+## Week 2 Day 3 — 2026-09-15 🏗️ Design Fix (Unified ID Model)
+
+**Focus**: Expand structures.json to individual entries (no more grouped placeholder compromises)
+
+**Progress** ✅:
+1. **Redesigned structures.json** (44 → 49 structures):
+   - **Added 4 individual lumbricals**: `lumbrical_1/2/3/4` with correct ZH/LA names (第一/二/三/四蚓状肌, M. lumbricalis primus/secundus/tertius/quartus pedis)
+   - **Added 3 individual plantar interossei**: `plantar_interosseous_1/2/3` with TA2 codes (A04.7.02.067/069/071)
+   - **Added 2 individual plantar arteries**: `plantar_artery_medial/lateral` with TA2 codes (A12.2.16.065/069)
+   - **Removed 4 grouped entries**: `lumbricals`, `interossei_plantares`, `medial_plantar_artery`, `lateral_plantar_artery`
+   - **Each individual entry**: `placeholder:false` (matches FootModel REAL_*_MODELS IDs)
+2. **Created `scripts/expand-structures.py`**: Automated structure expansion tool for future grouped entries
+3. **Integrity audit**: **PASSED ✅** (0 violations)
+   - 43/49 real (87.8% honest coverage)
+   - 6 placeholders: `phalanges_2_5` (grouped, no individual meshes) + 5 true gaps (DI + 4 vessels)
+
+**Coverage progression**:
+- Week 2 Day 2: 34/44 (77%) — after fixing grouped placeholder lies
+- **Week 2 Day 3: 43/49 (88%)** — after expanding to individual entries ✅
+
+**Unified ID Model** (Design fix):
+- **Before**: structures.json `lumbricals` (grouped) ≠ FootModel `lumbrical_1/2/3/4` (individual loaders) → ID mismatch → placeholder lie
+- **After**: structures.json `lumbrical_1/2/3/4` = FootModel `lumbrical_1/2/3/4` → perfect 1:1 mapping → honest real
+
+**Blockers**: None
+
+**Commits**: 1 commit (ec69396) — structures.json redesign + expand-structures.py tool
+
+**Tests/Build**: ✅ GREEN (7/7 tests, clean build)
+
+**Tomorrow (Week 2 Day 4)** 📋:
+1. Update README/manifest with corrected coverage (88% = 43/49)
+2. Update PR description with Week 2 Day 3 design fix
+3. Optional: 踇/拇 TA2 spot-check leftovers (if time)
+4. Push PR updates; tests green
+
+**Key Insight** 💡:
+- **Unified ID model = honest high coverage**: Expanding grouped entries to individual Structures (with correct ZH/LA/TA2) achieves 88% coverage WITHOUT lowering placeholder flags
+- **Design fix > data compromise**: Adding 9 individual entries (4 lumbricals + 3 PI + 2 arteries) restored integrity while increasing coverage from 77% → 88%
+- **Hard problem solved**: structures.json IDs now match FootModel loader IDs perfectly (1:1 mapping, no grouped-entry lies)
+
+---
+
 ## Week 2 Day 2 — 2026-09-15 🔧 Data Integrity Audit (Hard Problem)
 
 **Focus**: Automated integrity checker (cannot lie about coverage) + placeholder/loader consistency fixes
