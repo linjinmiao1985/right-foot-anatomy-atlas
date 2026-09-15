@@ -39,6 +39,18 @@ Under the following terms:
 
 ---
 
+### Open3DModel / AnatomyTOOL (BY-SA isolate)
+
+**Source**: Open3D project via AnatomyTOOL create page  
+**License**: CC BY-SA 4.0  
+**Usage**: Dorsal interossei, proximal arteries, ATFL, CFL, spring ligament, plantar aponeurosis under `public/models/right-foot/by-sa/` (Kabsch-aligned). See that directory's NOTICE.md.
+
+### Z-Anatomy nerves (BY-SA isolate)
+
+**Source**: Z-Anatomy  
+**License**: CC BY-SA 4.0  
+**Usage**: Six trunk nerve GLBs under `by-sa/` only.
+
 ## Software Libraries
 
 All JavaScript/TypeScript dependencies are listed in `package.json` with their respective licenses:
@@ -56,7 +68,7 @@ See `package.json` and individual package `LICENSE` files for complete terms.
 ## This Project's License
 
 **Code and Documentation**: MIT License (see LICENSE file)  
-**3D Assets**: CC BY 4.0 (BodyParts3D attribution above)
+**3D Assets**: CC BY 4.0 (BodyParts3D) + CC0 (UM) + CC BY-SA 4.0 isolate (`by-sa/`)
 
 When redistributing or citing this project, please include:
 1. MIT License for code (LICENSE file)

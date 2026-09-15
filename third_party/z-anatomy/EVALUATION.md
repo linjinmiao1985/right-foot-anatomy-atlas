@@ -211,3 +211,72 @@ If nerve layer becomes priority:
 - Nerve GLBs already shipped under `public/models/right-foot/by-sa/` from an earlier extract.
 - **Ligament export**: blocked — no Blender mesh asset on box; Blender not installed.
 - Action: document blocker; no new isolate-SA ligament meshes this pass.
+
+
+---
+
+## Day 4s — Zenodo fetch + Blender export recipe (ligaments NOT claimed integrated)
+
+**Date**: 2026-09-15
+
+### Asset obtained (local, gitignored)
+
+| Item | Detail |
+|------|--------|
+| Download URL | `https://zenodo.org/records/4953712/files/Z-Anatomy.zip?download=1` (DOI [10.5281/zenodo.4953712](https://doi.org/10.5281/zenodo.4953712)) |
+| Local path | `third_party/z-anatomy/Z-Anatomy.zip` (~124 MB; gitignored via `third_party/z-anatomy/*`) |
+| Contents | `Z-Anatomy.blend` (~340 MB uncompressed), `startup.blend`, `userpref.blend`, `Anatomy-shortcuts.py`, `Licence.txt` |
+| GitHub mirror | `https://github.com/Z-Anatomy/Models-of-human-anatomy/blob/master/Z-Anatomy.zip` (~86 MB template zip) |
+| License on Zenodo record | Listed CC BY 4.0 on record page; project Readme still states **CC BY-SA 4.0** for Z-Anatomy content derived from BP3D — treat foot extracts as **BY-SA** isolation unless counsel clears BY-only |
+
+### Blender status on box
+
+```text
+$ which blender
+(empty)
+$ apt-cache search ^blender
+(no candidate returned in this environment)
+```
+
+**Not installed** this pass (no apt package; headless Blender would need official tarball ~300MB+).
+
+### Exact headless export recipe (for later — do NOT claim done)
+
+```bash
+# 1) Install Blender ≥3.0 headless (official Linux tarball example)
+#    https://www.blender.org/download/ — extract blender binary to PATH
+
+# 2) Unzip Zenodo archive
+cd third_party/z-anatomy && unzip -n Z-Anatomy.zip
+
+# 3) Export named RIGHT foot ligaments / fascia (adjust object names after
+#    browsing Outliner; Z-Anatomy TA2 naming may differ from Open3D)
+blender Z-Anatomy.blend --background --python-expr "
+import bpy
+names = [
+  # verify exact object names in blend before running
+  'Anterior_talofibular_ligament',
+  'Calcaneofibular_ligament',
+  'Plantar_calcaneonavicular_ligament',
+  'Plantar_aponeurosis',
+]
+for name in names:
+    obj = bpy.data.objects.get(name)
+    if not obj:
+        print('MISSING', name); continue
+    bpy.ops.object.select_all(action='DESELECT')
+    obj.select_set(True)
+    bpy.context.view_layer.objects.active = obj
+    bpy.ops.export_scene.gltf(
+        filepath=f'exports/{name}.glb',
+        use_selection=True,
+        export_format='GLB',
+    )
+"
+```
+
+Then Kabsch / NOTICE / `by-sa/` isolation as for Open3D — **only if** geometry is not already covered by a clearer CC BY path.
+
+### Day 4s decision on Z-Anatomy ligaments
+
+**Not integrated from Z-Anatomy.** Open3DModel monolithic `lower-limb.obj` already exposes named RIGHT ATFL / CFL / spring / plantar aponeurosis as OBJ groups (CC BY-SA 4.0, no Blender). Those were extracted + Kabsch-baked instead. Z-Anatomy zip kept for future nerve/vessel/organs work or cross-check.

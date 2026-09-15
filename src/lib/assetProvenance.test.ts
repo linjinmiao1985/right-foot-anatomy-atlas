@@ -55,6 +55,21 @@ describe('assetProvenance', () => {
     expect(p.isolatedBySa).toBeFalsy();
   });
 
+
+  it('attributes Open3D ankle ligaments / plantar fascia as isolated BY-SA', () => {
+    for (const id of [
+      'anterior_talofibular_ligament',
+      'calcaneofibular_ligament',
+      'plantar_calcaneonavicular_ligament',
+      'plantar_aponeurosis',
+    ]) {
+      const p = getStructureProvenance(id, false, 'ligament');
+      expect(p.sourceShort).toBe('Open3D');
+      expect(p.license).toBe('CC-BY-SA-4.0');
+      expect(p.isolatedBySa).toBe(true);
+    }
+  });
+
   it('provides teaching mesh notes for nerves and grouped vessels', () => {
     expect(getTeachingMeshNote('tibial_nerve', 'nerve')).toMatch(/CURVE|曲线/);
     expect(getTeachingMeshNote('dorsal_digital_arteries', 'vessel')).toMatch(/FJ2072|组合/);

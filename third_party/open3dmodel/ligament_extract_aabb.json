@@ -1,0 +1,97 @@
+{
+  "source": "/workspace/literature/open3d-assets/lower-limb.obj",
+  "transform": "third_party/open3dmodel/open3d_to_bp3d_transform.json",
+  "method": "reuse Day 4m Open3D\u2192BP3D Kabsch (same donor frame as DI/nerves arteries)",
+  "targets": {
+    "Anterior_talofibular_ligament.r": "anterior_talofibular_ligament",
+    "Calcaneofibular_ligament.r": "calcaneofibular_ligament",
+    "Plantar_calcaneonavicular_ligament.r": "plantar_calcaneonavicular_ligament",
+    "Plantar_aponeurosis.r": "plantar_aponeurosis"
+  },
+  "aabb_bp3d_mm": {
+    "anterior_talofibular_ligament": {
+      "x": [
+        -95.13954500934123,
+        -84.13439695083713
+      ],
+      "y": [
+        -93.65281132370879,
+        -68.55763800046358
+      ],
+      "z": [
+        -21.20921121319563,
+        -2.9090687206351618
+      ],
+      "centroid": [
+        -90.51954857245966,
+        -82.59079465019626,
+        -11.515070607075774
+      ],
+      "n_verts": 498,
+      "n_faces": 496
+    },
+    "calcaneofibular_ligament": {
+      "x": [
+        -94.42029903506759,
+        -82.17327612721297
+      ],
+      "y": [
+        -66.27709653195062,
+        -49.8881426379303
+      ],
+      "z": [
+        -36.27561011638169,
+        -19.858749103477614
+      ],
+      "centroid": [
+        -87.85574570981106,
+        -58.16562829830241,
+        -27.98686695985319
+      ],
+      "n_verts": 351,
+      "n_faces": 349
+    },
+    "plantar_calcaneonavicular_ligament": {
+      "x": [
+        -83.90187950604061,
+        -58.4781628092036
+      ],
+      "y": [
+        -107.51683641842487,
+        -84.10777761771752
+      ],
+      "z": [
+        -32.71741880060987,
+        -19.277814415044148
+      ],
+      "centroid": [
+        -71.19430647825546,
+        -96.83906719841882,
+        -29.11552773946804
+      ],
+      "n_verts": 426,
+      "n_faces": 424
+    },
+    "plantar_aponeurosis": {
+      "x": [
+        -152.95707320410412,
+        -61.95898451095612
+      ],
+      "y": [
+        -191.9214296024531,
+        -46.40469810811098
+      ],
+      "z": [
+        -74.44122059957593,
+        -53.992261771939155
+      ],
+      "centroid": [
+        -94.24963600942763,
+        -116.5586837909974,
+        -65.35653750529076
+      ],
+      "n_verts": 5058,
+      "n_faces": 5058
+    }
+  }
+}

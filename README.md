@@ -15,24 +15,24 @@ Interactive web-based teaching atlas for right foot anatomy.
 | **Muscles** | **14/14 (100%)** | 0 | 14 | Main: BP3D + UM (13) · **BY-SA**: Open3D DI (1) |
 | **Vessels** | **9/9 (100%)** | 0 | 9 | Main: BP3D 7 (incl. 2 honest grouped) · **BY-SA**: Open3D PTA + fibular (2) |
 | **Nerves** | **6/6 (100%)** | 0 | 6 | Z-Anatomy (CC BY-SA 4.0, `by-sa/` only) |
-| **Ligaments / tendons** | **2** (1 ligament + 1 tendon) | 0 | 2 | BP3D CC BY — long plantar + Achilles (named tendon); **not** a complete soft-tissue atlas |
-| **Unique total** | **57 real** | **0** | **57** | See main vs BY-SA split below |
+| **Ligaments / tendons** | **6** | 0 | 6 | Main: BP3D long plantar + Achilles · **BY-SA**: Open3D ATFL/CFL/spring/plantar aponeurosis; **not** a complete soft-tissue atlas |
+| **Unique total** | **61 real** | **0** | **61** | See main vs BY-SA split below |
 
 ### Main tree vs BY-SA isolate (honest split)
 
 | Claim | Unique count | Contents |
 |-------|--------------|----------|
-| **Main (CC BY 4.0 / CC0)** | **48/57** | 26 bones + 13 muscles + 7 vessels + 1 ligament + 1 tendon |
-| **BY-SA isolate (`by-sa/`)** | **9/57** | 1 DI + 2 proximal arteries + 6 nerves |
-| **Entry-level `structures.json`** | **66/66** `placeholder:false` | Multi-part muscles counted separately |
+| **Main (CC BY 4.0 / CC0)** | **48/61** | 26 bones + 13 muscles + 7 vessels + 1 ligament + 1 tendon |
+| **BY-SA isolate (`by-sa/`)** | **13/61** | 1 DI + 2 proximal arteries + 6 nerves + 4 ankle ligaments/fascia |
+| **Entry-level `structures.json`** | **70/70** `placeholder:false` | Multi-part muscles counted separately |
 
-**Note**: Unique framing = 57 (multi-part muscles / sesamoids counted once). Entry-level = 66 rows in `structures.json`. **Honest grouped vessels**: dorsal digital + plantar metatarsal remain BP3D combined meshes (not per-toe). Open3D DI / PTA / fibular are **ShareAlike fills**, Kabsch-aligned into BP3D mm so the shared `0.01` render scale applies — **not** claimed as CC BY main-tree assets. **Ligament/tendon layer is a start** (1 BP3D long plantar + 1 Achilles tendon) — plantar fascia / ATFL / CFL / deltoid / spring still absent.
+**Note**: Unique framing = 61 (multi-part muscles / sesamoids counted once). Entry-level = 70 rows in `structures.json`. **Honest grouped vessels**: dorsal digital + plantar metatarsal remain BP3D combined meshes (not per-toe). Open3D DI / PTA / fibular / ATFL / CFL / spring / plantar aponeurosis are **ShareAlike fills**, Kabsch-aligned into BP3D mm — **not** claimed as CC BY main-tree assets. **Ligament/tendon layer expanded but incomplete** (deltoid / Lisfranc / many tarsal bands still absent).
 
 ### Remaining soft-tissue caveats (not “gaps” in placeholder sense)
 - Prefer future **CC0/CC BY** replacements for Open3D BY-SA DI + proximal arteries
 - Cuboid + 3 cuneiforms remapped (Day 4j). Hallux proximal remapped `BP8488`→`BP8785` (Day 4k). Distal phalanges 2–5: UM Y≈−850 meshes replaced with BP3D ISA elemental
 - **UM muscles** (8): Kabsch-similarity baked into BP3D mm (Day 4l; mean residual ≈2.2 mm on 7 tarsal landmarks) — teaching-grade, not surgical registration
-- **Ligaments / fascia / tendon**: see `docs/week2-ligament-fascia-search.md` — BP3D ligament ceiling = **only** right long plantar among true foot ligament elementals; Day 4q added Achilles `FJ1405`/`BP5098` as **named tendon** under ligament/tendon toggle (CC BY, native frame); plantar fascia / ATFL / CFL / deltoid / spring / short plantar still absent; Open3D local zip had no usable ligament meshes; Z-Anatomy BY-SA ligaments still deferred
+- **Ligaments / fascia / tendon**: see `docs/week2-ligament-fascia-search.md` Day 4s — BP3D = long plantar + Achilles; Open3D monolithic `lower-limb.obj` supplied ATFL/CFL/spring/plantar aponeurosis under `by-sa/` (CC BY-SA). Deltoid/Lisfranc/many bands still not extracted. Z-Anatomy Zenodo `.blend` fetched; Blender not installed — export recipe only
 - Teaching-grade atlas in progress — **no finished-product claim**
 
 ---
@@ -45,16 +45,16 @@ Interactive web-based teaching atlas for right foot anatomy.
 | **Bones + most vessels** | CC BY 4.0 (BodyParts3D) | ✅ Free, attribution required |
 | **Muscles** | CC BY 4.0 (BP3D) + CC0 1.0 (UM) | ✅ Free, no strings (UM) |
 | **Nerves** (in `by-sa/` only) | CC BY-SA 4.0 (Z-Anatomy) | ⚠️ ShareAlike if modified |
-| **DI + proximal arteries** (`by-sa/`) | CC BY-SA 4.0 (Open3DModel) | ⚠️ ShareAlike if modified |
+| **DI + proximal arteries + ankle ligaments/fascia** (`by-sa/`) | CC BY-SA 4.0 (Open3DModel) | ⚠️ ShareAlike if modified |
 | **Ligament + tendon** (long plantar + Achilles) | CC BY 4.0 (BodyParts3D) | ✅ Attribution; soft-tissue incomplete |
 
-**User Choice**: Muscle / vessel / nerve layers may load BY-SA meshes (DI, PTA, fibular, nerves). Skip those layers or delete `by-sa/` → MIT + CC BY/CC0 only.
+**User Choice**: Muscle / vessel / nerve / ligament layers may load BY-SA meshes (DI, PTA, fibular, nerves, ATFL/CFL/spring/fascia). Skip those layers or delete `by-sa/` → MIT + CC BY/CC0 only.
 
 ---
 
 ## Features
 
-- **5-layer toggle**: Bone / Muscle / Nerve / Vessel / Ligament-Tendon visibility control (soft-tissue incomplete — 1 ligament + 1 tendon)
+- **5-layer toggle**: Bone / Muscle / Nerve / Vessel / Ligament-Tendon visibility control (soft-tissue incomplete — BP3D 1+1 + Open3D BY-SA 4)
 - **Click selection**: Shows Chinese name, Latin name (TA2), summary
 - **Click-to-focus**: Camera frames selected mesh AABB (teaching polish)
 - **Hover tooltips**: Quick structure identification
@@ -69,8 +69,8 @@ Interactive web-based teaching atlas for right foot anatomy.
 
 - **Frontend**: Vite + React 18 + TypeScript 5
 - **3D Engine**: Three.js + React Three Fiber + @react-three/drei
-- **Data**: `structures.json` (66 entries, TA2-oriented naming; not TA2-complete)
-- **Assets**: Main-tree GLBs (incl. 1 ligament + 1 Achilles tendon) + 12 `by-sa/` GLBs (6 nerves + 4 DI + 2 proximal arteries)
+- **Data**: `structures.json` (70 entries, TA2-oriented naming; not TA2-complete)
+- **Assets**: Main-tree GLBs (incl. 1 ligament + 1 Achilles tendon) + 16 `by-sa/` GLBs (6 nerves + 4 DI + 2 arteries + 4 ligaments/fascia)
 - **Testing**: Vitest + integrity-audit.py
 
 ---
@@ -129,7 +129,7 @@ Open `http://localhost:5173` to view the atlas.
 
 ### Anatomical
 - **BY-SA soft tissue**: DI + proximal PTA/fibular are Open3D ShareAlike fills (prefer future CC0/CC BY)
-- **Ligament / fascia / tendon**: BP3D long plantar + Achilles tendon; plantar fascia & ankle ligament complex still missing (search log documented)
+- **Ligament / fascia / tendon**: BP3D long plantar + Achilles; Open3D BY-SA ATFL/CFL/spring/fascia; deltoid/Lisfranc etc. still missing
 - **Vessel fine detail**: Per-toe digital splits not available as separate BP3D meshes (honest grouped instead)
 - **Nerve geometry**: CURVE tubes (not volumetric meshes like bones/muscles)
 - **Extrinsic muscles**: Shown in full leg-to-foot extent (teaching context, not foot-only isolation)
@@ -207,5 +207,5 @@ See `CONTRIBUTING.md` for:
 ---
 
 **Project Status**: Teaching-grade atlas in progress (Week 2) — **not a finished product**  
-**Coverage**: 57 unique real meshes with honest main (48) vs BY-SA (9) split; ligament/tendon layer started (1+1)  
+**Coverage**: 61 unique real meshes with honest main (48) vs BY-SA (13) split; ligament/tendon expanded (BP3D 1+1 + Open3D 4) — still incomplete  
 **Repository**: https://github.com/linjinmiao1985/right-foot-anatomy-atlas

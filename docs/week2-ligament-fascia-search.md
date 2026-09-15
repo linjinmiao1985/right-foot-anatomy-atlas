@@ -131,3 +131,43 @@ Ligament layer remains **1/N** (long plantar only). Exhaustive local BP3D scan f
 **Path 2 only** (teaching polish): non-selected nerve/vessel opacity dimming when a structure is selected; StructurePanel mesh-fidelity notes; honesty that BP3D cannot split dorsal metatarsal / dorsal digital into per-ray elementals (FJ2072 / FJ2096 remain grouped).
 
 **Still open**: ATFL / CFL / deltoid / spring / plantar fascia teaching meshes (CC0/BY preferred; Z-Anatomy BY-SA only if `.blend` available + spatial QA).
+
+
+---
+
+## Day 4s — Open3D lower-limb.obj ligament extract (BY-SA) + Z-Anatomy Zenodo
+
+**Date**: 2026-09-15
+
+### Breakthrough path (no Blender)
+
+Prior keyword scans of the **stub** `third_party/open3dmodel/lower-limb-obj.zip` and of extracted DI-only files missed that the real literature package `/workspace/literature/open3d-assets/lower-limb.obj` is a **monolithic multi-object OBJ** (472 `o ` groups) containing dozens of RIGHT foot/ankle ligaments + `Plantar_aponeurosis.r`.
+
+| Mesh | Open3D object | License | Spatial QA (Kabsch→BP3D) | Decision |
+|------|---------------|---------|--------------------------|----------|
+| ATFL | `Anterior_talofibular_ligament.r` | CC BY-SA 4.0 | centroid ~20 mm from talus landmark | **Integrated** → `by-sa/` |
+| CFL | `Calcaneofibular_ligament.r` | CC BY-SA 4.0 | ~17 mm from calcaneus landmark | **Integrated** → `by-sa/` |
+| Spring | `Plantar_calcaneonavicular_ligament.r` | CC BY-SA 4.0 | ~12 mm from calc–nav mid | **Integrated** → `by-sa/` |
+| Plantar fascia | `Plantar_aponeurosis.r` | CC BY-SA 4.0 | plantar Z band overlaps calcaneus; large plantar span | **Integrated** → `by-sa/` |
+
+Transform: reuse Day 4m `open3d_to_bp3d_transform.json` (mean residual ≈2.6 mm). Script: `scripts/extract_open3d_ligaments.py`. AABB report: `third_party/open3dmodel/ligament_extract_aabb.json`.
+
+### Parallel CC0/CC BY search (still dry for these four)
+
+| Candidate | Result |
+|-----------|--------|
+| BP3D ISA | Still only long plantar among true foot ligaments; no ATFL/CFL/spring/fascia |
+| UM CC0 | Knee ligaments + Achilles; foot minor ligaments excluded |
+| DU Visible Human LE MSK (digitalcommons.du.edu/visiblehuman) | Ligaments listed are **knee** (ACL/PCL/MCL/LCL); ankle cartilage only — **reject** for ATFL/fascia |
+| AnyBody gm-foot | Simulation AnyScript, license “Other” — **monitor** |
+| SimTK OpenSim ankle-foot | DCT paths, unclear mesh redistribution — **monitor** |
+
+### Z-Anatomy
+
+- Fetched Zenodo `Z-Anatomy.zip` → local `third_party/z-anatomy/` (gitignored). Contains `.blend` only.
+- Blender **not** installed (`apt` has no blender candidate here).
+- Export recipe documented in `third_party/z-anatomy/EVALUATION.md` — **ligaments not claimed from Z-Anatomy**.
+
+### Honesty
+
+Ligament/tendon layer now: BP3D long plantar + Achilles **plus** 4 Open3D BY-SA teaching meshes. Still **not** a finished ligament atlas (deltoid parts, Lisfranc set, many OBJ bands not extracted).

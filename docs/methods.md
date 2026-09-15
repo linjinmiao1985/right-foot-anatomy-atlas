@@ -1,7 +1,7 @@
 # Methods
 
 **Project**: Right Foot Anatomy Atlas (Teaching-Grade Interactive 3D)  
-**Version**: Week 2 Day 4q (66/66 structures.json placeholder:false; ligament/tendon toggle = 1 BP3D ligament + 1 Achilles tendon; TA2 soft-tissue still incomplete)  
+**Version**: Week 2 Day 4s (70 structures.json placeholder:false; ligament/tendon = BP3D long plantar + Achilles + 4 Open3D BY-SA ankle/fascia meshes; TA2 soft-tissue still incomplete)  
 **Date**: 2026-09-15  
 **Licenses**: Code MIT | Assets CC BY 4.0 / CC0 1.0 / CC BY-SA 4.0 (isolated)
 
@@ -9,7 +9,7 @@
 
 ## Overview
 
-This atlas integrates open-licensed anatomical meshes from BodyParts3D, Universiti Malaya, Z-Anatomy, and Open3D (BY-SA isolate) for interactive right-foot teaching. Real 3D meshes cover **osteology 26/26**, wired muscles including UM teaching extrinsics (TA/FL/EDL/EHL) + BY-SA DI, vessels including 2 honest BP3D grouped meshes + BY-SA proximal arteries, 6 BY-SA trunk nerves, and soft tissue under the ligament/tendon toggle: **1 BP3D ligament** (long plantar / FJ1424) + **1 BP3D tendon** (Achilles / FJ1405). **Entry-level placeholders: 0** — but this is **not** TA2-complete (no plantar fascia / ATFL / CFL / deltoid / spring; no fine digital nerves; dorsal metatarsal arteries not individually split). See `docs/week2-ligament-fascia-search.md` + learning-log Day 4q.
+This atlas integrates open-licensed anatomical meshes from BodyParts3D, Universiti Malaya, Z-Anatomy, and Open3D (BY-SA isolate) for interactive right-foot teaching. Real 3D meshes cover **osteology 26/26**, wired muscles including UM teaching extrinsics (TA/FL/EDL/EHL) + BY-SA DI, vessels including 2 honest BP3D grouped meshes + BY-SA proximal arteries, 6 BY-SA trunk nerves, and soft tissue under the ligament/tendon toggle: **1 BP3D ligament** (long plantar) + **1 BP3D tendon** (Achilles) + **4 Open3D BY-SA** teaching meshes (ATFL, CFL, spring ligament, plantar aponeurosis; Kabsch→BP3D). **Entry-level placeholders: 0** — but this is **not** TA2-complete (deltoid/Lisfranc/many tarsal bands not extracted; no fine digital nerves; dorsal metatarsal arteries not individually split). See `docs/week2-ligament-fascia-search.md` Day 4s.
 
 **Target Audience**: Medical students, anatomy instructors, foot/ankle residents, physical therapists.  
 **NOT for**: Clinical diagnosis, treatment planning, surgical navigation, or patient-specific modeling.
@@ -329,10 +329,16 @@ Complete commit history (Day 1-7) documents:
 
 | Gap | Why still open | Search note |
 |-----|----------------|-------------|
-| Ligaments / plantar fascia / tendon | **1** BP3D long plantar + **1** Achilles tendon (Day 4q Path A); BP3D ligament ceiling unchanged (no fascia/ATFL/CFL/spring) | See `week2-ligament-fascia-search.md`; Open3D local zip had no ligament meshes; Z-Anatomy BY-SA deferred |
+| Ligaments / plantar fascia / tendon | BP3D long plantar + Achilles; **Day 4s** Open3D BY-SA ATFL/CFL/spring/plantar aponeurosis (isolate). Still incomplete (deltoid/Lisfranc/…) | Monolithic `lower-limb.obj` object inventory; stub zip was misleading. Z-Anatomy Zenodo `.blend` fetched but Blender not installed — recipe only |
 | Finer plantar/digital nerves | Only trunk nerves (Z-Anatomy BY-SA) | Prefer future CC0/BY over expanding SA isolate |
 | Individual dorsal metatarsal arteries | BP3D grouped dorsal digital + plantar metatarsal remain | Open3D had dorsal MTA (BY-SA); skipped earlier to avoid SA duplication of grouped teaching vessels |
 | Plantar interossei | **Present** (BP3D 1st–3rd) | Not a gap |
 
 **Integrated this day**: 4 orphan UM CC0 extrinsic GLBs (tibialis anterior, fibularis longus / peroneus_longus.glb, EDL, EHL) Kabsch-baked with `third_party/um/um_to_bp3d_transform.json`.
 
+## Day 4s — Open3D ligament/fascia extract (2026-09-15)
+
+1. Confirmed Zenodo Z-Anatomy.zip downloadable (`10.5281/zenodo.4953712`); local copy gitignored; Blender absent → no Z-Anatomy mesh claim.
+2. Inventoried literature Open3D `lower-limb.obj` (`o` groups): extracted ATFL, CFL, spring, plantar aponeurosis → `by-sa/` via `scripts/extract_open3d_ligaments.py` + existing Kabsch JSON.
+3. Parallel CC0/CC BY search for those four remains dry (BP3D/UM/DU VH knee ligaments).
+4. Honesty: teaching expansion under ShareAlike isolate — **not** a finished ligament atlas.

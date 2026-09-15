@@ -1082,3 +1082,11 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 - integrity-audit + vitest + build; commit/push
 - **Not claimed**: finished soft-tissue / ligament atlas
 
+## Week 2 Day 4s (2026-09-15) — Open3D ATFL/CFL/spring/fascia (BY-SA)
+
+- Pulled branch at a1acc20 (already current).
+- Zenodo Z-Anatomy.zip fetched under `third_party/z-anatomy/` (gitignored); Blender not installed; export recipe only — **no Z-Anatomy ligament claim**.
+- Parallel: Open3D literature `lower-limb.obj` object inventory → extracted 4 RIGHT meshes, Kabsch-baked with existing transform, wired `by-sa/` + structures + provenance tests.
+- CC0/CC BY alternatives for those four still dry (BP3D/UM/DU VH knee-only).
+- integrity-audit + vitest + build; commit/push this pass.
+- Honesty: expanded teaching coverage, **not** a finished ligament atlas.

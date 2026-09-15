@@ -123,12 +123,18 @@ const REAL_NERVE_MODELS: Record<string, string> = {
   'sural_nerve': '/models/right-foot/by-sa/sural_nerve.glb',
 };
 
-// Soft-tissue under ligament toggle — BP3D CC BY 4.0, native BP3D mm (scale 0.01).
-// 1 true ligament (long plantar) + 1 named tendon (calcaneal/Achilles). Not a complete set.
+// Soft-tissue under ligament toggle — incomplete set (not a finished ligament atlas).
+// BP3D CC BY (native mm): long plantar + Achilles tendon.
+// Open3D BY-SA (Kabsch→BP3D, by-sa/): ATFL, CFL, spring ligament, plantar aponeurosis.
 const REAL_LIGAMENT_MODELS: Record<string, string> = {
   'long_plantar_ligament': '/models/right-foot/long_plantar_ligament_BP5093.glb',
   // Tendon (not ligament): clear naming in structures.json + tooltip
   'calcaneal_tendon': '/models/right-foot/calcaneal_tendon_BP5098.glb',
+  // Open3DModel / AnatomyTOOL CC BY-SA 4.0 — isolated under by-sa/
+  'anterior_talofibular_ligament': '/models/right-foot/by-sa/anterior_talofibular_ligament.glb',
+  'calcaneofibular_ligament': '/models/right-foot/by-sa/calcaneofibular_ligament.glb',
+  'plantar_calcaneonavicular_ligament': '/models/right-foot/by-sa/plantar_calcaneonavicular_ligament.glb',
+  'plantar_aponeurosis': '/models/right-foot/by-sa/plantar_aponeurosis.glb',
 };
 
 export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName, isolateMode = false }: FootModelProps) {
@@ -789,7 +795,7 @@ function RealNerveModel({
 }
 
 
-// Component for rendering real GLB ligament models (BP3D CC BY 4.0)
+// Component for rendering real GLB ligament/tendon/fascia models (BP3D CC BY + Open3D BY-SA)
 interface RealLigamentModelProps {
   structure: AnatomyStructure;
   meshName: string;
@@ -867,8 +873,10 @@ function RealLigamentModel({
             <div style={{ fontSize: '0.75rem', opacity: 0.8, marginTop: '0.25rem' }}>
               {structure.nameLa}
             </div>
-            <div style={{ fontSize: '0.7rem', color: '#e8dcc8', marginTop: '0.25rem' }}>
-              BodyParts3D · {structure.id === 'calcaneal_tendon' ? 'tendon (跟腱)' : 'ligament'}
+            <div style={{ fontSize: '0.7rem', color: modelPath.includes('/by-sa/') ? '#a78bfa' : '#e8dcc8', marginTop: '0.25rem' }}>
+              {modelPath.includes('/by-sa/')
+                ? 'Open3D BY-SA · ligament/fascia'
+                : `BodyParts3D · ${structure.id === 'calcaneal_tendon' ? 'tendon (跟腱)' : 'ligament'}`}
             </div>
           </div>
         </Html>

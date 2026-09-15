@@ -36,14 +36,24 @@ Meshes in this directory are licensed under **CC BY-SA 4.0** (ShareAlike). Deriv
 **License**: CC BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/  
 **Modifications**: Extracted named right-side (`.r`) objects to OBJ, converted to glTF 2.0 Binary (obj2gltf); no topology edits. Vertex positions later **Kabsch-aligned** from Open3D meters into BodyParts3D millimeter frame (landmarks: Calcaneus, Talus, Navicular, Cuboid, medial/intermediate/lateral cuneiform, MT1–5; Day 4m re-fit mean residual ≈2.6 mm vs prior 8-landmark ≈3.0 mm that excluded mis-ID cuboid/cuneiforms) so the atlas `scale={[0.01,0.01,0.01]}` convention applies. Transform JSON: `third_party/open3dmodel/open3d_to_bp3d_transform.json`.
 
-**Inventory note (not integrated this session)**: same OBJ also contains `Medial_plantar_nerve.r`, `Dorsal_metatarsal_arteries.r`, `Plantar_interossei_muscles.r` — nerves already covered by Z-Anatomy extracts; plantar interossei / dorsal metatarsals already covered by BP3D CC BY main-tree meshes.
+**Inventory note**: same OBJ also contains many additional foot/ankle ligaments (e.g. PTFL, bifurcate, dorsal tarsometatarsal bands) and `Medial_plantar_nerve.r` — not all extracted this pass; nerves already covered by Z-Anatomy; DI/plantar interossei partly covered elsewhere.
+
+
+### Ankle ligaments + plantar fascia (Open3DModel)
+
+13. `anterior_talofibular_ligament.glb` — from `Anterior_talofibular_ligament.r`
+14. `calcaneofibular_ligament.glb` — from `Calcaneofibular_ligament.r`
+15. `plantar_calcaneonavicular_ligament.glb` — from `Plantar_calcaneonavicular_ligament.r` (spring ligament)
+16. `plantar_aponeurosis.glb` — from `Plantar_aponeurosis.r`
+
+Same source/license/Kabsch pipeline as DI + proximal arteries above (Day 4s). Teaching-grade co-registration only — **not** a finished ligament atlas. Still missing e.g. full deltoid complex parts, Lisfranc set, many dorsal/plantar tarsal bands present in the monolithic OBJ but not yet extracted.
 
 ---
 
 ## Isolation Strategy
 
 - Main tree (bones / most muscles / most vessels): MIT code + CC BY 4.0 / CC0
-- This `by-sa/` module: optional ShareAlike content (nerves, DI, proximal arteries)
+- This `by-sa/` module: optional ShareAlike content (nerves, DI, proximal arteries, ankle ligaments, plantar fascia)
 - Do **not** merge these GLBs into a CC BY-only redistribution claim
 
 ## Removal

@@ -754,7 +754,7 @@
     "layer": "ligament",
     "nameZh": "跖长韧带",
     "nameLa": "Ligamentum plantare longum",
-    "summaryZh": "足底深层长韧带（BP3D 右足 elemental FJ1424 / BP5093，CC BY 4.0）。起自跟骨跖面，向前止于骰骨与跖骨基底，参与维持外侧纵弓，并形成腓骨长肌腱通道的一部分。教学意义：与足底腱膜（本图谱尚未找到可用 CC0/CC BY 网格）区分；跖长韧带断裂/松弛可致外侧纵弓塌陷。注意：BP3D 足部韧带覆盖极有限——无 ATFL/CFL/三角韧带/弹簧韧带/足底腱膜独立网格。TA2：A03.6.10.517（近似）。本条目为教学级示意，非手术导航级配准。",
+    "summaryZh": "足底深层长韧带（BP3D 右足 elemental FJ1424 / BP5093，CC BY 4.0）。起自跟骨跖面，向前止于骰骨与跖骨基底，参与维持外侧纵弓，并形成腓骨长肌腱通道的一部分。教学意义：与足底腱膜区分（足底腱膜见 Open3D BY-SA 条目）。BP3D 仍无 ATFL/CFL/三角韧带等 elemental；外侧踝与弹簧韧带/足底腱膜由 Open3DModel lower-limb 以 CC BY-SA 隔离提供（非主树 CC BY 主张）。TA2：A03.6.10.517（近似）。教学级示意，非手术导航级配准。",
     "placeholder": false
   },
   {
@@ -767,7 +767,57 @@
     "layer": "ligament",
     "nameZh": "跟腱",
     "nameLa": "Tendo calcaneus (tendo Achillis)",
-    "summaryZh": "跟腱／跟腱（BP3D 右足 elemental FJ1405 / BP5098 / FMA258847，CC BY 4.0）。由腓肠肌与比目鱼肌肌腱汇合形成，止于跟骨结节。教学归类：本图谱将其置于「韧带/腱」图层开关下，但明确标注为**肌腱**（非韧带）。BP3D ISA 将 FJ1405 同时挂在 calcaneal tendon 与若干 ligament organ 上位概念下——本条目按解剖实体教学用途以肌腱呈现。临床：跟腱断裂（常见运动损伤）、止点病、Haglund 畸形相关。注意：BP3D 足部韧带天花板仍在——无 ATFL/CFL/三角韧带/弹簧韧带/足底腱膜独立网格。TA2：A04.7.02.002（近似）。教学级示意，非手术导航级配准。",
+    "summaryZh": "跟腱（BP3D 右足 elemental FJ1405 / BP5098 / FMA258847，CC BY 4.0）。由腓肠肌与比目鱼肌肌腱汇合形成，止于跟骨结节。教学归类：置于「韧带/腱」图层，明确标注为**肌腱**（非韧带）。临床：跟腱断裂、止点病、Haglund 畸形相关。TA2：A04.7.02.002（近似）。教学级示意，非手术导航级配准。",
+    "placeholder": false
+  },
+  {
+    "id": "anterior_talofibular_ligament",
+    "meshNames": [
+      "Anterior_Talofibular_Ligament_R",
+      "Ligamentum_talofibulare_anterius_Right"
+    ],
+    "layer": "ligament",
+    "nameZh": "距腓前韧带",
+    "nameLa": "Ligamentum talofibulare anterius (ATFL)",
+    "summaryZh": "踝关节外侧复合体最常损伤的韧带（Open3DModel lower-limb Anterior_talofibular_ligament.r，CC BY-SA 4.0，by-sa/ 隔离）。连接外踝前缘与距骨颈外侧。教学：内翻扭伤首发结构。Kabsch 对齐至 BP3D mm（同 DI/近端动脉 transform，均值残差约 2.6 mm）。非 BP3D CC BY 主树；非完整韧带图谱。TA2：A03.6.10.002（近似）。",
+    "placeholder": false
+  },
+  {
+    "id": "calcaneofibular_ligament",
+    "meshNames": [
+      "Calcaneofibular_Ligament_R",
+      "Ligamentum_calcaneofibulare_Right"
+    ],
+    "layer": "ligament",
+    "nameZh": "跟腓韧带",
+    "nameLa": "Ligamentum calcaneofibulare (CFL)",
+    "summaryZh": "外侧踝复合体第二韧带（Open3DModel Calcaneofibular_ligament.r，CC BY-SA 4.0，by-sa/）。外踝尖至跟骨外侧面；内翻时与 ATFL 协同。教学级 Kabsch→BP3D；非手术配准。TA2：A03.6.10.003（近似）。",
+    "placeholder": false
+  },
+  {
+    "id": "plantar_calcaneonavicular_ligament",
+    "meshNames": [
+      "Plantar_Calcaneonavicular_Ligament_R",
+      "Ligamentum_calcaneonaviculare_plantare_Right",
+      "Spring_Ligament_R"
+    ],
+    "layer": "ligament",
+    "nameZh": "跖跟舟韧带（弹簧韧带）",
+    "nameLa": "Ligamentum calcaneonaviculare plantare (spring ligament)",
+    "summaryZh": "维持内侧纵弓的关键韧带（Open3DModel Plantar_calcaneonavicular_ligament.r，CC BY-SA 4.0，by-sa/）。跟骨载距突至舟骨跖面，承托距骨头。教学：平足/弹簧韧带复合体损伤相关。Kabsch→BP3D mm。非完整足弓韧带集。TA2：A03.6.10.204（近似）。",
+    "placeholder": false
+  },
+  {
+    "id": "plantar_aponeurosis",
+    "meshNames": [
+      "Plantar_Aponeurosis_R",
+      "Aponeurosis_plantaris_Right",
+      "Plantar_Fascia_R"
+    ],
+    "layer": "ligament",
+    "nameZh": "足底腱膜",
+    "nameLa": "Aponeurosis plantaris (plantar fascia)",
+    "summaryZh": "足底深层致密腱膜（Open3DModel Plantar_aponeurosis.r，CC BY-SA 4.0，by-sa/）。起自跟骨结节，向前分束至趾。教学：足底筋膜炎、Windlass 机制。BP3D ISA 无此 elemental；本网格非 CC BY 主树。Kabsch→BP3D mm。仍非「完整」软组织图谱。TA2：A04.7.03.031（近似）。",
     "placeholder": false
   }
 ]

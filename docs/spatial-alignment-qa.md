@@ -326,3 +326,15 @@ No additional RIGHT foot/ankle ligament or plantar aponeurosis elemental found i
 - **Kabsch**: Not required (same source frame as osteology). Residuals: N/A.
 - **Path B note**: Local Open3D `lower-limb-obj.zip` has no ATFL/CFL/spring/plantar-fascia named meshes; Z-Anatomy ligaments remain Blender-only BY-SA — not integrated this pass.
 
+## Day 4s — Open3D ATFL / CFL / spring / plantar aponeurosis
+
+Reuse Day 4m Open3D→BP3D Kabsch (`open3d_to_bp3d_transform.json`, mean residual ≈2.6 mm).
+
+| Mesh | Centroid (BP3D mm) | Landmark check |
+|------|--------------------|----------------|
+| ATFL | ≈ (−90.5, −82.6, −11.5) | ~20 mm from talus landmark |
+| CFL | ≈ (−87.9, −58.2, −28.0) | ~17 mm from calcaneus landmark |
+| Spring | ≈ (−71.2, −96.8, −29.1) | ~12 mm from calc–nav midpoint |
+| Plantar aponeurosis | ≈ (−94.2, −116.6, −65.4) | Plantar Z overlaps calcaneus band; large anteroposterior span |
+
+Teaching-grade co-registration only. Full AABB JSON: `third_party/open3dmodel/ligament_extract_aabb.json`.

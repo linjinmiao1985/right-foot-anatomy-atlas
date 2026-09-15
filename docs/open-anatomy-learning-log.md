@@ -658,3 +658,14 @@ Soft-tissue under ligament toggle = **1 ligament + 1 tendon**. Still missing pla
 | Z-Anatomy ligaments / plantar fascia | **Blocked** — assets missing on box |
 | Split dorsal metatarsal arteries | **Impossible** from BP3D ISA elementals — keep honest grouped labels |
 
+
+
+## Day 4s — Open3D multi-object OBJ as ligament source (2026-09-15)
+
+**Lesson**: A “zip has no ligaments” finding can be an artifact of scanning the wrong artifact (stub zip / pre-split extracts). The AnatomyTOOL lower-limb package’s textureless OBJ is often a **single file with many `o` object groups**; `rg '^(o |g )'` on the monolithic OBJ is the inventory step that unlocks BY-SA ligaments without Blender.
+
+**License**: Same Open3D CC BY-SA 4.0 isolation as DI — do not fold into CC BY-only redistribution claims.
+
+**Z-Anatomy**: Zenodo DOI 10.5281/zenodo.4953712 is a legal, scriptable fetch for the `.blend`; without Blender CLI it remains documentation + future recipe, not an integrated mesh path.
+
+**Teaching win**: ATFL / CFL / spring / plantar aponeurosis now selectable under 韧带/腱 with BY-SA badge — still incomplete soft-tissue coverage.

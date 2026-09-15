@@ -196,7 +196,11 @@
     "dorsal_interosseous_3rd",
     "dorsal_interosseous_4th",
     "posterior_tibial_artery",
-    "fibular_artery"
+    "fibular_artery",
+    "anterior_talofibular_ligament",
+    "calcaneofibular_ligament",
+    "plantar_calcaneonavicular_ligament",
+    "plantar_aponeurosis"
   ],
-  "note": "Baked into BY-SA GLB POSITION (+NORMAL rotation) from raw extracted OBJs. Render scale remains 0.01. Teaching-grade, not surgical registration."
+  "note": "Baked into BY-SA GLB POSITION (+NORMAL rotation) from raw extracted OBJs. Render scale remains 0.01. Teaching-grade, not surgical registration. Day 4s added ATFL/CFL/spring/plantar aponeurosis."
 }
