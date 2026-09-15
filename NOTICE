@@ -47,6 +47,12 @@ Day 4ad adds fibularis brevis/tertius + opponens digiti minimi muscle GLBs (Kabs
 **License**: CC BY-SA 4.0  
 **Usage**: Dorsal interossei, proximal arteries, ankle/foot ligaments/retinacula/fascia, Day 4x–4z fine/cutaneous/calcaneal/dorsal-digital nerve meshes, Day 4aa fine vessels (deep plantar a./arch, grouped dorsal MTA, medial plantar branches), and Day 4ab tarsal/calcaneal/perforator vessels under `public/models/right-foot/by-sa/` (Kabsch-aligned). See that directory's NOTICE.md.
 
+### Andreassen Visible Human Male LE muscles (CC BY — not wired)
+
+**Source**: University of Denver Center for Orthopaedic Biomechanics (Andreassen et al. Sci Data 2023)  
+**License**: CC BY 4.0 · Digital Commons https://digitalcommons.du.edu/visiblehuman/2/  
+**Usage**: Day 4az download + Kabsch attempt only. Transform/QA under `third_party/andreassen/` (`BLOCKED_DO_NOT_INTEGRATE`). Gastroc/soleus **not** shipped under `public/models/`. See that NOTICE.txt.
+
 ### Z-Anatomy nerves (BY-SA isolate)
 
 **Source**: Z-Anatomy  
@@ -70,7 +76,7 @@ See `package.json` and individual package `LICENSE` files for complete terms.
 ## This Project's License
 
 **Code and Documentation**: MIT License (see LICENSE file)  
-**3D Assets**: CC BY 4.0 (BodyParts3D) + CC0 (UM) + CC BY-SA 4.0 isolate (`by-sa/`)
+**3D Assets**: CC BY 4.0 (BodyParts3D) + CC0 (UM) + CC BY-SA 4.0 isolate (`by-sa/`) + Andreassen CC BY documented-only (not wired)
 
 When redistributing or citing this project, please include:
 1. MIT License for code (LICENSE file)

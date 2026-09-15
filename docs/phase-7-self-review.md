@@ -122,7 +122,7 @@ Living log: `docs/open-anatomy-learning-log.md` — **57** numbered license-veri
 
 ### 2. Cloud Agent handback (when quota returns)
 
-Resume only with green local gates (`python3 scripts/integrity-audit.py`, `npx vitest run`, `npm run build`). Prefer CC0/CC BY over SA volume. Prep refreshed Day **4ay** after watchlist dig.
+Resume only with green local gates (`python3 scripts/integrity-audit.py`, `npx vitest run`, `npm run build`). Prefer CC0/CC BY over SA volume. Prep refreshed Day **4az** after Andreassen Kabsch blocker.
 
 | Deferred item | Why deferred | Suggested resume |
 |---------------|--------------|------------------|
@@ -130,13 +130,13 @@ Resume only with green local gates (`python3 scripts/integrity-audit.py`, `npx v
 | Zenodo Z-Anatomy `.blend` heavy re-harvest | Large binary; ankle bands absent in prior blend | Re-inventory named ATFL/CFL/deltoid/retinacula only if new revision claims them |
 | Further multi-view screenshots | 9-shot pack already live | Optional angles only; still not a marketing gallery |
 | Further CC0/BY DI / per-ray MTA dig | Day 4al–4ay dry (0 integrate; TotalSeg CT/MRI still grouped bones) | Re-check new open CT foot soft segmentations; skip NC; see `docs/cc0-soft-tissue-watchlist.md` |
-| **Andreassen gastroc/soleus (CC BY)** | Clear **CC BY 4.0** on Digital Commons (Day 4ay); VH LE frame ≠ BP3D foot; heavy STL download | Download Final STL set → right gastroc med/lat + soleus → Kabsch to BP3D → laterality/attachment QA → main-tree wire + NOTICE residuals — **do not** ship without QA |
+| **Andreassen gastroc/soleus (CC BY)** | Day **4az**: Final STL downloaded; 7-tarsal Kabsch mean≈2.3 mm but **laterality FAIL** (gastroc X>0); no BP3D tibia/fibula for LE Kabsch | Resume only with proximal shared landmarks or better registration; see `third_party/andreassen/spatial_qa.json` — **do not** force-wire |
 
 **Handback rule**: integrity-audit + vitest + build green; update census in README/methods/phase-7 if anything wires; **no** finished-product claims; **no** low-value SA mesh spam.
 
 ### 3. CC0 soft-tissue watchlist
 
-Maintain a short **monitor/reject** list (see `docs/cc0-soft-tissue-watchlist.md`) for DI, per-ray MTA, gastroc/soleus, nerve/ligament main-tree replacements. **Day 4ay** re-verified Zenodo rows; upgraded Andreassen to clear CC BY (belly candidate only); added #55–57 — still **0** integrate. Never treat NC or “License: Model” as main-tree OK.
+Maintain a short **monitor/reject** list (see `docs/cc0-soft-tissue-watchlist.md`) for DI, per-ray MTA, gastroc/soleus, nerve/ligament main-tree replacements. **Day 4az**: Andreassen belly Kabsch **blocked** on laterality/leverage (transform JSON recorded; **0** wire). DI/per-ray MTA still dry. Never treat NC or “License: Model” as main-tree OK.
 
 **Do not**: claim TA2 completeness; re-add Open3D duplicates of BP3D main-tree vessels; treat residuals as surgical registration.
 
@@ -165,6 +165,11 @@ Maintain a short **monitor/reject** list (see `docs/cc0-soft-tissue-watchlist.md
 - **CC0 soft-tissue watchlist dig (target #3)** + light **Cloud Agent handback prep** refresh (target #2): re-verified #38/#40/#42 + ScanTW NC; Digital Commons Andreassen STLs confirmed **CC BY 4.0**; logged #55 Grant SSM, #56 FOAMRIS PDF, #57 TotalSeg MRI; Sheffield NC + OGA skin rejected.
 - Gastroc/soleus = clear CC BY **candidate** deferred to handback Kabsch — **0** meshes wired this pass (quality over rushed integrate).
 - DI / per-ray MTA / nerve·ligament main-tree replacements still **dry**. **No** SA spam; **no** finished-product claim.
+
+## Progress note (Day 4az)
+
+- **Andreassen gastroc/soleus**: legally downloaded VHM Final STLs (CC BY 4.0); Kabsch→BP3D documented under `third_party/andreassen/`; **spatial QA blocked** (laterality/leverage) — **0** GLB wire / no main-tree entries.
+- Watchlist status → **blocked (alignment)** for bellies. **No** SA spam; **no** finished-product claim.
 
 ## Verification this pass
 

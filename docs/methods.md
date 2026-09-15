@@ -1,7 +1,7 @@
 # Methods
 
 **Project**: Right Foot Anatomy Atlas (Teaching-Grade Interactive 3D)  
-**Version**: Week 2 Day 4ay / Phase 7 (teaching atlas in progress; see README + `docs/phase-7-self-review.md` live census; **129** entries / **124** unique; **53** main-tree / **71** BY-SA; ontology **126/129** citable; 134 discrete GLBs; expert-review checklist v2.0 scoped teaching-useful/incomplete; per-structure hide persist + Esc policy + keyboard help + camera presets 1–5 + multi-view QA screenshots (9) + label density + sagittal clip lite; CC0 soft-tissue watchlist dig Day 4ay (Andreassen CC BY belly candidate deferred) — TA2 soft-tissue still incomplete — **not a finished product**)  
+**Version**: Week 2 Day 4az / Phase 7 (teaching atlas in progress; see README + `docs/phase-7-self-review.md` live census; **129** entries / **124** unique; **53** main-tree / **71** BY-SA; ontology **126/129** citable; 134 discrete GLBs; expert-review checklist v2.0 scoped teaching-useful/incomplete; per-structure hide persist + Esc policy + keyboard help + camera presets 1–5 + multi-view QA screenshots (9) + label density + sagittal clip lite; Andreassen VHM belly Kabsch Day 4az blocked (laterality; transform under third_party/andreassen/) — TA2 soft-tissue still incomplete — **not a finished product**)  
 **Date**: 2026-09-15  
 **Licenses**: Code MIT | Assets CC BY 4.0 / CC0 1.0 / CC BY-SA 4.0 (isolated)
 
@@ -269,6 +269,7 @@ const REAL_NERVE_MODELS: Record<string, string> = {
 | `third_party/open3dmodel/open3d_to_bp3d_transform.json` | Open3D meters → BP3D mm (similarity Kabsch) | scale≈926; 12 landmarks (calcaneus–MT5); mean residual ≈**2.61 mm**; max ≈4.41 mm (MT1) |
 | `third_party/um/um_to_bp3d_transform.json` | UM CT/seg → BP3D mm | 7 tarsals; mean residual ≈**2.22 mm** |
 | `third_party/z-anatomy/za_to_bp3d_transform.json` | ZA soft → BP3D mm | 9 foot bones; mean residual ≈**1.81 mm** |
+| `third_party/andreassen/vh_to_bp3d_transform.json` | VHM Final STL → BP3D mm (**blocked**) | 7 tarsals; mean≈**2.30 mm** but calf laterality FAIL — do not bake |
 | `third_party/open3dmodel/ligament_extract_aabb.json` | Per-ligament AABB/centroid after bake | Day 4s–4v targets + Day 4v scan deferrals |
 | `third_party/open3dmodel/ligament_attachment_qa.json` | Centroid→expected bone distances + accept/reject | Reject if wrong side (X>0), min_expect>55 mm (75 mm bands), or outside padded foot AABB |
 
@@ -362,7 +363,7 @@ Commit history documents asset decisions, `structures.json` evolution, and `Foot
 ---
 
 **Document Version**: 1.5 (2026-09-15)  
-**Atlas Version**: Week 2 Day 4ay / Phase 7 (teaching-grade in progress; no finished-product claim)
+**Atlas Version**: Week 2 Day 4az / Phase 7 (teaching-grade in progress; no finished-product claim)
 
 
 ---
@@ -560,3 +561,8 @@ Wrote `docs/phase-6-self-review.md` (census 129/124; 53 main / 71 BY-SA; residua
 1. **Phase-7 target #3**: Active dig vs `docs/cc0-soft-tissue-watchlist.md` — Zenodo re-verify; Andreassen Digital Commons **CC BY 4.0** confirmed; #55–57 logged; NC/PDF/skin rejects.
 2. **Target #2 light refresh**: Cloud Agent handback table adds Andreassen gastroc/soleus Kabsch resume path.
 3. **0** meshes / SA volume. Census unchanged **129/124**. **No** finished-product claim.
+
+
+## Day 4az — Andreassen gastroc/soleus Kabsch blocker (2026-09-15)
+
+Downloaded Andreassen VHM Final STLs (CC BY 4.0). Documented Kabsch + spatial QA under `third_party/andreassen/`. **Not integrated** (laterality/leverage blocker). Census unchanged. Teaching atlas in progress — **no finished-product claim**.

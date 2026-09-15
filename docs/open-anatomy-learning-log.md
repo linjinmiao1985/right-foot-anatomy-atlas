@@ -1079,7 +1079,7 @@ Active dig against `docs/cc0-soft-tissue-watchlist.md`: re-verify monitor/reject
 | #42 MedShapeNetCore Zenodo 10609965 | `license.id` = `cc-by-4.0` | unchanged **monitor** / **reject** foot soft |
 | #43 FootNet Zenodo 20457252 | `license.id` = `cc-by-4.0` | still 2D masks only |
 | Scan-the-World / Embodi3D Zenodo 20228270 · 20231308 · 21354714 · 21527865 | `cc-by-nc-sa-4.0` | **reject** NC reconfirm |
-| **#46 Andreassen VHF/VHM STLs** Digital Commons `visiblehuman/2` | Page **CC BY 4.0** + liability agreement (curl verified) | **Upgraded** from “re-verify” → clear **CC BY**; content has gastroc/soleus; **no** DI/NV; still **monitor** (handback Kabsch) — **0 wire** |
+| **#46 Andreassen VHF/VHM STLs** Digital Commons `visiblehuman/2` | Page **CC BY 4.0** + package README (Day 4az download) | Day **4az** Kabsch attempted — **blocked** laterality/leverage (`third_party/andreassen/`); **0 wire**; still **reject** DI/NV |
 
 ### NEW license-verified projects (≥3)
 
@@ -1102,3 +1102,8 @@ Active dig against `docs/cc0-soft-tissue-watchlist.md`: re-verify monitor/reject
 - **0** meshes integrated; DI / per-ray MTA / nerve·ligament main-tree replacements still **dry**.
 - Cloud Agent handback note updated for Andreassen Kabsch resume (phase-7).
 - **No finished-product claim.** No SA mesh spam.
+
+
+## Day 4az — Andreassen belly Kabsch blocker (2026-09-15)
+
+Downloaded VHM Final STLs (CC BY 4.0). Foot-tarsal Kabsch mean residual ≈2.3 mm but gastroc/soleus fail BP3D laterality / padded-AABB QA. Transform + QA JSON under `third_party/andreassen/`. **0** meshes integrated. **No finished-product claim.**

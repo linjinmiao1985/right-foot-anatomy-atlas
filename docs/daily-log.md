@@ -1378,3 +1378,16 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 5. Docs: watchlist refresh; learning-log #55–57; phase-7 handback + progress note; methods Day 4ay pointer.
 6. Checks: integrity-audit + vitest + build; commit + push.
 7. **Honesty**: teaching atlas in progress — **no finished-product claim**. Census unchanged. **0** meshes.
+
+
+## Day 4az (2026-09-15) — Andreassen gastroc/soleus Kabsch attempt (blocked)
+
+**Target**: Phase-7 handback priority — Andreassen Digital Commons gastroc/soleus (clear CC BY 4.0). Download legally → Kabsch → spatial QA → main-tree wire **only if** QA passes.
+
+1. Pulled `84489b5` (already current).
+2. Downloaded VHM **Final 3D STL Models** (~134 MB) from Digital Commons (CC BY 4.0 package README + page license). Extracted Right tarsals + gastroc med/lat + soleus.
+3. Kabsch similarity (7 tarsals vs BP3D GLB centroids): scale≈0.796; mean residual≈**2.30 mm**; max≈**4.27 mm** (talus). Artifacts: `third_party/andreassen/vh_to_bp3d_transform.json`, `NOTICE.txt`.
+4. **Spatial QA FAIL** (`spatial_qa.json`): gastroc med/lat **all verts X>0**; soleus frac_inside_padded≈0.09. Foot-only landmarks → calf leverage. Synthetic tibia/fibula trial ruined foot residuals (max≈17.8 mm) — rejected.
+5. **0 wire**: no GLB under `public/models/`, no structures/FootModel/ontology/muscle-group changes. Watchlist → **blocked (alignment)**.
+6. Checks: integrity-audit + vitest + build; commit + push.
+7. **Honesty**: teaching atlas in progress — **no finished-product claim**. Census unchanged.

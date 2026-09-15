@@ -426,3 +426,32 @@ Teaching-grade only — not a finished nerve atlas.
 - **Skip verify**: Open3D med/lat plantar, plantar MTA, dorsal digital, arcuate — BP3D main-tree duplicates / no per-ray gain
 - **Honesty**: medial tarsal arteries remain **grouped**; still no 1st–4th MTA elemental in donor OBJ
 
+
+## Day 4az — Andreassen VHM gastroc/soleus Kabsch attempt (blocked)
+
+### Goal
+Wire CC BY 4.0 Andreassen Visible Human Male Final STL gastrocnemius (med/lat) + soleus as **main-tree** extrinsic bellies (not BY-SA).
+
+### Shared landmarks
+VHM Final Right bone STLs: Calcaneus, Talus, Navicular, Cuboid, 3 cuneiforms vs BP3D right-foot GLB centroids.
+**No** separate metatarsal STLs (Phalanges grouped). **No** BP3D tibia/fibula in this atlas pack.
+
+### Transform (foot-only)
+- **Method**: Kabsch similarity (scale + R + t)
+- **Scale**: ≈0.796
+- **Mean residual**: ≈**2.30 mm** · **Max**: ≈4.27 mm (talus)
+- **Artifact**: `third_party/andreassen/vh_to_bp3d_transform.json` (`status: BLOCKED_DO_NOT_INTEGRATE`)
+
+### Spatial QA (fail)
+See `third_party/andreassen/spatial_qa.json`:
+
+| Mesh | wrong_side (all X>0) | frac inside padded foot AABB | min→Achilles |
+|------|----------------------|------------------------------|--------------|
+| gastrocnemius_medial | **true** | 0.0 | ≈109 mm |
+| gastrocnemius_lateral | **true** | 0.0 | ≈109 mm |
+| soleus | false (partial) | ≈0.09 | ≈32 mm |
+
+**Root cause**: tarsal landmark cluster (~50 mm) leaves long-axis angular freedom; calf bellies 250–350 mm proximal amplify rotation into lateral offset (leverage). Synthetic BP3D distal tibia/fibula landmarks fixed laterality but foot residuals mean≈8.3 / max≈17.8 mm — rejected.
+
+### Verdict
+**Do not integrate.** Teaching atlas in progress — no finished-product claim. Resume only with real proximal shared landmarks (or alternate registration) that keep foot residuals teaching-grade **and** pass laterality.
