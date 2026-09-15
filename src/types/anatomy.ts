@@ -1,4 +1,4 @@
-export type Layer = 'bone' | 'muscle' | 'nerve' | 'vessel';
+export type Layer = 'bone' | 'muscle' | 'nerve' | 'vessel' | 'ligament';
 
 export interface AnatomyStructure {
   id: string;

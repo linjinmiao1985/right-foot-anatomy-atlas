@@ -1,5 +1,5 @@
 {
-  "version": "3.5.0-um-teaching-extrinsics",
+  "version": "3.6.0-ligament-layer-start",
   "sources": [
     "BodyParts3D Release 4.0 (DBCLS Japan)",
     "Universiti Malaya Asian Male LE MSK",
@@ -607,5 +607,18 @@
     "2026-09-15: replaced mislabelled cuboid/cuneiforms (were left calcaneus / left medial cuneiform / pharyngeal constrictor / distal phalanx II) with correct ISA right-foot elemental meshes BP8873/8830/9110/8730",
     "2026-09-15: proximal_phalanx_1 remapped BP8488→BP8785/FMA43253 (FJ3310); distal_phalanx_2–5 replaced UM Y≈−850 meshes with BP3D FJ3189/3190/3191/3195 (BP8472/9005/9261/8695) — no Kabsch re-bake needed",
     "2026-09-15 Day 4n: wired 4 UM CC0 teaching extrinsics (TA/FL/EDL/EHL) after Kabsch; TA2 ligaments/fine digital nn./split dorsal MTA still open"
+  ],
+  "ligaments": [
+    {
+      "id": "long_plantar_ligament",
+      "file": "long_plantar_ligament_BP5093.glb",
+      "bp": "BP5093",
+      "elemental": "FJ1424",
+      "fma": "FMA44249",
+      "name_zh": "跖长韧带",
+      "name_la": "Ligamentum plantare longum",
+      "license": "CC BY 4.0",
+      "note": "Only BP3D right-foot ligament elemental found with usable mesh; not a complete ligament set"
+    }
   ]
 }

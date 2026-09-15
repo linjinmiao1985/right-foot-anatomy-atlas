@@ -128,9 +128,13 @@ export default function LayerToggles({
           <span style={legendChip('#f59e0b')}>占</span>
           <span>占位示意（缺开源网格）</span>
         </div>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '6px', marginBottom: '3px' }}>
           <span style={legendChip('#a78bfa')}>SA</span>
           <span>BY-SA 隔离（神经 / DI / 近端动脉）</span>
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+          <span style={legendChip('#e8dcc8')}>韧</span>
+          <span>韧带层（BP3D 跖长韧带起步；非完整韧带图谱）</span>
         </div>
         {(visibleLayers.has('nerve') ||
           visibleLayers.has('muscle') ||

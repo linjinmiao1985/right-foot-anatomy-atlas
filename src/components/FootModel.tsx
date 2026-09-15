@@ -123,6 +123,12 @@ const REAL_NERVE_MODELS: Record<string, string> = {
   'sural_nerve': '/models/right-foot/by-sa/sural_nerve.glb',
 };
 
+// Real ligament GLB — BP3D CC BY 4.0 (elemental FJ1424 / BP5093 right long plantar)
+// Same BP3D mm frame as bones; render scale 0.01. Teaching-grade only (not a full ligament set).
+const REAL_LIGAMENT_MODELS: Record<string, string> = {
+  'long_plantar_ligament': '/models/right-foot/long_plantar_ligament_BP5093.glb',
+};
+
 export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName, isolateMode = false }: FootModelProps) {
   const [placeholderMeshes, setPlaceholderMeshes] = useState<PlaceholderMesh[]>([]);
   const [hoveredMesh, setHoveredMesh] = useState<string | null>(null);
@@ -214,6 +220,7 @@ export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName
         const hasRealMuscle = structure.layer === 'muscle' && REAL_MUSCLE_MODELS[structure.id];
         const hasRealVessel = structure.layer === 'vessel' && REAL_VESSEL_MODELS[structure.id];
         const hasRealNerve = structure.layer === 'nerve' && REAL_NERVE_MODELS[structure.id];
+        const hasRealLigament = structure.layer === 'ligament' && REAL_LIGAMENT_MODELS[structure.id];
 
         // Render real GLB model for bones with available meshes
         if (hasRealBone) {
@@ -275,6 +282,23 @@ export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName
               structure={structure}
               meshName={meshName}
               modelPath={REAL_NERVE_MODELS[structure.id]}
+              color={color}
+              isSelected={isSelected}
+              isHovered={isHovered}
+              onMeshClick={onMeshClick}
+              onHoverChange={setHoveredMesh}
+            />
+          );
+        }
+
+        // Render real GLB ligament (BP3D CC BY 4.0)
+        if (hasRealLigament) {
+          return (
+            <RealLigamentModel
+              key={meshName}
+              structure={structure}
+              meshName={meshName}
+              modelPath={REAL_LIGAMENT_MODELS[structure.id]}
               color={color}
               isSelected={isSelected}
               isHovered={isHovered}
@@ -694,6 +718,7 @@ function RealNerveModel({
   
   return (
     <group
+      name={meshName}
       scale={[0.01, 0.01, 0.01]}
       onClick={(e) => {
         e.stopPropagation();
@@ -741,6 +766,95 @@ function RealNerveModel({
   );
 }
 
+
+// Component for rendering real GLB ligament models (BP3D CC BY 4.0)
+interface RealLigamentModelProps {
+  structure: AnatomyStructure;
+  meshName: string;
+  modelPath: string;
+  color: string;
+  isSelected: boolean;
+  isHovered: boolean;
+  onMeshClick: (meshName: string) => void;
+  onHoverChange: (meshName: string | null) => void;
+}
+
+function RealLigamentModel({
+  structure,
+  meshName,
+  modelPath,
+  color,
+  isSelected,
+  isHovered,
+  onMeshClick,
+  onHoverChange,
+}: RealLigamentModelProps) {
+  const { scene } = useGLTF(modelPath);
+  const clonedScene = scene.clone();
+
+  useEffect(() => {
+    clonedScene.traverse((node) => {
+      if ((node as any).isMesh) {
+        const mesh = node as any;
+        mesh.material = mesh.material.clone();
+        mesh.material.color.set(color);
+        mesh.material.emissive.set(isSelected ? '#d4a574' : (isHovered ? '#ffffff' : '#3a3020'));
+        mesh.material.emissiveIntensity = isSelected ? 0.45 : (isHovered ? 0.25 : 0.08);
+        mesh.material.transparent = true;
+        mesh.material.opacity = isHovered && !isSelected ? 0.9 : 0.82;
+        mesh.material.roughness = 0.55;
+        mesh.material.metalness = 0.05;
+        mesh.material.needsUpdate = true;
+      }
+    });
+  }, [clonedScene, color, isSelected, isHovered]);
+
+  return (
+    <group
+      name={meshName}
+      scale={[0.01, 0.01, 0.01]}
+      onClick={(e) => {
+        e.stopPropagation();
+        onMeshClick(meshName);
+      }}
+      onPointerOver={(e) => {
+        e.stopPropagation();
+        document.body.style.cursor = 'pointer';
+        onHoverChange(meshName);
+      }}
+      onPointerOut={() => {
+        document.body.style.cursor = 'default';
+        onHoverChange(null);
+      }}
+    >
+      <primitive object={clonedScene} />
+      {isHovered && !isSelected && (
+        <Html position={[0, 200, 0]} center>
+          <div style={{
+            background: 'rgba(0,0,0,0.85)',
+            color: 'white',
+            padding: '0.5rem 0.75rem',
+            borderRadius: '4px',
+            fontSize: '0.9rem',
+            whiteSpace: 'nowrap',
+            pointerEvents: 'none',
+            border: `2px solid ${color}`,
+            fontFamily: 'sans-serif'
+          }}>
+            <strong>{structure.nameZh}</strong>
+            <div style={{ fontSize: '0.75rem', opacity: 0.8, marginTop: '0.25rem' }}>
+              {structure.nameLa}
+            </div>
+            <div style={{ fontSize: '0.7rem', color: '#e8dcc8', marginTop: '0.25rem' }}>
+              BodyParts3D · ligament
+            </div>
+          </div>
+        </Html>
+      )}
+    </group>
+  );
+}
+
 // Preload all GLB models
 Object.values(REAL_BONE_MODELS).forEach(path => {
   useGLTF.preload(path);
@@ -755,5 +869,8 @@ Object.values(REAL_VESSEL_MODELS).forEach(path => {
   useGLTF.preload(path);
 });
 Object.values(REAL_NERVE_MODELS).forEach(path => {
+  useGLTF.preload(path);
+});
+Object.values(REAL_LIGAMENT_MODELS).forEach(path => {
   useGLTF.preload(path);
 });

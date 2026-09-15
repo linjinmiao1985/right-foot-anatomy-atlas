@@ -46,7 +46,8 @@ def extract_real_models(footmodel_content: str) -> Dict[str, Set[str]]:
         'bone': set(),
         'muscle': set(),
         'vessel': set(),
-        'nerve': set()
+        'nerve': set(),
+        'ligament': set(),
     }
     
     # Match patterns like:
@@ -55,7 +56,7 @@ def extract_real_models(footmodel_content: str) -> Dict[str, Set[str]]:
     #   ...
     # };
     
-    for layer in ['bone', 'muscle', 'vessel', 'nerve']:
+    for layer in ['bone', 'muscle', 'vessel', 'nerve', 'ligament']:
         pattern = rf"const REAL_{layer.upper()}_MODELS.*?\{{(.*?)\}};"
         match = re.search(pattern, footmodel_content, re.DOTALL | re.IGNORECASE)
         if match:

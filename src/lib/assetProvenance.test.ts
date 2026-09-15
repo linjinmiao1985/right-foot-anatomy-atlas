@@ -40,4 +40,11 @@ describe('assetProvenance', () => {
     expect(p.sourceShort).toBe('BP3D');
     expect(p.license).toBe('CC-BY-4.0');
   });
+
+  it('attributes long plantar ligament as BP3D CC BY', () => {
+    const p = getStructureProvenance('long_plantar_ligament', false, 'ligament');
+    expect(p.sourceShort).toBe('BP3D');
+    expect(p.license).toBe('CC-BY-4.0');
+    expect(p.isolatedBySa).toBeFalsy();
+  });
 });

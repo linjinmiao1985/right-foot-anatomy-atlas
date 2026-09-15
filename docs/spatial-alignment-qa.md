@@ -300,3 +300,14 @@ Calcaneus, Talus, Navicular, **Cuboid**, **medial / intermediate / lateral cunei
 | metatarsal_5 | ≈2.97 |
 
 **Verdict (Day 4m)**: Open3D BY-SA soft tissue **re-baked** with corrected tarsal landmarks. Mean residual improved ≈0.35 mm vs prior 8-landmark fit. Teaching-grade atlas in progress — no finished-product claim.
+
+---
+
+## Day 4o — BP3D long plantar ligament (FJ1424)
+
+- **Source**: `isa_BP3D_4.0_obj_99/FJ1424.obj` → `long_plantar_ligament_BP5093.glb`
+- **Frame**: Native BP3D mm (same as bones). Render scale remains `0.01`.
+- **AABB (mm)**: X[-117.8, -59.4] Y[-142.5, -45.6] Z[-61.0, -36.4] (2445 verts)
+- **QA**: Proximal overlaps calcaneus; distal reaches MT-base Y band; plantar Z overlaps calcaneus/cuboid plantar band. Teaching-grade co-location — **not** surgical registration.
+- **Kabsch**: Not required (same source frame as osteology).
+

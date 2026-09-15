@@ -1,6 +1,7 @@
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Grid } from '@react-three/drei';
 import FootModel from './FootModel';
+import CameraFocus from './CameraFocus';
 import type { Layer } from '../types/anatomy';
 
 interface ViewportProps {
@@ -41,7 +42,10 @@ export default function Viewport({ onMeshClick, visibleLayers, selectedMeshName,
         isolateMode={isolateMode}
       />
 
+      <CameraFocus selectedMeshName={selectedMeshName} />
+
       <OrbitControls 
+        makeDefault
         enableDamping 
         dampingFactor={0.08} 
         minDistance={0.5} 

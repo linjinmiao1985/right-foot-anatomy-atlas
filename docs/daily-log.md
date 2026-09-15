@@ -1049,3 +1049,14 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 
 **Not claimed**: finished product / TA2-complete atlas.
 
+---
+
+## Day 4o (2026-09-15) — Ligament search + click-to-focus
+
+- Hard search: BP3D / UM readme / Z-Anatomy BY-SA / SimTK / gm-foot / Sketchfab Soma3D / Zenodo NC — documented in `docs/week2-ligament-fascia-search.md`
+- **Integrated**: BP3D right long plantar ligament (`FJ1424` / BP5093) as new `ligament` layer (CC BY main tree); spatial QA OK in native BP3D frame
+- **Deferred**: Z-Anatomy BY-SA ligaments (prefer not expanding SA when a BY mesh exists for this key structure)
+- **UX**: Click-to-focus camera on selected mesh AABB (`CameraFocus` + OrbitControls `makeDefault`)
+- Learning-log: ≥2 entries (BP3D deepen, UM deepen, gm-foot NEW, SimTK deepen)
+- Honesty: ligament layer **started** (1 mesh) — not a finished ligament atlas; no finished-product claim
+

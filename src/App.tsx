@@ -10,7 +10,7 @@ import type { Layer } from './types/anatomy';
 import type { AnatomyStructure } from './types/anatomy';
 
 function emptyLayerCounts(): Record<Layer, number> {
-  return { bone: 0, muscle: 0, nerve: 0, vessel: 0 };
+  return { bone: 0, muscle: 0, nerve: 0, vessel: 0, ligament: 0 };
 }
 
 function App() {
@@ -161,7 +161,7 @@ function App() {
         }}
       >
         <div style={{ fontSize: '11px', color: '#666' }}>
-          提示: 搜索 ZH/LA | 拖动旋转 | 滚轮缩放 | 右键平移 | I 隔离/退出 | Esc 取消
+          提示: 搜索 ZH/LA | 拖动旋转 | 滚轮缩放 | 右键平移 | 点击对焦 | I 隔离/退出 | Esc 取消
         </div>
         <div
           style={{

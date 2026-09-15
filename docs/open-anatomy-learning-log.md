@@ -519,3 +519,73 @@ No new CC0/CC BY foot DI or proximal-artery candidates in this dig (atlas-foundr
 | Z-Anatomy / Anatomy Engine ligaments | BY-SA 4.0 | **Not integrated** this pass (blend extract cost; prefer CC0/BY) |
 | New CC0/BY ligaments / digital nn. / split dorsal MTA | — | **None found** |
 
+---
+
+## Session additions (2026-09-15 · Day 4o — ligament/fascia search + click-to-focus)
+
+### Gap status (honest)
+
+| Status | Detail |
+|--------|--------|
+| **Ligament layer** | **Started** — 1 BP3D CC BY mesh (`long_plantar_ligament` / FJ1424) in new `ligament` layer. **Not** TA2-complete. |
+| **Plantar fascia** | Still **no** CC0/CC BY mesh found |
+| **ATFL / CFL / deltoid / spring** | Still missing; Z-Anatomy BY-SA not extracted this pass (BY mesh preferred when available) |
+| **Fine digital nerves / split dorsal MTA** | Unchanged gaps |
+
+### 25. BodyParts3D foot ligament elemental (deepened)
+
+| Field | Value |
+|-------|-------|
+| **Name** | BP3D ISA elemental `FJ1424` = right long plantar ligament (`BP5093` / FMA44249) |
+| **URL** | https://dbarchive.biosciencedbc.jp/en/bodyparts3d/ + `isa_BP3D_4.0_obj_99.zip` |
+| **Official license** | **CC BY 4.0** (lic.html 2025-02-27) |
+| **What to learn** | Compound ligament concepts in parts list often collapse to one elemental OBJ; inventory `isa_element_parts.txt` before claiming “no ligaments” |
+| **Foot atlas applicability** | Usable teaching mesh for *Lig. plantare longum*; **only** foot ligament elemental with geometry found. No plantar fascia / lateral complex. |
+| **Action** | **adopt** (main tree, `ligament` layer). Document incompleteness. |
+
+### 26. Universiti Malaya ligaments (deepened via readme.txt)
+
+| Field | Value |
+|-------|-------|
+| **Name** | UM Asian Male LE MSK — Final Model STL (doi:10.22452/RD/5T6TZ7) |
+| **Official license** | **CC0 1.0** |
+| **What to learn** | Dataset notes + readme: 5 ligaments are **knee**-region; Achilles / patellar / quad tendons present; **minor foot ligaments excluded** (hard to segment on MRI) |
+| **Foot atlas applicability** | **No** plantar fascia / ATFL / spring for this atlas |
+| **Action** | **reject** as foot ligament source (keep using for muscles already adopted) |
+
+### 27. AnyBody/gm-foot (NEW)
+
+| Field | Value |
+|-------|-------|
+| **Name** | Glasgow–Maastricht Foot Model (`AnyBody/gm-foot`) |
+| **URL** | https://github.com/AnyBody/gm-foot |
+| **Official license** | GitHub: **Other** / unclear redistribution for teaching GLB export (2026-09-15) |
+| **What to learn** | Multi-bone foot + plantar fascia + dense ligament set in AnyBody MSK context |
+| **Foot atlas applicability** | Potentially rich fascia/ligament content — **blocked** until clear CC0/CC BY (or compatible) grant for mesh reuse |
+| **Action** | **monitor** |
+
+### 28. SimTK OpenSim ankle-foot DCT model (deepened)
+
+| Field | Value |
+|-------|-------|
+| **Name** | OpenSim ankle-foot musculoskeletal model (Sikidar / Kalyanasundaram) |
+| **URL** | https://simtk.org/projects/ankle-foot |
+| **Official license** | Page shows “License: Model” only — **not** verified CC0/CC BY for geometry files |
+| **What to learn** | 46 ligaments + 19 fasciae as OpenSim DCT / path geometry — simulation, not atlas surface meshes |
+| **Foot atlas applicability** | Do not vendor `.osim` geom as teaching GLB without explicit libre license |
+| **Action** | **monitor** / **reject** pending license clarification |
+
+### UX applied this session
+
+1. **Click-to-focus** — `CameraFocus` frames OrbitControls on selected mesh AABB (teaching polish).  
+2. **Ligament layer** chrome in layer panel + legend chip (honest “起步 / not complete”).
+
+### Mesh decisions
+
+| Candidate | License | Decision |
+|-----------|---------|----------|
+| BP3D FJ1424 long plantar | **CC BY 4.0** | **Integrated** (main tree) |
+| Z-Anatomy ligaments | BY-SA 4.0 | **Deferred** (BY mesh found for one key structure; avoid expanding SA set this pass) |
+| UM 5 ligaments | CC0 | **reject** (knee, not foot fascia/ankle complex) |
+| gm-foot / SimTK / Soma3D | unclear / NC / unknown | **monitor** or **reject** |
+

@@ -32,6 +32,12 @@ export const LAYER_CONFIG: Record<Layer, LayerConfig> = {
     color: '#8b0000',
     defaultVisible: true,
   },
+  ligament: {
+    label: '韧带',
+    labelEn: 'Ligament',
+    color: '#e8dcc8',
+    defaultVisible: true,
+  },
 };
 
 export function getAllLayers(): Layer[] {
