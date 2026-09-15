@@ -657,5 +657,11 @@
       "min_expect_mm": 8.98,
       "nearest": "cuneiform_intermediate"
     }
-  ]
+  ],
+  "day4w_integrated": [
+    "medial_talocalcaneal_ligament",
+    "dorsal_intercuneiform_ligaments"
+  ],
+  "day4w_note": "Day 4v deferred (volume) now integrated; prior attachment QA accept unchanged (medial TC talus 17.4 mm; dorsal intercuneiform cuneiform_int 9.0 mm).",
+  "day4v_rejected_or_deferred_superseded": true
 }

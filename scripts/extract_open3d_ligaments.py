@@ -54,6 +54,9 @@ TARGETS = {
     "Deep_transverse_metatarsal_ligament.r": "deep_transverse_metatarsal_ligament",
     "Intercuneiform_interosseus_ligaments.r": "intercuneiform_interosseous_ligaments",
     "Dorsal_cuneonavicular_ligaments.r": "dorsal_cuneonavicular_ligaments",
+    # Day 4w — previously deferred (Day 4v max-6 volume; QA accept)
+    "Medial_talocalcaneal_ligament.r": "medial_talocalcaneal_ligament",
+    "Dorsal_intercuneiform_ligaments.r": "dorsal_intercuneiform_ligaments",
 }
 
 
@@ -206,7 +209,7 @@ def main() -> int:
             {
                 "source": str(src),
                 "transform": str(XFORM.relative_to(ROOT)),
-                "method": "reuse Open3D→BP3D Kabsch (same donor as DI/arteries); Day 4t–4v expanded (selective; deferred medial TC / dorsal intercuneiform)",
+                "method": "reuse Open3D→BP3D Kabsch (same donor as DI/arteries); Day 4t–4v expanded (selective; Day 4w medial TC + dorsal intercuneiform)",
                 "targets": TARGETS,
                 "aabb_bp3d_mm": aabb_report,
             },

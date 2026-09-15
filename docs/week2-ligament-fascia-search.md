@@ -293,8 +293,8 @@ Reject rule (unchanged): wrong side (X>0) OR min_expect >55 mm (75 mm bands) OR 
 | Deep transverse metatarsal | `Deep_transverse_metatarsal_ligament.r` | MT3 / 34.3 | **Integrated** (band) |
 | Intercuneiform interosseous | `Intercuneiform_interosseus_ligaments.r` | cuneiform_int / 2.8 | **Integrated** (grouped) |
 | Dorsal cuneonavicular | `Dorsal_cuneonavicular_ligaments.r` | navicular / 9.9 | **Integrated** (grouped) |
-| Medial talocalcaneal | `Medial_talocalcaneal_ligament.r` | talus / 17.4 | **Deferred** (max-6 volume; QA would accept) |
-| Dorsal intercuneiform | `Dorsal_intercuneiform_ligaments.r` | cuneiform_int / 9.0 | **Deferred** (max-6 volume; QA would accept) |
+| Medial talocalcaneal | `Medial_talocalcaneal_ligament.r` | talus / 17.4 | **Deferred → Day 4w integrated** |
+| Dorsal intercuneiform | `Dorsal_intercuneiform_ligaments.r` | cuneiform_int / 9.0 | **Deferred → Day 4w integrated** |
 
 **Rejected for absurd residual**: none among scanned. Deferred = volume policy, not spatial failure.
 
@@ -305,3 +305,37 @@ Added teaching filters: **距下 / subtalar**, **中足 / midfoot**, **前足 / 
 ### Honesty
 
 Ligament/tendon layer now: BP3D 2 + Open3D BY-SA **25** — still incomplete teaching set; no finished-product claim. Kabsch mean residual ≈2.6 mm unchanged.
+
+
+---
+
+## Day 4w — Integrate deferred + vessel/nerve ceiling
+
+**Date**: 2026-09-15  
+**Goal**: Wire the two Day 4v volume-deferred bands; dig CC0/BY or local meshes for split dorsal MTA / plantar digital nerves.
+
+### Ligaments integrated
+
+| Mesh | Open3D object | nearest / min_mm | Decision |
+|------|---------------|------------------|----------|
+| Medial talocalcaneal | `Medial_talocalcaneal_ligament.r` | talus / 17.4 | **Integrated** (prior QA accept) |
+| Dorsal intercuneiform | `Dorsal_intercuneiform_ligaments.r` | cuneiform_int / 9.0 | **Integrated** (prior QA accept; grouped) |
+
+Same Kabsch + `obj2gltf` pipeline; sub-groups: medial TC → **距下/subtalar**; dorsal intercuneiform → **中足/midfoot**.
+
+### Vessel / nerve dig (ceiling)
+
+| Candidate | License | Split / add? | Decision |
+|-----------|---------|--------------|----------|
+| BP3D FJ2072 / FJ2096 | CC BY | Grouped only | Keep honest （组合） |
+| Open3D `Dorsal_metatarsal_arteries.r` | BY-SA | **Grouped** (one `o`), not per-ray | **Ceiling** — does not split |
+| Open3D Common / Proper plantar digital nn. | BY-SA | Would add fine digital paths | **Ceiling** — expand SA nerve isolate; prefer CC0/BY; no dedicated nerve QA this pass |
+| UM / DU VH / MorphoSource soft NV | mixed/NC/unclear | No clear right-foot digital pack | Dry |
+
+### UX
+
+Escape clears selection + isolate **and** search query.
+
+### Honesty
+
+Open3D BY-SA ligaments/fascia/retinacula now **27**. Still incomplete teaching set; no finished-product claim.

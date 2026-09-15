@@ -22,17 +22,17 @@ Interactive web-based teaching atlas for right foot anatomy.
 
 | Claim | Unique count | Contents |
 |-------|--------------|----------|
-| **Main (CC BY 4.0 / CC0)** | **52/86** | 26 bones + 17 unique muscles + 7 vessels + 1 ligament + 1 tendon |
-| **BY-SA isolate (`by-sa/`)** | **34/86** | 1 DI + 2 proximal arteries + 6 nerves + 25 ankle/foot ligaments·retinacula·fascia |
-| **Entry-level `structures.json`** | **91/91** `placeholder:false` | Multi-part muscles counted separately (lumbricals/PI) |
+| **Main (CC BY 4.0 / CC0)** | **52/88** | 26 bones + 17 unique muscles + 7 vessels + 1 ligament + 1 tendon |
+| **BY-SA isolate (`by-sa/`)** | **36/88** | 1 DI + 2 proximal arteries + 6 nerves + 27 ankle/foot ligaments·retinacula·fascia |
+| **Entry-level `structures.json`** | **93/93** `placeholder:false` | Multi-part muscles counted separately (lumbricals/PI) |
 
-**Note**: Unique framing = **86** (lumbricals×4→1, plantar interossei×3→1). Entry-level = **91** rows. **Honest grouped vessels**: dorsal digital + plantar metatarsal remain BP3D combined meshes. Open3D DI / PTA / fibular / ligaments / retinacula / plantar fascia are **ShareAlike fills**, Kabsch→BP3D mm — **not** CC BY main-tree. **Ligament layer: teaching-useful but incomplete** (further tarsal/toe bands still unwired; Lisfranc/retinacula/some midfoot bands are grouped teaching meshes).
+**Note**: Unique framing = **88** (lumbricals×4→1, plantar interossei×3→1). Entry-level = **93** rows. **Honest grouped vessels**: dorsal digital + plantar metatarsal remain BP3D combined meshes. Open3D DI / PTA / fibular / ligaments / retinacula / plantar fascia are **ShareAlike fills**, Kabsch→BP3D mm — **not** CC BY main-tree. **Ligament layer: teaching-useful but incomplete** (further tarsal/toe bands still unwired; Lisfranc/retinacula/some midfoot bands are grouped teaching meshes).
 
 ### Remaining soft-tissue caveats (not “gaps” in placeholder sense)
 - Prefer future **CC0/CC BY** replacements for Open3D BY-SA DI + proximal arteries
 - Cuboid + 3 cuneiforms remapped (Day 4j). Hallux proximal remapped `BP8488`→`BP8785` (Day 4k). Distal phalanges 2–5: UM Y≈−850 meshes replaced with BP3D ISA elemental
 - **UM muscles** (8): Kabsch-similarity baked into BP3D mm (Day 4l; mean residual ≈2.2 mm on 7 tarsal landmarks) — teaching-grade, not surgical registration
-- **Ligaments / fascia / tendon**: see `docs/week2-ligament-fascia-search.md` Day 4s–4v — BP3D = long plantar + Achilles; Open3D → **25** BY-SA teaching meshes (Day 4v +6 selective: subtalar interosseous/cervical, dorsal talonavicular, deep transverse metatarsal, intercuneiform IO, dorsal cuneonavicular). Deferred medial TC + dorsal intercuneiform (max-6 volume). Z-Anatomy `.blend` export recipe only
+- **Ligaments / fascia / tendon**: see `docs/week2-ligament-fascia-search.md` Day 4s–4w — BP3D = long plantar + Achilles; Open3D → **27** BY-SA teaching meshes (Day 4w +2 previously deferred: medial talocalcaneal, dorsal intercuneiform). Z-Anatomy `.blend` export recipe only
 - Teaching-grade atlas in progress — **no finished-product claim**
 
 ---
@@ -54,15 +54,15 @@ Interactive web-based teaching atlas for right foot anatomy.
 
 ## Features
 
-- **5-layer toggle**: Bone / Muscle / Nerve / Vessel / Ligament-Tendon (soft-tissue teaching-useful but incomplete — BP3D 1+1 + Open3D BY-SA 19)
-- **Ligament sub-group filter**: lateral ankle / deltoid / plantar-arch / Lisfranc / retinacula / tendon
+- **5-layer toggle**: Bone / Muscle / Nerve / Vessel / Ligament-Tendon (soft-tissue teaching-useful but incomplete — BP3D 1+1 + Open3D BY-SA 27)
+- **Ligament sub-group filter**: lateral ankle / deltoid / subtalar / plantar-arch / midfoot / Lisfranc / forefoot / retinacula / tendon
 - **License badge**: StructurePanel shows **主树 · Main** vs **ShareAlike** (by-sa/ isolate)
 - **Click selection**: Shows Chinese name, Latin name (TA2), summary
 - **Click-to-focus**: Camera frames selected mesh AABB (teaching polish)
 - **Hover tooltips**: Quick structure identification
 - **OrbitControls**: Zoom, rotate, pan around foot
 - **Loading states**: Progress indicators for GLB assets
-- **Keyboard**: `I` isolate · `Esc` to deselect (works with ligament layer)
+- **Keyboard**: `I` isolate · `Esc` clears selection + isolate + search
 - **Search**: bilingual ZH/LA includes ligament/tendon entries (e.g. 跖长韧带, 跟腱)
 
 ---
@@ -71,7 +71,7 @@ Interactive web-based teaching atlas for right foot anatomy.
 
 - **Frontend**: Vite + React 18 + TypeScript 5
 - **3D Engine**: Three.js + React Three Fiber + @react-three/drei
-- **Data**: `structures.json` (91 entries, TA2-oriented naming; not TA2-complete)
+- **Data**: `structures.json` (93 entries, TA2-oriented naming; not TA2-complete)
 - **Assets**: Main-tree GLBs + 34 `by-sa/` structure GLBs (6 nerves + 4 DI + 2 arteries + 25 ligaments/retinacula/fascia)
 - **Testing**: Vitest + integrity-audit.py
 

@@ -20,10 +20,10 @@ describe('ligamentGroups', () => {
     ]);
   });
 
-  it('partitions 27 ligament/tendon ids without overlap', () => {
+  it('partitions 29 ligament/tendon ids without overlap', () => {
     const ids = LIGAMENT_GROUPS.flatMap((g) => [...g.structureIds]);
-    expect(ids).toHaveLength(27);
-    expect(new Set(ids).size).toBe(27);
+    expect(ids).toHaveLength(29);
+    expect(new Set(ids).size).toBe(29);
   });
 
   it('filters by visible groups', () => {

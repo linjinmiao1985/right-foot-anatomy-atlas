@@ -1,7 +1,7 @@
 {
   "source": "/workspace/literature/open3d-assets/lower-limb.obj",
   "transform": "third_party/open3dmodel/open3d_to_bp3d_transform.json",
-  "method": "reuse Open3D\u2192BP3D Kabsch (Day 4m); Day 4v selective teaching ligaments",
+  "method": "reuse Open3D\u2192BP3D Kabsch; Day 4v+ deferred medial TC + dorsal intercuneiform integrated",
   "targets": {
     "Anterior_talofibular_ligament.r": "anterior_talofibular_ligament",
     "Calcaneofibular_ligament.r": "calcaneofibular_ligament",
@@ -21,7 +21,9 @@
     "Superior_extensor_retinaculum_of_ankle.r": "superior_extensor_retinaculum",
     "Inferior_extensor_retinaculum.r": "inferior_extensor_retinaculum",
     "Superior_fibular_retinaculum.r": "superior_fibular_retinaculum",
-    "Inferior_fibular_retinaculum.r": "inferior_fibular_retinaculum"
+    "Inferior_fibular_retinaculum.r": "inferior_fibular_retinaculum",
+    "Medial_talocalcaneal_ligament.r": "medial_talocalcaneal_ligament",
+    "Dorsal_intercuneiform_ligaments.r": "dorsal_intercuneiform_ligaments"
   },
   "aabb_bp3d_mm": {
     "anterior_talofibular_ligament": {
@@ -554,6 +556,48 @@
       "n_verts": 790,
       "n_faces": 784,
       "open3d_object": "Dorsal_cuneonavicular_ligaments.r"
+    },
+    "medial_talocalcaneal_ligament": {
+      "x": [
+        -57.62311846393058,
+        -53.44655428176243
+      ],
+      "y": [
+        -81.5263197139881,
+        -66.91232372724798
+      ],
+      "z": [
+        -27.541027040120575,
+        -19.045380629357993
+      ],
+      "centroid": [
+        -55.85445277292456,
+        -75.46052975296963,
+        -24.390088197275162
+      ],
+      "n_verts": 186,
+      "n_faces": 184
+    },
+    "dorsal_intercuneiform_ligaments": {
+      "x": [
+        -106.87228711429205,
+        -82.7948361477306
+      ],
+      "y": [
+        -137.8978942710335,
+        -113.17355100859437
+      ],
+      "z": [
+        -22.4452167702388,
+        -13.402337196390576
+      ],
+      "centroid": [
+        -95.05995917961245,
+        -125.56003541004814,
+        -17.436429836291072
+      ],
+      "n_verts": 623,
+      "n_faces": 619
     }
   },
   "day4v_scanned": {

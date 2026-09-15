@@ -1,7 +1,7 @@
 # Methods
 
 **Project**: Right Foot Anatomy Atlas (Teaching-Grade Interactive 3D)  
-**Version**: Week 2 Day 4v (91 structures.json placeholder:false; ligament/tendon = BP3D long plantar + Achilles + 25 Open3D BY-SA; TA2 soft-tissue still incomplete)  
+**Version**: Week 2 Day 4w (93 structures.json placeholder:false; ligament/tendon = BP3D long plantar + Achilles + 27 Open3D BY-SA; TA2 soft-tissue still incomplete)  
 **Date**: 2026-09-15  
 **Licenses**: Code MIT | Assets CC BY 4.0 / CC0 1.0 / CC BY-SA 4.0 (isolated)
 
@@ -9,7 +9,7 @@
 
 ## Overview
 
-This atlas integrates open-licensed anatomical meshes from BodyParts3D, Universiti Malaya, Z-Anatomy, and Open3D (BY-SA isolate) for interactive right-foot teaching. Real 3D meshes cover **osteology 26/26**, wired muscles including UM teaching extrinsics (TA/FL/EDL/EHL) + BY-SA DI, vessels including 2 honest BP3D grouped meshes + BY-SA proximal arteries, 6 BY-SA trunk nerves, and soft tissue under the ligament/tendon toggle: **1 BP3D ligament** (long plantar) + **1 BP3D tendon** (Achilles) + **25 Open3D BY-SA** teaching meshes (Day 4s–4v; Kabsch→BP3D). **Entry-level placeholders: 0** — but this is **not** TA2-complete (further tarsal/toe bands unextracted; Lisfranc/retinacula/some midfoot bands grouped; no fine digital nerves; dorsal metatarsal arteries not individually split). See `docs/week2-ligament-fascia-search.md` Day 4s–4v.
+This atlas integrates open-licensed anatomical meshes from BodyParts3D, Universiti Malaya, Z-Anatomy, and Open3D (BY-SA isolate) for interactive right-foot teaching. Real 3D meshes cover **osteology 26/26**, wired muscles including UM teaching extrinsics (TA/FL/EDL/EHL) + BY-SA DI, vessels including 2 honest BP3D grouped meshes + BY-SA proximal arteries, 6 BY-SA trunk nerves, and soft tissue under the ligament/tendon toggle: **1 BP3D ligament** (long plantar) + **1 BP3D tendon** (Achilles) + **27 Open3D BY-SA** teaching meshes (Day 4s–4w; Kabsch→BP3D). **Entry-level placeholders: 0** — but this is **not** TA2-complete (further tarsal/toe bands unextracted; Lisfranc/retinacula/some midfoot bands grouped; no fine digital nerves; dorsal metatarsal arteries not individually split). See `docs/week2-ligament-fascia-search.md` Day 4s–4w.
 
 **Soft disclaimer (teaching vs clinical)**: Meshes and Kabsch co-registration are intended for **anatomy education** (spatial relationships, named structures, layer exploration). They are **not** validated for clinical diagnosis, treatment planning, surgical navigation, implant sizing, or patient-specific modeling. Landmark residuals (~2–3 mm mean) are teaching-grade only.
 
@@ -340,7 +340,7 @@ Commit history documents asset decisions, `structures.json` evolution, and `Foot
 ---
 
 **Document Version**: 1.1 (2026-09-15)  
-**Atlas Version**: Week 2 Day 4v (teaching-grade in progress; no finished-product claim)
+**Atlas Version**: Week 2 Day 4w (teaching-grade in progress; no finished-product claim)
 
 
 ---
@@ -351,9 +351,9 @@ Commit history documents asset decisions, `structures.json` evolution, and `Foot
 
 | Gap | Why still open | Search note |
 |-----|----------------|-------------|
-| Ligaments / plantar fascia / tendon | BP3D long plantar + Achilles; **Day 4s–4v** Open3D BY-SA **25** meshes (isolate). Still incomplete | Monolithic `lower-limb.obj` + attachment QA. Z-Anatomy Zenodo `.blend`; Blender not in apt — recipe only |
-| Finer plantar/digital nerves | Only trunk nerves (Z-Anatomy BY-SA) | Prefer future CC0/BY over expanding SA isolate |
-| Individual dorsal metatarsal arteries | BP3D grouped dorsal digital + plantar metatarsal remain | Open3D had dorsal MTA (BY-SA); skipped earlier to avoid SA duplication of grouped teaching vessels |
+| Ligaments / plantar fascia / tendon | BP3D long plantar + Achilles; **Day 4s–4w** Open3D BY-SA **27** meshes (isolate). Still incomplete | Monolithic `lower-limb.obj` + attachment QA. Z-Anatomy Zenodo `.blend`; Blender not in apt — recipe only |
+| Finer plantar/digital nerves | Only trunk nerves (Z-Anatomy BY-SA) | See Day 4w ceiling — Open3D has Common/Proper plantar digital objects (BY-SA) but not CC0/BY; not integrated |
+| Individual dorsal metatarsal arteries | BP3D grouped dorsal digital + plantar metatarsal remain | See Day 4w ceiling — Open3D `Dorsal_metatarsal_arteries.r` is also **grouped**, not per-ray |
 | Plantar interossei | **Present** (BP3D 1st–3rd) | Not a gap |
 
 **Integrated this day**: 4 orphan UM CC0 extrinsic GLBs (tibialis anterior, fibularis longus / peroneus_longus.glb, EDL, EHL) Kabsch-baked with `third_party/um/um_to_bp3d_transform.json`.
@@ -376,6 +376,17 @@ Commit history documents asset decisions, `structures.json` evolution, and `Foot
 
 1. Scanned remaining named RIGHT bands; extracted 8 candidates with Day 4m Kabsch; attachment QA all passed distance/side/AABB rules.
 2. **Integrated (max 6)**: interosseous talocalcaneal, cervical (anterior) talocalcaneal, talonavicular, deep transverse metatarsal, intercuneiform interosseous, dorsal cuneonavicular.
-3. **Deferred (volume cap, QA would accept)**: medial talocalcaneal, dorsal intercuneiform — not absurd residual; omitted for quality-over-volume.
+3. **Day 4v deferred → Day 4w integrated**: medial talocalcaneal, dorsal intercuneiform (prior QA accept).
 4. Sub-group filters: added `subtalar`, `midfoot`, `forefoot`.
 5. Honesty: still **not** a finished ligament atlas; teaching vs clinical soft disclaimer strengthened above.
+
+## Day 4w — Deferred ligaments + vessel/nerve ceiling (2026-09-15)
+
+1. Integrated Day 4v deferred Open3D bands (prior attachment QA **accept**): medial talocalcaneal, dorsal intercuneiform → `by-sa/` via same Kabsch + `obj2gltf` pipeline.
+2. UX: Escape clears selection, isolate mode, **and** structure search query.
+3. Vessel/nerve dig (ceiling — no new integrate this pass):
+   - **No CC0/CC BY** mesh found that splits dorsal metatarsal arteries or adds plantar digital nerves (BP3D ISA still grouped FJ2072/FJ2096; UM/DU VH no foot digital neurovascular pack).
+   - Open3D local `Dorsal_metatarsal_arteries.r` exists but is a **single grouped** object (same honesty class as BP3D grouped vessels) — does **not** satisfy per-ray split.
+   - Open3D local `Common_plantar_digital_nerves.r` + `Proper_plantar_digital_branches_(Medial/Lateral_plantar_nerve).r` exist (BY-SA) — would expand nerve ShareAlike isolate beyond Z-Anatomy trunks; deferred pending dedicated nerve Kabsch/QA (prefer CC0/BY if ever available).
+4. Honesty: ligament/tendon teaching set expanded (27 Open3D BY-SA) — **still incomplete**; no finished-product claim.
+

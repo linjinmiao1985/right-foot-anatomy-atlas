@@ -72,6 +72,8 @@ const OPEN3D_BY_SA = new Set([
   'deep_transverse_metatarsal_ligament',
   'intercuneiform_interosseous_ligaments',
   'dorsal_cuneonavicular_ligaments',
+  'medial_talocalcaneal_ligament',
+  'dorsal_intercuneiform_ligaments',
 ]);
 
 const BP3D: ProvenanceInfo = {

@@ -360,3 +360,8 @@ Reject rule applied: wrong side / far attachment / outside padded foot AABB — 
 ## Day 4v — Selective ligament attachment QA (2026-09-15)
 
 Reuse Day 4m Kabsch. Six integrated + two deferred (volume): see `ligament_attachment_qa.json` `day4v_*` keys and `docs/week2-ligament-fascia-search.md` Day 4v table. Nearest-bone mins 2.8–34.3 mm; all right-sided; no absurd rejects.
+
+## Day 4w — Deferred ligaments wired (2026-09-15)
+
+Reuse Day 4m/4v Kabsch. Medial talocalcaneal + dorsal intercuneiform previously deferred for volume; attachment QA already **accept** (talus 17.4 mm; cuneiform_int 9.0 mm). See `ligament_attachment_qa.json` `day4w_integrated`. No new landmark set.
+

@@ -133,7 +133,7 @@ const REAL_NERVE_MODELS: Record<string, string> = {
 // Soft-tissue under ligament toggle — incomplete set (not a finished ligament atlas).
 // BP3D CC BY (native mm): long plantar + Achilles tendon.
 // Open3D BY-SA (Kabsch→BP3D, by-sa/): ankle, subtalar, midfoot, Lisfranc-ish, forefoot
-// transverse, retinacula, plantar aponeurosis (Day 4s–4v; selective).
+// transverse, retinacula, plantar aponeurosis (Day 4s–4w; selective + deferred).
 const REAL_LIGAMENT_MODELS: Record<string, string> = {
   'long_plantar_ligament': '/models/right-foot/long_plantar_ligament_BP5093.glb',
   // Tendon (not ligament): clear naming in structures.json + tooltip
@@ -164,6 +164,8 @@ const REAL_LIGAMENT_MODELS: Record<string, string> = {
   'deep_transverse_metatarsal_ligament': '/models/right-foot/by-sa/deep_transverse_metatarsal_ligament.glb',
   'intercuneiform_interosseous_ligaments': '/models/right-foot/by-sa/intercuneiform_interosseous_ligaments.glb',
   'dorsal_cuneonavicular_ligaments': '/models/right-foot/by-sa/dorsal_cuneonavicular_ligaments.glb',
+  'medial_talocalcaneal_ligament': '/models/right-foot/by-sa/medial_talocalcaneal_ligament.glb',
+  'dorsal_intercuneiform_ligaments': '/models/right-foot/by-sa/dorsal_intercuneiform_ligaments.glb',
 };
 
 export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName, isolateMode = false, visibleLigamentGroups }: FootModelProps) {

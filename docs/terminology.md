@@ -202,13 +202,15 @@
 | dorsal_cuneonavicular_ligaments | Ligamenta cuneonavicularia dorsalia | 背侧楔舟韧带（分组） | 中足 | BY-SA | ⚠️ 分组 |
 | intercuneiform_interosseous_ligaments | Ligamenta intercuneiformia interossea | 楔骨间骨间韧带（分组） | 中足 | BY-SA | ⚠️ 分组 |
 | deep_transverse_metatarsal_ligament | Ligamentum metatarsale transversum profundum | 跖骨深横韧带 | 前足 | BY-SA | ⚠️ 带状 |
+| medial_talocalcaneal_ligament | Ligamentum talocalcaneum mediale | 内侧距跟韧带 | 距下 | BY-SA | ✅ Day 4w |
+| dorsal_intercuneiform_ligaments | Ligamenta intercuneiformia dorsalia | 背侧楔间韧带（分组） | 中足 | BY-SA | ⚠️ 分组 Day 4w |
 
 **韧带层术语要点**:
 - **踇 vs 拇**: 足部一律用 **踇**（hallux）；手部拇指为拇（pollex）——不得混用。
 - **腓骨肌 vs 腓侧**: 支持带/肌用 **腓骨肌**（Mm. fibulares）；方向词用外侧/内侧，避免「腓侧支持带」口语。
 - **足底 vs 跖**: `plantare` → 优先 **足底**（人解）或 **跖侧**（方向）；本图谱韧带名用「足底跟舟/跟骰」，跗跖方向词用「跖侧」。
 - **临床俗称**: ATFL/CFL/PTFL、弹簧韧带、跟腱、Lisfranc — 可写入摘要，不替代 `nameLa`。
-- **未纳入 / 延后**: 内侧距跟、背侧楔间（Day 4v 质控通过但 max-6 延后）；跖侧楔舟、骰舟、趾侧副等仍未接线。Open3D OBJ 仍有命名对象 — 质量优先。
+- **未纳入 / 延后**: 跖侧楔舟、骰舟、趾侧副等仍未接线。内侧距跟 + 背侧楔间已于 Day 4w 接入（原 Day 4v 延后）。Open3D OBJ 仍有命名对象 — 质量优先。
 
 ---
 

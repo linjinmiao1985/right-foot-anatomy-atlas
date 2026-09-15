@@ -689,3 +689,15 @@ Soft-tissue under ligament toggle = **1 ligament + 1 tendon**. Still missing pla
 **Project A — Selective Open3D wire**: Integrated 6 BY-SA bands (interosseous + cervical talocalcaneal, talonavicular, deep transverse metatarsal, intercuneiform IO, dorsal cuneonavicular). Deferred medial talocalcaneal + dorsal intercuneiform (max-6). Sub-groups: subtalar / midfoot / forefoot.
 
 **Project B — Methods journal polish**: Strengthened `docs/methods.md` reproducibility (transform JSON table, script list, license matrix) + soft teaching-vs-clinical disclaimer. No finished-product claim.
+
+## Session additions (2026-09-15 · Day 4w — deferred ligaments + NV ceiling)
+
+| Item | Note |
+|------|------|
+| Medial TC + dorsal intercuneiform | Integrated (Day 4v volume deferrals; QA accept reused) |
+| Dorsal MTA split | **Ceiling**: no CC0/BY per-ray; Open3D object grouped |
+| Plantar digital nerves | **Ceiling**: Open3D Common/Proper BY-SA exist; not wired (prefer CC0/BY; nerve QA not run) |
+| Esc UX | Clears isolate + search |
+
+**Lesson**: Volume deferrals with passing QA should stay as first-class backlog items — integrating them later is cheaper than re-scanning when the census priority flips.
+

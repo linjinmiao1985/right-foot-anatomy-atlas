@@ -1071,5 +1071,29 @@
     "nameLa": "Ligamenta cuneonavicularia dorsalia",
     "summaryZh": "舟骨与三楔骨背侧韧带带（Open3D Dorsal_cuneonavicular_ligaments.r，CC BY-SA 4.0，by-sa/）。教学：中足背侧稳定。分组网格。Kabsch→BP3D mm。跖侧楔舟未在本 pass 纳入。",
     "placeholder": false
+  },
+  {
+    "id": "medial_talocalcaneal_ligament",
+    "meshNames": [
+      "Medial_Talocalcaneal_Ligament_R",
+      "Ligamentum_talocalcaneum_mediale_Right"
+    ],
+    "layer": "ligament",
+    "nameZh": "内侧距跟韧带",
+    "nameLa": "Ligamentum talocalcaneum mediale",
+    "summaryZh": "内侧距跟韧带（Open3D Medial_talocalcaneal_ligament.r，CC BY-SA 4.0，by-sa/）。连接距骨与跟骨内侧。教学：距下内侧稳定（与三角韧带深层相关教学对照）。Kabsch→BP3D mm（Day 4v 附着 QA 接受：距骨最近点约 17.4 mm）。教学示意；非完整距跟韧带集。",
+    "placeholder": false
+  },
+  {
+    "id": "dorsal_intercuneiform_ligaments",
+    "meshNames": [
+      "Dorsal_Intercuneiform_Ligaments_R",
+      "Ligamenta_intercuneiformia_dorsalia_Right"
+    ],
+    "layer": "ligament",
+    "nameZh": "背侧楔间韧带（分组）",
+    "nameLa": "Ligamenta intercuneiformia dorsalia",
+    "summaryZh": "三楔骨背侧楔间韧带带（Open3D Dorsal_intercuneiform_ligaments.r，CC BY-SA 4.0，by-sa/）。教学：中足背侧楔骨复合体稳定。分组网格，非逐条分拆。Kabsch→BP3D mm（Day 4v 附着 QA 接受：中间楔骨约 9.0 mm）。",
+    "placeholder": false
   }
 ]

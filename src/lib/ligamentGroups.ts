@@ -50,6 +50,7 @@ export const LIGAMENT_GROUPS: readonly LigamentGroup[] = [
     structureIds: [
       'interosseous_talocalcaneal_ligament',
       'cervical_talocalcaneal_ligament',
+      'medial_talocalcaneal_ligament',
     ],
   },
   {
@@ -72,6 +73,7 @@ export const LIGAMENT_GROUPS: readonly LigamentGroup[] = [
       'talonavicular_ligament',
       'dorsal_cuneonavicular_ligaments',
       'intercuneiform_interosseous_ligaments',
+      'dorsal_intercuneiform_ligaments',
     ],
   },
   {

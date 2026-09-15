@@ -1114,3 +1114,15 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 - Census: 86 unique / 91 entries; BY-SA ligaments 25 (was 19).
 - integrity-audit + vitest + build; commit/push.
 - Honesty: teaching-useful incomplete ligament layer — **no finished-product claim**.
+
+
+## Week 2 Day 4w (2026-09-15) — Deferred ligaments + NV ceiling + Esc UX
+
+- Pulled branch at abd20a2 (already current).
+- Integrated Day 4v deferred Open3D ligaments: medial talocalcaneal + dorsal intercuneiform (prior attachment QA accept; Kabsch bake → by-sa/).
+- Vessel/nerve dig: no CC0/BY split dorsal MTA or plantar digital nerves. Open3D MTA is grouped; Open3D Common/Proper plantar digital nn. exist BY-SA but not integrated (ceiling documented).
+- UX: Escape clears isolate + selection + search.
+- Census: 88 unique / 93 entries; Open3D BY-SA soft-tissue ligaments 27 (was 25).
+- integrity-audit + vitest + build; commit/push.
+- Honesty: teaching-useful incomplete ligament layer — **no finished-product claim**.
+

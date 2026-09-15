@@ -1,10 +1,12 @@
-import { useMemo, useState } from 'react';
+import { useMemo, useState, useEffect } from 'react';
 import type { AnatomyStructure } from '../types/anatomy';
 import { searchStructures } from '../lib/structureLookup';
 import { LAYER_CONFIG } from '../lib/layers';
 
 interface StructureSearchProps {
   onSelect: (structure: AnatomyStructure) => void;
+  /** Increment to clear query + close dropdown (e.g. Escape from App). */
+  clearSignal?: number;
 }
 
 /**
@@ -12,9 +14,16 @@ interface StructureSearchProps {
  * UX-borrow (ideas only): jixiangying/anatomy global search;
  * BioLens / human-atlas / OMFAtlas search chrome.
  */
-export default function StructureSearch({ onSelect }: StructureSearchProps) {
+export default function StructureSearch({ onSelect, clearSignal = 0 }: StructureSearchProps) {
   const [query, setQuery] = useState('');
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (clearSignal > 0) {
+      setQuery('');
+      setOpen(false);
+    }
+  }, [clearSignal]);
 
   const results = useMemo(() => searchStructures(query, 10), [query]);
 

@@ -115,3 +115,8 @@ If issues found during manual testing:
 
 **Date Completed**: 2026-09-14  
 **Verdict**: PASS (pending optional manual verification)
+
+## Day 4w UX (2026-09-15)
+
+- **Escape**: clears selection, isolate mode, **and** structure search query (works while search input focused; blurs input).
+- Isolate toggle `I` unchanged.

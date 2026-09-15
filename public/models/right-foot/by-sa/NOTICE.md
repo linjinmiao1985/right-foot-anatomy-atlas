@@ -78,7 +78,11 @@ Meshes in this directory are licensed under **CC BY-SA 4.0** (ShareAlike). Deriv
 36. `intercuneiform_interosseous_ligaments.glb` — from `Intercuneiform_interosseus_ligaments.r`
 37. `dorsal_cuneonavicular_ligaments.glb` — from `Dorsal_cuneonavicular_ligaments.r`
 
-Same source/license/Kabsch pipeline as DI + proximal arteries (Day 4s–4v). Attachment QA: centroid→expected BP3D bone landmarks; Day 4v mins ≈2.8–34.3 mm. Teaching-grade co-registration only — **not** a finished ligament atlas. Deferred (volume): medial talocalcaneal, dorsal intercuneiform. Further OBJ bands remain unwired.
+**Day 4w — previously deferred (volume; QA accept)**
+38. `medial_talocalcaneal_ligament.glb` — from `Medial_talocalcaneal_ligament.r`
+39. `dorsal_intercuneiform_ligaments.glb` — from `Dorsal_intercuneiform_ligaments.r`
+
+Same source/license/Kabsch pipeline as DI + proximal arteries (Day 4s–4w). Attachment QA: centroid→expected BP3D bone landmarks; Day 4v/4w mins ≈2.8–34.3 mm (medial TC ≈17.4 mm; dorsal intercuneiform ≈9.0 mm). Teaching-grade co-registration only — **not** a finished ligament atlas. Further OBJ bands remain unwired.
 
 ---
 

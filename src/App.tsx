@@ -19,6 +19,7 @@ function App() {
   const [selectedStructure, setSelectedStructure] = useState<AnatomyStructure | null>(null);
   const [selectedMeshName, setSelectedMeshName] = useState<string | null>(null);
   const [isolateMode, setIsolateMode] = useState(false);
+  const [searchClearSignal, setSearchClearSignal] = useState(0);
   const [visibleLigamentGroups, setVisibleLigamentGroups] = useState<Set<LigamentGroupId>>(
     () => new Set(getAllLigamentGroupIds()),
   );
@@ -78,12 +79,19 @@ function App() {
 
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
-      const tag = (e.target as HTMLElement | null)?.tagName;
-      if (tag === 'INPUT' || tag === 'TEXTAREA' || (e.target as HTMLElement | null)?.isContentEditable) {
+      // Escape: clear isolate + selection + search (works even when search input focused)
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        handleClose();
+        setSearchClearSignal((n) => n + 1);
+        const active = document.activeElement as HTMLElement | null;
+        if (active && (active.tagName === 'INPUT' || active.tagName === 'TEXTAREA')) {
+          active.blur();
+        }
         return;
       }
-      if (e.key === 'Escape') {
-        handleClose();
+      const tag = (e.target as HTMLElement | null)?.tagName;
+      if (tag === 'INPUT' || tag === 'TEXTAREA' || (e.target as HTMLElement | null)?.isContentEditable) {
         return;
       }
       // Keyboard isolate — UX-borrow from GraphAnatomy / Grypa / Sushruta (ideas only)
@@ -134,7 +142,7 @@ function App() {
         </div>
       </div>
 
-      <StructureSearch onSelect={handleSearchSelect} />
+      <StructureSearch onSelect={handleSearchSelect} clearSignal={searchClearSignal} />
 
       <LayerToggles
         visibleLayers={visibleLayers}
@@ -177,7 +185,7 @@ function App() {
         }}
       >
         <div style={{ fontSize: '11px', color: '#666' }}>
-          提示: 搜索 ZH/LA | 拖动旋转 | 滚轮缩放 | 右键平移 | 点击对焦 | I 隔离/退出 | Esc 取消
+          提示: 搜索 ZH/LA | 拖动旋转 | 滚轮缩放 | 右键平移 | 点击对焦 | I 隔离/退出 | Esc 取消隔离+搜索
         </div>
         <div
           style={{
