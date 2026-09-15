@@ -850,3 +850,37 @@ No new CC0/CC BY foot DI / per-ray MTA / ligament candidates integrated this pas
 | **CT Education Skill** (grapeot/ct-education-skill) | Code **MIT** (LICENSE verified) | Local-first chest CT education + RAS x/y/z clipping; uncapped cut honesty — reinforced clip-lite decision. No foot DI pack. |
 
 No new CC0/CC BY foot DI / per-ray MTA / ligament candidates integrated this pass — dig + UX only. **No finished-product claim.**
+
+
+---
+
+## Session additions (2026-09-15 · Day 4al — CC0/CC BY asset hunt + methods polish)
+
+### Target (phase-6 #1)
+
+Prefer **CC0/CC BY** finds for DI / proximal·fine arteries / nerve·ligament replacements that shrink ShareAlike surface. Dig + license verify before wire; **no** BY-SA volume add this pass.
+
+### NEW license-verified projects (≥4)
+
+| # | Project | URL | License verified | Foot relevance | Decision |
+|---|---------|-----|------------------|----------------|----------|
+| **38** | **TotalSegmentator v3 dataset** (Wasserthal et al.) | Zenodo DOI **10.5281/zenodo.22688904** · code https://github.com/wasserth/TotalSegmentator | Dataset **CC BY 4.0** (Zenodo API `license.id` = `cc-by-4.0` verified 2026-09-15); code **Apache-2.0** (GitHub SPDX) | `appendicular_bones` labels: grouped `tarsal` / `metatarsal` / `phalanges_feet` (+ tibia/fibula). **No** named foot DI, nerves, ligaments, or per-ray MTA/digital arteries | **monitor** for osteology surface QA only. **reject** (DI / NV / per-ray MTA teaching) |
+| **39** | **HRA / CCF 3D Reference Object Library** (HuBMAP) | https://github.com/hubmapconsortium/ccf-3d-reference-object-library · https://humanatlas.io/3d-reference-library | **CC BY 4.0** (README badge + GitHub SPDX `CC-BY-4.0` verified 2026-09-15) | Whole-body VH Male/Female united GLB reference objects — organ/CCF scale; **no** curated right-foot DI or named per-ray foot vessel pack identified | **UX-borrow** / process (CC BY whole-body honesty). **reject** as foot soft-tissue mesh source |
+| **40** | **Foot shape-function model data** (Schuster) | Zenodo DOI **10.5281/zenodo.10360304** | **CC0** (Zenodo API `license.id` = `cc-zero` verified 2026-09-15) | External foot-surface PLY cohort (shape–function study) — **not** named intrinsic muscles / NV / ligaments | **monitor** for plantar-surface / shape research only. **reject** (named soft-tissue teaching) |
+| **41** | **NIH 3D — Anatomic Human Foot** (3DPX-015850) | https://3d.nih.gov/entries/15850/1 | **CC-BY-NC-SA** (NIH 3D API `metadata.license` verified 2026-09-15) | Designed foot **bones** (26/28 incl. sesamoids) — osteology only; **NC** clause blocks main tree | **reject** (NC + no DI/NV). Do not confuse with CC BY BP3D osteology already in tree |
+
+### Related dig (not counted as new main-tree candidates)
+
+| Project | License | Note |
+|---------|---------|------|
+| **Scan-the-World / Embodi3D — Muscles of the foot and ankle** (Zenodo 20228270 / 20231308 / 20231309 / 21527865) | **CC BY-NC-SA 4.0** (Zenodo API re-verified 2026-09-15) | Right foot/ankle muscle GLB from CT — **NC** reconfirm; still unsuitable for main tree (prior Week 2 Day 1 reject stands) |
+| **UMLUB Sketchfab — Dorsal Interossei I–IV** | License **not** openly stated on oembed/model page (checked 2026-09-15); download/reuse terms unclear; may be hand DI | **reject** until a clear CC0/CC BY download path exists |
+| **Forearm interosseous membrane CT models** (Carrillo; Zenodo 3725911) | **CC BY 4.0** | Wrong region (forearm IOM) — anatomy mismatch for foot DI |
+
+### Outcome
+
+- **0** new CC0/CC BY meshes integrated (DI still Open3D BY-SA; per-ray MTA still absent; no nerve/ligament main-tree replacement).
+- Ceiling unchanged: prefer waiting for license-clean segmented sources over more SA volume.
+- Methods polish this same pass (census + disclaimer + residual citations + license matrix) — see `docs/methods.md` / daily-log Day 4al.
+
+**No finished-product claim.**

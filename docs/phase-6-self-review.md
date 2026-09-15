@@ -99,6 +99,11 @@ Recent digs (Day 4ah–4aj) logged UX-borrow / reject sources (LABIM3D, UltraBon
 
 ---
 
+## Progress note (Day 4al)
+
+- **Target #1 dig**: TotalSegmentator v3 (CC BY — bones only), HRA CCF 3D library (CC BY — whole-body), Schuster foot PLYs (CC0 — surface), NIH 3D foot (CC-BY-NC-SA). **0** CC0/BY meshes integrated; Embodi3D foot muscles NC reconfirm.
+- **Target #2**: `docs/methods.md` v1.3 — census 129/124, residual-cited disclaimer, license matrix / Future Work ceilings synced.
+
 ## Verification this pass
 
 - `python3 scripts/integrity-audit.py`

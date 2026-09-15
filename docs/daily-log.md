@@ -1253,3 +1253,14 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 - LayerToggles ligament note Open3D 19→27; vessel note +ZA 10.
 - integrity-audit + vitest + build; commit + push.
 - **No finished-product claim.**
+
+
+## Day 4al (2026-09-15) — CC0/CC BY asset hunt + methods polish
+
+**Target**: Phase-6 next-week #1 (prefer CC0/BY finds for DI / fine arteries / SA replacements) + #2 journal/methods polish. **Not** more BY-SA volume.
+
+1. **Asset hunt (license-verified)**: TotalSegmentator v3 (CC BY dataset / Apache code — grouped foot bones only); HRA CCF 3D ref library (CC BY — whole-body, no foot DI/MTA); Schuster foot shape-function PLYs (CC0 — surface only); NIH 3D Anatomic Human Foot (CC-BY-NC-SA — bones + NC). Related: Embodi3D/Scan-the-World foot muscles reconfirm **BY-NC-SA**; UMLUB Sketchfab DI license unclear.
+2. **Integrate**: **none** — no license-clean DI / per-ray MTA / nerve·ligament main-tree replacement found.
+3. **Methods polish**: version → Day 4al; overview census aligned to live 129/124; teaching-vs-clinical disclaimer strengthened with cited Kabsch residuals; reproducibility + license matrix + Future Work ceilings synced to phase-6; screenshot pipeline listed under scripts.
+4. **Checks**: integrity-audit + vitest + build; commit + push.
+5. **Honesty**: teaching atlas in progress — **no finished-product claim**.

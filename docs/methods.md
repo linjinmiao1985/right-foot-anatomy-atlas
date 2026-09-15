@@ -1,7 +1,7 @@
 # Methods
 
 **Project**: Right Foot Anatomy Atlas (Teaching-Grade Interactive 3D)  
-**Version**: Week 2 Day 4aj / Phase 6 (teaching atlas in progress; see README + `docs/phase-6-self-review.md` live census; 129 entries / 124 unique; 134 discrete GLBs; lazy preload + layer-sorted search + label density + sagittal clip lite; TA2 soft-tissue still incomplete — **not a finished product**)  
+**Version**: Week 2 Day 4al / Phase 6 (teaching atlas in progress; see README + `docs/phase-6-self-review.md` live census; **129** entries / **124** unique; **53** main-tree / **71** BY-SA; 134 discrete GLBs; lazy preload + layer-sorted search + label density + sagittal clip lite; TA2 soft-tissue still incomplete — **not a finished product**)  
 **Date**: 2026-09-15  
 **Licenses**: Code MIT | Assets CC BY 4.0 / CC0 1.0 / CC BY-SA 4.0 (isolated)
 
@@ -9,12 +9,12 @@
 
 ## Overview
 
-This atlas integrates open-licensed anatomical meshes from BodyParts3D, Universiti Malaya, Z-Anatomy, and Open3D (BY-SA isolate) for interactive right-foot teaching. Real 3D meshes cover **osteology 26/26**, wired muscles including UM teaching extrinsics (TA/FL/EDL/EHL) + BY-SA DI, vessels including 2 honest BP3D grouped meshes + BY-SA proximal arteries + **5 Day 4aa Open3D BY-SA** fine/grouped vessels (deep plantar a./arch, grouped dorsal MTA, medial plantar branches), 6 Z-Anatomy BY-SA trunk nerves + **11 Open3D BY-SA** fine/cutaneous/calcaneal/dorsal-digital nerves (Day 4x–4z), and soft tissue under the ligament/tendon toggle: **1 BP3D ligament** (long plantar) + **1 BP3D tendon** (Achilles) + **27 Open3D BY-SA** teaching meshes (Day 4s–4w; Kabsch→BP3D). **Entry-level placeholders: 0** — but this is **not** TA2-complete (further tarsal/toe bands unextracted; Lisfranc/retinacula/some midfoot bands grouped; commons/proprii/dorsal digitals are grouped teaching objects; sural→LDC continuity note-only on LDC; dorsal metatarsal arteries wired as **grouped** Open3D BY-SA only — still not individually split). See `docs/week2-ligament-fascia-search.md` Day 4s–4aa.
+This atlas integrates open-licensed anatomical meshes from BodyParts3D, Universiti Malaya, Z-Anatomy, and Open3D (BY-SA isolate) for interactive right-foot teaching. Live census (Day 4al / Phase 6): **129** entry-level rows / **124** unique structures (**53** main-tree CC BY/CC0 · **71** ShareAlike isolate) — osteology **26/26**; muscle **28** entries / **23** unique (BP3D+UM main + Open3D/ZA BY-SA DI·FB·FT·opponens·plantaris); vessel **29** (7 BP3D + 12 Open3D BY-SA + 10 ZA BY-SA veins/proximal); nerve **17** (6 ZA trunks + 11 Open3D fine/cutaneous); ligament/tendon **29** (2 BP3D long plantar + Achilles + 27 Open3D BY-SA). **Entry-level placeholders: 0**. This is **not** TA2-complete: no per-ray dorsal MTA; several vessels/nerves remain **grouped**; ankle bands incomplete vs named ATFL-set in some texts; gastroc/soleus bellies absent. See `docs/phase-6-self-review.md` and `docs/week2-ligament-fascia-search.md`.
 
-**Soft disclaimer (teaching vs clinical)**: Meshes and Kabsch co-registration are intended for **anatomy education** (spatial relationships, named structures, layer exploration). They are **not** validated for clinical diagnosis, treatment planning, surgical navigation, implant sizing, or patient-specific modeling. Landmark residuals (~2–3 mm mean) are teaching-grade only.
+**Soft disclaimer (teaching vs clinical)**: Meshes and Kabsch co-registration are intended **only** for anatomy education (spatial relationships, named structures, layer exploration, classroom cutaways). They are **not** validated for clinical diagnosis, treatment planning, surgical navigation, implant sizing, interventional guidance, or patient-specific modeling. Published landmark residuals support visualization grade only — cite transform JSONs: Open3D→BP3D mean ≈**2.61 mm** (max ≈4.41 mm MT1); UM→BP3D mean ≈**2.22 mm** (max ≈4.38 mm talus); ZA→BP3D mean ≈**1.81 mm** (max ≈3.52 mm calcaneus). Do **not** treat these as surgical registration error bounds.
 
 **Target Audience**: Medical students, anatomy instructors, foot/ankle residents, physical therapists.  
-**NOT for**: Clinical diagnosis, treatment planning, surgical navigation, or patient-specific modeling.
+**NOT for**: Clinical diagnosis, treatment planning, surgical navigation, implant planning, or patient-specific modeling.
 
 ---
 
@@ -69,11 +69,12 @@ CC Attribution 4.0 International.
 **Base Model**: BodyParts3D (CC BY-SA 2.1 Japan)  
 **Commit**: Latest main branch as of 2026-09-14
 
-**Coverage**:
-- 6 nerves (CURVE geometry, thin tubes along pathways):
-  - Tibial, medial/lateral plantar, deep/superficial fibular, sural
+**Coverage** (wired subset; all under `by-sa/`):
+- 6 trunk nerves (CURVE→tube): tibial, medial/lateral plantar, deep/superficial fibular, sural
+- Soft vessels/veins (Day 4ad–4af mesh-API / Blender exports): e.g. proper/common plantar digital arteries, anterior tibial a., circumflex fibular branch, dorsal/plantar venous arches, plantar digital / metatarsal / med·lat plantar veins — **not** a complete venous atlas
+- Note: long plantar + Achilles exist in the ZA blend but are **not** wired (BP3D CC BY already covers both). No named ATFL/CFL/deltoid/retinacula in the harvested blend
 
-**Format**: Blender `.blend` file (Startup.blend, 306MB) → exported to GLB via Blender 4.0.2 Python API
+**Format**: Zenodo `.blend` / mesh-API OBJ → Kabsch-baked GLB (`za_to_bp3d_transform.json`, mean residual ≈1.81 mm)
 
 **Attribution**:
 ```
@@ -262,11 +263,12 @@ Re-running a bake: load `scale` / `R` / `t_mm` from the transform JSON; apply `v
 
 ### Scripts Available
 Repo scripts (prefer these over ad-hoc one-offs):
-- `scripts/extract_open3d_ligaments.py` — named `o` objects from literature `lower-limb.obj` → raw OBJ + Kabsch-baked GLB under `by-sa/`
-- `scripts/integrity-audit.py` — `placeholder:false` ↔ `REAL_*_MODELS` ↔ GLB existence
+- `scripts/extract_open3d_ligaments.py` / `extract_open3d_nerves.py` / `extract_open3d_vessels.py` / `extract_open3d_muscles.py` — named `o` objects from literature `lower-limb.obj` → Kabsch-baked GLB under `by-sa/`
+- `scripts/integrity-audit.py` — `placeholder:false` ↔ `REAL_*_MODELS` ↔ GLB existence (+ orphan allowlist)
+- `scripts/screenshot-pipeline.mjs` — optional teaching QA screenshots → `docs/screenshots/` (`npm run screenshots`; **not** a product gallery)
 - `scripts/expand-structures.py` — structures helpers (when used)
 - `update_structures_bp3d.py` / `update_structures_um.py` — historical structure wiring
-- `third_party/z-anatomy/*` — Blender inventory/export **recipes** (Blender may be absent on box; Zenodo `.blend` path documented, not always executable here)
+- `third_party/z-anatomy/*` — Blender inventory/export **recipes** (Blender 4.2.9 LTS may be local; Zenodo `.blend` gitignored)
 - Historical / optional: `assets-raw/bodyparts3d/*`, `assets-raw/um-asian-male/*` (may live outside this checkout)
 
 ### License matrix (redistribution honesty)
@@ -275,9 +277,10 @@ Repo scripts (prefer these over ad-hoc one-offs):
 | Code | MIT | repo root | App/source |
 | BP3D osteology + most soft tissue | CC BY 4.0 | `public/models/right-foot/*.glb` (not `by-sa/`) | Attribution required |
 | UM muscles | CC0 1.0 | main tree GLBs | Public domain dedication |
-| Z-Anatomy nerves | CC BY-SA 4.0 | `by-sa/` only | ShareAlike isolate |
-| Open3D DI / arteries / ligaments / retinacula / fascia | CC BY-SA 4.0 | `by-sa/` only | Same isolate; Kabsch bake is a modification under BY-SA |
+| Z-Anatomy nerves + selected vessels/veins/muscles | CC BY-SA 4.0 | `by-sa/` only | ShareAlike isolate; Kabsch bake is a BY-SA modification |
+| Open3D DI / arteries / ligaments / retinacula / fascia / fine nerves | CC BY-SA 4.0 | `by-sa/` only | Same isolate; Kabsch bake is a modification under BY-SA |
 | Placeholders | n/a | none currently | — |
+| **BY-SA weight (honesty)** | — | **71/124** unique | Prefer future **CC0/CC BY** replacements (Day 4al dig: none integrable) over more SA volume |
 
 Deleting or never loading `by-sa/` yields a MIT + CC BY/CC0-only redistribution surface. Loading BY-SA layers accepts ShareAlike for those meshes and derivatives thereof.
 
@@ -310,25 +313,26 @@ Commit history documents asset decisions, `structures.json` evolution, and `Foot
 - **Scale verification**: All sources use 0.01 factor (mm → cm) after baking into BP3D mm
 - **UM-BP3D frame**: Day 4l Kabsch similarity bake (7 tarsal landmarks, mean residual ≈2.2 mm); see `third_party/um/um_to_bp3d_transform.json`
 - **Open3D-BP3D frame**: Day 4m Kabsch similarity re-fit (12 landmarks incl. cuboid + 3 cuneiforms after Day 4j ID fix; mean residual ≈2.6 mm vs prior 8-landmark ≈3.0 mm); see `third_party/open3dmodel/open3d_to_bp3d_transform.json`
-- **Z-Anatomy derivation**: Based on BP3D, expected coordinate alignment
+- **Z-Anatomy soft → BP3D**: Day 4ad+ Kabsch similarity (`za_to_bp3d_transform.json`; 9 foot bone centroids; mean residual ≈**1.81 mm**, max ≈3.52 mm calcaneus). Trunk nerves remain pathway-schematic (CURVE→tube in BP3D-derived frame)
 
 ---
 
 ## Future Work
 
-### Anatomical Completeness
-- **Dorsal interossei**: Open3D BY-SA fill present under `by-sa/`; prefer future CC0/CC BY replacement for main-tree claim
-- **Vessel per-toe splits / proximal arteries**: Grouped digital+metatarsal meshes integrated honestly; posterior tibial + fibular remain out of foot-proper scope unless a finer open source appears
-- **Ligaments/joints**: Capsule rendering (low priority for teaching)
+### Anatomical Completeness (open-data ceilings — Phase 6)
+- **Dorsal interossei**: Open3D BY-SA under `by-sa/`; Day 4al CC0/BY dig found **no** main-tree replacement (TotalSegmentator bones-only; NIH foot NC; Embodi3D NC-SA)
+- **Per-ray dorsal MTA / digital arteries**: Still **grouped** only (BP3D + Open3D); no license-clean elemental split found
+- **Nerve/ligament SA surface**: Prefer CC0/CC BY replacements that shrink ShareAlike weight (~71/124 unique); skip SA volume for its own sake
+- **Gastroc/soleus bellies**: Not in wired open packs (Achilles + plantaris only)
+- **Ligaments/joints**: Capsule rendering low priority; named ATFL/CFL absent from ZA blend (Open3D BY-SA covers teaching set incompletely)
 
 ### Technical Enhancements
-- **Material improvements**: PBR textures, muscle fiber direction
-- **Animation**: Muscle contraction cycles, nerve electrical pathway visualization
-- **VR/AR support**: WebXR integration for immersive learning
+- Screenshot QA pack refresh (`npm run screenshots`) for expert review — not product marketing
+- Material / animation / WebXR remain optional future work
 
 ### Licensing Evolution
-- **BY-SA nerve alternatives**: If CC BY or CC0 nerve datasets emerge, replace Z-Anatomy
-- **Digital vessel sources**: Active monitoring of BodyParts3D updates
+- **BY-SA alternatives**: Continue monitoring CC0/CC BY segmented foot soft-tissue sources (HRA organ-scale and TotalSegmentator appendicular bones are **not** substitutes)
+- **Digital vessel sources**: Active monitoring of BodyParts3D / open CT segmentations with named foot elementals
 
 ---
 
@@ -340,8 +344,8 @@ Commit history documents asset decisions, `structures.json` evolution, and `Foot
 
 ---
 
-**Document Version**: 1.2 (2026-09-15)  
-**Atlas Version**: Week 2 Day 4aj / Phase 6 (teaching-grade in progress; no finished-product claim)
+**Document Version**: 1.3 (2026-09-15)  
+**Atlas Version**: Week 2 Day 4al / Phase 6 (teaching-grade in progress; no finished-product claim)
 
 
 ---
@@ -466,3 +470,9 @@ Single-axis sagittal (X) clip toggle + slider (`ClipPlaneSync`). Dig: Visible Hu
 ## Phase 6 self-review (2026-09-15)
 
 Wrote `docs/phase-6-self-review.md` (census 129/124; 53 main / 71 BY-SA; residuals; UX inventory; open-data ceilings; next-week targets). Screenshot pipeline: `npm run screenshots` → `docs/screenshots/`. Synced README/methods one-liners.
+
+## Day 4al — CC0/CC BY asset hunt + methods polish (2026-09-15)
+
+1. **Phase-6 target #1**: License-verified dig for DI / per-ray MTA / nerve·ligament main-tree replacements — TotalSegmentator v3 (CC BY; bones only), HRA CCF 3D library (CC BY; whole-body), Schuster foot PLYs (CC0; surface only), NIH 3D foot (CC-BY-NC-SA). Related NC reconfirm: Embodi3D/Scan-the-World foot muscles. **0** meshes integrated.
+2. **Phase-6 target #2**: This methods pass — live census 129/124 (53/71), strengthened teaching-vs-clinical disclaimer with cited Kabsch residuals, ZA coverage + license matrix + Future Work ceilings synced to `docs/phase-6-self-review.md`.
+3. Honesty: teaching atlas in progress — **no finished-product claim**.
