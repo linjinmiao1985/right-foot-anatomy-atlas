@@ -442,6 +442,62 @@ Phase 4 claimed "no open intrinsic foot muscles exist" based on insufficient sea
 
 ---
 
+## Week 2 Day 1 — 2026-09-15 🔍 Exhaustive DI + Vessel Search
+
+**Focus**: Dorsal interossei exhaustive search (P0) + vessel digital/metatarsal branches
+
+**Progress** ✅:
+1. **Dorsal interossei expanded search (5 major candidates)**:
+   - **Zenodo 20228270**: CC BY-NC-SA 4.0 (❌ NC clause) — Contains foot muscles (CT scan)
+   - **Visible Korean PDF**: All Rights Reserved (KISTI) (❌ proprietary) — Contains DI+PI (4+3), requires agreement
+   - **Cults3D ankle/foot**: License unknown (⏸️ Cloudflare block) — Lists "Dorsal interossei muscles of foot.stl"
+   - **SPARC/Pennsieve 307**: CC BY 4.0, uses Anatomography (BP3D) (❌ NO DI) — BP3D source lacks DI
+   - **DU Visible Human**: CC BY 4.0, 76 muscles (❌ NO DI) — Ends at ankle/flexor digitorum, no intrinsic foot
+2. **BP3D verification**:
+   - Plantar interossei: ✅ EXISTS (BP5031/BP5033/BP5035 → FJ1384/1386/1388, **already integrated Day 1**)
+   - Dorsal interossei: ❌ ABSENT (only hand DI codes BP6629/BP8036 exist, NO foot DI)
+3. **Vessel digital/metatarsal branches search**:
+   - Found BP3D codes: BP6049 (dorsal digital), BP6060 (plantar metatarsal)
+   - Extracted FJ2072 (right dorsal digital, 2988 vertices, 135KB GLB)
+   - Extracted FJ2096 (right plantar metatarsal, 1371 vertices, 65KB GLB)
+   - **Issue**: BP3D meshes are **grouped** (all arteries in one mesh), NOT individually segmented by toe (1st/2nd/3rd/4th)
+   - structures.json expects: `["Metatarsal_Dorsal_2_R", "Metatarsal_Dorsal_3_R", "Metatarsal_Dorsal_4_R"]`
+   - BP3D provides: Single mesh covering all dorsal digital arteries (66×130×28mm extent)
+   - **Verdict**: NOT INTEGRATED (grouped mesh → meshNames mismatch → false labeling risk)
+4. **Documentation**:
+   - Created `docs/week2-dorsal-interossei-search.md` (comprehensive negative result report)
+   - Documented all 5 candidate sources with licenses, verdicts, blockers
+   - Verified BP3D plantar interossei already integrated (Day 1 BP3D breakthrough)
+   - Documented vessel grouped-mesh issue
+
+**Coverage After Week 2 Day 1**: **UNCHANGED** (88% real, 38/43 structures)
+- Bones: 14/14 (100%)
+- Muscles: 13/14 (93%) — dorsal interossei remains placeholder (no legal source found)
+- Vessels: 5/9 (56%) — digital/metatarsal branches remain placeholder (BP3D grouped mesh incompatible)
+- Nerves: 6/6 (100%, BY-SA isolated)
+
+**Blockers**:
+- Dorsal interossei: All legal sources exhausted (Zenodo=NC, Visible Korean=proprietary, Cults3D=unknown, SPARC=no DI, DU VH=no DI)
+- Vessel branches: BP3D grouped meshes (not toe-segmented) incompatible with structures.json fine-grained naming
+
+**Commits**: Pending (documentation only, no code/GLB changes)
+
+**Tests/Build**: ✅ Expected GREEN (no code changes)
+
+**Tomorrow (Week 2 Day 2)** 📋:
+1. Spot-check TA2 + Chinese 踇/拇 consistency in structures.json (P1)
+2. Verify `placeholder` flags match `FootModel.tsx` REAL_*_MODELS arrays (data integrity QA)
+3. Optional: Teaching-quality improvement for schematic dorsal interossei + vessel branches (better placeholder geometry)
+4. Update `assets-research-round2.md` with Week 2 Day 1 findings (DI negative result, vessel grouped-mesh issue)
+5. Push Week 2 Day 1 documentation; tests green
+
+**Key Insight** 💡:
+- **Exhaustive negative search = valuable documentation**: Proves due diligence for future reviewers ("we tried Zenodo/VK/SPARC/DU VH/Cults3D, all blocked")
+- **BP3D grouped meshes**: Many BP3D soft tissues are anatomical **groups** (e.g., "all dorsal digital arteries"), not individual structures. Requires careful meshNames mapping to avoid false precision claims.
+- **Plantar interossei already integrated**: Week 1 Day 1 BP3D breakthrough included PI (BP5031/5033/5035 → FJ1384/1386/1388), confirming 3/3 PI coverage.
+
+---
+
 ## Log Format
 
 Each day:

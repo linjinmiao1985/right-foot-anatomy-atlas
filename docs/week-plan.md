@@ -330,15 +330,24 @@ When ending a run, update:
 
 ---
 
-**Current Status**: Day 7 complete (expert review docs, methods polished, week sprint concluded)  
-**Week Sprint Outcome**: 88% real coverage (38/43 structures), teaching-grade atlas ready for expert review  
-**Open Items for Next Week** (if continued):
-1. External expert review (anatomy instructor/foot surgeon feedback)
-2. Dorsal interossei hunt (monitor new open-source datasets: SPARC, Visible Korean, Zenodo updates)
-3. Vessel digital branch hunt (fine-detail foot vessel datasets)
-4. Optional: PBR materials (muscle fiber direction, translucency refinement)
-5. Optional: teaching video (demonstrate layer toggles, selection, BY-SA boundary)
+**Current Status**: Week 2 Day 1 complete (dorsal interossei exhaustive search, negative result documented)  
+**Week 2 Outcome So Far**: 88% real coverage unchanged (38/43 structures), DI/vessel gaps confirmed unavoidable with current open sources  
+**Week 2 Remaining Focus**:
+1. TA2 + Chinese 踇/拇 consistency spot-check (P1 QA)
+2. Placeholder flags vs REAL_*_MODELS data integrity verification
+3. Optional: Schematic dorsal interossei + vessel branches teaching-quality improvement
+4. Update `assets-research-round2.md` with Week 2 findings
+5. Monitor new datasets: Zenodo 2026-Q4, SPARC updates, Visible Korean license changes
 
-**NOT claiming**: "Finished product", "Journal-ready", "Complete teaching atlas"  
-**Accurate status**: "Week 1 quality sprint completed, teaching-grade foundation established, gaps documented"
+**Dorsal Interossei Status**: ❌ **BLOCKED** — All legal sources exhausted:
+- Zenodo 20228270: BY-NC-SA 4.0 (NC clause)
+- Visible Korean: All Rights Reserved (KISTI proprietary)
+- Cults3D: License unknown (Cloudflare block)
+- SPARC/Pennsieve: Uses BP3D (no foot DI)
+- DU Visible Human: Ankle-level only (no intrinsic foot muscles)
+
+**Vessel Digital/Metatarsal Branches Status**: ⏸️ **INCOMPATIBLE** — BP3D has grouped meshes (all arteries in one OBJ), NOT toe-segmented (1st/2nd/3rd/4th). Integrating would cause meshNames mismatch → false labeling.
+
+**NOT claiming**: "Finished product", "Journal-ready", "100% coverage possible"  
+**Accurate status**: "Week 1-2 quality sprint: 88% real coverage, 2 structures blocked by licensing/segmentation gaps"
 
