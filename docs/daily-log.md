@@ -1002,3 +1002,20 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 - Open3D Kabsch re-bake with cuboid/cuneiform landmarks
 
 **No finished-product claim.**
+
+## Week 2 Day 4l — 2026-09-15 ✅ UM muscles → BP3D Kabsch bake
+
+**Focus**: Main remaining soft-tissue spatial issue — UM muscles on native CT frame vs BP3D bones.
+
+### Done
+1. Extracted UM bone STLs (Calcaneus/Talus/Navicular/Cuboid/3 cuneiforms) from `Final_Model_STL_files.zip` as shared landmarks (no separate MT STLs in UM).
+2. Kabsch **similarity** UM→BP3D: scale≈0.842, mean residual≈**2.22 mm**, max≈4.38 mm (talus).
+3. Baked transform into 8 UM muscle GLBs (POSITION + NORMAL); saved `third_party/um/um_to_bp3d_transform.json` + NOTICE.
+4. Post-bake: intrinsics centroids near expected attachments (AH→medial cuneiform ≈25 mm; QP→calcaneus ≈21 mm; EDB→cuboid ≈15 mm). Extrinsics retain leg→ankle/midfoot extent.
+5. Updated spatial-alignment-qa + README honesty (softened Day 5 “UM aligned” overclaim).
+6. integrity-audit + vitest + build; commit; push.
+
+### Not this pass
+- Open3D Kabsch re-bake with cuboid/cuneiform landmarks (still optional; current by-sa ~3 mm fit OK)
+
+**No finished-product claim.**

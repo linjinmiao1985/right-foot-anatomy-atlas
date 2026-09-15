@@ -285,7 +285,7 @@ Complete commit history (Day 1-7) documents:
 
 ### Spatial Alignment
 - **Scale verification**: All sources use 0.01 factor (mm → cm)
-- **UM-BP3D overlap**: Verified in Phase 2 (UM muscles align with BP3D bones)
+- **UM-BP3D frame**: Day 4l Kabsch similarity bake (7 tarsal landmarks, mean residual ≈2.2 mm); see `third_party/um/um_to_bp3d_transform.json`
 - **Z-Anatomy derivation**: Based on BP3D, expected coordinate alignment
 
 ---

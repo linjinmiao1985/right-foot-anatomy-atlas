@@ -1,5 +1,5 @@
 {
-  "version": "3.3.0-bp3d-phalanx-id-fix",
+  "version": "3.4.0-um-kabsch-bake",
   "sources": [
     "BodyParts3D Release 4.0 (DBCLS Japan)",
     "Universiti Malaya Asian Male LE MSK",
@@ -238,7 +238,7 @@
       "fma": "FMA37459",
       "name_zh": "踇展肌",
       "name_la": "Abductor hallucis",
-      "note": "UM CC0 replaces BP3D (8.7x resolution)"
+      "note": "UM CC0 replaces BP3D (8.7x resolution); Day 4l Kabsch-baked UM→BP3D mm"
     },
     {
       "id": "flexor_digitorum_brevis",
@@ -247,7 +247,7 @@
       "fma": "FMA37461",
       "name_zh": "趾短屈肌",
       "name_la": "Flexor digitorum brevis",
-      "note": "UM CC0 replaces BP3D (2.4x resolution)"
+      "note": "UM CC0 replaces BP3D (2.4x resolution); Day 4l Kabsch-baked UM→BP3D mm"
     },
     {
       "id": "abductor_digiti_minimi",
@@ -256,7 +256,7 @@
       "fma": "FMA37463",
       "name_zh": "小趾展肌",
       "name_la": "Abductor digiti minimi pedis",
-      "note": "UM CC0 replaces BP3D (4.5x resolution)"
+      "note": "UM CC0 replaces BP3D (4.5x resolution); Day 4l Kabsch-baked UM→BP3D mm"
     },
     {
       "id": "quadratus_plantae",
@@ -265,7 +265,7 @@
       "fma": "FMA37454",
       "name_zh": "跖方肌",
       "name_la": "Quadratus plantae",
-      "note": "UM CC0 fills BP3D gap"
+      "note": "UM CC0 fills BP3D gap; Day 4l Kabsch-baked UM→BP3D mm"
     },
     {
       "id": "extensor_digitorum_brevis",
@@ -274,7 +274,7 @@
       "fma": "FMA51142",
       "name_zh": "趾短伸肌",
       "name_la": "Extensor digitorum brevis",
-      "note": "UM CC0 fills BP3D gap"
+      "note": "UM CC0 fills BP3D gap; Day 4l Kabsch-baked UM→BP3D mm"
     },
     {
       "id": "extensor_hallucis_brevis",

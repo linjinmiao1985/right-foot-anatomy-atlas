@@ -37,7 +37,7 @@ scale={[0.01, 0.01, 0.01]} // Blender units → cm (verified from BP3D base)
 - **Quality check**: 
   - Intrinsic muscles (AH, FDB, ADM) overlap correctly with BP3D bones (Phase 2 QA)
   - Extrinsic muscles (tibialis posterior, FDL, FHL) span ankle → foot (Day 5 integration)
-- **Status**: ✅ Spatial alignment confirmed via overlap with BP3D bones
+- **Status**: ⚠️ Superseded Day 4l — native UM CT frame differed; muscles Kabsch-baked into BP3D mm
 
 ### Z-Anatomy (Nerves, CC BY-SA)
 - **Units**: Derived from BodyParts3D (same mm units)
@@ -72,7 +72,7 @@ scale={[0.01, 0.01, 0.01]} // Blender units → cm (verified from BP3D base)
 
 ### Coordinate System
 - ✅ BP3D: Right foot oriented with toes +X, medial +Y, dorsal +Z
-- ✅ UM: Same orientation (verified via bone overlap in Phase 2)
+- ⚠️ UM: Same laterality; absolute frame was CT-native until Day 4l Kabsch bake
 - ✅ Z-Anatomy: Derived from BP3D, expected same orientation
 
 ### Nerve Pathway Plausibility
@@ -108,7 +108,7 @@ scale={[0.01, 0.01, 0.01]} // Blender units → cm (verified from BP3D base)
 
 ## Current Status
 
-**Assessment**: ✅ **LIKELY ALIGNED** (all sources use 0.01 scale, UM muscles overlap BP3D bones correctly)
+**Assessment (Day 5, historical)**: Scale factors matched, but UM soft tissue was later found still on native CT coords — corrected Day 4l
 
 **Recommendation**: 
 - Manual viewer test preferred for final confirmation
@@ -225,3 +225,39 @@ Proximal → middle → distal progress continuously for toes 2–4; toe 5 proxi
 **Why not Kabsch-rebake UM this pass**: BP3D replacements are already in the shared foot frame; re-baking UM would only preserve a lower-priority CC0 duplicate. UM intrinsic/extrinsic **muscles** remain on their native frame (separate known issue; out of scope).
 
 **Verdict (Day 4k)**: hallux proximal + distal 2–5 **fixed** via ISA IDs. Teaching-grade atlas in progress — no finished-product claim.
+
+
+---
+
+## Day 4l — UM muscles → BP3D Kabsch bake (2026-09-15)
+
+### Problem
+UM intrinsic/extrinsic muscle GLBs were still in the native UM CT/segmentation frame (e.g. abductor hallucis centroid Y≈+24 / Z≈−764 mm), while all 26 bones are now BP3D foot mm. Early Day 5 QA that called UM “spatially confirmed” was **overstated** for soft tissue after bone ID fixes clarified the frames differ.
+
+### Shared landmarks available
+UM ZIP includes bone STLs (Calcaneus, Talus, Navicular, Cuboid, 3 cuneiforms). **No separate metatarsal STLs** (phalanges are a single grouped mesh). Fit used the 7 tarsal landmarks vs current BP3D GLB centroids (cuboid/cuneiforms already remapped Day 4j).
+
+### Transform
+- **Method**: Kabsch **similarity** (scale + R + t)
+- **Scale**: ≈0.842 (UM subject foot slightly larger span than BP3D teaching mesh)
+- **Mean residual**: ≈2.22 mm · **Max**: ≈4.38 mm (talus)
+- **Artifact**: `third_party/um/um_to_bp3d_transform.json`
+- **Bake**: Applied to POSITION (+ NORMAL rotation) of 8 UM muscle GLBs; render `scale={[0.01,0.01,0.01]}` unchanged
+
+### Post-bake attachment QA (muscle centroid → nearest BP3D landmark)
+
+| Muscle | Nearest landmark | Distance |
+|--------|------------------|----------|
+| abductor_hallucis | cuneiform_medial | ≈25 mm |
+| flexor_digitorum_brevis | cuboid | ≈25 mm |
+| abductor_digiti_minimi | cuboid | ≈23 mm |
+| quadratus_plantae | calcaneus | ≈21 mm |
+| extensor_digitorum_brevis | cuboid | ≈15 mm |
+| tibialis_posterior / FDL / FHL | (extrinsic) | centroid mid-leg; closest verts ≈17–61 mm from foot cluster |
+
+Intrinsics 100% inside expanded foot bone bbox. Extrinsics retain leg→ankle/midfoot extent (UM segmentations are full LE muscle bellies).
+
+### Why not Open3D re-bake this pass
+UM soft-tissue frame was the main remaining spatial issue. Open3D by-sa bake (Day 4i+, 8 landmarks, ~3 mm residual) remains adequate; cuboid/cuneiforms *could* be added later but were not required for this goal.
+
+**Verdict (Day 4l)**: UM muscle frame **baked into BP3D mm**. Teaching-grade atlas in progress — no finished-product claim.

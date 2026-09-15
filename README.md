@@ -29,7 +29,8 @@ Interactive web-based teaching atlas for right foot anatomy.
 
 ### Remaining soft-tissue caveats (not “gaps” in placeholder sense)
 - Prefer future **CC0/CC BY** replacements for Open3D BY-SA DI + proximal arteries
-- Cuboid + 3 cuneiforms remapped (Day 4j). Hallux proximal remapped `BP8488`→`BP8785` (Day 4k). Distal phalanges 2–5: UM Y≈−850 meshes replaced with BP3D ISA elemental (same pass) — no Kabsch re-bake required
+- Cuboid + 3 cuneiforms remapped (Day 4j). Hallux proximal remapped `BP8488`→`BP8785` (Day 4k). Distal phalanges 2–5: UM Y≈−850 meshes replaced with BP3D ISA elemental
+- **UM muscles** (8): Kabsch-similarity baked into BP3D mm (Day 4l; mean residual ≈2.2 mm on 7 tarsal landmarks) — teaching-grade, not surgical registration
 - Teaching-grade atlas in progress — **no finished-product claim**
 
 ---
@@ -103,6 +104,7 @@ Open `http://localhost:5173` to view the atlas.
 - **URL**: https://researchdata.um.edu.my/dataset.xhtml?persistentId=doi:10.22452/RD/5T6TZ7
 - **Coverage**: 8 muscles (5 intrinsic + 3 extrinsic), high-resolution STL
 - **License**: Public Domain (CC0), no attribution required
+- **Alignment**: Baked UM CT/segmentation mm → BP3D foot mm via Kabsch similarity on Calcaneus/Talus/Navicular/Cuboid/3 cuneiforms (mean residual ≈2.2 mm); transform at `third_party/um/um_to_bp3d_transform.json`; render scale stays `0.01`
 
 ### Z-Anatomy (CC BY-SA 4.0, isolated)
 - **Repository**: https://github.com/Z-Anatomy/Models-of-human-anatomy

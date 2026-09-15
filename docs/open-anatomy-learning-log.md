@@ -387,3 +387,14 @@ No new CC0/CC BY foot DI or proximal-artery candidates in this dig.
 | **Action** | **integrated** (main tree CC BY). UM Phalanges.stl remains historical source only. |
 | **License** | BP3D LSDB Archive CC BY 4.0 (same as other bones). |
 
+## Session finds — 2026-09-15 (Day 4l UM→BP3D soft-tissue frame)
+
+### ACTIONED: UM muscle Kabsch into BP3D mm
+
+| Field | Detail |
+|-------|--------|
+| **Find** | UM muscles shared CT frame with former UM distal phalanges (Y≈+20s / Z≈−760). UM bone STLs provide Calcaneus/Talus/Navicular/Cuboid/cuneiforms for registration; **no MT STLs**. |
+| **Method** | Kabsch similarity on 7 tarsal centroids vs BP3D GLBs (post Day 4j correct IDs). Scale≈0.842, mean residual≈2.2 mm. |
+| **Action** | **baked** into 8 muscle GLBs; transform JSON under `third_party/um/`. |
+| **Lesson** | Shared bone landmarks in the *same* subject/dataset beat guessing translations; Day 5 “overlap confirmed” was premature without landmark residuals. |
+
