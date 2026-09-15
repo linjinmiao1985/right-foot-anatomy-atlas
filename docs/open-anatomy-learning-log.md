@@ -5,7 +5,7 @@ Living log of open-source human anatomy projects studied for the right-foot atla
 (CC0 / CC BY into main tree; BY-SA isolated under `public/models/right-foot/by-sa/` + NOTICE;
 reject NC / unknown / All Rights Reserved).
 
-**Last updated**: 2026-09-15 (Day 4bb open mining digs through #61; Andreassen belly track still blocked — no Kabsch this pass)  
+**Last updated**: 2026-09-15 (Day 4bc: OMFAtlas schematic-vs-source honesty UX + dig #62; Andreassen still blocked)  
 **Status**: ongoing research — not a finished catalog.
 
 ---
@@ -1144,7 +1144,7 @@ Active open mining for **new** license-verified projects beyond #57. **Skip** An
 |-----|----------------|
 | Dorsal interossei CC0/BY | **Still dry** — no new elemental DI pack |
 | Per-ray MTA / digitals | **Still dry** — pressure / kinematics / hallux datasets only |
-| Nerve / ligament main-tree CC0/BY | **Still dry** — schematic honesty UX from OMFAtlas is idea-only |
+| Nerve / ligament main-tree CC0/BY | **Still dry** — Day 4bc shipped OMFAtlas schematic-vs-source honesty UX (panel+footer); mesh gap unchanged |
 | Gastroc/soleus | Andreassen still **blocked (alignment)** — **no** Kabsch this pass |
 
 ### Outcome
@@ -1152,3 +1152,37 @@ Active open mining for **new** license-verified projects beyond #57. **Skip** An
 - Learning log **#58–#61** added; census unchanged (**129/124**; ontology **126/129**).
 - **0** meshes integrated; **0** SA spam; Andreassen track not re-opened.
 - **No finished-product claim.**
+
+## Day 4bc (2026-09-15) — OMFAtlas schematic-vs-source honesty UX + dig #62
+
+### UX borrow shipped (from #58 OMFAtlas)
+
+OMFAtlas labels drawn NV/gland/sinus structures as **schematic** wherever named and keeps source meshes distinct. Foot atlas adaptation (small, tested):
+
+| Piece | Location |
+|-------|----------|
+| Classifier | `src/lib/schematicHonesty.ts` — kinds: `by-sa` · `grouped` · `additional-part` · `placeholder` · `pathway-schematic` (ZA CURVE trunks = placeholder-adjacent) |
+| Tests | `src/lib/schematicHonesty.test.ts` (8 cases) |
+| StructurePanel | Badge row + short teaching disclaimer when selected structure matches any kind |
+| Footer | Compact `示意≠来源` chips when selection has honesty kinds |
+
+**Honesty**: Teaching chrome only — **not** a finished atlas / clinical product. **0** new meshes; **0** SA spam; Andreassen not re-opened.
+
+### NEW dig #62
+
+| # | Project | URL | License verified | Foot relevance | Decision |
+|---|---------|-----|------------------|----------------|----------|
+| **62** | **HRA UI** (hubmapconsortium/hra-ui) · apps https://apps.humanatlas.io/ | https://github.com/hubmapconsortium/hra-ui | Code **MIT** (`LICENSE` + `package.json` `"license": "MIT"` verified 2026-09-15); anatomy/reference objects remain **CC BY 4.0** HRA/CCF (same lineage as learning-log #39) | Monorepo of HRA apps (EUI · RUI · ASCT+B · FTU · organ info · medical illustration). Organ/ASCT+B scale — **no** curated right-foot DI / per-ray MTA soft pack | **UX-borrow** (registration UI / FTU explorer / organ-info chrome patterns). **reject** as foot soft-tissue mesh source (same HRA organ pool) |
+
+### Soft-gap check
+
+| Gap | Day 4bc |
+|-----|---------|
+| DI / per-ray MTA / nerve·ligament CC0/BY | **Still dry** |
+| Gastroc/soleus | Andreassen **blocked** — skipped |
+
+### Outcome
+
+- Schematic-vs-source honesty UX live; learning log **#62** added; census unchanged (**129/124**; ontology **126/129**).
+- **0** meshes; **no finished-product claim.**
+

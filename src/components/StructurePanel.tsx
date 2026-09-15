@@ -2,6 +2,7 @@ import { useState } from 'react';
 import type { AnatomyStructure } from '../types/anatomy';
 import { LAYER_CONFIG } from '../lib/layers';
 import { getStructureProvenance, licenseLabel, getTeachingMeshNote } from '../lib/assetProvenance';
+import { getSchematicHonesty } from '../lib/schematicHonesty';
 import {
   getOntologyIds,
   hasOntologyIds,
@@ -68,6 +69,7 @@ export default function StructurePanel({
   const meshNote = getTeachingMeshNote(structure.id, structure.layer);
   const ontology = getOntologyIds(structure.id);
   const showOntology = hasOntologyIds(ontology);
+  const honesty = getSchematicHonesty(structure.id, structure.placeholder, structure.layer);
   const sourceChipBg =
     provenance.license === 'placeholder'
       ? '#f59e0b'
@@ -269,6 +271,68 @@ export default function StructurePanel({
           {provenance.isolatedBySa ? ' · by-sa/ 隔离' : ''}
         </span>
       </div>
+
+      {/* Schematic-vs-source honesty — OMFAtlas UX-borrow (learning-log #58) */}
+      {honesty.show && (
+        <div
+          style={{
+            marginBottom: '12px',
+            padding: '8px 10px',
+            background: 'rgba(88, 28, 135, 0.18)',
+            borderRadius: '6px',
+            border: '1px solid #6b21a8',
+          }}
+          data-testid="schematic-honesty"
+          role="note"
+        >
+          <div
+            style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              gap: '6px',
+              marginBottom: '6px',
+              alignItems: 'center',
+            }}
+          >
+            <span style={{ fontSize: '10px', color: '#c4b5fd', fontWeight: 700 }}>
+              示意≠来源 · Schematic ≠ source
+            </span>
+            {honesty.badges.map((b) => (
+              <span
+                key={b.kind}
+                title={b.title}
+                style={{
+                  padding: '2px 7px',
+                  background:
+                    b.kind === 'by-sa'
+                      ? '#7c3aed'
+                      : b.kind === 'placeholder' || b.kind === 'pathway-schematic'
+                        ? '#b45309'
+                        : b.kind === 'grouped'
+                          ? '#0369a1'
+                          : '#334155',
+                  color: '#f8fafc',
+                  borderRadius: '3px',
+                  fontSize: '10px',
+                  fontWeight: 700,
+                }}
+              >
+                {b.label}
+              </span>
+            ))}
+          </div>
+          <p
+            style={{
+              margin: 0,
+              fontSize: '11px',
+              lineHeight: 1.5,
+              color: '#d8b4fe',
+            }}
+          >
+            {honesty.disclaimer}
+          </p>
+        </div>
+      )}
 
       <div
         style={{

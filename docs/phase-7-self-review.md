@@ -96,7 +96,7 @@ These residuals support **classroom visualization**, not implant planning or int
 
 ## Open mining count highlights
 
-Living log: `docs/open-anatomy-learning-log.md` — **61** numbered license-verified projects (#1–#61) as of Day 4bb.
+Living log: `docs/open-anatomy-learning-log.md` — **62** numbered license-verified projects (#1–#62) as of Day 4bc (OMFAtlas schematic honesty UX shipped).
 
 | Window | Highlights | Mesh integrate |
 |--------|------------|----------------|
@@ -195,3 +195,7 @@ Phase 7 freezes a week-quality honest board: census **129** / **124**; ontology 
 - **Open mining (handback priority alternate)**: Logged **#58 OMFAtlas**, **#59 Anatria-3D**, **#60 OPANEX**, **#61 ICL LE femur/tibia meshes** — license-verified; **0** soft-tissue wire; DI / per-ray MTA / nerve·ligament main-tree still **dry**.
 - **Andreassen**: intentionally **skipped** this pass (Day 4az+4ba exhausted).
 - Watchlist + handback + methods pointers refreshed. **No** SA spam; **no** finished-product claim.
+
+## Progress note (Day 4bc)
+
+OMFAtlas schematic-vs-source honesty UX (`schematicHonesty` + StructurePanel + footer chips). Dig **#62** hra-ui (MIT). Soft gaps still dry. **0** meshes; Andreassen skipped. **No finished-product claim.**

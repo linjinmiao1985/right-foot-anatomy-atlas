@@ -1415,3 +1415,13 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 6. Checks: integrity-audit + vitest + build; commit + push.
 7. **Honesty**: teaching atlas in progress — **no finished-product claim**. Census unchanged. **0** meshes / no SA spam.
 
+## Day 4bc (2026-09-15) — OMFAtlas schematic-vs-source honesty UX
+
+**Target**: Implement ONE solid UX borrow from OMFAtlas learning-log note (schematic-vs-source honesty); optional ≥1 dig; integrity-audit + vitest + build; commit; push. No finished-product claims; no SA mesh spam; no Andreassen wire.
+
+1. Pulled `69fa9cb` (already current).
+2. **UX**: `getSchematicHonesty()` + StructurePanel badge/disclaimer + footer chips when selected structure is BY-SA / grouped / ADDITIONAL-part / pathway-schematic (placeholder-adjacent) / placeholder.
+3. **Tests**: `schematicHonesty.test.ts` (8).
+4. **Learning log**: #62 hubmapconsortium/hra-ui (MIT code; HRA CC BY organs — reject foot soft). Soft gaps still dry.
+5. Checks: integrity-audit + vitest + build; commit + push.
+6. **Honesty**: teaching atlas in progress — **no finished-product claim**. Census unchanged. **0** meshes / no SA spam / Andreassen skipped.

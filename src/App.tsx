@@ -10,6 +10,7 @@ import { getAllVesselGroupIds, type VesselGroupId } from './lib/vesselGroups';
 import { getAllMuscleGroupIds, type MuscleGroupId } from './lib/muscleGroups';
 import { getStructureByMeshName, getAllStructures } from './lib/structureLookup';
 import { ATLAS_SOURCE_FOOTER } from './lib/assetProvenance';
+import { getSchematicHonesty } from './lib/schematicHonesty';
 import type { Layer } from './types/anatomy';
 import type { AnatomyStructure } from './types/anatomy';
 import {
@@ -451,9 +452,52 @@ function App() {
             maxWidth: '520px',
             textAlign: 'right',
             lineHeight: 1.4,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'flex-end',
+            gap: '4px',
           }}
           title="Asset attribution — see NOTICE and public/models/right-foot/by-sa/NOTICE.md"
         >
+          {selectedStructure &&
+            (() => {
+              const h = getSchematicHonesty(
+                selectedStructure.id,
+                selectedStructure.placeholder,
+                selectedStructure.layer,
+              );
+              if (!h.show) return null;
+              return (
+                <div
+                  data-testid="schematic-honesty-footer"
+                  style={{
+                    display: 'flex',
+                    flexWrap: 'wrap',
+                    gap: '4px',
+                    justifyContent: 'flex-end',
+                    alignItems: 'center',
+                  }}
+                  title={h.disclaimer}
+                >
+                  <span style={{ color: '#c4b5fd', fontWeight: 700 }}>示意≠来源</span>
+                  {h.badges.map((b) => (
+                    <span
+                      key={b.kind}
+                      style={{
+                        padding: '1px 6px',
+                        background: '#4c1d95',
+                        color: '#f5f3ff',
+                        borderRadius: '3px',
+                        fontSize: '9px',
+                        fontWeight: 700,
+                      }}
+                    >
+                      {b.label}
+                    </span>
+                  ))}
+                </div>
+              );
+            })()}
           {ATLAS_SOURCE_FOOTER}
         </div>
       </div>

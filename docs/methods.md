@@ -1,7 +1,7 @@
 # Methods
 
 **Project**: Right Foot Anatomy Atlas (Teaching-Grade Interactive 3D)  
-**Version**: Week 2 Day 4bb / Phase 7 (teaching atlas in progress; see README + `docs/phase-7-self-review.md` live census; **129** entries / **124** unique; **53** main-tree / **71** BY-SA; ontology **126/129** citable; 134 discrete GLBs; expert-review checklist v2.0 scoped teaching-useful/incomplete; per-structure hide persist + Esc policy + keyboard help + camera presets 1–5 + multi-view QA screenshots (9) + label density + sagittal clip lite; Andreassen VHM belly Kabsch Day 4az+4ba blocked (laterality then LE Option A; see third_party/andreassen/ + docs/cloud-agent-handback.md) — TA2 soft-tissue still incomplete — **not a finished product**)  
+**Version**: Week 2 Day 4bc / Phase 7 (teaching atlas in progress; see README + `docs/phase-7-self-review.md` live census; **129** entries / **124** unique; **53** main-tree / **71** BY-SA; ontology **126/129** citable; 134 discrete GLBs; expert-review checklist v2.0 scoped teaching-useful/incomplete; per-structure hide persist + Esc policy + keyboard help + camera presets 1–5 + multi-view QA screenshots (9) + label density + sagittal clip lite; Andreassen VHM belly Kabsch Day 4az+4ba blocked (laterality then LE Option A; see third_party/andreassen/ + docs/cloud-agent-handback.md) — TA2 soft-tissue still incomplete — **not a finished product**)  
 **Date**: 2026-09-15  
 **Licenses**: Code MIT | Assets CC BY 4.0 / CC0 1.0 / CC BY-SA 4.0 (isolated)
 
@@ -9,7 +9,7 @@
 
 ## Overview
 
-This atlas integrates open-licensed anatomical meshes from BodyParts3D, Universiti Malaya, Z-Anatomy, and Open3D (BY-SA isolate) for interactive right-foot teaching. Live census (Phase 7 / Day 4bb): **129** entry-level rows / **124** unique structures (**53** main-tree CC BY/CC0 · **71** ShareAlike isolate) — osteology **26/26**; muscle **28** entries / **23** unique (BP3D+UM main + Open3D/ZA BY-SA DI·FB·FT·opponens·plantaris); vessel **29** (7 BP3D + 12 Open3D BY-SA + 10 ZA BY-SA veins/proximal); nerve **17** (6 ZA trunks + 11 Open3D fine/cutaneous); ligament/tendon **29** (2 BP3D long plantar + Achilles + 27 Open3D BY-SA). **Entry-level placeholders: 0**. This is **not** TA2-complete: no per-ray dorsal MTA; several vessels/nerves remain **grouped**; ankle bands incomplete vs named ATFL-set in some texts; gastroc/soleus bellies absent. See `docs/phase-7-self-review.md` (week checkpoint; phase-6 retained as prior board) and `docs/week2-ligament-fascia-search.md`.
+This atlas integrates open-licensed anatomical meshes from BodyParts3D, Universiti Malaya, Z-Anatomy, and Open3D (BY-SA isolate) for interactive right-foot teaching. Live census (Phase 7 / Day 4bc): **129** entry-level rows / **124** unique structures (**53** main-tree CC BY/CC0 · **71** ShareAlike isolate) — osteology **26/26**; muscle **28** entries / **23** unique (BP3D+UM main + Open3D/ZA BY-SA DI·FB·FT·opponens·plantaris); vessel **29** (7 BP3D + 12 Open3D BY-SA + 10 ZA BY-SA veins/proximal); nerve **17** (6 ZA trunks + 11 Open3D fine/cutaneous); ligament/tendon **29** (2 BP3D long plantar + Achilles + 27 Open3D BY-SA). **Entry-level placeholders: 0**. This is **not** TA2-complete: no per-ray dorsal MTA; several vessels/nerves remain **grouped**; ankle bands incomplete vs named ATFL-set in some texts; gastroc/soleus bellies absent. See `docs/phase-7-self-review.md` (week checkpoint; phase-6 retained as prior board) and `docs/week2-ligament-fascia-search.md`.
 
 **Soft disclaimer (teaching vs clinical)**: Meshes and Kabsch co-registration are intended **only** for anatomy education (spatial relationships, named structures, layer exploration, classroom cutaways). They are **not** validated for clinical diagnosis, treatment planning, surgical navigation, implant sizing, interventional guidance, or patient-specific modeling. Published landmark residuals support visualization grade only — cite transform JSONs: Open3D→BP3D mean ≈**2.61 mm** (max ≈4.41 mm MT1); UM→BP3D mean ≈**2.22 mm** (max ≈4.38 mm talus); ZA→BP3D mean ≈**1.81 mm** (max ≈3.52 mm calcaneus). Do **not** treat these as surgical registration error bounds.
 
@@ -364,7 +364,7 @@ Commit history documents asset decisions, `structures.json` evolution, and `Foot
 ---
 
 **Document Version**: 1.5 (2026-09-15)  
-**Atlas Version**: Week 2 Day 4bb / Phase 7 (teaching-grade in progress; no finished-product claim)
+**Atlas Version**: Week 2 Day 4bc / Phase 7 (teaching-grade in progress; no finished-product claim)
 
 
 ---
@@ -580,3 +580,9 @@ Downloaded Andreassen VHM Final STLs (CC BY 4.0). Documented Kabsch + spatial QA
 1. License-verified digs: OMFAtlas · Anatria-3D · OPANEX · ICL LE femur/tibia (Zenodo 167808).
 2. **0** meshes; Andreassen Kabsch not re-opened; soft-gap watchlist still dry.
 3. Version pointer Day 4bb / Phase 7. **No finished-product claim.**
+
+## Day 4bc — OMFAtlas schematic-vs-source honesty UX (2026-09-15)
+
+1. StructurePanel + footer badge when selected structure is BY-SA / grouped / ADDITIONAL-part / pathway-schematic / placeholder (`src/lib/schematicHonesty.ts`).
+2. Learning-log dig #62 hubmapconsortium/hra-ui (MIT code; HRA CC BY organs — reject foot soft).
+3. Version pointer Day 4bc / Phase 7. **No finished-product claim.** **0** meshes.
