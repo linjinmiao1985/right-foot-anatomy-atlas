@@ -590,6 +590,48 @@ Phase 4 claimed "no open intrinsic foot muscles exist" based on insufficient sea
 
 ---
 
+## Week 2 Day 4d — 2026-09-15 ✅ Spatial QA + Soft Tissue Gap UX
+
+**Focus**: Spatial alignment verification + teaching placeholder UX (user directive: soft-tissue quality, no delivery)
+
+**Progress** ✅:
+1. **Distal phalanges 2-5 spatial QA**:
+   - Verified all 4 UM distal phalanges aligned correctly:
+     - distal_2: X=-65.4 (2nd toe range ✓)
+     - distal_3: X=-75.4 (3rd toe range ✓)
+     - distal_4: X=-79.6 (4th toe range ✓)
+     - distal_5: X=-95.5 (5th toe boundary ✓, expected for little toe)
+   - All Z < -835 (distal position confirmed)
+   - **No swaps or mislabels detected**
+2. **Z-Anatomy vessel search**:
+   - Attempted inventory for foot digital vessels (BY-SA)
+   - Blender access issues + user directive "only if individually meaningful"
+   - **Decision**: Skip (optional, high risk of blob split)
+3. **Placeholder UX audit**:
+   - Existing tooltips already show "占位" badge (orange) for placeholder structures
+   - Geometry types already differentiated:
+     - Muscles: capsuleGeometry (ellipsoid, teaching-appropriate)
+     - Vessels: cylinderGeometry with taper (arterial-like)
+     - Nerves: thin cylinderGeometry (nerve-like)
+   - **Gap UX functional**: 5 remaining placeholders clearly labeled
+4. **Integrity audit**: PASSED ✅ (54/59 real, 91%)
+5. **Tests + Build**: ✅ GREEN (7/7, 1.1MB)
+
+**Coverage**: **UNCHANGED** 54/59 (91%) — QA/UX session, no new integrations
+
+**Blockers**: None
+
+**Commits**: 1 (spatial QA + daily-log brief)
+
+**Tests/Build**: ✅ GREEN
+
+**Key Insight** 💡:
+- **Spatial QA validated**: All 10 UM phalanges (7 BP3D + 4 UM distal) correctly positioned
+- **Teaching placeholder UX**: Already functional with badge + differentiated geometry
+- **5 gaps transparent**: 1 DI + 4 vessels clearly marked 占位 in UI
+
+---
+
 ## Week 2 Day 3 — 2026-09-15 🏗️ Design Fix (Unified ID Model)
 
 **Focus**: Expand structures.json to individual entries (no more grouped placeholder compromises)
