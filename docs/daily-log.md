@@ -1436,3 +1436,16 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 4. Docs: interaction-qa / methods / phase-7 / handback pointers. Census unchanged.
 5. Checks: integrity-audit + vitest + build; commit + push.
 6. **Honesty**: teaching atlas in progress — **no finished-product claim**. **0** meshes / no SA spam / Andreassen skipped.
+
+
+## Day 4be (2026-09-15) — Ontology honest-empty UX + dig #63–#65
+
+**Target**: Week quality — ≥3 NEW license-verified open anatomy digs **and** one teaching polish from expert-review checklist remaining items (prefer quality; 0 SA mesh spam; skip Andreassen).
+
+1. Pulled `cf7ced4` (already current).
+2. **Teaching polish (checklist §A sparse ontology)**: StructurePanel **Ontology (honest empty)** note with named reasons for cervical TC + medial/lateral plantar veins; `HONEST_ONTOLOGY_EMPTIES` + vitest.
+3. **New digs**: #63 Utah Hive ankle arthrodesis CT/STL (**CC BY 3.0**); #64 Foot3D (MIT software; mesh form-gated — monitor/reject soft); #65 Anatomy Insight Android (Apache-2.0 + Z-Anatomy BY-SA).
+4. Soft gaps still **dry**. Andreassen **skipped**.
+5. Checks: integrity-audit + vitest + build; commit + push.
+6. **Honesty**: teaching atlas in progress — **no finished-product claim**. Census unchanged. **0** meshes / no SA spam.
+

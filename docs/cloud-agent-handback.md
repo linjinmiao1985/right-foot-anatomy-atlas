@@ -1,6 +1,6 @@
 # Cloud Agent handback — Phase 7 resume brief
 
-**Date**: 2026-09-15 · Day **4bb**  
+**Date**: 2026-09-15 · Day **4be**  
 **Branch**: `cursor/right-foot-anatomy-atlas-mvp-af85`  
 **Status**: Teaching-grade atlas **in progress** — **not** a finished-product claim  
 **Companion**: `docs/phase-7-self-review.md`, `docs/cc0-soft-tissue-watchlist.md`, `third_party/andreassen/`
@@ -19,7 +19,7 @@ Prefer **CC0 / CC BY** over further ShareAlike volume. Update census in README /
 
 ---
 
-## Live census freeze (unchanged through Day 4bd)
+## Live census freeze (unchanged through Day 4be)
 
 | Metric | Value |
 |--------|-------|
@@ -62,7 +62,7 @@ Osteology complete (26/26). Soft tissue **teaching-useful and incomplete**.
 | Browser / Cloudflare-gated packs | Scripted fetch 403 / session | Cloud Agent browser; verify license page before wire |
 | Zenodo Z-Anatomy `.blend` heavy re-harvest | Large binary; ankle bands absent prior | Re-inventory ATFL/CFL/deltoid/retinacula **only if** new revision claims them |
 | Further multi-view screenshots | 9-shot pack live | Optional angles only — not a marketing gallery |
-| CC0/BY DI / per-ray MTA / nerve·ligament main-tree | Watchlist dry through Day 4bd (#38–#62); Day 4bd = honesty badge a11y | Re-check new open CT foot soft segmentations; **skip NC** / “License: Model” |
+| CC0/BY DI / per-ray MTA / nerve·ligament main-tree | Watchlist dry through Day 4be (#38–#65); Day 4be = ontology honest-empty + digs #63–#65 | Re-check new open CT foot soft segmentations; **skip NC** / “License: Model” |
 
 ---
 
@@ -74,6 +74,10 @@ Osteology complete (26/26). Soft tissue **teaching-useful and incomplete**.
 ## Day 4bd done this handoff
 
 - Honesty badge **ARIA** (panel + footer + Main/ShareAlike chip). **0** mesh wire; Andreassen not re-opened.
+
+## Day 4be done this handoff
+
+- Ontology **honest-empty** StructurePanel note + digs **#63–#65** (Utah Hive CC BY 3.0 / Foot3D / Anatomy Insight). **0** mesh wire; Andreassen skipped.
 
 ## Suggested next agent priorities (pick one; quality over volume)
 
@@ -100,4 +104,4 @@ Osteology complete (26/26). Soft tissue **teaching-useful and incomplete**.
 - `python3 scripts/integrity-audit.py` · `npx vitest run` · `npm run build` (run on commit pass)
 - Commit + push on branch
 
-**Bottom line**: Handback brief current through Day **4bb** mining (#58–#61, 0 wire). Andreassen belly track remains **documented blocked**. Census unchanged. Teaching atlas in progress — **no finished-product claim**.
+**Bottom line**: Handback brief current through Day **4be** (ontology honest-empty + mining #63–#65, 0 wire). Andreassen belly track remains **documented blocked**. Census unchanged. Teaching atlas in progress — **no finished-product claim**.

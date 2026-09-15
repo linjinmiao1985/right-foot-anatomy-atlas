@@ -6,6 +6,7 @@ import { getSchematicHonesty, honestyRegionAriaLabel } from '../lib/schematicHon
 import {
   getOntologyIds,
   hasOntologyIds,
+  getHonestOntologyEmptyReason,
   formatFma,
   formatOntologyCopy,
 } from '../lib/ontologyIds';
@@ -69,6 +70,7 @@ export default function StructurePanel({
   const meshNote = getTeachingMeshNote(structure.id, structure.layer);
   const ontology = getOntologyIds(structure.id);
   const showOntology = hasOntologyIds(ontology);
+  const ontologyEmpty = getHonestOntologyEmptyReason(structure.id);
   const honesty = getSchematicHonesty(structure.id, structure.placeholder, structure.layer);
   const sourceChipBg =
     provenance.license === 'placeholder'
@@ -127,7 +129,7 @@ export default function StructurePanel({
 
       <p style={{ fontSize: '13px', color: '#aaa', fontStyle: 'italic', marginBottom: '12px' }}>{structure.nameLa}</p>
 
-      {showOntology && ontology && (
+      {showOntology && ontology ? (
         <div
           style={{
             marginBottom: '12px',
@@ -191,6 +193,47 @@ export default function StructurePanel({
           {ontology.note && (
             <div style={{ marginTop: '4px', color: '#9ca3af', fontSize: '10px' }}>{ontology.note}</div>
           )}
+        </div>
+      ) : (
+        <div
+          data-testid="ontology-honest-empty"
+          role="note"
+          aria-label={
+            ontologyEmpty
+              ? `Ontology honest empty: ${ontologyEmpty.reasonEn}`
+              : 'No citable ontology IDs in teaching map'
+          }
+          style={{
+            marginBottom: '12px',
+            padding: '8px 10px',
+            background: 'rgba(0,0,0,0.18)',
+            borderRadius: '6px',
+            border: '1px dashed #444',
+            fontSize: '11px',
+            color: '#9ca3af',
+            lineHeight: 1.55,
+          }}
+        >
+          <div style={{ fontSize: '10px', color: '#888', fontWeight: 600, marginBottom: '4px' }}>
+            本体论 · Ontology (honest empty)
+          </div>
+          <p style={{ margin: 0 }}>
+            {ontologyEmpty ? (
+              <>
+                {ontologyEmpty.reasonZh}
+                <br />
+                <span style={{ color: '#6b7280' }}>{ontologyEmpty.reasonEn}</span>
+              </>
+            ) : (
+              <>
+                本教学图暂无可用 TA2 / FMA / BP 引用编号 — 不编造。
+                <br />
+                <span style={{ color: '#6b7280' }}>
+                  No citable TA2 / FMA / BP in this teaching map — IDs not invented.
+                </span>
+              </>
+            )}
+          </p>
         </div>
       )}
 

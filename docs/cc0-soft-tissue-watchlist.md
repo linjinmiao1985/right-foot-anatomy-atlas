@@ -1,10 +1,10 @@
 # CC0 / CC BY soft-tissue watchlist (monitor · not integrated)
 
-**Date**: 2026-09-15 · Day 4bb / Phase 7  
+**Date**: 2026-09-15 · Day 4be / Phase 7  
 **Policy**: Prefer **CC0 / CC BY** main-tree replacements that shrink ShareAlike surface. Dig + verify license page / SPDX / Zenodo `license.id` **before** any wire. **Reject** NC, unclear “License: Model”, and All Rights Reserved. BY-SA only under `by-sa/` + NOTICE — do not spam SA volume for its own sake.  
-**Status**: Living watchlist — **0** new soft-tissue meshes integrated from this list as of Day **4bb**. Andreassen gastroc/soleus still **blocked** (Day 4az+4ba); Day 4bb open mining #58–#61 found **no** CC0/BY soft wire. Teaching atlas in progress — **not** a finished-product claim.
+**Status**: Living watchlist — **0** new soft-tissue meshes integrated from this list as of Day **4be**. Andreassen gastroc/soleus still **blocked** (Day 4az+4ba); Day 4be digs #63–#65 found **no** CC0/BY soft wire (Utah Hive = osteology CT/STL only). Teaching atlas in progress — **not** a finished-product claim.
 
-Companion: `docs/open-anatomy-learning-log.md` (#38–#61 and earlier), `docs/phase-7-self-review.md`.
+Companion: `docs/open-anatomy-learning-log.md` (#38–#65 and earlier), `docs/phase-7-self-review.md`.
 
 ---
 

@@ -96,7 +96,7 @@ These residuals support **classroom visualization**, not implant planning or int
 
 ## Open mining count highlights
 
-Living log: `docs/open-anatomy-learning-log.md` — **62** numbered license-verified projects (#1–#62) as of Day 4bd (honesty badge ARIA polish after Day 4bc UX).
+Living log: `docs/open-anatomy-learning-log.md` — **65** numbered license-verified projects (#1–#65) as of Day 4be (ontology honest-empty UX + digs #63–#65).
 
 | Window | Highlights | Mesh integrate |
 |--------|------------|----------------|
@@ -182,7 +182,7 @@ Maintain a short **monitor/reject** list (see `docs/cc0-soft-tissue-watchlist.md
 
 ## Bottom line
 
-Phase 7 freezes a week-quality honest board: census **129** / **124**; ontology **126** / **129**; UX (prefs · hide · help · clip · cameras · sub-groups · screenshots) live; BY-SA **71/124**; open mining through **#61** with **0** late soft integrates. Treat this as a **checkpoint for journal prep / handback / CC0 watch** — **no finished-product claim**.
+Phase 7 freezes a week-quality honest board: census **129** / **124**; ontology **126** / **129**; UX (prefs · hide · help · clip · cameras · sub-groups · screenshots) live; BY-SA **71/124**; open mining through **#65** with **0** late soft integrates. Treat this as a **checkpoint for journal prep / handback / CC0 watch** — **no finished-product claim**.
 
 ## Progress note (Day 4ba)
 
@@ -204,3 +204,9 @@ OMFAtlas schematic-vs-source honesty UX (`schematicHonesty` + StructurePanel + f
 
 - Accessibility polish on schematic honesty badges (panel + footer ARIA; license-tree chip label).
 - Census unchanged **129/124**; ontology **126/129**. **0** meshes. Teaching atlas in progress — **no finished-product claim**.
+
+## Progress note (Day 4be)
+
+- **Teaching polish (expert-review §A)**: StructurePanel ontology **honest-empty** note + named reasons for 3 empties; vitest coverage.
+- **Open mining**: **#63** Utah Hive ankle CT/STL (CC BY 3.0), **#64** Foot3D (MIT / form-gated meshes), **#65** Anatomy Insight Android (Apache-2.0 + ZA BY-SA). Soft gaps still **dry**.
+- Andreassen **skipped**. Census unchanged **129/124**; ontology **126/129**. **0** meshes. **No finished-product claim.**

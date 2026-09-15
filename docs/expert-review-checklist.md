@@ -2,7 +2,7 @@
 
 **Purpose**: Quality assurance for **teaching-grade** anatomical accuracy, nomenclature, license boundaries, and honest soft-tissue scope — **not** a clinical or journal-publication readiness certificate.  
 **Intended Reviewers**: Anatomy instructors, foot/ankle surgeons, medical educators.  
-**Date**: 2026-09-15 (Week 2 Day 4ax / Phase 7)  
+**Date**: 2026-09-15 (Week 2 Day 4be / Phase 7)  
 **Live census** (verify against `src/data/structures.json` + `docs/phase-7-self-review.md`): **129** entry-level rows / **124** unique · **53** main-tree (CC BY/CC0) / **71** BY-SA isolate · ontology **126/129** citable · **0** placeholders · osteology **26/26** · soft tissue **teaching-useful, incomplete**  
 **Atlas status**: Teaching atlas **in progress** — **no finished-product claim**; **not** TA2-complete soft tissue; **not** surgical registration.
 
@@ -19,7 +19,7 @@ Companion: `docs/methods.md` (journal-facing limitations + Kabsch residuals), `d
   - [ ] A. dorsalis pedis (`dorsalis_pedis_artery`) → TA A12.2.16.048 · FMA43915 · BP6027
   - [ ] M. abductor hallucis (`abductor_hallucis`) → FMA37459 (TA omitted in map this pass — honest sparse)
   - [ ] Add ≥6 more from bone / muscle / vessel / nerve / ligament layers
-- [ ] **Sparse map honesty**: Panel shows codes **only when present**; **3** honest empties remain (`cervical_talocalcaneal_ligament`; `medial_plantar_veins`; `lateral_plantar_vein`) — do **not** invent IDs
+- [x] **Sparse map honesty** (Day 4be teaching polish): Panel shows codes **only when present**; otherwise **Ontology (honest empty)** note with named reasons for **3** empties (`cervical_talocalcaneal_ligament`; `medial_plantar_veins`; `lateral_plantar_vein`) — do **not** invent IDs
 - [ ] **Grouped / approx notes**: Where `note` says grouped/approx, labels match （组合）/grouped teaching honesty
 - [ ] **Do not** treat **126/129** as TA2-complete soft tissue
 
@@ -196,6 +196,6 @@ Companion: `docs/methods.md` (journal-facing limitations + Kabsch residuals), `d
 
 ---
 
-**Checklist Version**: 2.0 (2026-09-15 Day 4ax / Phase 7)  
+**Checklist Version**: 2.0 (2026-09-15 Day 4ax / Phase 7; Day 4be ontology honest-empty polish)  
 **Supersedes**: 1.0 (2026-09-14 Week Sprint Day 7 — outdated 38/43 / DI-placeholder / ligaments-excluded framing)  
-**Atlas pointer**: Week 2 Day 4ax / Phase 7 — teaching atlas in progress; **no finished-product claim**
+**Atlas pointer**: Week 2 Day 4be / Phase 7 — teaching atlas in progress; **no finished-product claim**

@@ -2,6 +2,8 @@ import { describe, it, expect } from 'vitest';
 import {
   getOntologyIds,
   hasOntologyIds,
+  getHonestOntologyEmptyReason,
+  HONEST_ONTOLOGY_EMPTIES,
   formatFma,
   formatOntologyLine,
   formatOntologyCopy,
@@ -101,4 +103,18 @@ describe('ontologyIds', () => {
     }
     expect(n + empty.length).toBe(total);
   });
+
+  it('exposes reasons for the three named honest empties (Day 4be)', () => {
+    expect(Object.keys(HONEST_ONTOLOGY_EMPTIES).sort()).toEqual(
+      [
+        'cervical_talocalcaneal_ligament',
+        'lateral_plantar_vein',
+        'medial_plantar_veins',
+      ].sort(),
+    );
+    const cervical = getHonestOntologyEmptyReason('cervical_talocalcaneal_ligament');
+    expect(cervical?.reasonEn).toMatch(/not invented/i);
+    expect(getHonestOntologyEmptyReason('calcaneus')).toBeUndefined();
+  });
+
 });

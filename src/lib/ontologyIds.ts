@@ -37,7 +37,7 @@ export interface StructureOntologyIds {
 
 /**
  * Sparse lookup: structure id → known codes only.
- * Structures absent from this map → panel shows no ontology block (honest empty).
+ * Structures absent from this map → panel shows an honest-empty note (named empties have reasons).
  */
 export const ONTOLOGY_BY_ID: Readonly<Record<string, StructureOntologyIds>> = {
   // —— Osteology (26): TA from structures.json; classic FMA from terminology.md
@@ -384,6 +384,32 @@ export const ONTOLOGY_BY_ID: Readonly<Record<string, StructureOntologyIds>> = {
     fma: '44490', // IFAA lig. metatarsale transversum profundum
   },
 };
+
+/** Named live structures with no citable TA2/FMA/BP in this teaching map (do not invent). */
+export const HONEST_ONTOLOGY_EMPTIES: Readonly<
+  Record<string, { reasonZh: string; reasonEn: string }>
+> = {
+  cervical_talocalcaneal_ligament: {
+    reasonZh: '无独立 TA98 A 码（常作外侧距跟韧带临床同义）— 不编造编号',
+    reasonEn:
+      'No distinct TA98 A-code (often a clinical synonym of lateral talocalcaneal) — IDs not invented',
+  },
+  medial_plantar_veins: {
+    reasonZh: '仅见 TNA 编码，本教学图未收录可引用 TA2/FMA/BP',
+    reasonEn: 'TNA-only in sources consulted — no citable TA2/FMA/BP in this map',
+  },
+  lateral_plantar_vein: {
+    reasonZh: '仅见 TNA 编码，本教学图未收录可引用 TA2/FMA/BP',
+    reasonEn: 'TNA-only in sources consulted — no citable TA2/FMA/BP in this map',
+  },
+};
+
+/** Reason string when structure is a named honest empty; else undefined. */
+export function getHonestOntologyEmptyReason(
+  structureId: string,
+): { reasonZh: string; reasonEn: string } | undefined {
+  return HONEST_ONTOLOGY_EMPTIES[structureId];
+}
 
 export function getOntologyIds(structureId: string): StructureOntologyIds | undefined {
   return ONTOLOGY_BY_ID[structureId];

@@ -161,3 +161,11 @@ If issues found during manual testing:
 - [x] Footer chips (`schematic-honesty-footer`): `role="note"` + per-badge `aria-label` / `title`
 - [x] License tree chip (主树 · Main / ShareAlike): `aria-label` distinguishing isolate vs main tree
 - Honesty: teaching a11y polish only — **not** a finished-product / WCAG certification claim
+
+
+## Day 4be addendum — ontology honest-empty panel
+
+- [x] When selected structure has no citable TA2/FMA/BP, StructurePanel shows **Ontology (honest empty)** (`data-testid="ontology-honest-empty"`)
+- [x] Named empties (cervical TC; med/lat plantar veins) show bilingual reason strings — IDs **not** invented
+- [x] Mapped structures still show partial ontology block + copy
+- Honesty: teaching nomenclature honesty — **not** a finished ontology / TA2-complete claim

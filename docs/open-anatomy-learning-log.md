@@ -5,7 +5,7 @@ Living log of open-source human anatomy projects studied for the right-foot atla
 (CC0 / CC BY into main tree; BY-SA isolated under `public/models/right-foot/by-sa/` + NOTICE;
 reject NC / unknown / All Rights Reserved).
 
-**Last updated**: 2026-09-15 (Day 4bc: OMFAtlas schematic-vs-source honesty UX + dig #62; Andreassen still blocked)  
+**Last updated**: 2026-09-15 (Day 4be: ontology honest-empty UX + digs #63–#65; Andreassen skipped)  
 **Status**: ongoing research — not a finished catalog.
 
 ---
@@ -1185,4 +1185,40 @@ OMFAtlas labels drawn NV/gland/sinus structures as **schematic** wherever named 
 
 - Schematic-vs-source honesty UX live; learning log **#62** added; census unchanged (**129/124**; ontology **126/129**).
 - **0** meshes; **no finished-product claim.**
+
+
+---
+
+## Session additions (2026-09-15 · Day 4be — ontology honest-empty UX + dig ≥3)
+
+### Teaching polish (expert-review checklist A · sparse ontology honesty)
+
+| Change | Detail |
+|--------|--------|
+| **Honest ontology empty note** | StructurePanel shows a dashed **Ontology (honest empty)** block when the selected structure has no citable TA2/FMA/BP — with named reasons for the three known empties |
+| Source | Expert-review checklist §A (“do not invent IDs”); ideas only — no third-party UI code |
+| Files | `src/lib/ontologyIds.ts` (`HONEST_ONTOLOGY_EMPTIES` + `getHonestOntologyEmptyReason`) · `StructurePanel.tsx` · vitest |
+| Honesty | Teaching chrome only — **not** TA2-complete soft tissue / finished ontology product |
+
+### NEW license-verified projects (≥3)
+
+| # | Project | URL | License verified | Foot relevance | Decision |
+|---|---------|-----|------------------|----------------|----------|
+| **63** | **Utah Hive — Dual Fluoroscopy / Ankle Arthrodesis Compensation** (Anderson / Lenz / Nichols / Roach / Lisonbee) | https://hive.utah.edu/concern/datasets/bv73c051k · record https://hive.utah.edu/records/fmfxm-02c03 · DOI **10.7278/S5d-1nqg-0fqd** | **CC BY 3.0** (Hive API `rights.id` = `cc-by-3.0` + schema.org license URL verified 2026-09-15) | Foot/ankle **CT** (.nii) + surface STLs for tibia–talus fused construct, distal tibia, talus, calcaneus + rigid-body transforms — **osteology / kinematics**, **0** named soft DI/NV/ligament meshes | **monitor** for LE bone registration / arthrodesis teaching context. **reject** soft DI/NV/MTA / belly teaching |
+| **64** | **Foot3D** (OllieBoyne/Foot3D · Cambridge) | https://github.com/OllieBoyne/Foot3D · FIND project https://ollieboyne.github.io/FIND/ | Software/repo **MIT** (`LICENSE` verified 2026-09-15); mesh/multiview packs are **form-gated** and README License section is a warranty disclaimer — **not** a clear CC0/CC BY mesh grant | 118 high-res scanned **skin/surface** feet + multiview pairs — reconstruction research, **no** named intrinsic muscles / nerves / vessels | **UX-borrow** / process (citation habit). **monitor** until mesh redistribution SPDX is explicit. **reject** named soft-tissue teaching |
+| **65** | **Anatomy Insight** (shaikhmohammadtalha/android-anatomy-insight) | https://github.com/shaikhmohammadtalha/android-anatomy-insight | Code **Apache-2.0** (`LICENSE` + badge verified 2026-09-15); 3D models **CC BY-SA 4.0** (Z-Anatomy — README Attributions); educational text cites **OpenStax Anatomy & Physiology CC BY 4.0** | Android Filament viewer (6 region packs / ~2300 subparts) — same ZA/BP3D soft lineage; **no** new CC0/BY right-foot DI pack | **UX-borrow** (mobile Filament / Room catalog). Meshes: **isolate-SA** only. **reject** as main-tree soft source |
+
+### Soft-gap check
+
+| Gap | Day 4be |
+|-----|---------|
+| DI / per-ray MTA / nerve·ligament CC0/BY | **Still dry** |
+| Gastroc/soleus | Andreassen **blocked** — **skipped** |
+| New osteology CC BY | Utah Hive tibia/talus/calcaneus surfaces — docs-only monitor |
+
+### Outcome
+
+- Learning log **#63–#65**; ontology honest-empty panel live; census unchanged (**129/124**; ontology **126/129**).
+- **0** meshes integrated; **0** SA spam; Andreassen not re-opened.
+- **No finished-product claim.**
 
