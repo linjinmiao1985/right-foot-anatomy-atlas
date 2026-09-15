@@ -19,6 +19,11 @@ import {
   structureInVisibleVesselGroups,
   type VesselGroupId,
 } from '../lib/vesselGroups';
+import {
+  getAllMuscleGroupIds,
+  structureInVisibleMuscleGroups,
+  type MuscleGroupId,
+} from '../lib/muscleGroups';
 
 interface FootModelProps {
   visibleLayers: Set<Layer>;
@@ -32,6 +37,8 @@ interface FootModelProps {
   visibleNerveGroups?: Set<NerveGroupId>;
   /** Teaching sub-group filter for vessel layer (defaults: all groups on). */
   visibleVesselGroups?: Set<VesselGroupId>;
+  /** Teaching sub-group filter for muscle layer (defaults: all groups on). */
+  visibleMuscleGroups?: Set<MuscleGroupId>;
 }
 
 interface PlaceholderMesh {
@@ -226,10 +233,11 @@ const REAL_LIGAMENT_MODELS: Record<string, string> = {
   'dorsal_intercuneiform_ligaments': '/models/right-foot/by-sa/dorsal_intercuneiform_ligaments.glb',
 };
 
-export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName, isolateMode = false, visibleLigamentGroups, visibleNerveGroups, visibleVesselGroups }: FootModelProps) {
+export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName, isolateMode = false, visibleLigamentGroups, visibleNerveGroups, visibleVesselGroups, visibleMuscleGroups }: FootModelProps) {
   const ligGroups = visibleLigamentGroups ?? new Set(getAllLigamentGroupIds());
   const nerveGroups = visibleNerveGroups ?? new Set(getAllNerveGroupIds());
   const vesselGroups = visibleVesselGroups ?? new Set(getAllVesselGroupIds());
+  const muscleGroups = visibleMuscleGroups ?? new Set(getAllMuscleGroupIds());
   const [placeholderMeshes, setPlaceholderMeshes] = useState<PlaceholderMesh[]>([]);
   const [hoveredMesh, setHoveredMesh] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
@@ -319,6 +327,13 @@ export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName
         if (
           structure.layer === 'vessel' &&
           !structureInVisibleVesselGroups(structure.id, vesselGroups)
+        ) {
+          return null;
+        }
+
+        if (
+          structure.layer === 'muscle' &&
+          !structureInVisibleMuscleGroups(structure.id, muscleGroups)
         ) {
           return null;
         }

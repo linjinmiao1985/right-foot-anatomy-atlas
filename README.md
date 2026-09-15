@@ -26,7 +26,7 @@ Interactive web-based teaching atlas for right foot anatomy.
 | **BY-SA isolate (`by-sa/`)** | **71/124** | 5 muscles (DI+FB+FT+opponens+plantaris) + 22 vessels (12 Open3D + 10 ZA) + 17 nerves + 27 ligaments·retinacula·fascia |
 | **Entry-level `structures.json`** | **129/129** `placeholder:false` | Multi-part muscles counted separately (lumbricals/PI) |
 
-**Note**: Unique framing = **124** (lumbricals×4→1, plantar interossei×3→1). Entry-level = **129** rows. **Honest grouped vessels**: BP3D dorsal digital + plantar metatarsal; Open3D **dorsal metatarsal** + **medial tarsal arteries**; ZA common/proper plantar digitals + several vein plurals also **grouped only**. Open3D / ZA ShareAlike fills are Kabsch→BP3D mm — **not** CC BY main-tree. **Skipped as BP3D/Open3D duplicates** where noted in phase-5. **Ligament + nerve + vessel layers: teaching-useful but incomplete** (no per-ray MTA; venous fill expanded Day 4ae–4af, still not complete; several grouped teaching meshes). Nerve **and vessel** UI have teaching sub-group filters (not finished atlases). Muscle census: `docs/muscle-gap-census.md` (EHB/FB/FT/opponens/plantaris wired; gastroc/soleus bellies still open).
+**Note**: Unique framing = **124** (lumbricals×4→1, plantar interossei×3→1). Entry-level = **129** rows. **Honest grouped vessels**: BP3D dorsal digital + plantar metatarsal; Open3D **dorsal metatarsal** + **medial tarsal arteries**; ZA common/proper plantar digitals + several vein plurals also **grouped only**. Open3D / ZA ShareAlike fills are Kabsch→BP3D mm — **not** CC BY main-tree. **Skipped as BP3D/Open3D duplicates** where noted in phase-5. **Ligament + nerve + vessel layers: teaching-useful but incomplete** (no per-ray MTA; venous fill expanded Day 4ae–4af, still not complete; several grouped teaching meshes). Nerve, vessel, **and muscle** UI have teaching sub-group filters (not finished atlases). Muscle census: `docs/muscle-gap-census.md` (EHB/FB/FT/opponens/plantaris wired; gastroc/soleus bellies still open).
 
 ### Remaining soft-tissue caveats (not “gaps” in placeholder sense)
 - Prefer future **CC0/CC BY** replacements for Open3D/ZA BY-SA soft fills; per-ray dorsal/plantar MTA still unavailable. Day 4ac+: Blender mesh-API ZA harvest for unique vessels/veins; ankle bands still absent from that `.blend` (Open3D remains source)
@@ -56,7 +56,8 @@ Interactive web-based teaching atlas for right foot anatomy.
 
 - **5-layer toggle**: Bone / Muscle / Nerve / Vessel / Ligament-Tendon (soft-tissue teaching-useful but incomplete — BP3D 1+1 + Open3D BY-SA 27)
 - **Ligament sub-group filter**: lateral ankle / deltoid / subtalar / plantar-arch / midfoot / Lisfranc / forefoot / retinacula / tendon
-- **Nerve + vessel sub-group filters**: teaching partitions (not complete atlases)
+- **Nerve + vessel + muscle sub-group filters**: teaching partitions (not complete atlases)
+- **Muscle sub-groups**: plantar layers 1–4 / dorsal intrinsic / extrinsic anterior·lateral·posterior
 - **License badge**: StructurePanel shows **主树 · Main** vs **ShareAlike** (by-sa/ isolate)
 - **Click selection**: Shows Chinese name, Latin name (TA2), summary
 - **Click-to-focus**: Camera frames selected mesh AABB (teaching polish)

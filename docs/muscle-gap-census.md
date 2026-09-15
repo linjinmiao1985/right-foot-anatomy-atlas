@@ -70,3 +70,9 @@ Osteology remains complete. Muscle layer is **teaching-useful and incomplete**. 
 - Still open: DI per-ray separate ids; gastrocnemius/soleus bellies (intentional tendon+plantaris only); FHB mixed-license lateral.
 - **Honesty**: Muscle layer remains **teaching-useful and incomplete** — Day 4ae does **not** claim TA2 muscle completeness or “nearly closed” graduation beyond the Day 4ad census fills already disclosed.
 
+
+
+## Dig this pass (Day 4ag)
+
+- **No muscle meshes added.** UI teaching sub-group filter only (plantar 1–4 / dorsal / extrinsic anterior·lateral·posterior).
+- Honesty unchanged: muscle layer remains **teaching-useful and incomplete** (no gastroc/soleus bellies; DI ShareAlike grouped).

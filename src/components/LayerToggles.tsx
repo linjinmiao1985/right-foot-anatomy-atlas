@@ -4,6 +4,7 @@ import { LAYER_CONFIG, getAllLayers } from '../lib/layers';
 import { LIGAMENT_GROUPS, type LigamentGroupId } from '../lib/ligamentGroups';
 import { NERVE_GROUPS, type NerveGroupId } from '../lib/nerveGroups';
 import { VESSEL_GROUPS, type VesselGroupId } from '../lib/vesselGroups';
+import { MUSCLE_GROUPS, type MuscleGroupId } from '../lib/muscleGroups';
 
 interface LayerTogglesProps {
   visibleLayers: Set<Layer>;
@@ -18,6 +19,8 @@ interface LayerTogglesProps {
   onToggleNerveGroup: (group: NerveGroupId) => void;
   visibleVesselGroups: Set<VesselGroupId>;
   onToggleVesselGroup: (group: VesselGroupId) => void;
+  visibleMuscleGroups: Set<MuscleGroupId>;
+  onToggleMuscleGroup: (group: MuscleGroupId) => void;
 }
 
 /**
@@ -38,6 +41,8 @@ export default function LayerToggles({
   onToggleNerveGroup,
   visibleVesselGroups,
   onToggleVesselGroup,
+  visibleMuscleGroups,
+  onToggleMuscleGroup,
 }: LayerTogglesProps) {
   const layers = getAllLayers();
 
@@ -125,6 +130,55 @@ export default function LayerToggles({
           </label>
         );
       })}
+
+
+      {visibleLayers.has('muscle') && (
+        <div
+          style={{
+            marginBottom: '10px',
+            padding: '8px',
+            background: 'rgba(196, 69, 54, 0.10)',
+            border: '1px solid rgba(196, 69, 54, 0.40)',
+            borderRadius: '6px',
+          }}
+          role="group"
+          aria-label="肌肉教学亚组筛选"
+        >
+          <div style={{ fontSize: '11px', fontWeight: 600, color: '#d6d3d1', marginBottom: '6px' }}>
+            肌肉亚组 · Sub-groups
+            <span style={{ fontWeight: 400, color: '#888', marginLeft: '6px' }}>教学筛选 · 非完整图谱</span>
+          </div>
+          {MUSCLE_GROUPS.map((g) => {
+            const on = visibleMuscleGroups.has(g.id);
+            return (
+              <label
+                key={g.id}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  marginBottom: '5px',
+                  cursor: 'pointer',
+                  fontSize: '11px',
+                  color: '#e0e0e0',
+                }}
+              >
+                <input
+                  type="checkbox"
+                  checked={on}
+                  onChange={() => onToggleMuscleGroup(g.id)}
+                  style={{ marginRight: '6px', cursor: 'pointer' }}
+                  aria-label={`${g.labelZh} ${g.labelEn}`}
+                />
+                <span style={{ flex: 1 }}>
+                  {g.labelZh}
+                  <span style={{ color: '#888', marginLeft: '4px' }}>{g.labelEn}</span>
+                </span>
+                <span style={{ color: '#9ca3af', fontVariantNumeric: 'tabular-nums' }}>{g.structureIds.length}</span>
+              </label>
+            );
+          })}
+        </div>
+      )}
 
       {visibleLayers.has('ligament') && (
         <div
@@ -342,7 +396,28 @@ export default function LayerToggles({
           </div>
         )}
 
-        {visibleLayers.has('vessel') && (
+        
+        {visibleLayers.has('muscle') && (
+          <div
+            role="status"
+            style={{
+              marginTop: '8px',
+              padding: '6px 8px',
+              background: 'rgba(196, 69, 54, 0.12)',
+              border: '1px solid rgba(196, 69, 54, 0.45)',
+              borderRadius: '4px',
+              color: '#fca5a5',
+              fontSize: '10px',
+              lineHeight: 1.45,
+            }}
+            title="Muscle soft-tissue layer — teaching incomplete"
+          >
+            ℹ️ 肌肉层<strong>教学有用但不完整</strong>：足底 1–4 层 + 足背固有肌 + 外在前/外/后群亚组筛选。
+            仍无腓肠肌/比目鱼肌肌腹（仅跟腱+跖肌）；DI 为 BY-SA 组合。非 TA2 完整肌图谱。
+          </div>
+        )}
+
+{visibleLayers.has('vessel') && (
           <div
             role="status"
             style={{

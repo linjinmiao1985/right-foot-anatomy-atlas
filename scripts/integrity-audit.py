@@ -26,6 +26,14 @@ STRUCTURES_JSON = WORKSPACE / "src/data/structures.json"
 FOOTMODEL_TSX = WORKSPACE / "src/components/FootModel.tsx"
 MODELS_DIR = WORKSPACE / "public/models/right-foot"
 
+# Intentional unreferenced GLBs under public/models/right-foot/ (with reason).
+# Live audit at Day 4ag: empty — prior teaching orphans (UM extrinsics, EHB, etc.) were wired.
+# ADDITIONAL_MUSCLE_PARTS multi-head GLBs are counted as referenced (not orphans).
+ORPHAN_ALLOWLIST: dict[str, str] = {
+    # Example (keep empty unless a deliberate spare mesh is retained):
+    # "/models/right-foot/example_spare.glb": "Reason: retained for QA comparison; not loaded in FootModel",
+}
+
 # ANSI color codes
 RED = '\033[91m'
 GREEN = '\033[92m'
@@ -164,15 +172,26 @@ def main():
     # Check 3: Every GLB must have a structures.json entry with placeholder: false
     print(f"{BLUE}Check 3: GLB files → structures.json placeholder:false{RESET}")
     referenced_glbs = {glb_path for layer in real_models.values() for _, glb_path in layer} | additional_glbs
-    orphaned_glbs = glb_files - referenced_glbs
-    
+    raw_orphans = glb_files - referenced_glbs
+    allowlisted = {g for g in raw_orphans if g in ORPHAN_ALLOWLIST}
+    orphaned_glbs = raw_orphans - allowlisted
+
+    if allowlisted:
+        print(f"{BLUE}  Allowlisted orphans ({len(allowlisted)}) with documented reason:{RESET}")
+        for glb in sorted(allowlisted):
+            print(f"    {BLUE}•{RESET} {glb}")
+            print(f"      reason: {ORPHAN_ALLOWLIST[glb]}")
+        print()
+
     if orphaned_glbs:
         print(f"{YELLOW}  Warning: {len(orphaned_glbs)} orphaned GLB files (not referenced in FootModel):{RESET}")
         for glb in sorted(orphaned_glbs):
             print(f"    {YELLOW}⚠{RESET} {glb}")
         print()
-    else:
+    elif not allowlisted:
         print(f"{GREEN}  All GLB files are referenced in FootModel ✓{RESET}\n")
+    else:
+        print(f"{GREEN}  No unallowlisted orphan GLBs ✓{RESET}\n")
     
     # Check 4: Verify structures.json → FootModel consistency
     print(f"{BLUE}Check 4: structures.json real structures → FootModel loader{RESET}")
@@ -201,7 +220,8 @@ def main():
     print(f"  Placeholder: {total_placeholder}")
     print(f"Total GLB files: {len(glb_files)}")
     print(f"  Referenced: {len(referenced_glbs)}")
-    print(f"  Orphaned: {len(orphaned_glbs)}")
+    print(f"  Orphaned (unallowlisted): {len(orphaned_glbs)}")
+    print(f"  Orphan allowlisted: {len(allowlisted)}")
     print(f"Violations: {len(violations)}")
     
     if violations:

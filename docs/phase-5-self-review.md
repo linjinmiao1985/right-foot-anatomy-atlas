@@ -64,6 +64,8 @@ These residuals support **classroom visualization**, not implant planning or int
 ## Known gaps (explicit)
 
 0. **Vessel teaching sub-group filters** exist (Day 4ac) — UI only; does not add per-ray MTAs.
+0b. **Muscle teaching sub-group filters** exist (Day 4ag) — plantar layers 1–4 / dorsal / extrinsic compartments; UI only.
+0c. **Day 4ag vessel skip**: GSV terminal / fibular vein / ATV remain deferred (BY-SA weight ~71/124; prefer quality over SA volume).
 1. **No per-ray 1st–4th dorsal/plantar metatarsal arteries** in Open3D `lower-limb.obj` or BP3D ISA — only grouped plurals. Soft inventory ceiling.
 2. **Blender / Z-Anatomy**: Day 4ac unblocked CLI (4.2.9 tarball) + proof-export long plantar / Achilles; **still no** named ATFL/CFL/deltoid/retinacula in Zenodo `.blend` — Open3D remains source for those bands; no bulk replace.
 3. **BY-SA weight** dominates soft tissue (nerves entire layer; most ligaments; most vessels incl. first veins). Prefer future CC0/CC BY replacements.

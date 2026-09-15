@@ -1218,3 +1218,12 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 - Vessel sub-groups: circumflex → proximal_leg; new veins → veins.
 - Honesty: expanded venous/proximal arterial teaching fill — **not** finished-product / TA2-complete.
 
+## Day 4ag (2026-09-15) — muscle sub-group filter + orphan allowlist + vessel skip
+
+- Pulled `0318922` (already current).
+- Added muscle teaching sub-group filter (8 groups): plantar layers 1–4, dorsal intrinsic, extrinsic anterior / lateral / posterior — partitions all 28 muscle entries; wired App / LayerToggles / Viewport / FootModel; vitest coverage.
+- Orphan GLB integrity: live audit at HEAD shows **0** unreferenced public GLBs (prior teaching orphans already wired). Added `ORPHAN_ALLOWLIST` to `scripts/integrity-audit.py` (empty; documents ADDITIONAL_MUSCLE_PARTS as referenced, not orphans).
+- Deferred ZA vessels: **skipped** great saphenous terminal / fibular vein / ATV — BY-SA already ~71/124; prefer quality over more SA volume; no unique-enough teaching gain this pass vs existing venous arches + plantar veins.
+- integrity-audit + vitest + build; commit + push.
+- No finished-product claim.
+
