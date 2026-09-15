@@ -6,6 +6,7 @@ import {
   defaultTeachingPrefs,
   isTeachingPrefs,
   loadTeachingPrefs,
+  parseHiddenStructureIds,
   parseTeachingPrefs,
   saveTeachingPrefs,
 } from './teachingPrefs';
@@ -31,6 +32,7 @@ describe('teachingPrefs', () => {
     expect(d.clipEnabled).toBe(DEFAULT_CLIP_ENABLED);
     expect(d.clipConstant).toBe(DEFAULT_CLIP_CONSTANT);
     expect(d.cameraPresetId).toBe(DEFAULT_CAMERA_PRESET);
+    expect(d.hiddenStructureIds).toEqual([]);
   });
 
   it('parses valid prefs and clamps clip constant', () => {
@@ -40,6 +42,7 @@ describe('teachingPrefs', () => {
       clipEnabled: true,
       clipConstant: 0.1, // below min → clamp
       cameraPresetId: 'plantar',
+      hiddenStructureIds: ['talus', ' talus ', '', 'calcaneus', 12, 'calcaneus'],
     });
     expect(parsed).not.toBeNull();
     expect(parsed!.visibleLayers).toEqual(['bone', 'muscle']);
@@ -47,6 +50,7 @@ describe('teachingPrefs', () => {
     expect(parsed!.clipEnabled).toBe(true);
     expect(parsed!.clipConstant).toBe(CLIP_CONSTANT_MIN);
     expect(parsed!.cameraPresetId).toBe('plantar');
+    expect(parsed!.hiddenStructureIds).toEqual(['talus', 'calcaneus']);
   });
 
   it('rejects invalid shapes', () => {
@@ -82,6 +86,7 @@ describe('teachingPrefs', () => {
       cameraPresetId: 'default',
     });
     expect(parsed!.visibleLayers).toEqual(['bone', 'nerve']);
+    expect(parsed!.hiddenStructureIds).toEqual([]); // missing → empty (compat)
 
     const empty = parseTeachingPrefs({
       visibleLayers: [],
@@ -91,6 +96,7 @@ describe('teachingPrefs', () => {
       cameraPresetId: 'medial',
     });
     expect(empty!.visibleLayers).toEqual([]);
+    expect(empty!.hiddenStructureIds).toEqual([]);
   });
 
   it('round-trips through localStorage envelope', () => {
@@ -100,10 +106,15 @@ describe('teachingPrefs', () => {
       clipEnabled: true,
       clipConstant: 1.2,
       cameraPresetId: 'lateral' as const,
+      hiddenStructureIds: ['navicular', 'cuboid'] as const,
     };
-    expect(saveTeachingPrefs({ ...prefs, visibleLayers: [...prefs.visibleLayers] })).toBe(
-      true,
-    );
+    expect(
+      saveTeachingPrefs({
+        ...prefs,
+        visibleLayers: [...prefs.visibleLayers],
+        hiddenStructureIds: [...prefs.hiddenStructureIds],
+      }),
+    ).toBe(true);
     const loaded = loadTeachingPrefs();
     expect(loaded).toEqual({
       visibleLayers: ['bone', 'ligament'],
@@ -111,6 +122,7 @@ describe('teachingPrefs', () => {
       clipEnabled: true,
       clipConstant: 1.2,
       cameraPresetId: 'lateral',
+      hiddenStructureIds: ['navicular', 'cuboid'],
     });
     const raw = window.localStorage.getItem(TEACHING_PREFS_STORAGE_KEY);
     expect(raw).toBeTruthy();
@@ -144,6 +156,12 @@ describe('teachingPrefs', () => {
     );
     expect(loadTeachingPrefs()?.cameraPresetId).toBe('dorsal');
     expect(loadTeachingPrefs()?.visibleLayers).toEqual(['vessel']);
+    expect(loadTeachingPrefs()?.hiddenStructureIds).toEqual([]);
+  });
+
+  it('parseHiddenStructureIds filters and dedupes', () => {
+    expect(parseHiddenStructureIds(null)).toEqual([]);
+    expect(parseHiddenStructureIds(['a', ' a ', 'b', 'a', 3])).toEqual(['a', 'b']);
   });
 
   it('saveTeachingPrefs returns false when localStorage throws', () => {

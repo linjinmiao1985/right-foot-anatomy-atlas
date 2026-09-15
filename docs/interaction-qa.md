@@ -145,3 +145,11 @@ If issues found during manual testing:
 - [x] `Esc` closes help first; second Esc clears selection / isolate / search
 - [x] Catalog covers camera `1`–`5`, isolate `I`, pointer orbit/zoom/pan/click
 - Honesty: teaching controls sheet — not a clinical workstation claim
+
+
+## Day 4av addendum — hidden ids persist + Esc policy
+
+- [x] Per-structure hidden ids restore from `teachingPrefs` localStorage on load
+- [x] Esc clears selection / isolate / search (and help first) — **does not** clear per-structure hides
+- [x] Explicit reveal: chip bar / Restore all / `X` toggle; hides re-saved into teaching prefs
+- Honesty: teaching dissection state only — not a clinical workstation profile

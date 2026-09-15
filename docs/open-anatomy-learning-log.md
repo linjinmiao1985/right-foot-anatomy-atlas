@@ -1035,3 +1035,29 @@ Prefer **CC0/CC BY** finds for DI / proximal·fine arteries / nerve·ligament re
 - UX: per-structure hide beyond isolate. Dig: **2** new license-verified projects (#51–52). **0** new meshes.
 - **No finished-product claim.** No SA mesh spam.
 
+
+---
+
+## Session additions (2026-09-15 · Day 4av — hide persist + Esc policy + dig)
+
+### UX applied
+
+| Change | Detail |
+|--------|--------|
+| **Persist hidden structure ids** | `teachingPrefs.hiddenStructureIds` in same localStorage envelope as layers / label density / clip / camera; restore on App boot; corrupt/missing → `[]`. |
+| **Esc clear policy** | Esc closes help first; else clears selection + isolate + search. **Does not** clear per-structure hides (persist across reload). Clear via chip bar / Restore all / `X`. Documented in `keyboardHelp.ts`, interaction-qa, footer tip. |
+| Source | Continues Day 4ap prefs + Day 4au hide — Open Anatomy Studio local-progress habit + undergravity dissection hide (ideas only). |
+| Files | `src/lib/teachingPrefs.ts` (+ vitest), `App.tsx`, `keyboardHelp.ts` |
+| Honesty | Teaching chrome only — **not** a clinical workstation profile / multi-user sync. |
+
+### NEW license-verified projects (≥2)
+
+| # | Project | URL | License verified | Foot relevance | Decision |
+|---|---------|-----|------------------|----------------|----------|
+| **53** | **MnemoAtlas** (Mnemosyne-OS/MnemoAtlas) | https://github.com/Mnemosyne-OS/MnemoAtlas | Code **MIT** (LICENSE verified 2026-09-15; ashemag viewer + Mnemosyne cartridge port); anatomy **CC BY 4.0** BodyParts3D + HRA Female v1.5 (NOTICE.md) | Offline Mnemosyne OS cartridge: FMA-indexed memory panel + Leitner revision runs against loaded atlas — same BP3D/HRA pools; **no** new right-foot DI/NV pack | **UX-borrow** (FMA-as-memory-key + spaced revision against live mesh). **reject** as new foot mesh source |
+| **54** | **Human Atlas AR** (maghrebme/human-atlas-ar) · جسم الإنسان | https://github.com/maghrebme/human-atlas-ar | Code **MIT** (LICENSE verified 2026-09-15; ashemag derivative); anatomy **CC BY 4.0** BodyParts3D 4.0 (`public/ATTRIBUTION.md` verified 2026-09-15) | Arabic-first RTL UI + bilingual search + intro lessons/quizzes on same BP3D male pool — **no** curated right-foot soft-tissue pack | **UX-borrow** (RTL + diacritic-tolerant search + lesson/quiz shell). **reject** as new foot mesh source |
+
+### Outcome
+
+- Hidden ids persist with teaching prefs; Esc policy documented. Dig: **2** new projects (#53–54). **0** new meshes.
+- **No finished-product claim.** No SA mesh spam.

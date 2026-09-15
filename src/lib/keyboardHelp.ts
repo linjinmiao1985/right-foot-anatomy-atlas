@@ -75,7 +75,8 @@ export const KEYBOARD_HELP_GROUPS: ReadonlyArray<KeyboardShortcutGroup> = [
         keys: 'Esc',
         labelZh: '取消选择 · 退出隔离 · 清空搜索',
         labelEn: 'Clear selection, isolate, search',
-        note: 'Also closes this help overlay first if open',
+        note:
+          'Closes help first if open. Does NOT clear per-structure hides (X) — those persist in localStorage; use chip bar / Restore all',
       },
     ],
   },

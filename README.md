@@ -70,8 +70,8 @@ Interactive web-based teaching atlas for right foot anatomy.
 - **Hover tooltips**: Quick structure identification
 - **OrbitControls**: Zoom, rotate, pan around foot (full polar range for plantar teaching)
 - **Loading states**: Progress indicators for GLB assets
-- **Per-structure hide**: Hide this (X) chip beyond isolate; restore chips for hidden names (Day 4au; undergravity UX-borrow)
-- **Keyboard**: `?`/`H` help · `1`–`5` view presets · `I` isolate · `X` hide this · `Esc` closes help or clears selection + isolate + search
+- **Per-structure hide**: Hide this (X) chip beyond isolate; restore chips for hidden names; ids persist in teaching prefs (Day 4au/4av; undergravity UX-borrow)
+- **Keyboard**: `?`/`H` help · `1`–`5` view presets · `I` isolate · `X` hide this · `Esc` closes help or clears selection + isolate + search (**not** per-structure hides — those persist in teaching prefs)
 - **Search**: bilingual ZH/LA includes ligament/tendon entries (e.g. 跖长韧带, 跟腱); results sorted by teaching layer after match score
 - **Screenshot pack** (optional): `npm run screenshots` → `docs/screenshots/` (teaching QA; not a product gallery)
 

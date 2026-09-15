@@ -63,7 +63,7 @@ These residuals support **classroom visualization**, not implant planning or int
 | Feature | Status | Notes |
 |---------|--------|-------|
 | **Search** | Live | Bilingual ZH/LA; Escape clears query; results sorted by teaching layer after match score (Day 4ah) |
-| **Isolate** | Live | `I` toggles; Escape clears isolate + selection + search |
+| **Isolate** | Live | `I` toggles; Escape clears isolate + selection + search (not per-structure hides) |
 | **Clip** | Live (lite) | Single-axis **sagittal (X)** toggle + slider (`ClipPlaneSync`); teaching cutaway — **not** clinical MPR |
 | **Label density** | Live | 关 / 中文 / 中+拉 hover chips (Day 4ai) |
 | **Sub-groups** | Live | Ligament · nerve · vessel · muscle teaching partitions (UI only; not finished atlases) |
@@ -130,6 +130,7 @@ Recent digs (Day 4ah–4aj) logged UX-borrow / reject sources (LABIM3D, UltraBon
 ## Progress note (Day 4ap)
 
 - **UX**: localStorage teaching prefs (`src/lib/teachingPrefs.ts`) — restore layers / label density / clip / last camera preset on load; vitest covers corrupt JSON + storage throw.
+- **UX (Day 4av)**: teaching prefs also persist `hiddenStructureIds`; Esc policy documented — does **not** clear per-structure hides.
 - **Dig**: #45 Female Atlas; #46 slorksmo/Human-Atlas (EN/AR). **0** meshes; no SA spam. Census unchanged 129/124.
 - Methods version Day 4ap.
 

@@ -1,6 +1,6 @@
 /**
  * Persist teaching UI prefs in localStorage (layer visibility, label density,
- * sagittal clip on/off+position, last camera preset).
+ * sagittal clip on/off+position, last camera preset, per-structure hidden ids).
  * UX-borrow (ideas only): Open Anatomy Studio local progress / favorites habit.
  * No third-party code copied.
  *
@@ -36,6 +36,8 @@ export interface TeachingPrefs {
   clipEnabled: boolean;
   clipConstant: number;
   cameraPresetId: CameraPresetId;
+  /** Structure ids hidden via per-structure dissection hide (X). */
+  hiddenStructureIds: string[];
 }
 
 interface TeachingPrefsEnvelope {
@@ -52,11 +54,27 @@ export function defaultTeachingPrefs(): TeachingPrefs {
     clipEnabled: DEFAULT_CLIP_ENABLED,
     clipConstant: DEFAULT_CLIP_CONSTANT,
     cameraPresetId: DEFAULT_CAMERA_PRESET,
+    hiddenStructureIds: [],
   };
 }
 
 function isLayer(value: unknown): value is Layer {
   return typeof value === 'string' && LAYER_SET.has(value);
+}
+
+/** Normalize hidden structure id list; missing/invalid → empty (compat with v1 prefs). */
+export function parseHiddenStructureIds(value: unknown): string[] {
+  if (!Array.isArray(value)) return [];
+  const out: string[] = [];
+  const seen = new Set<string>();
+  for (const item of value) {
+    if (typeof item !== 'string') continue;
+    const id = item.trim();
+    if (!id || seen.has(id)) continue;
+    seen.add(id);
+    out.push(id);
+  }
+  return out;
 }
 
 /** Validate + normalize a prefs object; returns null if unusable. */
@@ -80,12 +98,16 @@ export function parseTeachingPrefs(value: unknown): TeachingPrefs | null {
   }
   if (!isCameraPresetId(raw.cameraPresetId)) return null;
 
+  // hiddenStructureIds optional for backward compat with earlier v1 payloads
+  const hiddenStructureIds = parseHiddenStructureIds(raw.hiddenStructureIds);
+
   return {
     visibleLayers,
     labelDensity: raw.labelDensity,
     clipEnabled: raw.clipEnabled,
     clipConstant: clampClipConstant(raw.clipConstant),
     cameraPresetId: raw.cameraPresetId,
+    hiddenStructureIds,
   };
 }
 

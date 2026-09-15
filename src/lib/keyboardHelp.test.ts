@@ -26,6 +26,8 @@ describe('keyboardHelp', () => {
     expect(keys).toContain('I');
     expect(keys).toContain('X');
     expect(keys).toContain('Esc');
+    const esc = sel?.shortcuts.find((s) => s.keys === 'Esc');
+    expect(esc?.note ?? '').toMatch(/Does NOT clear per-structure hides/i);
   });
 
   it('counts shortcuts', () => {

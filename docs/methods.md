@@ -1,7 +1,7 @@
 # Methods
 
 **Project**: Right Foot Anatomy Atlas (Teaching-Grade Interactive 3D)  
-**Version**: Week 2 Day 4au / Phase 6 (teaching atlas in progress; see README + `docs/phase-6-self-review.md` live census; **129** entries / **124** unique; **53** main-tree / **71** BY-SA; 134 discrete GLBs; per-structure hide (X) + teaching prefs + keyboard help + camera presets 1–5 + multi-view QA screenshots (9) + label density + sagittal clip lite; TA2 soft-tissue still incomplete — **not a finished product**)  
+**Version**: Week 2 Day 4av / Phase 6 (teaching atlas in progress; see README + `docs/phase-6-self-review.md` live census; **129** entries / **124** unique; **53** main-tree / **71** BY-SA; 134 discrete GLBs; per-structure hide (X) persisted in teaching prefs + Esc clear policy + keyboard help + camera presets 1–5 + multi-view QA screenshots (9) + label density + sagittal clip lite; TA2 soft-tissue still incomplete — **not a finished product**)  
 **Date**: 2026-09-15  
 **Licenses**: Code MIT | Assets CC BY 4.0 / CC0 1.0 / CC BY-SA 4.0 (isolated)
 
@@ -280,7 +280,7 @@ Repo scripts (prefer these over ad-hoc one-offs):
 - `scripts/integrity-audit.py` — `placeholder:false` ↔ `REAL_*_MODELS` ↔ GLB existence (+ orphan allowlist)
 - `scripts/screenshot-pipeline.mjs` — optional teaching QA screenshots → `docs/screenshots/` (`npm run screenshots`; 9-shot pack incl. dorsal/plantar/medial/lateral; **not** a product gallery)
 - `src/lib/cameraPresets.ts` — teaching camera presets (默认/背/跖/内/外); FOOT_TEACHING_TARGET from BP3D bone midfoot
-- `src/lib/teachingPrefs.ts` — localStorage persist for layers / label density / clip / last camera preset (SSR-safe)
+- `src/lib/teachingPrefs.ts` — localStorage persist for layers / label density / clip / last camera preset / hidden structure ids (SSR-safe)
 - `src/lib/keyboardHelp.ts` + `KeyboardHelpOverlay` — bilingual shortcut sheet (`?`/`H`); Esc closes help first
 - `scripts/expand-structures.py` — structures helpers (when used)
 - `update_structures_bp3d.py` / `update_structures_um.py` — historical structure wiring
@@ -532,3 +532,11 @@ Wrote `docs/phase-6-self-review.md` (census 129/124; 53 main / 71 BY-SA; residua
 1. **UX**: Per-structure hide chip beyond isolate (`structureVisibility.ts`; StructurePanel; chip bar; keyboard `X`) — undergravity/human-atlas dissection habit (ideas only).
 2. **Dig**: #51 Human Atlas XR (MIT + CC BY); #52 Orthopaedic Trauma Atlas (MIT + CC BY; calcaneal traction module).
 3. **No** SA mesh add. **No finished-product claim.**
+
+
+## Day 4av — persist hidden structure ids + Esc policy (2026-09-15)
+
+1. **UX**: `hiddenStructureIds` stored in teaching prefs envelope with layers / labels / clip / camera; restore on load; missing field → `[]` (compat).
+2. **Esc policy (documented)**: Esc closes help first, else clears selection + isolate + search — **does not** clear per-structure hides (persist across reload; clear via chip / Restore all / X toggle).
+3. **Dig**: #53 MnemoAtlas (MIT + CC BY); #54 human-atlas-ar (MIT + CC BY Arabic RTL). **0** mesh integrate; no SA spam.
+4. Census unchanged **129/124**. Honesty: teaching atlas in progress — **no finished-product claim**.

@@ -1334,3 +1334,12 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 3. Checks: integrity-audit + vitest + build; commit + push.
 4. **Honesty**: teaching atlas in progress — **no finished-product claim**. Census unchanged. **No** SA mesh add.
 
+
+## Day 4av (2026-09-15) — persist hidden structure ids + Esc policy + dig
+
+**Target**: Persist per-structure hide ids with teachingPrefs; document Esc clear policy; dig ≥2 OR teaching polish; no SA mesh spam.
+
+1. **UX**: `teachingPrefs.hiddenStructureIds` — save/restore with other prefs; missing → `[]` compat. Esc policy: clears selection/isolate/search/help — **not** hides (chip / Restore all / X). Keyboard help + footer tip updated.
+2. **Learning log**: NEW #53 Mnemosyne-OS/MnemoAtlas; #54 maghrebme/human-atlas-ar.
+3. Checks: integrity-audit + vitest + build; commit + push.
+4. **Honesty**: teaching atlas in progress — **no finished-product claim**. Census unchanged. **No** SA mesh add.

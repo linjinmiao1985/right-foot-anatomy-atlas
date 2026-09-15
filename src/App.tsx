@@ -51,8 +51,11 @@ function App() {
   const [selectedStructure, setSelectedStructure] = useState<AnatomyStructure | null>(null);
   const [selectedMeshName, setSelectedMeshName] = useState<string | null>(null);
   const [isolateMode, setIsolateMode] = useState(false);
-  /** Per-structure hide (dissection) — independent of isolate / layer toggles. */
-  const [hiddenStructureIds, setHiddenStructureIds] = useState<Set<string>>(() => new Set());
+  /** Per-structure hide (dissection) — independent of isolate / layer toggles; persisted in teachingPrefs. */
+  const [hiddenStructureIds, setHiddenStructureIds] = useState<Set<string>>(() => {
+    const stored = loadTeachingPrefs()?.hiddenStructureIds ?? [];
+    return new Set(stored);
+  });
   const [searchClearSignal, setSearchClearSignal] = useState(0);
   const [visibleLigamentGroups, setVisibleLigamentGroups] = useState<Set<LigamentGroupId>>(
     () => new Set(getAllLigamentGroupIds()),
@@ -81,7 +84,7 @@ function App() {
   const [cameraPresetToken, setCameraPresetToken] = useState(0);
   const [helpOpen, setHelpOpen] = useState(false);
 
-  // Persist teaching prefs (layers / label density / clip / last camera preset).
+  // Persist teaching prefs (layers / label density / clip / camera / hidden structure ids).
   useEffect(() => {
     saveTeachingPrefs({
       visibleLayers: [...visibleLayers],
@@ -89,8 +92,9 @@ function App() {
       clipEnabled,
       clipConstant,
       cameraPresetId,
+      hiddenStructureIds: [...hiddenStructureIds],
     });
-  }, [visibleLayers, labelDensity, clipEnabled, clipConstant, cameraPresetId]);
+  }, [visibleLayers, labelDensity, clipEnabled, clipConstant, cameraPresetId, hiddenStructureIds]);
 
   const handleCameraPresetChange = (id: CameraPresetId) => {
     setCameraPresetId(id);
@@ -179,7 +183,8 @@ function App() {
 
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
-      // Escape: close help first; else clear isolate + selection + search
+      // Escape policy: close help first; else clear selection + isolate + search.
+      // Does NOT clear per-structure hides (those persist in teachingPrefs / chip bar).
       if (e.key === 'Escape') {
         e.preventDefault();
         if (helpOpen) {
@@ -433,7 +438,7 @@ function App() {
         }}
       >
         <div style={{ fontSize: '11px', color: '#666' }}>
-          提示: ?/H 快捷键 | 搜索 ZH/LA | 视角1–5 | 标签密度 | 矢状切面(lite) | 拖动旋转 | 滚轮缩放 | 右键平移 | 点击对焦 | I 隔离/退出 | X 隐藏此结构 | Esc 取消
+          提示: ?/H 快捷键 | 搜索 ZH/LA | 视角1–5 | 标签密度 | 矢状切面(lite) | 拖动旋转 | 滚轮缩放 | 右键平移 | 点击对焦 | I 隔离/退出 | X 隐藏此结构 | Esc 取消选择(不恢复已隐藏)
         </div>
         <div
           style={{
