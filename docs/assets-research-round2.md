@@ -391,7 +391,43 @@
 
 ---
 
-**Status**: Day 1 complete, ≥12 sources verified  
-**Next**: BP3D muscle/vessel extraction (Day 2)  
-**Week Goal**: Main layer CC BY/CC0 complete, BY-SA optional, tests green
+## Week 2 Day 1 Update: Exhaustive DI + Vessel Searches
+
+### Dorsal Interossei Expanded Search (5 Candidates)
+
+**All legal sources exhausted, NO usable CC0/CC BY dorsal interossei found**:
+
+1. **Zenodo 20228270**: CC BY-NC-SA 4.0 ❌ (NC clause) — Contains foot muscles (CT scan)
+2. **Visible Korean**: All Rights Reserved ❌ (KISTI proprietary) — Contains DI 4 + PI 3, requires agreement
+3. **Cults3D ankle/foot**: License unknown ⏸️ (Cloudflare block) — Lists "Dorsal interossei muscles of foot.stl"
+4. **SPARC/Pennsieve 307**: Uses Anatomography (BP3D) ❌ — BP3D source lacks foot DI (only hand DI)
+5. **DU Visible Human**: Ankle-level only ❌ — 76 muscles end at flexor digitorum, no intrinsic foot
+
+**BP3D Verification**:
+- ✅ Plantar interossei: BP5031/5033/5035 → FJ1384/1386/1388 (already integrated Week 1 Day 1)
+- ❌ Dorsal interossei: Only hand DI codes (BP6629/BP8036), **NO foot DI codes**
+
+**Conclusion**: Dorsal interossei gap unavoidable. All legal CC0/CC BY sources blocked by licensing (NC clauses, proprietary) or absence (BP3D, DU VH).
+
+**Detailed report**: `docs/week2-dorsal-interossei-search.md`
+
+### Vessel Digital/Metatarsal Branches Search
+
+**BP3D codes found but incompatible segmentation**:
+- BP6049: Dorsal digital artery → FJ2072 (right foot, 2988 vertices, 135KB GLB)
+- BP6060: Plantar metatarsal artery → FJ2096 (right foot, 1371 vertices, 65KB GLB)
+
+**Issue**: BP3D meshes are **grouped** (all arteries in one mesh), NOT toe-segmented (1st/2nd/3rd/4th).
+
+**structures.json expectation**: Individual arteries (`Metatarsal_Dorsal_2_R`, `Metatarsal_Dorsal_3_R`, etc.)
+
+**BP3D reality**: Single grouped mesh covering all dorsal digital arteries (66×130×28mm extent, forefoot to toe tips)
+
+**Decision**: **NOT INTEGRATED** — Grouped mesh → meshNames mismatch → false labeling risk. Maintain `placeholder: true`.
+
+---
+
+**Status**: Week 2 Day 1 complete, exhaustive DI search negative, vessel grouped-mesh incompatibility documented  
+**Coverage**: 88% real (34/39 direct GLB loaders; 5 grouped entries placeholder)  
+**Next**: TA2/踇拇 consistency QA (Day 2), monitor 2026-Q4 for new datasets
 

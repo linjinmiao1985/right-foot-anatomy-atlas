@@ -179,7 +179,7 @@
     "nameZh": "第2-5趾趾骨",
     "nameLa": "Phalanges digitorum pedis II-V",
     "summaryZh": "第2-5趾的趾骨，每趾标准为3节（近节、中节、远节，phalanx proximalis/media/distalis），共12块，但第5趾中节和远节常融合为2节。每节结构：底（近端）与上一节或跖骨头形成关节，体（骨干），头（远端）与下一节形成关节。近节趾骨与跖骨头形成跖趾关节（MTP），中节与远节间形成远侧趾间关节（DIP）。趾骨逐节变细变短，远节趾骨末端呈蹄形支持趾甲和指腹。临床意义：锤状趾（hammertoe，近节伸、中节屈）、爪形趾（claw toe，MTP过伸、PIP和DIP屈曲）、槌状趾（mallet toe，DIP屈曲）等畸形；第5趾小趾内翻（curly toe）；趾骨骨折常因踢伤或挤压伤；远节趾骨感染或甲沟炎。TA2编码：A02.5.17.003-014。",
-    "placeholder": false
+    "placeholder": true
   },
   {
     "id": "tibialis_posterior",
@@ -289,7 +289,7 @@
     "nameZh": "蚓状肌",
     "nameLa": "Mm. lumbricales pedis",
     "summaryZh": "4条单羽状小肌肉，位于足底深层。起点：趾长屈肌的4条肌腱（第1蚓状肌起自第2趾腱内侧缘，第2-4蚓状肌起自相邻两趾腱之间）。止点：第2-5趾近节趾骨内侧缘和趾伸肌腱膜。作用：屈跖趾关节（近节），伸趾间关节（中节和远节），类似手部蚓状肌功能。支配：第1蚓状肌由足底内侧神经支配（L5-S1），第2-4蚓状肌由足底外侧神经支配（S1-S2）。临床意义：神经支配分界标志（内侧vs外侧神经）；爪形趾畸形时本肌群失衡导致跖趾关节过伸、趾间关节屈曲。",
-    "placeholder": false
+    "placeholder": true
   },
   {
     "id": "interossei_dorsales",
@@ -316,7 +316,7 @@
     "nameZh": "骨间跖侧肌",
     "nameLa": "Mm. interossei plantares",
     "summaryZh": "3条单羽状肌，位于第3-5跖骨内侧面跖侧。起点：第3-5跖骨内侧面和底部。止点：相应趾（第3-5趾）近节趾骨底内侧和趾伸肌腱膜。作用：内收第3-5趾向第2趾（PAD: Plantar ADduct，以第2趾为中轴），协助屈跖趾关节伸趾间关节。支配：足底外侧神经深支（S2-S3）。临床意义：记忆口诀PAD（跖侧内收）vs DAB（背侧展开）；注意仅3条（对比背侧4条），踇趾和小趾无跖侧骨间肌；前足挤压伤时易累及。",
-    "placeholder": false
+    "placeholder": true
   },
   {
     "id": "abductor_digiti_minimi",
@@ -485,7 +485,7 @@
     "nameZh": "足底内侧动脉",
     "nameLa": "A. plantaris medialis",
     "summaryZh": "胫后动脉两大终支中较小者。走行：沿足底内侧缘，与足底内侧神经伴行，在踇展肌和趾短屈肌之间前行至第1跖骨底。分支：多条肌支供应踇展肌、趾短屈肌内侧、屈肌支持带；趾浅支至踇趾内侧。临床意义：本动脉较细小，单独损伤罕见；足底内侧切口（如踇外翻手术、跗管松解）需保护本动脉和伴行神经；足跟痛手术时需注意本动脉跟支；糖尿病足内侧溃疡时血供评估。",
-    "placeholder": false
+    "placeholder": true
   },
   {
     "id": "lateral_plantar_artery",
@@ -497,7 +497,7 @@
     "nameZh": "足底外侧动脉",
     "nameLa": "A. plantaris lateralis",
     "summaryZh": "胫后动脉两大终支中较大且更重要者，是足底动脉弓的主要来源。走行：从跟骨内侧斜向外前方，与足底外侧神经伴行，沿跖方肌和趾短屈肌之间至第5跖骨底，然后转向内侧横行于骨间肌平面。终末：在第1跖骨间隙附近与足背动脉足底深支吻合形成足底动脉弓。分支：沿途发出肌支供应足底肌群，跟外侧支供应跟骨外侧和足底外侧皮肤。临床意义：本动脉是足底最重要血供，损伤可致足严重缺血；足底外侧切口或跗跖关节手术需保护；糖尿病足溃疡和下肢动脉闭塞性疾病的关键评估动脉。",
-    "placeholder": false
+    "placeholder": true
   },
   {
     "id": "plantar_arch",
