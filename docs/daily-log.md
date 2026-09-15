@@ -1264,3 +1264,15 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 3. **Methods polish**: version → Day 4al; overview census aligned to live 129/124; teaching-vs-clinical disclaimer strengthened with cited Kabsch residuals; reproducibility + license matrix + Future Work ceilings synced to phase-6; screenshot pipeline listed under scripts.
 4. **Checks**: integrity-audit + vitest + build; commit + push.
 5. **Honesty**: teaching atlas in progress — **no finished-product claim**.
+
+## Day 4an (2026-09-15) — camera presets + multi-view screenshots + dig
+
+**Targets**: Phase-6 remaining doable — UX (camera presets from week-plan gap) + multi-view screenshot expand + continued #1 dig + methods deepen. Prefer quality; **no** SA mesh spam.
+
+1. **UX**: Teaching camera presets 默认/背侧/跖侧/内侧/外侧 (`src/lib/cameraPresets.ts`) · keys `1`–`5`; OrbitControls full polar for plantar sole; midfoot target from BP3D bone centroids (scene = mm × 0.01). Wired App / LayerToggles / Viewport / CameraPresetApply; vitest.
+2. **Screenshots**: Pipeline expanded to **9** shots (bone dorsal/plantar/medial + all-layers lateral); README table + embeds; honesty unchanged — not a product gallery.
+3. **Dig (≥3)**: MedShapeNetCore Zenodo 10609965 **CC BY** (tooth/aorta/kidney/etc. — no foot DI/NV); FootNet Zenodo 20457252 **CC BY** (2D smartphone foot segmentation); SimTK OpenSim ankle-foot (license unclear “Model”). **0** meshes integrated.
+4. **Methods / phase-6**: version Day 4an; UX inventory + handback multi-view row; reproducibility cameraPresets.
+5. **Checks**: integrity-audit + vitest + build; commit + push.
+6. **Honesty**: teaching atlas in progress — **no finished-product claim**. Census unchanged 129/124.
+

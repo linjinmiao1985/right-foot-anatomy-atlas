@@ -21,6 +21,11 @@ import {
   DEFAULT_CLIP_ENABLED,
   clampClipConstant,
 } from './lib/clipPlane';
+import {
+  DEFAULT_CAMERA_PRESET,
+  cameraPresetFromDigitKey,
+  type CameraPresetId,
+} from './lib/cameraPresets';
 
 function emptyLayerCounts(): Record<Layer, number> {
   return { bone: 0, muscle: 0, nerve: 0, vessel: 0, ligament: 0 };
@@ -47,6 +52,13 @@ function App() {
   const [labelDensity, setLabelDensity] = useState<LabelDensity>(DEFAULT_LABEL_DENSITY);
   const [clipEnabled, setClipEnabled] = useState(DEFAULT_CLIP_ENABLED);
   const [clipConstant, setClipConstant] = useState(DEFAULT_CLIP_CONSTANT);
+  const [cameraPresetId, setCameraPresetId] = useState<CameraPresetId>(DEFAULT_CAMERA_PRESET);
+  const [cameraPresetToken, setCameraPresetToken] = useState(0);
+
+  const handleCameraPresetChange = (id: CameraPresetId) => {
+    setCameraPresetId(id);
+    setCameraPresetToken((n) => n + 1);
+  };
 
   const handleLayerToggle = (layer: Layer) => {
     setVisibleLayers((prev) => {
@@ -149,6 +161,14 @@ function App() {
       if ((e.key === 'i' || e.key === 'I') && selectedStructure) {
         e.preventDefault();
         setIsolateMode((v) => !v);
+        return;
+      }
+      // Camera presets 1–5
+      const preset = cameraPresetFromDigitKey(e.key);
+      if (preset) {
+        e.preventDefault();
+        setCameraPresetId(preset);
+        setCameraPresetToken((n) => n + 1);
       }
     };
     window.addEventListener('keydown', handleKey);
@@ -216,6 +236,8 @@ function App() {
         onClipEnabledChange={setClipEnabled}
         clipConstant={clipConstant}
         onClipConstantChange={(v) => setClipConstant(clampClipConstant(v))}
+        cameraPresetId={cameraPresetId}
+        onCameraPresetChange={handleCameraPresetChange}
       />
 
       <Viewport
@@ -230,6 +252,8 @@ function App() {
         labelDensity={labelDensity}
         clipEnabled={clipEnabled}
         clipConstant={clipConstant}
+        cameraPresetId={cameraPresetId}
+        cameraPresetToken={cameraPresetToken}
       />
 
       <StructurePanel
@@ -254,7 +278,7 @@ function App() {
         }}
       >
         <div style={{ fontSize: '11px', color: '#666' }}>
-          提示: 搜索 ZH/LA | 标签密度 | 矢状切面(lite) | 拖动旋转 | 滚轮缩放 | 右键平移 | 点击对焦 | I 隔离/退出 | Esc 取消隔离+搜索
+          提示: 搜索 ZH/LA | 视角1–5 | 标签密度 | 矢状切面(lite) | 拖动旋转 | 滚轮缩放 | 右键平移 | 点击对焦 | I 隔离/退出 | Esc 取消隔离+搜索
         </div>
         <div
           style={{

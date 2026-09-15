@@ -12,6 +12,7 @@ import {
   CLIP_CONSTANT_STEP,
   DEFAULT_CLIP_CONSTANT,
 } from '../lib/clipPlane';
+import { CAMERA_PRESETS, type CameraPresetId } from '../lib/cameraPresets';
 
 interface LayerTogglesProps {
   visibleLayers: Set<Layer>;
@@ -34,10 +35,12 @@ interface LayerTogglesProps {
   onClipEnabledChange: (enabled: boolean) => void;
   clipConstant: number;
   onClipConstantChange: (constant: number) => void;
+  cameraPresetId: CameraPresetId;
+  onCameraPresetChange: (id: CameraPresetId) => void;
 }
 
 /**
- * Layer panel + legend + ligament teaching sub-group filter + sagittal clip (lite).
+ * Layer panel + legend + camera presets + ligament teaching sub-group filter + sagittal clip (lite).
  * UX-borrow (no code copy): human-atlas / hpfrei type-filter counts;
  * BioLens visibility chrome; Open Anatomy Studio bilingual clarity + clipping;
  * Visible Human Viewer / CT Education Skill cross-section habit.
@@ -63,6 +66,8 @@ export default function LayerToggles({
   onClipEnabledChange,
   clipConstant,
   onClipConstantChange,
+  cameraPresetId,
+  onCameraPresetChange,
 }: LayerTogglesProps) {
   const layers = getAllLayers();
 
@@ -138,6 +143,57 @@ export default function LayerToggles({
               </button>
             );
           })}
+        </div>
+      </div>
+
+      <div
+        style={{
+          marginBottom: '12px',
+          padding: '8px',
+          background: 'rgba(52, 211, 153, 0.08)',
+          border: '1px solid rgba(52, 211, 153, 0.35)',
+          borderRadius: '6px',
+        }}
+        role="group"
+        aria-label="教学视角 Camera presets"
+        title="UX-borrow: week-plan multi-view + Open Anatomy Studio preset habit (ideas only)"
+      >
+        <div style={{ fontSize: '11px', fontWeight: 600, color: '#d6d3d1', marginBottom: '6px' }}>
+          视角 · Views
+          <span style={{ fontWeight: 400, color: '#888', marginLeft: '6px' }}>1–5</span>
+        </div>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px' }}>
+          {CAMERA_PRESETS.map((opt) => {
+            const active = cameraPresetId === opt.id;
+            return (
+              <button
+                key={opt.id}
+                type="button"
+                data-camera-preset={opt.id}
+                onClick={() => onCameraPresetChange(opt.id)}
+                title={opt.title}
+                aria-pressed={active}
+                aria-label={`${opt.labelZh} ${opt.labelEn}`}
+                style={{
+                  flex: '1 1 28%',
+                  minWidth: '64px',
+                  padding: '4px 6px',
+                  fontSize: '11px',
+                  cursor: 'pointer',
+                  borderRadius: '4px',
+                  border: active ? '1px solid #34d399' : '1px solid #555',
+                  background: active ? 'rgba(52, 211, 153, 0.25)' : '#333',
+                  color: active ? '#d1fae5' : '#ccc',
+                }}
+              >
+                {opt.labelZh}
+                <span style={{ color: '#888', marginLeft: '3px', fontSize: '10px' }}>{opt.labelEn}</span>
+              </button>
+            );
+          })}
+        </div>
+        <div style={{ fontSize: '9px', color: '#777', marginTop: '4px', lineHeight: 1.35 }}>
+          背/跖/内/外教学预设（可看足底）。点击对焦仍可覆盖。
         </div>
       </div>
 

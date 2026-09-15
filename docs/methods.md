@@ -1,7 +1,7 @@
 # Methods
 
 **Project**: Right Foot Anatomy Atlas (Teaching-Grade Interactive 3D)  
-**Version**: Week 2 Day 4am / Phase 6 (teaching atlas in progress; see README + `docs/phase-6-self-review.md` live census; **129** entries / **124** unique; **53** main-tree / **71** BY-SA; 134 discrete GLBs; lazy preload + layer-sorted search + label density + sagittal clip lite + README teaching QA screenshots; TA2 soft-tissue still incomplete — **not a finished product**)  
+**Version**: Week 2 Day 4an / Phase 6 (teaching atlas in progress; see README + `docs/phase-6-self-review.md` live census; **129** entries / **124** unique; **53** main-tree / **71** BY-SA; 134 discrete GLBs; camera presets 1–5 + multi-view QA screenshots (9) + label density + sagittal clip lite; TA2 soft-tissue still incomplete — **not a finished product**)  
 **Date**: 2026-09-15  
 **Licenses**: Code MIT | Assets CC BY 4.0 / CC0 1.0 / CC BY-SA 4.0 (isolated)
 
@@ -9,7 +9,7 @@
 
 ## Overview
 
-This atlas integrates open-licensed anatomical meshes from BodyParts3D, Universiti Malaya, Z-Anatomy, and Open3D (BY-SA isolate) for interactive right-foot teaching. Live census (Day 4am / Phase 6): **129** entry-level rows / **124** unique structures (**53** main-tree CC BY/CC0 · **71** ShareAlike isolate) — osteology **26/26**; muscle **28** entries / **23** unique (BP3D+UM main + Open3D/ZA BY-SA DI·FB·FT·opponens·plantaris); vessel **29** (7 BP3D + 12 Open3D BY-SA + 10 ZA BY-SA veins/proximal); nerve **17** (6 ZA trunks + 11 Open3D fine/cutaneous); ligament/tendon **29** (2 BP3D long plantar + Achilles + 27 Open3D BY-SA). **Entry-level placeholders: 0**. This is **not** TA2-complete: no per-ray dorsal MTA; several vessels/nerves remain **grouped**; ankle bands incomplete vs named ATFL-set in some texts; gastroc/soleus bellies absent. See `docs/phase-6-self-review.md` and `docs/week2-ligament-fascia-search.md`.
+This atlas integrates open-licensed anatomical meshes from BodyParts3D, Universiti Malaya, Z-Anatomy, and Open3D (BY-SA isolate) for interactive right-foot teaching. Live census (Day 4an / Phase 6): **129** entry-level rows / **124** unique structures (**53** main-tree CC BY/CC0 · **71** ShareAlike isolate) — osteology **26/26**; muscle **28** entries / **23** unique (BP3D+UM main + Open3D/ZA BY-SA DI·FB·FT·opponens·plantaris); vessel **29** (7 BP3D + 12 Open3D BY-SA + 10 ZA BY-SA veins/proximal); nerve **17** (6 ZA trunks + 11 Open3D fine/cutaneous); ligament/tendon **29** (2 BP3D long plantar + Achilles + 27 Open3D BY-SA). **Entry-level placeholders: 0**. This is **not** TA2-complete: no per-ray dorsal MTA; several vessels/nerves remain **grouped**; ankle bands incomplete vs named ATFL-set in some texts; gastroc/soleus bellies absent. See `docs/phase-6-self-review.md` and `docs/week2-ligament-fascia-search.md`.
 
 **Soft disclaimer (teaching vs clinical)**: Meshes and Kabsch co-registration are intended **only** for anatomy education (spatial relationships, named structures, layer exploration, classroom cutaways). They are **not** validated for clinical diagnosis, treatment planning, surgical navigation, implant sizing, interventional guidance, or patient-specific modeling. Published landmark residuals support visualization grade only — cite transform JSONs: Open3D→BP3D mean ≈**2.61 mm** (max ≈4.41 mm MT1); UM→BP3D mean ≈**2.22 mm** (max ≈4.38 mm talus); ZA→BP3D mean ≈**1.81 mm** (max ≈3.52 mm calcaneus). Do **not** treat these as surgical registration error bounds.
 
@@ -265,7 +265,8 @@ Re-running a bake: load `scale` / `R` / `t_mm` from the transform JSON; apply `v
 Repo scripts (prefer these over ad-hoc one-offs):
 - `scripts/extract_open3d_ligaments.py` / `extract_open3d_nerves.py` / `extract_open3d_vessels.py` / `extract_open3d_muscles.py` — named `o` objects from literature `lower-limb.obj` → Kabsch-baked GLB under `by-sa/`
 - `scripts/integrity-audit.py` — `placeholder:false` ↔ `REAL_*_MODELS` ↔ GLB existence (+ orphan allowlist)
-- `scripts/screenshot-pipeline.mjs` — optional teaching QA screenshots → `docs/screenshots/` (`npm run screenshots`; **not** a product gallery)
+- `scripts/screenshot-pipeline.mjs` — optional teaching QA screenshots → `docs/screenshots/` (`npm run screenshots`; 9-shot pack incl. dorsal/plantar/medial/lateral; **not** a product gallery)
+- `src/lib/cameraPresets.ts` — teaching camera presets (默认/背/跖/内/外); FOOT_TEACHING_TARGET from BP3D bone midfoot
 - `scripts/expand-structures.py` — structures helpers (when used)
 - `update_structures_bp3d.py` / `update_structures_um.py` — historical structure wiring
 - `third_party/z-anatomy/*` — Blender inventory/export **recipes** (Blender 4.2.9 LTS may be local; Zenodo `.blend` gitignored)
@@ -327,7 +328,8 @@ Commit history documents asset decisions, `structures.json` evolution, and `Foot
 - **Ligaments/joints**: Capsule rendering low priority; named ATFL/CFL absent from ZA blend (Open3D BY-SA covers teaching set incompletely)
 
 ### Technical Enhancements
-- Screenshot QA pack: `npm run screenshots` → `docs/screenshots/`; Day 4am README embed (careful, no hype) — not product marketing
+- Screenshot QA pack: `npm run screenshots` → `docs/screenshots/` (9 shots Day 4an); README embed (careful, no hype) — not product marketing
+- Camera presets live; further cinematic angles optional only
 - Material / animation / WebXR remain optional future work
 
 ### Licensing Evolution
@@ -482,3 +484,11 @@ Wrote `docs/phase-6-self-review.md` (census 129/124; 53 main / 71 BY-SA; residua
 1. **Phase-6 target #3**: Embedded the existing five-shot teaching QA pack into `README.md` (table + images) with explicit soft-tissue / BY-SA / not-finished-product caveats. No new meshes. Pack path: `docs/screenshots/` (`npm run screenshots`).
 2. **Phase-6 target #4 (docs)**: Cloud Agent handback checklist in `docs/phase-6-self-review.md` — deferred browser/Zenodo/Blender harvest and multi-view capture; resume only with integrity-audit + vitest + build green; prefer CC0/BY over SA spam.
 3. Honesty: teaching atlas in progress — **no finished-product claim**.
+
+
+## Day 4an — camera presets + multi-view screenshots + dig (2026-09-15)
+
+1. **UX**: Camera presets (默认/背侧/跖侧/内侧/外侧) · keys `1`–`5`; full polar orbit for plantar sole teaching; midfoot target from BP3D centroids.
+2. **Multi-view screenshots**: Pipeline → 9 shots; README embeds updated; **not** a finished-product gallery.
+3. **Dig**: MedShapeNetCore CC BY (no foot soft); FootNet CC BY (2D only); SimTK ankle-foot license unclear — **0** integrate; no SA spam.
+4. Census unchanged **129/124**. Honesty: teaching atlas in progress — **no finished-product claim**.

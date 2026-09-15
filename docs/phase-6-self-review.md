@@ -70,7 +70,8 @@ These residuals support **classroom visualization**, not implant planning or int
 | **Badges** | Live | StructurePanel **主树 · Main** vs **ShareAlike**; layer legend 主/SA chips |
 | **Click-to-focus** | Live | Camera frames selected mesh AABB |
 | **Lazy GLB preload** | Live | Bones eager; soft-tissue layers preload when visible |
-| **Screenshot pipeline** | Live pack + README embed (Day 4am) | `scripts/screenshot-pipeline.mjs` → `docs/screenshots/` embedded in README carefully; optional QA pack — **not** a product gallery claim |
+| **Screenshot pipeline** | Live pack + README embed (Day 4am) + multi-view expand (Day 4an) | `scripts/screenshot-pipeline.mjs` → `docs/screenshots/` (9 shots: 5 layer/clip + 4 camera presets); embedded in README carefully — **not** a product gallery claim |
+| **Camera presets** | Live (Day 4an) | 默认 / 背侧 / 跖侧 / 内侧 / 外侧 · keys `1`–`5`; full polar orbit for plantar sole teaching |
 
 ---
 
@@ -110,6 +111,14 @@ Recent digs (Day 4ah–4aj) logged UX-borrow / reject sources (LABIM3D, UltraBon
 - **Target #4 (docs)**: Added Cloud Agent handback note below — deferred browser/Zenodo/heavy Blender / multi-view capture resume checklist when quota returns.
 
 
+
+## Progress note (Day 4an)
+
+- **UX**: Teaching **camera presets** (默认 / 背侧 / 跖侧 / 内侧 / 外侧) + keys `1`–`5`; OrbitControls `maxPolarAngle = π` so plantar sole view works. Midfoot target from BP3D bone centroids (scene = mm × 0.01).
+- **Multi-view screenshots**: Pipeline expanded to **9** shots (`06`–`09` dorsal/plantar/medial bone + lateral all-layers); README table + embeds updated with not-finished-product caveats.
+- **Target #1 dig (continued)**: MedShapeNetCore (CC BY — no foot DI/NV files); FootNet (CC BY — 2D smartphone segmentation only); SimTK OpenSim ankle-foot (license unclear “Model”). **0** meshes integrated; no SA spam.
+- **Methods**: version Day 4an; camera-preset + multi-view protocol; census unchanged 129/124.
+
 ## Cloud Agent handback (when quota returns)
 
 Resume only with green local gates (`python3 scripts/integrity-audit.py`, `npx vitest run`, `npm run build`). Prefer CC0/CC BY finds over SA volume.
@@ -118,7 +127,7 @@ Resume only with green local gates (`python3 scripts/integrity-audit.py`, `npx v
 |---------------|--------------|------------------|
 | Browser-session downloads (e.g. Cloudflare-gated packs) | Scripted fetch 403 / session required | Cloud Agent browser; verify license page before any wire |
 | Zenodo Z-Anatomy `.blend` heavy re-harvest | Large binary; Blender 4.2.9 local; ankle bands absent in prior blend | Re-inventory named ATFL/CFL/deltoid/retinacula only if new blend revision claims them; do **not** re-wire BP3D-covered long plantar/Achilles |
-| Multi-view / additional screenshot angles | Local pack has 5 teaching views | Optional extra camera poses for expert review — still not a marketing gallery |
+| Multi-view / additional screenshot angles | Day 4an added dorsal/plantar/medial/lateral (9-shot pack) | Further angles optional; still not a marketing gallery |
 | Further CC0/BY DI / per-ray MTA dig | Day 4al dry (0 integrate) | Re-check TotalSegmentator / HRA / new open CT foot segmentations; skip NC |
 
 **Handback rule**: integrity-audit + vitest + build green; update census in README/methods/phase-6 if anything wires; **no** finished-product claims; **no** low-value SA mesh spam.

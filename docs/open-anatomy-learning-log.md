@@ -884,3 +884,31 @@ Prefer **CC0/CC BY** finds for DI / proximal·fine arteries / nerve·ligament re
 - Methods polish this same pass (census + disclaimer + residual citations + license matrix) — see `docs/methods.md` / daily-log Day 4al.
 
 **No finished-product claim.**
+
+---
+
+## Session additions (2026-09-15 · Day 4an — camera presets + dig)
+
+### UX applied
+
+| Change | Detail |
+|--------|--------|
+| **Camera view presets** | Layer panel: **默认 / 背侧 / 跖侧 / 内侧 / 外侧** (keys `1`–`5`). Midfoot target from BP3D bone centroids; full `maxPolarAngle` so plantar sole teaching works. |
+| Source | **UX-borrow** (ideas only) from week-plan multi-view item + Open Anatomy Studio / Anatomy Atlas RU preset habit + FootNet multi-view naming — no third-party camera code copied. |
+| Files | `src/lib/cameraPresets.ts` (+ vitest), `CameraPresetApply.tsx`, wired App / LayerToggles / Viewport |
+| Screenshots | Pipeline multi-view expand → 9 shots (`06`–`09`) |
+
+### NEW license-verified projects (≥3)
+
+| # | Project | URL | License verified | Foot relevance | Decision |
+|---|---------|-----|------------------|----------------|----------|
+| **42** | **MedShapeNetCore** | Zenodo DOI **10.5281/zenodo.10609965** | Dataset **CC BY 4.0** (Zenodo API `license.id` = `cc-by-4.0` verified 2026-09-15) | NPZ packs: ToothFairy / thoracic aorta / teeth / pulmonary / FLARE / KiTS / FaceVR / coronary — **no** foot DI, nerve, ligament, or per-ray MTA pack in listed files | **monitor** for future organ search API only. **reject** (foot soft-tissue teaching) |
+| **43** | **FootNet** (multi-view smartphone foot segmentation) | Zenodo DOI **10.5281/zenodo.20457252** · medRxiv 2026.07.15.26358117 | Dataset **CC BY 4.0** (Zenodo API verified 2026-09-15) | 191 image–mask pairs (dorsal/medial/plantar × L/R) — **2D** clinical smartphone segmentation, not named 3D meshes | **UX-borrow** (multi-view naming). **reject** as mesh source |
+| **44** | **OpenSim ankle-foot musculoskeletal model** (Sikidar / Kalyanasundaram) | https://simtk.org/projects/ankle-foot | SimTK page lists **“License: Model”** — **not** a clear CC0/CC BY SPDX as of 2026-09-15 | Rich ligament/muscle DOF biomechanics model (CT/MRI-derived) — promising anatomy coverage **if** license clarifies | **reject until** explicit CC0/CC BY (or compatible) download terms; do not wire |
+
+### Outcome
+
+- **0** new CC0/CC BY meshes integrated (DI still Open3D BY-SA; per-ray MTA still absent).
+- Camera presets + multi-view QA pack shipped; census unchanged **129/124**.
+- **No finished-product claim.**
+

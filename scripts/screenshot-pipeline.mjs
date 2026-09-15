@@ -40,33 +40,65 @@ const LAYER_LABELS = [
   '韧带/腱 Ligament/Tendon',
 ];
 
+async function setClipLite(page, wantOn) {
+  const btn = await page.$('[aria-label="矢状切面 Sagittal clip lite"] button');
+  if (!btn) {
+    console.warn('[screenshot-pipeline] missing clip lite button');
+    return;
+  }
+  const pressed = await page.evaluate((el) => el.getAttribute('aria-pressed'), btn);
+  const isOn = pressed === 'true';
+  if (isOn !== wantOn) {
+    await btn.click();
+    await sleep(400);
+  }
+}
+
+async function setCameraPreset(page, id) {
+  const btn = await page.$(`[data-camera-preset="${id}"]`);
+  if (!btn) {
+    console.warn(`[screenshot-pipeline] missing camera preset button: ${id}`);
+    return;
+  }
+  await btn.click();
+  await sleep(800);
+}
+
 const SHOTS = [
   {
     id: '01-default-all-layers',
     note: 'Default view — all teaching layers on',
     setup: async (page) => {
+      await setClipLite(page, false);
       await setLayers(page, new Set(LAYER_LABELS));
+      await setCameraPreset(page, 'default');
     },
   },
   {
     id: '02-bone-only',
-    note: 'Bone layer only',
+    note: 'Bone layer only (default oblique)',
     setup: async (page) => {
+      await setClipLite(page, false);
       await setLayers(page, new Set(['骨骼 Bone']));
+      await setCameraPreset(page, 'default');
     },
   },
   {
     id: '03-muscle-only',
     note: 'Muscle layer only (intrinsics + extrinsics teaching set)',
     setup: async (page) => {
+      await setClipLite(page, false);
       await setLayers(page, new Set(['肌肉 Muscle']));
+      await setCameraPreset(page, 'default');
     },
   },
   {
     id: '04-nerve-bysa',
     note: 'Nerve layer only — BY-SA isolate visible in panel/legend',
     setup: async (page) => {
+      await setClipLite(page, false);
       await setLayers(page, new Set(['神经 Nerve']));
+      await setCameraPreset(page, 'default');
     },
   },
   {
@@ -74,12 +106,45 @@ const SHOTS = [
     note: 'Sagittal clip lite on (teaching cutaway, not clinical MPR)',
     setup: async (page) => {
       await setLayers(page, new Set(LAYER_LABELS));
-      const btn = await page.$('[aria-label="矢状切面 Sagittal clip lite"] button');
-      if (btn) {
-        const pressed = await page.evaluate((el) => el.getAttribute('aria-pressed'), btn);
-        if (pressed !== 'true') await btn.click();
-        await sleep(500);
-      }
+      await setCameraPreset(page, 'default');
+      await setClipLite(page, true);
+      await sleep(400);
+    },
+  },
+  {
+    id: '06-bone-dorsal',
+    note: 'Bone only — dorsal preset (+Z)',
+    setup: async (page) => {
+      await setClipLite(page, false);
+      await setLayers(page, new Set(['骨骼 Bone']));
+      await setCameraPreset(page, 'dorsal');
+    },
+  },
+  {
+    id: '07-bone-plantar',
+    note: 'Bone only — plantar preset (−Z); sole teaching view',
+    setup: async (page) => {
+      await setClipLite(page, false);
+      await setLayers(page, new Set(['骨骼 Bone']));
+      await setCameraPreset(page, 'plantar');
+    },
+  },
+  {
+    id: '08-bone-medial',
+    note: 'Bone only — medial preset (+X / hallux side)',
+    setup: async (page) => {
+      await setClipLite(page, false);
+      await setLayers(page, new Set(['骨骼 Bone']));
+      await setCameraPreset(page, 'medial');
+    },
+  },
+  {
+    id: '09-all-lateral',
+    note: 'All layers — lateral preset (−X); multi-view expand',
+    setup: async (page) => {
+      await setClipLite(page, false);
+      await setLayers(page, new Set(LAYER_LABELS));
+      await setCameraPreset(page, 'lateral');
     },
   },
 ];
@@ -230,6 +295,8 @@ async function main() {
         'Soft-tissue layers remain incomplete; nerve / many soft meshes are BY-SA isolate.',
         '',
         'See `manifest.json` for shot list and generation timestamp.',
+        '',
+        'Also linked from root `README.md` (Teaching QA screenshots) for expert review — still **not** a product gallery.',
         '',
       ].join('\n'),
     );
