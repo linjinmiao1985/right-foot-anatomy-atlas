@@ -5,7 +5,7 @@ Living log of open-source human anatomy projects studied for the right-foot atla
 (CC0 / CC BY into main tree; BY-SA isolated under `public/models/right-foot/by-sa/` + NOTICE;
 reject NC / unknown / All Rights Reserved).
 
-**Last updated**: 2026-09-15 (Day 4ap)  
+**Last updated**: 2026-09-15 (Day 4aq ontology + dig)  
 **Status**: ongoing research — not a finished catalog.
 
 ---
@@ -936,4 +936,38 @@ Prefer **CC0/CC BY** finds for DI / proximal·fine arteries / nerve·ligament re
 
 - **0** new meshes integrated; prefs persist shipped; census unchanged **129/124**.
 - **No finished-product claim.**
+
+
+---
+
+## Session additions (2026-09-15 · Day 4aq — ontology expand + dig)
+
+### Ontology map expand (code)
+
+| Field | Detail |
+|-------|--------|
+| **File** | `src/lib/ontologyIds.ts` |
+| **Sources** | `docs/terminology.md` (classic osteology FMA); `structures.json` TA2 in summaries; `public/models/right-foot/manifest.json` + `FootModel.tsx` BP/FMA for mesh-linked bones/muscles/vessels/ligaments |
+| **Bones** | All **26** osteology entries now carry TA2 + BP; FMA filled from terminology (tarsals/MT/hallux) or manifest (digits II–V + sesamoid) — no invented codes |
+| **Soft tissue** | Added citable FMA/BP for major wired muscles (UM/BP3D intrinsics, PI, DI grouped, lumbricals, EHB/FDMB/heads) and main vessels (incl. arch/arcuate/PTA/fibular FMA); long plantar FMA44249 |
+| **Honesty** | Still sparse vs full `structures.json` (nerves/fine vessels/most BY-SA ligaments omit unknown schemes). Not TA2-complete soft tissue. |
+
+### NEW license-verified projects (≥2)
+
+| # | Project | URL | License verified | Foot relevance | Decision |
+|---|---------|-----|------------------|----------------|----------|
+| **47** | **Anatomy Viewer** (paulvanmetre/anatomy-viewer) | https://github.com/paulvanmetre/anatomy-viewer · demo https://paulvanmetre.github.io/anatomy-viewer/ | App **CC BY-SA 4.0** (README Licensing); BodyParts3D meshes **CC BY-SA 2.1 Japan** (Moerman mirror path — **not** LSDB Archive CC BY 4.0) | Upper-limb v0 (bones/muscles real BP3D; **schematic** vessels flagged in-app because BP3D lacks arm vessels) — **no** right-foot DI/NV pack | **UX-borrow** (schematic-vs-scanned honesty; layerable systems). **isolate-SA** / **reject** mixing Anatomography BY-SA 2.1 JP path into main-tree CC BY claim |
+| **48** | **ANATOMED MCP** (pitfa19/anatomed-mcp) | https://github.com/pitfa19/anatomed-mcp · connector https://anatomed-mcp.vercel.app/mcp | Whole work **CC BY-SA 4.0** (LICENSE + README); models Z-Anatomy **CC BY-SA 4.0** ← BP3D **CC BY-SA 2.1 Japan** (NOTICE provenance) | Region-isolated R3F widget + MCP `show_anatomy_region`; hand/spine/nerve demos — **no** curated right-foot intrinsic soft-tissue pack claimed | **UX-borrow** (region cap / explicit decline of unavailable substructures). Meshes: **isolate-SA** only. **reject** for main-tree DI |
+
+### Related dig (not counted as new main-tree candidates)
+
+| Project | License | Note |
+|---------|---------|------|
+| AbUndMax/BodyParts3D_Anatomy_Explorer | **No SPDX / LICENSE file** (JavaFX course explorer; BP3D concept graph) | **monitor** until redistribution terms clear |
+| Dare-MSA/body-anatomy-3d-viewer | CC BY-SA 4.0 | Fork of hpfrei (already #2) — not a new lineage |
+
+### Outcome
+
+- Ontology coverage expanded from cited in-repo sources only; **0** new meshes.
+- **No finished-product claim.** Prefer LSDB Archive CC BY for main-tree BP3D; treat Anatomography BY-SA 2.1 JP mirrors as isolate-only.
 
