@@ -1402,3 +1402,16 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 4. **QA FAIL all sets** — no integrate: tarsal-only still gastroc wrong-side; LE-augmented sets fix laterality but foot mean residuals ≈**7–16 mm** and/or gastroc Achilles distal10 ≥15 mm (best near-miss `H_ankle_focus`: foot ≈8.8/11.9 mm; gastroc lat Achilles ≈21.6 mm).
 5. **Option B**: wrote `docs/cloud-agent-handback.md` (phase-7 target #2); refreshed watchlist / phase-7 / methods / spatial QA / muscle census. **0** GLB wire; **0** SA spam; **no** finished-product claim.
 
+
+## Day 4bb (2026-09-15) — Open mining ≥3 NEW (Andreassen skipped)
+
+**Target**: Phase-7 / handback quality work other than Andreassen Kabsch — open mining ≥3 new license-verified projects. Prefer CC0/BY soft finds; else UX-borrow / monitor / reject. **0 integrate** without spatial QA.
+
+1. Pulled `65d96cd` (already current).
+2. **Skipped** Andreassen gastroc/soleus (Day 4az+4ba blocked track).
+3. **New digs**: #58 OMFAtlas (MIT + schematic honesty UX); #59 Anatria-3D (Apache-2.0; male BY-SA / female CC BY unmerged); #60 OPANEX (Apache-2.0 quiz/instructor platform); #61 ICL LE femur/tibia surfaces (Zenodo CC BY — bones only).
+4. Soft gaps (DI / per-ray MTA / nerve·ligament main-tree / bellies) still **dry**. Related: anatomi-simulatoru MIT+BY-SA; sushruta ARR app — reject code.
+5. Docs: learning-log #58–#61; watchlist; phase-7; handback; methods pointer.
+6. Checks: integrity-audit + vitest + build; commit + push.
+7. **Honesty**: teaching atlas in progress — **no finished-product claim**. Census unchanged. **0** meshes / no SA spam.
+

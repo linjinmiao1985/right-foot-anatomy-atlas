@@ -5,7 +5,7 @@ Living log of open-source human anatomy projects studied for the right-foot atla
 (CC0 / CC BY into main tree; BY-SA isolated under `public/models/right-foot/by-sa/` + NOTICE;
 reject NC / unknown / All Rights Reserved).
 
-**Last updated**: 2026-09-15 (Day 4ay active dig vs CC0 soft-tissue watchlist; digs through #57)  
+**Last updated**: 2026-09-15 (Day 4bb open mining digs through #61; Andreassen belly track still blocked — no Kabsch this pass)  
 **Status**: ongoing research — not a finished catalog.
 
 ---
@@ -1113,3 +1113,42 @@ Downloaded VHM Final STLs (CC BY 4.0). Foot-tarsal Kabsch mean residual ≈2.3 m
 - Real BP3D tibia/fibula/patella/femur from local cache + VH bones; **0** integrate.
 - Handback brief: `docs/cloud-agent-handback.md`.
 
+
+## Session additions (2026-09-15 · Day 4bb — open mining ≥3 NEW; Andreassen skipped)
+
+### Target (phase-7 / handback priority #1 alternate)
+
+Active open mining for **new** license-verified projects beyond #57. **Skip** Andreassen gastroc/soleus Kabsch this pass (Day 4az+4ba exhausted). Prefer CC0/BY soft finds for DI / per-ray MTA / nerve·ligament main-tree; otherwise log UX-borrow / monitor / reject honestly. **0 integrate** unless clear CC0/BY **and** spatial-QA ready.
+
+### NEW license-verified projects (≥3)
+
+| # | Project | URL | License verified | Foot relevance | Decision |
+|---|---------|-----|------------------|----------------|----------|
+| **58** | **OMFAtlas** (choxos/OMFAtlas) · demo https://omfatlas.xera.ac | https://github.com/choxos/OMFAtlas | Code **MIT** (`LICENSE` verified 2026-09-15); BodyParts3D 4.0 **CC BY 4.0**; adapted BP3D 3.0 facial meshes retain **CC BY-SA 2.1 JP**; dental packs mixed CC BY / **CC BY-NC-SA** / **CC BY-SA** (README + `public/models/dental/ATTRIBUTION.md`) | Head/neck + oral/maxillofacial explorer — **no** right-foot DI/NV pack. Strong **schematic anatomy** honesty: 77 drawn NV/gland/sinus structures labeled schematic, one switch turns the set off, tests pin bone-anchoring rules | **UX-borrow** (schematic-vs-source toggle + anchoring tests + NC/SA dental boundary discipline). **reject** as foot mesh source; **reject** NC dental packs for main tree |
+| **59** | **Anatria-3D** (Nurkan1/Anatria-3D) | https://github.com/Nurkan1/Anatria-3D | Code **Apache-2.0** (`LICENSE` verified 2026-09-15); male atlas **CC BY-SA 4.0** (Z-Anatomy ← BP3D BY-SA 2.1 JP); female atlas **CC BY 4.0** (HRA united-female v1.5) — `NOTICE` + `THIRD-PARTY-NOTICES.txt` keep SA and BY **unmerged** | Local-first Tauri atlas + AI tutor that drives the viewport; male = ZA/BP3D pool already known; female = HRA organs (no skeletal muscle / peripheral nerve). **No** curated right-foot DI/per-ray MTA pack | **UX-borrow** (tutor→viewport pin; dual-license file separation; About/footer honesty). Male meshes: **isolate-SA** only. **reject** copying united HRA/ZA as right-foot soft substitute |
+| **60** | **Open Anatomy Explorer (OPANEX)** (biocat-ugent/Open-Anatomy-Explorer) | https://github.com/biocat-ugent/Open-Anatomy-Explorer · https://opanex.discover.ilabt.imec.be · JVCM 2024 DOI 10.1080/17453054.2024.2446764 | Platform code **Apache-2.0** (`LICENSE` verified 2026-09-15); published models are **per-upload** institute content (not a bundled CC0/BY foot soft pack) | Student + instructor UIs; upload/label/quiz/share 3D models across institutes — teaching workflow platform, **not** an elemental right-foot soft-tissue library | **UX-borrow** (instructor/student split; quiz-on-labeled-mesh; import/export library habit). **monitor** if any future OPANEX-shared foot soft pack states clear CC0/BY. **reject** assuming platform = mesh source |
+| **61** | **Imperial College London femur + tibia surface mesh set** | Zenodo DOI **10.5281/zenodo.167808** | **CC BY 4.0** (Zenodo API `license.id` = `cc-by-4.0` verified 2026-09-15) | MRI-segmented L/R femur + tibia/fibula surface meshes (35 volunteers) — **LE osteology only**; **0** soft/muscle/NV files | **monitor** for LE bone registration / proportion research (docs-only). **reject** soft DI/NV/MTA / belly teaching. **Not** a Kabsch retry this pass |
+
+### Related dig (not counted as new main-tree soft candidates)
+
+| Project | License | Note |
+|---------|---------|------|
+| DrMuratAltun/anatomi-simulatoru | Code **MIT**; `systems/*.glb` **CC BY-SA 4.0** (Z-Anatomy ← BP3D) | Turkish full-body browser simulator — UX-borrow TR UI; meshes **isolate-SA** / same ZA pool |
+| atultiwari/sushruta-anatomy | App source **All rights reserved** (Vedant); `assets/` **CC BY-SA 4.0** (ZA/BP3D/Anatomed/Anatria lineage) | Local-first study assistant — **reject** app code reuse; assets **isolate-SA** only if ever considered |
+| JohanBellander/BodyExplorer · menoc61/x-anatomy · jixiangying/anatomy | No clear root SPDX / unset | BP3D explorers — **monitor** until LICENSE file present |
+| skaiy/Wild-human-atlas | **MIT** (ashemag fork rename) | Same BP3D pool — not a new lineage beyond prior Human Atlas forks |
+
+### Soft-gap check (DI / per-ray MTA / nerve·ligament main-tree / bellies)
+
+| Gap | Day 4bb result |
+|-----|----------------|
+| Dorsal interossei CC0/BY | **Still dry** — no new elemental DI pack |
+| Per-ray MTA / digitals | **Still dry** — pressure / kinematics / hallux datasets only |
+| Nerve / ligament main-tree CC0/BY | **Still dry** — schematic honesty UX from OMFAtlas is idea-only |
+| Gastroc/soleus | Andreassen still **blocked (alignment)** — **no** Kabsch this pass |
+
+### Outcome
+
+- Learning log **#58–#61** added; census unchanged (**129/124**; ontology **126/129**).
+- **0** meshes integrated; **0** SA spam; Andreassen track not re-opened.
+- **No finished-product claim.**

@@ -1,10 +1,10 @@
 # CC0 / CC BY soft-tissue watchlist (monitor · not integrated)
 
-**Date**: 2026-09-15 · Day 4ba / Phase 7  
+**Date**: 2026-09-15 · Day 4bb / Phase 7  
 **Policy**: Prefer **CC0 / CC BY** main-tree replacements that shrink ShareAlike surface. Dig + verify license page / SPDX / Zenodo `license.id` **before** any wire. **Reject** NC, unclear “License: Model”, and All Rights Reserved. BY-SA only under `by-sa/` + NOTICE — do not spam SA volume for its own sake.  
-**Status**: Living watchlist — **0** new soft-tissue meshes integrated from this list as of Day **4ba**. Andreassen gastroc/soleus **download + Kabsch + Option A LE retry**; **blocked** (see `third_party/andreassen/`). Teaching atlas in progress — **not** a finished-product claim.
+**Status**: Living watchlist — **0** new soft-tissue meshes integrated from this list as of Day **4bb**. Andreassen gastroc/soleus still **blocked** (Day 4az+4ba); Day 4bb open mining #58–#61 found **no** CC0/BY soft wire. Teaching atlas in progress — **not** a finished-product claim.
 
-Companion: `docs/open-anatomy-learning-log.md` (#38–#57 and earlier), `docs/phase-7-self-review.md`.
+Companion: `docs/open-anatomy-learning-log.md` (#38–#61 and earlier), `docs/phase-7-self-review.md`.
 
 ---
 
@@ -33,6 +33,7 @@ Companion: `docs/open-anatomy-learning-log.md` (#38–#57 and earlier), `docs/ph
 | **#50** HuBMAP Female v1.5 / Femora | **CC BY 4.0** | Female whole-body united GLB | Foot coverage vs our BP3D male foot — naming only unless elemental soft appears | **monitor**; **reject** united GLB as right-foot substitute |
 | **#55** Grant et al. foot bone SSMs (Zenodo 10.5281/zenodo.3464747) | **CC BY 4.0** (Zenodo API Day 4ay) | MRI-derived STLs: talus / calcaneus / midfoot / 1st MT (L/R cohorts) | Osteology SSM QA only — **0** soft files in record | **monitor** bones; **reject** soft teaching |
 | Blender Studio Human Base Meshes — foot (Commons CC0 STL) | **CC0 1.0** | High-res **skin/surface** foot | Silhouette UX only — no named DI/NV | **monitor** surface; **reject** anatomy teaching DI/NV |
+| **#61** Imperial College London femur+tibia surfaces (Zenodo 10.5281/zenodo.167808) | **CC BY 4.0** (Zenodo API Day 4bb) | MRI LE femur/tibia/fibula surfaces (35 volunteers) | LE osteology / proportion research only — **0** soft | **monitor** LE bones; **reject** soft teaching |
 | Future Zenodo / open CT foot soft segmentations | TBD | Named DI, vessels, ligaments | Only if SPDX CC0/BY and elemental teaching value | **monitor** dig queue |
 
 ---
@@ -50,6 +51,9 @@ Companion: `docs/open-anatomy-learning-log.md` (#38–#57 and earlier), `docs/ph
 | **#56** FOAMRIS MRI OA atlas (Leeds DOI **10.5518/1568**) | **CC BY 4.0** but **PDF imaging scoring atlas** — not elemental 3D soft meshes |
 | Sheffield ORDA / Figshare lower-limb older-women muscles (9934055) | **CC BY-NC 4.0** (Figshare API `license.name` Day 4ay) — NC |
 | OpenGameArt “Foot Base Model” (Vinrax) | CC0/CC-BY **game skin** base — not named DI/NV teaching anatomy |
+| **#58** OMFAtlas dental NC/SA packs (Open-Full-Jaw / ToothFairy3) | **CC BY-NC-SA** / **CC BY-SA** dental — not foot soft; NC blocks main tree |
+| **#59** Anatria male ZA GLBs | **CC BY-SA 4.0** Z-Anatomy pool — isolate-SA only; not a new DI/NV source |
+| Day 4bb pressure/kinematics Zenodo hits (CAD WALK, PAPPI, plantar images) | CC BY/CC0 **biomechanics / pressure** — not elemental 3D soft meshes |
 
 ---
 
@@ -101,6 +105,14 @@ Companion: `docs/open-anatomy-learning-log.md` (#38–#57 and earlier), `docs/ph
 
 ---
 
+## Day 4bb open mining (Andreassen skipped)
+
+| Check | Result |
+|-------|--------|
+| New CC0/BY soft packs for DI / per-ray MTA / nerves / ligaments / bellies | **None** (#58–#60 UX/platform; #61 LE bones only) |
+| Andreassen Kabsch | **Not re-opened** this pass |
+| Meshes integrated | **0** |
+
 ## Bottom line
 
-Watchlist tracks **where a CC0/BY soft find would matter** (DI, per-ray MTA, bellies, SA shrink). Day **4az** download + Kabsch and Day **4ba** Option A LE retry — **alignment blocker**; **0** meshes integrated. Handback: `docs/cloud-agent-handback.md`. DI / per-ray MTA / nerve·ligament main-tree replacements remain **dry**. **No finished-product claim**.
+Watchlist tracks **where a CC0/BY soft find would matter** (DI, per-ray MTA, bellies, SA shrink). Day **4az**+**4ba** Andreassen alignment blocker unchanged; Day **4bb** mining #58–#61 — **0** soft wire. Handback: `docs/cloud-agent-handback.md`. DI / per-ray MTA / nerve·ligament main-tree replacements remain **dry**. **No finished-product claim**.

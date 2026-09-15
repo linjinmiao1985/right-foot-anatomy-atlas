@@ -1,6 +1,6 @@
 # Cloud Agent handback — Phase 7 resume brief
 
-**Date**: 2026-09-15 · Day **4ba**  
+**Date**: 2026-09-15 · Day **4bb**  
 **Branch**: `cursor/right-foot-anatomy-atlas-mvp-af85`  
 **Status**: Teaching-grade atlas **in progress** — **not** a finished-product claim  
 **Companion**: `docs/phase-7-self-review.md`, `docs/cc0-soft-tissue-watchlist.md`, `third_party/andreassen/`
@@ -19,7 +19,7 @@ Prefer **CC0 / CC BY** over further ShareAlike volume. Update census in README /
 
 ---
 
-## Live census freeze (unchanged through Day 4ba)
+## Live census freeze (unchanged through Day 4bb)
 
 | Metric | Value |
 |--------|-------|
@@ -62,9 +62,14 @@ Osteology complete (26/26). Soft tissue **teaching-useful and incomplete**.
 | Browser / Cloudflare-gated packs | Scripted fetch 403 / session | Cloud Agent browser; verify license page before wire |
 | Zenodo Z-Anatomy `.blend` heavy re-harvest | Large binary; ankle bands absent prior | Re-inventory ATFL/CFL/deltoid/retinacula **only if** new revision claims them |
 | Further multi-view screenshots | 9-shot pack live | Optional angles only — not a marketing gallery |
-| CC0/BY DI / per-ray MTA / nerve·ligament main-tree | Watchlist dry through Day 4ay (#38–#57) | Re-check new open CT foot soft segmentations; **skip NC** / “License: Model” |
+| CC0/BY DI / per-ray MTA / nerve·ligament main-tree | Watchlist dry through Day 4bb (#38–#61) | Re-check new open CT foot soft segmentations; **skip NC** / “License: Model” |
 
 ---
+
+## Day 4bb done this handoff
+
+- Open mining **#58–#61** (OMFAtlas / Anatria-3D / OPANEX / ICL LE bones) — **0** mesh wire; soft gaps still dry.
+- Andreassen Kabsch **not** re-opened.
 
 ## Suggested next agent priorities (pick one; quality over volume)
 
@@ -91,4 +96,4 @@ Osteology complete (26/26). Soft tissue **teaching-useful and incomplete**.
 - `python3 scripts/integrity-audit.py` · `npx vitest run` · `npm run build` (run on commit pass)
 - Commit + push on branch
 
-**Bottom line**: Handback brief ready. Andreassen belly track **documented blocked** after real BP3D LE landmark retry. Census unchanged. Teaching atlas in progress — **no finished-product claim**.
+**Bottom line**: Handback brief current through Day **4bb** mining (#58–#61, 0 wire). Andreassen belly track remains **documented blocked**. Census unchanged. Teaching atlas in progress — **no finished-product claim**.

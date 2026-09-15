@@ -96,7 +96,7 @@ These residuals support **classroom visualization**, not implant planning or int
 
 ## Open mining count highlights
 
-Living log: `docs/open-anatomy-learning-log.md` — **57** numbered license-verified projects (#1–#57) as of Day 4ay.
+Living log: `docs/open-anatomy-learning-log.md` — **61** numbered license-verified projects (#1–#61) as of Day 4bb.
 
 | Window | Highlights | Mesh integrate |
 |--------|------------|----------------|
@@ -182,7 +182,7 @@ Maintain a short **monitor/reject** list (see `docs/cc0-soft-tissue-watchlist.md
 
 ## Bottom line
 
-Phase 7 freezes a week-quality honest board: census **129** / **124**; ontology **126** / **129**; UX (prefs · hide · help · clip · cameras · sub-groups · screenshots) live; BY-SA **71/124**; open mining through **#57** with **0** late soft integrates. Treat this as a **checkpoint for journal prep / handback / CC0 watch** — **no finished-product claim**.
+Phase 7 freezes a week-quality honest board: census **129** / **124**; ontology **126** / **129**; UX (prefs · hide · help · clip · cameras · sub-groups · screenshots) live; BY-SA **71/124**; open mining through **#61** with **0** late soft integrates. Treat this as a **checkpoint for journal prep / handback / CC0 watch** — **no finished-product claim**.
 
 ## Progress note (Day 4ba)
 
@@ -190,3 +190,8 @@ Phase 7 freezes a week-quality honest board: census **129** / **124**; ontology 
 - **Option B / target #2**: New `docs/cloud-agent-handback.md` resume brief (gates, census freeze, Andreassen exhausted track, deferred table).
 - **No** SA spam; **no** finished-product claim.
 
+## Progress note (Day 4bb)
+
+- **Open mining (handback priority alternate)**: Logged **#58 OMFAtlas**, **#59 Anatria-3D**, **#60 OPANEX**, **#61 ICL LE femur/tibia meshes** — license-verified; **0** soft-tissue wire; DI / per-ray MTA / nerve·ligament main-tree still **dry**.
+- **Andreassen**: intentionally **skipped** this pass (Day 4az+4ba exhausted).
+- Watchlist + handback + methods pointers refreshed. **No** SA spam; **no** finished-product claim.
