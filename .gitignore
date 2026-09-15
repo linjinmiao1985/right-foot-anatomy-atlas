@@ -49,3 +49,8 @@ third_party/z-anatomy/*
 third_party/andreassen/downloads/
 third_party/andreassen/raw_stl/
 third_party/andreassen/tmp/
+
+# Henson Sheffield — keep metadata/NOTICE only; never commit DICOM volumes
+third_party/henson-sheffield/*.dcm
+third_party/henson-sheffield/downloads/
+third_party/henson-sheffield/sandbox/

@@ -1337,3 +1337,39 @@ See `docs/cc0-soft-tissue-watchlist.md` § Henson Sheffield CC0 DICOM path. ORDA
 - **0** meshes integrated; **0** SA spam; Andreassen not re-opened; Utah not integrated.
 - **No finished-product claim.**
 
+
+## Session additions (2026-09-15 · Day 4bi — Sheffield sandbox feasibility + dig ≥3)
+
+### Sheffield sandbox feasibility (#66 deepen — docs + metadata)
+
+See `docs/henson-sheffield-sandbox-feasibility.md`. Figshare API: **no** small DICOM sample; min label volume ≈**76.4 MB**; full labels **5.65 GB** unnecessary for one-subject MC POC. Fetched only readmes + MIT `multi_atlas_segmentation.m` into `third_party/henson-sheffield/` (**0** `.dcm`). **0** GLB wire.
+
+### Expert-review remaining (Chinese hallux)
+
+Spot-check `structures.json`: **0** `拇` (thumb) tokens; **9** `踇` hallux names (bones + FHL/EHL/AH/FHB/AdH/EHB). No left-foot / `左` / sinister ids. Checklist §A Chinese Names checkbox updated.
+
+### NEW license-verified projects (≥3)
+
+| # | Project | URL | License verified | Foot relevance | Decision |
+|---|---------|-----|------------------|----------------|----------|
+| **71** | **Henson multi-atlas registration code** (Sheffield ORDA) | DOI **10.15131/shef.data.21763982** | Figshare API `license.name` = **MIT** verified 2026-09-15 | MATLAB multi-atlas fusion for LE muscle labels — tooling for #66 sandbox, **not** surface GLBs | **UX-borrow** / process (sandbox recipe). **reject** teaching mesh |
+| **72** | **Henson registration inputs** (dual RGB DICOM + blue-channel segs) | DOI **10.15131/shef.data.21739733** | Figshare API = **CC0** verified 2026-09-15 | 20 × ~160 MB registration volumes; class map 1–34 (incl. gastroc/soleus) — still masks, not foot DI/NV meshes | **monitor** with #66 sandbox. **reject** ready GLB; do **not** pull full pack this pass |
+| **73** | **VSDFullBodyBoneModels** (MCM-Fischer) | https://github.com/MCM-Fischer/VSDFullBodyBoneModels · Zenodo **10.5281/zenodo.8316730** | README: MAT/XLSX **CC BY-NC-SA 4.0**; code **EUPL v1.2** | 30-subject LE **bone** MAT/PLY surfaces (pelvis→foot) — osteology only; **NC** on meshes | **reject** (NC) for main tree. **reject** soft DI/NV |
+| **74** | **UltraBonesHip** (luohwu) | https://huggingface.co/datasets/luohwu/UltraBonesHip | HF card `license` = **cc-by-nc-4.0** verified 2026-09-15 | Hip CT–US femur/pelvis — **not** foot soft; **NC** | **reject** (NC) |
+| **75** | **auto-lowerlimb-models-paper** (modenaxe) | https://github.com/modenaxe/auto-lowerlimb-models-paper | Repo **Apache-2.0** (`LICENSE.txt` verified 2026-09-15); companion STAPLE toolbox is **CC BY-NC 4.0** (separate) | OpenSim LE bone geometries + STAPLE workflows (talus/calcaneus/foot bones) — **0** named intrinsic soft meshes | **monitor** osteology/OpenSim process. **reject** soft teaching GLB; do **not** pull STAPLE NC code into main tree |
+| **76** | **msk-STAPLE** (modenaxe) | https://github.com/modenaxe/msk-STAPLE · Zenodo 10.5281/zenodo.4428103 | README badge + LICENSE = **CC BY-NC 4.0** verified 2026-09-15 | Automatic personalised LE skeletal modelling from bone surfaces | **reject** (NC) |
+
+### Soft-gap check
+
+| Gap | Day 4bi |
+|-----|---------|
+| DI / per-ray MTA / nerve·ligament CC0/BY | **Still dry** |
+| Gastroc/soleus | Henson sandbox **feasible ~80–160 MB** (docs); Andreassen **skipped** |
+| Utah Hive | Still **reject** — not re-opened |
+
+### Outcome
+
+- Feasibility note + Henson metadata in tree; learning log **#71–#76**; expert-review 踇 spot-check.
+- Census unchanged (**129/124**; ontology **126/129**).
+- **0** meshes integrated; **0** SA spam; Andreassen not re-opened; Utah not integrated.
+- **No finished-product claim.**

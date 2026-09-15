@@ -2,7 +2,7 @@
 
 **Purpose**: Quality assurance for **teaching-grade** anatomical accuracy, nomenclature, license boundaries, and honest soft-tissue scope — **not** a clinical or journal-publication readiness certificate.  
 **Intended Reviewers**: Anatomy instructors, foot/ankle surgeons, medical educators.  
-**Date**: 2026-09-15 (Week 2 Day 4bg / Phase 7)  
+**Date**: 2026-09-15 (Week 2 Day 4bi / Phase 7)  
 **Live census** (verify against `src/data/structures.json` + `docs/phase-7-self-review.md`): **129** entry-level rows / **124** unique · **53** main-tree (CC BY/CC0) / **71** BY-SA isolate · ontology **126/129** citable · **0** placeholders · osteology **26/26** · soft tissue **teaching-useful, incomplete**  
 **Atlas status**: Teaching atlas **in progress** — **no finished-product claim**; **not** TA2-complete soft tissue; **not** surgical registration.
 
@@ -24,14 +24,14 @@ Companion: `docs/methods.md` (journal-facing limitations + Kabsch residuals), `d
 - [ ] **Do not** treat **126/129** as TA2-complete soft tissue
 
 ### Chinese Names (PRC Standards)
-- [ ] **踇 (mǔ) for hallux** (toe): Verified in `structures.json` (NOT 拇, thumb)
-  - [ ] 踇展肌 / 踇收肌 / 踇短屈肌 and spot-check ≥5 more hallux-related names
+- [x] **踇 (mǔ) for hallux** (toe): Verified in `structures.json` (NOT 拇, thumb) — Day **4bi**: **0** `拇`; **9** `踇` rows
+  - [x] 踇展肌 / 踇收肌 / 踇短屈肌 + 踇长屈/伸 · 踇短伸 · 踇趾近/远节 · 踇趾籽骨（组合） (≥5 hallux-related)
 - [ ] Align with 《人体解剖学》第9版 clinical usage where applicable
 - [ ] **No mixed hand/foot terminology**
 
 ### Laterality
-- [ ] **Pes dexter (right foot)** consistently specified in docs / UI
-- [ ] **No left-foot structures** mixed in (BP3D/UM/Open3D/ZA used `.r` / right designation)
+- [x] **Pes dexter (right foot)** consistently specified in docs / UI (Day 4bi spot-check)
+- [x] **No left-foot structures** mixed in — Day **4bi**: **0** ids with left/sinister/左
 - [ ] Foot-specific scope: bilateral axial skeleton excluded
 
 ---
@@ -199,4 +199,4 @@ Companion: `docs/methods.md` (journal-facing limitations + Kabsch residuals), `d
 
 **Checklist Version**: 2.0 (2026-09-15 Day 4ax / Phase 7; Day 4be ontology honest-empty; Day 4bf grouped label polish)  
 **Supersedes**: 1.0 (2026-09-14 Week Sprint Day 7 — outdated 38/43 / DI-placeholder / ligaments-excluded framing)  
-**Atlas pointer**: Week 2 Day 4bg / Phase 7 — teaching atlas in progress; **no finished-product claim**
+**Atlas pointer**: Week 2 Day 4bi / Phase 7 — teaching atlas in progress; **no finished-product claim**

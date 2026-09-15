@@ -62,7 +62,7 @@ Osteology complete (26/26). Soft tissue **teaching-useful and incomplete**.
 | Browser / Cloudflare-gated packs | Scripted fetch 403 / session | Cloud Agent browser; verify license page before wire |
 | Zenodo Z-Anatomy `.blend` heavy re-harvest | Large binary; ankle bands absent prior | Re-inventory ATFL/CFL/deltoid/retinacula **only if** new revision claims them |
 | Further multi-view screenshots | 9-shot pack live | Optional angles only — not a marketing gallery |
-| CC0/BY DI / per-ray MTA / nerve·ligament main-tree | Watchlist dry through Day 4bh (#38–#70); Utah Hive **reject** bones; Henson CC0 = masks only (path documented) | Re-check new open CT foot soft segmentations; optional Henson marching-cubes sandbox; **skip NC** / “License: Model” |
+| CC0/BY DI / per-ray MTA / nerve·ligament main-tree | Watchlist dry through Day 4bi (#38–#76); Utah Hive **reject** bones; Henson CC0 = masks only (path + **sandbox feasibility** Day 4bi) | Re-check new open CT foot soft segmentations; optional **one-subject** Henson MC (~80 MB, see feasibility note); **skip NC** / “License: Model” |
 
 ---
 
@@ -92,6 +92,12 @@ Osteology complete (26/26). Soft tissue **teaching-useful and incomplete**.
 - Auckland **view-reset** UX (button + `0`/`Home`) + Henson (#66) DICOM path detail on watchlist + digs **#69–#70** (DeepACSA CC BY US / Dryad CC0 PF windlass). **0** mesh wire; Andreassen skipped; Utah not integrated.
 
 
+## Day 4bi done this handoff
+
+- Sheffield **sandbox feasibility** note (`docs/henson-sheffield-sandbox-feasibility.md`) + Henson metadata/NOTICE under `third_party/henson-sheffield/` (**0** DICOM).
+- Expert-review **踇/laterality** spot-check.
+- Digs **#71–#76** (Henson MIT/CC0 companions · VSD NC-SA · UltraBonesHip NC · auto-lowerlimb Apache · STAPLE NC). **0** mesh wire; Andreassen skipped; Utah not integrated.
+
 ## Suggested next agent priorities (pick one; quality over volume)
 
 1. **CC0/BY soft dig** against `docs/cc0-soft-tissue-watchlist.md` (DI, per-ray MTA, nerve/ligament main-tree replacements) — integrate **only** with spatial QA pass.
@@ -117,4 +123,4 @@ Osteology complete (26/26). Soft tissue **teaching-useful and incomplete**.
 - `python3 scripts/integrity-audit.py` · `npx vitest run` · `npm run build` (run on commit pass)
 - Commit + push on branch
 
-**Bottom line**: Handback brief current through Day **4bh** (Auckland view-reset UX + Henson path detail + digs #69–#70, 0 wire). Andreassen belly track remains **documented blocked**. Census unchanged. Teaching atlas in progress — **no finished-product claim**.
+**Bottom line**: Handback brief current through Day **4bi** (Sheffield sandbox feasibility + digs #71–#76 + 踇 spot-check, 0 wire). Andreassen belly track remains **documented blocked**. Census unchanged. Teaching atlas in progress — **no finished-product claim**.

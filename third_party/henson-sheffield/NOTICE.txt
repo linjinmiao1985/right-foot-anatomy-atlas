@@ -1,0 +1,31 @@
+Henson et al. — Sheffield ORDA / Figshare lower-limb MR muscle segmentations
+============================================================================
+
+Sources (Day 4bi metadata-only fetch; **no** DICOM volumes in git):
+  Labels DOI:  10.15131/shef.data.20440203
+    https://orda.shef.ac.uk/articles/dataset/Augmented_images_associated_segmentations/20440203
+  MR DOI:      10.15131/shef.data.20440164
+  Registration inputs DOI: 10.15131/shef.data.21739733  (CC0)
+  Multi-atlas code DOI:    10.15131/shef.data.21763982  (MIT)
+  Paper: PLOS ONE 10.1371/journal.pone.0273446
+
+Licenses (Figshare API verified 2026-09-15):
+  Labels + MR + registration inputs: **CC0** (public domain dedication)
+  Multi-atlas MATLAB script: **MIT**
+
+What is in git (tiny metadata / recipe only):
+  read_me.txt                     — class ID legend (labels pack)
+  mr_read_me.txt                  — MR companion readme
+  registration_inputs_read_me.txt — registration RGB DICOM legend
+  multi_atlas_read_me.txt         — multi-atlas usage notes
+  multi_atlas_segmentation.m      — MIT multi-atlas fusion script (recipe)
+  NOTICE.txt                      — this file
+
+What is **not** in git:
+  Any Aug_N_segmentations.dcm / Aug_N.dcm (~76–88 MB each; full labels ≈5.65 GB).
+  See docs/henson-sheffield-sandbox-feasibility.md — sandbox may fetch **one**
+  subject later; do **not** commit DICOM binaries.
+
+Integration status: **NOT wired** to public/models/ or structures.json.
+Masks ≠ elemental foot DI/NV GLBs; calf/thigh-heavy cohort; BP3D Kabsch unproven.
+Prefer this research path over Andreassen similarity Kabsch retry (skipped).

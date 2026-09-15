@@ -86,3 +86,9 @@ When redistributing or citing this project, please include:
 
 **Last Updated**: 2026-09-15  
 **Maintained By**: Right Foot Anatomy Atlas Project
+
+
+### Henson Sheffield LE muscle DICOM labels (research only — not shipped meshes)
+
+**Source**: ORDA / Figshare DOIs 10.15131/shef.data.20440203 (labels, CC0), 20440164 (MR, CC0), 21739733 (registration inputs, CC0), 21763982 (multi-atlas code, MIT)  
+**Usage**: Day 4bi metadata + sandbox feasibility only. Tiny files under `third_party/henson-sheffield/`. **No** DICOM volumes or teaching GLBs in this repo. See `docs/henson-sheffield-sandbox-feasibility.md`.

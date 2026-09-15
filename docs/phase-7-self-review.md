@@ -4,7 +4,8 @@
 **Branch**: `cursor/right-foot-anatomy-atlas-mvp-af85`  
 **HEAD baseline**: `d09d53d` (Day 4av) before this review commit  
 **Status**: Teaching-grade atlas **in progress** — **not** a finished-product claim  
-**Day 4bg note**: Lazy layer load progress + digs #66–#68; census **unchanged**; **0** mesh wire.  
+**Day 4bg note**: Lazy layer load progress + digs #66–#68; census **unchanged**; **0** mesh wire.
+**Day 4bi note**: Sheffield sandbox feasibility + digs #71–#76 + 踇 spot-check; census **unchanged**; **0** mesh wire.  
 **Scope**: Week-quality census freeze after Day 4af–4av (soft fill + UX polish + ontology expand); UX inventory; license ceilings; open-mining highlights; next targets for journal readiness / Cloud Agent handback / CC0 soft-tissue watchlist
 
 ---
@@ -217,3 +218,11 @@ OMFAtlas schematic-vs-source honesty UX (`schematicHonesty` + StructurePanel + f
 - **Utah Hive (#63)**: Deep assess vs BP3D — **reject** main-tree bone integrate (arthrodesis fusion / incomplete osteology / multi-subject CT frame; CC BY 3.0 OK). Soft still 0. Zip not downloaded.
 - **Teaching polish (expert-review §A)**: Ontology-grouped structures now have **（组合）**/**（分组）** in `nameZh`; vitest gate.
 - Soft gaps **dry**; Andreassen **skipped**; **0** mesh wire; **no finished-product claim**.
+
+
+## Progress note (Day 4bi)
+
+- **Sheffield sandbox feasibility** documented (no toy DICOM; POC ≈80–160 MB; full 5.65 GB not required); Henson metadata in `third_party/henson-sheffield/`.
+- Expert-review **踇/拇** + laterality spot-check passed (checklist §A).
+- Mining **#71–#76**; soft gaps still **dry**; **0** mesh wire; Andreassen skipped.
+- Teaching atlas in progress — **no finished-product claim**.

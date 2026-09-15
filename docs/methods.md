@@ -1,7 +1,7 @@
 # Methods
 
 **Project**: Right Foot Anatomy Atlas (Teaching-Grade Interactive 3D)  
-**Version**: Week 2 Day 4be / Phase 7 (teaching atlas in progress; see README + `docs/phase-7-self-review.md` live census; **129** entries / **124** unique; **53** main-tree / **71** BY-SA; ontology **126/129** citable with StructurePanel honest-empty notes; 134 discrete GLBs; expert-review checklist v2.0; mining through #65; Andreassen blocked — TA2 soft-tissue still incomplete — **not a finished product**)
+**Version**: Week 2 Day 4bi / Phase 7 (teaching atlas in progress; see README + `docs/phase-7-self-review.md` live census; **129** entries / **124** unique; **53** main-tree / **71** BY-SA; ontology **126/129** citable with StructurePanel honest-empty notes; 134 discrete GLBs; expert-review checklist v2.0; mining through #65; Andreassen blocked — TA2 soft-tissue still incomplete — **not a finished product**)
 **Date**: 2026-09-15  
 **Licenses**: Code MIT | Assets CC BY 4.0 / CC0 1.0 / CC BY-SA 4.0 (isolated)
 
@@ -592,3 +592,10 @@ Downloaded Andreassen VHM Final STLs (CC BY 4.0). Documented Kabsch + spatial QA
 1. **a11y**: `HonestyBadge.ariaLabel` + `honestyRegionAriaLabel()`; StructurePanel note region + footer chips expose ARIA; Main/ShareAlike license chip labeled.
 2. Tests assert non-empty `ariaLabel` across honesty kinds. **0** meshes / SA spam; Andreassen not re-opened.
 3. Version pointer Day 4bd / Phase 7. **No finished-product claim.**
+
+
+## Day 4bi — Sheffield sandbox feasibility + mining #71–#76 (2026-09-15)
+
+1. **Henson Sheffield**: feasibility note for one-subject marching-cubes sandbox (~80–160 MB; **not** full 5.65 GB). Metadata/NOTICE under `third_party/henson-sheffield/` — **0** DICOM in git; **0** GLB wire.
+2. Expert-review 踇/laterality spot-check; digs #71–#76 (MIT/CC0 companions + NC rejects + Apache LE bones). Andreassen **skipped**.
+3. Version pointer Day 4bi / Phase 7. **No finished-product claim.** Census unchanged.

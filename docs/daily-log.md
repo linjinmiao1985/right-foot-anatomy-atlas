@@ -1482,3 +1482,16 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 5. Checks: integrity-audit + vitest + build; commit + push.
 6. **Honesty**: teaching atlas in progress — **no finished-product claim**. Census unchanged. **0** meshes / no SA spam / Andreassen skipped / Utah not integrated.
 
+
+
+## Day 4bi (2026-09-15) — Sheffield sandbox feasibility + dig #71–#76 + 踇 spot-check
+
+**Target**: Week quality — Sheffield sandbox feasibility note (NOT full 5.65 GB unless small sample); prefer quality; 0 SA spam; skip Andreassen. Also ≥3 NEW digs and one expert-review remaining item.
+
+1. Pulled `ab80b51` (already current).
+2. **Sheffield feasibility**: Figshare API — **no** toy DICOM; min labels ≈76 MB/subject; POC ≈80–160 MB; full 5.65 GB **not** required. Wrote `docs/henson-sheffield-sandbox-feasibility.md`; fetched readmes + MIT `.m` only → `third_party/henson-sheffield/` + NOTICE; gitignore `*.dcm`.
+3. **Expert-review**: 踇/拇 + laterality spot-check on `structures.json` (0 拇; 9 踇; 0 left ids) — checklist §A updated.
+4. **New digs**: #71 multi-atlas MIT · #72 registration inputs CC0 · #73 VSD NC-SA reject · #74 UltraBonesHip NC reject · #75 auto-lowerlimb Apache-2.0 monitor · #76 msk-STAPLE NC reject.
+5. Soft gaps still dry. Andreassen **skipped**. Utah not re-opened. **0** meshes.
+6. Checks: integrity-audit + vitest + build; commit + push.
+7. **Honesty**: teaching atlas in progress — **no finished-product claim**. Census unchanged.
