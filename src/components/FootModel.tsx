@@ -83,13 +83,16 @@ const ADDITIONAL_MUSCLE_PARTS: Record<string, string[]> = {
   ],
 };
 
-// Real vessel GLB models - 5 right foot arteries from BodyParts3D (CC BY 4.0)
+// Real vessel GLB models - 7 right foot arteries from BodyParts3D (CC BY 4.0)
+// Includes 2 honest grouped meshes (dorsal digital + plantar metatarsal, not individually split)
 const REAL_VESSEL_MODELS: Record<string, string> = {
   'dorsalis_pedis_artery': '/models/right-foot/dorsalis_pedis_artery.glb',
   'plantar_artery_medial': '/models/right-foot/medial_plantar_artery.glb',
   'plantar_artery_lateral': '/models/right-foot/lateral_plantar_artery.glb',
   'plantar_arch': '/models/right-foot/plantar_arch.glb',
   'arcuate_artery': '/models/right-foot/arcuate_artery.glb',
+  'dorsal_digital_arteries': '/models/right-foot/dorsal_digital_arteries.glb', // BP3D BP6049/FJ2072 (grouped)
+  'plantar_metatarsal_arteries': '/models/right-foot/plantar_metatarsal_arteries_grouped.glb', // BP3D BP6060/FJ2096 (grouped)
 };
 
 // Real nerve GLB models - 6 right foot nerves from Z-Anatomy (CC BY-SA 4.0)

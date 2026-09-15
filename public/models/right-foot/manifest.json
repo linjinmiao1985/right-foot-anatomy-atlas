@@ -58,9 +58,11 @@
   "vessels": [
     {"id": "dorsalis_pedis_artery", "file": "dorsalis_pedis_artery.glb", "source": "BP3D", "bp": "BP6027", "fma": "FMA43916", "name_zh": "足背动脉", "name_la": "Arteria dorsalis pedis"},
     {"id": "arcuate_artery", "file": "arcuate_artery.glb", "source": "BP3D", "bp": "BP6054", "fma": "FMA69494", "name_zh": "弓状动脉", "name_la": "Arteria arcuata"},
+    {"id": "dorsal_digital_arteries", "file": "dorsal_digital_arteries.glb", "source": "BP3D", "bp": "BP6049", "fma": "FMA44660", "name_zh": "足背趾动脉（组合）", "name_la": "Aa. digitales dorsales pedis (combined)", "note": "Honest grouped mesh: all dorsal digital arteries combined, not individually split per toe"},
+    {"id": "plantar_arch", "file": "plantar_arch.glb", "source": "BP3D", "bp": "BP6014", "fma": "FMA43943", "name_zh": "足底动脉弓", "name_la": "Arcus plantaris"},
+    {"id": "plantar_metatarsal_arteries", "file": "plantar_metatarsal_arteries_grouped.glb", "source": "BP3D", "bp": "BP6060", "fma": "FMA43956", "name_zh": "跖底跖骨动脉（组合）", "name_la": "Aa. metatarsales plantares (combined)", "note": "Honest grouped mesh: all plantar metatarsal arteries combined, not individually split"},
     {"id": "medial_plantar_artery", "file": "medial_plantar_artery.glb", "source": "BP3D", "bp": "BP6062", "fma": "FMA43929", "name_zh": "足底内侧动脉", "name_la": "Arteria plantaris medialis"},
-    {"id": "lateral_plantar_artery", "file": "lateral_plantar_artery.glb", "source": "BP3D", "bp": "BP6065", "fma": "FMA43931", "name_zh": "足底外侧动脉", "name_la": "Arteria plantaris lateralis"},
-    {"id": "plantar_arch", "file": "plantar_arch.glb", "source": "BP3D", "bp": "BP6014", "fma": "FMA43943", "name_zh": "足底动脉弓", "name_la": "Arcus plantaris"}
+    {"id": "lateral_plantar_artery", "file": "lateral_plantar_artery.glb", "source": "BP3D", "bp": "BP6065", "fma": "FMA43931", "name_zh": "足底外侧动脉", "name_la": "Arteria plantaris lateralis"}
   ],
   "nerves": [
     {"id": "tibial_nerve", "file": "by-sa/tibial_nerve.glb", "source": "Z-Anatomy", "license": "CC BY-SA 4.0", "fma": "FMA19027", "name_zh": "胫神经", "name_la": "N. tibialis"},
@@ -70,13 +72,13 @@
     {"id": "superficial_fibular_nerve", "file": "by-sa/superficial_fibular_nerve.glb", "source": "Z-Anatomy", "license": "CC BY-SA 4.0", "fma": "FMA19034", "name_zh": "腓浅神经", "name_la": "N. fibularis superficialis"},
     {"id": "sural_nerve", "file": "by-sa/sural_nerve.glb", "source": "Z-Anatomy", "license": "CC BY-SA 4.0", "fma": "FMA44314", "name_zh": "腓肠神经", "name_la": "N. suralis"}
   ],
-  "note": "26 bones (tarsals/metatarsals/phalanges/sesamoids: BP3D 22 + UM 4) + 13 muscles (BP3D 12 + UM 8) + 5 vessels + 6 nerves (Z-Anatomy BY-SA). Total: 50/60 real (83%).",
+  "note": "26 bones + 13 muscles + 7 vessels (2 honest grouped) + 6 nerves. Total: 52/60 real (87%). Honest grouped: dorsal digital + plantar metatarsal arteries are BP3D combined meshes.",
   "stats": {
-    "bones": "26/26 (100%, BP3D 22: 14 tarsals/metatarsals/hallux + 7 phalanges + 1 sesamoid group; UM 4 distal)",
-    "muscles": "13/14 (93%, BP3D 12 + UM CC0 8: 5 intrinsic + 3 extrinsic)",
-    "vessels": "5/9 (56%, BP3D main arteries, lacking digital branches)",
+    "bones": "26/26 (100%, BP3D 22 + UM 4 distal)",
+    "muscles": "13/14 (93%, BP3D 12 + UM CC0 8)",
+    "vessels": "7/9 (78%, BP3D: 5 individual + 2 honest grouped, lacking 2 proximal arteries)",
     "nerves": "6/6 (100%, Z-Anatomy CC BY-SA 4.0, isolated in by-sa/)",
-    "total": "50/60 (83% real meshes, 55 real structures - 5 multi-part counted once)"
+    "total": "52/60 (87% real meshes, 57 structures with placeholder:false - some grouped)"
   },
   "quality_decisions": {
     "overlapping_muscles": "UM CC0 chosen over BP3D for AH/ADM/FDB (2.4-8.7x resolution)",

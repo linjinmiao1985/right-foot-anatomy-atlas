@@ -13,15 +13,15 @@ Interactive web-based teaching atlas for right foot anatomy.
 |-------|-------------|-------------|-------|---------|
 | **Bones** | **26/26 (100%)** ✅ | 0 | 26 | BP3D (22) + UM (4) |
 | **Muscles** | 13/14 (93%) | 1 | 14 | BP3D (12) + UM (8) |
-| **Vessels** | 5/9 (56%) | 4 | 9 | BodyParts3D (CC BY 4.0) |
+| **Vessels** | **7/9 (78%)** | 2 | 9 | BodyParts3D (CC BY 4.0) |
 | **Nerves** | 6/6 (100%) ✅ | 0 | 6 | Z-Anatomy (CC BY-SA 4.0, isolated) |
-| **Total** | **50/55 (91%)** | **5** | **55** | MIT code + open assets |
+| **Total** | **52/55 (95%)** | **3** | **55** | MIT code + open assets |
 
-**Note**: Total structures = 60 in `structures.json` (accounting for multi-part muscles: AH oblique+transverse, FHB medial+lateral, Lumbricals 1-4, Plantar interossei 1-3, Sesamoid bones grouped). Total unique structures = 55 when multi-parts counted once.
+**Note**: Total structures = 60 in `structures.json` (accounting for multi-part muscles: AH oblique+transverse, FHB medial+lateral, Lumbricals 1-4, Plantar interossei 1-3, Sesamoid bones grouped). Total unique structures = 55 when multi-parts counted once. **Honest grouped vessels**: dorsal digital arteries and plantar metatarsal arteries are BP3D grouped meshes (combined, not per-toe split).
 
-### Gaps (5 remaining)
-- **Muscles**: Dorsal interossei (absent in BP3D, UM, Z-Anatomy)
-- **Vessels**: Dorsal/plantar metatarsal digital branches (4 structures, fine detail, BP3D lacks individual codes)
+### Gaps (3 remaining)
+- **Muscles**: Dorsal interossei (1 structure, absent in BP3D, UM, Z-Anatomy)
+- **Vessels**: Posterior tibial artery, fibular artery (2 structures, proximal to foot proper)
 
 ---
 
@@ -54,7 +54,7 @@ Interactive web-based teaching atlas for right foot anatomy.
 - **Frontend**: Vite + React 18 + TypeScript 5
 - **3D Engine**: Three.js + React Three Fiber + @react-three/drei
 - **Data**: `structures.json` (60 structures, TA2-compliant naming)
-- **Assets**: 56 GLB meshes (~15.4MB total: 26 bones + 13 muscles + 5 vessels + 6 nerves + 6 muscle parts)
+- **Assets**: 58 GLB meshes (~15.6MB total: 26 bones + 13 muscles + 7 vessels + 6 nerves + 6 muscle parts)
 - **Testing**: Vitest + @testing-library/react (7/7 tests ✅)
 
 ---

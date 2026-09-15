@@ -879,3 +879,44 @@ Each day:
 - **Tomorrow**: Concrete next actions (3-5 items)
 - **Key Insight**: Learning or methodology improvement
 
+
+---
+
+### Week 2 Day 4g: Honest Grouped Vessels Integration (Real Mesh Gain)
+
+**Focus**: Implement honest grouped vessel structures for BP3D combined digital/metatarsal artery meshes (Week 2 vessel honesty priority).
+
+**Progress**:
+1. **BP3D Grouped Vessels Extraction**:
+   - Found FJ2072 (BP6049, 2988 vertices, 135.2 KB) → dorsal digital arteries of foot (grouped)
+   - Found FJ2096 (BP6060, 1371 vertices, 65.1 KB) → plantar metatarsal arteries (grouped)
+   - Converted both to GLB in `public/models/right-foot/`
+
+2. **structures.json Honest Refactor**:
+   - Removed 1 misleading per-toe placeholder: `dorsal_metatarsal_arteries` (claimed individual meshes via meshNames)
+   - Updated existing `plantar_metatarsal_arteries`: `placeholder:true` → `false`, renamed with "（组合）", single honest meshName
+   - Added new `dorsal_digital_arteries` structure with "（组合）" label, `placeholder:false`, BP/FMA IDs
+   - Total: **60 structures**, **57 real** (95%), **3 placeholders** (dorsal interossei, posterior tibial, fibular)
+   - Vessels: **7/9 real (78%)** (up from 5/9 = 56%)
+
+3. **FootModel.tsx Loaders**:
+   - Added 2 GLB paths to `REAL_VESSEL_MODELS` with clear grouped comments
+   - Total: 58 GLB loaders (26 bones + 13 muscles + 7 vessels + 6 nerves + 6 muscle parts)
+
+4. **Documentation Updates**:
+   - README Coverage: Vessels 5/9 → 7/9 (78%), Total 50/55 → 52/55 (95%)
+   - Gaps reduced from 5 to 3 (DI + 2 proximal arteries), factual note on honest grouped meshes
+   - manifest.json: vessels array with 2 new entries, stats updated, note clarifies grouped nature
+   - Tech Stack: 56 → 58 GLB meshes (~15.6 MB)
+
+5. **Verification**:
+   - `integrity-audit.py`: **PASSED** (57 real, 3 placeholders, 0 violations)
+   - `vitest run`: **7/7 tests ✅**
+   - `npm run build`: **PASSED**
+
+**Commits**: `git commit` grouped vessel integration (honest BP3D combined meshes)
+
+**Key Insight**: Honest grouped vessel meshes are superior to fake per-toe placeholders. Users see real BP3D anatomy (all digital/metatarsal arteries visualized) with clear "(组合)" labeling admitting grouped nature. This is teaching-grade honesty: show real data, label its limitations clearly. No fake precision claims.
+
+**Next Hard Focus**: Update expert-review-checklist and week-plan with Week 2 Day 4 comprehensive osteology + vessel honesty; prepare Week 2 substantive self-review (no delivery claims).
+

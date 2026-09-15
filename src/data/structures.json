@@ -620,17 +620,15 @@
     "placeholder": false
   },
   {
-    "id": "dorsal_metatarsal_arteries",
+    "id": "dorsal_digital_arteries",
     "meshNames": [
-      "Metatarsal_Dorsal_2_R",
-      "Metatarsal_Dorsal_3_R",
-      "Metatarsal_Dorsal_4_R"
+      "Dorsal_Digital_Arteries_Combined_R"
     ],
     "layer": "vessel",
-    "nameZh": "跖背动脉",
-    "nameLa": "Aa. metatarsales dorsales",
-    "summaryZh": "弓状动脉发出的第2-4跖背动脉，加上足背动脉直接发出的第1跖背动脉，共4条。走行：沿第1-4跖骨间隙背侧走行至趾基底。分支：每条在趾基底分为两条趾背固有动脉供应相邻两趾的邻侧背面。吻合：与跖底动脉穿支在趾基底吻合形成趾动脉网。临床意义：跖骨骨折或跗跖关节损伤时可损伤；足趾缺血坏死时需评估跖动脉通畅性；足背皮瓣手术需保留部分跖背动脉。",
-    "placeholder": true
+    "nameZh": "足背趾动脉（组合）",
+    "nameLa": "Aa. digitales dorsales pedis (combined)",
+    "summaryZh": "足背跖骨间隙向趾间延伸的动脉，由足背动脉弓分支形成，供应足趾背侧皮肤和组织。BP3D grouped mesh包含所有足背趾动脉的组合（非单独分离）。TA2: A12.2.16.064",
+    "placeholder": false
   },
   {
     "id": "posterior_tibial_artery",
@@ -659,16 +657,13 @@
   {
     "id": "plantar_metatarsal_arteries",
     "meshNames": [
-      "Metatarsal_Plantar_1_R",
-      "Metatarsal_Plantar_2_R",
-      "Metatarsal_Plantar_3_R",
-      "Metatarsal_Plantar_4_R"
+      "Plantar_Metatarsal_Arteries_Combined_R"
     ],
     "layer": "vessel",
-    "nameZh": "跖底动脉",
-    "nameLa": "Aa. metatarsales plantares",
-    "summaryZh": "足底动脉弓向前发出的4条动脉，是足趾跖侧的主要血供。走行：第1-4跖底动脉分别沿第1-4跖骨间隙跖侧（深面）前行，伴跖侧骨间肌。分支：至趾基底（跖趾关节平面）每条分为两条趾底固有动脉供应相邻两趾的邻侧跖面，共供应第1-5趾（踇趾内侧由足底内侧动脉趾浅支、小趾外侧由足底外侧动脉小趾支补充）。临床意义：趾缺血坏死时需评估跖底动脉通畅；前足挤压伤或跖趾关节脱位可损伤；糖尿病足趾溃疡血供评估；跖底动脉栓塞致急性趾缺血。",
-    "placeholder": true
+    "nameZh": "跖底跖骨动脉（组合）",
+    "nameLa": "Aa. metatarsales plantares (combined)",
+    "summaryZh": "足底跖骨间隙的动脉，由足底外侧动脉分支形成，供应跖底和趾间组织。BP3D grouped mesh包含所有跖底跖骨动脉的组合（非单独分离）。TA2: A12.2.16.068",
+    "placeholder": false
   },
   {
     "id": "fibular_artery",
