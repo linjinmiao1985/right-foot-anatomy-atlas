@@ -1,6 +1,7 @@
 import type { AnatomyStructure } from '../types/anatomy';
 import { LAYER_CONFIG } from '../lib/layers';
 import { getStructureProvenance, licenseLabel, getTeachingMeshNote } from '../lib/assetProvenance';
+import { getOntologyIds, hasOntologyIds, formatFma } from '../lib/ontologyIds';
 
 interface StructurePanelProps {
   structure: AnatomyStructure | null;
@@ -17,6 +18,8 @@ export default function StructurePanel({ structure, onClose, isolateMode = false
   const layerConfig = LAYER_CONFIG[structure.layer];
   const provenance = getStructureProvenance(structure.id, structure.placeholder, structure.layer);
   const meshNote = getTeachingMeshNote(structure.id, structure.layer);
+  const ontology = getOntologyIds(structure.id);
+  const showOntology = hasOntologyIds(ontology);
   const sourceChipBg =
     provenance.license === 'placeholder'
       ? '#f59e0b'
@@ -60,6 +63,46 @@ export default function StructurePanel({ structure, onClose, isolateMode = false
       </div>
 
       <p style={{ fontSize: '13px', color: '#aaa', fontStyle: 'italic', marginBottom: '12px' }}>{structure.nameLa}</p>
+
+      {showOntology && ontology && (
+        <div
+          style={{
+            marginBottom: '12px',
+            padding: '8px 10px',
+            background: 'rgba(0,0,0,0.28)',
+            borderRadius: '6px',
+            border: '1px solid #333',
+            fontSize: '11px',
+            color: '#c4c4c4',
+            lineHeight: 1.55,
+          }}
+          title="Partial teaching map — sources: structures.json TA2 notes, docs/terminology.md FMA, BodyParts3D BP IDs. Unknown schemes omitted."
+        >
+          <div style={{ fontSize: '10px', color: '#888', marginBottom: '4px', fontWeight: 600 }}>
+            本体论 ID · Ontology (partial)
+          </div>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px 12px' }}>
+            {ontology.ta2 && (
+              <span>
+                <span style={{ color: '#888' }}>TA2</span> {ontology.ta2}
+              </span>
+            )}
+            {ontology.fma && (
+              <span>
+                <span style={{ color: '#888' }}>FMA</span> {formatFma(ontology.fma)}
+              </span>
+            )}
+            {ontology.bp && (
+              <span>
+                <span style={{ color: '#888' }}>BP</span> {ontology.bp}
+              </span>
+            )}
+          </div>
+          {ontology.note && (
+            <div style={{ marginTop: '4px', color: '#9ca3af', fontSize: '10px' }}>{ontology.note}</div>
+          )}
+        </div>
+      )}
 
       <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '10px', flexWrap: 'wrap' }}>
         <div

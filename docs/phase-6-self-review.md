@@ -125,7 +125,7 @@ Recent digs (Day 4ah–4aj) logged UX-borrow / reject sources (LABIM3D, UltraBon
 
 - **UX**: Keyboard help overlay (`?`/`H` · title **? 帮助**) — bilingual camera / isolate / Esc / pointer sheet; Esc closes help before clearing selection; `role=dialog` + focus close. Prefer teaching polish; **0** new meshes.
 - Census unchanged 129/124. Methods version Day 4ao.
-- Remaining phase-6 / week polish candidates: accessibility pass, TA2 codes on panel, journal-facing limitations table, CC0/BY dig (no SA spam). *(persist UI prefs → done Day 4ap)*
+- Remaining phase-6 / week polish candidates: accessibility pass, CC0/BY dig (no SA spam). *(persist UI prefs → Day 4ap; TA2 panel IDs + journal limitations → Day 4aq)*
 
 ## Progress note (Day 4ap)
 
@@ -133,7 +133,14 @@ Recent digs (Day 4ah–4aj) logged UX-borrow / reject sources (LABIM3D, UltraBon
 - **Dig**: #45 Female Atlas; #46 slorksmo/Human-Atlas (EN/AR). **0** meshes; no SA spam. Census unchanged 129/124.
 - Methods version Day 4ap.
 
+## Progress note (Day 4aq)
+
+- **Ontology IDs**: Sparse lookup `src/lib/ontologyIds.ts` (TA2 / FMA / BP when citable); StructurePanel shows present codes only — honest empty when unknown. Sources in module header + `docs/terminology.md`.
+- **Journal limitations table**: Added to `docs/methods.md` (license mix, spatial residual, grouped vessels, BY-SA share, no clinical claim, partial ontology).
+- **0** new meshes; no SA spam. Census unchanged 129/124. Methods version Day 4aq.
+
 ## Cloud Agent handback (when quota returns)
+
 
 Resume only with green local gates (`python3 scripts/integrity-audit.py`, `npx vitest run`, `npm run build`). Prefer CC0/CC BY finds over SA volume.
 

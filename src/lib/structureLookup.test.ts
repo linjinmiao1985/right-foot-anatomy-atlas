@@ -54,7 +54,6 @@ describe('structureLookup', () => {
     const idHit = searchStructures('calcaneal_tendon');
     expect(idHit.some((s) => s.id === 'calcaneal_tendon')).toBe(true);
   });
-});
 
   it('sorts equal-score hits by teaching layer order (muscle/ligament before nerve)', () => {
     const hits = searchStructures('plantar', 24);
@@ -69,4 +68,5 @@ describe('structureLookup', () => {
       expect(firstLig).toBeLessThan(firstNerve);
     }
   });
+});
 

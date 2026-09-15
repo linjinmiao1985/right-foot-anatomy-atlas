@@ -64,6 +64,7 @@ Interactive web-based teaching atlas for right foot anatomy.
 - **Camera presets**: 默认 / 背侧 / 跖侧 / 内侧 / 外侧 (keys `1`–`5`) — plantar sole view enabled (Day 4an)
 - **Keyboard help overlay**: `?` / `H` or title **? 帮助** — bilingual shortcut sheet (Day 4ao); Esc closes help first
 - **Teaching prefs persist**: localStorage restores layer visibility, label density, sagittal clip, last camera preset (Day 4ap; teaching chrome only)
+- **Ontology IDs (partial)**: StructurePanel shows TA2 / FMA / BP when mapped (`src/lib/ontologyIds.ts`); honest empty when unknown (Day 4aq)
 - **Click selection**: Shows Chinese name, Latin name (TA2), summary
 - **Click-to-focus**: Camera frames selected mesh AABB (teaching polish)
 - **Hover tooltips**: Quick structure identification
@@ -196,7 +197,7 @@ Open `http://localhost:5173` to view the atlas.
 - **Implementation Plan**: `docs/superpowers/plans/2026-09-14-right-foot-anatomy-atlas.md`
 - **Asset Research**: `docs/assets-research-round2.md` (≥12 sources compared)
 - **Terminology**: `docs/terminology.md` (TA2 Latin + PRC Chinese standards)
-- **Methods**: `docs/methods.md` (data sources, extraction, limitations)
+- **Methods**: `docs/methods.md` (data sources, extraction, journal-facing limitations table)
 - **Contributing**: `CONTRIBUTING.md` (license boundaries, NC-trap exclusions)
 - **Spatial Alignment QA**: `docs/spatial-alignment-qa.md` (0.01 scale verification)
 - **Phase 6 self-review**: `docs/phase-6-self-review.md` (census, UX inventory, open-data ceilings)

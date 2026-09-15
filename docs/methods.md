@@ -1,7 +1,7 @@
 # Methods
 
 **Project**: Right Foot Anatomy Atlas (Teaching-Grade Interactive 3D)  
-**Version**: Week 2 Day 4ap / Phase 6 (teaching atlas in progress; see README + `docs/phase-6-self-review.md` live census; **129** entries / **124** unique; **53** main-tree / **71** BY-SA; 134 discrete GLBs; teaching prefs localStorage + keyboard help + camera presets 1–5 + multi-view QA screenshots (9) + label density + sagittal clip lite; TA2 soft-tissue still incomplete — **not a finished product**)  
+**Version**: Week 2 Day 4aq / Phase 6 (teaching atlas in progress; see README + `docs/phase-6-self-review.md` live census; **129** entries / **124** unique; **53** main-tree / **71** BY-SA; 134 discrete GLBs; teaching prefs localStorage + keyboard help + camera presets 1–5 + multi-view QA screenshots (9) + label density + sagittal clip lite; TA2 soft-tissue still incomplete — **not a finished product**)  
 **Date**: 2026-09-15  
 **Licenses**: Code MIT | Assets CC BY 4.0 / CC0 1.0 / CC BY-SA 4.0 (isolated)
 
@@ -15,6 +15,19 @@ This atlas integrates open-licensed anatomical meshes from BodyParts3D, Universi
 
 **Target Audience**: Medical students, anatomy instructors, foot/ankle residents, physical therapists.  
 **NOT for**: Clinical diagnosis, treatment planning, surgical navigation, implant planning, or patient-specific modeling.
+
+### Journal-facing limitations (concise)
+
+| Limitation | What it means | Implication for readers |
+|------------|---------------|-------------------------|
+| **License mix** | Code MIT; main-tree meshes CC BY 4.0 (BP3D) / CC0 (UM); soft-tissue majority under **CC BY-SA 4.0** isolate (`by-sa/`) | Redistribution of BY-SA meshes (and derivatives) requires ShareAlike; deleting `by-sa/` yields MIT+BY/CC0-only surface |
+| **Spatial residual** | Kabsch co-registration residuals: Open3D→BP3D ≈**2.61 mm** mean; UM→BP3D ≈**2.22 mm**; ZA→BP3D ≈**1.81 mm** (see transform JSONs) | Teaching visualization grade only — **not** surgical registration / implant / navigation error bounds |
+| **Grouped vessels** | Several arteries/nerves are **combined** meshes (e.g. dorsal digital, plantar/dorsal metatarsal) labeled （组合）/grouped | Do not treat as per-ray / per-toe elemental atlas; no license-clean per-ray MTA found |
+| **BY-SA share** | ≈**71/124** unique structures live under ShareAlike isolate | Prefer future CC0/CC BY replacements; do not equate isolate volume with main-tree completeness |
+| **No clinical claim** | Atlas is anatomy **education** (named structures, layers, classroom cutaways) | **Not** for diagnosis, treatment planning, interventional guidance, or patient-specific modeling |
+| **Ontology IDs partial** | Optional TA2 / FMA / BP codes in `src/lib/ontologyIds.ts` when citable; omitted when unknown | Panel shows codes only when present — honest empty otherwise; not TA2-complete soft tissue |
+
+Full census, UX inventory, and open-data ceilings: `docs/phase-6-self-review.md`. Ontology source notes: `src/lib/ontologyIds.ts` header + `docs/terminology.md`.
 
 ---
 
@@ -293,7 +306,7 @@ Commit history documents asset decisions, `structures.json` evolution, and `Foot
 ### Data Provenance (examples)
 | Structure | Source | Key ID / object |
 |-----------|--------|-----------------|
-| Calcaneus | BP3D | BP9040 / FMA24497 |
+| Calcaneus | BP3D | BP9040 / FMA24496 |
 | Abductor hallucis | UM | `Segmentation_Muscle_Abductor Hallucis.stl` |
 | Tibial nerve | Z-Anatomy | `Tibial nerve.r` |
 | Interosseous talocalcaneal | Open3D | `Interosseus_talocalcaneal_ligament.r` → `by-sa/` |
@@ -507,4 +520,10 @@ Wrote `docs/phase-6-self-review.md` (census 129/124; 53 main / 71 BY-SA; residua
 1. **UX**: localStorage teaching prefs (`teachingPrefs.ts`) — layers, label density, sagittal clip, last camera preset; restore on load; vitest.
 2. **Dig**: Female Atlas (MIT/CC BY); slorksmo/Human-Atlas (MIT/CC BY EN·AR) — **0** mesh integrate; no SA spam.
 3. Census unchanged **129/124**. Honesty: teaching atlas in progress — **no finished-product claim**.
+
+## Day 4aq — ontology IDs on panel + journal limitations (2026-09-15)
+
+1. **Ontology**: Sparse `src/lib/ontologyIds.ts` lookup (TA2 / FMA / BP where citable); StructurePanel shows IDs when present, omits when unknown. Sources documented in module header + terminology table — **not** a complete ontology claim.
+2. **Methods**: Journal-facing limitations table (license mix, spatial residual, grouped vessels, BY-SA share, no clinical claim, partial ontology).
+3. **No** new meshes / SA spam. Census unchanged **129/124**. Honesty: teaching atlas in progress — **not a finished product**.
 
