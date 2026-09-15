@@ -139,4 +139,21 @@ describe('assetProvenance', () => {
       expect(p.isolatedBySa).toBe(true);
     }
   });
+
+  it('marks Day 4ab Open3D tarsal/calcaneal/perforator vessels as BY-SA isolate', () => {
+    for (const id of [
+      'perforating_arcuate_deep_plantar',
+      'lateral_tarsal_artery',
+      'medial_tarsal_arteries',
+      'medial_calcaneal_artery',
+      'lateral_calcaneal_artery',
+    ]) {
+      const p = getStructureProvenance(id, false, 'vessel');
+      expect(p.sourceShort).toBe('Open3D');
+      expect(p.license).toBe('CC-BY-SA-4.0');
+      expect(p.isolatedBySa).toBe(true);
+    }
+    expect(getTeachingMeshNote('medial_tarsal_arteries', 'vessel')).toMatch(/组合|Open3D/);
+    expect(getTeachingMeshNote('perforating_arcuate_deep_plantar', 'vessel')).toMatch(/Open3D|Kabsch/);
+  });
 });

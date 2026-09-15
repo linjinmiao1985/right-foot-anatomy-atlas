@@ -130,6 +130,12 @@ const REAL_VESSEL_MODELS: Record<string, string> = {
   'dorsal_metatarsal_arteries': '/models/right-foot/by-sa/dorsal_metatarsal_arteries.glb', // GROUPED
   'deep_branch_medial_plantar_artery': '/models/right-foot/by-sa/deep_branch_medial_plantar_artery.glb',
   'superficial_branch_medial_plantar_artery': '/models/right-foot/by-sa/superficial_branch_medial_plantar_artery.glb',
+  // Day 4ab — tarsal aa. + calcaneal aa. + perforating arcuate↔deep arch
+  'perforating_arcuate_deep_plantar': '/models/right-foot/by-sa/perforating_arcuate_deep_plantar.glb',
+  'lateral_tarsal_artery': '/models/right-foot/by-sa/lateral_tarsal_artery.glb',
+  'medial_tarsal_arteries': '/models/right-foot/by-sa/medial_tarsal_arteries.glb', // GROUPED
+  'medial_calcaneal_artery': '/models/right-foot/by-sa/medial_calcaneal_artery.glb',
+  'lateral_calcaneal_artery': '/models/right-foot/by-sa/lateral_calcaneal_artery.glb',
 };
 
 // Real nerve GLBs — Z-Anatomy trunks (CURVE→tube) + Open3D fine/branch (volumetric, Kabsch→BP3D).

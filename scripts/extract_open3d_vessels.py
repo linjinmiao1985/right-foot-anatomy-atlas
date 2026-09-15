@@ -4,7 +4,7 @@ apply third_party/open3dmodel/open3d_to_bp3d_transform.json Kabsch, write
 raw OBJ under third_party/open3dmodel/extracted/ and GLB under
 public/models/right-foot/by-sa/ via obj2gltf.
 
-Day 4aa — deep plantar a./arch detail + grouped dorsal MTA + medial plantar branches.
+Day 4ab — tarsal aa. + calcaneal aa. + perforating arcuate↔deep arch.
 """
 from __future__ import annotations
 
@@ -21,30 +21,29 @@ XFORM = ROOT / "third_party/open3dmodel/open3d_to_bp3d_transform.json"
 RAW_OUT = ROOT / "third_party/open3dmodel/extracted"
 BYSA = ROOT / "public/models/right-foot/by-sa"
 
-# Day 4aa — up to 5 teaching vessels not already wired as BY-SA.
-# Skip: Posterior_tibial / Fibular (already BY-SA); Medial/Lateral plantar,
-# Dorsal_pedis, Arcuate, Plantar_metatarsal, Dorsal_digital (BP3D main tree).
-# Deep_plantar_arch: Open3D-named deep arch — additive BY-SA detail vs BP3D plantar_arch.
-# Dorsal_metatarsal_arteries: GROUPED (no 1st–4th elemental) — honest（组合）.
+# Day 4ab — up to 5 teaching vessels (documented-only last pass).
+# Skip true BP3D duplicates: Medial/Lateral plantar, Plantar_metatarsal,
+# Dorsal_digital, Arcuate (BP3D main-tree present; Open3D not meaningfully
+# finer for teaching — see skip_verify in vessel_extract_aabb.json).
 TARGETS = {
-    "Deep_plantar_artery.r": "deep_plantar_artery",
-    "Deep_plantar_arch.r": "deep_plantar_arch",
-    "Dorsal_metatarsal_arteries.r": "dorsal_metatarsal_arteries",
-    "Deep_branch_of_Medial_plantar_artery.r": "deep_branch_medial_plantar_artery",
-    "Superficial_branch_of_Medial_planter_artery.r": "superficial_branch_medial_plantar_artery",
+    "Perforating_br._between_Arcuate_a._and_Deep_plantar_arch.r": "perforating_arcuate_deep_plantar",
+    "Lateral_tarsal_artery.r": "lateral_tarsal_artery",
+    "Medial_tarsal_arteries.r": "medial_tarsal_arteries",
+    "Medial_calcaneal_artery.r": "medial_calcaneal_artery",
+    "Lateral_calcaneal_branch_of_fibular_artery.r": "lateral_calcaneal_artery",
 }
 
-# Inventory-only (documented, not wired this pass)
+# Inventory / skip decisions (not wired this pass)
 DOCUMENTED_ONLY = {
-    "Perforating_br._between_Arcuate_a._and_Deep_plantar_arch.r": "perforating arcuate↔deep plantar arch — defer",
-    "Lateral_tarsal_artery.r": "overlaps teaching niche of arcuate/dorsalis pedis — defer",
-    "Medial_tarsal_arteries.r": "grouped tarsals — defer",
-    "Medial_calcaneal_artery.r": "heel arterial — defer",
-    "Lateral_calcaneal_branch_of_fibular_artery.r": "heel arterial — defer",
-    "Plantar_metatarsal_arteries.r": "BP3D plantar_metatarsal already main-tree grouped",
-    "Dorsal_digital_arteries_of_foot.r": "BP3D dorsal_digital already main-tree grouped",
-    "Medial_plantar_artery.r": "BP3D plantar_artery_medial present",
-    "Lateral_plantar_artery.r": "BP3D plantar_artery_lateral present",
+    "Medial_plantar_artery.r": "SKIP — BP3D medial_plantar present (412 verts) > Open3D (156); no finer teaching",
+    "Lateral_plantar_artery.r": "SKIP — BP3D lateral_plantar present (470 verts); Open3D 588 same trunk niche",
+    "Plantar_metatarsal_arteries.r": "SKIP — BP3D plantar_metatarsal grouped (1371) ≥ Open3D (1212); still grouped",
+    "Dorsal_digital_arteries_of_foot.r": (
+        "SKIP — BP3D dorsal_digital grouped present; Open3D denser (6744 vs 2988) but still "
+        "grouped plural and spatially overlaps Day 4aa dorsal_metatarsal BY-SA — not per-ray finer"
+    ),
+    "Arcuate_artery.r": "SKIP — BP3D arcuate_artery already main-tree named elemental",
+    "Dorsal_pedis_artery.r": "SKIP — BP3D dorsalis_pedis already main-tree",
 }
 
 
@@ -114,6 +113,7 @@ def main() -> int:
     RAW_OUT.mkdir(parents=True, exist_ok=True)
     BYSA.mkdir(parents=True, exist_ok=True)
     aabb_report = {}
+    GROUPED = {"medial_tarsal_arteries"}
 
     for src_name, out_stem in TARGETS.items():
         data = objs[src_name]
@@ -180,7 +180,7 @@ def main() -> int:
             "n_verts": int(len(V)),
             "n_faces": int(len(data["faces"])),
             "open3d_object": src_name,
-            "grouped": out_stem == "dorsal_metatarsal_arteries",
+            "grouped": out_stem in GROUPED,
         }
         glb_path = BYSA / f"{out_stem}.glb"
         r = subprocess.run(
@@ -199,14 +199,36 @@ def main() -> int:
             {
                 "source": str(src),
                 "transform": str(XFORM.relative_to(ROOT)),
-                "method": "reuse Open3D→BP3D Kabsch (Day 4m); Day 4aa vessels",
+                "method": "reuse Open3D→BP3D Kabsch (Day 4m); Day 4ab vessels",
                 "kabsch_mean_residual_mm": xf.get("mean_residual_mm"),
                 "targets": TARGETS,
-                "documented_only": DOCUMENTED_ONLY,
+                "documented_only_skipped": DOCUMENTED_ONLY,
+                "skip_verify": {
+                    "bp3d_vert_counts": {
+                        "medial_plantar_artery": 412,
+                        "lateral_plantar_artery": 470,
+                        "plantar_metatarsal_arteries_grouped": 1371,
+                        "dorsal_digital_arteries": 2988,
+                        "arcuate_artery": 322,
+                    },
+                    "open3d_vert_counts": {
+                        "Medial_plantar_artery.r": 156,
+                        "Lateral_plantar_artery.r": 588,
+                        "Plantar_metatarsal_arteries.r": 1212,
+                        "Dorsal_digital_arteries_of_foot.r": 6744,
+                        "Arcuate_artery.r": 588,
+                    },
+                    "decision": (
+                        "Skip Open3D med/lat plantar, plantar MTA, dorsal digital, arcuate — "
+                        "BP3D main-tree already covers teaching niche; Open3D dorsal digital denser "
+                        "but still grouped and overlaps Day 4aa dorsal_metatarsal; avoid BY-SA weight."
+                    ),
+                },
                 "aabb_bp3d_mm": aabb_report,
                 "inventory_note": (
                     "No individually named 1st–4th dorsal/plantar metatarsal or "
-                    "proper digital artery objects in lower-limb.obj — only grouped plurals."
+                    "proper digital artery objects in lower-limb.obj — only grouped plurals. "
+                    "Medial_tarsal_arteries.r is likewise a grouped plural."
                 ),
             },
             indent=2,

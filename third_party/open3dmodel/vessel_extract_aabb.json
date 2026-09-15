@@ -1,142 +1,156 @@
 {
   "source": "/workspace/literature/open3d-assets/lower-limb.obj",
   "transform": "third_party/open3dmodel/open3d_to_bp3d_transform.json",
-  "method": "reuse Open3D\u2192BP3D Kabsch (Day 4m); Day 4aa vessels",
+  "method": "reuse Open3D\u2192BP3D Kabsch (Day 4m); Day 4ab vessels",
   "kabsch_mean_residual_mm": 2.6124537404764445,
   "targets": {
-    "Deep_plantar_artery.r": "deep_plantar_artery",
-    "Deep_plantar_arch.r": "deep_plantar_arch",
-    "Dorsal_metatarsal_arteries.r": "dorsal_metatarsal_arteries",
-    "Deep_branch_of_Medial_plantar_artery.r": "deep_branch_medial_plantar_artery",
-    "Superficial_branch_of_Medial_planter_artery.r": "superficial_branch_medial_plantar_artery"
+    "Perforating_br._between_Arcuate_a._and_Deep_plantar_arch.r": "perforating_arcuate_deep_plantar",
+    "Lateral_tarsal_artery.r": "lateral_tarsal_artery",
+    "Medial_tarsal_arteries.r": "medial_tarsal_arteries",
+    "Medial_calcaneal_artery.r": "medial_calcaneal_artery",
+    "Lateral_calcaneal_branch_of_fibular_artery.r": "lateral_calcaneal_artery"
   },
-  "documented_only": {
-    "Perforating_br._between_Arcuate_a._and_Deep_plantar_arch.r": "perforating arcuate\u2194deep plantar arch \u2014 defer",
-    "Lateral_tarsal_artery.r": "overlaps teaching niche of arcuate/dorsalis pedis \u2014 defer",
-    "Medial_tarsal_arteries.r": "grouped tarsals \u2014 defer",
-    "Medial_calcaneal_artery.r": "heel arterial \u2014 defer",
-    "Lateral_calcaneal_branch_of_fibular_artery.r": "heel arterial \u2014 defer",
-    "Plantar_metatarsal_arteries.r": "BP3D plantar_metatarsal already main-tree grouped",
-    "Dorsal_digital_arteries_of_foot.r": "BP3D dorsal_digital already main-tree grouped",
-    "Medial_plantar_artery.r": "BP3D plantar_artery_medial present",
-    "Lateral_plantar_artery.r": "BP3D plantar_artery_lateral present"
+  "documented_only_skipped": {
+    "Medial_plantar_artery.r": "SKIP \u2014 BP3D medial_plantar present (412 verts) > Open3D (156); no finer teaching",
+    "Lateral_plantar_artery.r": "SKIP \u2014 BP3D lateral_plantar present (470 verts); Open3D 588 same trunk niche",
+    "Plantar_metatarsal_arteries.r": "SKIP \u2014 BP3D plantar_metatarsal grouped (1371) \u2265 Open3D (1212); still grouped",
+    "Dorsal_digital_arteries_of_foot.r": "SKIP \u2014 BP3D dorsal_digital grouped present; Open3D denser (6744 vs 2988) but still grouped plural and spatially overlaps Day 4aa dorsal_metatarsal BY-SA \u2014 not per-ray finer",
+    "Arcuate_artery.r": "SKIP \u2014 BP3D arcuate_artery already main-tree named elemental",
+    "Dorsal_pedis_artery.r": "SKIP \u2014 BP3D dorsalis_pedis already main-tree"
+  },
+  "skip_verify": {
+    "bp3d_vert_counts": {
+      "medial_plantar_artery": 412,
+      "lateral_plantar_artery": 470,
+      "plantar_metatarsal_arteries_grouped": 1371,
+      "dorsal_digital_arteries": 2988,
+      "arcuate_artery": 322
+    },
+    "open3d_vert_counts": {
+      "Medial_plantar_artery.r": 156,
+      "Lateral_plantar_artery.r": 588,
+      "Plantar_metatarsal_arteries.r": 1212,
+      "Dorsal_digital_arteries_of_foot.r": 6744,
+      "Arcuate_artery.r": 588
+    },
+    "decision": "Skip Open3D med/lat plantar, plantar MTA, dorsal digital, arcuate \u2014 BP3D main-tree already covers teaching niche; Open3D dorsal digital denser but still grouped and overlaps Day 4aa dorsal_metatarsal; avoid BY-SA weight."
   },
   "aabb_bp3d_mm": {
-    "deep_plantar_artery": {
+    "perforating_arcuate_deep_plantar": {
       "x": [
-        -101.1464595884515,
-        -91.77812234376148
+        -123.69915526393892,
+        -103.72370670881058
       ],
       "y": [
-        -147.14122790564593,
-        -142.9087189576562
+        -142.58661572850525,
+        -120.3193444012037
       ],
       "z": [
-        -37.123023591920116,
-        -22.944304490277595
+        -51.15357931265653,
+        -28.81502388235174
       ],
       "centroid": [
-        -97.60526105512953,
-        -145.74359175954453,
-        -30.43795685434726
+        -112.5168847516995,
+        -131.6690567503878,
+        -41.99316658435909
       ],
-      "n_verts": 156,
-      "n_faces": 144,
-      "open3d_object": "Deep_plantar_artery.r",
-      "grouped": false
-    },
-    "deep_plantar_arch": {
-      "x": [
-        -111.64451724416216,
-        -99.87956126571294
-      ],
-      "y": [
-        -146.92127274020098,
-        -115.17860105139864
-      ],
-      "z": [
-        -54.03356415156429,
-        -36.79402569009649
-      ],
-      "centroid": [
-        -105.89571161396164,
-        -133.40845394420057,
-        -44.43227881491968
-      ],
-      "n_verts": 444,
+      "n_verts": 468,
       "n_faces": 432,
-      "open3d_object": "Deep_plantar_arch.r",
+      "open3d_object": "Perforating_br._between_Arcuate_a._and_Deep_plantar_arch.r",
       "grouped": false
     },
-    "dorsal_metatarsal_arteries": {
+    "lateral_tarsal_artery": {
       "x": [
-        -165.0692900571789,
-        -85.30657740463417
+        -119.03979049215003,
+        -85.84296827768023
       ],
       "y": [
-        -228.09629844749395,
-        -124.27728881140759
+        -127.0260791262029,
+        -73.76724571488319
       ],
       "z": [
-        -68.67149161982489,
-        -23.51432937595188
+        -39.87888969052807,
+        -0.298581854695982
       ],
       "centroid": [
-        -130.83661587211876,
-        -185.93963801247406,
-        -59.76340940863432
+        -108.32833481888433,
+        -104.11952078413076,
+        -25.67945434510593
       ],
-      "n_verts": 8352,
-      "n_faces": 8208,
-      "open3d_object": "Dorsal_metatarsal_arteries.r",
+      "n_verts": 900,
+      "n_faces": 864,
+      "open3d_object": "Lateral_tarsal_artery.r",
+      "grouped": false
+    },
+    "medial_tarsal_arteries": {
+      "x": [
+        -89.10776808569756,
+        -56.43282063718153
+      ],
+      "y": [
+        -169.42870191904322,
+        -84.07022069235111
+      ],
+      "z": [
+        -49.068134282403385,
+        -8.894290144217422
+      ],
+      "centroid": [
+        -72.18352064365708,
+        -124.42546470060532,
+        -29.1246368673516
+      ],
+      "n_verts": 2064,
+      "n_faces": 2016,
+      "open3d_object": "Medial_tarsal_arteries.r",
       "grouped": true
     },
-    "deep_branch_medial_plantar_artery": {
+    "medial_calcaneal_artery": {
       "x": [
-        -101.38770430657067,
-        -79.21638258658727
+        -56.1604698761851,
+        -45.009512494476766
       ],
       "y": [
-        -144.29666043438775,
-        -117.4563777586829
+        -66.66962678147026,
+        -32.71277766415923
       ],
       "z": [
-        -52.590821509977694,
-        -39.56439341574025
+        -49.08746599478715,
+        -22.692073194363886
       ],
       "centroid": [
-        -88.18012548757241,
-        -131.29682791541748,
-        -46.81028953465756
+        -50.09009324620329,
+        -45.06164316669365,
+        -37.72633927619245
       ],
-      "n_verts": 456,
-      "n_faces": 432,
-      "open3d_object": "Deep_branch_of_Medial_plantar_artery.r",
+      "n_verts": 600,
+      "n_faces": 576,
+      "open3d_object": "Medial_calcaneal_artery.r",
       "grouped": false
     },
-    "superficial_branch_medial_plantar_artery": {
+    "lateral_calcaneal_artery": {
       "x": [
-        -116.85493502238879,
-        -76.94847143544752
+        -79.03385231374153,
+        -52.56994529673243
       ],
       "y": [
-        -228.76632128613733,
-        -118.63935603473239
+        -47.44143103613489,
+        -26.532570933690636
       ],
       "z": [
-        -70.9145173994249,
-        -47.105062050616844
+        -53.55370499532064,
+        -26.069097766129282
       ],
       "centroid": [
-        -93.74909784230996,
-        -189.25431367625384,
-        -64.72625579899436
+        -66.50856059230783,
+        -33.404050350001725,
+        -36.88288157159104
       ],
-      "n_verts": 1020,
-      "n_faces": 1008,
-      "open3d_object": "Superficial_branch_of_Medial_planter_artery.r",
+      "n_verts": 1332,
+      "n_faces": 1296,
+      "open3d_object": "Lateral_calcaneal_branch_of_fibular_artery.r",
       "grouped": false
     }
   },
-  "inventory_note": "No individually named 1st\u20134th dorsal/plantar metatarsal or proper digital artery objects in lower-limb.obj \u2014 only grouped plurals."
+  "inventory_note": "No individually named 1st\u20134th dorsal/plantar metatarsal or proper digital artery objects in lower-limb.obj \u2014 only grouped plurals. Medial_tarsal_arteries.r is likewise a grouped plural."
 }

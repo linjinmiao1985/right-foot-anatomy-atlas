@@ -36,7 +36,7 @@ Meshes in this directory are licensed under **CC BY-SA 4.0** (ShareAlike). Deriv
 **License**: CC BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/  
 **Modifications**: Extracted named right-side (`.r`) objects to OBJ, converted to glTF 2.0 Binary (obj2gltf); no topology edits. Vertex positions later **Kabsch-aligned** from Open3D meters into BodyParts3D millimeter frame (landmarks: Calcaneus, Talus, Navicular, Cuboid, medial/intermediate/lateral cuneiform, MT1–5; Day 4m re-fit mean residual ≈2.6 mm vs prior 8-landmark ≈3.0 mm that excluded mis-ID cuboid/cuneiforms) so the atlas `scale={[0.01,0.01,0.01]}` convention applies. Transform JSON: `third_party/open3dmodel/open3d_to_bp3d_transform.json`.
 
-**Inventory note**: Day 4t–4w ligaments/retinacula/fascia wired selectively. Day 4x–4z add Open3D fine plantar / cutaneous / calcaneal / dorsal digital (superficial + deep fibular) nerve meshes. Day 4aa adds Open3D fine vessels (deep plantar a./arch, grouped dorsal MTA, medial plantar branches). Sural→LDC continuity object remains a teaching note on LDC. Same OBJ still has further ligament bands, calcaneal/tarsal arteries, and nerve terminals not wired.
+**Inventory note**: Day 4t–4w ligaments/retinacula/fascia wired selectively. Day 4x–4z add Open3D fine plantar / cutaneous / calcaneal / dorsal digital (superficial + deep fibular) nerve meshes. Day 4aa adds Open3D fine vessels (deep plantar a./arch, grouped dorsal MTA, medial plantar branches). Day 4ab adds perforating arcuate↔deep arch, lat/med tarsal, med/lat calcaneal aa. (skipped Open3D med/lat plantar, plantar MTA, dorsal digital, arcuate as BP3D duplicates). Sural→LDC continuity object remains a teaching note on LDC. Same OBJ still has further ligament bands and nerve terminals not wired; **no per-ray 1st–4th MTA**.
 
 
 ### Ankle/foot ligaments, retinacula + plantar fascia (Open3DModel)
@@ -110,7 +110,7 @@ Day 4y wires six Day 4x volume-deferred QA-pass nerves (teaching priority). Stil
 ## Isolation Strategy
 
 - Main tree (bones / most muscles / most vessels): MIT code + CC BY 4.0 / CC0
-- This `by-sa/` module: optional ShareAlike content (Z-Anatomy trunk nerves + Open3D fine/cutaneous nerves, DI, proximal arteries, ankle/foot ligaments, retinacula, plantar fascia)
+- This `by-sa/` module: optional ShareAlike content (Z-Anatomy trunk nerves + Open3D fine/cutaneous nerves, DI, proximal/fine/tarsal/calcaneal/perforator arteries, ankle/foot ligaments, retinacula, plantar fascia)
 - Do **not** merge these GLBs into a CC BY-only redistribution claim
 
 ### Day 4aa — Fine vessels / plantar-arch detail (Open3DModel)
@@ -121,10 +121,17 @@ Day 4y wires six Day 4x volume-deferred QA-pass nerves (teaching priority). Stil
 56. `deep_branch_medial_plantar_artery.glb` — from `Deep_branch_of_Medial_plantar_artery.r`
 57. `superficial_branch_medial_plantar_artery.glb` — from `Superficial_branch_of_Medial_planter_artery.r` (source spelling *planter*; teaching Latin corrected)
 
-**Pipeline**: `scripts/extract_open3d_vessels.py` + Day 4m Kabsch + `obj2gltf`. Spatial QA: `third_party/open3dmodel/vessel_spatial_qa.json` (all accept). AABB extract: `vessel_extract_aabb.json`.
+### Day 4ab — Tarsal / calcaneal / perforator vessels (Open3DModel)
 
-**Honesty**: Dorsal metatarsal arteries remain **grouped only** (soft ceiling). Medial/lateral plantar trunks, dorsalis pedis, arcuate, plantar metatarsal, and dorsal digital stay on BP3D main tree where already present. No individually named 1st–4th MTA/digital artery objects in donor OBJ.
+58. `perforating_arcuate_deep_plantar.glb` — from `Perforating_br._between_Arcuate_a._and_Deep_plantar_arch.r`
+59. `lateral_tarsal_artery.glb` — from `Lateral_tarsal_artery.r`
+60. `medial_tarsal_arteries.glb` — from `Medial_tarsal_arteries.r` (**grouped**)
+61. `medial_calcaneal_artery.glb` — from `Medial_calcaneal_artery.r`
+62. `lateral_calcaneal_artery.glb` — from `Lateral_calcaneal_branch_of_fibular_artery.r`
 
+**Pipeline**: same Day 4m Kabsch + `scripts/extract_open3d_vessels.py` + `obj2gltf`. Spatial QA: all 5 **accept** (`vessel_spatial_qa.json`).
+
+**Skip verify (not wired)**: Open3D `Medial/Lateral_plantar_artery.r`, `Plantar_metatarsal_arteries.r`, `Dorsal_digital_arteries_of_foot.r`, `Arcuate_artery.r` — BP3D main-tree already covers teaching niche; Open3D dorsal digital denser but still grouped and overlaps Day 4aa dorsal MTA; avoid BY-SA weight without meaningful teaching gain. **No per-ray 1st–4th MTA** in donor OBJ.
 
 
 ## Removal

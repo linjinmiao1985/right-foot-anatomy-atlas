@@ -849,6 +849,61 @@
     "placeholder": false
   },
   {
+    "id": "perforating_arcuate_deep_plantar",
+    "meshNames": [
+      "Perforating_Arcuate_Deep_Plantar_R"
+    ],
+    "layer": "vessel",
+    "nameZh": "弓状动脉–足底深弓穿支",
+    "nameLa": "Rr. perforantes (a. arcuata ↔ arcus plantaris profundus)",
+    "summaryZh": "连接足背弓状动脉与足底深动脉弓的穿支（Open3D Perforating_br._between_Arcuate_a._and_Deep_plantar_arch.r）。教学：背–跖侧吻合通道之一，与足底深动脉（第1间隙穿支）对照。网格：CC BY-SA 4.0，Kabsch→BP3D，by-sa/ 隔离。教学示意，非介入导航级。",
+    "placeholder": false
+  },
+  {
+    "id": "lateral_tarsal_artery",
+    "meshNames": [
+      "Lateral_Tarsal_Artery_R"
+    ],
+    "layer": "vessel",
+    "nameZh": "跗外侧动脉",
+    "nameLa": "A. tarsalis lateralis",
+    "summaryZh": "足背动脉发出的跗外侧分支，行向足背外侧并与弓状动脉吻合相关教学。BP3D 主树无独立跗外侧 elemental；本网格为 Open3D Lateral_tarsal_artery.r（CC BY-SA 4.0），Kabsch→BP3D，by-sa/。教学级示意。",
+    "placeholder": false
+  },
+  {
+    "id": "medial_tarsal_arteries",
+    "meshNames": [
+      "Medial_Tarsal_Arteries_Combined_R"
+    ],
+    "layer": "vessel",
+    "nameZh": "跗内侧动脉（组合）",
+    "nameLa": "Aa. tarsales mediales (combined)",
+    "summaryZh": "足背动脉内侧发出的跗内侧动脉 Open3D 组合网格（Medial_tarsal_arteries.r 单一对象）。教学诚实：lower-limb.obj 无分条独立命名，本条目保持（组合）。网格：CC BY-SA 4.0，Kabsch→BP3D，by-sa/。非逐支跗内侧血管图谱。",
+    "placeholder": false
+  },
+  {
+    "id": "medial_calcaneal_artery",
+    "meshNames": [
+      "Medial_Calcaneal_Artery_R"
+    ],
+    "layer": "vessel",
+    "nameZh": "跟内侧动脉",
+    "nameLa": "A. calcanea medialis",
+    "summaryZh": "胫后动脉在踝管附近发出的跟内侧支，供应跟骨内侧及足跟内侧皮肤。教学：跟区血供/跟骨手术相关。网格：Open3D Medial_calcaneal_artery.r（CC BY-SA 4.0），Kabsch→BP3D，by-sa/。教学示意。",
+    "placeholder": false
+  },
+  {
+    "id": "lateral_calcaneal_artery",
+    "meshNames": [
+      "Lateral_Calcaneal_Artery_R"
+    ],
+    "layer": "vessel",
+    "nameZh": "跟外侧动脉（腓动脉支）",
+    "nameLa": "A. calcanea lateralis (ex a. fibulari)",
+    "summaryZh": "腓动脉发出的跟外侧支，供应跟骨外侧及足跟外侧皮肤。教学：与跟内侧动脉对照的跟区外侧血供。网格：Open3D Lateral_calcaneal_branch_of_fibular_artery.r（CC BY-SA 4.0），Kabsch→BP3D，by-sa/。教学示意。",
+    "placeholder": false
+  },
+  {
     "id": "long_plantar_ligament",
     "meshNames": [
       "Long_Plantar_Ligament_R",

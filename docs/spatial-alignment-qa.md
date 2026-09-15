@@ -417,3 +417,12 @@ Teaching-grade only — not a finished nerve atlas.
 - **Centroids (mm, approx)**: deep plantar a. (−98,−146,−30); deep plantar arch (−106,−133,−44); dorsal MTA grouped (−131,−186,−60); deep/superficial medial plantar branches (−88/−94, −131/−189, −47/−65)
 - **Honesty**: dorsal MTA remains grouped; deep_plantar_arch is BY-SA detail complementary to BP3D plantar_arch (same deep-arch teaching concept)
 
+
+## Day 4ab — Open3D tarsal / calcaneal / perforator vessels (2026-09-15)
+
+- **Pipeline**: same Day 4m Kabsch; `scripts/extract_open3d_vessels.py`
+- **QA**: `third_party/open3dmodel/vessel_spatial_qa.json` — all 5 **accept** (inside_padded_frac=1.0; bone AABB overlap; wrong_side=false)
+- **Centroids (mm, approx)**: perforating (−112,−132,−42); lat. tarsal (−108,−104,−26); med. tarsal grouped (−72,−124,−29); med. calcaneal (−50,−45,−38); lat. calcaneal (−66,−33,−37)
+- **Skip verify**: Open3D med/lat plantar, plantar MTA, dorsal digital, arcuate — BP3D main-tree duplicates / no per-ray gain
+- **Honesty**: medial tarsal arteries remain **grouped**; still no 1st–4th MTA elemental in donor OBJ
+

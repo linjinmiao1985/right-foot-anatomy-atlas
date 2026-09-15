@@ -1166,3 +1166,12 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 - integrity-audit + vitest + build; commit + push.
 - No finished-product claim.
 
+
+## Week 2 Day 4ab (2026-09-15) — Open3D tarsal/calcaneal/perforator vessels + Phase 5 self-review
+
+- Pulled branch at 91e12b4 (already current).
+- Verified skip of Open3D med/lat plantar, plantar MTA, dorsal digital, arcuate vs BP3D (BP3D covers niche; Open3D dorsal digital denser but still grouped + overlaps Day 4aa dorsal MTA).
+- Integrated 5 BY-SA vessels (Kabsch Day 4m; `scripts/extract_open3d_vessels.py`; QA all accept): perforating arcuate↔deep plantar, lat. tarsal, med. tarsal (grouped), med./lat. calcaneal.
+- Wrote `docs/phase-5-self-review.md` (honest coverage, license split, residuals, gaps, next targets — no finished-product claim).
+- Census: 114 entry / 109 unique; vessels 19 (7 BP3D + 12 Open3D BY-SA).
+- integrity-audit + vitest + build; commit + push.
