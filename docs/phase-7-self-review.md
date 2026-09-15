@@ -116,7 +116,7 @@ Living log: `docs/open-anatomy-learning-log.md` — **54** numbered license-veri
 
 - Keep `docs/methods.md` version + reproducibility + journal-limitations table synced to live **129/124** census and **126/129** ontology.
 - Cite Kabsch residuals + transform JSON paths; strengthen teaching-vs-clinical disclaimer (already present — refresh on any census change).
-- Expert-review checklist (`docs/expert-review-checklist.md`) pass when soft-tissue claims stay scoped to “teaching-useful, incomplete.”
+- Expert-review checklist (`docs/expert-review-checklist.md`) — **v2.0 refreshed Day 4ax**; reviewers pass when soft-tissue claims stay scoped to “teaching-useful, incomplete.”
 - **Do not** claim TA2 completeness or surgical registration.
 
 ### 2. Cloud Agent handback (when quota returns)
@@ -148,6 +148,13 @@ Maintain a short **monitor/reject** list (see `docs/cc0-soft-tissue-watchlist.md
 - **0** new meshes; no SA spam; **no** finished-product claim.
 
 ---
+
+
+
+## Progress note (Day 4ax)
+
+- **Journal readiness (target #1)**: Refreshed `docs/expert-review-checklist.md` to **v2.0** for Phase 7 live board (129/124; ontology 126/129; soft claims scoped teaching-useful/incomplete; license/UX/residual gates).
+- Methods Document Version **1.5** + Day 4ax version pointer; overview + vessel limitation honesty synced; **0** meshes; no SA spam; **no** finished-product claim.
 
 ## Verification this pass
 

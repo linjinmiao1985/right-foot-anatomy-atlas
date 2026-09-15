@@ -1355,3 +1355,13 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 5. Checks: integrity-audit + vitest + build; commit + push.
 6. **Honesty**: teaching atlas in progress — **no finished-product claim**. Census unchanged. **0** meshes.
 
+
+## Day 4ax (2026-09-15) — Journal readiness: expert-review checklist v2.0
+
+**Target**: Phase-7 next target #1 (journal readiness / docs · methods — no hype); prefer over handback / watchlist dig / UX this pass.
+
+1. Pulled `d8c05f9` (already current).
+2. Rewrote `docs/expert-review-checklist.md` → **v2.0** for live Phase 7 board: census **129/124**, ontology **126/129** (3 named empties), BY-SA **71/124**, soft tissue scoped **teaching-useful, incomplete**, UX gates (hide persist / Esc / help / clip / cameras), Kabsch transform JSON paths, NC/watchlist reject honesty. Supersedes Day-7 38/43 / DI-placeholder framing.
+3. Synced `docs/methods.md` Document Version **1.5** + Day 4ax / Phase 7 version pointer; overview census → phase-7; vessel limitation no longer claims outdated 2/9 placeholders; peer-review bullet → scoped checklist. Phase-7 progress note Day 4ax.
+4. Checks: integrity-audit + vitest + build; commit + push.
+5. **Honesty**: teaching atlas in progress — **no finished-product claim**. Census unchanged. **0** meshes / no SA spam.

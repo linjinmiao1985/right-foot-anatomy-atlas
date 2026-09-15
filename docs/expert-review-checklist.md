@@ -1,214 +1,186 @@
 # Expert Review Checklist
 
-**Purpose**: Quality assurance for teaching-grade anatomical accuracy, nomenclature compliance, license boundaries.  
+**Purpose**: Quality assurance for **teaching-grade** anatomical accuracy, nomenclature, license boundaries, and honest soft-tissue scope — **not** a clinical or journal-publication readiness certificate.  
 **Intended Reviewers**: Anatomy instructors, foot/ankle surgeons, medical educators.  
-**Date**: 2026-09-14 (Week Sprint Day 7)
+**Date**: 2026-09-15 (Week 2 Day 4ax / Phase 7)  
+**Live census** (verify against `src/data/structures.json` + `docs/phase-7-self-review.md`): **129** entry-level rows / **124** unique · **53** main-tree (CC BY/CC0) / **71** BY-SA isolate · ontology **126/129** citable · **0** placeholders · osteology **26/26** · soft tissue **teaching-useful, incomplete**  
+**Atlas status**: Teaching atlas **in progress** — **no finished-product claim**; **not** TA2-complete soft tissue; **not** surgical registration.
+
+Companion: `docs/methods.md` (journal-facing limitations + Kabsch residuals), `docs/cc0-soft-tissue-watchlist.md`, `docs/terminology.md`.
 
 ---
 
-## A. Anatomical Nomenclature (TA2 Compliance)
+## A. Anatomical Nomenclature (TA2 / FMA / BP — sparse honesty)
 
-### Latin Names
-- [ ] **Spot-check 10 random structures** against Terminologia Anatomica 2 (2019):
-  - [ ] Calcaneus → TA2:A02.5.10.001
-  - [ ] N. tibialis → TA2:A14.2.07.045
-  - [ ] Arteria dorsalis pedis → TA2:A12.2.16.058
-  - [ ] Abductor hallucis → TA2:A04.7.02.046
-  - [ ] (Add 6 more random structures)
-- [ ] **FMA codes accurate**: Cross-check with Foundational Model of Anatomy where provided
+### Latin / ontology panel
+- [ ] **Spot-check ≥10 structures** against IFAA TA98 entity pages / TA2 viewer / FMA where the panel shows codes (`src/lib/ontologyIds.ts`):
+  - [ ] Calcaneus → TA A02.5.10.001 · FMA24496 · BP9040
+  - [ ] N. tibialis (`tibial_nerve`) → TA A14.2.07.058 · FMA19035
+  - [ ] A. dorsalis pedis (`dorsalis_pedis_artery`) → TA A12.2.16.048 · FMA43915 · BP6027
+  - [ ] M. abductor hallucis (`abductor_hallucis`) → FMA37459 (TA omitted in map this pass — honest sparse)
+  - [ ] Add ≥6 more from bone / muscle / vessel / nerve / ligament layers
+- [ ] **Sparse map honesty**: Panel shows codes **only when present**; **3** honest empties remain (`cervical_talocalcaneal_ligament`; `medial_plantar_veins`; `lateral_plantar_vein`) — do **not** invent IDs
+- [ ] **Grouped / approx notes**: Where `note` says grouped/approx, labels match （组合）/grouped teaching honesty
+- [ ] **Do not** treat **126/129** as TA2-complete soft tissue
 
 ### Chinese Names (PRC Standards)
-- [ ] **踇 (mǔ) for hallux** (toe): Verified usage in `structures.json` (NOT 拇, which is thumb)
-  - [ ] 踇展肌 (Abductor hallucis) ✅
-  - [ ] 踇收肌 (Adductor hallucis) ✅
-  - [ ] 踇短屈肌 (Flexor hallucis brevis) ✅
-  - [ ] Spot-check 5 more hallux-related structures
-- [ ] **Standard clinical terminology**: Align with 《人体解剖学》第9版 (PRC anatomy textbook)
-- [ ] **No mixed hand/foot terminology**: e.g., "拇" only for thumb, "踇" only for hallux
+- [ ] **踇 (mǔ) for hallux** (toe): Verified in `structures.json` (NOT 拇, thumb)
+  - [ ] 踇展肌 / 踇收肌 / 踇短屈肌 and spot-check ≥5 more hallux-related names
+- [ ] Align with 《人体解剖学》第9版 clinical usage where applicable
+- [ ] **No mixed hand/foot terminology**
 
 ### Laterality
-- [ ] **Pes dexter (right foot)** consistently specified in docs
-- [ ] **No left-foot structures** mixed in (BP3D/UM/Z-Anatomy all used `.r` suffix or "right" designation)
-- [ ] **Bilateral structures excluded**: e.g., lumbar vertebrae, pelvis (not foot-specific)
+- [ ] **Pes dexter (right foot)** consistently specified in docs / UI
+- [ ] **No left-foot structures** mixed in (BP3D/UM/Open3D/ZA used `.r` / right designation)
+- [ ] Foot-specific scope: bilateral axial skeleton excluded
 
 ---
 
-## B. Anatomical Accuracy
+## B. Anatomical Accuracy (scoped claims)
 
-### Osteology (Bones) — 25/25 (100% COMPLETE ✅)
-- [ ] **7 tarsal bones**:
-  - [ ] Calcaneus, talus, navicular, cuboid ✅
-  - [ ] Medial/intermediate/lateral cuneiforms ✅
-- [ ] **5 metatarsal bones**: MT1-MT5 ✅
-- [ ] **11 phalanges** (2 hallux + 11 toes 2-5):
-  - [ ] Hallux: proximal + distal ✅ (BP3D)
-  - [ ] 2nd toe: proximal + middle + distal ✅ (BP3D 2, UM 1)
-  - [ ] 3rd toe: proximal + middle + distal ✅ (BP3D 2, UM 1)
-  - [ ] 4th toe: proximal + middle + distal ✅ (BP3D 2, UM 1)
-  - [ ] 5th toe: proximal + middle + distal ✅ (BP3D 2, UM 1)
-- [ ] **Articulations plausible**: e.g., talus sits atop calcaneus, navicular articulates with talus
-- [ ] **No obvious mirroring errors**: Right foot, not left foot flipped
-- [ ] **Spatial alignment verified**: UM distal phalanges 2-5 correctly positioned on respective toes (X/Z coordinates match anatomical ranges)
+### Osteology (Bones) — **26/26** complete (incl. sesamoids)
+- [ ] **7 tarsals**: calcaneus, talus, navicular, cuboid, medial/intermediate/lateral cuneiforms
+- [ ] **5 metatarsals**: MT1–MT5
+- [ ] **13 phalanges + sesamoids**: hallux proximal+distal; toes 2–4 proximal+middle+distal; toe 5 proximal+distal (**no** middle_phalanx_5 in atlas — matches common anatomy)
+- [ ] **Sesamoids**: grouped teaching mesh (`sesamoid_bones`; ontology note OK)
+- [ ] Articulations plausible; no obvious left/right flip; UM/BP3D distal phalanx placement reasonable
 
-### Myology (Muscles)
-- [ ] **Intrinsic muscles (10/11 real)**:
-  - [ ] Plantar layer I: Abductor hallucis, flexor digitorum brevis, abductor digiti minimi ✅
-  - [ ] Plantar layer II: Quadratus plantae ✅, lumbricals ✅
-  - [ ] Plantar layer III: Flexor hallucis brevis ✅, adductor hallucis ✅, flexor digiti minimi brevis ✅
-  - [ ] Plantar layer IV: Plantar interossei ✅, dorsal interossei (placeholder ⚠️)
-  - [ ] Dorsal: Extensor digitorum brevis ✅, extensor hallucis brevis (part of EDB in BP3D)
-- [ ] **Extrinsic muscles (3/3 real)**:
-  - [ ] Tibialis posterior ✅, flexor digitorum longus ✅, flexor hallucis longus ✅
-- [ ] **Origins/insertions anatomically plausible**: Spot-check 3 muscles (e.g., AH origin = calcaneus medial tuberosity)
+### Myology (Muscles) — teaching-useful, **incomplete**
+- [ ] Intrinsic plantar layers I–IV + dorsal EDB/EHB present as teaching set (see `docs/muscle-gap-census.md`)
+- [ ] **Dorsal interossei**: Open3D **BY-SA** under `by-sa/` — **not** main-tree CC BY; prefer future CC0/BY
+- [ ] Extrinsics include UM CC0 set + selected Open3D/ZA BY-SA (FB/FT/opponens/plantaris) — **gastroc/soleus bellies absent by design**
+- [ ] Origins/insertions plausible on spot-check (≥3 muscles)
+- [ ] Muscle sub-group UI is **teaching partition only** — not a finished myology atlas
 
-### Angiology (Vessels)
-- [ ] **7/9 real vessels** (5 individual + 2 honest grouped):
-  - [ ] Dorsalis pedis artery ✅ (continuation of anterior tibial)
-  - [ ] Arcuate artery ✅ (branch of dorsalis pedis)
-  - [ ] Dorsal digital arteries ✅ (BP3D grouped mesh BP6049/FJ2072; labeled （组合）, not per-toe)
-  - [ ] Medial/lateral plantar arteries ✅ (branches of posterior tibial)
-  - [ ] Plantar arch ✅ (anastomosis)
-  - [ ] Plantar metatarsal arteries ✅ (BP3D grouped mesh BP6060/FJ2096; labeled （组合）, not per-toe)
-- [ ] **2/9 placeholder** (posterior tibial, fibular — proximal to foot proper): Documented as gap ✅
+### Angiology (Vessels) — **29** teaching meshes; **no per-ray MTA**
+- [ ] Main-tree BP3D core (dorsalis pedis, arcuate, med/lat plantar, plantar arch, + honest **grouped** dorsal digital / plantar metatarsal)
+- [ ] Open3D/ZA BY-SA expansions present under isolate — several **grouped** plurals remain
+- [ ] Labels for grouped meshes say （组合）/grouped — **do not** claim elemental 1st–4th MTA
+- [ ] Vessel sub-groups = UI only; venous fill teaching-useful, **not** complete
 
-### Neurology (Nerves)
-- [ ] **6/6 real nerves** (Z-Anatomy CURVE geometry):
-  - [ ] Tibial nerve ✅ (enters foot posterior to medial malleolus)
-  - [ ] Medial/lateral plantar nerves ✅ (branches of tibial)
-  - [ ] Deep/superficial fibular nerves ✅ (enter foot dorsum)
-  - [ ] Sural nerve ✅ (lateral foot cutaneous)
-- [ ] **Pathway plausibility**: Nerves follow expected anatomical routes (visual inspection recommended)
+### Neurology (Nerves) — **17** teaching meshes; **not** TA2-complete
+- [ ] 6 ZA trunks (tibial, med/lat plantar, deep/superficial fibular, sural) — CURVE→tube pathway schematic
+- [ ] 11 Open3D fine/cutaneous/calcaneal/dorsal digitals under `by-sa/`
+- [ ] Pathway plausibility on visual inspection; dual-source overlap avoided where documented (e.g. sural→LDC continuity note)
+- [ ] Nerve sub-groups = UI only
+
+### Ligament / tendon — **29** teaching meshes; **incomplete**
+- [ ] Main-tree: BP3D long plantar + Achilles only
+- [ ] Open3D BY-SA ankle/foot bands, retinacula, fascia under `by-sa/` — teaching set, **not** finished ligament atlas
+- [ ] Named ATFL/CFL/deltoid/retinacula **absent** from prior ZA `.blend` — Open3D remains source for those bands
+- [ ] Ligament sub-groups = UI only
 
 ---
 
-## C. Layer System Accuracy
+## C. Viewer / layer system (teaching UX)
 
-### Raycasting / Visibility
-- [ ] **Hidden layers not selectable**: Toggle off bone → bone meshes not clickable
-- [ ] **Visible layers render correctly**: No z-fighting, transparency issues
-- [ ] **Placeholder badge present**: Structures with `placeholder: true` show "占位" badge
+### Visibility / selection
+- [ ] Hidden **layers** not selectable / not drawn
+- [ ] Per-structure **hide** (`X` / panel chip) works beyond isolate; restore chips; ids persist in teaching prefs
+- [ ] Esc closes help first, else clears selection + isolate + search — **does not** clear per-structure hides
+- [ ] Isolate (`I`) and search behave as documented in `docs/interaction-qa.md` / keyboard help
 
-### Material Distinction
-- [ ] **Bones**: Beige/tan, opaque
-- [ ] **Muscles**: Pink/red, semi-transparent (UM + BP3D)
-- [ ] **Vessels**: Red, translucent arterial appearance
-- [ ] **Nerves**: Yellow, emissive (thin CURVE geometry)
+### Materials / chrome (spot-check)
+- [ ] Bones / muscles / vessels / nerves visually distinct for teaching
+- [ ] License badge: **主树 · Main** vs **ShareAlike**
+- [ ] Label density 关/中文/中+拉; sagittal clip lite = teaching cutaway **not** clinical MPR
+- [ ] Camera presets `1`–`5` (默认/背/跖/内/外); keyboard help `?`/`H`
 
 ---
 
 ## D. License Boundaries (Critical)
 
-### MIT Code + CC BY/CC0 Assets
-- [ ] **Main directory** (`public/models/right-foot/*.glb`): Only CC BY 4.0 (BP3D) + CC0 1.0 (UM)
-- [ ] **No BY-SA content outside `by-sa/`**: Verified via `git ls-files public/models/right-foot/*.glb`
+### MIT code + CC BY/CC0 main tree
+- [ ] `public/models/right-foot/*.glb` (not `by-sa/`): CC BY 4.0 (BP3D) and/or CC0 (UM) only
+- [ ] No BY-SA content outside `by-sa/`
 
-### BY-SA Isolated Module
-- [ ] **`by-sa/` directory**: Contains ONLY 6 nerve GLB + NOTICE.md
-- [ ] **NOTICE.md clarity**: Attribution string, ShareAlike terms, removal instructions
-- [ ] **User opt-in documented**: README explains nerve layer → BY-SA acceptance
+### BY-SA isolate
+- [ ] Soft-tissue ShareAlike meshes only under `public/models/right-foot/by-sa/` + `NOTICE.md`
+- [ ] Live unique weight ≈ **71/124** under SA — deliberate teaching trade-off; prefer CC0/BY replacements (`docs/cc0-soft-tissue-watchlist.md`)
+- [ ] README / methods explain: skip BY-SA layers or delete `by-sa/` → MIT + CC BY/CC0 only
 
-### NC-Trap Exclusions
-- [ ] **No BY-NC content**: Verified via `CONTRIBUTING.md` NC-exclusion list
-- [ ] **Rejected sources documented**: UBC Krebs textures, Zenodo 21354714, NIH 15850
-
----
-
-## E. Known Gaps (Disclosed)
-
-### Accepted Limitations
-- [ ] **Dorsal interossei**: Documented as absent in BP3D/UM/Z-Anatomy (placeholder ✅)
-- [ ] **Proximal vessels**: 2/9 placeholder (posterior tibial, fibular). Digital/metatarsal present as honest grouped meshes (not per-toe)
-- [ ] **Nerve geometry**: CURVE tubes, not volumetric meshes (teaching-appropriate)
-- [ ] **Extrinsic muscle extent**: Full leg-to-foot (teaching context, not foot-only isolation)
-
-### Not a Gap (By Design)
-- [ ] **Sesamoids**: Included as grouped real mesh (Week 2 Day 4f)
-- [ ] **Ligaments/joints**: Not included (focus: osteo/myo/angio/neuro only)
-- [ ] **Skin/fascia**: Not included (deep anatomy focus)
+### NC / unclear exclusions
+- [ ] No BY-NC / NC-SA in main tree (see watchlist reject table + learning log)
+- [ ] Reject unclear “License: Model” / Sketchfab-unstated packs until SPDX-clear
 
 ---
 
-## F. Spatial Alignment
+## E. Known gaps (disclosed — accept as scope)
 
-### Coordinate System
-- [ ] **All sources use 0.01 scale** (mm → cm): Verified in `FootModel.tsx`
-- [ ] **UM muscles overlap BP3D bones**: Verified in Phase 2 QA (Day 2 log)
-- [ ] **Z-Anatomy nerves derived from BP3D**: Expected coordinate alignment
+### Soft-tissue ceilings (not “missing placeholders”)
+- [ ] **Per-ray MTA**: grouped only — soft inventory ceiling
+- [ ] **BY-SA weight**: nerves 100% SA; most ligaments/vessels SA; DI + several extrinsics SA
+- [ ] **Gastroc/soleus bellies**: absent
+- [ ] **Ontology**: 3 honest empties; map sparse by design
+- [ ] **Residuals**: Kabsch teaching-grade only — Open3D→BP3D ≈2.61 mm mean; UM→BP3D ≈2.22 mm; ZA→BP3D ≈1.81 mm — **not** surgical registration bounds (`docs/methods.md` transform table)
 
-### Visual Inspection (Optional)
-- [ ] **Load viewer**: `npm run dev` → http://localhost:5173
-- [ ] **Tibial nerve pathway**: Runs posterior, between calcaneus/talus (anatomically correct)
-- [ ] **Plantar nerves**: Branch under plantar arch (alongside arteries)
-- [ ] **No floating meshes**: All structures grounded at anatomical origins
+### By design / out of scope this atlas
+- [ ] Skin / full fascia envelope / joint capsules as clinical models
+- [ ] Patient-specific / implant / navigation use
+- [ ] Claiming journal-publication-ready soft tissue or TA2-complete NV/ligament sets
 
 ---
 
-## G. Clinical Disclaimer
+## F. Spatial alignment
 
-### README Warnings
-- [ ] **"Educational Use Only"** prominent at top
-- [ ] **"Not for clinical diagnosis/treatment"** explicitly stated
-- [ ] **"Teaching-grade, not patient-specific"** clarified
-- [ ] **"Not validated for surgery"** included in limitations
+- [ ] Viewer scale factor 0.01 (mm→cm) after bake into BP3D mm frame
+- [ ] Transform JSONs present and cited:
+  - [ ] `third_party/open3dmodel/open3d_to_bp3d_transform.json`
+  - [ ] `third_party/um/um_to_bp3d_transform.json`
+  - [ ] `third_party/z-anatomy/za_to_bp3d_transform.json`
+- [ ] Optional visual: tibial / plantar pathways grounded; no gross floating meshes
 
-### Appropriate Use Cases Listed
-- [ ] Medical student anatomy courses ✅
-- [ ] Anatomy instructor teaching ✅
-- [ ] Foot/ankle resident review ✅
-- [ ] Physical therapy education ✅
+---
 
-### Inappropriate Use Cases Excluded
-- [ ] NOT for journal publication (soft tissue limitations)
-- [ ] NOT for clinical diagnosis
-- [ ] NOT for surgical planning
-- [ ] NOT as "gold standard" reference
+## G. Clinical / journal disclaimer
+
+### Must remain prominent
+- [ ] Educational / teaching-grade only (README + methods)
+- [ ] **Not** for diagnosis, treatment planning, surgical navigation, implant sizing, interventional guidance
+- [ ] Soft tissue = teaching-useful **incomplete**; osteology complete does **not** imply soft completeness
+- [ ] Methods **journal-facing limitations** table current (license mix, residuals, grouped vessels, BY-SA share, no clinical claim, ontology partial)
+
+### Appropriate audiences
+- [ ] Medical students, anatomy instructors, foot/ankle residents, PT education
+
+### Inappropriate claims (fail if asserted)
+- [ ] TA2-complete soft tissue
+- [ ] Surgical registration / gold-standard reference
+- [ ] Finished-product / publication-ready soft atlas
 
 ---
 
 ## H. Reproducibility
 
-### Data Provenance
-- [ ] **BodyParts3D**: DOI 10.18908/lsdba.nbdc00837-007 cited
-- [ ] **Universiti Malaya**: DOI 10.22452/RD/5T6TZ7 cited
-- [ ] **Z-Anatomy**: GitHub repo + commit SHA (or release tag) cited
-
-### Conversion Scripts
-- [ ] **BP3D extraction**: `find_foot_soft_tissue.py`, `extract_foot_soft_tissue.sh` in `assets-raw/`
-- [ ] **UM conversion**: `convert_um_stl.py`, `convert_extrinsic_stl.py` in `assets-raw/`
-- [ ] **Z-Anatomy export**: `inventory_foot_nerves_vessels.py`, `export_right_foot_nerves.py` in `third_party/z-anatomy/`
-
-### Git History
-- [ ] **Commit messages clear**: Each integration step documented (Day 1-7 log)
-- [ ] **Diffs reviewable**: `.glb` files binary, but `structures.json` + `FootModel.tsx` changes visible
+- [ ] DOIs / sources cited: BP3D, UM, Z-Anatomy, Open3D (see methods Data Sources)
+- [ ] `python3 scripts/integrity-audit.py` · `npx vitest run` · `npm run build` green before handback
+- [ ] Ontology vitest: mapped ids exist live; map stays sparse (`n < total`); **126/129** with named empties
+- [ ] Screenshot pack optional (`npm run screenshots` → `docs/screenshots/`) — teaching QA, **not** marketing gallery
 
 ---
 
-## I. Summary Assessment
+## I. Summary assessment (teaching-grade pass bar)
 
-### Pass Criteria
-- [ ] **Nomenclature**: ≥90% TA2-compliant (spot-check 10+ structures)
-- [ ] **Anatomy**: No major errors (misidentified structures, wrong laterality)
-- [ ] **Licenses**: BY-SA cleanly isolated, NC excluded
-- [ ] **Gaps disclosed**: Dorsal interossei + vessel branches documented
-- [ ] **Disclaimer present**: Clinical use warnings clear
+### Pass (teaching-grade)
+- [ ] Nomenclature spot-checks OK; 踇/拇 clean; laterality right-foot
+- [ ] No major misidentification; soft claims scoped “teaching-useful, incomplete”
+- [ ] BY-SA cleanly isolated; NC excluded from main tree
+- [ ] Gaps / ceilings disclosed; clinical disclaimer clear; residuals not oversold
 
-### Fail Criteria (Requires Correction)
-- [ ] Hand/foot terminology mixed (拇/踇 errors)
-- [ ] Left foot structures in right foot atlas
-- [ ] BY-NC content included
-- [ ] BY-SA content outside `by-sa/` directory
-- [ ] Major anatomical inaccuracies (e.g., calcaneus labeled as talus)
+### Fail (requires correction)
+- [ ] Hand/foot 拇/踇 mix; left-foot content; BY-NC in tree; BY-SA outside `by-sa/`
+- [ ] Invented ontology IDs; per-ray MTA or TA2-complete soft claims; finished-product language
 
 ---
 
-## Reviewer Notes
+## Reviewer notes
 
 **Date Reviewed**: _____________  
 **Reviewer Name**: _____________  
 **Institution/Role**: _____________
 
 **Overall Assessment**:
-- [ ] ✅ PASS (teaching-grade quality, minor issues only)
+- [ ] ✅ PASS (teaching-grade; soft tissue incomplete as disclosed)
 - [ ] ⚠️ PASS WITH RESERVATIONS (list issues below)
 - [ ] ❌ FAIL (major corrections required)
 
@@ -217,12 +189,13 @@
 2. 
 3. 
 
-**Recommendations for Next Version**:
+**Recommendations for next iteration** (prefer CC0/BY over SA volume):
 1. 
 2. 
 3. 
 
 ---
 
-**Checklist Version**: 1.0 (2026-09-14)  
-**Atlas Version**: Week Sprint Day 7 (88% real coverage, 38/43 structures)
+**Checklist Version**: 2.0 (2026-09-15 Day 4ax / Phase 7)  
+**Supersedes**: 1.0 (2026-09-14 Week Sprint Day 7 — outdated 38/43 / DI-placeholder / ligaments-excluded framing)  
+**Atlas pointer**: Week 2 Day 4ax / Phase 7 — teaching atlas in progress; **no finished-product claim**
