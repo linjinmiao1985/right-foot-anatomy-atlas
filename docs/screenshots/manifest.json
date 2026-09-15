@@ -1,0 +1,27 @@
+{
+  "generatedAt": "2026-09-15T05:11:46.670Z",
+  "url": "http://127.0.0.1:4173/",
+  "honesty": "Teaching-grade screenshot pack for expert review — not a finished-product gallery; soft-tissue incomplete; BY-SA layers opt-in.",
+  "shots": [
+    {
+      "file": "01-default-all-layers.png",
+      "note": "Default view — all teaching layers on"
+    },
+    {
+      "file": "02-bone-only.png",
+      "note": "Bone layer only"
+    },
+    {
+      "file": "03-muscle-only.png",
+      "note": "Muscle layer only (intrinsics + extrinsics teaching set)"
+    },
+    {
+      "file": "04-nerve-bysa.png",
+      "note": "Nerve layer only — BY-SA isolate visible in panel/legend"
+    },
+    {
+      "file": "05-clip-lite.png",
+      "note": "Sagittal clip lite on (teaching cutaway, not clinical MPR)"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 # Methods
 
 **Project**: Right Foot Anatomy Atlas (Teaching-Grade Interactive 3D)  
-**Version**: Week 2 Day 4ah (teaching atlas in progress; see README live census; 134 discrete GLBs; lazy layer preload + layer-sorted search; TA2 soft-tissue still incomplete — **not a finished product**)  
+**Version**: Week 2 Day 4aj / Phase 6 (teaching atlas in progress; see README + `docs/phase-6-self-review.md` live census; 129 entries / 124 unique; 134 discrete GLBs; lazy preload + layer-sorted search + label density + sagittal clip lite; TA2 soft-tissue still incomplete — **not a finished product**)  
 **Date**: 2026-09-15  
 **Licenses**: Code MIT | Assets CC BY 4.0 / CC0 1.0 / CC BY-SA 4.0 (isolated)
 
@@ -254,6 +254,7 @@ const REAL_NERVE_MODELS: Record<string, string> = {
 |------|------|-------------|
 | `third_party/open3dmodel/open3d_to_bp3d_transform.json` | Open3D meters → BP3D mm (similarity Kabsch) | scale≈926; 12 landmarks (calcaneus–MT5); mean residual ≈**2.61 mm**; max ≈4.41 mm (MT1) |
 | `third_party/um/um_to_bp3d_transform.json` | UM CT/seg → BP3D mm | 7 tarsals; mean residual ≈**2.22 mm** |
+| `third_party/z-anatomy/za_to_bp3d_transform.json` | ZA soft → BP3D mm | 9 foot bones; mean residual ≈**1.81 mm** |
 | `third_party/open3dmodel/ligament_extract_aabb.json` | Per-ligament AABB/centroid after bake | Day 4s–4v targets + Day 4v scan deferrals |
 | `third_party/open3dmodel/ligament_attachment_qa.json` | Centroid→expected bone distances + accept/reject | Reject if wrong side (X>0), min_expect>55 mm (75 mm bands), or outside padded foot AABB |
 
@@ -339,8 +340,8 @@ Commit history documents asset decisions, `structures.json` evolution, and `Foot
 
 ---
 
-**Document Version**: 1.1 (2026-09-15)  
-**Atlas Version**: Week 2 Day 4w (teaching-grade in progress; no finished-product claim)
+**Document Version**: 1.2 (2026-09-15)  
+**Atlas Version**: Week 2 Day 4aj / Phase 6 (teaching-grade in progress; no finished-product claim)
 
 
 ---
@@ -452,3 +453,16 @@ Commit history documents asset decisions, `structures.json` evolution, and `Foot
 | **Preload** | Bones **eager** (`useGLTF.preload`); muscle / vessel / nerve / ligament preload **when that layer is visible** (lazy vs prior preload-all) |
 | **Not claimed** | Meshopt/Draco single-file atlas; streaming LOD; finished soft-tissue completeness |
 
+
+
+## Day 4ai — bilingual label density (2026-09-15)
+
+Hover label density control (关 / 中文 / 中+拉). Dig: open-twin-xr (MIT + multi-license; NC warning), 3Dentes (MIT code / BY-NC anatomy — reject). No new SA mesh. **No finished-product claim.**
+
+## Day 4aj — sagittal clip lite (2026-09-15)
+
+Single-axis sagittal (X) clip toggle + slider (`ClipPlaneSync`). Dig: Visible Human Viewer (MIT), Anatomy Atlas RU (MIT + BP3D CC BY). Teaching cutaway only — **not** clinical MPR. **No finished-product claim.**
+
+## Phase 6 self-review (2026-09-15)
+
+Wrote `docs/phase-6-self-review.md` (census 129/124; 53 main / 71 BY-SA; residuals; UX inventory; open-data ceilings; next-week targets). Screenshot pipeline: `npm run screenshots` → `docs/screenshots/`. Synced README/methods one-liners.

@@ -59,6 +59,8 @@ Interactive web-based teaching atlas for right foot anatomy.
 - **Nerve + vessel + muscle sub-group filters**: teaching partitions (not complete atlases)
 - **Muscle sub-groups**: plantar layers 1–4 / dorsal intrinsic / extrinsic anterior·lateral·posterior
 - **License badge**: StructurePanel shows **主树 · Main** vs **ShareAlike** (by-sa/ isolate)
+- **Label density**: hover chips 关 / 中文 / 中+拉 (Day 4ai)
+- **Sagittal clip (lite)**: single X-axis teaching cutaway + slider — **not** clinical MPR (Day 4aj)
 - **Click selection**: Shows Chinese name, Latin name (TA2), summary
 - **Click-to-focus**: Camera frames selected mesh AABB (teaching polish)
 - **Hover tooltips**: Quick structure identification
@@ -66,6 +68,7 @@ Interactive web-based teaching atlas for right foot anatomy.
 - **Loading states**: Progress indicators for GLB assets
 - **Keyboard**: `I` isolate · `Esc` clears selection + isolate + search
 - **Search**: bilingual ZH/LA includes ligament/tendon entries (e.g. 跖长韧带, 跟腱); results sorted by teaching layer after match score
+- **Screenshot pack** (optional): `npm run screenshots` → `docs/screenshots/` (teaching QA; not a product gallery)
 
 ---
 
@@ -117,13 +120,13 @@ Open `http://localhost:5173` to view the atlas.
 
 ### Z-Anatomy (CC BY-SA 4.0, isolated)
 - **Repository**: https://github.com/Z-Anatomy/Models-of-human-anatomy
-- **Coverage**: 10 nerves (6 Z-Anatomy CURVE tubes + 4 Open3D Kabsch volumetric teaching meshes)
+- **Coverage**: 6 Z-Anatomy CURVE trunk nerves (+ separate Open3D fine/cutaneous under same `by-sa/`; 17 nerve entries total)
 - **Isolation**: `public/models/right-foot/by-sa/` + NOTICE.md
 - **Attribution**: "Z-Anatomy - The libre 3D atlas of anatomy - CC BY-SA 4.0"
 
 ### Open3DModel / AnatomyTOOL (CC BY-SA 4.0, isolated)
 - **Create page**: https://anatomytool.org/open3dmodel-create
-- **Coverage**: Foot dorsal interossei (1st–4th) + posterior tibial artery + fibular artery
+- **Coverage**: DI (1st–4th) + FB/FT/opponens + proximal/fine/tarsal/calcaneal vessels + 27 ankle/foot ligaments·retinacula·fascia (BY-SA isolate; Kabsch→BP3D)
 - **Isolation**: `public/models/right-foot/by-sa/` + NOTICE.md
 - **Alignment**: Baked Open3D meters → BP3D mm via Kabsch on Calcaneus/Talus/Navicular/Cuboid/3 cuneiforms/MT1–5 (Day 4m re-fit after tarsal ID fix; mean residual ≈2.6 mm, prior 8-landmark ≈3.0 mm); render scale stays `0.01`
 
@@ -133,7 +136,7 @@ Open `http://localhost:5173` to view the atlas.
 
 ### Anatomical
 - **BY-SA soft tissue**: DI + proximal PTA/fibular are Open3D ShareAlike fills (prefer future CC0/CC BY)
-- **Ligament / fascia / tendon**: BP3D long plantar + Achilles; Open3D BY-SA 25 teaching meshes; further tarsal/toe bands still missing — **teaching-useful, not a finished ligament atlas**
+- **Ligament / fascia / tendon**: BP3D long plantar + Achilles; Open3D BY-SA **27** teaching meshes; further tarsal/toe bands still missing — **teaching-useful, not a finished ligament atlas**
 - **Vessel fine detail**: Per-toe digital splits not available as separate BP3D meshes (honest grouped instead)
 - **Nerve geometry**: Z-Anatomy CURVE tubes + Open3D volumetric fine branches (teaching-grade; commons/proprii grouped)
 - **Extrinsic muscles**: Shown in full leg-to-foot extent (teaching context, not foot-only isolation)
@@ -155,6 +158,8 @@ Open `http://localhost:5173` to view the atlas.
 - **Methods**: `docs/methods.md` (data sources, extraction, limitations)
 - **Contributing**: `CONTRIBUTING.md` (license boundaries, NC-trap exclusions)
 - **Spatial Alignment QA**: `docs/spatial-alignment-qa.md` (0.01 scale verification)
+- **Phase 6 self-review**: `docs/phase-6-self-review.md` (census, UX inventory, open-data ceilings)
+- **Screenshots** (optional QA pack): `docs/screenshots/` via `npm run screenshots`
 
 ---
 
@@ -181,7 +186,7 @@ npm test
 - ✅ `structureLookup.test.ts`: Structure retrieval by ID/meshName
 - ✅ `layers.test.ts`: Layer visibility helpers
 
-All tests pass (7/7).
+All tests pass (vitest suite; see `npx vitest run`).
 
 ---
 
@@ -211,6 +216,7 @@ See `CONTRIBUTING.md` for:
 
 ---
 
-**Project Status**: Teaching-grade atlas in progress (Week 2) — **not a finished product**  
-**Coverage**: 86 unique / 91 entries; main 52 vs BY-SA 34; ligament/tendon teaching-useful but incomplete (BP3D 1+1 + Open3D 25)  
+**Project Status**: Teaching-grade atlas in progress (Week 2 / Phase 6) — **not a finished product**  
+**Coverage**: **124** unique / **129** entries; main **53** vs BY-SA **71**; ligament/tendon teaching-useful but incomplete (BP3D 1+1 + Open3D 27)  
+**Self-review**: `docs/phase-6-self-review.md`  
 **Repository**: https://github.com/linjinmiao1985/right-foot-anatomy-atlas

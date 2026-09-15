@@ -500,7 +500,7 @@ export default function LayerToggles({
             }}
             title="Ligament/tendon soft-tissue layer — see docs/week2-ligament-fascia-search.md"
           >
-            ℹ️ 韧带/腱层<strong>教学有用但不完整</strong>：主树 BP3D 跖长韧带 + 跟腱；BY-SA Open3D 19（外侧踝 / 三角 /
+            ℹ️ 韧带/腱层<strong>教学有用但不完整</strong>：主树 BP3D 跖长韧带 + 跟腱；BY-SA Open3D **27**（外侧踝 / 三角 /
             足底腱膜 / Lisfranc 样分组 / 支持带等）。仍缺多数跗骨间细带与趾侧副韧带。可用上方亚组筛选。
           </div>
         )}
@@ -561,7 +561,7 @@ export default function LayerToggles({
             }}
             title="Vessel soft-tissue layer — teaching incomplete"
           >
-            ℹ️ 血管层<strong>教学有用但不完整</strong>：BP3D 主干 7（含分组足背趾/足底跖）+ Open3D BY-SA 12（近端/深支/跗/跟/穿支；部分分组）。
+            ℹ️ 血管层<strong>教学有用但不完整</strong>：BP3D 主干 7（含分组足背趾/足底跖）+ Open3D BY-SA 12 + ZA 10（近端/深支/跗/跟/穿支/静脉；部分分组）。
             仍无逐射线 1–4 跖背/跖底动脉。可用上方亚组筛选。
           </div>
         )}

@@ -1243,3 +1243,13 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 2. **Learning log**: NEW #36 Visible Human Viewer (MIT + NLM VH terms); #37 Anatomy Atlas RU (MIT + BP3D CC BY 4.0). Related: grapeot/ct-education-skill (MIT) clip honesty.
 3. **Checks**: integrity-audit + vitest + build.
 4. **Honesty**: No finished-product claim; no new SA mesh integrate this pass.
+
+## Day 4ak / Phase 6 (2026-09-15) — self-review + screenshot pipeline
+
+- Pulled `a437705` (already current).
+- Wrote `docs/phase-6-self-review.md`: live census 129/124 (53 main / 71 BY-SA), spatial residuals, UX inventory, open-data ceilings, next-week targets.
+- Synced README/methods one-liners (footer coverage, Features clip/label density, methods version Day 4aj/Phase 6).
+- Implemented **screenshot pipeline** (`scripts/screenshot-pipeline.mjs`, `npm run screenshots` → `docs/screenshots/`) — teaching QA pack, not product gallery.
+- LayerToggles ligament note Open3D 19→27; vessel note +ZA 10.
+- integrity-audit + vitest + build; commit + push.
+- **No finished-product claim.**
