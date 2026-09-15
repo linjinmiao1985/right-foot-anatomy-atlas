@@ -1204,7 +1204,7 @@ OMFAtlas labels drawn NV/gland/sinus structures as **schematic** wherever named 
 
 | # | Project | URL | License verified | Foot relevance | Decision |
 |---|---------|-----|------------------|----------------|----------|
-| **63** | **Utah Hive — Dual Fluoroscopy / Ankle Arthrodesis Compensation** (Anderson / Lenz / Nichols / Roach / Lisonbee) | https://hive.utah.edu/concern/datasets/bv73c051k · record https://hive.utah.edu/records/fmfxm-02c03 · DOI **10.7278/S5d-1nqg-0fqd** | **CC BY 3.0** (Hive API `rights.id` = `cc-by-3.0` + schema.org license URL verified 2026-09-15) | Foot/ankle **CT** (.nii) + surface STLs for tibia–talus fused construct, distal tibia, talus, calcaneus + rigid-body transforms — **osteology / kinematics**, **0** named soft DI/NV/ligament meshes | **monitor** for LE bone registration / arthrodesis teaching context. **reject** soft DI/NV/MTA / belly teaching |
+| **63** | **Utah Hive — Dual Fluoroscopy / Ankle Arthrodesis Compensation** (Anderson / Lenz / Nichols / Roach / Lisonbee) | https://hive.utah.edu/concern/datasets/bv73c051k · record https://hive.utah.edu/records/fmfxm-02c03 · DOI **10.7278/S5d-1nqg-0fqd** | **CC BY 3.0** (Hive API `rights.id` = `cc-by-3.0` + README “CC BY”; re-verified Day **4bf**) | Foot/ankle **CT** (.nii) + surface STLs: tibia–talus **fused** construct, distal tibia, talus, calcaneus + rigid-body transforms — **osteology / kinematics only**, **0** named soft DI/NV/ligament | **reject** main-tree bone replace **and** soft teaching (Day **4bf** deep assess). Optional docs-only kinematics cite |
 | **64** | **Foot3D** (OllieBoyne/Foot3D · Cambridge) | https://github.com/OllieBoyne/Foot3D · FIND project https://ollieboyne.github.io/FIND/ | Software/repo **MIT** (`LICENSE` verified 2026-09-15); mesh/multiview packs are **form-gated** and README License section is a warranty disclaimer — **not** a clear CC0/CC BY mesh grant | 118 high-res scanned **skin/surface** feet + multiview pairs — reconstruction research, **no** named intrinsic muscles / nerves / vessels | **UX-borrow** / process (citation habit). **monitor** until mesh redistribution SPDX is explicit. **reject** named soft-tissue teaching |
 | **65** | **Anatomy Insight** (shaikhmohammadtalha/android-anatomy-insight) | https://github.com/shaikhmohammadtalha/android-anatomy-insight | Code **Apache-2.0** (`LICENSE` + badge verified 2026-09-15); 3D models **CC BY-SA 4.0** (Z-Anatomy — README Attributions); educational text cites **OpenStax Anatomy & Physiology CC BY 4.0** | Android Filament viewer (6 region packs / ~2300 subparts) — same ZA/BP3D soft lineage; **no** new CC0/BY right-foot DI pack | **UX-borrow** (mobile Filament / Room catalog). Meshes: **isolate-SA** only. **reject** as main-tree soft source |
 
@@ -1214,11 +1214,51 @@ OMFAtlas labels drawn NV/gland/sinus structures as **schematic** wherever named 
 |-----|---------|
 | DI / per-ray MTA / nerve·ligament CC0/BY | **Still dry** |
 | Gastroc/soleus | Andreassen **blocked** — **skipped** |
-| New osteology CC BY | Utah Hive tibia/talus/calcaneus surfaces — docs-only monitor |
+| New osteology CC BY | Utah Hive tibia/talus/calcaneus — **reject** main-tree (Day 4bf assess) |
 
 ### Outcome
 
 - Learning log **#63–#65**; ontology honest-empty panel live; census unchanged (**129/124**; ontology **126/129**).
+- **0** meshes integrated; **0** SA spam; Andreassen not re-opened.
+- **No finished-product claim.**
+
+
+---
+
+## Session additions (2026-09-15 · Day 4bf — Utah Hive bone assess + grouped label polish)
+
+### Utah Hive (#63) deep assess vs BP3D main-tree bones
+
+| Criterion | Finding |
+|-----------|---------|
+| **License** | **CC BY 3.0** clear (Hive `rights.id` + README) — **not** the blocker |
+| **Contents** (readme `ANDERSON_readme20260127.txt`) | Per-subject CT + STLs: **Fusion** (tibia–talus arthrodesis construct), distal **tibia**, **talus**, **calcaneus** only; landmarks + fluoroscopy transforms. **0** midfoot / MT / phalanx; **0** soft DI/NV/ligament |
+| **vs BP3D osteology** | Atlas already **26/26** complete (BP3D CC BY 4.0 single-donor frame). Hive does **not** fill a bone gap |
+| **Teaching value** | Treated limbs = **pathologic/surgical fusion** — wrong for normal-anatomy teaching. Distal tibia outside foot-scoped atlas. Multi-subject L/R clinical CT native frames ≠ BP3D teaching frame (would need Kabsch with no soft benefit) |
+| **Practical** | Zip ≈ **8.7 GB** — disproportionate for zero main-tree gain |
+| **Decision** | **reject** integrate (main-tree bones + soft). Do **not** download zip this pass. Keep log cite for kinematics research only |
+
+### Teaching polish (expert-review checklist §A · grouped / approx labels)
+
+| Change | Detail |
+|--------|--------|
+| **nameZh （组合）** | 9 ontology-`grouped` structures that lacked 组合/分组 in the Chinese label now include **（组合）** (sesamoids, DI, common plantar digitals, dorsal digitals n., plantar digital aa./vv., perforating rr.) |
+| Ligaments | Already used **（分组）** — left as-is (matches grouped honesty) |
+| Vitest | `ontologyIds.test.ts` asserts every ontology note with `/group/i` has 组合 or 分组 in `nameZh` |
+| Honesty | Label chrome only — **not** elemental per-ray / TA2-complete soft claim |
+
+### Soft-gap check
+
+| Gap | Day 4bf |
+|-----|---------|
+| DI / per-ray MTA / nerve·ligament CC0/BY | **Still dry** |
+| Gastroc/soleus | Andreassen **blocked** — **skipped** |
+| Utah Hive bones | **reject** (see above) |
+
+### Outcome
+
+- Learning log **#63** deepened to **reject** main-tree; watchlist reject row added.
+- Grouped label polish live; census mesh/ontology counts **unchanged** (**129/124**; ontology **126/129**).
 - **0** meshes integrated; **0** SA spam; Andreassen not re-opened.
 - **No finished-product claim.**
 

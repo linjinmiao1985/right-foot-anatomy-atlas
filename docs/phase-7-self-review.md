@@ -96,7 +96,7 @@ These residuals support **classroom visualization**, not implant planning or int
 
 ## Open mining count highlights
 
-Living log: `docs/open-anatomy-learning-log.md` — **65** numbered license-verified projects (#1–#65) as of Day 4be (ontology honest-empty UX + digs #63–#65).
+Living log: `docs/open-anatomy-learning-log.md` — **65** numbered license-verified projects (#1–#65) as of Day 4bf (Utah Hive #63 bone **reject** + grouped label polish; digs #63–#65 stand).
 
 | Window | Highlights | Mesh integrate |
 |--------|------------|----------------|
@@ -210,3 +210,9 @@ OMFAtlas schematic-vs-source honesty UX (`schematicHonesty` + StructurePanel + f
 - **Teaching polish (expert-review §A)**: StructurePanel ontology **honest-empty** note + named reasons for 3 empties; vitest coverage.
 - **Open mining**: **#63** Utah Hive ankle CT/STL (CC BY 3.0), **#64** Foot3D (MIT / form-gated meshes), **#65** Anatomy Insight Android (Apache-2.0 + ZA BY-SA). Soft gaps still **dry**.
 - Andreassen **skipped**. Census unchanged **129/124**; ontology **126/129**. **0** meshes. **No finished-product claim.**
+
+## Progress note (Day 4bf)
+
+- **Utah Hive (#63)**: Deep assess vs BP3D — **reject** main-tree bone integrate (arthrodesis fusion / incomplete osteology / multi-subject CT frame; CC BY 3.0 OK). Soft still 0. Zip not downloaded.
+- **Teaching polish (expert-review §A)**: Ontology-grouped structures now have **（组合）**/**（分组）** in `nameZh`; vitest gate.
+- Soft gaps **dry**; Andreassen **skipped**; **0** mesh wire; **no finished-product claim**.

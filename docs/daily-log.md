@@ -1449,3 +1449,13 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 5. Checks: integrity-audit + vitest + build; commit + push.
 6. **Honesty**: teaching atlas in progress — **no finished-product claim**. Census unchanged. **0** meshes / no SA spam.
 
+
+## Day 4bf (2026-09-15) — Utah Hive bone assess + grouped label polish
+
+**Target**: Assess Utah Hive (#63) CT/STL vs BP3D for main-tree bone improvement / teaching value; one expert-review remaining polish OR ≥2 digs; gates + commit. Prefer quality; 0 SA mesh spam; skip Andreassen.
+
+1. **Utah Hive deep assess** (readme + Hive API CC BY 3.0): surfaces = fusion tibia–talus / distal tibia / talus / calcaneus only; multi-subject clinical CT frames; osteology already 26/26 — **reject** main-tree integrate (license OK, value/spatial/pathology fail). Soft: still 0. Zip not downloaded.
+2. **Teaching polish (checklist §A grouped labels)**: 9 ontology-grouped `nameZh` missing 组合/分组 → add **（组合）**; vitest asserts match; ligaments kept **（分组）**.
+3. Docs: learning-log #63, watchlist reject row, expert-review checkbox, handback / phase-7 pointer.
+
+**Meshes**: **0**. Andreassen skipped. **No finished-product claim.**

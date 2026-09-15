@@ -1,8 +1,8 @@
 # CC0 / CC BY soft-tissue watchlist (monitor · not integrated)
 
-**Date**: 2026-09-15 · Day 4be / Phase 7  
+**Date**: 2026-09-15 · Day 4bf / Phase 7  
 **Policy**: Prefer **CC0 / CC BY** main-tree replacements that shrink ShareAlike surface. Dig + verify license page / SPDX / Zenodo `license.id` **before** any wire. **Reject** NC, unclear “License: Model”, and All Rights Reserved. BY-SA only under `by-sa/` + NOTICE — do not spam SA volume for its own sake.  
-**Status**: Living watchlist — **0** new soft-tissue meshes integrated from this list as of Day **4be**. Andreassen gastroc/soleus still **blocked** (Day 4az+4ba); Day 4be digs #63–#65 found **no** CC0/BY soft wire (Utah Hive = osteology CT/STL only). Teaching atlas in progress — **not** a finished-product claim.
+**Status**: Living watchlist — **0** new soft-tissue meshes integrated from this list as of Day **4bf**. Andreassen gastroc/soleus still **blocked** (Day 4az+4ba); Day 4bf Utah Hive deep assess → **reject** main-tree bones (pathology/incomplete/wrong frame); soft gaps still dry. Teaching atlas in progress — **not** a finished-product claim.
 
 Companion: `docs/open-anatomy-learning-log.md` (#38–#65 and earlier), `docs/phase-7-self-review.md`.
 
@@ -54,6 +54,7 @@ Companion: `docs/open-anatomy-learning-log.md` (#38–#65 and earlier), `docs/ph
 | **#58** OMFAtlas dental NC/SA packs (Open-Full-Jaw / ToothFairy3) | **CC BY-NC-SA** / **CC BY-SA** dental — not foot soft; NC blocks main tree |
 | **#59** Anatria male ZA GLBs | **CC BY-SA 4.0** Z-Anatomy pool — isolate-SA only; not a new DI/NV source |
 | Day 4bb pressure/kinematics Zenodo hits (CAD WALK, PAPPI, plantar images) | CC BY/CC0 **biomechanics / pressure** — not elemental 3D soft meshes |
+| **#63** Utah Hive Dual Fluoroscopy / Ankle Arthrodesis (DOI 10.7278/S5d-1nqg-0fqd) | **CC BY 3.0** OK — **reject integrate**: arthrodesis **fused** tibia–talus + distal tibia/talus/calcaneus only; no midfoot/MT/phalanx; multi-subject clinical CT ≠ BP3D frame; osteology already **26/26**; 8.7 GB zip; **0** soft DI/NV |
 
 ---
 
@@ -113,6 +114,15 @@ Companion: `docs/open-anatomy-learning-log.md` (#38–#65 and earlier), `docs/ph
 | Andreassen Kabsch | **Not re-opened** this pass |
 | Meshes integrated | **0** |
 
+## Day 4bf Utah Hive bone assess
+
+| Check | Result |
+|-------|--------|
+| License | **CC BY 3.0** (Hive API + README) — compatible, not blocker |
+| Improve main-tree bones vs BP3D? | **No** — atlas osteology already 26/26; Hive lacks midfoot/MT/phalanges; treated side = fusion pathology |
+| Soft teaching? | **No** — 0 named DI/NV/ligament meshes |
+| Wire | **0** (zip not downloaded) |
+
 ## Bottom line
 
-Watchlist tracks **where a CC0/BY soft find would matter** (DI, per-ray MTA, bellies, SA shrink). Day **4az**+**4ba** Andreassen alignment blocker unchanged; Day **4bb** mining #58–#61 — **0** soft wire. Handback: `docs/cloud-agent-handback.md`. DI / per-ray MTA / nerve·ligament main-tree replacements remain **dry**. **No finished-product claim**.
+Watchlist tracks **where a CC0/BY soft find would matter** (DI, per-ray MTA, bellies, SA shrink). Day **4az**+**4ba** Andreassen alignment blocker unchanged; Day **4bf** Utah Hive **reject** for main-tree bones + soft. Soft gaps remain **dry**. Handback: `docs/cloud-agent-handback.md`. **No finished-product claim**.

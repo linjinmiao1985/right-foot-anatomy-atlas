@@ -295,7 +295,7 @@
       "Sesamoid_Hallux_Right"
     ],
     "layer": "bone",
-    "nameZh": "踇趾籽骨",
+    "nameZh": "踇趾籽骨（组合）",
     "nameLa": "Ossa sesamoidea hallucis",
     "summaryZh": "位于第一跖骨头下方跖侧的两块小骨（内侧籽骨和外侧籽骨），嵌于踇短屈肌腱内，承受踇趾蹬地时的压力，保护屈肌腱并增加力臂。TA2: A02.5.17.001 (hallux sesamoids)",
     "placeholder": false
@@ -487,7 +487,7 @@
       "Interosseous_Dorsal_4_R"
     ],
     "layer": "muscle",
-    "nameZh": "骨间背侧肌",
+    "nameZh": "骨间背侧肌（组合）",
     "nameLa": "Mm. interossei dorsales pedis",
     "summaryZh": "4条双羽状肌，位于第1-4跖骨间隙背侧。起点：每条起自相邻两跖骨侧面。止点：第2-4趾近节趾骨底和趾伸肌腱膜。作用：展第2-4趾（DAB: Dorsal ABduct，以第2趾为中轴）；协助屈跖趾关节伸趾间关节。支配：足底外侧神经深支（S2-S3）。网格：Open3DModel / AnatomyTOOL lower-limb（CC BY-SA 4.0），右足 1st–4th_Dorsal_interossei_muscles_of_foot.r，置于 by-sa/ 隔离加载。",
     "placeholder": false
@@ -707,7 +707,7 @@
       "Nn_Digitales_Plantares_Communes_Right"
     ],
     "layer": "nerve",
-    "nameZh": "趾足底总神经",
+    "nameZh": "趾足底总神经（组合）",
     "nameLa": "Nn. digitales plantares communes",
     "summaryZh": "足底内侧/外侧神经在跖骨间隙水平发出的趾足底总神经（教学组合网格，Open3D 单一对象）。走行于相邻跖骨间跖侧，至跖骨头近端附近分为两条趾足底固有神经。感觉：相应趾蹼及相邻趾跖面皮肤。临床：Morton 神经瘤最常累及第3–4跖骨间隙的趾足底总神经；跖骨头间反复压迫可致神经瘤样增粗。网格：Open3DModel lower-limb CC BY-SA，Kabsch→BP3D；为分组教学对象，非逐间隙独立分割。",
     "placeholder": false
@@ -835,7 +835,7 @@
       "Common_Plantar_Digital_Arteries_R"
     ],
     "layer": "vessel",
-    "nameZh": "足底趾总动脉",
+    "nameZh": "足底趾总动脉（组合）",
     "nameLa": "Aa. digitales plantares communes",
     "summaryZh": "足底跖骨动脉在跖骨头近端附近延续为的趾足底总动脉（复数教学网格）。再分为两条足底固有趾动脉至相邻趾。教学：与趾足底总神经伴行，Morton 神经瘤间隙的血供背景。网格：Z-Anatomy Common plantar digital arteries.r（CC BY-SA 4.0），by-sa/ 隔离；ZA→BP3D Kabsch（骨标志均值残差约1.8 mm）。分组教学对象，非逐间隙分条；非完整足底动脉图谱。",
     "placeholder": false
@@ -846,7 +846,7 @@
       "Proper_Plantar_Digital_Arteries_R"
     ],
     "layer": "vessel",
-    "nameZh": "足底固有趾动脉",
+    "nameZh": "足底固有趾动脉（组合）",
     "nameLa": "Aa. digitales plantares propriae",
     "summaryZh": "足底趾动脉的固有终支（复数教学网格）。走行于趾底两侧至趾端。教学：与跖底动脉/足底弓衔接关系。网格：Z-Anatomy Proper plantar digital arteries.r（CC BY-SA 4.0），by-sa/ 隔离；ZA→BP3D Kabsch。仍为分组教学对象，非逐趾分条；非完整足底动脉图谱。",
     "placeholder": false
@@ -946,7 +946,7 @@
       "Perforating_Arcuate_Deep_Plantar_R"
     ],
     "layer": "vessel",
-    "nameZh": "弓状动脉–足底深弓穿支",
+    "nameZh": "弓状动脉–足底深弓穿支（组合）",
     "nameLa": "Rr. perforantes (a. arcuata ↔ arcus plantaris profundus)",
     "summaryZh": "连接足背弓状动脉与足底深动脉弓的穿支（Open3D Perforating_br._between_Arcuate_a._and_Deep_plantar_arch.r）。教学：背–跖侧吻合通道之一，与足底深动脉（第1间隙穿支）对照。网格：CC BY-SA 4.0，Kabsch→BP3D，by-sa/ 隔离。教学示意，非介入导航级。",
     "placeholder": false
@@ -1023,7 +1023,7 @@
       "Plantar_Digital_Veins_R"
     ],
     "layer": "vessel",
-    "nameZh": "足底趾静脉",
+    "nameZh": "足底趾静脉（组合）",
     "nameLa": "Vv. digitales plantares",
     "summaryZh": "趾跖侧浅/深静脉属支（复数教学网格），向近端汇入足底跖骨静脉/静脉弓。教学：趾静脉回流与足底固有趾动脉伴行关系。网格：Z-Anatomy Plantar digital veins.r（CC BY-SA 4.0），by-sa/ 隔离；ZA→BP3D Kabsch。分组教学对象，非逐趾分条；非完整足静脉图谱。",
     "placeholder": false
@@ -1490,7 +1490,7 @@
       "Nn_Digitales_Dorsales_N_Fibularis_Superficialis_Right"
     ],
     "layer": "nerve",
-    "nameZh": "腓浅神经足背趾支",
+    "nameZh": "腓浅神经足背趾支（组合）",
     "nameLa": "Nn. digitales dorsales (ex n. fibularis superficialis)",
     "summaryZh": "腓浅神经在足背发出的趾背神经（教学组合网格）。分布于第2–5趾背侧大部分皮肤（第1趾蹼背侧主要由腓深神经支配）。临床：足背多趾切口、甲沟/趾背手术需保护；与腓深神经第1趾蹼皮支形成分界。网格：Open3D BY-SA，Kabsch→BP3D；分组对象，非逐趾 elemental。腓深神经背侧趾支见 dorsal_digital_deep_fibular。",
     "placeholder": false
@@ -1502,7 +1502,7 @@
       "Nn_Digitales_Dorsales_N_Fibularis_Profundus_Right"
     ],
     "layer": "nerve",
-    "nameZh": "腓深神经足背趾支",
+    "nameZh": "腓深神经足背趾支（组合）",
     "nameLa": "Nn. digitales dorsales (ex n. fibularis profundus)",
     "summaryZh": "腓深神经在足背发出的趾背神经（教学组合网格）。主要分布于第1趾蹼背侧皮肤（踇趾外侧与第2趾内侧），是腓深神经最重要的皮支终末。临床：前跗管综合征、第1趾蹼切口与踇外翻/第1–2跖骨间手术需保护；与腓浅神经足背趾支形成感觉分界。网格：Open3D BY-SA，Kabsch→BP3D；分组对象，非逐趾 elemental。",
     "placeholder": false

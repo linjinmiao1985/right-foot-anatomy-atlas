@@ -117,4 +117,18 @@ describe('ontologyIds', () => {
     expect(getHonestOntologyEmptyReason('calcaneus')).toBeUndefined();
   });
 
+  it('grouped ontology notes have （组合）/（分组） in nameZh (Day 4bf)', () => {
+    const byId = new Map(getAllStructures().map((s) => [s.id, s]));
+    for (const [id, ont] of Object.entries(ONTOLOGY_BY_ID)) {
+      if (!ont.note || !/group/i.test(ont.note)) continue;
+      const s = byId.get(id);
+      expect(s, id).toBeDefined();
+      expect(
+        /组合|分组/.test(s!.nameZh),
+        `${id} nameZh should include 组合/分组 for grouped note (got: ${s!.nameZh})`,
+      ).toBe(true);
+    }
+  });
+
+
 });
