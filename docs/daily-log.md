@@ -1126,3 +1126,12 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 - integrity-audit + vitest + build; commit/push.
 - Honesty: teaching-useful incomplete ligament layer — **no finished-product claim**.
 
+## 2026-09-15 · Day 4x — Open3D fine nerves
+
+- Pulled `cursor/right-foot-anatomy-atlas-mvp-af85` @ 8f62551.
+- Extracted + Kabsch-baked 4 Open3D RIGHT nerve GLBs (`scripts/extract_open3d_nerves.py`): common plantar digital, proper plantar digital medial/lateral, deep branch of lateral plantar.
+- Spatial QA vs foot bone cluster + Open3D medial/lateral plantar trunks: all accept (`nerve_spatial_qa.json`). ~8 further named nerve parts QA-pass but deferred (cap ≤4).
+- Wired structures.json / FootModel / assetProvenance / NOTICE; census → 10 nerves / 97 entry-level; dorsal MTA still grouped-only.
+- integrity-audit + vitest + build; commit + push.
+- No finished-product claim.
+

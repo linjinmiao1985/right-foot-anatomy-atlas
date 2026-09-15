@@ -130,6 +130,10 @@
 | deep_fibular_nerve | N. fibularis profundus | 腓深神经 | L4-S1 腓总神经 | ✅ | 人解9版 p493 | ✅ |
 | superficial_fibular_nerve | N. fibularis superficialis | 腓浅神经 | L5-S1 腓总神经 | ✅ | 人解9版 p493 | ✅ |
 | sural_nerve | N. suralis | 腓肠神经 | 混合（胫+腓总） | ✅ | 人解9版 p494 | ✅ |
+| common_plantar_digital_nerves | Nn. digitales plantares communes | 趾足底总神经 | N. plantaris med./lat. | ✅ | TA2 / 人解9版 | ✅ Open3D grouped |
+| proper_plantar_digital_nerves_medial | Nn. digitales plantares proprii (med.) | 足底内侧神经固有趾支 | N. plantaris medialis | ✅ | TA2 / 人解9版 | ✅ Open3D grouped |
+| proper_plantar_digital_nerves_lateral | Nn. digitales plantares proprii (lat.) | 足底外侧神经固有趾支 | N. plantaris lateralis | ✅ | TA2 / 人解9版 | ✅ Open3D grouped |
+| deep_branch_lateral_plantar_nerve | R. profundus n. plantaris lateralis | 足底外侧神经深支 | N. plantaris lateralis | ✅ | TA2 / 人解9版 | ✅ Open3D |
 
 **神经层验证总结**: 6/6 ✅ 全部通过TA2和节段验证
 

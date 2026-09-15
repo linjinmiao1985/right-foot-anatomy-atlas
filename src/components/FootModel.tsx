@@ -119,8 +119,8 @@ const REAL_VESSEL_MODELS: Record<string, string> = {
   'fibular_artery': '/models/right-foot/by-sa/fibular_artery.glb',
 };
 
-// Real nerve GLB models - 6 right foot nerves from Z-Anatomy (CC BY-SA 4.0)
-// Isolated in by-sa/ subdirectory due to ShareAlike license requirement
+// Real nerve GLBs — Z-Anatomy trunks (CURVE→tube) + Open3D fine/branch (volumetric, Kabsch→BP3D).
+// All isolated under by-sa/ (CC BY-SA 4.0). Not a finished peripheral-nerve atlas.
 const REAL_NERVE_MODELS: Record<string, string> = {
   'tibial_nerve': '/models/right-foot/by-sa/tibial_nerve.glb',
   'medial_plantar_nerve': '/models/right-foot/by-sa/medial_plantar_nerve.glb',
@@ -128,6 +128,11 @@ const REAL_NERVE_MODELS: Record<string, string> = {
   'deep_fibular_nerve': '/models/right-foot/by-sa/deep_fibular_nerve.glb',
   'superficial_fibular_nerve': '/models/right-foot/by-sa/superficial_fibular_nerve.glb',
   'sural_nerve': '/models/right-foot/by-sa/sural_nerve.glb',
+  // Open3DModel / AnatomyTOOL — Day 4x (Kabsch→BP3D mm)
+  'common_plantar_digital_nerves': '/models/right-foot/by-sa/common_plantar_digital_nerves.glb',
+  'proper_plantar_digital_nerves_medial': '/models/right-foot/by-sa/proper_plantar_digital_nerves_medial.glb',
+  'proper_plantar_digital_nerves_lateral': '/models/right-foot/by-sa/proper_plantar_digital_nerves_lateral.glb',
+  'deep_branch_lateral_plantar_nerve': '/models/right-foot/by-sa/deep_branch_lateral_plantar_nerve.glb',
 };
 
 // Soft-tissue under ligament toggle — incomplete set (not a finished ligament atlas).
@@ -824,7 +829,9 @@ function RealNerveModel({
               borderRadius: '3px',
               border: '1px solid rgba(255, 255, 0, 0.4)',
             }}>
-              Z-Anatomy (BY-SA 4.0)
+              {modelPath.includes('common_plantar') || modelPath.includes('proper_plantar') || modelPath.includes('deep_branch_lateral')
+                ? 'Open3D (BY-SA 4.0)'
+                : 'Z-Anatomy (BY-SA 4.0)'}
             </div>
           </div>
         </Html>

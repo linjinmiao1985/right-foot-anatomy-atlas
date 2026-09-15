@@ -696,8 +696,19 @@ Soft-tissue under ligament toggle = **1 ligament + 1 tendon**. Still missing pla
 |------|------|
 | Medial TC + dorsal intercuneiform | Integrated (Day 4v volume deferrals; QA accept reused) |
 | Dorsal MTA split | **Ceiling**: no CC0/BY per-ray; Open3D object grouped |
-| Plantar digital nerves | **Ceiling**: Open3D Common/Proper BY-SA exist; not wired (prefer CC0/BY; nerve QA not run) |
+| Plantar digital nerves | **Day 4x wired**: Common + Proper (med/lat) + deep LPN branch (Open3D BY-SA, Kabsch+QA); further terminals deferred |
 | Esc UX | Clears isolate + search |
 
 **Lesson**: Volume deferrals with passing QA should stay as first-class backlog items — integrating them later is cheaper than re-scanning when the census priority flips.
+
+
+## Session additions (2026-09-15 · Day 4x — Open3D fine nerves)
+
+| Item | Note |
+|------|------|
+| Common + Proper plantar digitals | Integrated (grouped teaching objects; Kabsch residual ≈2.6 mm reused) |
+| Deep branch LPN | 4th entry — motor deep branch teaching value |
+| Rejected / deferred | 0 spatial rejects; ~8 further named nerve parts QA-pass but volume-deferred |
+| Dorsal MTA | Still grouped-only ceiling |
+| Lesson | Compare Open3D nerves to **Open3D** plantar trunks (same frame), not Z-Anatomy CURVE GLBs |
 

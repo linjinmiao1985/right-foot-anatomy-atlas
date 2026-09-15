@@ -31,8 +31,23 @@ describe('assetProvenance', () => {
 
   it('attributes nerves as isolated BY-SA', () => {
     const p = getStructureProvenance('tibial_nerve', false, 'nerve');
+    expect(p.sourceShort).toBe('Z-Anatomy');
     expect(p.license).toBe('CC-BY-SA-4.0');
     expect(p.isolatedBySa).toBe(true);
+  });
+
+  it('attributes Open3D fine plantar nerves as isolated BY-SA Open3D', () => {
+    for (const id of [
+      'common_plantar_digital_nerves',
+      'proper_plantar_digital_nerves_medial',
+      'proper_plantar_digital_nerves_lateral',
+      'deep_branch_lateral_plantar_nerve',
+    ]) {
+      const p = getStructureProvenance(id, false, 'nerve');
+      expect(p.sourceShort).toBe('Open3D');
+      expect(p.license).toBe('CC-BY-SA-4.0');
+      expect(p.isolatedBySa).toBe(true);
+    }
   });
 
   it('defaults bones to BP3D CC BY', () => {
@@ -95,6 +110,7 @@ describe('assetProvenance', () => {
 
   it('provides teaching mesh notes for nerves and grouped vessels', () => {
     expect(getTeachingMeshNote('tibial_nerve', 'nerve')).toMatch(/CURVE|曲线/);
+    expect(getTeachingMeshNote('common_plantar_digital_nerves', 'nerve')).toMatch(/Open3D|Kabsch/);
     expect(getTeachingMeshNote('dorsal_digital_arteries', 'vessel')).toMatch(/FJ2072|组合/);
     expect(getTeachingMeshNote('plantar_metatarsal_arteries', 'vessel')).toMatch(/FJ2096|组合/);
     expect(getTeachingMeshNote('calcaneus', 'bone')).toBeNull();

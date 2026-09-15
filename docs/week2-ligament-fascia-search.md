@@ -339,3 +339,35 @@ Escape clears selection + isolate **and** search query.
 ### Honesty
 
 Open3D BY-SA ligaments/fascia/retinacula now **27**. Still incomplete teaching set; no finished-product claim.
+
+
+---
+
+## Day 4x — Open3D plantar digital + deep LPN nerves
+
+**Date**: 2026-09-15  
+**Goal**: Wire Open3D Common + Proper plantar digital nerves (BY-SA) with Kabsch + dedicated nerve spatial QA; optionally add up to **4** total new nerve entries if further clearly named RIGHT plantar/digital/sural-terminal parts QA-pass.
+
+### Integrated (4)
+
+| Mesh | Open3D object | vs Open3D MP/LP (mm) | Foot pad | Decision |
+|------|---------------|----------------------|----------|----------|
+| Common plantar digital nn. | `Common_plantar_digital_nerves.r` | ~60 / ~61 | inside 100% | **Integrated** (grouped) |
+| Proper plantar digital (medial) | `Proper_plantar_digital_branches_(Medial_plantar_nerve).r` | ~110 / ~110 | inside 100% | **Integrated** (grouped) |
+| Proper plantar digital (lateral) | `Proper_plantar_digital_branches_(Lateral_plantar_nerve).r` | ~106 / ~101 | inside 100% | **Integrated** (grouped) |
+| Deep branch of lateral plantar | `Deep_branch_of_Lateral_plantar_nerve.r` | ~63 / ~62 | inside 100% | **Integrated** (4th; teaching) |
+
+Reject rule: wrong side (X>0) OR outside padded foot AABB OR <85% verts inside pad OR plantar target Z>-15 OR absurd far with no bone overlap. **0 rejects** among integrated.
+
+### Scanned QA-pass but deferred (volume / prefer quality)
+
+Superficial branch of LPN; lateral/medial dorsal cutaneous; sural→LDC; dorsal digital branches (superficial/deep fibular); medial/lateral calcaneal nn. — see `nerve_spatial_qa.json` `deferred_or_rejected`.
+
+### Vessel ceiling (unchanged)
+
+Dorsal MTA: still grouped only (BP3D FJ2072 / Open3D single `o`).
+
+### Honesty
+
+Nerve layer: 6 Z-Anatomy trunks + 4 Open3D fine/branch = **10** teaching meshes. Commons/proprii remain **grouped**. No finished-product claim.
+

@@ -642,6 +642,54 @@
     "placeholder": false
   },
   {
+    "id": "common_plantar_digital_nerves",
+    "meshNames": [
+      "Common_Plantar_Digital_Nerves_R",
+      "Nn_Digitales_Plantares_Communes_Right"
+    ],
+    "layer": "nerve",
+    "nameZh": "趾足底总神经",
+    "nameLa": "Nn. digitales plantares communes",
+    "summaryZh": "足底内侧/外侧神经在跖骨间隙水平发出的趾足底总神经（教学组合网格，Open3D 单一对象）。走行于相邻跖骨间跖侧，至跖骨头近端附近分为两条趾足底固有神经。感觉：相应趾蹼及相邻趾跖面皮肤。临床：Morton 神经瘤最常累及第3–4跖骨间隙的趾足底总神经；跖骨头间反复压迫可致神经瘤样增粗。网格：Open3DModel lower-limb CC BY-SA，Kabsch→BP3D；为分组教学对象，非逐间隙独立分割。",
+    "placeholder": false
+  },
+  {
+    "id": "proper_plantar_digital_nerves_medial",
+    "meshNames": [
+      "Proper_Plantar_Digital_Nerves_Medial_R",
+      "Nn_Digitales_Plantares_Proprii_Medial_Right"
+    ],
+    "layer": "nerve",
+    "nameZh": "足底内侧神经固有趾支",
+    "nameLa": "Nn. digitales plantares proprii (ex N. plantaris medialis)",
+    "summaryZh": "足底内侧神经的趾足底固有支（教学组合网格）。分布于内侧约3.5趾的跖面与相邻侧皮肤（踇趾两侧、第2–3趾、第4趾内侧半的固有支），是足底内侧主要皮支终末。临床：趾端感觉障碍定位、踇外翻/趾蹼手术切口需保护；糖尿病周围神经病变常累及趾神经。网格：Open3D BY-SA，Kabsch→BP3D；非逐趾独立 elemental。",
+    "placeholder": false
+  },
+  {
+    "id": "proper_plantar_digital_nerves_lateral",
+    "meshNames": [
+      "Proper_Plantar_Digital_Nerves_Lateral_R",
+      "Nn_Digitales_Plantares_Proprii_Lateral_Right"
+    ],
+    "layer": "nerve",
+    "nameZh": "足底外侧神经固有趾支",
+    "nameLa": "Nn. digitales plantares proprii (ex N. plantaris lateralis)",
+    "summaryZh": "足底外侧神经的趾足底固有支（教学组合网格）。分布于外侧约1.5趾跖面皮肤（第5趾两侧、第4趾外侧半）。与足底内侧神经固有支在第4趾形成感觉分界。临床：小趾/第4–5趾蹼手术及外侧柱减压需保护；Morton 神经瘤可累及相关总支再延及固有支。网格：Open3D BY-SA，Kabsch→BP3D。",
+    "placeholder": false
+  },
+  {
+    "id": "deep_branch_lateral_plantar_nerve",
+    "meshNames": [
+      "Deep_Branch_Lateral_Plantar_Nerve_R",
+      "R_Profundus_N_Plantaris_Lateralis_Right"
+    ],
+    "layer": "nerve",
+    "nameZh": "足底外侧神经深支",
+    "nameLa": "R. profundus nervi plantaris lateralis",
+    "summaryZh": "足底外侧神经的深支，伴足底外侧动脉弓向内侧走行于足底深层。肌支：支配踇收肌、踇短屈肌外侧腹、第2–4蚓状肌及全部骨间肌（背侧4、跖侧3）等深部内在肌（教学示意）。临床：深支损伤可致骨间肌与踇收肌麻痹、爪形趾倾向；足底深层手术（如骨间肌间隙）需辨认。网格：Open3D BY-SA，Kabsch→BP3D；教学路径，非手术导航级。",
+    "placeholder": false
+  },
+  {
     "id": "dorsalis_pedis_artery",
     "meshNames": [
       "Dorsalis_Pedis_Artery_R",

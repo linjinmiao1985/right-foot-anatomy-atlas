@@ -36,7 +36,7 @@ Meshes in this directory are licensed under **CC BY-SA 4.0** (ShareAlike). Deriv
 **License**: CC BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/  
 **Modifications**: Extracted named right-side (`.r`) objects to OBJ, converted to glTF 2.0 Binary (obj2gltf); no topology edits. Vertex positions later **Kabsch-aligned** from Open3D meters into BodyParts3D millimeter frame (landmarks: Calcaneus, Talus, Navicular, Cuboid, medial/intermediate/lateral cuneiform, MT1–5; Day 4m re-fit mean residual ≈2.6 mm vs prior 8-landmark ≈3.0 mm that excluded mis-ID cuboid/cuneiforms) so the atlas `scale={[0.01,0.01,0.01]}` convention applies. Transform JSON: `third_party/open3dmodel/open3d_to_bp3d_transform.json`.
 
-**Inventory note**: Day 4t–4v extracted selected ankle/midfoot/forefoot bands. Same OBJ still has further bands (medial talocalcaneal & dorsal intercuneiform deferred Day 4v; plantar cuneonavicular, cuboideonavicular, toe collaterals, etc.) not wired. Nerves covered by Z-Anatomy; DI partly covered elsewhere.
+**Inventory note**: Day 4t–4w ligaments/retinacula/fascia wired selectively. Day 4x adds Open3D fine plantar digital / deep LPN nerve meshes (below). Same OBJ still has further ligament bands and additional nerve terminals (superficial LPN branch, dorsal digitals, calcaneal nn., cutaneous) not wired this pass.
 
 
 ### Ankle/foot ligaments, retinacula + plantar fascia (Open3DModel)
@@ -86,10 +86,20 @@ Same source/license/Kabsch pipeline as DI + proximal arteries (Day 4s–4w). Att
 
 ---
 
+
+### Fine plantar / deep LPN nerves (Open3DModel) — Day 4x
+
+40. `common_plantar_digital_nerves.glb` — from `Common_plantar_digital_nerves.r` (grouped commons)
+41. `proper_plantar_digital_nerves_medial.glb` — from `Proper_plantar_digital_branches_(Medial_plantar_nerve).r`
+42. `proper_plantar_digital_nerves_lateral.glb` — from `Proper_plantar_digital_branches_(Lateral_plantar_nerve).r`
+43. `deep_branch_lateral_plantar_nerve.glb` — from `Deep_branch_of_Lateral_plantar_nerve.r`
+
+Same Kabsch pipeline as DI/arteries/ligaments (`open3d_to_bp3d_transform.json`, mean residual ≈2.6 mm). Spatial QA vs RIGHT foot bone AABB + Open3D medial/lateral plantar trunks (same frame): all **accept** — see `third_party/open3dmodel/nerve_spatial_qa.json`. Teaching-grade only; commons/proprii are **grouped** objects, not per-web elementals. Further Open3D nerve parts (superficial LPN branch, dorsal digitals, calcaneal, cutaneous) QA-pass but deferred (volume cap ≤4 new nerve entries).
+
 ## Isolation Strategy
 
 - Main tree (bones / most muscles / most vessels): MIT code + CC BY 4.0 / CC0
-- This `by-sa/` module: optional ShareAlike content (nerves, DI, proximal arteries, ankle/foot ligaments, retinacula, plantar fascia)
+- This `by-sa/` module: optional ShareAlike content (Z-Anatomy trunk nerves + Open3D fine nerves, DI, proximal arteries, ankle/foot ligaments, retinacula, plantar fascia)
 - Do **not** merge these GLBs into a CC BY-only redistribution claim
 
 ## Removal

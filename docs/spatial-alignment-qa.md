@@ -365,3 +365,20 @@ Reuse Day 4m Kabsch. Six integrated + two deferred (volume): see `ligament_attac
 
 Reuse Day 4m/4v Kabsch. Medial talocalcaneal + dorsal intercuneiform previously deferred for volume; attachment QA already **accept** (talus 17.4 mm; cuneiform_int 9.0 mm). See `ligament_attachment_qa.json` `day4w_integrated`. No new landmark set.
 
+## Day 4x — Open3D fine plantar / deep LPN nerves (2026-09-15)
+
+Reuse Day 4m Kabsch (`open3d_to_bp3d_transform.json`, mean residual ≈2.6 mm). AABB: `nerve_extract_aabb.json`. Spatial QA: `nerve_spatial_qa.json`.
+
+| Structure | Centroid→Open3D MP / LP (mm) | Inside padded foot | Decision |
+|-----------|------------------------------|--------------------|----------|
+| common_plantar_digital_nerves | 60.0 / 60.8 | 100% | accept |
+| proper_plantar_digital_nerves_medial | 109.5 / 110.2 | 100% | accept |
+| proper_plantar_digital_nerves_lateral | 106.3 / 101.3 | 100% | accept |
+| deep_branch_lateral_plantar_nerve | 63.0 / 61.5 | 100% | accept |
+
+**Important**: Distances use Open3D `Medial_plantar_nerve.r` / `Lateral_plantar_nerve.r` after the same Kabsch bake. Z-Anatomy trunk GLBs remain in a separate CURVE/Blender frame and must **not** be used for Open3D residual checks.
+
+Reject rule: wrong side / outside padded RIGHT foot bone AABB (±40 mm) / <85% verts inside / plantar Z>-15 / absurd far without bone overlap — **0 rejects** among the four integrated. Further named nerve parts QA-pass but volume-deferred (cap 4).
+
+Teaching-grade co-registration only — commons/proprii are grouped objects.
+

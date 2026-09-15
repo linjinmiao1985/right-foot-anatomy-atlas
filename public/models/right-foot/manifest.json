@@ -1,5 +1,5 @@
 {
-  "version": "3.8.0-ligament-rigor",
+  "version": "3.9.0-open3d-fine-nerves",
   "sources": [
     "BodyParts3D Release 4.0 (DBCLS Japan)",
     "Universiti Malaya Asian Male LE MSK",
@@ -562,20 +562,56 @@
       "fma": "FMA44314",
       "name_zh": "腓肠神经",
       "name_la": "N. suralis"
+    },
+    {
+      "id": "common_plantar_digital_nerves",
+      "file": "by-sa/common_plantar_digital_nerves.glb",
+      "source": "Open3DModel",
+      "license": "CC BY-SA 4.0",
+      "name_zh": "趾足底总神经",
+      "name_la": "Nn. digitales plantares communes",
+      "note": "Day 4x; Kabsch→BP3D; grouped commons teaching mesh"
+    },
+    {
+      "id": "proper_plantar_digital_nerves_medial",
+      "file": "by-sa/proper_plantar_digital_nerves_medial.glb",
+      "source": "Open3DModel",
+      "license": "CC BY-SA 4.0",
+      "name_zh": "足底内侧神经固有趾支",
+      "name_la": "Nn. digitales plantares proprii (ex N. plantaris medialis)",
+      "note": "Day 4x; Kabsch→BP3D; grouped proprii (medial)"
+    },
+    {
+      "id": "proper_plantar_digital_nerves_lateral",
+      "file": "by-sa/proper_plantar_digital_nerves_lateral.glb",
+      "source": "Open3DModel",
+      "license": "CC BY-SA 4.0",
+      "name_zh": "足底外侧神经固有趾支",
+      "name_la": "Nn. digitales plantares proprii (ex N. plantaris lateralis)",
+      "note": "Day 4x; Kabsch→BP3D; grouped proprii (lateral)"
+    },
+    {
+      "id": "deep_branch_lateral_plantar_nerve",
+      "file": "by-sa/deep_branch_lateral_plantar_nerve.glb",
+      "source": "Open3DModel",
+      "license": "CC BY-SA 4.0",
+      "name_zh": "足底外侧神经深支",
+      "name_la": "R. profundus nervi plantaris lateralis",
+      "note": "Day 4x; Kabsch→BP3D; teaching deep branch"
     }
   ],
-  "note": "Honest coverage: structures.json 85/85 placeholder:false; unique framing 80 (lumbricals/PI collapsed). Main tree 52 (CC BY/CC0) vs BY-SA isolate 28. Ligament/tendon layer: BP3D long plantar + Achilles + 19 Open3D BY-SA teaching meshes — teaching-useful but incomplete (not a finished ligament atlas). Fine digital nn. / split dorsal MTA still open. Day 4u: census + terminology rigor; no new mesh integrate.",
+  "note": "Honest coverage: structures.json 97/97 placeholder:false; unique framing 92 (lumbricals/PI collapsed). Main tree 52 (CC BY/CC0) vs BY-SA isolate 40. Ligament/tendon: BP3D long plantar + Achilles + 27 Open3D BY-SA — teaching-useful, incomplete. Nerves: 6 Z-Anatomy trunks + 4 Open3D fine/branch (Day 4x); commons/proprii grouped. Dorsal MTA still grouped only. No finished-product claim.",
   "stats": {
     "bones": "26/26 (100%, all BP3D ISA right-foot elemental)",
     "muscles_unique": "18 unique (17 main BP3D+UM + 1 Open3D BY-SA DI); 23 structures.json entries",
     "muscles_entries": "23/23 (incl. lumbricals×4 + PI×3 + teaching extrinsics)",
-    "vessels": "9/9 (7 main BP3D incl. 2 honest grouped + 2 Open3D BY-SA proximal)",
-    "nerves": "6/6 (Z-Anatomy CC BY-SA 4.0, by-sa/)",
-    "ligaments": "21 under ligament/tendon toggle: 2 main (long plantar + Achilles) + 19 Open3D BY-SA; teaching-useful, incomplete",
-    "main_tree_unique": "52/80 (26 bones + 17 muscles + 7 vessels + 1 ligament + 1 tendon)",
-    "by_sa_unique": "28/80 (1 DI + 2 arteries + 6 nerves + 19 ligaments/retinacula/fascia)",
-    "total_unique": "80 unique / 85 entries — not a finished-product claim",
-    "total_entries": "85/85 structures.json placeholder:false",
+    "vessels": "9/9 (7 main BP3D incl. 2 honest grouped + 2 Open3D BY-SA proximal); dorsal MTA grouped only",
+    "nerves": "10 (6 Z-Anatomy trunks + 4 Open3D fine/branch BY-SA); not TA2-complete",
+    "ligaments": "29 under ligament/tendon toggle: 2 main (long plantar + Achilles) + 27 Open3D BY-SA; teaching-useful, incomplete",
+    "main_tree_unique": "52/92 (26 bones + 17 muscles + 7 vessels + 1 ligament + 1 tendon)",
+    "by_sa_unique": "40/92 (1 DI + 2 arteries + 10 nerves + 27 ligaments/retinacula/fascia)",
+    "total_unique": "92 unique / 97 entries — not a finished-product claim",
+    "total_entries": "97/97 structures.json placeholder:false",
     "main_tree_unique_note": "Main tree CC BY/CC0 only; Open3D/Z-Anatomy fills remain by-sa/ ShareAlike isolates"
   },
   "quality_decisions": {
@@ -585,7 +621,8 @@
     "open3d_bysa": "DI 1st–4th + posterior tibial + fibular arteries under by-sa/; Kabsch→BP3D mm; prefer future CC0/CC BY replacements",
     "distal_phalanges_2_5": "BP3D ISA elemental preferred over UM Phalanges.stl (UM on separate Y≈−850 CT frame; BP3D already in foot mm frame)",
     "proximal_phalanx_1": "BP8785/FMA43253 (right hallux proximal); BP8488 was middle phalanx of right 2nd toe",
-    "um_teaching_extrinsics": "Day 4n wired orphan UM GLBs (TA, fibularis/peroneus longus, EDL, EHL) after Kabsch bake; CC0 main tree; not claimed as TA2-complete"
+    "um_teaching_extrinsics": "Day 4n wired orphan UM GLBs (TA, fibularis/peroneus longus, EDL, EHL) after Kabsch bake; CC0 main tree; not claimed as TA2-complete",
+    "open3d_fine_nerves_day4x": "Common + Proper plantar digitals + deep LPN branch from Open3D lower-limb; Kabsch Day 4m; spatial QA vs foot bones + Open3D MP/LP trunks; further terminals deferred (cap 4)"
   },
   "muscles_by_sa": [
     {

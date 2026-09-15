@@ -1,0 +1,102 @@
+{
+  "source": "/workspace/literature/open3d-assets/lower-limb.obj",
+  "transform": "third_party/open3dmodel/open3d_to_bp3d_transform.json",
+  "method": "reuse Open3D\u2192BP3D Kabsch (Day 4m; same donor as DI/arteries/ligaments); Day 4x nerves",
+  "kabsch_mean_residual_mm": 2.6124537404764445,
+  "targets": {
+    "Common_plantar_digital_nerves.r": "common_plantar_digital_nerves",
+    "Proper_plantar_digital_branches_(Medial_plantar_nerve).r": "proper_plantar_digital_nerves_medial",
+    "Proper_plantar_digital_branches_(Lateral_plantar_nerve).r": "proper_plantar_digital_nerves_lateral",
+    "Deep_branch_of_Lateral_plantar_nerve.r": "deep_branch_lateral_plantar_nerve"
+  },
+  "aabb_bp3d_mm": {
+    "common_plantar_digital_nerves": {
+      "x": [
+        -131.88847545849399,
+        -77.02034483453292
+      ],
+      "y": [
+        -176.66938262921784,
+        -120.61065553607605
+      ],
+      "z": [
+        -69.0494418017645,
+        -50.67143151106444
+      ],
+      "centroid": [
+        -101.639601475024,
+        -146.59844799473927,
+        -62.05386134279568
+      ],
+      "n_verts": 2412,
+      "n_faces": 2236,
+      "open3d_object": "Common_plantar_digital_nerves.r"
+    },
+    "proper_plantar_digital_nerves_medial": {
+      "x": [
+        -156.57343243227425,
+        -85.63976998300889
+      ],
+      "y": [
+        -222.5831018444263,
+        -148.62863248967938
+      ],
+      "z": [
+        -71.42058948459237,
+        -63.3516405003354
+      ],
+      "centroid": [
+        -123.28584468476124,
+        -191.35178869004736,
+        -68.17189986002568
+      ],
+      "n_verts": 5004,
+      "n_faces": 4892,
+      "open3d_object": "Proper_plantar_digital_branches_(Medial_plantar_nerve).r"
+    },
+    "proper_plantar_digital_nerves_lateral": {
+      "x": [
+        -163.97043897531898,
+        -131.3181182315958
+      ],
+      "y": [
+        -197.31392534257932,
+        -139.0918531642891
+      ],
+      "z": [
+        -71.07069536829604,
+        -65.63366159078996
+      ],
+      "centroid": [
+        -148.3065267263266,
+        -168.1476930947534,
+        -68.9824751364444
+      ],
+      "n_verts": 2124,
+      "n_faces": 2076,
+      "open3d_object": "Proper_plantar_digital_branches_(Lateral_plantar_nerve).r"
+    },
+    "deep_branch_lateral_plantar_nerve": {
+      "x": [
+        -134.42958266580442,
+        -98.62955772524718
+      ],
+      "y": [
+        -170.95133882844164,
+        -112.50765485771603
+      ],
+      "z": [
+        -65.19244800075718,
+        -41.22185095450384
+      ],
+      "centroid": [
+        -115.48727206482907,
+        -143.23107084811267,
+        -52.091568630498536
+      ],
+      "n_verts": 2808,
+      "n_faces": 2648,
+      "open3d_object": "Deep_branch_of_Lateral_plantar_nerve.r"
+    }
+  }
+}
