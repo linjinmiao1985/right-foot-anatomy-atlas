@@ -1,7 +1,7 @@
 # Methods
 
 **Project**: Right Foot Anatomy Atlas (Teaching-Grade Interactive 3D)  
-**Version**: Week 2 Day 4t (85 structures.json placeholder:false; ligament/tendon = BP3D long plantar + Achilles + 19 Open3D BY-SA ankle/foot ligaments·retinacula·fascia; TA2 soft-tissue still incomplete)  
+**Version**: Week 2 Day 4v (91 structures.json placeholder:false; ligament/tendon = BP3D long plantar + Achilles + 25 Open3D BY-SA; TA2 soft-tissue still incomplete)  
 **Date**: 2026-09-15  
 **Licenses**: Code MIT | Assets CC BY 4.0 / CC0 1.0 / CC BY-SA 4.0 (isolated)
 
@@ -9,7 +9,9 @@
 
 ## Overview
 
-This atlas integrates open-licensed anatomical meshes from BodyParts3D, Universiti Malaya, Z-Anatomy, and Open3D (BY-SA isolate) for interactive right-foot teaching. Real 3D meshes cover **osteology 26/26**, wired muscles including UM teaching extrinsics (TA/FL/EDL/EHL) + BY-SA DI, vessels including 2 honest BP3D grouped meshes + BY-SA proximal arteries, 6 BY-SA trunk nerves, and soft tissue under the ligament/tendon toggle: **1 BP3D ligament** (long plantar) + **1 BP3D tendon** (Achilles) + **19 Open3D BY-SA** teaching meshes (Day 4s–4t: lateral/medial ankle, short plantar, bifurcate, Lisfranc-ish bands, retinacula, plantar fascia; Kabsch→BP3D). **Entry-level placeholders: 0** — but this is **not** TA2-complete (further tarsal/toe bands unextracted; Lisfranc/retinacula grouped; no fine digital nerves; dorsal metatarsal arteries not individually split). See `docs/week2-ligament-fascia-search.md` Day 4s–4t.
+This atlas integrates open-licensed anatomical meshes from BodyParts3D, Universiti Malaya, Z-Anatomy, and Open3D (BY-SA isolate) for interactive right-foot teaching. Real 3D meshes cover **osteology 26/26**, wired muscles including UM teaching extrinsics (TA/FL/EDL/EHL) + BY-SA DI, vessels including 2 honest BP3D grouped meshes + BY-SA proximal arteries, 6 BY-SA trunk nerves, and soft tissue under the ligament/tendon toggle: **1 BP3D ligament** (long plantar) + **1 BP3D tendon** (Achilles) + **25 Open3D BY-SA** teaching meshes (Day 4s–4v; Kabsch→BP3D). **Entry-level placeholders: 0** — but this is **not** TA2-complete (further tarsal/toe bands unextracted; Lisfranc/retinacula/some midfoot bands grouped; no fine digital nerves; dorsal metatarsal arteries not individually split). See `docs/week2-ligament-fascia-search.md` Day 4s–4v.
+
+**Soft disclaimer (teaching vs clinical)**: Meshes and Kabsch co-registration are intended for **anatomy education** (spatial relationships, named structures, layer exploration). They are **not** validated for clinical diagnosis, treatment planning, surgical navigation, implant sizing, or patient-specific modeling. Landmark residuals (~2–3 mm mean) are teaching-grade only.
 
 **Target Audience**: Medical students, anatomy instructors, foot/ankle residents, physical therapists.  
 **NOT for**: Clinical diagnosis, treatment planning, surgical navigation, or patient-specific modeling.
@@ -227,7 +229,7 @@ const REAL_NERVE_MODELS: Record<string, string> = {
 
 ### Anatomical
 1. **Teaching-grade, not patient-specific**: Generic anatomy from cadaver scans (BP3D) or segmented CT (UM)
-2. **Dorsal interossei absent**: No open-source foot dorsal interossei found in BP3D, UM, or Z-Anatomy
+2. **Dorsal interossei**: Open3D BY-SA fill under `by-sa/` (not main-tree CC BY); prefer future CC0/BY replacement
 3. **Vessel proximal + per-toe detail**: 2/9 vessels still placeholder (posterior tibial, fibular — proximal to foot proper). Digital/metatarsal branches are present as honest BP3D **grouped** meshes (combined, not per-toe split; labeled （组合）)
 4. **Nerve geometry simplified**: CURVE tubes (not volumetric meshes), suitable for pathway teaching but not cross-sectional detail
 5. **Extrinsic muscle extent**: Shown from leg origin to foot insertion (teaching context, not isolated foot-only)
@@ -247,28 +249,48 @@ const REAL_NERVE_MODELS: Record<string, string> = {
 
 ## Reproducibility
 
+### Transform JSONs (frame registration)
+| File | Role | Key metrics |
+|------|------|-------------|
+| `third_party/open3dmodel/open3d_to_bp3d_transform.json` | Open3D meters → BP3D mm (similarity Kabsch) | scale≈926; 12 landmarks (calcaneus–MT5); mean residual ≈**2.61 mm**; max ≈4.41 mm (MT1) |
+| `third_party/um/um_to_bp3d_transform.json` | UM CT/seg → BP3D mm | 7 tarsals; mean residual ≈**2.22 mm** |
+| `third_party/open3dmodel/ligament_extract_aabb.json` | Per-ligament AABB/centroid after bake | Day 4s–4v targets + Day 4v scan deferrals |
+| `third_party/open3dmodel/ligament_attachment_qa.json` | Centroid→expected bone distances + accept/reject | Reject if wrong side (X>0), min_expect>55 mm (75 mm bands), or outside padded foot AABB |
+
+Re-running a bake: load `scale` / `R` / `t_mm` from the transform JSON; apply `v' = scale * (R @ v) + t` to Open3D/UM vertex coordinates, then `obj2gltf`. Do **not** re-fit Kabsch unless landmarks or donor meshes change — document any new residuals.
+
 ### Scripts Available
-All extraction/conversion scripts retained in repository:
-- `assets-raw/bodyparts3d/find_foot_soft_tissue.py` (BP→FJ mapping)
-- `assets-raw/bodyparts3d/extract_foot_soft_tissue.sh` (OBJ extraction)
-- `assets-raw/um-asian-male/convert_um_stl.py` (intrinsic muscles)
-- `assets-raw/um-asian-male/convert_extrinsic_stl.py` (extrinsic muscles)
-- `third_party/z-anatomy/inventory_foot_nerves_vessels.py` (Blender inventory)
-- `third_party/z-anatomy/export_right_foot_nerves.py` (Blender GLB export)
+Repo scripts (prefer these over ad-hoc one-offs):
+- `scripts/extract_open3d_ligaments.py` — named `o` objects from literature `lower-limb.obj` → raw OBJ + Kabsch-baked GLB under `by-sa/`
+- `scripts/integrity-audit.py` — `placeholder:false` ↔ `REAL_*_MODELS` ↔ GLB existence
+- `scripts/expand-structures.py` — structures helpers (when used)
+- `update_structures_bp3d.py` / `update_structures_um.py` — historical structure wiring
+- `third_party/z-anatomy/*` — Blender inventory/export **recipes** (Blender may be absent on box; Zenodo `.blend` path documented, not always executable here)
+- Historical / optional: `assets-raw/bodyparts3d/*`, `assets-raw/um-asian-male/*` (may live outside this checkout)
+
+### License matrix (redistribution honesty)
+| Bucket | License | Where | Notes |
+|--------|---------|-------|-------|
+| Code | MIT | repo root | App/source |
+| BP3D osteology + most soft tissue | CC BY 4.0 | `public/models/right-foot/*.glb` (not `by-sa/`) | Attribution required |
+| UM muscles | CC0 1.0 | main tree GLBs | Public domain dedication |
+| Z-Anatomy nerves | CC BY-SA 4.0 | `by-sa/` only | ShareAlike isolate |
+| Open3D DI / arteries / ligaments / retinacula / fascia | CC BY-SA 4.0 | `by-sa/` only | Same isolate; Kabsch bake is a modification under BY-SA |
+| Placeholders | n/a | none currently | — |
+
+Deleting or never loading `by-sa/` yields a MIT + CC BY/CC0-only redistribution surface. Loading BY-SA layers accepts ShareAlike for those meshes and derivatives thereof.
 
 ### Git History
-Complete commit history (Day 1-7) documents:
-- Asset extraction decisions (e.g., UM vs BP3D quality comparison)
-- structures.json evolution (placeholder flag corrections)
-- FootModel.tsx updates (REAL_*_MODELS mappings)
+Commit history documents asset decisions, `structures.json` evolution, and `FootModel.tsx` `REAL_*_MODELS` wiring. Prefer Day 4m+ transform JSONs over older 8-landmark Open3D fits.
 
-### Data Provenance
-| Structure | Source | BP/FMA | UM Filename | Z-Anatomy Object |
-|-----------|--------|--------|-------------|------------------|
-| Calcaneus | BP3D | BP9040/FMA24497 | — | — |
-| Abductor hallucis | UM | — | `Segmentation_Muscle_Abductor Hallucis.stl` | — |
-| Tibial nerve | Z-Anatomy | — | — | `Tibial nerve.r` |
-| _(etc., see manifest.json for full list)_ |
+### Data Provenance (examples)
+| Structure | Source | Key ID / object |
+|-----------|--------|-----------------|
+| Calcaneus | BP3D | BP9040 / FMA24497 |
+| Abductor hallucis | UM | `Segmentation_Muscle_Abductor Hallucis.stl` |
+| Tibial nerve | Z-Anatomy | `Tibial nerve.r` |
+| Interosseous talocalcaneal | Open3D | `Interosseus_talocalcaneal_ligament.r` → `by-sa/` |
+| _(full list)_ | — | `src/data/structures.json` + `public/models/right-foot/manifest.json` + `by-sa/NOTICE.md` |
 
 ---
 
@@ -317,8 +339,8 @@ Complete commit history (Day 1-7) documents:
 
 ---
 
-**Document Version**: 1.0 (2026-09-14)  
-**Atlas Version**: Week Sprint Final (88% real coverage, 38/43 structures)
+**Document Version**: 1.1 (2026-09-15)  
+**Atlas Version**: Week 2 Day 4v (teaching-grade in progress; no finished-product claim)
 
 
 ---
@@ -329,7 +351,7 @@ Complete commit history (Day 1-7) documents:
 
 | Gap | Why still open | Search note |
 |-----|----------------|-------------|
-| Ligaments / plantar fascia / tendon | BP3D long plantar + Achilles; **Day 4s–4t** Open3D BY-SA 19 meshes (isolate). Still incomplete (further bands…) | Monolithic `lower-limb.obj` object inventory + attachment QA. Z-Anatomy Zenodo `.blend` on disk; Blender not in apt — recipe only |
+| Ligaments / plantar fascia / tendon | BP3D long plantar + Achilles; **Day 4s–4v** Open3D BY-SA **25** meshes (isolate). Still incomplete | Monolithic `lower-limb.obj` + attachment QA. Z-Anatomy Zenodo `.blend`; Blender not in apt — recipe only |
 | Finer plantar/digital nerves | Only trunk nerves (Z-Anatomy BY-SA) | Prefer future CC0/BY over expanding SA isolate |
 | Individual dorsal metatarsal arteries | BP3D grouped dorsal digital + plantar metatarsal remain | Open3D had dorsal MTA (BY-SA); skipped earlier to avoid SA duplication of grouped teaching vessels |
 | Plantar interossei | **Present** (BP3D 1st–3rd) | Not a gap |
@@ -349,3 +371,11 @@ Complete commit history (Day 1-7) documents:
 2. Extracted + Kabsch-baked 15 new BY-SA GLBs; attachment QA (centroid→expected bones) all accept — see `ligament_attachment_qa.json`.
 3. Re-QA Day 4s four: laterality/scale OK.
 4. Blender: not installed; apt has no blender package — did not install.
+
+## Day 4v — Selective high-teaching-value Open3D ligaments (2026-09-15)
+
+1. Scanned remaining named RIGHT bands; extracted 8 candidates with Day 4m Kabsch; attachment QA all passed distance/side/AABB rules.
+2. **Integrated (max 6)**: interosseous talocalcaneal, cervical (anterior) talocalcaneal, talonavicular, deep transverse metatarsal, intercuneiform interosseous, dorsal cuneonavicular.
+3. **Deferred (volume cap, QA would accept)**: medial talocalcaneal, dorsal intercuneiform — not absurd residual; omitted for quality-over-volume.
+4. Sub-group filters: added `subtalar`, `midfoot`, `forefoot`.
+5. Honesty: still **not** a finished ligament atlas; teaching vs clinical soft disclaimer strengthened above.

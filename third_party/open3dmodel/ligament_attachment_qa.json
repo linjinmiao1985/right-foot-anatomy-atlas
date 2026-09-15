@@ -331,6 +331,331 @@
       "min_expect_mm": 19.16,
       "wrong_side": false,
       "decision": "accept"
+    },
+    "interosseous_talocalcaneal_ligament": {
+      "centroid_mm": [
+        -70.24816915274201,
+        -78.20682367337679,
+        -23.17089463523137
+      ],
+      "n_verts": 1154,
+      "dist_expect_mm": {
+        "talus": 6.66,
+        "calcaneus": 18.92
+      },
+      "nearest_expect": "talus",
+      "min_expect_mm": 6.66,
+      "wrong_side": false,
+      "frac_verts_in_padded_aabb": 1.0,
+      "threshold_mm": 55.0,
+      "decision": "accept",
+      "reject_reasons": [],
+      "open3d_object": "Interosseus_talocalcaneal_ligament.r",
+      "pass": "Day4v"
+    },
+    "cervical_talocalcaneal_ligament": {
+      "centroid_mm": [
+        -86.38481920747988,
+        -84.62082313521391,
+        -21.376235576930288
+      ],
+      "n_verts": 498,
+      "dist_expect_mm": {
+        "talus": 17.11,
+        "calcaneus": 26.14
+      },
+      "nearest_expect": "talus",
+      "min_expect_mm": 17.11,
+      "wrong_side": false,
+      "frac_verts_in_padded_aabb": 1.0,
+      "threshold_mm": 55.0,
+      "decision": "accept",
+      "reject_reasons": [],
+      "open3d_object": "Cervical_ligament_(anterior_talocalcaneal_ligament).r",
+      "pass": "Day4v"
+    },
+    "talonavicular_ligament": {
+      "centroid_mm": [
+        -78.55428936833984,
+        -105.08376046784798,
+        -8.051189847566222
+      ],
+      "n_verts": 521,
+      "dist_expect_mm": {
+        "talus": 28.6,
+        "navicular": 10.06
+      },
+      "nearest_expect": "navicular",
+      "min_expect_mm": 10.06,
+      "wrong_side": false,
+      "frac_verts_in_padded_aabb": 1.0,
+      "threshold_mm": 55.0,
+      "decision": "accept",
+      "reject_reasons": [],
+      "open3d_object": "Talonavicular_ligament.r",
+      "pass": "Day4v"
+    },
+    "deep_transverse_metatarsal_ligament": {
+      "centroid_mm": [
+        -122.64597314185114,
+        -171.0846094319404,
+        -66.02384842426831
+      ],
+      "n_verts": 2407,
+      "dist_expect_mm": {
+        "metatarsal_1": 38.99,
+        "metatarsal_2": 41.29,
+        "metatarsal_3": 34.32,
+        "metatarsal_4": 42.31,
+        "metatarsal_5": 48.91
+      },
+      "nearest_expect": "metatarsal_3",
+      "min_expect_mm": 34.32,
+      "wrong_side": false,
+      "frac_verts_in_padded_aabb": 1.0,
+      "threshold_mm": 75.0,
+      "decision": "accept",
+      "reject_reasons": [],
+      "open3d_object": "Deep_transverse_metatarsal_ligament.r",
+      "pass": "Day4v"
+    },
+    "intercuneiform_interosseous_ligaments": {
+      "centroid_mm": [
+        -92.98271949793197,
+        -120.98957469148502,
+        -24.868993704419516
+      ],
+      "n_verts": 526,
+      "dist_expect_mm": {
+        "cuneiform_medial": 14.28,
+        "cuneiform_intermediate": 2.79,
+        "cuneiform_lateral": 10.46
+      },
+      "nearest_expect": "cuneiform_intermediate",
+      "min_expect_mm": 2.79,
+      "wrong_side": false,
+      "frac_verts_in_padded_aabb": 1.0,
+      "threshold_mm": 75.0,
+      "decision": "accept",
+      "reject_reasons": [],
+      "open3d_object": "Intercuneiform_interosseus_ligaments.r",
+      "pass": "Day4v"
+    },
+    "dorsal_cuneonavicular_ligaments": {
+      "centroid_mm": [
+        -84.54514461151328,
+        -115.90034550267417,
+        -16.567656678065237
+      ],
+      "n_verts": 790,
+      "dist_expect_mm": {
+        "navicular": 9.89,
+        "cuneiform_medial": 17.31,
+        "cuneiform_intermediate": 10.1,
+        "cuneiform_lateral": 18.74
+      },
+      "nearest_expect": "navicular",
+      "min_expect_mm": 9.89,
+      "wrong_side": false,
+      "frac_verts_in_padded_aabb": 1.0,
+      "threshold_mm": 75.0,
+      "decision": "accept",
+      "reject_reasons": [],
+      "open3d_object": "Dorsal_cuneonavicular_ligaments.r",
+      "pass": "Day4v"
     }
-  }
+  },
+  "day4v_scanned": {
+    "interosseous_talocalcaneal_ligament": {
+      "centroid_mm": [
+        -70.24816915274201,
+        -78.20682367337679,
+        -23.17089463523137
+      ],
+      "n_verts": 1154,
+      "dist_expect_mm": {
+        "talus": 6.66,
+        "calcaneus": 18.92
+      },
+      "nearest_expect": "talus",
+      "min_expect_mm": 6.66,
+      "wrong_side": false,
+      "frac_verts_in_padded_aabb": 1.0,
+      "threshold_mm": 55.0,
+      "decision": "accept",
+      "reject_reasons": [],
+      "open3d_object": "Interosseus_talocalcaneal_ligament.r"
+    },
+    "cervical_talocalcaneal_ligament": {
+      "centroid_mm": [
+        -86.38481920747988,
+        -84.62082313521391,
+        -21.376235576930288
+      ],
+      "n_verts": 498,
+      "dist_expect_mm": {
+        "talus": 17.11,
+        "calcaneus": 26.14
+      },
+      "nearest_expect": "talus",
+      "min_expect_mm": 17.11,
+      "wrong_side": false,
+      "frac_verts_in_padded_aabb": 1.0,
+      "threshold_mm": 55.0,
+      "decision": "accept",
+      "reject_reasons": [],
+      "open3d_object": "Cervical_ligament_(anterior_talocalcaneal_ligament).r"
+    },
+    "talonavicular_ligament": {
+      "centroid_mm": [
+        -78.55428936833984,
+        -105.08376046784798,
+        -8.051189847566222
+      ],
+      "n_verts": 521,
+      "dist_expect_mm": {
+        "talus": 28.6,
+        "navicular": 10.06
+      },
+      "nearest_expect": "navicular",
+      "min_expect_mm": 10.06,
+      "wrong_side": false,
+      "frac_verts_in_padded_aabb": 1.0,
+      "threshold_mm": 55.0,
+      "decision": "accept",
+      "reject_reasons": [],
+      "open3d_object": "Talonavicular_ligament.r"
+    },
+    "deep_transverse_metatarsal_ligament": {
+      "centroid_mm": [
+        -122.64597314185114,
+        -171.0846094319404,
+        -66.02384842426831
+      ],
+      "n_verts": 2407,
+      "dist_expect_mm": {
+        "metatarsal_1": 38.99,
+        "metatarsal_2": 41.29,
+        "metatarsal_3": 34.32,
+        "metatarsal_4": 42.31,
+        "metatarsal_5": 48.91
+      },
+      "nearest_expect": "metatarsal_3",
+      "min_expect_mm": 34.32,
+      "wrong_side": false,
+      "frac_verts_in_padded_aabb": 1.0,
+      "threshold_mm": 75.0,
+      "decision": "accept",
+      "reject_reasons": [],
+      "open3d_object": "Deep_transverse_metatarsal_ligament.r"
+    },
+    "intercuneiform_interosseous_ligaments": {
+      "centroid_mm": [
+        -92.98271949793197,
+        -120.98957469148502,
+        -24.868993704419516
+      ],
+      "n_verts": 526,
+      "dist_expect_mm": {
+        "cuneiform_medial": 14.28,
+        "cuneiform_intermediate": 2.79,
+        "cuneiform_lateral": 10.46
+      },
+      "nearest_expect": "cuneiform_intermediate",
+      "min_expect_mm": 2.79,
+      "wrong_side": false,
+      "frac_verts_in_padded_aabb": 1.0,
+      "threshold_mm": 75.0,
+      "decision": "accept",
+      "reject_reasons": [],
+      "open3d_object": "Intercuneiform_interosseus_ligaments.r"
+    },
+    "dorsal_cuneonavicular_ligaments": {
+      "centroid_mm": [
+        -84.54514461151328,
+        -115.90034550267417,
+        -16.567656678065237
+      ],
+      "n_verts": 790,
+      "dist_expect_mm": {
+        "navicular": 9.89,
+        "cuneiform_medial": 17.31,
+        "cuneiform_intermediate": 10.1,
+        "cuneiform_lateral": 18.74
+      },
+      "nearest_expect": "navicular",
+      "min_expect_mm": 9.89,
+      "wrong_side": false,
+      "frac_verts_in_padded_aabb": 1.0,
+      "threshold_mm": 75.0,
+      "decision": "accept",
+      "reject_reasons": [],
+      "open3d_object": "Dorsal_cuneonavicular_ligaments.r"
+    },
+    "medial_talocalcaneal_ligament": {
+      "centroid_mm": [
+        -55.85445277292458,
+        -75.46052975296965,
+        -24.39008819727518
+      ],
+      "n_verts": 186,
+      "dist_expect_mm": {
+        "talus": 17.38,
+        "calcaneus": 25.22
+      },
+      "nearest_expect": "talus",
+      "min_expect_mm": 17.38,
+      "wrong_side": false,
+      "frac_verts_in_padded_aabb": 1.0,
+      "threshold_mm": 55.0,
+      "decision": "accept",
+      "reject_reasons": [],
+      "open3d_object": "Medial_talocalcaneal_ligament.r"
+    },
+    "dorsal_intercuneiform_ligaments": {
+      "centroid_mm": [
+        -95.05995917961243,
+        -125.5600354100481,
+        -17.436429836291058
+      ],
+      "n_verts": 623,
+      "dist_expect_mm": {
+        "cuneiform_medial": 18.4,
+        "cuneiform_intermediate": 8.98,
+        "cuneiform_lateral": 17.78
+      },
+      "nearest_expect": "cuneiform_intermediate",
+      "min_expect_mm": 8.98,
+      "wrong_side": false,
+      "frac_verts_in_padded_aabb": 1.0,
+      "threshold_mm": 75.0,
+      "decision": "accept",
+      "reject_reasons": [],
+      "open3d_object": "Dorsal_intercuneiform_ligaments.r"
+    }
+  },
+  "day4v_integrated": [
+    "interosseous_talocalcaneal_ligament",
+    "cervical_talocalcaneal_ligament",
+    "talonavicular_ligament",
+    "deep_transverse_metatarsal_ligament",
+    "intercuneiform_interosseous_ligaments",
+    "dorsal_cuneonavicular_ligaments"
+  ],
+  "day4v_rejected_or_deferred": [
+    {
+      "id": "medial_talocalcaneal_ligament",
+      "decision": "accept",
+      "reasons": [],
+      "min_expect_mm": 17.38,
+      "nearest": "talus"
+    },
+    {
+      "id": "dorsal_intercuneiform_ligaments",
+      "decision": "accept",
+      "reasons": [],
+      "min_expect_mm": 8.98,
+      "nearest": "cuneiform_intermediate"
+    }
+  ]
 }

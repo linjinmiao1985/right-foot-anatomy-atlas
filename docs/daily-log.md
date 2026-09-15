@@ -1101,3 +1101,16 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 - Blender: not installed; apt has no blender package — did not install.
 - integrity-audit + vitest + build; commit/push this pass.
 - Honesty: expanded teaching soft-tissue under 韧带/腱 — **not** a finished ligament atlas.
+
+
+## Week 2 Day 4v (2026-09-15) — Selective ligaments + methods polish
+
+- Pulled branch at e73c7ef (already current).
+- Scanned 8 remaining high-value RIGHT Open3D bands; Kabsch + attachment QA — **0 absurd rejects**.
+- Integrated **6**: interosseous/cervical talocalcaneal, talonavicular, deep transverse metatarsal, intercuneiform IO, dorsal cuneonavicular.
+- Deferred **2** (max-6 volume; QA would accept): medial talocalcaneal, dorsal intercuneiform.
+- Sub-group filters: +subtalar, +midfoot, +forefoot.
+- Methods: reproducibility (transforms/scripts/license matrix) + teaching-vs-clinical soft disclaimer.
+- Census: 86 unique / 91 entries; BY-SA ligaments 25 (was 19).
+- integrity-audit + vitest + build; commit/push.
+- Honesty: teaching-useful incomplete ligament layer — **no finished-product claim**.

@@ -1,7 +1,7 @@
 {
   "source": "/workspace/literature/open3d-assets/lower-limb.obj",
   "transform": "third_party/open3dmodel/open3d_to_bp3d_transform.json",
-  "method": "reuse Open3D\u2192BP3D Kabsch (same donor as DI/arteries); Day 4t expanded",
+  "method": "reuse Open3D\u2192BP3D Kabsch (Day 4m); Day 4v selective teaching ligaments",
   "targets": {
     "Anterior_talofibular_ligament.r": "anterior_talofibular_ligament",
     "Calcaneofibular_ligament.r": "calcaneofibular_ligament",
@@ -422,6 +422,328 @@
       ],
       "n_verts": 634,
       "n_faces": 632
+    },
+    "interosseous_talocalcaneal_ligament": {
+      "x": [
+        -78.94425478571925,
+        -64.43922431023216
+      ],
+      "y": [
+        -81.38044929246024,
+        -76.28247677761868
+      ],
+      "z": [
+        -29.19701660367791,
+        -17.65673648442114
+      ],
+      "centroid": [
+        -70.24816915274201,
+        -78.20682367337679,
+        -23.17089463523137
+      ],
+      "n_verts": 1154,
+      "n_faces": 1152,
+      "open3d_object": "Interosseus_talocalcaneal_ligament.r"
+    },
+    "cervical_talocalcaneal_ligament": {
+      "x": [
+        -94.03376630001615,
+        -78.93481477537948
+      ],
+      "y": [
+        -92.73541147467236,
+        -75.22959870385975
+      ],
+      "z": [
+        -29.01639103727821,
+        -15.880185655558698
+      ],
+      "centroid": [
+        -86.38481920747988,
+        -84.62082313521391,
+        -21.376235576930288
+      ],
+      "n_verts": 498,
+      "n_faces": 496,
+      "open3d_object": "Cervical_ligament_(anterior_talocalcaneal_ligament).r"
+    },
+    "talonavicular_ligament": {
+      "x": [
+        -89.52515027224027,
+        -68.67544690151755
+      ],
+      "y": [
+        -111.1883748791409,
+        -98.24490677094731
+      ],
+      "z": [
+        -11.25327338724395,
+        -4.7606748523806885
+      ],
+      "centroid": [
+        -78.55428936833984,
+        -105.08376046784798,
+        -8.051189847566222
+      ],
+      "n_verts": 521,
+      "n_faces": 519,
+      "open3d_object": "Talonavicular_ligament.r"
+    },
+    "deep_transverse_metatarsal_ligament": {
+      "x": [
+        -143.4417946096586,
+        -101.38539689403164
+      ],
+      "y": [
+        -188.29011029205134,
+        -150.40304734012568
+      ],
+      "z": [
+        -68.28915173200622,
+        -64.07904167324222
+      ],
+      "centroid": [
+        -122.64597314185114,
+        -171.0846094319404,
+        -66.02384842426831
+      ],
+      "n_verts": 2407,
+      "n_faces": 2399,
+      "open3d_object": "Deep_transverse_metatarsal_ligament.r"
+    },
+    "intercuneiform_interosseous_ligaments": {
+      "x": [
+        -99.43137292362343,
+        -85.38782557284398
+      ],
+      "y": [
+        -127.54789134735019,
+        -116.14245657438997
+      ],
+      "z": [
+        -29.570479949333837,
+        -20.611071730644433
+      ],
+      "centroid": [
+        -92.98271949793197,
+        -120.98957469148502,
+        -24.868993704419516
+      ],
+      "n_verts": 526,
+      "n_faces": 522,
+      "open3d_object": "Intercuneiform_interosseus_ligaments.r"
+    },
+    "dorsal_cuneonavicular_ligaments": {
+      "x": [
+        -100.43298089595316,
+        -66.10295458998942
+      ],
+      "y": [
+        -126.69546352719311,
+        -101.5781254922961
+      ],
+      "z": [
+        -29.609341519798022,
+        -9.062999897730776
+      ],
+      "centroid": [
+        -84.54514461151328,
+        -115.90034550267417,
+        -16.567656678065237
+      ],
+      "n_verts": 790,
+      "n_faces": 784,
+      "open3d_object": "Dorsal_cuneonavicular_ligaments.r"
     }
-  }
+  },
+  "day4v_scanned": {
+    "interosseous_talocalcaneal_ligament": {
+      "x": [
+        -78.94425478571925,
+        -64.43922431023216
+      ],
+      "y": [
+        -81.38044929246024,
+        -76.28247677761868
+      ],
+      "z": [
+        -29.19701660367791,
+        -17.65673648442114
+      ],
+      "centroid": [
+        -70.24816915274201,
+        -78.20682367337679,
+        -23.17089463523137
+      ],
+      "n_verts": 1154,
+      "n_faces": 1152,
+      "open3d_object": "Interosseus_talocalcaneal_ligament.r"
+    },
+    "cervical_talocalcaneal_ligament": {
+      "x": [
+        -94.03376630001615,
+        -78.93481477537948
+      ],
+      "y": [
+        -92.73541147467236,
+        -75.22959870385975
+      ],
+      "z": [
+        -29.01639103727821,
+        -15.880185655558698
+      ],
+      "centroid": [
+        -86.38481920747988,
+        -84.62082313521391,
+        -21.376235576930288
+      ],
+      "n_verts": 498,
+      "n_faces": 496,
+      "open3d_object": "Cervical_ligament_(anterior_talocalcaneal_ligament).r"
+    },
+    "talonavicular_ligament": {
+      "x": [
+        -89.52515027224027,
+        -68.67544690151755
+      ],
+      "y": [
+        -111.1883748791409,
+        -98.24490677094731
+      ],
+      "z": [
+        -11.25327338724395,
+        -4.7606748523806885
+      ],
+      "centroid": [
+        -78.55428936833984,
+        -105.08376046784798,
+        -8.051189847566222
+      ],
+      "n_verts": 521,
+      "n_faces": 519,
+      "open3d_object": "Talonavicular_ligament.r"
+    },
+    "deep_transverse_metatarsal_ligament": {
+      "x": [
+        -143.4417946096586,
+        -101.38539689403164
+      ],
+      "y": [
+        -188.29011029205134,
+        -150.40304734012568
+      ],
+      "z": [
+        -68.28915173200622,
+        -64.07904167324222
+      ],
+      "centroid": [
+        -122.64597314185114,
+        -171.0846094319404,
+        -66.02384842426831
+      ],
+      "n_verts": 2407,
+      "n_faces": 2399,
+      "open3d_object": "Deep_transverse_metatarsal_ligament.r"
+    },
+    "intercuneiform_interosseous_ligaments": {
+      "x": [
+        -99.43137292362343,
+        -85.38782557284398
+      ],
+      "y": [
+        -127.54789134735019,
+        -116.14245657438997
+      ],
+      "z": [
+        -29.570479949333837,
+        -20.611071730644433
+      ],
+      "centroid": [
+        -92.98271949793197,
+        -120.98957469148502,
+        -24.868993704419516
+      ],
+      "n_verts": 526,
+      "n_faces": 522,
+      "open3d_object": "Intercuneiform_interosseus_ligaments.r"
+    },
+    "dorsal_cuneonavicular_ligaments": {
+      "x": [
+        -100.43298089595316,
+        -66.10295458998942
+      ],
+      "y": [
+        -126.69546352719311,
+        -101.5781254922961
+      ],
+      "z": [
+        -29.609341519798022,
+        -9.062999897730776
+      ],
+      "centroid": [
+        -84.54514461151328,
+        -115.90034550267417,
+        -16.567656678065237
+      ],
+      "n_verts": 790,
+      "n_faces": 784,
+      "open3d_object": "Dorsal_cuneonavicular_ligaments.r"
+    },
+    "medial_talocalcaneal_ligament": {
+      "x": [
+        -57.62311846393058,
+        -53.44655428176243
+      ],
+      "y": [
+        -81.5263197139881,
+        -66.91232372724798
+      ],
+      "z": [
+        -27.541027040120575,
+        -19.045380629357993
+      ],
+      "centroid": [
+        -55.85445277292458,
+        -75.46052975296965,
+        -24.39008819727518
+      ],
+      "n_verts": 186,
+      "n_faces": 184,
+      "open3d_object": "Medial_talocalcaneal_ligament.r"
+    },
+    "dorsal_intercuneiform_ligaments": {
+      "x": [
+        -106.87228711429205,
+        -82.7948361477306
+      ],
+      "y": [
+        -137.8978942710335,
+        -113.17355100859437
+      ],
+      "z": [
+        -22.4452167702388,
+        -13.402337196390576
+      ],
+      "centroid": [
+        -95.05995917961243,
+        -125.5600354100481,
+        -17.436429836291058
+      ],
+      "n_verts": 623,
+      "n_faces": 619,
+      "open3d_object": "Dorsal_intercuneiform_ligaments.r"
+    }
+  },
+  "day4v_integrated": [
+    "interosseous_talocalcaneal_ligament",
+    "cervical_talocalcaneal_ligament",
+    "talonavicular_ligament",
+    "deep_transverse_metatarsal_ligament",
+    "intercuneiform_interosseous_ligaments",
+    "dorsal_cuneonavicular_ligaments"
+  ],
+  "day4v_rejected_or_deferred": [
+    "medial_talocalcaneal_ligament",
+    "dorsal_intercuneiform_ligaments"
+  ]
 }

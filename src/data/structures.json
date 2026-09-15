@@ -998,5 +998,78 @@
     "nameLa": "Retinaculum musculorum fibularium inferius",
     "summaryZh": "腓骨肌下支持带（Open3D Inferior_fibular_retinaculum.r，CC BY-SA 4.0，by-sa/）。跟骨外侧面。教学：支持带。Kabsch→BP3D mm。",
     "placeholder": false
+  },
+  {
+    "id": "interosseous_talocalcaneal_ligament",
+    "meshNames": [
+      "Interosseous_Talocalcaneal_Ligament_R",
+      "Ligamentum_talocalcaneum_interosseum_Right"
+    ],
+    "layer": "ligament",
+    "nameZh": "距跟骨间韧带",
+    "nameLa": "Ligamentum talocalcaneum interosseum",
+    "summaryZh": "距下关节骨间韧带（Open3D Interosseus_talocalcaneal_ligament.r，CC BY-SA 4.0，by-sa/）。位于跗骨窦，连接距骨与跟骨。教学：距下关节稳定/跗骨窦综合征相关。Kabsch→BP3D mm（均值残差约 2.6 mm）。教学示意，非手术配准；非完整距跟韧带集。",
+    "placeholder": false
+  },
+  {
+    "id": "cervical_talocalcaneal_ligament",
+    "meshNames": [
+      "Cervical_Talocalcaneal_Ligament_R",
+      "Anterior_Talocalcaneal_Ligament_R",
+      "Ligamentum_cervicale_Right"
+    ],
+    "layer": "ligament",
+    "nameZh": "颈韧带（距跟前韧带）",
+    "nameLa": "Ligamentum cervicale (talocalcaneum anterius)",
+    "summaryZh": "颈韧带 / 距跟前韧带（Open3D Cervical_ligament_(anterior_talocalcaneal_ligament).r，CC BY-SA 4.0，by-sa/）。距骨颈至跟骨前背侧。教学：距下前外侧稳定。Kabsch→BP3D mm。教学级；非完整距跟韧带图谱。",
+    "placeholder": false
+  },
+  {
+    "id": "talonavicular_ligament",
+    "meshNames": [
+      "Talonavicular_Ligament_R",
+      "Ligamentum_talonaviculare_Right"
+    ],
+    "layer": "ligament",
+    "nameZh": "距舟韧带",
+    "nameLa": "Ligamentum talonaviculare",
+    "summaryZh": "背侧距舟韧带（Open3D Talonavicular_ligament.r，CC BY-SA 4.0，by-sa/）。距骨颈至舟骨背侧面。教学：Chopart/距舟关节背侧稳定；足底跟舟（弹簧）韧带已另列。Kabsch→BP3D mm。教学示意。",
+    "placeholder": false
+  },
+  {
+    "id": "deep_transverse_metatarsal_ligament",
+    "meshNames": [
+      "Deep_Transverse_Metatarsal_Ligament_R",
+      "Ligamentum_metatarsale_transversum_profundum_Right"
+    ],
+    "layer": "ligament",
+    "nameZh": "跖骨深横韧带",
+    "nameLa": "Ligamentum metatarsale transversum profundum",
+    "summaryZh": "跖骨头间深横韧带带（Open3D Deep_transverse_metatarsal_ligament.r，CC BY-SA 4.0，by-sa/）。连接相邻跖骨头跖板。教学：前足横弓/MTP 稳定相关。分组带状网格。Kabsch→BP3D mm。教学级，非手术配准。",
+    "placeholder": false
+  },
+  {
+    "id": "intercuneiform_interosseous_ligaments",
+    "meshNames": [
+      "Intercuneiform_Interosseous_Ligaments_R",
+      "Ligamenta_intercuneiformia_interossea_Right"
+    ],
+    "layer": "ligament",
+    "nameZh": "楔骨间骨间韧带（分组）",
+    "nameLa": "Ligamenta intercuneiformia interossea",
+    "summaryZh": "内侧/中间/外侧楔骨之间的骨间韧带带（Open3D Intercuneiform_interosseus_ligaments.r，CC BY-SA 4.0，by-sa/）。教学：中足楔骨复合体稳定。分组网格，非逐条分拆。Kabsch→BP3D mm。",
+    "placeholder": false
+  },
+  {
+    "id": "dorsal_cuneonavicular_ligaments",
+    "meshNames": [
+      "Dorsal_Cuneonavicular_Ligaments_R",
+      "Ligamenta_cuneonavicularia_dorsalia_Right"
+    ],
+    "layer": "ligament",
+    "nameZh": "背侧楔舟韧带（分组）",
+    "nameLa": "Ligamenta cuneonavicularia dorsalia",
+    "summaryZh": "舟骨与三楔骨背侧韧带带（Open3D Dorsal_cuneonavicular_ligaments.r，CC BY-SA 4.0，by-sa/）。教学：中足背侧稳定。分组网格。Kabsch→BP3D mm。跖侧楔舟未在本 pass 纳入。",
+    "placeholder": false
   }
 ]

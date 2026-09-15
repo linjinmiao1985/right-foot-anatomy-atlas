@@ -77,6 +77,12 @@ describe('assetProvenance', () => {
       'inferior_extensor_retinaculum',
       'superior_fibular_retinaculum',
       'inferior_fibular_retinaculum',
+      'interosseous_talocalcaneal_ligament',
+      'cervical_talocalcaneal_ligament',
+      'talonavicular_ligament',
+      'deep_transverse_metatarsal_ligament',
+      'intercuneiform_interosseous_ligaments',
+      'dorsal_cuneonavicular_ligaments',
     ]) {
       const p = getStructureProvenance(id, false, 'ligament');
       expect(p.sourceShort).toBe('Open3D');

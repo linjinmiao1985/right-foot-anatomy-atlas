@@ -355,3 +355,8 @@ Reuse Day 4m Kabsch. Full AABB: `ligament_extract_aabb.json`. Attachment distanc
 **Day 4s re-QA**: ATFL more lateral than spring; plantar fascia Z more plantar than calcaneus; all X<0 — **no side/scale correction**.
 
 Reject rule applied: wrong side / far attachment / outside padded foot AABB — **0 rejects** among scanned named targets. Teaching-grade only.
+
+
+## Day 4v — Selective ligament attachment QA (2026-09-15)
+
+Reuse Day 4m Kabsch. Six integrated + two deferred (volume): see `ligament_attachment_qa.json` `day4v_*` keys and `docs/week2-ligament-fascia-search.md` Day 4v table. Nearest-bone mins 2.8–34.3 mm; all right-sided; no absurd rejects.

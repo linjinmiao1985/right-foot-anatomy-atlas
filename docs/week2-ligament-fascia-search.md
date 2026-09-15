@@ -272,3 +272,36 @@ Unique collapse: lumbricals×4→1, plantar interossei×3→1. Muscles unique = 
 ### Honesty
 
 No finished-product claim. Ligament layer remains incomplete teaching set.
+
+
+---
+
+## Day 4v — Selective integrate (quality over volume)
+
+**Date**: 2026-09-15  
+**Goal**: Wire at most **6** highest-teaching-value remaining RIGHT Open3D ligaments with Kabsch + attachment QA; reject/defer absurd or over-cap.
+
+### Candidates scanned (attachment QA)
+
+Reject rule (unchanged): wrong side (X>0) OR min_expect >55 mm (75 mm bands) OR outside padded foot AABB.
+
+| Mesh | Open3D object | nearest / min_mm | Decision |
+|------|---------------|------------------|----------|
+| Interosseous talocalcaneal | `Interosseus_talocalcaneal_ligament.r` | talus / 6.7 | **Integrated** |
+| Cervical (ant. talocalcaneal) | `Cervical_ligament_(anterior_talocalcaneal_ligament).r` | talus / 17.1 | **Integrated** |
+| Talonavicular (dorsal) | `Talonavicular_ligament.r` | navicular / 10.1 | **Integrated** |
+| Deep transverse metatarsal | `Deep_transverse_metatarsal_ligament.r` | MT3 / 34.3 | **Integrated** (band) |
+| Intercuneiform interosseous | `Intercuneiform_interosseus_ligaments.r` | cuneiform_int / 2.8 | **Integrated** (grouped) |
+| Dorsal cuneonavicular | `Dorsal_cuneonavicular_ligaments.r` | navicular / 9.9 | **Integrated** (grouped) |
+| Medial talocalcaneal | `Medial_talocalcaneal_ligament.r` | talus / 17.4 | **Deferred** (max-6 volume; QA would accept) |
+| Dorsal intercuneiform | `Dorsal_intercuneiform_ligaments.r` | cuneiform_int / 9.0 | **Deferred** (max-6 volume; QA would accept) |
+
+**Rejected for absurd residual**: none among scanned. Deferred = volume policy, not spatial failure.
+
+### Sub-groups
+
+Added teaching filters: **距下 / subtalar**, **中足 / midfoot**, **前足 / forefoot** (plus prior lateral/deltoid/plantar-arch/Lisfranc/retinacula/tendon).
+
+### Honesty
+
+Ligament/tendon layer now: BP3D 2 + Open3D BY-SA **25** — still incomplete teaching set; no finished-product claim. Kabsch mean residual ≈2.6 mm unchanged.

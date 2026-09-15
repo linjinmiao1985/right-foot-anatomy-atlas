@@ -132,8 +132,8 @@ const REAL_NERVE_MODELS: Record<string, string> = {
 
 // Soft-tissue under ligament toggle — incomplete set (not a finished ligament atlas).
 // BP3D CC BY (native mm): long plantar + Achilles tendon.
-// Open3D BY-SA (Kabsch→BP3D, by-sa/): lateral/medial ankle, short plantar, bifurcate,
-// Lisfranc-ish bands, retinacula, plantar aponeurosis (Day 4s–4t).
+// Open3D BY-SA (Kabsch→BP3D, by-sa/): ankle, subtalar, midfoot, Lisfranc-ish, forefoot
+// transverse, retinacula, plantar aponeurosis (Day 4s–4v; selective).
 const REAL_LIGAMENT_MODELS: Record<string, string> = {
   'long_plantar_ligament': '/models/right-foot/long_plantar_ligament_BP5093.glb',
   // Tendon (not ligament): clear naming in structures.json + tooltip
@@ -158,6 +158,12 @@ const REAL_LIGAMENT_MODELS: Record<string, string> = {
   'inferior_extensor_retinaculum': '/models/right-foot/by-sa/inferior_extensor_retinaculum.glb',
   'superior_fibular_retinaculum': '/models/right-foot/by-sa/superior_fibular_retinaculum.glb',
   'inferior_fibular_retinaculum': '/models/right-foot/by-sa/inferior_fibular_retinaculum.glb',
+  'interosseous_talocalcaneal_ligament': '/models/right-foot/by-sa/interosseous_talocalcaneal_ligament.glb',
+  'cervical_talocalcaneal_ligament': '/models/right-foot/by-sa/cervical_talocalcaneal_ligament.glb',
+  'talonavicular_ligament': '/models/right-foot/by-sa/talonavicular_ligament.glb',
+  'deep_transverse_metatarsal_ligament': '/models/right-foot/by-sa/deep_transverse_metatarsal_ligament.glb',
+  'intercuneiform_interosseous_ligaments': '/models/right-foot/by-sa/intercuneiform_interosseous_ligaments.glb',
+  'dorsal_cuneonavicular_ligaments': '/models/right-foot/by-sa/dorsal_cuneonavicular_ligaments.glb',
 };
 
 export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName, isolateMode = false, visibleLigamentGroups }: FootModelProps) {

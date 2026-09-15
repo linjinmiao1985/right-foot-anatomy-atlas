@@ -36,7 +36,7 @@ Meshes in this directory are licensed under **CC BY-SA 4.0** (ShareAlike). Deriv
 **License**: CC BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/  
 **Modifications**: Extracted named right-side (`.r`) objects to OBJ, converted to glTF 2.0 Binary (obj2gltf); no topology edits. Vertex positions later **Kabsch-aligned** from Open3D meters into BodyParts3D millimeter frame (landmarks: Calcaneus, Talus, Navicular, Cuboid, medial/intermediate/lateral cuneiform, MT1–5; Day 4m re-fit mean residual ≈2.6 mm vs prior 8-landmark ≈3.0 mm that excluded mis-ID cuboid/cuneiforms) so the atlas `scale={[0.01,0.01,0.01]}` convention applies. Transform JSON: `third_party/open3dmodel/open3d_to_bp3d_transform.json`.
 
-**Inventory note**: Day 4t extracted deltoid parts, short plantar, bifurcate, PTFL, Lisfranc-ish TMT bands, and ankle retinacula. Same OBJ still has further bands (cuneonavicular, intercuneiform, toe collaterals, etc.) not extracted. Nerves covered by Z-Anatomy; DI partly covered elsewhere.
+**Inventory note**: Day 4t–4v extracted selected ankle/midfoot/forefoot bands. Same OBJ still has further bands (medial talocalcaneal & dorsal intercuneiform deferred Day 4v; plantar cuneonavicular, cuboideonavicular, toe collaterals, etc.) not wired. Nerves covered by Z-Anatomy; DI partly covered elsewhere.
 
 
 ### Ankle/foot ligaments, retinacula + plantar fascia (Open3DModel)
@@ -70,7 +70,15 @@ Meshes in this directory are licensed under **CC BY-SA 4.0** (ShareAlike). Deriv
 30. `superior_fibular_retinaculum.glb` — from `Superior_fibular_retinaculum.r`
 31. `inferior_fibular_retinaculum.glb` — from `Inferior_fibular_retinaculum.r`
 
-Same source/license/Kabsch pipeline as DI + proximal arteries (Day 4s–4t). Attachment QA: centroid→expected BP3D bone landmarks; all accepted (min residuals ≈12–40 mm). Teaching-grade co-registration only — **not** a finished ligament atlas. Many additional OBJ bands (e.g. dorsal/plantar cuneonavicular, intercuneiform, collateral toe ligaments) remain unextracted.
+**Day 4v — selective (max 6)**
+32. `interosseous_talocalcaneal_ligament.glb` — from `Interosseus_talocalcaneal_ligament.r`
+33. `cervical_talocalcaneal_ligament.glb` — from `Cervical_ligament_(anterior_talocalcaneal_ligament).r`
+34. `talonavicular_ligament.glb` — from `Talonavicular_ligament.r`
+35. `deep_transverse_metatarsal_ligament.glb` — from `Deep_transverse_metatarsal_ligament.r`
+36. `intercuneiform_interosseous_ligaments.glb` — from `Intercuneiform_interosseus_ligaments.r`
+37. `dorsal_cuneonavicular_ligaments.glb` — from `Dorsal_cuneonavicular_ligaments.r`
+
+Same source/license/Kabsch pipeline as DI + proximal arteries (Day 4s–4v). Attachment QA: centroid→expected BP3D bone landmarks; Day 4v mins ≈2.8–34.3 mm. Teaching-grade co-registration only — **not** a finished ligament atlas. Deferred (volume): medial talocalcaneal, dorsal intercuneiform. Further OBJ bands remain unwired.
 
 ---
 

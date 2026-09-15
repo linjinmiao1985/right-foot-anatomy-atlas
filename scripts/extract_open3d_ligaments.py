@@ -47,6 +47,13 @@ TARGETS = {
     "Inferior_extensor_retinaculum.r": "inferior_extensor_retinaculum",
     "Superior_fibular_retinaculum.r": "superior_fibular_retinaculum",
     "Inferior_fibular_retinaculum.r": "inferior_fibular_retinaculum",
+    # Day 4v — selective high-teaching-value remaining bands
+    "Interosseus_talocalcaneal_ligament.r": "interosseous_talocalcaneal_ligament",
+    "Cervical_ligament_(anterior_talocalcaneal_ligament).r": "cervical_talocalcaneal_ligament",
+    "Talonavicular_ligament.r": "talonavicular_ligament",
+    "Deep_transverse_metatarsal_ligament.r": "deep_transverse_metatarsal_ligament",
+    "Intercuneiform_interosseus_ligaments.r": "intercuneiform_interosseous_ligaments",
+    "Dorsal_cuneonavicular_ligaments.r": "dorsal_cuneonavicular_ligaments",
 }
 
 
@@ -199,7 +206,7 @@ def main() -> int:
             {
                 "source": str(src),
                 "transform": str(XFORM.relative_to(ROOT)),
-                "method": "reuse Open3D→BP3D Kabsch (same donor as DI/arteries); Day 4t expanded",
+                "method": "reuse Open3D→BP3D Kabsch (same donor as DI/arteries); Day 4t–4v expanded (selective; deferred medial TC / dorsal intercuneiform)",
                 "targets": TARGETS,
                 "aabb_bp3d_mm": aabb_report,
             },

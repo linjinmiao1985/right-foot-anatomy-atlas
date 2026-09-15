@@ -6,8 +6,11 @@
 export type LigamentGroupId =
   | 'lateral_ankle'
   | 'deltoid'
+  | 'subtalar'
   | 'plantar_arch'
+  | 'midfoot'
   | 'lisfranc'
+  | 'forefoot'
   | 'retinacula'
   | 'tendon';
 
@@ -41,6 +44,15 @@ export const LIGAMENT_GROUPS: readonly LigamentGroup[] = [
     ],
   },
   {
+    id: 'subtalar',
+    labelZh: '距下',
+    labelEn: 'Subtalar',
+    structureIds: [
+      'interosseous_talocalcaneal_ligament',
+      'cervical_talocalcaneal_ligament',
+    ],
+  },
+  {
     id: 'plantar_arch',
     labelZh: '足底/足弓',
     labelEn: 'Plantar / arch',
@@ -53,6 +65,16 @@ export const LIGAMENT_GROUPS: readonly LigamentGroup[] = [
     ],
   },
   {
+    id: 'midfoot',
+    labelZh: '中足',
+    labelEn: 'Midfoot',
+    structureIds: [
+      'talonavicular_ligament',
+      'dorsal_cuneonavicular_ligaments',
+      'intercuneiform_interosseous_ligaments',
+    ],
+  },
+  {
     id: 'lisfranc',
     labelZh: 'Lisfranc/TMT',
     labelEn: 'Lisfranc / TMT',
@@ -61,6 +83,12 @@ export const LIGAMENT_GROUPS: readonly LigamentGroup[] = [
       'dorsal_tarsometatarsal_ligaments',
       'plantar_tarsometatarsal_ligaments',
     ],
+  },
+  {
+    id: 'forefoot',
+    labelZh: '前足',
+    labelEn: 'Forefoot',
+    structureIds: ['deep_transverse_metatarsal_ligament'],
   },
   {
     id: 'retinacula',

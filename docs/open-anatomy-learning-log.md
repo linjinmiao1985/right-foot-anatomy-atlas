@@ -679,4 +679,13 @@ Soft-tissue under ligament toggle = **1 ligament + 1 tendon**. Still missing pla
 
 **QA residuals (centroid → nearest expected bone landmark, mm)**: cuneometatarsal 12.3 · dorsal TMT 12.0 · plantar TMT 16.4 · bifurcate 18.3 · CFL 17.2 · short plantar 20.9 · ATFL 20.5 · PTFL 20.4 · deltoid parts 17.9–23.2 · retinacula 15.5–39.8 (superior extensor highest — proximal band expected) · plantar fascia 32.7. Kabsch landmark mean residual unchanged ≈2.6 mm.
 
-**Still honest gaps**: many OBJ bands unextracted (cuneonavicular, intercuneiform, toe collaterals…); Lisfranc/retinacula are **grouped** teaching meshes; no finished ligament atlas claim. Blender still absent from apt — Z-Anatomy `.blend` path remains recipe-only.
+**Still honest gaps** (pre–Day 4v): many OBJ bands unextracted (cuneonavicular, intercuneiform, toe collaterals…); Lisfranc/retinacula are **grouped** teaching meshes; no finished ligament atlas claim. Blender still absent from apt — Z-Anatomy `.blend` path remains recipe-only.
+
+**Deepen (Day 4v)**: Passing attachment QA is not the same as “should integrate.” After Day 4t volume, the scarce resource is **teaching clarity** (sub-groups, census honesty, unfinished claims), not more GLBs. A hard **max-N** with a written priority list (subtalar IO/cervical → dorsal TN → deep transverse MT → intercuneiform IO → dorsal cuneonavicular) forces deferrals even when residuals are excellent (medial TC 17.4 mm, dorsal intercuneiform 9.0 mm deferred). Document deferrals as volume policy — do not invent a spatial reject.
+
+
+## Day 4v — Selective ligaments + methods reproducibility (2026-09-15)
+
+**Project A — Selective Open3D wire**: Integrated 6 BY-SA bands (interosseous + cervical talocalcaneal, talonavicular, deep transverse metatarsal, intercuneiform IO, dorsal cuneonavicular). Deferred medial talocalcaneal + dorsal intercuneiform (max-6). Sub-groups: subtalar / midfoot / forefoot.
+
+**Project B — Methods journal polish**: Strengthened `docs/methods.md` reproducibility (transform JSON table, script list, license matrix) + soft teaching-vs-clinical disclaimer. No finished-product claim.

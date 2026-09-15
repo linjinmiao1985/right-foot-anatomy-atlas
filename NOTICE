@@ -43,7 +43,7 @@ Under the following terms:
 
 **Source**: Open3D project via AnatomyTOOL create page  
 **License**: CC BY-SA 4.0  
-**Usage**: Dorsal interossei, proximal arteries, ankle/foot ligaments (lateral + deltoid parts, short plantar, bifurcate, Lisfranc-ish bands), retinacula, plantar aponeurosis under `public/models/right-foot/by-sa/` (Kabsch-aligned). See that directory's NOTICE.md.
+**Usage**: Dorsal interossei, proximal arteries, ankle/foot ligaments (incl. Day 4v subtalar/midfoot/forefoot selective bands), retinacula, plantar aponeurosis under `public/models/right-foot/by-sa/` (Kabsch-aligned). See that directory's NOTICE.md.
 
 ### Z-Anatomy nerves (BY-SA isolate)
 
