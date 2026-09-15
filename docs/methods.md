@@ -1,7 +1,7 @@
 # Methods
 
 **Project**: Right Foot Anatomy Atlas (Teaching-Grade Interactive 3D)  
-**Version**: Week 2 Day 4ax / Phase 7 (teaching atlas in progress; see README + `docs/phase-7-self-review.md` live census; **129** entries / **124** unique; **53** main-tree / **71** BY-SA; ontology **126/129** citable; 134 discrete GLBs; expert-review checklist v2.0 scoped teaching-useful/incomplete; per-structure hide persist + Esc policy + keyboard help + camera presets 1–5 + multi-view QA screenshots (9) + label density + sagittal clip lite; CC0 soft-tissue watchlist — TA2 soft-tissue still incomplete — **not a finished product**)  
+**Version**: Week 2 Day 4ay / Phase 7 (teaching atlas in progress; see README + `docs/phase-7-self-review.md` live census; **129** entries / **124** unique; **53** main-tree / **71** BY-SA; ontology **126/129** citable; 134 discrete GLBs; expert-review checklist v2.0 scoped teaching-useful/incomplete; per-structure hide persist + Esc policy + keyboard help + camera presets 1–5 + multi-view QA screenshots (9) + label density + sagittal clip lite; CC0 soft-tissue watchlist dig Day 4ay (Andreassen CC BY belly candidate deferred) — TA2 soft-tissue still incomplete — **not a finished product**)  
 **Date**: 2026-09-15  
 **Licenses**: Code MIT | Assets CC BY 4.0 / CC0 1.0 / CC BY-SA 4.0 (isolated)
 
@@ -9,7 +9,7 @@
 
 ## Overview
 
-This atlas integrates open-licensed anatomical meshes from BodyParts3D, Universiti Malaya, Z-Anatomy, and Open3D (BY-SA isolate) for interactive right-foot teaching. Live census (Phase 7 / Day 4ax): **129** entry-level rows / **124** unique structures (**53** main-tree CC BY/CC0 · **71** ShareAlike isolate) — osteology **26/26**; muscle **28** entries / **23** unique (BP3D+UM main + Open3D/ZA BY-SA DI·FB·FT·opponens·plantaris); vessel **29** (7 BP3D + 12 Open3D BY-SA + 10 ZA BY-SA veins/proximal); nerve **17** (6 ZA trunks + 11 Open3D fine/cutaneous); ligament/tendon **29** (2 BP3D long plantar + Achilles + 27 Open3D BY-SA). **Entry-level placeholders: 0**. This is **not** TA2-complete: no per-ray dorsal MTA; several vessels/nerves remain **grouped**; ankle bands incomplete vs named ATFL-set in some texts; gastroc/soleus bellies absent. See `docs/phase-7-self-review.md` (week checkpoint; phase-6 retained as prior board) and `docs/week2-ligament-fascia-search.md`.
+This atlas integrates open-licensed anatomical meshes from BodyParts3D, Universiti Malaya, Z-Anatomy, and Open3D (BY-SA isolate) for interactive right-foot teaching. Live census (Phase 7 / Day 4ay): **129** entry-level rows / **124** unique structures (**53** main-tree CC BY/CC0 · **71** ShareAlike isolate) — osteology **26/26**; muscle **28** entries / **23** unique (BP3D+UM main + Open3D/ZA BY-SA DI·FB·FT·opponens·plantaris); vessel **29** (7 BP3D + 12 Open3D BY-SA + 10 ZA BY-SA veins/proximal); nerve **17** (6 ZA trunks + 11 Open3D fine/cutaneous); ligament/tendon **29** (2 BP3D long plantar + Achilles + 27 Open3D BY-SA). **Entry-level placeholders: 0**. This is **not** TA2-complete: no per-ray dorsal MTA; several vessels/nerves remain **grouped**; ankle bands incomplete vs named ATFL-set in some texts; gastroc/soleus bellies absent. See `docs/phase-7-self-review.md` (week checkpoint; phase-6 retained as prior board) and `docs/week2-ligament-fascia-search.md`.
 
 **Soft disclaimer (teaching vs clinical)**: Meshes and Kabsch co-registration are intended **only** for anatomy education (spatial relationships, named structures, layer exploration, classroom cutaways). They are **not** validated for clinical diagnosis, treatment planning, surgical navigation, implant sizing, interventional guidance, or patient-specific modeling. Published landmark residuals support visualization grade only — cite transform JSONs: Open3D→BP3D mean ≈**2.61 mm** (max ≈4.41 mm MT1); UM→BP3D mean ≈**2.22 mm** (max ≈4.38 mm talus); ZA→BP3D mean ≈**1.81 mm** (max ≈3.52 mm calcaneus). Do **not** treat these as surgical registration error bounds.
 
@@ -362,7 +362,7 @@ Commit history documents asset decisions, `structures.json` evolution, and `Foot
 ---
 
 **Document Version**: 1.5 (2026-09-15)  
-**Atlas Version**: Week 2 Day 4ax / Phase 7 (teaching-grade in progress; no finished-product claim)
+**Atlas Version**: Week 2 Day 4ay / Phase 7 (teaching-grade in progress; no finished-product claim)
 
 
 ---
@@ -554,3 +554,9 @@ Wrote `docs/phase-6-self-review.md` (census 129/124; 53 main / 71 BY-SA; residua
 1. **Phase-7 target #1 (journal readiness)**: Rewrote `docs/expert-review-checklist.md` → **v2.0** aligned to live census **129/124**, ontology **126/129** (3 named empties), BY-SA **71/124**, UX (hide persist / Esc / help / clip / cameras), Kabsch transform JSON paths, and soft-tissue scope **teaching-useful, incomplete**.
 2. Methods: version pointer Day 4ax / Phase 7; overview census pointer; vessel limitation row no longer claims outdated 2/9 placeholders; Document Version **1.5**; peer-review bullet points at scoped checklist.
 3. **0** new meshes / SA volume. **No** TA2-complete or finished-product claim.
+
+## Day 4ay — CC0 soft-tissue watchlist dig + handback prep (2026-09-15)
+
+1. **Phase-7 target #3**: Active dig vs `docs/cc0-soft-tissue-watchlist.md` — Zenodo re-verify; Andreassen Digital Commons **CC BY 4.0** confirmed; #55–57 logged; NC/PDF/skin rejects.
+2. **Target #2 light refresh**: Cloud Agent handback table adds Andreassen gastroc/soleus Kabsch resume path.
+3. **0** meshes / SA volume. Census unchanged **129/124**. **No** finished-product claim.

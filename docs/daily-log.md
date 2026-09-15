@@ -1365,3 +1365,16 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 3. Synced `docs/methods.md` Document Version **1.5** + Day 4ax / Phase 7 version pointer; overview census → phase-7; vessel limitation no longer claims outdated 2/9 placeholders; peer-review bullet → scoped checklist. Phase-7 progress note Day 4ax.
 4. Checks: integrity-audit + vitest + build; commit + push.
 5. **Honesty**: teaching atlas in progress — **no finished-product claim**. Census unchanged. **0** meshes / no SA spam.
+
+
+## Day 4ay (2026-09-15) — CC0 soft-tissue watchlist dig + handback prep
+
+**Target**: Phase-7 next target #3 (active dig vs `docs/cc0-soft-tissue-watchlist.md`) with light #2 Cloud Agent handback prep refresh. Prefer quality; **0 integrate** unless clear CC0/BY **and** spatial-QA ready. No SA mesh spam.
+
+1. Pulled `2eb8c12` (already current).
+2. **Re-verify**: #38 TotalSeg CT / #40 Schuster / #42 MedShapeNet / FootNet — licenses unchanged (CC BY / CC0). Scan-the-World Zenodo mirrors still **BY-NC-SA**.
+3. **Andreassen upgrade**: Digital Commons Visible Human Male/Female STL pages state **CC BY 4.0** (curl Day 4ay) — clear belly candidate (gastroc med/lat + soleus); **no** foot DI/NV; **0 wire** pending VH→BP3D Kabsch (handback).
+4. **New digs**: #55 Grant foot bone SSMs (CC BY, bones only); #56 FOAMRIS Leeds PDF atlas (CC BY, not meshes); #57 TotalSeg MRI (CC BY, still no DI/NV/belly). Rejects: Sheffield Figshare **CC BY-NC**; OpenGameArt skin foot.
+5. Docs: watchlist refresh; learning-log #55–57; phase-7 handback + progress note; methods Day 4ay pointer.
+6. Checks: integrity-audit + vitest + build; commit + push.
+7. **Honesty**: teaching atlas in progress — **no finished-product claim**. Census unchanged. **0** meshes.

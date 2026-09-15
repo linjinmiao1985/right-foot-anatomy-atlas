@@ -5,7 +5,7 @@ Living log of open-source human anatomy projects studied for the right-foot atla
 (CC0 / CC BY into main tree; BY-SA isolated under `public/models/right-foot/by-sa/` + NOTICE;
 reject NC / unknown / All Rights Reserved).
 
-**Last updated**: 2026-09-15 (Day 4aw Phase 7 checkpoint + CC0 soft-tissue watchlist; digs through #54)  
+**Last updated**: 2026-09-15 (Day 4ay active dig vs CC0 soft-tissue watchlist; digs through #57)  
 **Status**: ongoing research — not a finished catalog.
 
 ---
@@ -1060,4 +1060,45 @@ Prefer **CC0/CC BY** finds for DI / proximal·fine arteries / nerve·ligament re
 ### Outcome
 
 - Hidden ids persist with teaching prefs; Esc policy documented. Dig: **2** new projects (#53–54). **0** new meshes.
+- **No finished-product claim.** No SA mesh spam.
+
+---
+
+## Session additions (2026-09-15 · Day 4ay — CC0 soft-tissue watchlist dig)
+
+### Target (phase-7 #3)
+
+Active dig against `docs/cc0-soft-tissue-watchlist.md`: re-verify monitor/reject licenses; hunt new CC0/BY packs for DI / per-ray MTA / gastroc·soleus / nerve·ligament main-tree replacements. **0 integrate** unless clear CC0/BY hit **and** spatial-QA ready. Prefer quality over SA spam / rushed wire.
+
+### License re-verification (prior watchlist rows)
+
+| Source | API / page check (Day 4ay) | Status |
+|--------|----------------------------|--------|
+| #38 TotalSegmentator CT Zenodo 22688904 | `license.id` = `cc-by-4.0` | unchanged **monitor** bones / **reject** soft NV |
+| #40 Schuster Zenodo 10360304 | `license.id` = `cc-zero` | unchanged **monitor** surface / **reject** named soft |
+| #42 MedShapeNetCore Zenodo 10609965 | `license.id` = `cc-by-4.0` | unchanged **monitor** / **reject** foot soft |
+| #43 FootNet Zenodo 20457252 | `license.id` = `cc-by-4.0` | still 2D masks only |
+| Scan-the-World / Embodi3D Zenodo 20228270 · 20231308 · 21354714 · 21527865 | `cc-by-nc-sa-4.0` | **reject** NC reconfirm |
+| **#46 Andreassen VHF/VHM STLs** Digital Commons `visiblehuman/2` | Page **CC BY 4.0** + liability agreement (curl verified) | **Upgraded** from “re-verify” → clear **CC BY**; content has gastroc/soleus; **no** DI/NV; still **monitor** (handback Kabsch) — **0 wire** |
+
+### NEW license-verified projects (≥3)
+
+| # | Project | URL | License verified | Foot relevance | Decision |
+|---|---------|-----|------------------|----------------|----------|
+| **55** | **Grant et al. foot bone SSMs** | Zenodo DOI **10.5281/zenodo.3464747** | **CC BY 4.0** (Zenodo API `cc-by-4.0` Day 4ay) | 125 STLs: talus / calcaneus / midfoot / 1st MT cohorts — **0** soft files | **monitor** osteology SSM QA. **reject** soft DI/NV/MTA |
+| **56** | **FOAMRIS** Foot OA MRI Score atlas | Leeds DOI **10.5518/1568** | **CC BY 4.0** (repository license block Day 4ay) | 37 MB **PDF** imaging scoring atlas — not elemental 3D soft meshes | **reject** mesh integrate (teaching MRI reference only if ever cited) |
+| **57** | **TotalSegmentator MRI dataset** | Zenodo DOI **10.5281/zenodo.22688334** | **CC BY 4.0** (Zenodo API Day 4ay) | 50 MRI regions; `appendicular_bones` still grouped tarsal/metatarsal/phalanges_feet; `thigh_shoulder_muscles` lacks gastroc/soleus/foot DI | **monitor** catalog. **reject** DI/NV/per-ray MTA / belly source |
+
+### Related dig (not new main-tree candidates)
+
+| Project | License | Note |
+|---------|---------|------|
+| Sheffield ORDA / Figshare older-women LE muscles (9934055) | **CC BY-NC 4.0** (Figshare API Day 4ay) | NC — **reject** |
+| OpenGameArt Foot Base Model (Vinrax) | CC0 / CC-BY 3.0 | Game **skin** foot — **reject** named soft teaching |
+
+### Outcome
+
+- Watchlist refreshed (`docs/cc0-soft-tissue-watchlist.md`); Andreassen belly path documented as clear CC BY **candidate** only.
+- **0** meshes integrated; DI / per-ray MTA / nerve·ligament main-tree replacements still **dry**.
+- Cloud Agent handback note updated for Andreassen Kabsch resume (phase-7).
 - **No finished-product claim.** No SA mesh spam.

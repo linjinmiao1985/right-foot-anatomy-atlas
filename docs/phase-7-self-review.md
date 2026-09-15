@@ -96,7 +96,7 @@ These residuals support **classroom visualization**, not implant planning or int
 
 ## Open mining count highlights
 
-Living log: `docs/open-anatomy-learning-log.md` — **54** numbered license-verified projects (#1–#54) as of Day 4av.
+Living log: `docs/open-anatomy-learning-log.md` — **57** numbered license-verified projects (#1–#57) as of Day 4ay.
 
 | Window | Highlights | Mesh integrate |
 |--------|------------|----------------|
@@ -105,8 +105,9 @@ Living log: `docs/open-anatomy-learning-log.md` — **54** numbered license-veri
 | Day 4ap | #45–46 Female Atlas / slorksmo Human-Atlas (Andreassen VHF **monitor**) | **0** |
 | Day 4aq–4at | Ontology digs + #47–50 Anatomy Viewer SA / ANATOMED / undergravity / Femora | **0** meshes; ontology → 126/129 |
 | Day 4au–4av | #51–54 XR / trauma / MnemoAtlas / AR — UX-borrow hide + prefs | **0** |
+| Day 4ay | Watchlist re-verify + #55–57 Grant SSM / FOAMRIS / TotalSeg MRI; Andreassen CC BY upgrade | **0** |
 
-**Pattern**: Recent mining is **UX-borrow + license reject/monitor**, not SA mesh spam. CC0/BY soft-tissue replacements for DI / per-ray MTA / nerves remain **dry**.
+**Pattern**: Recent mining is **UX-borrow + license reject/monitor**, not SA mesh spam. CC0/BY soft-tissue replacements for DI / per-ray MTA / nerves remain **dry**; Andreassen gastroc/soleus is a clear CC BY **candidate** deferred to handback Kabsch.
 
 ---
 
@@ -121,20 +122,21 @@ Living log: `docs/open-anatomy-learning-log.md` — **54** numbered license-veri
 
 ### 2. Cloud Agent handback (when quota returns)
 
-Resume only with green local gates (`python3 scripts/integrity-audit.py`, `npx vitest run`, `npm run build`). Prefer CC0/CC BY over SA volume.
+Resume only with green local gates (`python3 scripts/integrity-audit.py`, `npx vitest run`, `npm run build`). Prefer CC0/CC BY over SA volume. Prep refreshed Day **4ay** after watchlist dig.
 
 | Deferred item | Why deferred | Suggested resume |
 |---------------|--------------|------------------|
 | Browser-session / Cloudflare-gated packs | Scripted fetch 403 / session required | Cloud Agent browser; verify license page before any wire |
 | Zenodo Z-Anatomy `.blend` heavy re-harvest | Large binary; ankle bands absent in prior blend | Re-inventory named ATFL/CFL/deltoid/retinacula only if new revision claims them |
 | Further multi-view screenshots | 9-shot pack already live | Optional angles only; still not a marketing gallery |
-| Further CC0/BY DI / per-ray MTA dig | Day 4al+ dry (0 integrate) | Re-check TotalSegmentator / HRA / new open CT foot segmentations; skip NC |
+| Further CC0/BY DI / per-ray MTA dig | Day 4al–4ay dry (0 integrate; TotalSeg CT/MRI still grouped bones) | Re-check new open CT foot soft segmentations; skip NC; see `docs/cc0-soft-tissue-watchlist.md` |
+| **Andreassen gastroc/soleus (CC BY)** | Clear **CC BY 4.0** on Digital Commons (Day 4ay); VH LE frame ≠ BP3D foot; heavy STL download | Download Final STL set → right gastroc med/lat + soleus → Kabsch to BP3D → laterality/attachment QA → main-tree wire + NOTICE residuals — **do not** ship without QA |
 
 **Handback rule**: integrity-audit + vitest + build green; update census in README/methods/phase-7 if anything wires; **no** finished-product claims; **no** low-value SA mesh spam.
 
 ### 3. CC0 soft-tissue watchlist
 
-Maintain a short **monitor/reject** list (see `docs/cc0-soft-tissue-watchlist.md`) for DI, per-ray MTA, gastroc/soleus, nerve/ligament main-tree replacements. Re-check licenses before any wire; never treat NC or “License: Model” as main-tree OK.
+Maintain a short **monitor/reject** list (see `docs/cc0-soft-tissue-watchlist.md`) for DI, per-ray MTA, gastroc/soleus, nerve/ligament main-tree replacements. **Day 4ay** re-verified Zenodo rows; upgraded Andreassen to clear CC BY (belly candidate only); added #55–57 — still **0** integrate. Never treat NC or “License: Model” as main-tree OK.
 
 **Do not**: claim TA2 completeness; re-add Open3D duplicates of BP3D main-tree vessels; treat residuals as surgical registration.
 
@@ -156,6 +158,14 @@ Maintain a short **monitor/reject** list (see `docs/cc0-soft-tissue-watchlist.md
 - **Journal readiness (target #1)**: Refreshed `docs/expert-review-checklist.md` to **v2.0** for Phase 7 live board (129/124; ontology 126/129; soft claims scoped teaching-useful/incomplete; license/UX/residual gates).
 - Methods Document Version **1.5** + Day 4ax version pointer; overview + vessel limitation honesty synced; **0** meshes; no SA spam; **no** finished-product claim.
 
+
+
+## Progress note (Day 4ay)
+
+- **CC0 soft-tissue watchlist dig (target #3)** + light **Cloud Agent handback prep** refresh (target #2): re-verified #38/#40/#42 + ScanTW NC; Digital Commons Andreassen STLs confirmed **CC BY 4.0**; logged #55 Grant SSM, #56 FOAMRIS PDF, #57 TotalSeg MRI; Sheffield NC + OGA skin rejected.
+- Gastroc/soleus = clear CC BY **candidate** deferred to handback Kabsch — **0** meshes wired this pass (quality over rushed integrate).
+- DI / per-ray MTA / nerve·ligament main-tree replacements still **dry**. **No** SA spam; **no** finished-product claim.
+
 ## Verification this pass
 
 - `python3 scripts/integrity-audit.py`
@@ -167,4 +177,4 @@ Maintain a short **monitor/reject** list (see `docs/cc0-soft-tissue-watchlist.md
 
 ## Bottom line
 
-Phase 7 freezes a week-quality honest board: census **129** / **124**; ontology **126** / **129**; UX (prefs · hide · help · clip · cameras · sub-groups · screenshots) live; BY-SA **71/124**; open mining through **#54** with **0** late soft integrates. Treat this as a **checkpoint for journal prep / handback / CC0 watch** — **no finished-product claim**.
+Phase 7 freezes a week-quality honest board: census **129** / **124**; ontology **126** / **129**; UX (prefs · hide · help · clip · cameras · sub-groups · screenshots) live; BY-SA **71/124**; open mining through **#57** with **0** late soft integrates. Treat this as a **checkpoint for journal prep / handback / CC0 watch** — **no finished-product claim**.
