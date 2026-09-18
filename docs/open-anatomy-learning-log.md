@@ -1387,3 +1387,40 @@ Spot-check `structures.json`: **0** `拇` (thumb) tokens; **9** `踇` hallux nam
 | Wire | **0** — monitor only |
 
 No new dig IDs this pass (Option A focus). Soft gaps still **dry**. Andreassen **skipped**. **No finished-product claim.**
+
+
+## Session additions (2026-09-18 · Day 4bk — CC0 soft dig #77+ + belly registration research)
+
+### Context
+
+Cloud Agent quota still exhausted; local docs-only takeover. Soft-gap dig for DI / per-ray MTA / nerve·ligament CC0/BY + belly registration notes. **0** mesh wire. **No finished-product claim.**
+
+### NEW license-verified projects (≥3; #77–#83)
+
+| # | Project | URL / DOI | License verified | Foot relevance | Decision |
+|---|---------|-----------|------------------|----------------|----------|
+| **77** | **LEG-3D-US** (TUM CAMPAR) | https://www.cs.cit.tum.de/en/camp/publications/leg-3d-us-dataset/ · code https://github.com/Al3xand1a/segmentation-border-analysis | Dataset page **GNU GPL** verified 2026-09-18 | 44 US MHA volumes · labels SOL / GM / GL — calf US, **not** foot DI/NV meshes; GPL viral vs MIT teaching-pack preference | **reject** teaching GLB. **reject** DI/per-ray MTA. Not a Kabsch substitute |
+| **78** | **vessel-atlas** (liuweid95-hash) | https://github.com/liuweid95-hash/vessel-atlas | README: BP3D credited **CC BY 4.0**; first-party code **rights reserved** (not MIT) verified 2026-09-18 | Vascular teaching atlas UX; **0** foot DI / per-ray MTA pack | **UX-borrow** ideas only. **reject** code/mesh copy |
+| **79** | **bone-atlas** (hasantayyar) | https://github.com/hasantayyar/bone-atlas | README credits: Z-Anatomy **CC BY-SA 4.0** · BP3D **CC BY-SA 2.1 JP** verified 2026-09-18 | Lightweight Three.js osteology viewer (offline dist) | **UX-borrow** (offline). Meshes **isolate-SA** only; osteology already **26/26** — **reject** integrate |
+| **80** | **anatomy-atlas-3d** (Grypa-JJ) | https://github.com/Grypa-JJ/anatomy-atlas-3d | Code **MIT**; geometry **CC BY-SA** (BP3D/ZA) verified 2026-09-18 | Whole-body ~2500 structures — SA surface, not CC0/BY right-foot soft | **UX-borrow**. **isolate-SA**. **reject** as soft main-tree replacement |
+| **81** | **female-body-atlas** / Femora (zer01dollars) | https://github.com/zer01dollars/female-body-atlas | MIT code + HuBMAP female v1.5 **CC BY 4.0** (ATTRIBUTION) verified 2026-09-18 | Deepen of HRA / **#50** — united female GLB | **monitor** / **UX-borrow** explode. **reject** united female GLB as right-foot soft substitute |
+| **82** | **TPTBox** (Extensive Torso Processing Toolbox) | Zenodo DOI **10.5281/zenodo.22643916** | Zenodo API `license.id` = **apache2.0** verified 2026-09-18 | Torso CT/MR toolbox — **0** foot soft meshes | **reject** DI/MTA/belly source |
+| **83** | **Triceps surae force-sharing OpenSim pack** | Zenodo DOI **10.5281/zenodo.21879846** | Zenodo API `license.id` = **cc-by-4.0** verified 2026-09-18 | `.osim` / `.sto` / MATLAB sims (footwear × walking) — **not** surface STL bellies | **reject** mesh wire. Optional MSK-process monitor only |
+
+**Note**: Zenodo **22727173** BodyParts3D 4.3 pack = deepen of existing log **#21** (MIT tooling / BY-SA 2.1 JP meshes) — **not** re-numbered.
+
+### Soft-gap check
+
+| Gap | Day 4bk |
+|-----|---------|
+| DI / per-ray MTA / nerve·ligament CC0/BY | **Still dry** |
+| Gastroc/soleus | Andreassen + Henson still **blocked** (alignment); new digs **#77/#83** not GLB-ready; wrote `docs/belly-registration-alternatives.md` (TPS / two-stage / BP3D-native — research only) |
+| Utah Hive | Still **reject** — not re-opened |
+
+### Outcome
+
+- Learning log **#77–#83**; belly registration alternatives doc; watchlist + handback Day 4bk.
+- Census unchanged (**129/124**; ontology **126/129**).
+- **0** meshes integrated; **0** SA spam; Andreassen/Henson **not** force-wired.
+- Cloud Agent still **quota-blocked**.
+- **No finished-product claim.**

@@ -1,10 +1,10 @@
 # CC0 / CC BY soft-tissue watchlist (monitor · not integrated)
 
-**Date**: 2026-09-15 · Day 4bh / Phase 7  
+**Date**: 2026-09-18 · Day **4bk** / Phase 7  
 **Policy**: Prefer **CC0 / CC BY** main-tree replacements that shrink ShareAlike surface. Dig + verify license page / SPDX / Zenodo `license.id` **before** any wire. **Reject** NC, unclear “License: Model”, and All Rights Reserved. BY-SA only under `by-sa/` + NOTICE — do not spam SA volume for its own sake.  
-**Status**: Living watchlist — **0** new soft-tissue meshes integrated from this list as of Day **4bj**. Andreassen gastroc/soleus still **blocked** (Day 4az+4ba); Day 4bf Utah Hive **reject** bones; Day 4bg–4bj Henson **CC0** LE labels = **monitor** (path + feasibility + **Aug_8 MC POC**; BP3D align sketch **FAIL** Achilles — not wired); soft gaps still dry. Teaching atlas in progress — **not** a finished-product claim.
+**Status**: Living watchlist — **0** new soft-tissue meshes integrated from this list as of Day **4bk**. Andreassen gastroc/soleus still **blocked** (Day 4az+4ba); Day 4bf Utah Hive **reject** bones; Day 4bg–4bj Henson **CC0** LE labels = **monitor** (path + feasibility + **Aug_8 MC POC**; BP3D align sketch **FAIL** Achilles — not wired); Day **4bk** dig **#77–#83** still **dry** for DI/MTA; belly registration alternatives documented (docs-only). Teaching atlas in progress — **not** a finished-product claim.
 
-Companion: `docs/open-anatomy-learning-log.md` (#38–#70 and earlier), `docs/phase-7-self-review.md`.
+Companion: `docs/open-anatomy-learning-log.md` (#38–#83), `docs/belly-registration-alternatives.md`, `docs/phase-7-self-review.md`.
 
 ---
 
@@ -127,7 +127,7 @@ Companion: `docs/open-anatomy-learning-log.md` (#38–#70 and earlier), `docs/ph
 
 ## Bottom line
 
-Watchlist tracks **where a CC0/BY soft find would matter** (DI, per-ray MTA, bellies, SA shrink). Day **4az**+**4ba** Andreassen alignment blocker unchanged; Day **4bf** Utah Hive **reject**; Day **4bg–4bj** Henson CC0 LE masks **monitor** (path + feasibility + Aug_8 MC POC; BP3D align FAIL; not wire). Soft gaps remain **dry**. Handback: `docs/cloud-agent-handback.md`. **No finished-product claim**.
+Watchlist tracks **where a CC0/BY soft find would matter** (DI, per-ray MTA, bellies, SA shrink). Day **4az**+**4ba** Andreassen alignment blocker unchanged; Day **4bf** Utah Hive **reject**; Day **4bg–4bj** Henson CC0 LE masks **monitor** (path + feasibility + Aug_8 MC POC; BP3D align FAIL; not wire); Day **4bk** dig **#77–#83** + `docs/belly-registration-alternatives.md` — soft gaps remain **dry**. Handback: `docs/cloud-agent-handback.md`. **No finished-product claim**.
 
 
 ## Henson Sheffield CC0 DICOM path (Day 4bh detail · #66)
@@ -187,3 +187,16 @@ Distinct from Sheffield Figshare **9934055** (**CC BY-NC** STL pack — already 
 | New CC0/BY soft packs for DI / per-ray MTA / nerves / ligaments | **None this pass** (Option A focus) |
 | Andreassen / Utah | **Skipped** / not re-opened |
 | Meshes integrated | **0** |
+
+
+## Day 4bk dig summary
+
+| Check | Result |
+|-------|--------|
+| New digs | **#77–#83** (LEG-3D-US GPL · vessel-atlas UX · bone-atlas UX · anatomy-atlas-3d MIT+SA · Femora/HRA deepen · TPTBox Apache · OpenSim triceps-surae sims CC BY) |
+| New CC0/BY soft packs for DI / per-ray MTA / nerves / ligaments | **None** — soft gaps **still dry** |
+| Gastroc/soleus | LEG-3D-US **reject** (GPL + US volumes); OpenSim **#83** **reject** (sims not STL); Andreassen/Henson still **blocked** — wrote `docs/belly-registration-alternatives.md` (TPS / two-stage / BP3D-native; **0** force-wire) |
+| BP3D 4.3 Zenodo 22727173 | Deepen of log **#21** only — not re-numbered |
+| Andreassen / Utah / Henson wire | **Skipped** / not re-opened / **0** wire |
+| Meshes integrated | **0** |
+| Cloud Agent | Still **quota-blocked** (local docs takeover) |
