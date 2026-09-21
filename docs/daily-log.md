@@ -1508,3 +1508,14 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 5. Soft gaps still dry. Andreassen **skipped**. **0** meshes to `public/models/`.
 6. Checks: integrity-audit + vitest + build; commit + push.
 7. **Honesty**: teaching atlas in progress — **no finished-product claim**. Census unchanged.
+
+
+## Day 4bl (2026-09-21) — Soft dig #84–#89; Cloud Agent still quota-blocked
+
+**Target**: Weekday automation — continue CC0/BY soft mining for DI / per-ray MTA / nerve·ligament; prefer real mesh; docs-only if dry; brief user ping only if substantive.
+
+1. PR #1 tip was `23b1629` (Day 4bk). Cloud Agent reply → **usage exhausted** (on-demand required). Local takeover.
+2. **New digs**: #84 ScanTW foot muscles **NC-SA reject**; #85 CRUS MIT+BY-SA **UX-borrow**; #86 Air-Sage Open3D **UX-borrow**; #87 AnyBody GM foot **proprietary reject**; #88 SimTK kul_footmodel **license opaque reject/monitor**; #89 foot shape-function **CC0 skin PLY reject** soft.
+3. Soft gaps **still dry**. Census unchanged. **0** mesh wire / **0** SA spam.
+4. Docs: learning-log + watchlist + handback + week-plan + this entry; commit + push.
+5. **Honesty**: teaching atlas in progress — **no finished-product claim**.
