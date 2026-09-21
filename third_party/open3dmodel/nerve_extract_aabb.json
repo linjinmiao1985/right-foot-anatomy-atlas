@@ -1,0 +1,263 @@
+{
+  "source": "/workspace/literature/open3d-assets/lower-limb.obj",
+  "transform": "third_party/open3dmodel/open3d_to_bp3d_transform.json",
+  "method": "reuse Open3D\u2192BP3D Kabsch (Day 4m; same donor as DI/arteries/ligaments); Day 4x+4y+4z nerves",
+  "kabsch_mean_residual_mm": 2.6124537404764445,
+  "targets": {
+    "Common_plantar_digital_nerves.r": "common_plantar_digital_nerves",
+    "Proper_plantar_digital_branches_(Medial_plantar_nerve).r": "proper_plantar_digital_nerves_medial",
+    "Proper_plantar_digital_branches_(Lateral_plantar_nerve).r": "proper_plantar_digital_nerves_lateral",
+    "Deep_branch_of_Lateral_plantar_nerve.r": "deep_branch_lateral_plantar_nerve",
+    "Medial_dorsal_cutaneous_nerve.r": "medial_dorsal_cutaneous_nerve",
+    "Lateral_dorsal_cutaneous_nerve.r": "lateral_dorsal_cutaneous_nerve",
+    "Medial_calcaneal_branches_of_Tibial_nerve.r": "medial_calcaneal_branches",
+    "Lateral_calcaneal_nerves.r": "lateral_calcaneal_nerves",
+    "Superficial_branch_of_Lateral_plantar_nerve.r": "superficial_branch_lateral_plantar_nerve",
+    "Dorsal_digital_branches_of_superficial_fibular_nerve.r": "dorsal_digital_superficial_fibular",
+    "Dorsal_digital_branches_of_deep_fibular_nerve.r": "dorsal_digital_deep_fibular"
+  },
+  "aabb_bp3d_mm": {
+    "common_plantar_digital_nerves": {
+      "x": [
+        -131.88847545849399,
+        -77.02034483453292
+      ],
+      "y": [
+        -176.66938262921784,
+        -120.61065553607605
+      ],
+      "z": [
+        -69.0494418017645,
+        -50.67143151106444
+      ],
+      "centroid": [
+        -101.639601475024,
+        -146.59844799473927,
+        -62.05386134279568
+      ],
+      "n_verts": 2412,
+      "n_faces": 2236,
+      "open3d_object": "Common_plantar_digital_nerves.r"
+    },
+    "proper_plantar_digital_nerves_medial": {
+      "x": [
+        -156.57343243227425,
+        -85.63976998300889
+      ],
+      "y": [
+        -222.5831018444263,
+        -148.62863248967938
+      ],
+      "z": [
+        -71.42058948459237,
+        -63.3516405003354
+      ],
+      "centroid": [
+        -123.28584468476124,
+        -191.35178869004736,
+        -68.17189986002568
+      ],
+      "n_verts": 5004,
+      "n_faces": 4892,
+      "open3d_object": "Proper_plantar_digital_branches_(Medial_plantar_nerve).r"
+    },
+    "proper_plantar_digital_nerves_lateral": {
+      "x": [
+        -163.97043897531898,
+        -131.3181182315958
+      ],
+      "y": [
+        -197.31392534257932,
+        -139.0918531642891
+      ],
+      "z": [
+        -71.07069536829604,
+        -65.63366159078996
+      ],
+      "centroid": [
+        -148.3065267263266,
+        -168.1476930947534,
+        -68.9824751364444
+      ],
+      "n_verts": 2124,
+      "n_faces": 2076,
+      "open3d_object": "Proper_plantar_digital_branches_(Lateral_plantar_nerve).r"
+    },
+    "deep_branch_lateral_plantar_nerve": {
+      "x": [
+        -134.42958266580442,
+        -98.62955772524718
+      ],
+      "y": [
+        -170.95133882844164,
+        -112.50765485771603
+      ],
+      "z": [
+        -65.19244800075718,
+        -41.22185095450384
+      ],
+      "centroid": [
+        -115.48727206482907,
+        -143.23107084811267,
+        -52.091568630498536
+      ],
+      "n_verts": 2808,
+      "n_faces": 2648,
+      "open3d_object": "Deep_branch_of_Lateral_plantar_nerve.r"
+    },
+    "medial_dorsal_cutaneous_nerve": {
+      "x": [
+        -118.90504432024045,
+        -90.03309664512066
+      ],
+      "y": [
+        -182.5590272547933,
+        -73.19182217406623
+      ],
+      "z": [
+        -46.4012861643056,
+        31.54398423577969
+      ],
+      "centroid": [
+        -104.24614338131713,
+        -139.3779688321875,
+        -20.589076680476495
+      ],
+      "n_verts": 936,
+      "n_faces": 904,
+      "open3d_object": "Medial_dorsal_cutaneous_nerve.r"
+    },
+    "lateral_dorsal_cutaneous_nerve": {
+      "x": [
+        -136.85770679228276,
+        -100.55871583267894
+      ],
+      "y": [
+        -153.43569650344403,
+        -75.58074682594373
+      ],
+      "z": [
+        -50.91479249604252,
+        23.36450929759623
+      ],
+      "centroid": [
+        -117.16163355461947,
+        -112.15512118956987,
+        -21.950235757967427
+      ],
+      "n_verts": 1080,
+      "n_faces": 1048,
+      "open3d_object": "Lateral_dorsal_cutaneous_nerve.r"
+    },
+    "medial_calcaneal_branches": {
+      "x": [
+        -56.21677022713034,
+        -44.798011061188966
+      ],
+      "y": [
+        -65.5392965037569,
+        -35.77066771005323
+      ],
+      "z": [
+        -59.22635722789447,
+        -29.534015251394422
+      ],
+      "centroid": [
+        -48.431588231754375,
+        -48.04595131985997,
+        -46.28773521381369
+      ],
+      "n_verts": 648,
+      "n_faces": 616,
+      "open3d_object": "Medial_calcaneal_branches_of_Tibial_nerve.r"
+    },
+    "lateral_calcaneal_nerves": {
+      "x": [
+        -89.04575066819784,
+        -47.490243571974695
+      ],
+      "y": [
+        -48.24139701188983,
+        -26.684507682748205
+      ],
+      "z": [
+        -59.36384632472641,
+        23.275489911400598
+      ],
+      "centroid": [
+        -72.08622436991145,
+        -36.7627535900331,
+        -26.998695231761506
+      ],
+      "n_verts": 1848,
+      "n_faces": 1788,
+      "open3d_object": "Lateral_calcaneal_nerves.r"
+    },
+    "superficial_branch_lateral_plantar_nerve": {
+      "x": [
+        -142.7190445591688,
+        -111.09395153723457
+      ],
+      "y": [
+        -139.42070904975301,
+        -113.22416997451666
+      ],
+      "z": [
+        -68.48235041029781,
+        -57.40612446127106
+      ],
+      "centroid": [
+        -126.17899109587246,
+        -125.63042144435568,
+        -63.6567554189949
+      ],
+      "n_verts": 828,
+      "n_faces": 780,
+      "open3d_object": "Superficial_branch_of_Lateral_plantar_nerve.r"
+    },
+    "dorsal_digital_superficial_fibular": {
+      "x": [
+        -162.40536233356488,
+        -89.76089083420696
+      ],
+      "y": [
+        -227.69335139864256,
+        -142.08437045281434
+      ],
+      "z": [
+        -68.12464803767065,
+        -43.8232074624483
+      ],
+      "centroid": [
+        -134.20585199574327,
+        -185.66583807750396,
+        -58.17947079582232
+      ],
+      "n_verts": 3708,
+      "n_faces": 3596,
+      "open3d_object": "Dorsal_digital_branches_of_superficial_fibular_nerve.r"
+    },
+    "dorsal_digital_deep_fibular": {
+      "x": [
+        -135.53494334694693,
+        -102.40291901965882
+      ],
+      "y": [
+        -226.28859158446403,
+        -169.5944903022905
+      ],
+      "z": [
+        -66.91186028694342,
+        -43.44254313016449
+      ],
+      "centroid": [
+        -117.49930853498526,
+        -201.76178605414466,
+        -57.891591229577365
+      ],
+      "n_verts": 1656,
+      "n_faces": 1624,
+      "open3d_object": "Dorsal_digital_branches_of_deep_fibular_nerve.r"
+    }
+  }
+}

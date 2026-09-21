@@ -1,0 +1,74 @@
+# Asset License - BodyParts3D
+
+The 3D anatomical models in this project (`public/models/right-foot/`) are derived from **BodyParts3D** and licensed under:
+
+**Creative Commons Attribution 4.0 International (CC BY 4.0)**
+
+## Full License Text
+
+https://creativecommons.org/licenses/by/4.0/legalcode
+
+## Attribution
+
+```
+BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International
+```
+
+## Source
+
+- **Original Data**: BodyParts3D Release 4.0
+- **Archive**: https://dbarchive.biosciencedbc.jp/en/bodyparts3d/
+- **DOI**: 10.18908/lsdba.nbdc00837-007
+- **License Page**: https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+- **License Updated**: 2025-02-27
+
+## Modifications
+
+The models in this repository have been modified from the original BodyParts3D data:
+1. **Cropping**: Extracted right foot structures from whole-body mesh data
+2. **Format Conversion**: Converted from OBJ to GLB for web optimization
+3. **Naming**: Mapped FMA IDs to English/Chinese anatomical names per TA2 standards
+4. **Integration**: Packaged into interactive React Three Fiber application
+
+## Original Data Characteristics
+
+- **Method**: Polygonal mesh data from whole-body MRI scans
+- **Simplification**: 99% polygon reduction applied
+- **Nomenclature**: Based on Foundational Model of Anatomy (FMA)
+- **Laterality**: Original data labeled as dexter (right) / sinister (left)
+- **Quality**: Medical education grade, suitable for teaching and research
+
+## Your Rights
+
+Under CC BY 4.0, you may:
+- ✅ Share and redistribute in any format
+- ✅ Adapt, remix, and transform for any purpose
+- ✅ Use commercially
+- ✅ Combine with works under other licenses
+
+You must:
+- ✅ Provide attribution (see above)
+- ✅ Link to the license
+- ✅ Indicate if changes were made
+
+You are NOT required to:
+- ❌ Share your derivative work under the same license (no ShareAlike)
+- ❌ Restrict commercial use (no NonCommercial)
+
+## Citing This Derivative Work
+
+If you use the models from this project in academic work:
+
+**Citation Format**:
+```
+Right Foot Anatomy Atlas (2026). Interactive 3D foot anatomy derived from BodyParts3D.
+GitHub: [repository URL]
+Original data: BodyParts3D, © DBCLS, CC BY 4.0
+```
+
+## Contact
+
+**Original Data**: Database Center for Life Science (DBCLS)  
+Email: See https://dbarchive.biosciencedbc.jp/en/bodyparts3d/
+
+**This Derivative Work**: See project README for contact information

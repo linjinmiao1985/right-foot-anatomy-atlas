@@ -1,0 +1,143 @@
+{
+  "method": "Kabsch similarity; landmarks Calcaneus/Talus/Navicular/Cuboid/Medial+Intermediate+Lateral Cuneiform (VHM Final STL centroids vs BP3D GLB centroids). No separate MT STLs in Andreassen Final pack (Phalanges grouped).",
+  "source_frame": "Andreassen 2023 Visible Human Male Final 3D STL (Digital Commons @ DU; cryosection-derived mm)",
+  "target_frame": "BodyParts3D right-foot mm",
+  "license": "CC BY 4.0",
+  "source_doi_dataset": "10.56902/COB.vh.2022.2",
+  "source_doi_paper": "10.1038/s41597-022-01905-2",
+  "source_url": "https://digitalcommons.du.edu/visiblehuman/2/",
+  "download": {
+    "file": "Final 3D STL Models-stl.zip",
+    "viewcontent": "https://digitalcommons.du.edu/cgi/viewcontent.cgi?filename=10&article=1000&context=visiblehuman&type=additional",
+    "subject": "VHM Right",
+    "note": "Full zip ~134 MB not redistributed in git; raw extracts local-only (gitignored)."
+  },
+  "scale": 0.7957190191573931,
+  "R": [
+    [
+      0.8633545567298267,
+      -0.06423212217128484,
+      -0.5004929009039163
+    ],
+    [
+      -0.2709953592307069,
+      -0.8957086037669224,
+      -0.3525161165299129
+    ],
+    [
+      -0.42565293919960684,
+      0.43997764899967834,
+      -0.7907207115862415
+    ]
+  ],
+  "t_mm": [
+    337.49996741296223,
+    420.6827405549319,
+    804.8361187885416
+  ],
+  "mean_residual_mm": 2.301088174156796,
+  "max_residual_mm": 4.267761350938084,
+  "max_residual_landmark": "talus",
+  "per_landmark_residual_mm": {
+    "calcaneus": 3.658754951147627,
+    "talus": 4.267761350938084,
+    "navicular": 2.1098338759204696,
+    "cuboid": 0.7808424368400674,
+    "cuneiform_medial": 3.083410323862055,
+    "cuneiform_intermediate": 0.8010299820637662,
+    "cuneiform_lateral": 1.4059842983255026
+  },
+  "landmarks_vh_mm": {
+    "calcaneus": [
+      170.6017913903833,
+      114.23088910091947,
+      1315.3274475548958
+    ],
+    "talus": [
+      163.6318377055579,
+      145.10587924169764,
+      1292.1565402060005
+    ],
+    "navicular": [
+      168.30645884344565,
+      172.67978850251123,
+      1316.1553307170623
+    ],
+    "cuboid": [
+      154.08677386054865,
+      155.0998937527249,
+      1341.46186543622
+    ],
+    "cuneiform_medial": [
+      178.52012716406804,
+      185.81603853335574,
+      1333.6337513694007
+    ],
+    "cuneiform_intermediate": [
+      162.1215530496943,
+      186.25741056929513,
+      1331.5443279849612
+    ],
+    "cuneiform_lateral": [
+      155.43344418534608,
+      175.73059951924833,
+      1338.4780322113513
+    ]
+  },
+  "landmarks_bp3d_mm": {
+    "calcaneus": [
+      -75.79230584956312,
+      -66.53015108327904,
+      -36.9831225042898
+    ],
+    "talus": [
+      -71.00513663550316,
+      -78.84843226371727,
+      -16.585657255565792
+    ],
+    "navicular": [
+      -79.70068816300277,
+      -107.36271813361199,
+      -17.786879518529872
+    ],
+    "cuboid": [
+      -98.89928026006147,
+      -99.68567606889081,
+      -37.79964655670672
+    ],
+    "cuneiform_medial": [
+      -80.88571028050369,
+      -127.32624865276057,
+      -29.03927039169684
+    ],
+    "cuneiform_intermediate": [
+      -91.0583963394165,
+      -119.91377798716228,
+      -23.15708017349243
+    ],
+    "cuneiform_lateral": [
+      -97.57183457386644,
+      -112.93406576808495,
+      -29.70516617449024
+    ]
+  },
+  "source_stl_sha256": {
+    "VHM_Right_Bone_Calcaneous_smooth.stl": "a73e672c0a9783fa552c10f1fb48201bc988919ffff10fcdca5cb21dc7563315",
+    "VHM_Right_Bone_Talus_smooth.stl": "69cb6f53fb32a3e26e2edb4e18174f6fe4e1ea18baa6d020415cb909593bf979",
+    "VHM_Right_Bone_Navicular_smooth.stl": "0b481c420d8f06e88ce8d5061990feac697e3297953b7980cc91d84550450d97",
+    "VHM_Right_Bone_Cuboid_smooth.stl": "7afed3be2f58c78309411b916a2b3486515cf06e92d4fecf60385e195d5a027b",
+    "VHM_Right_Bone_MedialCuneiform_smooth.stl": "f6813a60f8f3b1112aded3785b041ed526ac14b8a1241af35bc0962a2b667b8c",
+    "VHM_Right_Bone_IntermediateCuneiform_smooth.stl": "9ae2f69435db17c06d203349fa436e0d9261ce364047064544c8fbc9c1f74f71",
+    "VHM_Right_Bone_LateralCuneiform_smooth.stl": "6508ccd3482fc011714f1a4b219d385e74062927ae32146f2370669fe81c5a9a"
+  },
+  "status": "BLOCKED_DO_NOT_INTEGRATE",
+  "blocker": "Day 4az: 7-tarsal Kabsch teaching-grade on foot (mean\u22482.3 mm) but gastroc laterality FAIL (all X>0); soleus padded-AABB fail. Day 4ba Option A: extracted real BP3D right tibia/fibula/patella/femur (FJ3387/FJ3366/FJ3381/FJ3365) from local /tmp/bp3d cache plus VH donor bones (tibia ASCII STL; fibula/femur/patella binary). Multiple LE-augmented landmark sets (centroids / distal endpoints / ankle-focus) flip laterality in several trials but inflate foot residuals (mean\u22487\u201316 mm) and/or leave gastroc Achilles distal gap \u226515 mm \u2014 same failure class as Day 4az synthetic proximal landmarks. No set passed integrate gate (foot mean\u22645 & max\u226410 mm AND right-side AND Achilles distal10 <15 mm for all three bellies). See le_kabsch_option_a_trials.json. Do NOT wire main-tree.",
+  "meshes_evaluated_not_baked": [
+    "gastrocnemius_medial",
+    "gastrocnemius_lateral",
+    "soleus"
+  ],
+  "note": "Day 4az + 4ba attempts. Teaching atlas in progress \u2014 not a finished-product claim. Transform recorded for reproducibility of the blocker; GLBs not published under public/models/.",
+  "option_a_day": "4ba",
+  "option_a_artifact": "le_kabsch_option_a_trials.json"
+}

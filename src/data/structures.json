@@ -1,0 +1,1510 @@
+[
+  {
+    "id": "calcaneus",
+    "meshNames": [
+      "Calcaneus_R",
+      "Bone_Calcaneus_Right"
+    ],
+    "layer": "bone",
+    "nameZh": "跟骨",
+    "nameLa": "Calcaneus",
+    "summaryZh": "足部最大跗骨，形成足跟，承担站立时50-60%足部负重。结构特征：后方跟骨结节（小腿三头肌跟腱附着点）、前上面后距骨关节面、中上面中距骨关节面、前方骰骨关节面、内侧载距突。与距骨构成距下关节（subtalar joint）负责足内外翻，与骰骨构成跟骰关节。临床意义：跟骨骨折常见于高处坠落（Bohler角和Gissane角用于评估骨折移位）；跟骨骨刺引起足底筋膜炎；Haglund畸形（后上突出刺激跟腱滑囊）。TA2编码：A02.5.10.001。",
+    "placeholder": false
+  },
+  {
+    "id": "talus",
+    "meshNames": [
+      "Talus_R",
+      "Bone_Talus_Right"
+    ],
+    "layer": "bone",
+    "nameZh": "距骨",
+    "nameLa": "Talus",
+    "summaryZh": "连接小腿与足的关键跗骨，约60%表面被关节软骨覆盖，无肌肉附着，血供主要依赖关节囊血管。解剖分部：距骨体（含距骨滑车与踝穴形成距小腿关节即踝关节）、距骨颈、距骨头（与舟骨形成距舟关节，参与横跗关节Chopart关节）。关节：上方踝关节（背伸跖屈）、下方距下关节（内翻外翻）、前方距舟关节。临床意义：踝关节骨折脱位常伴距骨损伤；距骨缺血性坏死（Hawkins分型）因血供脆弱且无肌肉附着；距骨滑车软骨损伤（OLT）运动员常见。TA2编码：A02.5.10.002。",
+    "placeholder": false
+  },
+  {
+    "id": "navicular",
+    "meshNames": [
+      "Navicular_R",
+      "Os_Naviculare_Right"
+    ],
+    "layer": "bone",
+    "nameZh": "舟骨",
+    "nameLa": "Os naviculare",
+    "summaryZh": "舟状骨，位于足中部，是内侧纵弓的拱顶石（keystone）。位置：后方凹面与距骨头相接（距舟关节），前方凸面与三块楔骨相接（舟楔关节群）。内侧舟骨粗隆（tuberositas ossis navicularis）是重要体表标志，胫骨后肌主要止点，用于评估足弓高度。临床意义：舟骨应力性骨折（运动员常见，血供薄弱的中1/3区域）；副舟骨（os naviculare accessorium）发生率约10-20%，可引起内侧足痛；Müller-Weiss病（成人舟骨缺血性坏死）；扁平足时舟骨下移内侧突出。TA2编码：A02.5.11.001。",
+    "placeholder": false
+  },
+  {
+    "id": "cuboid",
+    "meshNames": [
+      "Cuboid_R",
+      "Os_Cuboideum_Right"
+    ],
+    "layer": "bone",
+    "nameZh": "骰骨",
+    "nameLa": "Os cuboideum",
+    "summaryZh": "立方形骨，位于足外侧中部，是外侧纵弓的重要组成。位置：后方与跟骨前距骨关节面相接（跟骰关节，Chopart关节外侧部分）、前方与第4、5跖骨底相接（骰跖关节）、内侧与外侧楔骨和舟骨相接。下方（足底面）有腓骨长肌沟（sulcus tendinis musculi fibularis longi），容纳腓骨长肌腱，沟后方有骰骨粗隆。临床意义：骰骨骨折常伴跟骨骨折（nutcracker骨折机制）；腓骨长肌腱在骰骨沟处腱鞘炎或脱位；骰骨脱位（罕见但严重，可伴足背动脉损伤）。TA2编码：A02.5.12.001。",
+    "placeholder": false
+  },
+  {
+    "id": "cuneiform_medial",
+    "meshNames": [
+      "Cuneiform_Medial_R",
+      "Os_Cuneiforme_Mediale_Right"
+    ],
+    "layer": "bone",
+    "nameZh": "内侧楔骨",
+    "nameLa": "Os cuneiforme mediale",
+    "summaryZh": "三块楔骨中最大者，楔形底面朝足底，是内侧纵弓的重要支点。位置：后方与舟骨前面相接（舟楔关节），前方与第1跖骨底相接（第1跗跖关节），外侧与中间楔骨和第2跖骨底相接。下（足底）面较宽，上（足背）面较窄，形成足弓凹陷。胫骨前肌止于内侧楔骨和第1跖骨底内侧，胫骨后肌部分止于内侧楔骨足底面。临床意义：第1跗跖关节骨关节炎（严重踇外翻晚期累及本骨）；第1跗跖关节融合术（hallux rigidus等）；应力性骨折少见但见于跑步运动员。TA2编码：A02.5.13.001。",
+    "placeholder": false
+  },
+  {
+    "id": "cuneiform_intermediate",
+    "meshNames": [
+      "Cuneiform_Intermediate_R",
+      "Os_Cuneiforme_Intermedium_Right"
+    ],
+    "layer": "bone",
+    "nameZh": "中间楔骨",
+    "nameLa": "Os cuneiforme intermedium",
+    "summaryZh": "三块楔骨中最小者，楔形底面朝足背（与另两块相反）。位置：后方与舟骨前面相接，前方与第2跖骨底相接，内侧与内侧楔骨相接，外侧与外侧楔骨相接。上（足背）面较宽，下（足底）面较窄，嵌入足弓深部，第2跖骨底也嵌入三块楔骨之间，形成坚固的跗跖关节中央锁键结构（keystone），稳定足横弓。临床意义：第2跗跖关节最稳定因本骨嵌入，但应力性骨折（特别是第2跖骨底）和Lisfranc损伤时本骨可骨折；本骨骨折常提示高能量损伤。TA2编码：A02.5.13.002。",
+    "placeholder": false
+  },
+  {
+    "id": "cuneiform_lateral",
+    "meshNames": [
+      "Cuneiform_Lateral_R",
+      "Os_Cuneiforme_Laterale_Right"
+    ],
+    "layer": "bone",
+    "nameZh": "外侧楔骨",
+    "nameLa": "Os cuneiforme laterale",
+    "summaryZh": "三块楔骨中介于两者之间大小，楔形底面朝足底。位置：后方与舟骨前外侧相接，前方与第3跖骨底相接，内侧与中间楔骨和第2跖骨底相接，外侧与骰骨相接。外侧前方小关节面与第4跖骨底接触。参与构成横跗关节（Chopart关节）内侧部分和跗跖关节（Lisfranc关节）。临床意义：Lisfranc损伤时本骨与第2跖骨底之间的Lisfranc韧带断裂是关键诊断标志（X线片第2跖骨底与中间楔骨失对位）；外侧楔骨骨折可伴跗跖关节脱位。TA2编码：A02.5.13.003。",
+    "placeholder": false
+  },
+  {
+    "id": "metatarsal_1",
+    "meshNames": [
+      "Metatarsal_I_R",
+      "Metatarsal_1_Right"
+    ],
+    "layer": "bone",
+    "nameZh": "第一跖骨",
+    "nameLa": "Os metatarsi I",
+    "summaryZh": "五根跖骨中最粗短者，承担站立和行走时前足约40%负重。结构：底（近端）与内侧楔骨相接形成第1跗跖关节，体（骨干）粗壮，头（远端）与踇趾近节趾骨形成第1跖趾关节（MTP）。头部下方（足底面）有内外侧两条嵴，嵌入踇长屈肌腱两侧的内侧和外侧籽骨（sesamoid bones），籽骨起滑车作用并承载应力。临床意义：踇外翻（hallux valgus）时头部偏移，第1-2跖骨间角增大；踇僵硬（hallux rigidus）为第1跖趾关节骨关节炎；Jones骨折（第5跖骨）vs 第1跖骨应力性骨折；籽骨炎或籽骨骨折常见于舞蹈运动员。TA2编码：A02.5.16.001。",
+    "placeholder": false
+  },
+  {
+    "id": "metatarsal_2",
+    "meshNames": [
+      "Metatarsal_II_R",
+      "Metatarsal_2_Right"
+    ],
+    "layer": "bone",
+    "nameZh": "第二跖骨",
+    "nameLa": "Os metatarsi II",
+    "summaryZh": "五根跖骨中最长者，是前足中央柱的核心。底部嵌入三块楔骨之间（主要与中间楔骨，内外侧各接内侧和外侧楔骨），形成跗跖关节中最稳固的锁键结构。这种嵌入设计使第2跗跖关节活动度极小，但也使第2跖骨成为应力集中点。临床意义：第2跖骨应力性骨折（行军骨折，march fracture）最常见，因嵌入式结构承受剪切应力；Freiberg病（第2跖骨头无菌性坏死，青少年常见）；Morton神经瘤好发于第2-3趾间；Lisfranc损伤时Lisfranc韧带（连接内侧楔骨至第2跖骨底）断裂是诊断关键，X线显示第2跖骨底与中间楔骨间隙增宽。TA2编码：A02.5.16.002。",
+    "placeholder": false
+  },
+  {
+    "id": "metatarsal_3",
+    "meshNames": [
+      "Metatarsal_III_R",
+      "Metatarsal_3_Right"
+    ],
+    "layer": "bone",
+    "nameZh": "第三跖骨",
+    "nameLa": "Os metatarsi III",
+    "summaryZh": "长度仅次于第2跖骨。底部主要与外侧楔骨相接形成第3跗跖关节，内侧面接第2跖骨底，外侧面接第4跖骨底。参与构成前足横弓，第3跖骨头是横弓的中央支点之一。体较细长，头部略小于第2跖骨头。临床意义：应力性骨折次常见于第2跖骨后，也称行军骨折；Morton神经瘤最常发生于第3-4跖骨间（第3跖骨头与第4跖骨头之间的趾神经受压）；前足疼痛（metatarsalgia）时第2、3跖骨头压痛明显。TA2编码：A02.5.16.003。",
+    "placeholder": false
+  },
+  {
+    "id": "metatarsal_4",
+    "meshNames": [
+      "Metatarsal_IV_R",
+      "Metatarsal_4_Right"
+    ],
+    "layer": "bone",
+    "nameZh": "第四跖骨",
+    "nameLa": "Os metatarsi IV",
+    "summaryZh": "长度和粗细介于第3、5跖骨之间。底部主要与骰骨相接形成第4跗跖关节，内侧接第3跖骨底，外侧接第5跖骨底，后内侧可与外侧楔骨有小关节面。第4跗跖关节活动度略大于第2、3跗跖关节，有助于足外侧适应不平地面。临床意义：第4跖骨应力性骨折相对少见但仍可发生；Morton神经瘤最常见于第3-4跖骨间（即第4趾内侧）；第4、5趾的小趾畸形（curly toe、hammertoe）时第4跖趾关节受累；前足横弓塌陷时第4跖骨头承受异常压力导致胼胝或疼痛。TA2编码：A02.5.16.004。",
+    "placeholder": false
+  },
+  {
+    "id": "metatarsal_5",
+    "meshNames": [
+      "Metatarsal_V_R",
+      "Metatarsal_5_Right"
+    ],
+    "layer": "bone",
+    "nameZh": "第五跖骨",
+    "nameLa": "Os metatarsi V",
+    "summaryZh": "最外侧跖骨，外侧纵弓的前端支点。底部与骰骨相接形成第5跗跖关节，内侧接第4跖骨底。底部外侧向后伸出第5跖骨粗隆（tuberositas ossis metatarsi quinti），是腓骨短肌腱止点，重要体表标志。第5跖骨底与骨干交界处（距粗隆远端1.5cm）为Jones区，血供相对薄弱。临床意义：第5跖骨基底部骨折分两类——撕脱性骨折（粗隆骨折，腓骨短肌牵拉，愈合良好）vs Jones骨折（骨干近端横断骨折，血供差，愈合困难，需手术固定）；小趾内翻畸形（bunionette or tailor's bunion）为第5跖骨头外侧突出疼痛；第5跗跖关节活动度最大，有助足外侧适应性。TA2编码：A02.5.16.005。",
+    "placeholder": false
+  },
+  {
+    "id": "proximal_phalanx_1",
+    "meshNames": [
+      "Phalanx_Prox_Hallux_R",
+      "Phalanx_Proximal_1_Right"
+    ],
+    "layer": "bone",
+    "nameZh": "踇趾近节趾骨",
+    "nameLa": "Phalanx proximalis hallucis",
+    "summaryZh": "踇趾（第1趾/大趾）近节趾骨，是踇趾两节趾骨（缺中节）中的近端一节。底（近端）凹陷与第1跖骨头形成第1跖趾关节（MTP），头（远端）凸起与踇趾远节趾骨形成趾间关节（IP）。体较粗壮，承受站立和推进时的重要负荷。底的内外侧各有一小面，与第1跖骨头下方的内外侧籽骨相接。临床意义：踇外翻（hallux valgus）时本骨向外偏斜，第1跖趾关节半脱位；踇僵硬（hallux rigidus）时第1跖趾关节背伸受限，本骨底部骨赘形成；草皮趾损伤（turf toe）为第1跖趾关节过度背伸致跖侧板和籽骨复合体损伤；踇趾骨折影响推进功能。TA2编码：A02.5.17.001。",
+    "placeholder": false
+  },
+  {
+    "id": "proximal_phalanx_2",
+    "meshNames": [
+      "proximal_phalanx_2"
+    ],
+    "layer": "bone",
+    "nameZh": "第二趾近节趾骨",
+    "nameLa": "Phalanx proximalis digiti II pedis",
+    "summaryZh": "第二趾的近节趾骨，连接第二跖骨头和第二趾中节趾骨，参与足弓支撑和趾间关节活动。TA2: A02.5.17.002",
+    "placeholder": false
+  },
+  {
+    "id": "proximal_phalanx_3",
+    "meshNames": [
+      "proximal_phalanx_3"
+    ],
+    "layer": "bone",
+    "nameZh": "第三趾近节趾骨",
+    "nameLa": "Phalanx proximalis digiti III pedis",
+    "summaryZh": "第三趾的近节趾骨，位于足纵弓中段，承受行走时的纵向压力。TA2: A02.5.18.002",
+    "placeholder": false
+  },
+  {
+    "id": "proximal_phalanx_4",
+    "meshNames": [
+      "proximal_phalanx_4"
+    ],
+    "layer": "bone",
+    "nameZh": "第四趾近节趾骨",
+    "nameLa": "Phalanx proximalis digiti IV pedis",
+    "summaryZh": "第四趾的近节趾骨，与第四跖骨形成跖趾关节，参与足横弓的维持。TA2: A02.5.19.002",
+    "placeholder": false
+  },
+  {
+    "id": "proximal_phalanx_5",
+    "meshNames": [
+      "proximal_phalanx_5"
+    ],
+    "layer": "bone",
+    "nameZh": "第五趾近节趾骨",
+    "nameLa": "Phalanx proximalis digiti V pedis (minimus)",
+    "summaryZh": "小趾的近节趾骨，较短小，易受鞋挤压变形，与小趾外展肌和屈趾短肌共同维持小趾功能。TA2: A02.5.20.002",
+    "placeholder": false
+  },
+  {
+    "id": "middle_phalanx_2",
+    "meshNames": [
+      "middle_phalanx_2"
+    ],
+    "layer": "bone",
+    "nameZh": "第二趾中节趾骨",
+    "nameLa": "Phalanx media digiti II pedis",
+    "summaryZh": "第二趾的中节趾骨，连接近节和远节趾骨，是趾骨链中的中间环节，参与趾间关节屈伸。TA2: A02.5.17.003",
+    "placeholder": false
+  },
+  {
+    "id": "middle_phalanx_3",
+    "meshNames": [
+      "middle_phalanx_3"
+    ],
+    "layer": "bone",
+    "nameZh": "第三趾中节趾骨",
+    "nameLa": "Phalanx media digiti III pedis",
+    "summaryZh": "第三趾的中节趾骨，位于足趾中段，承受屈趾肌腱的牵拉力，参与推进期蹬地动作。TA2: A02.5.18.003",
+    "placeholder": false
+  },
+  {
+    "id": "middle_phalanx_4",
+    "meshNames": [
+      "middle_phalanx_4"
+    ],
+    "layer": "bone",
+    "nameZh": "第四趾中节趾骨",
+    "nameLa": "Phalanx media digiti IV pedis",
+    "summaryZh": "第四趾的中节趾骨，较第二、三趾短小，易随前足变形而发生锤状趾畸形。TA2: A02.5.19.003",
+    "placeholder": false
+  },
+  {
+    "id": "distal_phalanx_2",
+    "meshNames": [
+      "distal_phalanx_2"
+    ],
+    "layer": "bone",
+    "nameZh": "第二趾远节趾骨",
+    "nameLa": "Phalanx distalis digiti II pedis",
+    "summaryZh": "第二趾的远节（末节）趾骨，趾尖骨，承受地面接触压力，参与推进期最后阶段蹬离。TA2: A02.5.17.004",
+    "placeholder": false
+  },
+  {
+    "id": "distal_phalanx_3",
+    "meshNames": [
+      "distal_phalanx_3"
+    ],
+    "layer": "bone",
+    "nameZh": "第三趾远节趾骨",
+    "nameLa": "Phalanx distalis digiti III pedis",
+    "summaryZh": "第三趾的远节（末节）趾骨，趾尖骨，与屈趾长肌腱末端附着，参与趾末端触地和推进。TA2: A02.5.18.004",
+    "placeholder": false
+  },
+  {
+    "id": "distal_phalanx_4",
+    "meshNames": [
+      "distal_phalanx_4"
+    ],
+    "layer": "bone",
+    "nameZh": "第四趾远节趾骨",
+    "nameLa": "Phalanx distalis digiti IV pedis",
+    "summaryZh": "第四趾的远节（末节）趾骨，较短小，易受鞋前端挤压而变形或甲沟炎。TA2: A02.5.19.004",
+    "placeholder": false
+  },
+  {
+    "id": "distal_phalanx_5",
+    "meshNames": [
+      "distal_phalanx_5"
+    ],
+    "layer": "bone",
+    "nameZh": "第五趾远节趾骨",
+    "nameLa": "Phalanx distalis digiti V pedis (minimus)",
+    "summaryZh": "小趾的远节（末节）趾骨，最小的趾骨，常因鞋挤压而发生鸡眼或变形。TA2: A02.5.20.003",
+    "placeholder": false
+  },
+  {
+    "id": "distal_phalanx_1",
+    "meshNames": [
+      "Phalanx_Dist_Hallux_R",
+      "Phalanx_Distal_1_Right"
+    ],
+    "layer": "bone",
+    "nameZh": "踇趾远节趾骨",
+    "nameLa": "Phalanx distalis hallucis",
+    "summaryZh": "踇趾远节趾骨，是踇趾两节趾骨中的远端一节（终末节），构成踇趾尖端。底（近端）凹陷与踇趾近节趾骨头形成趾间关节（IP），体较短小扁平，远端膨大呈蹄形（tuberositas phalangis distalis），足背面支持趾甲，足底面为踇长屈肌腱止点，末端感觉丰富的指腹。临床意义：踇趾甲沟炎或嵌甲时远节趾骨周围软组织感染；远节趾骨骨折常见于重物砸伤或踢伤，甲床损伤需修复；踇长屈肌腱止点撕脱骨折影响踇趾屈曲；踇趾远节骨质增生或畸形影响鞋具适配。TA2编码：A02.5.17.002。",
+    "placeholder": false
+  },
+  {
+    "id": "sesamoid_bones",
+    "meshNames": [
+      "Sesamoid_Bones_MT1_R",
+      "Sesamoid_Hallux_Right"
+    ],
+    "layer": "bone",
+    "nameZh": "踇趾籽骨（组合）",
+    "nameLa": "Ossa sesamoidea hallucis",
+    "summaryZh": "位于第一跖骨头下方跖侧的两块小骨（内侧籽骨和外侧籽骨），嵌于踇短屈肌腱内，承受踇趾蹬地时的压力，保护屈肌腱并增加力臂。TA2: A02.5.17.001 (hallux sesamoids)",
+    "placeholder": false
+  },
+  {
+    "id": "tibialis_posterior",
+    "meshNames": [
+      "Tibialis_Posterior_R",
+      "M_Tibialis_Posterior_Right"
+    ],
+    "layer": "muscle",
+    "nameZh": "胫骨后肌",
+    "nameLa": "M. tibialis posterior",
+    "summaryZh": "小腿深后群最深层肌，是足内侧纵弓最重要的动态稳定器。起点：胫骨后面上2/3、腓骨内侧面和骨间膜。肌腱经内踝后方进入足，主要止点为舟骨粗隆（最主要），并有多条分支止于三块楔骨、骰骨、第2-4跖骨底足底面。作用：足跖屈和内翻，维持内侧纵弓，控制足旋前（pronation）。支配：胫神经（L4-L5）。临床意义：胫骨后肌腱功能不全（PTTD，posterior tibial tendon dysfunction）是成人获得性扁平足的主要原因，Johnson分期I-IV级，晚期需要跟骨截骨或三关节融合；内踝后方腱鞘炎；腱止点撕脱性骨折（舟骨粗隆）。TA2编码：M. tibialis posterior。",
+    "placeholder": false
+  },
+  {
+    "id": "flexor_digitorum_longus",
+    "meshNames": [
+      "Flexor_Digitorum_Longus_R",
+      "M_Flexor_Digitorum_Longus_Right"
+    ],
+    "layer": "muscle",
+    "nameZh": "趾长屈肌",
+    "nameLa": "M. flexor digitorum longus",
+    "summaryZh": "小腿深后群肌，是第2-5趾的主要长屈肌。起点：胫骨后面中1/3。肌腱经内踝后方、跟骨内侧和足底深筋膜下进入足底中部，在足底与趾长屈肌腱交叉（chiasma tendinum），然后分为4条肌腱，每腱穿过趾短屈肌腱（腱鞘，类似手部指深屈肌），止于第2-5趾远节趾骨底足底面。作用：屈第2-5趾远侧趾间关节（DIP），辅助屈近侧趾间关节和跖趾关节，辅助踝跖屈和足内翻。支配：胫神经（L5-S1）。临床意义：腱鞘炎或腱炎引起足底内侧痛；在足底与趾长屈肌腱交叉处摩擦；跖管综合征（tarsal tunnel syndrome）可压迫本肌腱；腱止点撕脱致远节趾间关节伸直畸形（mallet toe）。",
+    "placeholder": false
+  },
+  {
+    "id": "flexor_hallucis_longus",
+    "meshNames": [
+      "Flexor_Hallucis_Longus_R",
+      "M_Flexor_Hallucis_Longus_Right"
+    ],
+    "layer": "muscle",
+    "nameZh": "踇长屈肌",
+    "nameLa": "M. flexor hallucis longus",
+    "summaryZh": "小腿深后群肌，是踇趾的主要长屈肌，行走推进期的关键肌。起点：腓骨后面下2/3和骨间膜下部。肌腱经距骨后突（踇长屈肌沟）、内踝后下方深面进入足底，走行于距下关节和跟骨之间的骨纤维隧道（knot of Henry处与趾长屈肌腱交叉），继续前行于第1跖骨底和两个籽骨之间的纤维鞘管内，止于踇趾远节趾骨底足底面。作用：屈踇趾趾间关节（IP），辅助屈第1跖趾关节，推进行走，辅助踝跖屈和足内翻。支配：胫神经（S1-S2）。临床意义：踇长屈肌腱炎或腱鞘炎（舞蹈演员常见，os trigonum syndrome距骨后突综合征）；籽骨间腱鞘炎；腱止点撕脱致踇趾IP关节伸直无力；草皮趾损伤（turf toe）累及本腱。",
+    "placeholder": false
+  },
+  {
+    "id": "extensor_hallucis_longus",
+    "meshNames": [
+      "Extensor_Hallucis_Longus_R"
+    ],
+    "layer": "muscle",
+    "nameZh": "踇长伸肌",
+    "nameLa": "M. extensor hallucis longus",
+    "summaryZh": "小腿前群外在肌，肌腱止于踇趾远节趾骨底背面。功能：伸踇趾、辅助踝背伸。临床：踇长伸肌腱断裂/腱鞘炎；肌力检查用于评估深腓神经功能。UM CC0，已 Kabsch→BP3D mm。教学补充。TA2：A04.7.02.039。",
+    "placeholder": false
+  },
+  {
+    "id": "extensor_digitorum_longus",
+    "meshNames": [
+      "Extensor_Digitorum_Longus_R"
+    ],
+    "layer": "muscle",
+    "nameZh": "趾长伸肌",
+    "nameLa": "M. extensor digitorum longus",
+    "summaryZh": "小腿前群外在肌，肌腱经足背分为四束止于第2–5趾伸肌扩张。功能：伸第2–5趾、辅助踝背伸。可与第三腓骨肌伴行。UM CC0，已 Kabsch→BP3D mm。教学补充。TA2：A04.7.02.040。",
+    "placeholder": false
+  },
+  {
+    "id": "fibularis_longus",
+    "meshNames": [
+      "Fibularis_Longus_R",
+      "Peroneus_Longus_R"
+    ],
+    "layer": "muscle",
+    "nameZh": "腓骨长肌",
+    "nameLa": "M. fibularis longus",
+    "summaryZh": "小腿外侧群外在肌（TA2 用 fibularis，旧称 peroneus）。肌腱绕外踝后方、经骰骨沟斜行至足底，止于内侧楔骨与第1跖骨底。功能：足外翻、跖屈辅助、维持足横弓。临床：腓骨长短肌腱脱位/腱鞘炎。UM CC0；网格文件名保留 peroneus_longus.glb。已 Kabsch→BP3D mm。TA2：A04.7.02.041。",
+    "placeholder": false
+  },
+  {
+    "id": "fibularis_brevis",
+    "meshNames": [
+      "Fibularis_Brevis_R",
+      "Peroneus_Brevis_R"
+    ],
+    "layer": "muscle",
+    "nameZh": "腓骨短肌",
+    "nameLa": "M. fibularis brevis",
+    "summaryZh": "小腿外侧群外在肌（TA2 fibularis，旧称 peroneus）。起点：腓骨外侧面下2/3。肌腱经外踝后方、腓骨肌上/下支持带深面，止于第5跖骨粗隆。作用：足外翻，辅助跖屈。支配：腓浅神经（L5-S1）。临床：腓骨长短肌腱脱位/腱鞘炎；第5跖骨基底撕脱（Jones 相关鉴别）。网格：Open3DModel lower-limb Fibularis_brevis_muscle.r（CC BY-SA 4.0），by-sa/ 隔离；Kabsch→BP3D mm。教学补充，非完整外侧群图谱。TA2：A04.7.02.042。",
+    "placeholder": false
+  },
+  {
+    "id": "fibularis_tertius",
+    "meshNames": [
+      "Fibularis_Tertius_R",
+      "Peroneus_Tertius_R"
+    ],
+    "layer": "muscle",
+    "nameZh": "第三腓骨肌",
+    "nameLa": "M. fibularis tertius",
+    "summaryZh": "小腿前群变异肌（常与趾长伸肌远侧份延续）。起自腓骨远段/骨间膜，肌腱经下伸肌支持带至足背外侧，止于第5跖骨底背侧。作用：足外翻、辅助背伸。支配：腓深神经。临床：缺如常见；外踝前外侧肿物鉴别。网格：Open3DModel Fibularis_tertius_muscle.r（CC BY-SA 4.0），by-sa/ 隔离；Kabsch→BP3D mm。教学有用，不代表人人具备该肌。TA2：A04.7.02.043。",
+    "placeholder": false
+  },
+  {
+    "id": "plantaris",
+    "meshNames": [
+      "Plantaris_R",
+      "M_Plantaris_Right"
+    ],
+    "layer": "muscle",
+    "nameZh": "跖肌",
+    "nameLa": "M. plantaris",
+    "summaryZh": "小腿后群细长肌（常缺如）。起自股骨外上髁附近，肌腹短小，长腱下行于腓肠肌与比目鱼肌之间，止于跟腱内侧缘或跟骨。作用：弱跖屈与屈膝辅助。支配：胫神经。临床：跟腱修复时注意伴行跖肌腱；缺如变异常见。网格：Z-Anatomy Plantaris muscle.r（CC BY-SA 4.0），by-sa/ 隔离；ZA→BP3D Kabsch（骨标志均值残差约1.8 mm）。教学补充，不代表小腿三头肌完整。",
+    "placeholder": false
+  },
+  {
+    "id": "tibialis_anterior",
+    "meshNames": [
+      "Tibialis_Anterior_R",
+      "Muscle_Tibialis_Anterior"
+    ],
+    "layer": "muscle",
+    "nameZh": "胫骨前肌",
+    "nameLa": "M. tibialis anterior",
+    "summaryZh": "小腿前群外在肌，起自胫骨外侧面与骨间膜，肌腱经伸肌支持带深面止于内侧楔骨与第1跖骨底内侧。主要功能：踝背伸、足内翻。临床：足下垂鉴别、胫前肌肌腱炎。UM CC0 网格，已 Kabsch→BP3D mm。教学补充外在肌（非占位）。TA2：A04.7.02.037。",
+    "placeholder": false
+  },
+  {
+    "id": "abductor_hallucis",
+    "meshNames": [
+      "Abductor_Hallucis_R",
+      "M_Abductor_Hallucis_Right"
+    ],
+    "layer": "muscle",
+    "nameZh": "踇展肌",
+    "nameLa": "M. abductor hallucis",
+    "summaryZh": "足底内侧群浅层肌。起点：跟骨结节内侧突、足底腱膜和屈肌支持带。止点：踇趾近节趾骨底内侧及内侧籽骨。作用：展踇趾（使踇趾外展远离第2趾）和屈踇趾近节，维持内侧纵弓。支配：足底内侧神经（L4-L5）。临床意义：踇外翻（hallux valgus）时本肌张力减弱，无法对抗踇收肌牵拉；过度疲劳可引起内侧足弓痛。",
+    "placeholder": false
+  },
+  {
+    "id": "flexor_hallucis_brevis",
+    "meshNames": [
+      "Flexor_Hallucis_Brevis_R",
+      "M_Flexor_Hallucis_Brevis_Right"
+    ],
+    "layer": "muscle",
+    "nameZh": "踇短屈肌",
+    "nameLa": "M. flexor hallucis brevis",
+    "summaryZh": "足底内侧群深层肌。起点：骰骨足底面、外侧楔骨和胫骨后肌腱鞘。肌腹分为内侧腹和外侧腹，止点：踇趾近节趾骨底两侧，各含一踇籽骨（内侧籽骨和外侧籽骨）。作用：屈踇趾近节（跖趾关节），推进行走。支配：内侧腹由足底内侧神经支配，外侧腹由足底外侧神经深支支配。临床意义：两个籽骨为重要受力点，籽骨炎（sesamoiditis）常见于前足负重运动员；踇趾推进无力提示本肌损伤。 外侧腹网格：Z-Anatomy Lateral head of flexor hallucis brevis.r（CC BY-SA 4.0，by-sa/ 附加件）；内侧腹仍为 BP3D CC BY。混合许可结构，非完整踇短屈肌图谱。",
+    "placeholder": false
+  },
+  {
+    "id": "adductor_hallucis",
+    "meshNames": [
+      "Adductor_Hallucis_R",
+      "M_Adductor_Hallucis_Right"
+    ],
+    "layer": "muscle",
+    "nameZh": "踇收肌",
+    "nameLa": "M. adductor hallucis",
+    "summaryZh": "足底深层肌，呈Y形分为两头。斜头起点：第2-4跖骨底、骰骨和外侧楔骨跖侧面、长足底韧带。横头起点：第3-5跖趾关节囊和跖侧韧带。两头合并止点：踇趾近节趾骨底外侧及外侧籽骨。作用：收踇趾（内收向第2趾）并维持前足横弓，稳定踇趾推进。支配：足底外侧神经深支（S1-S2）。临床意义：踇外翻畸形时本肌过度牵拉踇趾外侧，加重畸形；横弓塌陷（扁平足前足）时本肌失能；Morton神经瘤常发生于其深方跖神经受压处。",
+    "placeholder": false
+  },
+  {
+    "id": "flexor_digitorum_brevis",
+    "meshNames": [
+      "Flexor_Digitorum_Brevis_R",
+      "M_Flexor_Digitorum_Brevis_Right"
+    ],
+    "layer": "muscle",
+    "nameZh": "趾短屈肌",
+    "nameLa": "M. flexor_digitorum brevis",
+    "summaryZh": "足底中间群浅层肌。起点：跟骨结节内侧突和足底腱膜深面。肌腹分为4条肌腱，至近节趾骨处每腱分为两束，让趾长屈肌腱穿过（形成腱鞘），然后止点：第2-5趾中节趾骨两侧。作用：屈第2-5趾近节趾间关节（近节和中节），维持足底纵弓，站立稳定。支配：足底内侧神经（L5-S1）。临床意义：类似手部指浅屈肌；足底筋膜炎常累及本肌起点；锤状趾畸形时本肌挛缩导致近节趾间关节屈曲固定。",
+    "placeholder": false
+  },
+  {
+    "id": "quadratus_plantae",
+    "meshNames": [
+      "Quadratus_Plantae_R",
+      "M_Quadratus_Plantae_Right"
+    ],
+    "layer": "muscle",
+    "nameZh": "足底方肌",
+    "nameLa": "M. quadratus plantae",
+    "summaryZh": "足底中间群深层肌，呈四边形。起点：跟骨内侧面和外侧缘（分内外侧头）。止点：趾长屈肌腱外侧缘（在腱分为4条前）。作用：修正趾长屈肌的牵拉方向，使其由斜向变为沿足纵轴屈趾（趾长屈肌起自小腿后方，若无本肌调整则牵拉方向偏内侧）；增强屈趾力量。支配：足底外侧神经（S1-S2）。临床意义：本肌缺如变异较常见（约7-10%人群），此时屈趾力量减弱；足底筋膜炎时跟骨内侧起点常一并疼痛。",
+    "placeholder": false
+  },
+  {
+    "id": "interossei_dorsales",
+    "meshNames": [
+      "Interosseous_Dorsal_1_R",
+      "Interosseous_Dorsal_2_R",
+      "Interosseous_Dorsal_3_R",
+      "Interosseous_Dorsal_4_R"
+    ],
+    "layer": "muscle",
+    "nameZh": "骨间背侧肌（组合）",
+    "nameLa": "Mm. interossei dorsales pedis",
+    "summaryZh": "4条双羽状肌，位于第1-4跖骨间隙背侧。起点：每条起自相邻两跖骨侧面。止点：第2-4趾近节趾骨底和趾伸肌腱膜。作用：展第2-4趾（DAB: Dorsal ABduct，以第2趾为中轴）；协助屈跖趾关节伸趾间关节。支配：足底外侧神经深支（S2-S3）。网格：Open3DModel / AnatomyTOOL lower-limb（CC BY-SA 4.0），右足 1st–4th_Dorsal_interossei_muscles_of_foot.r，置于 by-sa/ 隔离加载。",
+    "placeholder": false
+  },
+  {
+    "id": "abductor_digiti_minimi",
+    "meshNames": [
+      "Abductor_Digiti_Minimi_R",
+      "M_Abductor_Digiti_Minimi_Right"
+    ],
+    "layer": "muscle",
+    "nameZh": "小趾展肌",
+    "nameLa": "M. abductor digiti minimi pedis",
+    "summaryZh": "足底外侧群浅层肌，最外侧可触及。起点：跟骨结节外侧突、第5跖骨粗隆和足底腱膜外侧。止点：第5趾近节趾骨底外侧。作用：展小趾（外展远离第4趾）和屈小趾近节趾骨，维持足外侧纵弓稳定。支配：足底外侧神经（S1-S2）。临床意义：足外侧缘疼痛常累及本肌；第5跖骨基底骨折（Jones骨折）时本肌起点撕脱；扁平足外侧型时本肌过度紧张。",
+    "placeholder": false
+  },
+  {
+    "id": "flexor_digiti_minimi_brevis",
+    "meshNames": [
+      "Flexor_Digiti_Minimi_Brevis_R",
+      "M_Flexor_Digiti_Minimi_Brevis_Right"
+    ],
+    "layer": "muscle",
+    "nameZh": "小趾短屈肌",
+    "nameLa": "M. flexor digiti minimi brevis pedis",
+    "summaryZh": "足底外侧群深层小肌，是小趾（第5趾）的短屈肌。起点：第5跖骨底足底面和长足底韧带。止点：第5趾近节趾骨底外侧。作用：屈小趾近节趾骨（跖趾关节MTP），辅助维持足外侧纵弓。支配：足底外侧神经浅支（S2-S3）。临床意义：本肌较小，单独损伤罕见；小趾内翻畸形（curly toe或bunionette）时本肌可挛缩；第5跖骨底骨折时本肌起点可撕脱；足底外侧神经损伤时本肌麻痹致小趾屈曲无力。变异：约10%人群本肌缺如或与小趾展肌融合。",
+    "placeholder": false
+  },
+  {
+    "id": "opponens_digiti_minimi",
+    "meshNames": [
+      "Opponens_Digiti_Minimi_Pedis_R"
+    ],
+    "layer": "muscle",
+    "nameZh": "小趾对掌肌",
+    "nameLa": "M. opponens digiti minimi pedis",
+    "summaryZh": "足底外侧群深层小肌（TA2 有记载；人体常不恒定，可与小趾短屈肌部分融合）。起自腓骨长肌腱鞘/骰骨附近与长足底韧带，止于第5跖骨外侧面全长。作用：使第5跖骨轻度屈曲并外展（「对掌」样稳定外侧柱）。支配：足底外侧神经。临床：变异缺如多见。网格：Open3DModel Opponens_digiti_minimi_muscle_of_foot.r（CC BY-SA 4.0），by-sa/ 隔离；Kabsch→BP3D mm。教学补充不恒定内在肌，非完整图谱。",
+    "placeholder": false
+  },
+  {
+    "id": "extensor_digitorum_brevis",
+    "meshNames": [
+      "Extensor_Digitorum_Brevis_R",
+      "M_Extensor_Digitorum_Brevis_Right"
+    ],
+    "layer": "muscle",
+    "nameZh": "趾短伸肌",
+    "nameLa": "M. extensor digitorum brevis",
+    "summaryZh": "足背唯一肌群。起点：跟骨外侧面前部（距下关节外侧）和下伸肌支持带。肌腹分为4条肌腱：内侧腱在传统描述中常称踇短伸肌（TA2 另立 M. extensor hallucis brevis，本图谱已单独建条）并独立止于踇趾近节趾骨底背侧；外侧3腱并入趾长伸肌腱止于第2-4趾中节和远节趾骨底。作用：协助趾长伸肌伸第1-4趾（注意：第5趾无趾短伸肌腱）。支配：腓深神经（L5-S1）。临床意义：足背可触及肌腹（外踝前下方软组织隆起），与足背动脉毗邻；踝关节扭伤时易伴发本肌挫伤；腓深神经损伤时本肌和趾长伸肌同时瘫痪导致垂足。",
+    "placeholder": false
+  },
+  {
+    "id": "extensor_hallucis_brevis",
+    "meshNames": [
+      "Extensor_Hallucis_Brevis_R",
+      "M_Extensor_Hallucis_Brevis_Right"
+    ],
+    "layer": "muscle",
+    "nameZh": "踇短伸肌",
+    "nameLa": "M. extensor hallucis brevis",
+    "summaryZh": "足背肌之一（TA2独立命名；旧称常并入趾短伸肌内侧腱）。起点：跟骨背外侧面、下伸肌支持带。止点：踇趾近节趾骨底背侧。作用：伸踇趾跖趾关节。支配：腓深神经（L5-S1）。临床意义：与趾短伸肌同源邻近，足背外侧可触及；腓深神经损伤时与趾短伸肌一同受累。本条目为已有 BP3D CC BY 网格补接线（此前仅在 FootModel REAL_MUSCLE_MODELS，未入 structures.json）。教学有用，不代表足背肌图谱完整。",
+    "placeholder": false
+  },
+  {
+    "id": "lumbrical_1",
+    "meshNames": [
+      "Lumbrical_1_R"
+    ],
+    "layer": "muscle",
+    "nameZh": "第一蚓状肌",
+    "nameLa": "M. lumbricalis primus pedis",
+    "summaryZh": "第一蚓状肌起自第一趾长屈肌腱内侧缘，向外前行，止于第二趾近节趾骨底内侧及趾背腱膜。功能：屈第二趾跖趾关节，同时伸近节与中节趾间关节；协助内收第二趾。神经支配：足底内侧神经分支（L5-S1）。血供：足底内侧动脉及第一跖底动脉。临床意义：屈趾无力时第二趾可呈爪形趾畸形；Morton神经瘤压迫可致蚓状肌萎缩；足底筋膜炎时深层蚓状肌可代偿性紧张。",
+    "placeholder": false
+  },
+  {
+    "id": "lumbrical_2",
+    "meshNames": [
+      "Lumbrical_2_R"
+    ],
+    "layer": "muscle",
+    "nameZh": "第二蚓状肌",
+    "nameLa": "M. lumbricalis secundus pedis",
+    "summaryZh": "第二蚓状肌起自第二、三趾长屈肌腱相邻缘，向外前行，止于第三趾近节趾骨底内侧及趾背腱膜。功能：屈第三趾跖趾关节，同时伸近节与中节趾间关节；协助内收第三趾。神经支配：足底外侧神经分支（S1-S2）。血供：第二、第三跖底动脉。临床意义：与第一蚓状肌共同维持足趾平衡步态；蚓状肌群萎缩致趾间关节过伸（锤状趾）。",
+    "placeholder": false
+  },
+  {
+    "id": "lumbrical_3",
+    "meshNames": [
+      "Lumbrical_3_R"
+    ],
+    "layer": "muscle",
+    "nameZh": "第三蚓状肌",
+    "nameLa": "M. lumbricalis tertius pedis",
+    "summaryZh": "第三蚓状肌起自第三、四趾长屈肌腱相邻缘，向外前行，止于第四趾近节趾骨底内侧及趾背腱膜。功能：屈第四趾跖趾关节，同时伸近节与中节趾间关节；协助内收第四趾。神经支配：足底外侧神经分支（S1-S2）。血供：第三、第四跖底动脉。临床意义：糖尿病足部神经病变时常累及外侧蚓状肌；小趾侧足趾变形时第三、四蚓状肌代偿性肥大。",
+    "placeholder": false
+  },
+  {
+    "id": "lumbrical_4",
+    "meshNames": [
+      "Lumbrical_4_R"
+    ],
+    "layer": "muscle",
+    "nameZh": "第四蚓状肌",
+    "nameLa": "M. lumbricalis quartus pedis",
+    "summaryZh": "第四蚓状肌起自第四、五趾长屈肌腱相邻缘，向外前行，止于第五趾（小趾）近节趾骨底内侧及趾背腱膜。功能：屈第五趾（小趾）跖趾关节，同时伸近节趾间关节；协助内收小趾。神经支配：足底外侧神经分支（S1-S2）。血供：第四跖底动脉及足底外侧动脉小趾支。临床意义：第四蚓状肌最细小，易受足底外侧神经卡压损伤；小趾爪形趾畸形的主要责任肌之一。",
+    "placeholder": false
+  },
+  {
+    "id": "plantar_interosseous_1",
+    "meshNames": [
+      "Interosseous_Plantar_1_R"
+    ],
+    "layer": "muscle",
+    "nameZh": "第一骨间跖侧肌",
+    "nameLa": "M. interosseus plantaris primus",
+    "summaryZh": "第一骨间跖侧肌起自第三跖骨内侧面，向前内行，止于第三趾近节趾骨底内侧及趾背腱膜。功能：内收第三趾向第二趾（足轴线）；协助屈第三趾跖趾关节。神经支配：足底外侧神经深支（S1-S2）。血供：足底动脉弓分支。临床意义：与骨间背侧肌共同稳定趾基底关节；跖趾关节脱位时可撕裂；神经损伤时第三趾外展无力致趾间隙增宽。TA2代码：A04.7.02.067。",
+    "placeholder": false
+  },
+  {
+    "id": "plantar_interosseous_2",
+    "meshNames": [
+      "Interosseous_Plantar_2_R"
+    ],
+    "layer": "muscle",
+    "nameZh": "第二骨间跖侧肌",
+    "nameLa": "M. interosseus plantaris secundus",
+    "summaryZh": "第二骨间跖侧肌起自第四跖骨内侧面，向前内行，止于第四趾近节趾骨底内侧及趾背腱膜。功能：内收第四趾向第二趾（足轴线）；协助屈第四趾跖趾关节。神经支配：足底外侧神经深支（S1-S2）。血供：足底动脉弓分支及第四跖底动脉。临床意义：跖骨骨折时可累及跖侧骨间肌致趾内收受限；趾屈肌腱鞘炎时该肌紧张致疼痛加剧。TA2代码：A04.7.02.069。",
+    "placeholder": false
+  },
+  {
+    "id": "plantar_interosseous_3",
+    "meshNames": [
+      "Interosseous_Plantar_3_R"
+    ],
+    "layer": "muscle",
+    "nameZh": "第三骨间跖侧肌",
+    "nameLa": "M. interosseus plantaris tertius",
+    "summaryZh": "第三骨间跖侧肌起自第五跖骨内侧面，向前内行，止于第五趾（小趾）近节趾骨底内侧及趾背腱膜。功能：内收小趾向第二趾（足轴线）；协助屈小趾跖趾关节。神经支配：足底外侧神经深支（S1-S2）。血供：足底外侧动脉及第五跖底动脉。临床意义：小趾内翻畸形时该肌代偿性紧张；第五跖骨基底骨折（Jones骨折）可损伤该肌起点；足底筋膜炎时外侧柱受力异常致该肌劳损。TA2代码：A04.7.02.071。",
+    "placeholder": false
+  },
+  {
+    "id": "tibial_nerve",
+    "meshNames": [
+      "Tibial_Nerve_R",
+      "N_Tibialis_Right"
+    ],
+    "layer": "nerve",
+    "nameZh": "胫神经",
+    "nameLa": "N. tibialis",
+    "summaryZh": "坐骨神经较大终支（L4-S3），是下肢最重要神经之一。走行：沿小腿后面胫骨后肌和趾长屈肌深面下行，经内踝后方屈肌支持带深面（跖管 tarsal tunnel）进入足底，分为足底内侧神经和足底外侧神经。支配：小腿后群肌（小腿三头肌、胫后肌、趾长屈肌、踇长屈肌）、所有足底内在肌、足底和足跟皮肤。临床意义：跖管综合征（tarsal tunnel syndrome）是本神经在跖管内受压，表现足底麻木刺痛，Tinel征阳性；腓骨远端或踝关节骨折可损伤本神经；糖尿病周围神经病变常累及。",
+    "placeholder": false
+  },
+  {
+    "id": "medial_plantar_nerve",
+    "meshNames": [
+      "Medial_Plantar_Nerve_R",
+      "N_Plantaris_Medialis_Right"
+    ],
+    "layer": "nerve",
+    "nameZh": "足底内侧神经",
+    "nameLa": "N. plantaris medialis",
+    "summaryZh": "胫神经在跖管内分出的较大终支，与足底内侧动脉伴行于足底内侧。肌支：支配足底内侧群（踇展肌、踇短屈肌内侧腹）、足底中间群浅层（趾短屈肌）、第1蚓状肌。皮支：分布于内侧3.5趾足底皮肤（踇趾全部、第2-3趾、第4趾内侧半）。功能类似于手部正中神经（分布于内侧掌面）。临床意义：跖管综合征时本神经受压致内侧足底麻木刺痛；足底内侧切口手术（如踇外翻矫正）需保护本神经；Morton神经瘤发生于趾神经（本神经或足底外侧神经的趾支）。",
+    "placeholder": false
+  },
+  {
+    "id": "lateral_plantar_nerve",
+    "meshNames": [
+      "Lateral_Plantar_Nerve_R",
+      "N_Plantaris_Lateralis_Right"
+    ],
+    "layer": "nerve",
+    "nameZh": "足底外侧神经",
+    "nameLa": "N. plantaris lateralis",
+    "summaryZh": "胫神经在跖管内分出的较小终支，向外侧走行于趾短屈肌和跖方肌之间。肌支浅支：支配跖方肌、小趾展肌、小趾短屈肌；深支伴足底外侧动脉弓走行，支配踇收肌、踇短屈肌外侧腹、第2-4蚓状肌、全部骨间肌（4条背侧、3条跖侧）。皮支：分布于外侧1.5趾足底皮肤（第5趾全部、第4趾外侧半）。功能类似于手部尺神经（分布于外侧掌面、骨间肌）。临床意义：深支损伤致骨间肌和踇收肌麻痹，爪形趾畸形；Morton神经瘤最常发生于第3-4跖骨间的趾总神经（本神经第3趾支），跖骨头间受压致神经瘤样增生。",
+    "placeholder": false
+  },
+  {
+    "id": "deep_fibular_nerve",
+    "meshNames": [
+      "Deep_Fibular_Nerve_R",
+      "N_Fibularis_Profundus_Right"
+    ],
+    "layer": "nerve",
+    "nameZh": "腓深神经",
+    "nameLa": "N. fibularis profundus",
+    "summaryZh": "腓总神经在腓骨头下分出的深支（L4-S1），沿小腿前面骨间膜前下行，经下伸肌支持带深面至足背。肌支：支配小腿前群肌（胫前肌、趾长伸肌、踇长伸肌、第三腓骨肌）、足背肌（趾短伸肌、踇短伸肌）。皮支：分布于第1-2趾间隙背侧皮肤（面积小）。临床意义：腓骨头骨折或腓骨颈压迫（翘二郎腿综合征）可损伤腓总神经或本神经，致足下垂（foot drop）和趾背伸无力；下伸肌支持带下卡压（anterior tarsal tunnel syndrome）致足背疼痛和伸肌无力；踝关节前方手术需保护本神经。",
+    "placeholder": false
+  },
+  {
+    "id": "superficial_fibular_nerve",
+    "meshNames": [
+      "Superficial_Fibular_Nerve_R",
+      "N_Fibularis_Superficialis_Right"
+    ],
+    "layer": "nerve",
+    "nameZh": "腓浅神经",
+    "nameLa": "N. fibularis superficialis",
+    "summaryZh": "腓总神经在腓骨头下分出的浅支（L5-S1），沿腓骨长短肌间下行，穿出小腿深筋膜转为皮神经。肌支：支配小腿外侧群（腓骨长肌、腓骨短肌），控制足外翻。皮支：分布于小腿下段前外侧、足背大部（除第1-2趾间隙）、第2-5趾背侧皮肤，是足背最主要感觉神经。临床意义：小腿下1/3处穿筋膜点易受切割伤或手术损伤；足背切口（如跗跖关节手术）需保护皮支，否则足背麻木；本神经皮支常用于腓肠神经活检（诊断周围神经病变）；踝关节扭伤可牵拉损伤。",
+    "placeholder": false
+  },
+  {
+    "id": "sural_nerve",
+    "meshNames": [
+      "Sural_Nerve_R",
+      "N_Suralis_Right"
+    ],
+    "layer": "nerve",
+    "nameZh": "腓肠神经",
+    "nameLa": "N. suralis",
+    "summaryZh": "纯感觉神经，由胫神经腓肠内侧皮支和腓总神经吻合支（腓肠外侧皮支）汇合形成。走行：沿小腿后面小腿三头肌肌腹间下行，经外踝后方与小隐静脉伴行至足外侧缘。分布：小腿下段后外侧、外踝周围、足背外侧、第5趾外侧皮肤。临床意义：外踝骨折或跟腱手术常损伤本神经致足外侧麻木；本神经在外踝后方浅表易触及，常用于神经移植供体（腓肠神经移植graft）；踝关节外侧切口（如腓骨远端骨折内固定）需保护。",
+    "placeholder": false
+  },
+  {
+    "id": "common_plantar_digital_nerves",
+    "meshNames": [
+      "Common_Plantar_Digital_Nerves_R",
+      "Nn_Digitales_Plantares_Communes_Right"
+    ],
+    "layer": "nerve",
+    "nameZh": "趾足底总神经（组合）",
+    "nameLa": "Nn. digitales plantares communes",
+    "summaryZh": "足底内侧/外侧神经在跖骨间隙水平发出的趾足底总神经（教学组合网格，Open3D 单一对象）。走行于相邻跖骨间跖侧，至跖骨头近端附近分为两条趾足底固有神经。感觉：相应趾蹼及相邻趾跖面皮肤。临床：Morton 神经瘤最常累及第3–4跖骨间隙的趾足底总神经；跖骨头间反复压迫可致神经瘤样增粗。网格：Open3DModel lower-limb CC BY-SA，Kabsch→BP3D；为分组教学对象，非逐间隙独立分割。",
+    "placeholder": false
+  },
+  {
+    "id": "proper_plantar_digital_nerves_medial",
+    "meshNames": [
+      "Proper_Plantar_Digital_Nerves_Medial_R",
+      "Nn_Digitales_Plantares_Proprii_Medial_Right"
+    ],
+    "layer": "nerve",
+    "nameZh": "足底内侧神经固有趾支",
+    "nameLa": "Nn. digitales plantares proprii (ex N. plantaris medialis)",
+    "summaryZh": "足底内侧神经的趾足底固有支（教学组合网格）。分布于内侧约3.5趾的跖面与相邻侧皮肤（踇趾两侧、第2–3趾、第4趾内侧半的固有支），是足底内侧主要皮支终末。临床：趾端感觉障碍定位、踇外翻/趾蹼手术切口需保护；糖尿病周围神经病变常累及趾神经。网格：Open3D BY-SA，Kabsch→BP3D；非逐趾独立 elemental。",
+    "placeholder": false
+  },
+  {
+    "id": "proper_plantar_digital_nerves_lateral",
+    "meshNames": [
+      "Proper_Plantar_Digital_Nerves_Lateral_R",
+      "Nn_Digitales_Plantares_Proprii_Lateral_Right"
+    ],
+    "layer": "nerve",
+    "nameZh": "足底外侧神经固有趾支",
+    "nameLa": "Nn. digitales plantares proprii (ex N. plantaris lateralis)",
+    "summaryZh": "足底外侧神经的趾足底固有支（教学组合网格）。分布于外侧约1.5趾跖面皮肤（第5趾两侧、第4趾外侧半）。与足底内侧神经固有支在第4趾形成感觉分界。临床：小趾/第4–5趾蹼手术及外侧柱减压需保护；Morton 神经瘤可累及相关总支再延及固有支。网格：Open3D BY-SA，Kabsch→BP3D。",
+    "placeholder": false
+  },
+  {
+    "id": "deep_branch_lateral_plantar_nerve",
+    "meshNames": [
+      "Deep_Branch_Lateral_Plantar_Nerve_R",
+      "R_Profundus_N_Plantaris_Lateralis_Right"
+    ],
+    "layer": "nerve",
+    "nameZh": "足底外侧神经深支",
+    "nameLa": "R. profundus nervi plantaris lateralis",
+    "summaryZh": "足底外侧神经的深支，伴足底外侧动脉弓向内侧走行于足底深层。肌支：支配踇收肌、踇短屈肌外侧腹、第2–4蚓状肌及全部骨间肌（背侧4、跖侧3）等深部内在肌（教学示意）。临床：深支损伤可致骨间肌与踇收肌麻痹、爪形趾倾向；足底深层手术（如骨间肌间隙）需辨认。网格：Open3D BY-SA，Kabsch→BP3D；教学路径，非手术导航级。",
+    "placeholder": false
+  },
+  {
+    "id": "dorsalis_pedis_artery",
+    "meshNames": [
+      "Dorsalis_Pedis_Artery_R",
+      "A_Dorsalis_Pedis_Right"
+    ],
+    "layer": "vessel",
+    "nameZh": "足背动脉",
+    "nameLa": "A. dorsalis pedis",
+    "summaryZh": "胫前动脉在踝关节前方的延续，是足背主要供血动脉。走行：经下伸肌支持带深面至足背，与腓深神经伴行，沿第1-2跖骨间隙至第1跖骨间隙近端。分支：跗内侧动脉、跗外侧动脉、弓状动脉、第1跖背动脉、足底深支（穿第1跖骨间隙至足底与足底动脉弓吻合）。临床意义：足背动脉搏动是重要体格检查（在踇长伸肌腱和趾长伸肌腱之间触及），搏动减弱提示下肢动脉闭塞；约10-15%人群足背动脉发育不良或缺如，此时足底血供依赖胫后动脉；足背皮瓣（dorsalis pedis flap）以本动脉为蒂；足背动脉造影评估下肢血供。",
+    "placeholder": false
+  },
+  {
+    "id": "arcuate_artery",
+    "meshNames": [
+      "Arcuate_Artery_R",
+      "A_Arcuata_Right"
+    ],
+    "layer": "vessel",
+    "nameZh": "弓状动脉",
+    "nameLa": "A. arcuata",
+    "summaryZh": "足背动脉在楔骨和跖骨底水平发出的弓状分支，横行于跗跖关节平面。分支：发出第2-4跖背动脉，沿第2-4跖骨间隙走行至趾基底，每条分为两条趾背动脉供应相邻两趾的邻侧（第2-5趾背侧）。临床意义：本动脉变异较大，约20%人群发育不良或缺如，此时足背血供主要依赖跗外侧动脉或穿支；Lisfranc损伤时本动脉可撕裂致足背血肿；足背切口手术需注意保护本动脉及其分支。",
+    "placeholder": false
+  },
+  {
+    "id": "dorsal_digital_arteries",
+    "meshNames": [
+      "Dorsal_Digital_Arteries_Combined_R"
+    ],
+    "layer": "vessel",
+    "nameZh": "足背趾动脉（组合）",
+    "nameLa": "Aa. digitales dorsales pedis (combined)",
+    "summaryZh": "足背趾动脉／跖背侧末梢动脉的 BP3D 组合网格（elemental FJ2072 / 概念 BP6049）。供应足趾背侧皮肤与浅层组织，多由弓状动脉或足背动脉分支延续。教学诚实标注：BP3D ISA 无单独「跖背动脉 1–4」elemental，亦无按趾拆分的 dorsal metatarsal 网格——本条目保持（组合），不可伪称逐趾血管图谱。TA2 相关：A12.2.16.064 一带。",
+    "placeholder": false
+  },
+  {
+    "id": "posterior_tibial_artery",
+    "meshNames": [
+      "Posterior_Tibial_Artery_R",
+      "A_Tibialis_Posterior_Right"
+    ],
+    "layer": "vessel",
+    "nameZh": "胫后动脉",
+    "nameLa": "A. tibialis posterior",
+    "summaryZh": "腘动脉两大终支之一（另一为胫前动脉），是足底主要血供来源。走行：沿小腿后面胫骨后肌和趾长屈肌深面下行，与胫神经伴行，经内踝后方屈肌支持带深面（跖管）进入足底内侧。终支：在跟骨结节内侧分为足底内侧动脉和足底外侧动脉。临床意义：内踝后方搏动检查（在屈肌支持带与跟腱之间）评估下肢血供，搏动减弱提示动脉闭塞；跖管综合征时本动脉可受压；胫后动脉栓塞或血栓形成致足缺血；糖尿病足溃疡时需评估本动脉通畅性；胫后动脉搭桥手术（bypass）。网格：Open3DModel lower-limb Posterior_tibial_artery.r（CC BY-SA 4.0），by-sa/ 隔离；非 BP3D CC BY 主树。",
+    "placeholder": false
+  },
+  {
+    "id": "anterior_tibial_artery",
+    "meshNames": [
+      "Anterior_Tibial_Artery_R"
+    ],
+    "layer": "vessel",
+    "nameZh": "胫前动脉",
+    "nameLa": "A. tibialis anterior",
+    "summaryZh": "腘动脉终支之一，沿小腿前骨筋膜室下行，至踝前方延续为足背动脉。教学：理解足背动脉近端来源与踝前触诊背景。网格：Z-Anatomy Anterior tibial artery.r（CC BY-SA 4.0），by-sa/ 隔离；ZA→BP3D Kabsch。教学路径示意，非介入导航级；不代表小腿全段血管图谱。",
+    "placeholder": false
+  },
+  {
+    "id": "plantar_arch",
+    "meshNames": [
+      "Plantar_Arch_R",
+      "A_Arcus_Plantaris_Right"
+    ],
+    "layer": "vessel",
+    "nameZh": "足底动脉弓",
+    "nameLa": "Arcus plantaris",
+    "summaryZh": "足底深部主要动脉干，由足底外侧动脉主干与足背动脉足底深支（穿第1跖骨间隙下行）吻合形成。走行：横行于第2-5跖骨底平面，位于骨间肌深面。分支：发出4条跖底动脉（第1-4跖底动脉）沿跖骨间隙跖侧前行，多条穿支上穿骨间肌与跖背动脉吻合。临床意义：本弓是足底血供的中心环节，类似于手掌深弓；Lisfranc损伤或跗跖关节脱位可撕裂本弓致足深部血肿；跖底动脉闭塞或栓塞可致趾缺血坏死；足底深部间室综合征时需评估本弓血流。",
+    "placeholder": false
+  },
+  {
+    "id": "plantar_metatarsal_arteries",
+    "meshNames": [
+      "Plantar_Metatarsal_Arteries_Combined_R"
+    ],
+    "layer": "vessel",
+    "nameZh": "跖底跖骨动脉（组合）",
+    "nameLa": "Aa. metatarsales plantares (combined)",
+    "summaryZh": "跖底跖骨动脉的 BP3D 组合网格（elemental FJ2096 / 概念 BP6060）。自足底动脉弓发至跖骨间隙跖侧，再续为趾固有动脉。教学诚实标注：ISA 将全部跖底跖骨动脉归入同一 elemental，无 1st–4th 分拆 OBJ；亦无独立 dorsal metatarsal artery 概念可拆。本条目保持（组合）。TA2：A12.2.16.068 一带。",
+    "placeholder": false
+  },
+  {
+    "id": "common_plantar_digital_arteries",
+    "meshNames": [
+      "Common_Plantar_Digital_Arteries_R"
+    ],
+    "layer": "vessel",
+    "nameZh": "足底趾总动脉（组合）",
+    "nameLa": "Aa. digitales plantares communes",
+    "summaryZh": "足底跖骨动脉在跖骨头近端附近延续为的趾足底总动脉（复数教学网格）。再分为两条足底固有趾动脉至相邻趾。教学：与趾足底总神经伴行，Morton 神经瘤间隙的血供背景。网格：Z-Anatomy Common plantar digital arteries.r（CC BY-SA 4.0），by-sa/ 隔离；ZA→BP3D Kabsch（骨标志均值残差约1.8 mm）。分组教学对象，非逐间隙分条；非完整足底动脉图谱。",
+    "placeholder": false
+  },
+  {
+    "id": "proper_plantar_digital_arteries",
+    "meshNames": [
+      "Proper_Plantar_Digital_Arteries_R"
+    ],
+    "layer": "vessel",
+    "nameZh": "足底固有趾动脉（组合）",
+    "nameLa": "Aa. digitales plantares propriae",
+    "summaryZh": "足底趾动脉的固有终支（复数教学网格）。走行于趾底两侧至趾端。教学：与跖底动脉/足底弓衔接关系。网格：Z-Anatomy Proper plantar digital arteries.r（CC BY-SA 4.0），by-sa/ 隔离；ZA→BP3D Kabsch。仍为分组教学对象，非逐趾分条；非完整足底动脉图谱。",
+    "placeholder": false
+  },
+  {
+    "id": "fibular_artery",
+    "meshNames": [
+      "Fibular_Artery_R",
+      "A_Fibularis_Right"
+    ],
+    "layer": "vessel",
+    "nameZh": "腓动脉",
+    "nameLa": "A. fibularis",
+    "summaryZh": "胫后动脉在起始部发出的最大分支，是小腿外侧区和腓骨的主要血供，也参与足血供。走行：沿腓骨内侧面、趾长屈肌和胫骨后肌之间下行至外踝。分支：多条肌支供应小腿后群和外侧群肌；营养动脉供应腓骨；穿支穿骨间膜至小腿前外侧；跟外侧支和交通支参与踝和足血供。临床意义：胫后动脉闭塞时本动脉可作为侧支循环供应足部；腓骨截骨移植（fibula graft）需保留本动脉及营养支；外踝骨折时可损伤末端分支；小腿深后间室综合征时本动脉受压需筋膜切开减压。网格：Open3DModel lower-limb Fibular_artery.r（CC BY-SA 4.0），by-sa/ 隔离；非 BP3D CC BY 主树。",
+    "placeholder": false
+  },
+  {
+    "id": "plantar_artery_medial",
+    "meshNames": [
+      "Medial_Plantar_Artery_R"
+    ],
+    "layer": "vessel",
+    "nameZh": "足底内侧动脉",
+    "nameLa": "A. plantaris medialis",
+    "summaryZh": "足底内侧动脉是胫后动脉的内侧终支，在屈肌支持带深面分出。走行：起自胫后动脉分叉处（踝管内），沿展踇肌内侧缘向前，至第一跖骨基底转向内侧，行于屈踇短肌与展踇肌之间。分支：①肌支供应展踇肌、屈踇短肌；②浅支沿踇趾内侧至趾端（趾固有动脉）；③深支参与足底动脉弓形成（较细）。吻合：与足底外侧动脉在第一跖骨间隙吻合形成足底动脉弓（但内侧动脉较细，主要由外侧动脉完成弓）。临床意义：糖尿病足时该动脉硬化致内侧足趾缺血；踇外翻术中需保护该动脉浅支；踝管综合征时可伴发动脉受压致足内侧麻木。TA2代码：A12.2.16.065。",
+    "placeholder": false
+  },
+  {
+    "id": "plantar_artery_lateral",
+    "meshNames": [
+      "Lateral_Plantar_Artery_R"
+    ],
+    "layer": "vessel",
+    "nameZh": "足底外侧动脉",
+    "nameLa": "A. plantaris lateralis",
+    "summaryZh": "足底外侧动脉是胫后动脉的外侧终支，是足底主要血供来源。走行：起自胫后动脉分叉处（踝管内），斜向外前，先行于跖方肌与趾短屈肌之间，后转至跖方肌与小趾展肌之间，至第五跖骨基底转向内侧，行于骨间肌与跖长韧带之间，至第一、二跖骨间隙与足背动脉深支吻合形成足底动脉弓。分支：①肌支供应足底各肌；②小趾支沿小趾外侧至趾端；③足底动脉弓发出4条跖底动脉，每条再分为2条趾固有动脉。吻合：与足背动脉深支形成足底动脉弓。临床意义：足底主要血供（>75%），闭塞致严重缺血；糖尿病足溃疡预后依赖该动脉通畅性；足底切开引流时需避开该动脉走行路径。TA2代码：A12.2.16.069。",
+    "placeholder": false
+  },
+  {
+    "id": "deep_plantar_artery",
+    "meshNames": [
+      "Deep_Plantar_Artery_R"
+    ],
+    "layer": "vessel",
+    "nameZh": "足底深动脉",
+    "nameLa": "A. plantaris profunda",
+    "summaryZh": "足背动脉在第1跖骨间隙近端发出的穿支，穿第1背侧骨间肌下行至足底，与足底外侧动脉吻合参与足底深弓。教学：背侧→跖侧吻合关键环节；Lisfranc/第1间隙手术相关。网格：Open3DModel Deep_plantar_artery.r（CC BY-SA 4.0），Kabsch→BP3D，by-sa/ 隔离。教学示意，非介入导航级。",
+    "placeholder": false
+  },
+  {
+    "id": "deep_plantar_arch",
+    "meshNames": [
+      "Deep_Plantar_Arch_R"
+    ],
+    "layer": "vessel",
+    "nameZh": "足底深动脉弓（Open3D）",
+    "nameLa": "Arcus plantaris profundus",
+    "summaryZh": "足底深动脉弓的 Open3D 命名网格（Deep_plantar_arch.r）。与主树 BP3D「足底动脉弓」条目同属深弓教学概念——本网格为 BY-SA 隔离的分割细节，便于对照弓形走行与穿支关系；非声称两套不同解剖弓。网格：CC BY-SA 4.0，Kabsch→BP3D；by-sa/ 隔离。教学级，非手术配准。",
+    "placeholder": false
+  },
+  {
+    "id": "dorsal_metatarsal_arteries",
+    "meshNames": [
+      "Dorsal_Metatarsal_Arteries_Combined_R"
+    ],
+    "layer": "vessel",
+    "nameZh": "跖背动脉（组合）",
+    "nameLa": "Aa. metatarsales dorsales (combined)",
+    "summaryZh": "跖背动脉的 Open3D 组合网格（Dorsal_metatarsal_arteries.r 单一对象）。教学诚实：lower-limb.obj 无 1st–4th 独立命名 elemental，本条目保持（组合），不可伪称逐间隙血管图谱。与 BP3D 足背趾动脉（组合）互补命名层次。网格：CC BY-SA 4.0，Kabsch→BP3D，by-sa/。仍非逐射线拆分。",
+    "placeholder": false
+  },
+  {
+    "id": "deep_branch_medial_plantar_artery",
+    "meshNames": [
+      "Deep_Branch_Medial_Plantar_Artery_R"
+    ],
+    "layer": "vessel",
+    "nameZh": "足底内侧动脉深支",
+    "nameLa": "R. profundus a. plantaris medialis",
+    "summaryZh": "足底内侧动脉深支，参与足底内侧深层供血并与弓侧吻合相关教学。网格：Open3D Deep_branch_of_Medial_plantar_artery.r（CC BY-SA 4.0），Kabsch→BP3D，by-sa/。教学示意。",
+    "placeholder": false
+  },
+  {
+    "id": "superficial_branch_medial_plantar_artery",
+    "meshNames": [
+      "Superficial_Branch_Medial_Plantar_Artery_R"
+    ],
+    "layer": "vessel",
+    "nameZh": "足底内侧动脉浅支",
+    "nameLa": "R. superficialis a. plantaris medialis",
+    "summaryZh": "足底内侧动脉浅支（Open3D 源名拼写 planter→plantar 已在教学拉丁名纠正）。沿踇展肌浅层向前，参与足内侧浅层/踇侧皮肤与浅筋膜供血教学。网格：Superficial_branch_of_Medial_planter_artery.r（CC BY-SA 4.0），Kabsch→BP3D，by-sa/。",
+    "placeholder": false
+  },
+  {
+    "id": "perforating_arcuate_deep_plantar",
+    "meshNames": [
+      "Perforating_Arcuate_Deep_Plantar_R"
+    ],
+    "layer": "vessel",
+    "nameZh": "弓状动脉–足底深弓穿支（组合）",
+    "nameLa": "Rr. perforantes (a. arcuata ↔ arcus plantaris profundus)",
+    "summaryZh": "连接足背弓状动脉与足底深动脉弓的穿支（Open3D Perforating_br._between_Arcuate_a._and_Deep_plantar_arch.r）。教学：背–跖侧吻合通道之一，与足底深动脉（第1间隙穿支）对照。网格：CC BY-SA 4.0，Kabsch→BP3D，by-sa/ 隔离。教学示意，非介入导航级。",
+    "placeholder": false
+  },
+  {
+    "id": "lateral_tarsal_artery",
+    "meshNames": [
+      "Lateral_Tarsal_Artery_R"
+    ],
+    "layer": "vessel",
+    "nameZh": "跗外侧动脉",
+    "nameLa": "A. tarsalis lateralis",
+    "summaryZh": "足背动脉发出的跗外侧分支，行向足背外侧并与弓状动脉吻合相关教学。BP3D 主树无独立跗外侧 elemental；本网格为 Open3D Lateral_tarsal_artery.r（CC BY-SA 4.0），Kabsch→BP3D，by-sa/。教学级示意。",
+    "placeholder": false
+  },
+  {
+    "id": "medial_tarsal_arteries",
+    "meshNames": [
+      "Medial_Tarsal_Arteries_Combined_R"
+    ],
+    "layer": "vessel",
+    "nameZh": "跗内侧动脉（组合）",
+    "nameLa": "Aa. tarsales mediales (combined)",
+    "summaryZh": "足背动脉内侧发出的跗内侧动脉 Open3D 组合网格（Medial_tarsal_arteries.r 单一对象）。教学诚实：lower-limb.obj 无分条独立命名，本条目保持（组合）。网格：CC BY-SA 4.0，Kabsch→BP3D，by-sa/。非逐支跗内侧血管图谱。",
+    "placeholder": false
+  },
+  {
+    "id": "medial_calcaneal_artery",
+    "meshNames": [
+      "Medial_Calcaneal_Artery_R"
+    ],
+    "layer": "vessel",
+    "nameZh": "跟内侧动脉",
+    "nameLa": "A. calcanea medialis",
+    "summaryZh": "胫后动脉在踝管附近发出的跟内侧支，供应跟骨内侧及足跟内侧皮肤。教学：跟区血供/跟骨手术相关。网格：Open3D Medial_calcaneal_artery.r（CC BY-SA 4.0），Kabsch→BP3D，by-sa/。教学示意。",
+    "placeholder": false
+  },
+  {
+    "id": "lateral_calcaneal_artery",
+    "meshNames": [
+      "Lateral_Calcaneal_Artery_R"
+    ],
+    "layer": "vessel",
+    "nameZh": "跟外侧动脉（腓动脉支）",
+    "nameLa": "A. calcanea lateralis (ex a. fibulari)",
+    "summaryZh": "腓动脉发出的跟外侧支，供应跟骨外侧及足跟外侧皮肤。教学：与跟内侧动脉对照的跟区外侧血供。网格：Open3D Lateral_calcaneal_branch_of_fibular_artery.r（CC BY-SA 4.0），Kabsch→BP3D，by-sa/。教学示意。",
+    "placeholder": false
+  },
+  {
+    "id": "dorsal_venous_arch",
+    "meshNames": [
+      "Dorsal_Venous_Arch_of_Foot_R"
+    ],
+    "layer": "vessel",
+    "nameZh": "足背静脉弓",
+    "nameLa": "Arcus venosus dorsalis pedis",
+    "summaryZh": "足背浅静脉在跖骨头水平汇成的弓形静脉网，向两侧续为大隐/小隐静脉近端属支。教学：体表可见的足背静脉弓；静脉穿刺与浅静脉回流示意。网格：Z-Anatomy Dorsal venous arch of foot.r（CC BY-SA 4.0），by-sa/ 隔离；ZA→BP3D Kabsch。教学示意，非完整足静脉图谱。",
+    "placeholder": false
+  },
+  {
+    "id": "plantar_venous_arch",
+    "meshNames": [
+      "Plantar_Venous_Arch_R"
+    ],
+    "layer": "vessel",
+    "nameZh": "足底静脉弓",
+    "nameLa": "Arcus venosus plantaris",
+    "summaryZh": "足底深静脉在跖骨近端水平形成的静脉弓，与足底动脉弓伴行并回流至胫后静脉系统。教学：足底深静脉回流与动脉弓对照。网格：Z-Anatomy Plantar venous arch.r（CC BY-SA 4.0），by-sa/ 隔离；ZA→BP3D Kabsch。教学示意，非完整深静脉图谱。",
+    "placeholder": false
+  },
+  {
+    "id": "plantar_digital_veins",
+    "meshNames": [
+      "Plantar_Digital_Veins_R"
+    ],
+    "layer": "vessel",
+    "nameZh": "足底趾静脉（组合）",
+    "nameLa": "Vv. digitales plantares",
+    "summaryZh": "趾跖侧浅/深静脉属支（复数教学网格），向近端汇入足底跖骨静脉/静脉弓。教学：趾静脉回流与足底固有趾动脉伴行关系。网格：Z-Anatomy Plantar digital veins.r（CC BY-SA 4.0），by-sa/ 隔离；ZA→BP3D Kabsch。分组教学对象，非逐趾分条；非完整足静脉图谱。",
+    "placeholder": false
+  },
+  {
+    "id": "circumflex_fibular_artery",
+    "meshNames": [
+      "Circumflex_Fibular_Branch_of_PTA_R"
+    ],
+    "layer": "vessel",
+    "nameZh": "腓动脉回旋支（胫后动脉）",
+    "nameLa": "R. circumflexus fibularis (a. tibialis posterior)",
+    "summaryZh": "胫后动脉起始部发出的腓回旋支，绕腓骨颈附近参与膝关节/近端小腿外侧吻合网。教学：胫后–腓动脉近端侧支关系示意。网格：Z-Anatomy Circumflex fibular branch of posterior tibial artery.r（CC BY-SA 4.0），by-sa/ 隔离；ZA→BP3D Kabsch。近端属支教学对象，非膝关节全图谱；非介入导航级。",
+    "placeholder": false
+  },
+  {
+    "id": "medial_plantar_veins",
+    "meshNames": [
+      "Medial_Plantar_Veins_R"
+    ],
+    "layer": "vessel",
+    "nameZh": "足底内侧静脉",
+    "nameLa": "Vv. plantares mediales",
+    "summaryZh": "与足底内侧动脉伴行的足底内侧静脉（复数教学网格），向近端汇入胫后静脉系统。教学：足底内侧动静脉伴行与内侧足底回流。网格：Z-Anatomy Medial plantar veins.r（CC BY-SA 4.0），by-sa/ 隔离；ZA→BP3D Kabsch。教学示意，非完整足静脉图谱。",
+    "placeholder": false
+  },
+  {
+    "id": "lateral_plantar_vein",
+    "meshNames": [
+      "Lateral_Plantar_Vein_R"
+    ],
+    "layer": "vessel",
+    "nameZh": "足底外侧静脉",
+    "nameLa": "V. plantaris lateralis",
+    "summaryZh": "与足底外侧动脉伴行的足底外侧静脉，向近端参与胫后静脉回流。教学：足底外侧动静脉伴行与外侧足底深回流。网格：Z-Anatomy Lateral plantar vein.r（CC BY-SA 4.0），by-sa/ 隔离；ZA→BP3D Kabsch。教学示意，非完整足静脉图谱。",
+    "placeholder": false
+  },
+  {
+    "id": "plantar_metatarsal_veins",
+    "meshNames": [
+      "Plantar_Metatarsal_Veins_R"
+    ],
+    "layer": "vessel",
+    "nameZh": "跖底跖骨静脉（组合）",
+    "nameLa": "Vv. metatarsales plantares (combined)",
+    "summaryZh": "跖骨间隙跖侧静脉属支（复数/组合教学网格），连接趾静脉与足底静脉弓。教学：与跖底动脉伴行层次对照。网格：Z-Anatomy Plantar metatarsal veins.r（CC BY-SA 4.0），by-sa/ 隔离；ZA→BP3D Kabsch。分组教学对象，非逐间隙分条；非完整足静脉图谱。",
+    "placeholder": false
+  },
+  {
+    "id": "long_plantar_ligament",
+    "meshNames": [
+      "Long_Plantar_Ligament_R",
+      "Ligamentum_plantare_longum_Right"
+    ],
+    "layer": "ligament",
+    "nameZh": "跖长韧带",
+    "nameLa": "Ligamentum plantare longum",
+    "summaryZh": "足底深层长韧带（BP3D 右足 elemental FJ1424 / BP5093，CC BY 4.0）。起自跟骨跖面，向前止于骰骨与跖骨基底，参与维持外侧纵弓，并形成腓骨长肌腱通道的一部分。教学意义：与足底腱膜区分（足底腱膜见 Open3D BY-SA 条目）。BP3D 仍无 ATFL/CFL/三角韧带等 elemental；外侧踝与弹簧韧带/足底腱膜由 Open3DModel lower-limb 以 CC BY-SA 隔离提供（非主树 CC BY 主张）。TA2：A03.6.10.517（近似）。教学级示意，非手术导航级配准。",
+    "placeholder": false
+  },
+  {
+    "id": "calcaneal_tendon",
+    "meshNames": [
+      "Calcaneal_Tendon_R",
+      "Tendo_calcaneus_Right",
+      "Achilles_Tendon_R"
+    ],
+    "layer": "ligament",
+    "nameZh": "跟腱",
+    "nameLa": "Tendo calcaneus",
+    "summaryZh": "跟腱（BP3D 右足 elemental FJ1405 / BP5098 / FMA258847，CC BY 4.0）。由腓肠肌与比目鱼肌肌腱汇合形成，止于跟骨结节。教学归类：置于「韧带/腱」图层，明确标注为**肌腱**（非韧带）。临床：跟腱断裂、止点病、Haglund 畸形相关。TA2：A04.7.02.002（近似）。教学级示意，非手术导航级配准。",
+    "placeholder": false
+  },
+  {
+    "id": "anterior_talofibular_ligament",
+    "meshNames": [
+      "Anterior_Talofibular_Ligament_R",
+      "Ligamentum_talofibulare_anterius_Right"
+    ],
+    "layer": "ligament",
+    "nameZh": "距腓前韧带",
+    "nameLa": "Ligamentum talofibulare anterius",
+    "summaryZh": "踝关节外侧复合体最常损伤的韧带（Open3DModel lower-limb Anterior_talofibular_ligament.r，CC BY-SA 4.0，by-sa/ 隔离）。连接外踝前缘与距骨颈外侧。教学：内翻扭伤首发结构。Kabsch 对齐至 BP3D mm（同 DI/近端动脉 transform，均值残差约 2.6 mm）。非 BP3D CC BY 主树；非完整韧带图谱。TA2：A03.6.10.002（近似）。",
+    "placeholder": false
+  },
+  {
+    "id": "calcaneofibular_ligament",
+    "meshNames": [
+      "Calcaneofibular_Ligament_R",
+      "Ligamentum_calcaneofibulare_Right"
+    ],
+    "layer": "ligament",
+    "nameZh": "跟腓韧带",
+    "nameLa": "Ligamentum calcaneofibulare",
+    "summaryZh": "外侧踝复合体第二韧带（Open3DModel Calcaneofibular_ligament.r，CC BY-SA 4.0，by-sa/）。外踝尖至跟骨外侧面；内翻时与 ATFL 协同。教学级 Kabsch→BP3D；非手术配准。TA2：A03.6.10.003（近似）。",
+    "placeholder": false
+  },
+  {
+    "id": "plantar_calcaneonavicular_ligament",
+    "meshNames": [
+      "Plantar_Calcaneonavicular_Ligament_R",
+      "Ligamentum_calcaneonaviculare_plantare_Right",
+      "Spring_Ligament_R"
+    ],
+    "layer": "ligament",
+    "nameZh": "足底跟舟韧带（弹簧韧带）",
+    "nameLa": "Ligamentum calcaneonaviculare plantare",
+    "summaryZh": "维持内侧纵弓的关键韧带（Open3DModel Plantar_calcaneonavicular_ligament.r，CC BY-SA 4.0，by-sa/）。跟骨载距突至舟骨跖面，承托距骨头。教学：平足/弹簧韧带复合体损伤相关。Kabsch→BP3D mm。非完整足弓韧带集。TA2：A03.6.10.204（近似）。",
+    "placeholder": false
+  },
+  {
+    "id": "plantar_aponeurosis",
+    "meshNames": [
+      "Plantar_Aponeurosis_R",
+      "Aponeurosis_plantaris_Right",
+      "Plantar_Fascia_R"
+    ],
+    "layer": "ligament",
+    "nameZh": "足底腱膜",
+    "nameLa": "Aponeurosis plantaris",
+    "summaryZh": "足底深层致密腱膜（Open3DModel Plantar_aponeurosis.r，CC BY-SA 4.0，by-sa/）。起自跟骨结节，向前分束至趾。教学：足底筋膜炎、Windlass 机制。BP3D ISA 无此 elemental；本网格非 CC BY 主树。Kabsch→BP3D mm。仍非「完整」软组织图谱。TA2：A04.7.03.031（近似）。",
+    "placeholder": false
+  },
+  {
+    "id": "tibionavicular_ligament",
+    "meshNames": [
+      "Tibionavicular_Ligament_R",
+      "Ligamentum_tibionaviculare_Right"
+    ],
+    "layer": "ligament",
+    "nameZh": "胫舟韧带",
+    "nameLa": "Ligamentum tibionaviculare",
+    "summaryZh": "三角韧带浅层前部（Open3D Tibionavicular_ligament.r，CC BY-SA 4.0，by-sa/）。内踝至舟骨。教学：三角韧带复合体之一。Kabsch→BP3D mm。非完整三角韧带图谱。",
+    "placeholder": false
+  },
+  {
+    "id": "tibiocalcaneal_ligament",
+    "meshNames": [
+      "Tibiocalcaneal_Ligament_R",
+      "Ligamentum_tibiocalcaneum_Right"
+    ],
+    "layer": "ligament",
+    "nameZh": "胫跟韧带",
+    "nameLa": "Ligamentum tibiocalcaneum",
+    "summaryZh": "三角韧带浅层中部（Open3D Tibiocalcaneal_ligament.r，CC BY-SA 4.0，by-sa/）。内踝至跟骨载距突。教学：三角韧带复合体之一。Kabsch→BP3D mm。",
+    "placeholder": false
+  },
+  {
+    "id": "posterior_tibiotalar_ligament",
+    "meshNames": [
+      "Posterior_Tibiotalar_Ligament_R",
+      "Ligamentum_tibiotalare_posterius_Right"
+    ],
+    "layer": "ligament",
+    "nameZh": "胫距后韧带",
+    "nameLa": "Ligamentum tibiotalare posterius",
+    "summaryZh": "三角韧带深层后部（Open3D Posterior_tibiotalar_ligament.r，CC BY-SA 4.0，by-sa/）。内踝至距骨后内侧。教学：三角韧带复合体之一。Kabsch→BP3D mm。",
+    "placeholder": false
+  },
+  {
+    "id": "anterior_tibiotalar_ligament",
+    "meshNames": [
+      "Anterior_Tibiotalar_Ligament_R",
+      "Tibiospring_Ligament_R",
+      "Ligamentum_tibiotalare_anterius_Right"
+    ],
+    "layer": "ligament",
+    "nameZh": "胫距前韧带（胫弹簧韧带）",
+    "nameLa": "Ligamentum tibiotalare anterius",
+    "summaryZh": "三角韧带前/深部（Open3D Anterior_tibiotalar_ligament_(Tibiospring_lig.).r，CC BY-SA 4.0，by-sa/）。教学命名含 tibiospring。Kabsch→BP3D mm。非完整三角韧带。",
+    "placeholder": false
+  },
+  {
+    "id": "plantar_calcaneocuboid_ligament",
+    "meshNames": [
+      "Plantar_Calcaneocuboid_Ligament_R",
+      "Short_Plantar_Ligament_R",
+      "Ligamentum_calcaneocuboideum_plantare_Right"
+    ],
+    "layer": "ligament",
+    "nameZh": "足底跟骰韧带（跖短韧带）",
+    "nameLa": "Ligamentum calcaneocuboideum plantare",
+    "summaryZh": "短跖韧带（Open3D Plantar_calcaneocuboid_ligament.r，CC BY-SA 4.0，by-sa/）。跟骨至骰骨跖面；与跖长韧带协同。BP3D 仅有长跖韧带 elemental。Kabsch→BP3D mm。",
+    "placeholder": false
+  },
+  {
+    "id": "bifurcate_ligament",
+    "meshNames": [
+      "Bifurcate_Ligament_R",
+      "Ligamentum_bifurcatum",
+      "Chopart_Ligament"
+    ],
+    "layer": "ligament",
+    "nameZh": "分歧韧带",
+    "nameLa": "Ligamentum bifurcatum",
+    "summaryZh": "分歧韧带（Open3D Bifurcatum_ligament，无 .r 后缀但质心在右足簇，CC BY-SA 4.0，by-sa/）。跟骨至舟骨/骰骨（Y 形）。Chopart 关节稳定相关。教学级 Kabsch→BP3D。",
+    "placeholder": false
+  },
+  {
+    "id": "posterior_talofibular_ligament",
+    "meshNames": [
+      "Posterior_Talofibular_Ligament_R",
+      "Ligamentum_talofibulare_posterius_Right"
+    ],
+    "layer": "ligament",
+    "nameZh": "距腓后韧带",
+    "nameLa": "Ligamentum talofibulare posterius",
+    "summaryZh": "外侧踝复合体第三韧带（Open3D Posterior_talofibular_ligament.r，CC BY-SA 4.0，by-sa/）。外踝至距骨后外侧突。与 ATFL/CFL 同层教学。Kabsch→BP3D mm。",
+    "placeholder": false
+  },
+  {
+    "id": "cuneometatarsal_interosseous_ligaments",
+    "meshNames": [
+      "Cuneometatarsal_Interosseous_Ligaments_R",
+      "Lisfranc_Ligament_Complex_R"
+    ],
+    "layer": "ligament",
+    "nameZh": "楔跖骨间韧带（Lisfranc 样分组）",
+    "nameLa": "Ligamenta cuneometatarsalia interossea",
+    "summaryZh": "楔骨–跖骨骨间韧带带（Open3D Cuneometatarsal_interosseus_ligaments.r，CC BY-SA 4.0，by-sa/）。Lisfranc 复合体教学示意——分组网格，非逐条解剖命名分拆。Kabsch→BP3D mm。",
+    "placeholder": false
+  },
+  {
+    "id": "dorsal_tarsometatarsal_ligaments",
+    "meshNames": [
+      "Dorsal_Tarsometatarsal_Ligaments_R"
+    ],
+    "layer": "ligament",
+    "nameZh": "背侧跗跖韧带（分组）",
+    "nameLa": "Ligamenta tarsometatarsalia dorsalia",
+    "summaryZh": "背侧跗跖韧带带（Open3D Dorsal_tarsometatarsal_ligaments.r，CC BY-SA 4.0，by-sa/）。Lisfranc 关节背侧稳定相关。分组网格。Kabsch→BP3D mm。",
+    "placeholder": false
+  },
+  {
+    "id": "plantar_tarsometatarsal_ligaments",
+    "meshNames": [
+      "Plantar_Tarsometatarsal_Ligaments_R"
+    ],
+    "layer": "ligament",
+    "nameZh": "跖侧跗跖韧带（分组）",
+    "nameLa": "Ligamenta tarsometatarsalia plantaria",
+    "summaryZh": "跖侧跗跖韧带带（Open3D Plantar_tarsometatarsal_ligaments.r，CC BY-SA 4.0，by-sa/）。Lisfranc 关节跖侧。分组网格。Kabsch→BP3D mm。",
+    "placeholder": false
+  },
+  {
+    "id": "flexor_retinaculum_of_ankle",
+    "meshNames": [
+      "Flexor_Retinaculum_of_Ankle_R",
+      "Laciniate_Ligament_R"
+    ],
+    "layer": "ligament",
+    "nameZh": "屈肌支持带",
+    "nameLa": "Retinaculum musculorum flexorum",
+    "summaryZh": "踝屈肌支持带（Open3D Flexor_retinaculum_of_ankle.r，CC BY-SA 4.0，by-sa/）。覆盖跖管。教学：支持带（非韧带本体）。Kabsch→BP3D mm。",
+    "placeholder": false
+  },
+  {
+    "id": "superior_extensor_retinaculum",
+    "meshNames": [
+      "Superior_Extensor_Retinaculum_of_Ankle_R"
+    ],
+    "layer": "ligament",
+    "nameZh": "伸肌上支持带",
+    "nameLa": "Retinaculum musculorum extensorum superius",
+    "summaryZh": "踝伸肌上支持带（Open3D Superior_extensor_retinaculum_of_ankle.r，CC BY-SA 4.0，by-sa/）。远端胫腓前方。教学：支持带。Kabsch→BP3D mm；质心略近端于足骨簇属预期。",
+    "placeholder": false
+  },
+  {
+    "id": "inferior_extensor_retinaculum",
+    "meshNames": [
+      "Inferior_Extensor_Retinaculum_R"
+    ],
+    "layer": "ligament",
+    "nameZh": "伸肌下支持带",
+    "nameLa": "Retinaculum musculorum extensorum inferius",
+    "summaryZh": "踝伸肌下支持带（Open3D Inferior_extensor_retinaculum.r，CC BY-SA 4.0，by-sa/）。Y/X 形跨足背。教学：支持带。Kabsch→BP3D mm。",
+    "placeholder": false
+  },
+  {
+    "id": "superior_fibular_retinaculum",
+    "meshNames": [
+      "Superior_Fibular_Retinaculum_R",
+      "Superior_Peroneal_Retinaculum_R"
+    ],
+    "layer": "ligament",
+    "nameZh": "腓骨肌上支持带",
+    "nameLa": "Retinaculum musculorum fibularium superius",
+    "summaryZh": "腓骨肌上支持带（Open3D Superior_fibular_retinaculum.r，CC BY-SA 4.0，by-sa/）。外踝后方。教学：支持带。Kabsch→BP3D mm。",
+    "placeholder": false
+  },
+  {
+    "id": "inferior_fibular_retinaculum",
+    "meshNames": [
+      "Inferior_Fibular_Retinaculum_R",
+      "Inferior_Peroneal_Retinaculum_R"
+    ],
+    "layer": "ligament",
+    "nameZh": "腓骨肌下支持带",
+    "nameLa": "Retinaculum musculorum fibularium inferius",
+    "summaryZh": "腓骨肌下支持带（Open3D Inferior_fibular_retinaculum.r，CC BY-SA 4.0，by-sa/）。跟骨外侧面。教学：支持带。Kabsch→BP3D mm。",
+    "placeholder": false
+  },
+  {
+    "id": "interosseous_talocalcaneal_ligament",
+    "meshNames": [
+      "Interosseous_Talocalcaneal_Ligament_R",
+      "Ligamentum_talocalcaneum_interosseum_Right"
+    ],
+    "layer": "ligament",
+    "nameZh": "距跟骨间韧带",
+    "nameLa": "Ligamentum talocalcaneum interosseum",
+    "summaryZh": "距下关节骨间韧带（Open3D Interosseus_talocalcaneal_ligament.r，CC BY-SA 4.0，by-sa/）。位于跗骨窦，连接距骨与跟骨。教学：距下关节稳定/跗骨窦综合征相关。Kabsch→BP3D mm（均值残差约 2.6 mm）。教学示意，非手术配准；非完整距跟韧带集。",
+    "placeholder": false
+  },
+  {
+    "id": "cervical_talocalcaneal_ligament",
+    "meshNames": [
+      "Cervical_Talocalcaneal_Ligament_R",
+      "Anterior_Talocalcaneal_Ligament_R",
+      "Ligamentum_cervicale_Right"
+    ],
+    "layer": "ligament",
+    "nameZh": "颈韧带（距跟前韧带）",
+    "nameLa": "Ligamentum cervicale (talocalcaneum anterius)",
+    "summaryZh": "颈韧带 / 距跟前韧带（Open3D Cervical_ligament_(anterior_talocalcaneal_ligament).r，CC BY-SA 4.0，by-sa/）。距骨颈至跟骨前背侧。教学：距下前外侧稳定。Kabsch→BP3D mm。教学级；非完整距跟韧带图谱。",
+    "placeholder": false
+  },
+  {
+    "id": "talonavicular_ligament",
+    "meshNames": [
+      "Talonavicular_Ligament_R",
+      "Ligamentum_talonaviculare_Right"
+    ],
+    "layer": "ligament",
+    "nameZh": "距舟韧带",
+    "nameLa": "Ligamentum talonaviculare",
+    "summaryZh": "背侧距舟韧带（Open3D Talonavicular_ligament.r，CC BY-SA 4.0，by-sa/）。距骨颈至舟骨背侧面。教学：Chopart/距舟关节背侧稳定；足底跟舟（弹簧）韧带已另列。Kabsch→BP3D mm。教学示意。",
+    "placeholder": false
+  },
+  {
+    "id": "deep_transverse_metatarsal_ligament",
+    "meshNames": [
+      "Deep_Transverse_Metatarsal_Ligament_R",
+      "Ligamentum_metatarsale_transversum_profundum_Right"
+    ],
+    "layer": "ligament",
+    "nameZh": "跖骨深横韧带",
+    "nameLa": "Ligamentum metatarsale transversum profundum",
+    "summaryZh": "跖骨头间深横韧带带（Open3D Deep_transverse_metatarsal_ligament.r，CC BY-SA 4.0，by-sa/）。连接相邻跖骨头跖板。教学：前足横弓/MTP 稳定相关。分组带状网格。Kabsch→BP3D mm。教学级，非手术配准。",
+    "placeholder": false
+  },
+  {
+    "id": "intercuneiform_interosseous_ligaments",
+    "meshNames": [
+      "Intercuneiform_Interosseous_Ligaments_R",
+      "Ligamenta_intercuneiformia_interossea_Right"
+    ],
+    "layer": "ligament",
+    "nameZh": "楔骨间骨间韧带（分组）",
+    "nameLa": "Ligamenta intercuneiformia interossea",
+    "summaryZh": "内侧/中间/外侧楔骨之间的骨间韧带带（Open3D Intercuneiform_interosseus_ligaments.r，CC BY-SA 4.0，by-sa/）。教学：中足楔骨复合体稳定。分组网格，非逐条分拆。Kabsch→BP3D mm。",
+    "placeholder": false
+  },
+  {
+    "id": "dorsal_cuneonavicular_ligaments",
+    "meshNames": [
+      "Dorsal_Cuneonavicular_Ligaments_R",
+      "Ligamenta_cuneonavicularia_dorsalia_Right"
+    ],
+    "layer": "ligament",
+    "nameZh": "背侧楔舟韧带（分组）",
+    "nameLa": "Ligamenta cuneonavicularia dorsalia",
+    "summaryZh": "舟骨与三楔骨背侧韧带带（Open3D Dorsal_cuneonavicular_ligaments.r，CC BY-SA 4.0，by-sa/）。教学：中足背侧稳定。分组网格。Kabsch→BP3D mm。跖侧楔舟未在本 pass 纳入。",
+    "placeholder": false
+  },
+  {
+    "id": "medial_talocalcaneal_ligament",
+    "meshNames": [
+      "Medial_Talocalcaneal_Ligament_R",
+      "Ligamentum_talocalcaneum_mediale_Right"
+    ],
+    "layer": "ligament",
+    "nameZh": "内侧距跟韧带",
+    "nameLa": "Ligamentum talocalcaneum mediale",
+    "summaryZh": "内侧距跟韧带（Open3D Medial_talocalcaneal_ligament.r，CC BY-SA 4.0，by-sa/）。连接距骨与跟骨内侧。教学：距下内侧稳定（与三角韧带深层相关教学对照）。Kabsch→BP3D mm（Day 4v 附着 QA 接受：距骨最近点约 17.4 mm）。教学示意；非完整距跟韧带集。",
+    "placeholder": false
+  },
+  {
+    "id": "dorsal_intercuneiform_ligaments",
+    "meshNames": [
+      "Dorsal_Intercuneiform_Ligaments_R",
+      "Ligamenta_intercuneiformia_dorsalia_Right"
+    ],
+    "layer": "ligament",
+    "nameZh": "背侧楔间韧带（分组）",
+    "nameLa": "Ligamenta intercuneiformia dorsalia",
+    "summaryZh": "三楔骨背侧楔间韧带带（Open3D Dorsal_intercuneiform_ligaments.r，CC BY-SA 4.0，by-sa/）。教学：中足背侧楔骨复合体稳定。分组网格，非逐条分拆。Kabsch→BP3D mm（Day 4v 附着 QA 接受：中间楔骨约 9.0 mm）。",
+    "placeholder": false
+  },
+  {
+    "id": "medial_dorsal_cutaneous_nerve",
+    "meshNames": [
+      "Medial_Dorsal_Cutaneous_Nerve_R",
+      "N_Cutaneus_Dorsalis_Medialis_Right"
+    ],
+    "layer": "nerve",
+    "nameZh": "足背内侧皮神经",
+    "nameLa": "N. cutaneus dorsalis medialis",
+    "summaryZh": "腓浅神经在足背的内侧终支（教学网格）。分布于足背内侧与踇趾/第2趾背侧邻近皮肤。临床：足背内侧切口、踇外翻/第1跖楔关节手术需保护；与腓深神经第1趾蹼皮支毗邻。网格：Open3D BY-SA，Kabsch→BP3D；教学皮支路径，非手术导航级。",
+    "placeholder": false
+  },
+  {
+    "id": "lateral_dorsal_cutaneous_nerve",
+    "meshNames": [
+      "Lateral_Dorsal_Cutaneous_Nerve_R",
+      "N_Cutaneus_Dorsalis_Lateralis_Right"
+    ],
+    "layer": "nerve",
+    "nameZh": "足背外侧皮神经",
+    "nameLa": "N. cutaneus dorsalis lateralis",
+    "summaryZh": "腓肠神经在足外侧缘的延续（亦称足背外侧皮神经；教学网格）。分布于足背外侧、外踝周围与第5趾外侧皮肤。临床：外踝/跟腱外侧切口与足外侧柱手术常累及；与腓肠神经干连续。网格：Open3D BY-SA，Kabsch→BP3D。连续性注：Open3D 另有命名对象 Sural_nerve,_Lateral_dorsal_cutaneous_nerve.r（过渡段，顶点数与 LDC/腓肠干均不相交，Jaccard=0）；本 pass 不另接线以免与 Z-Anatomy 腓肠干 + Open3D LDC 双源重叠，教学上以本条目为腓肠→LDC 延续说明。",
+    "placeholder": false
+  },
+  {
+    "id": "medial_calcaneal_branches",
+    "meshNames": [
+      "Medial_Calcaneal_Branches_R",
+      "Rr_Calcanei_Mediales_N_Tibialis_Right"
+    ],
+    "layer": "nerve",
+    "nameZh": "胫神经跟内侧支",
+    "nameLa": "Rr. calcanei mediales (n. tibialis)",
+    "summaryZh": "胫神经在内踝后方/跖管近端发出的跟内侧皮支（教学网格）。分布于足跟内侧与足底近侧皮肤。临床：跟骨内侧切口、跟痛症与跖管综合征相关皮支；跟骨结节内侧穿刺/手术需保护。网格：Open3D BY-SA，Kabsch→BP3D。",
+    "placeholder": false
+  },
+  {
+    "id": "lateral_calcaneal_nerves",
+    "meshNames": [
+      "Lateral_Calcaneal_Nerves_R",
+      "Nn_Calcanei_Laterales_Right"
+    ],
+    "layer": "nerve",
+    "nameZh": "跟外侧神经",
+    "nameLa": "Nn. calcanei laterales",
+    "summaryZh": "腓肠神经（或相关外侧皮支）发出的跟外侧支（教学网格）。分布于足跟外侧皮肤。临床：跟骨外侧切口、跟腱止点手术与外踝后切口需保护；跟外侧感觉障碍可定位腓肠系统。网格：Open3D BY-SA，Kabsch→BP3D。",
+    "placeholder": false
+  },
+  {
+    "id": "superficial_branch_lateral_plantar_nerve",
+    "meshNames": [
+      "Superficial_Branch_Lateral_Plantar_Nerve_R",
+      "R_Superficialis_N_Plantaris_Lateralis_Right"
+    ],
+    "layer": "nerve",
+    "nameZh": "足底外侧神经浅支",
+    "nameLa": "R. superficialis nervi plantaris lateralis",
+    "summaryZh": "足底外侧神经的浅支（教学网格）。肌支可至小趾展肌等外侧浅层肌；皮支参与外侧趾足底总/固有神经。与深支分工：浅支偏皮肤与浅层肌，深支偏骨间肌等深层。临床：外侧柱/小趾展肌区手术需辨认。网格：Open3D BY-SA，Kabsch→BP3D；与已接线深支并列教学。",
+    "placeholder": false
+  },
+  {
+    "id": "dorsal_digital_superficial_fibular",
+    "meshNames": [
+      "Dorsal_Digital_Branches_Superficial_Fibular_R",
+      "Nn_Digitales_Dorsales_N_Fibularis_Superficialis_Right"
+    ],
+    "layer": "nerve",
+    "nameZh": "腓浅神经足背趾支（组合）",
+    "nameLa": "Nn. digitales dorsales (ex n. fibularis superficialis)",
+    "summaryZh": "腓浅神经在足背发出的趾背神经（教学组合网格）。分布于第2–5趾背侧大部分皮肤（第1趾蹼背侧主要由腓深神经支配）。临床：足背多趾切口、甲沟/趾背手术需保护；与腓深神经第1趾蹼皮支形成分界。网格：Open3D BY-SA，Kabsch→BP3D；分组对象，非逐趾 elemental。腓深神经背侧趾支见 dorsal_digital_deep_fibular。",
+    "placeholder": false
+  },
+  {
+    "id": "dorsal_digital_deep_fibular",
+    "meshNames": [
+      "Dorsal_Digital_Branches_Deep_Fibular_R",
+      "Nn_Digitales_Dorsales_N_Fibularis_Profundus_Right"
+    ],
+    "layer": "nerve",
+    "nameZh": "腓深神经足背趾支（组合）",
+    "nameLa": "Nn. digitales dorsales (ex n. fibularis profundus)",
+    "summaryZh": "腓深神经在足背发出的趾背神经（教学组合网格）。主要分布于第1趾蹼背侧皮肤（踇趾外侧与第2趾内侧），是腓深神经最重要的皮支终末。临床：前跗管综合征、第1趾蹼切口与踇外翻/第1–2跖骨间手术需保护；与腓浅神经足背趾支形成感觉分界。网格：Open3D BY-SA，Kabsch→BP3D；分组对象，非逐趾 elemental。",
+    "placeholder": false
+  }
+]

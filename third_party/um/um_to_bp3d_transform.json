@@ -1,0 +1,131 @@
+{
+  "method": "Kabsch similarity; landmarks Calcaneus/Talus/Navicular/Cuboid/Medial+Intermediate+Lateral Cuneiform (UM bone STLs vs BP3D GLB centroids)",
+  "source_frame": "UM Asian Male LE MSK CT/segmentation (STL units treated as mm)",
+  "target_frame": "BodyParts3D right-foot mm",
+  "scale": 0.8419571910544764,
+  "R": [
+    [
+      0.8752896363396413,
+      -0.04763367143586757,
+      0.4812474268626883
+    ],
+    [
+      -0.201200080959023,
+      0.8690517276789391,
+      0.45195975710270253
+    ],
+    [
+      -0.43975741032812765,
+      -0.49242271268067167,
+      0.7510880721311638
+    ]
+  ],
+  "t_mm": [
+    262.2170725257259,
+    151.01686893259307,
+    432.599639004314
+  ],
+  "mean_residual_mm": 2.222397630411842,
+  "max_residual_mm": 4.380945693310509,
+  "per_landmark_residual_mm": {
+    "calcaneus": 3.5617673328502026,
+    "talus": 4.380945693310509,
+    "navicular": 2.423001671812622,
+    "cuboid": 0.5613906834394807,
+    "cuneiform_medial": 1.6772167305150762,
+    "cuneiform_intermediate": 1.2511094661663764,
+    "cuneiform_lateral": 1.7013518347886252
+  },
+  "landmarks_um_mm": {
+    "calcaneus": [
+      -51.64734714218343,
+      71.54833172874217,
+      -731.3771467946597
+    ],
+    "talus": [
+      -60.0222854489031,
+      40.64854676689351,
+      -712.6019983830512
+    ],
+    "navicular": [
+      -57.36513280435042,
+      16.489782006776693,
+      -738.5311687307646
+    ],
+    "cuboid": [
+      -69.71673826112873,
+      36.203997180439956,
+      -760.2841008788698
+    ],
+    "cuneiform_medial": [
+      -48.41829967024731,
+      3.989502054931118,
+      -757.3780377750509
+    ],
+    "cuneiform_intermediate": [
+      -64.24609068084062,
+      6.506207260038019,
+      -752.5115770989397
+    ],
+    "cuneiform_lateral": [
+      -70.90263808230331,
+      18.24210734556918,
+      -758.2993165597148
+    ]
+  },
+  "landmarks_bp3d_mm": {
+    "calcaneus": [
+      -75.79230584956312,
+      -66.53015108327904,
+      -36.9831225042898
+    ],
+    "talus": [
+      -71.00513663550316,
+      -78.84843226371727,
+      -16.585657255565792
+    ],
+    "navicular": [
+      -79.70068816300277,
+      -107.36271813361199,
+      -17.786879518529872
+    ],
+    "cuboid": [
+      -98.89928026006147,
+      -99.68567606889081,
+      -37.79964655670672
+    ],
+    "cuneiform_medial": [
+      -80.88571028050369,
+      -127.32624865276057,
+      -29.03927039169684
+    ],
+    "cuneiform_intermediate": [
+      -91.0583963394165,
+      -119.91377798716228,
+      -23.15708017349243
+    ],
+    "cuneiform_lateral": [
+      -97.57183457386644,
+      -112.93406576808495,
+      -29.70516617449024
+    ]
+  },
+  "muscles_baked": [
+    "abductor_hallucis",
+    "flexor_digitorum_brevis",
+    "abductor_digiti_minimi",
+    "quadratus_plantae",
+    "extensor_digitorum_brevis",
+    "tibialis_posterior",
+    "flexor_digitorum_longus",
+    "flexor_hallucis_longus"
+  ],
+  "note": "Baked into muscle GLB POSITION (+NORMAL rotation). Render scale remains 0.01. Teaching-grade, not surgical registration.",
+  "also_baked": [
+    "tibialis_anterior.glb",
+    "peroneus_longus.glb",
+    "extensor_digitorum_longus.glb",
+    "extensor_hallucis_longus.glb"
+  ],
+  "also_baked_note": "Day 4n: teaching extrinsics were on raw UM frame; rebaked with same Kabsch as Day 4l 8 muscles; raw copies under third_party/um/raw_pre_kabsch/"
+}
