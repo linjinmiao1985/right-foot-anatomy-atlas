@@ -345,3 +345,10 @@ When ending a run, update:
 **NOT claiming**: "Finished product", "Journal-ready", "100% coverage possible"  
 **Accurate status**: "Week 1-2 quality sprint: ~95% real coverage; DI blocked by licensing; 2 proximal vessels out of foot-proper scope"
 
+
+
+---
+
+## Day 4bl note (2026-09-21)
+
+Cloud Agent still usage-blocked; local soft dig **#84–#89** — soft gaps (DI / per-ray MTA / nerve·ligament CC0/BY) **still dry**; **0** mesh wire. Census freeze unchanged (**129/124**). Next: keep mining CC0/BY; resume Cloud Agent when on-demand usage enabled; do **not** force-wire Andreassen/Henson/ScanTW-NC. **No finished-product claim.**
