@@ -200,3 +200,16 @@ Distinct from Sheffield Figshare **9934055** (**CC BY-NC** STL pack — already 
 | Andreassen / Utah / Henson wire | **Skipped** / not re-opened / **0** wire |
 | Meshes integrated | **0** |
 | Cloud Agent | Still **quota-blocked** (local docs takeover) |
+
+
+## Day 4bl dig summary
+
+| Check | Result |
+|-------|--------|
+| New CC0/BY soft packs for DI / per-ray MTA / nerves / ligaments | **None** — #84 NC; #85/#86 SA already covered; #87 proprietary; #88 opaque; #89 skin PLY only |
+| Gastroc/soleus | No new belly surface; Andreassen/Henson still **blocked** |
+| Tempting false leads | Scan-the-World united foot muscle GLB (**NC**); CRUS/Air-Sage = ZA/Open3D SA |
+| Andreassen / Utah / Henson wire | **Skipped** / not re-opened / **0** wire |
+| Cloud Agent | Still **quota / usage blocked** |
+
+Watchlist still tracks where a true **CC0/BY** soft find would matter. Day **4bl** confirms soft gaps remain **dry**. Handback: `docs/cloud-agent-handback.md`. **No finished-product claim**.
