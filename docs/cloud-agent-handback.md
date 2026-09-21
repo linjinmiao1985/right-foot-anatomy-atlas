@@ -1,3 +1,7 @@
+## Day 4bl status addendum (2026-09-21)
+
+Soft dig **#84–#89** (ScanTW NC foot muscles; CRUS / Air-Sage UX-borrow SA; AnyBody proprietary; SimTK kul license opaque; CC0 outer-foot PLYs). Soft gaps **still dry**. **0** mesh wire. Cloud Agent reply still **usage-exhausted** — enable on-demand usage to relaunch `bc-4d6d86a7-…` or a new agent on `cursor/right-foot-anatomy-atlas-mvp-af85`. Teaching atlas in progress — **no finished-product claim**.
+
 ## Day 4bk status addendum (2026-09-18)
 
 Docs-only soft dig **#77–#83** + `docs/belly-registration-alternatives.md` (why single-similarity Kabsch fails; TPS / two-stage / BP3D-native options — research notes only). Soft gaps **still dry**. **0** mesh wire. Andreassen/Henson **not** force-wired. **Cloud Agent still quota-blocked** — local takeover continues. Teaching atlas in progress — **no finished-product claim**.
