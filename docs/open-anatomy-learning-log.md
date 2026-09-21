@@ -1424,3 +1424,39 @@ Cloud Agent quota still exhausted; local docs-only takeover. Soft-gap dig for DI
 - **0** meshes integrated; **0** SA spam; Andreassen/Henson **not** force-wired.
 - Cloud Agent still **quota-blocked**.
 - **No finished-product claim.**
+
+
+## Session additions (2026-09-21 · Day 4bl — soft dig #84+; Cloud Agent still quota-blocked)
+
+### Context
+
+Weekday automation. Cloud Agent `bc-4d6d86a7-…` still **error / usage exhausted** (reply refused). Local docs-only soft dig for DI / per-ray MTA / nerve·ligament **CC0/BY**. **0** mesh wire. **No finished-product claim.**
+
+### NEW license-verified projects (≥4; #84–#89)
+
+| # | Project | URL / DOI | License verified | Foot relevance | Decision |
+|---|---------|-----------|------------------|----------------|----------|
+| **84** | **Scan-the-World — Muscles of the foot and ankle** | Zenodo DOI **10.5281/zenodo.21527865** (also **21354714**) | Zenodo API `license.id` = **cc-by-nc-sa-4.0** verified 2026-09-21 | Right foot/ankle **united** CT-derived muscle GLB (tempting soft pack) — **NC** blocks main-tree teaching reuse | **reject** (NC). Do **not** wire; do **not** treat as DI/per-ray MTA fill |
+| **85** | **CRUS — lower leg & foot atlas** (HolsteredSoul/crus-atlas) | https://github.com/HolsteredSoul/crus-atlas | `LICENSE.md`: app/scripts **MIT**; anatomy **CC BY-SA 4.0** (Z-Anatomy / BP3D upstream) verified 2026-09-21 | Vite+Three.js right leg/foot teaching UX (explode, disputed labels, clinical cards, provenance `extras`); only **~6** foot intrinsics — **not** complete DI/NV | **UX-borrow** (disputed/honesty labels, explode ideas). Meshes **isolate-SA** only — already covered by our `by-sa/` ZA/Open3D pack. **reject** re-integrate |
+| **86** | **Air-Sage / foot-anatomy** | https://github.com/Air-Sage/foot-anatomy | README: AnatomyTOOL **Open3DModel CC BY-SA 4.0** + Lucide ISC verified 2026-09-21 | Chinese Three.js 足踝 atlas UX (抽出/透视/标准视角); GLB = Open3D (already mined) | **UX-borrow** (ZH chrome). **isolate-SA**. **reject** duplicate Open3D wire |
+| **87** | **Glasgow–Maastricht Foot Model** (AnyBody/gm-foot) | https://github.com/AnyBody/gm-foot | `LICENCE.txt`: **AnyBody Technology SLA / AMMR** terms (not CC0/BY) verified 2026-09-21 | 26-segment MSK foot with muscles/ligaments — simulation scripts + `FootGMSkin.stl`, **not** libre elemental teaching GLBs | **reject** (proprietary SLA). **reject** DI/MTA source |
+| **88** | **KU Leuven CT extended dynamic foot** (SimTK kul_footmodel) | https://simtk.org/projects/kul_footmodel/ · group **1020** | Project page (fetched 2026-09-21): claims intrinsic muscles/ligaments; **no** SPDX / CC statement; **0** recorded downloads | CT-based biomechanical foot — license **opaque**; cannot integrate without clear CC0/BY | **reject** until license clarified. **monitor** only if owner publishes CC0/BY surfaces |
+| **89** | **Foot shape-function model data** (outer foot PLYs) | Zenodo DOI **10.5281/zenodo.10360304** | Zenodo API `license.id` = **cc-zero** verified 2026-09-21 | Population outer-foot **skin** PLYs (arch morphology) — **0** named DI / artery / nerve / ligament elementals | **reject** soft teaching mesh. Optional morphology reference only |
+
+**Also checked (not re-numbered)**: Zenodo **ImageCAS-X** (`21887809`, **cc-by-4.0**) = coronary CTA vessels — **reject** foot. Pottery “Foot” GLBs (**20166470** / **21243693**, **cc-by-nc-sa-4.0**) = archaeological artifact — **reject**. Statistical foot **bone** SSMs (**3464747**, **cc-by-4.0**) = osteology already **26/26**.
+
+### Soft-gap check
+
+| Gap | Day 4bl |
+|-----|---------|
+| DI / per-ray MTA / nerve·ligament CC0/BY | **Still dry** — #84 NC; #85/#86 SA already covered; #87 proprietary; #88 opaque; #89 skin-only |
+| Gastroc/soleus | Andreassen + Henson still **blocked**; no new CC0/BY belly surface pack this pass |
+| Utah Hive | Still **reject** — not re-opened |
+
+### Outcome
+
+- Learning log **#84–#89**; watchlist / handback / daily-log / week-plan Day 4bl.
+- Census unchanged (**129/124**; ontology **126/129**).
+- **0** meshes integrated; **0** SA spam; Andreassen/Henson/Utah **not** force-wired.
+- Cloud Agent still **quota-blocked** (usage exhausted — enable on-demand to relaunch).
+- **No finished-product claim.**
