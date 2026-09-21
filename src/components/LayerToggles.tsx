@@ -21,6 +21,14 @@ import {
   isGhostLayerOpacities,
   isSolidLayerOpacities,
 } from '../lib/layerOpacity';
+import {
+  EXPLODE_AMOUNT_MAX,
+  EXPLODE_AMOUNT_MIN,
+  EXPLODE_AMOUNT_STEP,
+  clampExplodeAmount,
+  isAssembledExplode,
+  isExplodePreset,
+} from '../lib/layerExplode';
 
 interface LayerTogglesProps {
   visibleLayers: Set<Layer>;
@@ -49,6 +57,10 @@ interface LayerTogglesProps {
   onLayerOpacityChange: (layer: Layer, opacity: number) => void;
   onGhostPreset: () => void;
   onSolidPreset: () => void;
+  explodeAmount: number;
+  onExplodeAmountChange: (amount: number) => void;
+  onExplodePreset: () => void;
+  onAssemblePreset: () => void;
 }
 
 /**
@@ -84,10 +96,16 @@ export default function LayerToggles({
   onLayerOpacityChange,
   onGhostPreset,
   onSolidPreset,
+  explodeAmount,
+  onExplodeAmountChange,
+  onExplodePreset,
+  onAssemblePreset,
 }: LayerTogglesProps) {
   const layers = getAllLayers();
   const ghostOn = isGhostLayerOpacities(layerOpacities);
   const solidOn = isSolidLayerOpacities(layerOpacities);
+  const explodeOn = isExplodePreset(explodeAmount);
+  const assembledOn = isAssembledExplode(explodeAmount);
 
   return (
     <div
@@ -392,6 +410,96 @@ export default function LayerToggles({
         })}
         <div style={{ fontSize: '9px', color: '#777', marginTop: '4px', lineHeight: 1.35 }}>
           覆盖软组织半透明以便观察骨骼。教学透视，<strong>非</strong>临床 X 线 / 透视。
+        </div>
+      </div>
+
+      <div
+        style={{
+          marginBottom: '12px',
+          padding: '8px',
+          background: explodeOn || (!assembledOn && explodeAmount > 0)
+            ? 'rgba(251, 191, 36, 0.12)'
+            : 'rgba(68, 68, 68, 0.35)',
+          border:
+            explodeOn || (!assembledOn && explodeAmount > 0)
+              ? '1px solid rgba(251, 191, 36, 0.45)'
+              : '1px solid #444',
+          borderRadius: '6px',
+        }}
+        role="group"
+        aria-label="教学抽出 Explode layers"
+        data-testid="teaching-explode"
+        title="UX-borrow: Air-Sage 抽出 + Human Atlas explode (ideas only) — not surgical dissection"
+      >
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '6px' }}>
+          <div style={{ fontSize: '11px', fontWeight: 600, color: '#d6d3d1' }}>
+            抽出 · Explode
+            <span style={{ fontWeight: 400, color: '#888', marginLeft: '6px' }}>E</span>
+          </div>
+          <div style={{ display: 'flex', gap: '4px' }}>
+            <button
+              type="button"
+              data-explode-preset="true"
+              onClick={onExplodePreset}
+              aria-pressed={explodeOn}
+              title="按层沿 +Y 分开，便于看夹层（教学抽出，非手术剥离）"
+              style={{
+                padding: '3px 8px',
+                fontSize: '11px',
+                cursor: 'pointer',
+                borderRadius: '4px',
+                border: explodeOn ? '1px solid #fbbf24' : '1px solid #555',
+                background: explodeOn ? 'rgba(251, 191, 36, 0.3)' : '#333',
+                color: explodeOn ? '#fef3c7' : '#ccc',
+              }}
+            >
+              抽出
+            </button>
+            <button
+              type="button"
+              data-explode-assemble="true"
+              onClick={onAssemblePreset}
+              aria-pressed={assembledOn}
+              title="合拢各层（默认）"
+              style={{
+                padding: '3px 8px',
+                fontSize: '11px',
+                cursor: 'pointer',
+                borderRadius: '4px',
+                border: assembledOn ? '1px solid #fbbf24' : '1px solid #555',
+                background: assembledOn ? 'rgba(251, 191, 36, 0.3)' : '#333',
+                color: assembledOn ? '#fef3c7' : '#ccc',
+              }}
+            >
+              合拢
+            </button>
+          </div>
+        </div>
+        <label
+          style={{
+            display: 'block',
+            fontSize: '10px',
+            color: '#9ca3af',
+          }}
+        >
+          幅度 · Amount
+          <span style={{ marginLeft: '6px', fontVariantNumeric: 'tabular-nums', color: '#fcd34d' }}>
+            {explodeAmount.toFixed(2)}
+          </span>
+          <input
+            type="range"
+            min={EXPLODE_AMOUNT_MIN}
+            max={EXPLODE_AMOUNT_MAX}
+            step={EXPLODE_AMOUNT_STEP}
+            value={explodeAmount}
+            onChange={(e) => onExplodeAmountChange(clampExplodeAmount(Number(e.target.value)))}
+            aria-label="教学抽出幅度 Explode amount"
+            data-explode-amount="true"
+            style={{ width: '100%', marginTop: '4px', cursor: 'pointer' }}
+          />
+        </label>
+        <div style={{ fontSize: '9px', color: '#777', marginTop: '4px', lineHeight: 1.35 }}>
+          骨为锚，韧带/肌/血管/神经沿 +Y 分层。教学抽出，<strong>非</strong>手术剥离。
         </div>
       </div>
 

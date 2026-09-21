@@ -1,7 +1,7 @@
 # Methods
 
 **Project**: Right Foot Anatomy Atlas (Teaching-Grade Interactive 3D)  
-**Version**: Week 2 Day 4bm / Phase 7 (teaching atlas in progress; see README + `docs/phase-7-self-review.md` live census; **129** entries / **124** unique; **53** main-tree / **71** BY-SA; ontology **126/129** citable with StructurePanel honest-empty notes; 134 discrete GLBs; expert-review checklist v2.0; mining through #94; Andreassen blocked — TA2 soft-tissue still incomplete — **not a finished product**)
+**Version**: Week 2 Day 4bn / Phase 7 (teaching atlas in progress; see README + `docs/phase-7-self-review.md` live census; **129** entries / **124** unique; **53** main-tree / **71** BY-SA; ontology **126/129** citable with StructurePanel honest-empty notes; 134 discrete GLBs; expert-review checklist v2.0; mining through #99; Andreassen blocked — TA2 soft-tissue still incomplete — **not a finished product**)
 **Date**: 2026-09-21  
 **Licenses**: Code MIT | Assets CC BY 4.0 / CC0 1.0 / CC BY-SA 4.0 (isolated)
 
@@ -607,3 +607,9 @@ Downloaded Andreassen VHM Final STLs (CC BY 4.0). Documented Kabsch + spatial QA
 2. Expert-review §A named ontology spot-checks locked in vitest (≥10).
 3. Open mining **#90–#94** — soft gaps still **dry**; **0** mesh wire; Andreassen/Henson skipped.
 4. Version pointer Day 4bm / Phase 7. **No finished-product claim.** Census unchanged.
+
+## Day 4bn — Teaching explode / 抽出 + mining #95–#99 (2026-09-21)
+
+1. **UX**: Per-layer explode (`layerExplode.ts`) + LayerToggles 抽出/合拢 + key **E** (Air-Sage 抽出 / ashemag Human Atlas explode habit — ideas only). Prefs persist `explodeAmount`. Teaching peel only — **not** surgical dissection.
+2. Open mining **#95–#99** — soft gaps still **dry**; **0** mesh wire; Andreassen/Henson skipped.
+3. Version pointer Day 4bn / Phase 7. **No finished-product claim.** Census unchanged.

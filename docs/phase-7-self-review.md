@@ -242,3 +242,10 @@ OMFAtlas schematic-vs-source honesty UX (`schematicHonesty` + StructurePanel + f
 - **Open mining**: **#90–#94**; soft gaps still **dry**; **0** mesh wire.
 - Expert-review §A named ontology spot-checks locked in vitest.
 - Cloud Agent **resumed**. Census unchanged **129/124**; ontology **126/129**. **No finished-product claim**.
+
+
+## Progress note (Day 4bn)
+
+- **Teaching polish**: layer explode / 抽出 (`layerExplode` + `E`); prefs persist; **not** surgical dissection.
+- **Open mining**: **#95–#99**; soft gaps still **dry**; **0** mesh wire.
+- Census unchanged **129/124**; ontology **126/129**. **No finished-product claim**.

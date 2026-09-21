@@ -1,8 +1,8 @@
 # CC0 / CC BY soft-tissue watchlist (monitor · not integrated)
 
-**Date**: 2026-09-18 · Day **4bk** / Phase 7  
+**Date**: 2026-09-21 · Day **4bn** / Phase 7  
 **Policy**: Prefer **CC0 / CC BY** main-tree replacements that shrink ShareAlike surface. Dig + verify license page / SPDX / Zenodo `license.id` **before** any wire. **Reject** NC, unclear “License: Model”, and All Rights Reserved. BY-SA only under `by-sa/` + NOTICE — do not spam SA volume for its own sake.  
-**Status**: Living watchlist — **0** new soft-tissue meshes integrated from this list as of Day **4bk**. Andreassen gastroc/soleus still **blocked** (Day 4az+4ba); Day 4bf Utah Hive **reject** bones; Day 4bg–4bj Henson **CC0** LE labels = **monitor** (path + feasibility + **Aug_8 MC POC**; BP3D align sketch **FAIL** Achilles — not wired); Day **4bk** dig **#77–#83** still **dry** for DI/MTA; belly registration alternatives documented (docs-only). Teaching atlas in progress — **not** a finished-product claim.
+**Status**: Living watchlist — **0** new soft-tissue meshes integrated from this list as of Day **4bn**. Andreassen gastroc/soleus still **blocked** (Day 4az+4ba); Day 4bf Utah Hive **reject** bones; Day 4bg–4bj Henson **CC0** LE labels = **monitor** (path + feasibility + **Aug_8 MC POC**; BP3D align sketch **FAIL** Achilles — not wired); Day **4bk–4bn** digs **#77–#99** still **dry** for DI/MTA; belly registration alternatives documented (docs-only). Teaching atlas in progress — **not** a finished-product claim.
 
 Companion: `docs/open-anatomy-learning-log.md` (#38–#83), `docs/belly-registration-alternatives.md`, `docs/phase-7-self-review.md`.
 
@@ -226,3 +226,16 @@ Watchlist still tracks where a true **CC0/BY** soft find would matter. Day **4bl
 | Cloud Agent | **Resumed** this pass |
 
 Watchlist still tracks where a true **CC0/BY** soft find would matter. Day **4bm** confirms soft gaps remain **dry**. Handback: `docs/cloud-agent-handback.md`. **No finished-product claim**.
+
+## Day 4bn dig summary
+
+| Check | Result |
+|-------|--------|
+| New CC0/BY soft packs for DI / per-ray MTA / nerves / ligaments | **None** — #95/#97 same BP3D pool; #96 trauma PNG/hip extracts; #98 ZA SA/NC; #99 game-skin CC0 |
+| Gastroc/soleus | No new belly surface; Andreassen/Henson still **blocked** |
+| Tempting false leads | sonuyadav 1774-structure atlas (foot ligaments present but **ZA SA** + NC warning); OpenGameArt CC0 outer foot |
+| Teaching polish | Layer **explode / 抽出** (`E`) — not a mesh integrate |
+| Andreassen / Utah / Henson wire | **Skipped** / not re-opened / **0** wire |
+| Cloud Agent | **Continued** this pass |
+
+Watchlist still tracks where a true **CC0/BY** soft find would matter. Day **4bn** confirms soft gaps remain **dry**. Handback: `docs/cloud-agent-handback.md`. **No finished-product claim**.

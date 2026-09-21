@@ -1,3 +1,7 @@
+## Day 4bn status addendum (2026-09-21)
+
+Cloud Agent **continued**. Teaching **explode / 抽出** UX (`E` + per-layer +Y peel; prefs persist). Soft dig **#95–#99**. Soft gaps **still dry**. **0** mesh wire. Andreassen/Henson **not** force-wired. Teaching atlas in progress — **no finished-product claim**.
+
 ## Day 4bm status addendum (2026-09-21)
 
 Cloud Agent **resumed** (`bc-25636a9a-…`). Teaching **ghost / 透视** UX (`G` + per-layer opacity; prefs persist). Soft dig **#90–#94**. Soft gaps **still dry**. **0** mesh wire. Andreassen/Henson **not** force-wired. Teaching atlas in progress — **no finished-product claim**.
@@ -118,7 +122,7 @@ Osteology complete (26/26). Soft tissue **teaching-useful and incomplete**.
 
 1. **CC0/BY soft dig** against `docs/cc0-soft-tissue-watchlist.md` (DI, per-ray MTA, nerve/ligament main-tree replacements) — integrate **only** with spatial QA pass.
 2. **Journal readiness polish** — keep methods / expert-review checklist synced; no hype; no TA2-complete claim.
-3. **UX teaching polish** — accessibility / prefs / help sheet only if a concrete gap is named; avoid SA mesh spam. Day **4bm** shipped layer ghost / 透视 (`G`).
+3. **UX teaching polish** — accessibility / prefs / help sheet only if a concrete gap is named; avoid SA mesh spam. Day **4bm** shipped layer ghost / 透视 (`G`). Day **4bn** shipped layer explode / 抽出 (`E`).
 4. **Alternate belly registration research** (docs-only until QA-ready) — TPS / two-stage proximal–distal / BP3D-native donors — not force Kabsch.
 
 ---

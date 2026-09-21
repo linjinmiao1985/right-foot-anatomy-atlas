@@ -1,7 +1,7 @@
 /**
  * Persist teaching UI prefs in localStorage (layer visibility, label density,
  * sagittal clip on/off+position, last camera preset, per-structure hidden ids,
- * per-layer ghost/透视 opacity).
+ * per-layer ghost/透视 opacity, teaching explode / 抽出 amount).
  * UX-borrow (ideas only): Open Anatomy Studio local progress / favorites habit.
  * No third-party code copied.
  *
@@ -29,6 +29,10 @@ import {
   defaultLayerOpacities,
   parseLayerOpacities,
 } from './layerOpacity';
+import {
+  DEFAULT_EXPLODE_AMOUNT,
+  parseExplodeAmount,
+} from './layerExplode';
 
 /** Bump when the stored shape changes incompatibly. */
 export const TEACHING_PREFS_VERSION = 1 as const;
@@ -45,6 +49,8 @@ export interface TeachingPrefs {
   hiddenStructureIds: string[];
   /** Per-layer mesh opacity (教学透视 / ghost). Missing → solid 1. */
   layerOpacities: Record<Layer, number>;
+  /** Teaching explode / 抽出 (0 assembled → 1 max peel). Missing → 0. */
+  explodeAmount: number;
 }
 
 interface TeachingPrefsEnvelope {
@@ -63,6 +69,7 @@ export function defaultTeachingPrefs(): TeachingPrefs {
     cameraPresetId: DEFAULT_CAMERA_PRESET,
     hiddenStructureIds: [],
     layerOpacities: defaultLayerOpacities(),
+    explodeAmount: DEFAULT_EXPLODE_AMOUNT,
   };
 }
 
@@ -106,9 +113,10 @@ export function parseTeachingPrefs(value: unknown): TeachingPrefs | null {
   }
   if (!isCameraPresetId(raw.cameraPresetId)) return null;
 
-  // hiddenStructureIds / layerOpacities optional for backward compat with earlier v1 payloads
+  // hiddenStructureIds / layerOpacities / explodeAmount optional for backward compat
   const hiddenStructureIds = parseHiddenStructureIds(raw.hiddenStructureIds);
   const layerOpacities = parseLayerOpacities(raw.layerOpacities);
+  const explodeAmount = parseExplodeAmount(raw.explodeAmount);
 
   return {
     visibleLayers,
@@ -118,6 +126,7 @@ export function parseTeachingPrefs(value: unknown): TeachingPrefs | null {
     cameraPresetId: raw.cameraPresetId,
     hiddenStructureIds,
     layerOpacities,
+    explodeAmount,
   };
 }
 

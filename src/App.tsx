@@ -47,6 +47,13 @@ import {
   isGhostToggleKey,
   toggleGhostLayerOpacities,
 } from './lib/layerOpacity';
+import {
+  DEFAULT_EXPLODE_AMOUNT,
+  EXPLODE_PRESET_AMOUNT,
+  isAssembledExplode,
+  isExplodeToggleKey,
+  toggleExplodeAmount,
+} from './lib/layerExplode';
 
 function emptyLayerCounts(): Record<Layer, number> {
   return { bone: 0, muscle: 0, nerve: 0, vessel: 0, ligament: 0 };
@@ -96,8 +103,11 @@ function App() {
   const [layerOpacities, setLayerOpacities] = useState<Record<Layer, number>>(() => {
     return loadTeachingPrefs()?.layerOpacities ?? defaultLayerOpacities();
   });
+  const [explodeAmount, setExplodeAmount] = useState(() => {
+    return loadTeachingPrefs()?.explodeAmount ?? DEFAULT_EXPLODE_AMOUNT;
+  });
 
-  // Persist teaching prefs (layers / label density / clip / camera / hidden structure ids).
+  // Persist teaching prefs (layers / label density / clip / camera / hidden / ghost / explode).
   useEffect(() => {
     saveTeachingPrefs({
       visibleLayers: [...visibleLayers],
@@ -107,8 +117,9 @@ function App() {
       cameraPresetId,
       hiddenStructureIds: [...hiddenStructureIds],
       layerOpacities,
+      explodeAmount,
     });
-  }, [visibleLayers, labelDensity, clipEnabled, clipConstant, cameraPresetId, hiddenStructureIds, layerOpacities]);
+  }, [visibleLayers, labelDensity, clipEnabled, clipConstant, cameraPresetId, hiddenStructureIds, layerOpacities, explodeAmount]);
 
   const handleCameraPresetChange = (id: CameraPresetId) => {
     setCameraPresetId(id);
@@ -256,6 +267,12 @@ function App() {
       if (isGhostToggleKey(e.key)) {
         e.preventDefault();
         setLayerOpacities((prev) => toggleGhostLayerOpacities(prev));
+        return;
+      }
+      // Explode / 抽出 — Air-Sage 抽出 + Human Atlas explode habit (ideas only)
+      if (isExplodeToggleKey(e.key)) {
+        e.preventDefault();
+        setExplodeAmount((prev) => toggleExplodeAmount(prev));
       }
     };
     window.addEventListener('keydown', handleKey);
@@ -319,6 +336,7 @@ function App() {
           {isolateMode ? ' · 隔离中 (I)' : ''}
           {hiddenStructureIds.size > 0 ? ` · 已隐藏 ${hiddenStructureIds.size}` : ''}
           {isGhostLayerOpacities(layerOpacities) ? ' · 透视 (G)' : ''}
+          {!isAssembledExplode(explodeAmount) ? ' · 抽出 (E)' : ''}
         </div>
       </div>
 
@@ -353,6 +371,10 @@ function App() {
         }}
         onGhostPreset={() => setLayerOpacities(ghostLayerOpacities())}
         onSolidPreset={() => setLayerOpacities(defaultLayerOpacities())}
+        explodeAmount={explodeAmount}
+        onExplodeAmountChange={setExplodeAmount}
+        onExplodePreset={() => setExplodeAmount(EXPLODE_PRESET_AMOUNT)}
+        onAssemblePreset={() => setExplodeAmount(DEFAULT_EXPLODE_AMOUNT)}
       />
 
       <Viewport
@@ -371,6 +393,7 @@ function App() {
         cameraPresetToken={cameraPresetToken}
         hiddenStructureIds={hiddenStructureIds}
         layerOpacities={layerOpacities}
+        explodeAmount={explodeAmount}
       />
 
       <StructurePanel
@@ -474,7 +497,7 @@ function App() {
         }}
       >
         <div style={{ fontSize: '11px', color: '#666' }}>
-          提示: ?/H 快捷键 | 搜索 ZH/LA | 视角1–5 | 标签密度 | 矢状切面(lite) | G 透视/实心 | 拖动旋转 | 滚轮缩放 | 右键平移 | 点击对焦 | I 隔离/退出 | X 隐藏此结构 | Esc 取消选择(不恢复已隐藏)
+          提示: ?/H 快捷键 | 搜索 ZH/LA | 视角1–5 | 标签密度 | 矢状切面(lite) | G 透视/实心 | E 抽出/合拢 | 拖动旋转 | 滚轮缩放 | 右键平移 | 点击对焦 | I 隔离/退出 | X 隐藏此结构 | Esc 取消选择(不恢复已隐藏)
         </div>
         <div
           style={{

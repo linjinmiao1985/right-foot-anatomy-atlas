@@ -41,6 +41,8 @@ interface ViewportProps {
   hiddenStructureIds?: Set<string>;
   /** Per-layer opacity multiplier (教学透视). */
   layerOpacities?: Record<Layer, number>;
+  /** Teaching explode / 抽出 (0 assembled). */
+  explodeAmount?: number;
 }
 
 export default function Viewport({
@@ -59,6 +61,7 @@ export default function Viewport({
   cameraPresetToken = 0,
   hiddenStructureIds,
   layerOpacities,
+  explodeAmount,
 }: ViewportProps) {
   return (
     <Canvas
@@ -96,6 +99,7 @@ export default function Viewport({
           labelDensity={labelDensity}
           hiddenStructureIds={hiddenStructureIds}
           layerOpacities={layerOpacities}
+          explodeAmount={explodeAmount}
         />
       </Suspense>
 

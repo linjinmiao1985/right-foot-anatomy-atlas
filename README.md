@@ -63,6 +63,7 @@ Interactive web-based teaching atlas for right foot anatomy.
 - **Sagittal clip (lite)**: single X-axis teaching cutaway + slider — **not** clinical MPR (Day 4aj)
 - **Camera presets**: 默认 / 背侧 / 跖侧 / 内侧 / 外侧 (keys `1`–`5`) — plantar sole view enabled (Day 4an)
 - **Teaching ghost / 透视**: per-layer opacity + `G` toggle (muscle/ligament/vessel fade; osteology stays solid) — classroom translucency, **not** clinical X-ray (Day 4bm)
+- **Teaching explode / 抽出**: per-layer +Y peel + `E` toggle (osteology stays the anchor) — classroom sandwich, **not** surgical dissection (Day 4bn)
 - **Keyboard help overlay**: `?` / `H` or title **? 帮助** — bilingual shortcut sheet (Day 4ao); Esc closes help first
 - **Teaching prefs persist**: localStorage restores layer visibility, label density, sagittal clip, last camera preset (Day 4ap; teaching chrome only)
 - **Ontology IDs (partial)**: StructurePanel shows TA2 / FMA / BP when mapped (`src/lib/ontologyIds.ts`); honest empty when unknown (Day 4aq)
@@ -72,7 +73,7 @@ Interactive web-based teaching atlas for right foot anatomy.
 - **OrbitControls**: Zoom, rotate, pan around foot (full polar range for plantar teaching)
 - **Loading states**: Progress indicators for GLB assets
 - **Per-structure hide**: Hide this (X) chip beyond isolate; restore chips for hidden names; ids persist in teaching prefs (Day 4au/4av; undergravity UX-borrow)
-- **Keyboard**: `?`/`H` help · `1`–`5` view presets · `G` 透视/实心 · `I` isolate · `X` hide this · `Esc` closes help or clears selection + isolate + search (**not** per-structure hides — those persist in teaching prefs)
+- **Keyboard**: `?`/`H` help · `1`–`5` view presets · `G` 透视/实心 · `E` 抽出/合拢 · `I` isolate · `X` hide this · `Esc` closes help or clears selection + isolate + search (**not** per-structure hides — those persist in teaching prefs)
 - **Search**: bilingual ZH/LA includes ligament/tendon entries (e.g. 跖长韧带, 跟腱); results sorted by teaching layer after match score
 - **Screenshot pack** (optional): `npm run screenshots` → `docs/screenshots/` (teaching QA; not a product gallery)
 

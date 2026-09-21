@@ -2,7 +2,7 @@
 
 **Purpose**: Quality assurance for **teaching-grade** anatomical accuracy, nomenclature, license boundaries, and honest soft-tissue scope — **not** a clinical or journal-publication readiness certificate.  
 **Intended Reviewers**: Anatomy instructors, foot/ankle surgeons, medical educators.  
-**Date**: 2026-09-21 (Week 2 Day 4bm / Phase 7)  
+**Date**: 2026-09-21 (Week 2 Day 4bn / Phase 7)  
 **Live census** (verify against `src/data/structures.json` + `docs/phase-7-self-review.md`): **129** entry-level rows / **124** unique · **53** main-tree (CC BY/CC0) / **71** BY-SA isolate · ontology **126/129** citable · **0** placeholders · osteology **26/26** · soft tissue **teaching-useful, incomplete**  
 **Atlas status**: Teaching atlas **in progress** — **no finished-product claim**; **not** TA2-complete soft tissue; **not** surgical registration.
 
@@ -87,6 +87,7 @@ Companion: `docs/methods.md` (journal-facing limitations + Kabsch residuals), `d
 - [ ] Camera presets `1`–`5` (默认/背/跖/内/外); keyboard help `?`/`H`
 - [x] **Lazy layer load progress** (Day 4bg): bilingual overlay when soft layers fetch GLBs (`LayerLoadProgress` + Suspense) — teaching fetch chrome, not clinical workstation
 - [x] **Teaching ghost / 透视** (Day 4bm): per-layer opacity + `G` — covering soft tissue can fade so osteology remains readable; **not** clinical X-ray / fluoroscopy
+- [x] **Teaching explode / 抽出** (Day 4bn): per-layer +Y peel + `E` — covering layers separate so the sandwich is readable; **not** surgical dissection
 
 ---
 
@@ -200,4 +201,4 @@ Companion: `docs/methods.md` (journal-facing limitations + Kabsch residuals), `d
 
 **Checklist Version**: 2.0 (2026-09-15 Day 4ax / Phase 7; Day 4be ontology honest-empty; Day 4bf grouped label polish)  
 **Supersedes**: 1.0 (2026-09-14 Week Sprint Day 7 — outdated 38/43 / DI-placeholder / ligaments-excluded framing)  
-**Atlas pointer**: Week 2 Day 4bm / Phase 7 — teaching atlas in progress; **no finished-product claim**
+**Atlas pointer**: Week 2 Day 4bn / Phase 7 — teaching atlas in progress; **no finished-product claim**

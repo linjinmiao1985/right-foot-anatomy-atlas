@@ -186,3 +186,11 @@ If issues found during manual testing:
 - [x] Prefs persist `layerOpacities`; older localStorage envelopes without the field restore solid 1
 - [x] Ghost is teaching translucency — bones stay readable under faded muscle/ligament/vessel
 - Honesty: **not** clinical X-ray / fluoroscopy / finished-product claim
+
+## Day 4bn addendum — teaching explode / 抽出
+
+- [x] Layer panel **抽出 / 合拢** + amount slider (`data-explode-preset`, `data-explode-amount`)
+- [x] Key `E` toggles teaching explode preset ↔ assembled (help overlay documents it)
+- [x] Prefs persist `explodeAmount`; older localStorage envelopes without the field restore assembled 0
+- [x] Osteology stays the spatial anchor; covering layers peel along +Y
+- Honesty: **not** surgical dissection / clinical exposure / finished-product claim

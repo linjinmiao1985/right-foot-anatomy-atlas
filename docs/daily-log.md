@@ -1531,3 +1531,14 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 5. Soft gaps **still dry**. Census unchanged (**129/124**; ontology **126/129**). **0** mesh wire / **0** SA spam.
 6. Checks: integrity-audit + vitest + build; commit + push.
 7. **Honesty**: teaching atlas in progress — **no finished-product claim**.
+
+## Day 4bn (2026-09-21) — Teaching explode / 抽出 + dig #95–#99
+
+**Target**: Continue Week 2 quality sprint. ONE teaching polish (layer explode / 抽出) **and** ≥4 NEW license-verified open anatomy digs. Prefer CC0/BY mesh; docs-only if dry. No SA spam; no Andreassen/Henson force-wire.
+
+1. Continued on `cursor/week2-day4bm-ghost-opacity-096e` (Day 4bm tip).
+2. **UX**: `src/lib/layerExplode.ts` — per-layer +Y peel + **抽出 / 合拢** preset + key `E`. Osteology stays the spatial anchor. Prefs persist `explodeAmount` (compat: missing → assembled 0). Keyboard help + footer tip. Honesty: teaching peel, **not** surgical dissection.
+3. **New digs**: #95 ashemag Human Atlas **MIT+BP3D** canonical explode UX-borrow (same pool as #94); #96 TUANZIDING orthopaedic-trauma-atlas **MIT+CC BY** foot fasciotomy **PNG** reject mesh; #97 eye-atlas **MIT+BP3D** explode slider, **not foot**; #98 sonuyadav anatomy-atlas **ZA SA / NC mix** reject; #99 OpenGameArt CC0 outer-foot OBJ reject named soft.
+4. Soft gaps **still dry**. Census unchanged (**129/124**; ontology **126/129**). **0** mesh wire / **0** SA spam.
+5. Checks: integrity-audit + vitest + build; commit + push.
+6. **Honesty**: teaching atlas in progress — **no finished-product claim**.

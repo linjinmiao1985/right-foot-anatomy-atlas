@@ -33,6 +33,10 @@ import {
   DEFAULT_LAYER_OPACITY,
   opacityNeedsTransparency,
 } from '../lib/layerOpacity';
+import {
+  DEFAULT_EXPLODE_AMOUNT,
+  layerExplodeOffset,
+} from '../lib/layerExplode';
 
 interface FootModelProps {
   visibleLayers: Set<Layer>;
@@ -54,6 +58,8 @@ interface FootModelProps {
   hiddenStructureIds?: Set<string>;
   /** Per-layer opacity multiplier (教学透视 / ghost). Missing → 1. */
   layerOpacities?: Record<Layer, number>;
+  /** Teaching explode / 抽出 amount (0 assembled). Missing → 0. */
+  explodeAmount?: number;
 }
 
 interface PlaceholderMesh {
@@ -248,7 +254,7 @@ const REAL_LIGAMENT_MODELS: Record<string, string> = {
   'dorsal_intercuneiform_ligaments': '/models/right-foot/by-sa/dorsal_intercuneiform_ligaments.glb',
 };
 
-export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName, isolateMode = false, visibleLigamentGroups, visibleNerveGroups, visibleVesselGroups, visibleMuscleGroups, labelDensity = DEFAULT_LABEL_DENSITY, hiddenStructureIds, layerOpacities }: FootModelProps) {
+export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName, isolateMode = false, visibleLigamentGroups, visibleNerveGroups, visibleVesselGroups, visibleMuscleGroups, labelDensity = DEFAULT_LABEL_DENSITY, hiddenStructureIds, layerOpacities, explodeAmount = DEFAULT_EXPLODE_AMOUNT }: FootModelProps) {
   const ligGroups = visibleLigamentGroups ?? new Set(getAllLigamentGroupIds());
   const nerveGroups = visibleNerveGroups ?? new Set(getAllNerveGroupIds());
   const vesselGroups = visibleVesselGroups ?? new Set(getAllVesselGroupIds());
@@ -379,6 +385,7 @@ export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName
         const isSelected = meshName === selectedMeshName;
         const isHovered = meshName === hoveredMesh;
         const layerOpacity = layerOpacities?.[structure.layer] ?? DEFAULT_LAYER_OPACITY;
+        const explodeOffset = layerExplodeOffset(explodeAmount, structure.layer);
         // Teaching polish: when something is selected (and not isolating), dim peers
         const selectedStruct = selectedMeshName ? getStructureByMeshName(selectedMeshName) : null;
         const isPeerOfSelection =
@@ -399,104 +406,109 @@ export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName
         // Render real GLB model for bones with available meshes
         if (hasRealBone) {
           return (
-            <RealBoneModel
-              key={meshName}
-              structure={structure}
-              meshName={meshName}
-              modelPath={REAL_BONE_MODELS[structure.id]}
-              color={color}
-              isSelected={isSelected}
-              isHovered={isHovered}
-              onMeshClick={onMeshClick}
-              onHoverChange={setHoveredMesh}
-              labelDensity={labelDensity}
-              layerOpacity={layerOpacity}
-            />
+            <group key={meshName} position={explodeOffset}>
+              <RealBoneModel
+                structure={structure}
+                meshName={meshName}
+                modelPath={REAL_BONE_MODELS[structure.id]}
+                color={color}
+                isSelected={isSelected}
+                isHovered={isHovered}
+                onMeshClick={onMeshClick}
+                onHoverChange={setHoveredMesh}
+                labelDensity={labelDensity}
+                layerOpacity={layerOpacity}
+              />
+            </group>
           );
         }
 
         // Render real GLB model for muscles with available meshes
         if (hasRealMuscle) {
           return (
-            <RealMuscleModel
-              key={meshName}
-              structure={structure}
-              meshName={meshName}
-              modelPath={REAL_MUSCLE_MODELS[structure.id]}
-              additionalParts={ADDITIONAL_MUSCLE_PARTS[structure.id]}
-              color={color}
-              isSelected={isSelected}
-              isHovered={isHovered}
-              onMeshClick={onMeshClick}
-              onHoverChange={setHoveredMesh}
-              labelDensity={labelDensity}
-              layerOpacity={layerOpacity}
-            />
+            <group key={meshName} position={explodeOffset}>
+              <RealMuscleModel
+                structure={structure}
+                meshName={meshName}
+                modelPath={REAL_MUSCLE_MODELS[structure.id]}
+                additionalParts={ADDITIONAL_MUSCLE_PARTS[structure.id]}
+                color={color}
+                isSelected={isSelected}
+                isHovered={isHovered}
+                onMeshClick={onMeshClick}
+                onHoverChange={setHoveredMesh}
+                labelDensity={labelDensity}
+                layerOpacity={layerOpacity}
+              />
+            </group>
           );
         }
 
         // Render real GLB model for vessels with available meshes
         if (hasRealVessel) {
           return (
-            <RealVesselModel
-              key={meshName}
-              structure={structure}
-              meshName={meshName}
-              modelPath={REAL_VESSEL_MODELS[structure.id]}
-              color={color}
-              isSelected={isSelected}
-              isHovered={isHovered}
-              isDimmed={isPeerOfSelection}
-              onMeshClick={onMeshClick}
-              onHoverChange={setHoveredMesh}
-              labelDensity={labelDensity}
-              layerOpacity={layerOpacity}
-            />
+            <group key={meshName} position={explodeOffset}>
+              <RealVesselModel
+                structure={structure}
+                meshName={meshName}
+                modelPath={REAL_VESSEL_MODELS[structure.id]}
+                color={color}
+                isSelected={isSelected}
+                isHovered={isHovered}
+                isDimmed={isPeerOfSelection}
+                onMeshClick={onMeshClick}
+                onHoverChange={setHoveredMesh}
+                labelDensity={labelDensity}
+                layerOpacity={layerOpacity}
+              />
+            </group>
           );
         }
 
         // Render real GLB model for nerves with available meshes (CC BY-SA 4.0)
         if (hasRealNerve) {
           return (
-            <RealNerveModel
-              key={meshName}
-              structure={structure}
-              meshName={meshName}
-              modelPath={REAL_NERVE_MODELS[structure.id]}
-              color={color}
-              isSelected={isSelected}
-              isHovered={isHovered}
-              isDimmed={isPeerOfSelection}
-              onMeshClick={onMeshClick}
-              onHoverChange={setHoveredMesh}
-              labelDensity={labelDensity}
-              layerOpacity={layerOpacity}
-            />
+            <group key={meshName} position={explodeOffset}>
+              <RealNerveModel
+                structure={structure}
+                meshName={meshName}
+                modelPath={REAL_NERVE_MODELS[structure.id]}
+                color={color}
+                isSelected={isSelected}
+                isHovered={isHovered}
+                isDimmed={isPeerOfSelection}
+                onMeshClick={onMeshClick}
+                onHoverChange={setHoveredMesh}
+                labelDensity={labelDensity}
+                layerOpacity={layerOpacity}
+              />
+            </group>
           );
         }
 
         // Render real GLB ligament (BP3D CC BY 4.0)
         if (hasRealLigament) {
           return (
-            <RealLigamentModel
-              key={meshName}
-              structure={structure}
-              meshName={meshName}
-              modelPath={REAL_LIGAMENT_MODELS[structure.id]}
-              color={color}
-              isSelected={isSelected}
-              isHovered={isHovered}
-              onMeshClick={onMeshClick}
-              onHoverChange={setHoveredMesh}
-              labelDensity={labelDensity}
-              layerOpacity={layerOpacity}
-            />
+            <group key={meshName} position={explodeOffset}>
+              <RealLigamentModel
+                structure={structure}
+                meshName={meshName}
+                modelPath={REAL_LIGAMENT_MODELS[structure.id]}
+                color={color}
+                isSelected={isSelected}
+                isHovered={isHovered}
+                onMeshClick={onMeshClick}
+                onHoverChange={setHoveredMesh}
+                labelDensity={labelDensity}
+                layerOpacity={layerOpacity}
+              />
+            </group>
           );
         }
 
         // Fallback: placeholder geometry
         return (
-          <group key={meshName}>
+          <group key={meshName} position={explodeOffset}>
             <mesh
               name={meshName}
               position={position}

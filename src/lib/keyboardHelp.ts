@@ -64,6 +64,12 @@ export const KEYBOARD_HELP_GROUPS: ReadonlyArray<KeyboardShortcutGroup> = [
         labelEn: 'Toggle ghost / solid layers',
         note: 'Soft-tissue translucency so osteology shows through — teaching 透视, not clinical X-ray (Air-Sage / Z-Anatomy Atlas G-ghost habit — ideas only)',
       },
+      {
+        keys: 'E',
+        labelZh: '抽出 / 合拢',
+        labelEn: 'Toggle explode / assemble layers',
+        note: 'Peel covering layers along +Y so the sandwich is readable — teaching 抽出, not surgical dissection (Air-Sage / Human Atlas explode habit — ideas only)',
+      },
     ],
   },
   {

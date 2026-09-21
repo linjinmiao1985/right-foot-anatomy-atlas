@@ -1503,3 +1503,45 @@ Cloud Agent resumed after usage-block. Teaching polish (layer ghost) + CC0/BY so
 - **0** meshes integrated; **0** SA spam; Andreassen/Henson/Utah **not** force-wired.
 - Cloud Agent **resumed**.
 - **No finished-product claim.**
+
+## Session additions (2026-09-21 · Day 4bn — teaching explode / 抽出 + dig #95–#99)
+
+### Context
+
+Continue Week 2 sprint after Day 4bm ghost UX. Teaching polish (layer explode) + CC0/BY soft dig. **0** mesh wire. **No finished-product claim.**
+
+### Teaching polish (ONE UX borrow)
+
+| Change | Detail |
+|--------|--------|
+| **Explode / 抽出** | Per-layer +Y peel + **抽出 / 合拢** preset + key **E**. Osteology stays the spatial anchor; ligament/muscle/vessel/nerve peel. Prefs persist `explodeAmount`. |
+| Source | Air-Sage 抽出 (#86) + ashemag Human Atlas exploded inventory (#95; canonical of #94) + Eye Atlas staged explode slider (#97) — **ideas only**; no third-party UI code |
+| Files | `src/lib/layerExplode.ts` (+ vitest) · `teachingPrefs.ts` · `LayerToggles.tsx` · `FootModel.tsx` · `Viewport.tsx` · `App.tsx` · `keyboardHelp.ts` |
+| Honesty | Teaching peel — **not** surgical dissection / clinical exposure / finished product |
+
+### NEW license-verified projects (≥4; #95–#99)
+
+| # | Project | URL / DOI | License verified | Foot relevance | Decision |
+|---|---------|-----------|------------------|----------------|----------|
+| **95** | **Human Atlas** (ashemag/human-atlas) | https://github.com/ashemag/human-atlas · demo https://human-atlas-seven.vercel.app | GitHub SPDX **MIT** + README anatomy **CC BY 4.0** BodyParts3D 4.0 (`LICENSE` verified 2026-09-21). Canonical repo vs EF361 fork logged as **#94** | Whole-body 2234 BP3D meshes + exploded inventory — **same pool** already in main tree | **UX-borrow** (explode / 抽出). **reject** as new foot mesh source |
+| **96** | **Orthopaedic Trauma Atlas** (TUANZIDING/orthopaedic-trauma-atlas) | https://github.com/TUANZIDING/orthopaedic-trauma-atlas | Combined `LICENSE`: teaching code **MIT**; anatomy adaptations **CC BY 4.0** (ATTRIBUTION: BP3D 4.0 hip/femur/sacrum/L5 extracts; verified 2026-09-21) | 足部筋膜室 / calcaneal-traction **PNG teaching figures** + 6 pelvic/proximal-femur meshes — **0** named foot DI/NV/ligament GLBs | **UX-borrow** (honesty / clinical-boundary copy). **reject** foot soft mesh |
+| **97** | **Eye Atlas** (jaskirat1616/eye-atlas) | https://github.com/jaskirat1616/eye-atlas | Combined `LICENSE`: code **MIT**; `public/models/` **CC BY 4.0** BodyParts3D (verified 2026-09-21) | Orbit/globe explode slider 0–5 — **eye, not foot** | **UX-borrow** (staged explode). **reject** foot soft |
+| **98** | **Anatomy Atlas** (sonuyadav2307/anatomy-atlas) | https://github.com/sonuyadav2307/anatomy-atlas | **No SPDX**; README 2026-09-21: Z-Anatomy **CC BY-SA 4.0** + “some upstream components carry non-commercial restrictions” (`public/Z-ANATOMY-LICENSE.txt`) | 1774 ZA/BP3D structures; README claims foot ligaments in catalog — SA/NC mix | **reject** (SA + NC warning / opaque SPDX) for main tree. **reject** as CC0/BY DI/NV fill |
+| **99** | **OpenGameArt — Human Foot 3D Model** (byzmod3d) | https://opengameart.org/content/human-foot-3d-model | Page license **CC0** verified 2026-09-21 | Low-poly outer-foot `pe.obj` from reference photos — **0** named DI / artery / nerve / ligament elementals | **reject** soft teaching mesh. Optional silhouette only (same class as #89) |
+
+**Also checked (not re-numbered)**: `mrbusybody95/humanatlasanatomy` and `KTM-EduTech/The-Atlas-Of-Human-Anatomy` = ashemag Human Atlas copies (same MIT LICENSE copyright ashemag + same README) — deepen of **#95/#94**. ScanTW NC foot muscle Zenodo hits already **#84/#90**.
+
+### Soft-gap check
+
+| Gap | Day 4bn |
+|-----|---------|
+| DI / per-ray MTA / nerve·ligament CC0/BY | **Still dry** — #95/#97 same BP3D; #96 trauma PNGs; #98 ZA SA/NC; #99 skin OBJ |
+| Gastroc/soleus | Andreassen + Henson still **blocked**; no new CC0/BY belly surface pack this pass |
+| Utah Hive | Still **reject** — not re-opened |
+
+### Outcome
+
+- Learning log **#95–#99**; teaching explode UX live; watchlist / handback / daily-log / week-plan Day 4bn.
+- Census unchanged (**129/124**; ontology **126/129**).
+- **0** meshes integrated; **0** SA spam; Andreassen/Henson/Utah **not** force-wired.
+- **No finished-product claim.**
