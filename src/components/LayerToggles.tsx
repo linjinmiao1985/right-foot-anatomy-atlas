@@ -118,9 +118,10 @@ export default function LayerToggles({
         borderRadius: '8px',
         padding: '16px',
         minWidth: '240px',
+        maxWidth: '300px',
         maxHeight: 'calc(100vh - 100px)',
         overflowY: 'auto',
-        zIndex: 100,
+        zIndex: 110,
       }}
       role="region"
       aria-label="图层与图例"
@@ -436,7 +437,8 @@ export default function LayerToggles({
             抽出 · Explode
             <span style={{ fontWeight: 400, color: '#888', marginLeft: '6px' }}>E</span>
           </div>
-          <div style={{ display: 'flex', gap: '4px' }}>
+        </div>
+        <div style={{ display: 'flex', gap: '4px', marginBottom: '6px' }}>
             <button
               type="button"
               data-explode-preset="true"
@@ -444,6 +446,7 @@ export default function LayerToggles({
               aria-pressed={explodeOn}
               title="按层沿 +Y 分开，便于看夹层（教学抽出，非手术剥离）"
               style={{
+                flex: 1,
                 padding: '3px 8px',
                 fontSize: '11px',
                 cursor: 'pointer',
@@ -462,6 +465,7 @@ export default function LayerToggles({
               aria-pressed={assembledOn}
               title="合拢各层（默认）"
               style={{
+                flex: 1,
                 padding: '3px 8px',
                 fontSize: '11px',
                 cursor: 'pointer',
@@ -473,7 +477,6 @@ export default function LayerToggles({
             >
               合拢
             </button>
-          </div>
         </div>
         <label
           style={{

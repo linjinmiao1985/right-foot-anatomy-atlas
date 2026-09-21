@@ -20,7 +20,7 @@ export const DEFAULT_EXPLODE_AMOUNT = 0;
 export const EXPLODE_PRESET_AMOUNT = 0.7;
 
 /** Max world-Y offset (scene units) at amount=1 for the top layer (nerve). */
-export const EXPLODE_DISTANCE = 0.55;
+export const EXPLODE_DISTANCE = 0.8;
 
 /**
  * Relative peel order (0 = stay with osteology). Ligament hugs bone;
