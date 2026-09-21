@@ -1460,3 +1460,46 @@ Weekday automation. Cloud Agent `bc-4d6d86a7-…` still **error / usage exhauste
 - **0** meshes integrated; **0** SA spam; Andreassen/Henson/Utah **not** force-wired.
 - Cloud Agent still **quota-blocked** (usage exhausted — enable on-demand to relaunch).
 - **No finished-product claim.**
+
+## Session additions (2026-09-21 · Day 4bm — teaching ghost / 透视 + dig #90–#94)
+
+### Context
+
+Cloud Agent resumed after usage-block. Teaching polish (layer ghost) + CC0/BY soft dig. **0** mesh wire. **No finished-product claim.**
+
+### Teaching polish (ONE UX borrow)
+
+| Change | Detail |
+|--------|--------|
+| **Ghost / 透视** | Per-layer opacity sliders + **透视 / 实心** preset + key **G**. Covering muscle/ligament/vessel fade; osteology stays solid. Prefs persist `layerOpacities`. |
+| Source | Air-Sage 透视 (#86) + Z-Anatomy Atlas `G` ghost (#92) — **ideas only**; no third-party UI code |
+| Files | `src/lib/layerOpacity.ts` (+ vitest) · `teachingPrefs.ts` · `LayerToggles.tsx` · `FootModel.tsx` · `App.tsx` · `keyboardHelp.ts` |
+| Honesty | Teaching translucency — **not** clinical X-ray / fluoroscopy / finished product |
+
+### NEW license-verified projects (≥4; #90–#94)
+
+| # | Project | URL / DOI | License verified | Foot relevance | Decision |
+|---|---------|-----------|------------------|----------------|----------|
+| **90** | **Scan-the-World — Muscle and tendon structure of a foot** | Zenodo DOI **10.5281/zenodo.21375254** (also **20207805**) | Zenodo API `license.id` = **cc-by-nc-sa-4.0** verified 2026-09-21 | Right-foot **united** muscle+tendon GLB/USDZ (tempting soft pack, sibling of #84) — **NC** blocks main-tree | **reject** (NC). Do **not** wire; do **not** treat as DI/per-ray MTA fill |
+| **91** | **MyoSuite** (MyoHub) | https://github.com/MyoHub/myosuite | GitHub SPDX **Apache-2.0** verified 2026-09-21 | MuJoCo musculoskeletal **sim** (myoLeg wrapping actuators) — **not** named foot DI/NV surface GLBs | **reject** teaching GLB. Optional MSK-process monitor only |
+| **92** | **Z-Anatomy Atlas** (jaydenpcastro-ship-it/z-anatomy-atlas) | https://github.com/jaydenpcastro-ship-it/z-anatomy-atlas · demo https://z-anatomy-atlas.vercel.app | README: geometry **CC BY-SA 2.1 JP** (BP3D) modified by Z-Anatomy + Wikipedia **CC BY-SA**; **no** SPDX on repo (2026-09-21) | Whole-body ZA web export; shortcut `G` ghost others — **0** new CC0/BY foot elemental | **UX-borrow** (`G` ghost). Meshes **isolate-SA** only. **reject** re-integrate |
+| **93** | **3D Anatomy** (nqwrc/3d-anatomy) | https://github.com/nqwrc/3d-anatomy | Combined distribution **CC BY-NC-SA 4.0** (`LICENSE` verified 2026-09-21): ZA/BP3D SA **plus** Dundee inner-ear **CC BY-NC-SA** + kidney **CC BY-NC** | 2827-structure ZA browser atlas; `extras.za_name` identity — **NC** on whole | **reject** (NC) for main tree. **UX-borrow** (`za_name` extras). **reject** foot soft replacement |
+| **94** | **Human Atlas** (EF361/human-atlas) | https://github.com/EF361/human-atlas | Code **MIT** (ashemag copyright, LICENSE verified 2026-09-21); anatomy **CC BY 4.0** BodyParts3D 4.0 (README) | 2234 BP3D meshes + exploded views — **same pool** already in main tree | **UX-borrow** (explode inventory). **reject** as new foot mesh source |
+
+**Also checked (not re-numbered)**: Zenodo **20080618** Boot et al. para-cycling (**cc-by-4.0**) = kinematics/CSV, **0** meshes; pottery Foot GLB **21243693** already noted Day 4bl; **14-TR/cell-atlas** = mammalian **cell**, not foot.
+
+### Soft-gap check
+
+| Gap | Day 4bm |
+|-----|---------|
+| DI / per-ray MTA / nerve·ligament CC0/BY | **Still dry** — #90 NC; #91 sim; #92/#93 SA/NC; #94 same BP3D |
+| Gastroc/soleus | Andreassen + Henson still **blocked**; no new CC0/BY belly surface pack this pass |
+| Utah Hive | Still **reject** — not re-opened |
+
+### Outcome
+
+- Learning log **#90–#94**; teaching ghost UX live; watchlist / handback / daily-log / week-plan Day 4bm.
+- Census unchanged (**129/124**; ontology **126/129**).
+- **0** meshes integrated; **0** SA spam; Andreassen/Henson/Utah **not** force-wired.
+- Cloud Agent **resumed**.
+- **No finished-product claim.**

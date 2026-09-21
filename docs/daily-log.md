@@ -1519,3 +1519,15 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 3. Soft gaps **still dry**. Census unchanged. **0** mesh wire / **0** SA spam.
 4. Docs: learning-log + watchlist + handback + week-plan + this entry; commit + push.
 5. **Honesty**: teaching atlas in progress — **no finished-product claim**.
+
+## Day 4bm (2026-09-21) — Teaching ghost / 透视 + dig #90–#94 (Cloud Agent resumed)
+
+**Target**: Cloud Agent quota returned. ONE teaching polish (layer ghost / 透视) **and** ≥3 NEW license-verified open anatomy digs. Prefer CC0/BY mesh; docs-only if dry. No SA spam; no Andreassen/Henson force-wire.
+
+1. Checked out MVP tip `06284b9` (Day 4bl) → branch `cursor/week2-day4bm-ghost-opacity-096e`.
+2. **UX**: `src/lib/layerOpacity.ts` — per-layer opacity sliders + **透视 / 实心** preset + key `G`. FootModel composes hover/select opacity × layer multiplier. Prefs persist `layerOpacities` (compat: missing → solid 1). Keyboard help + footer tip. Honesty: teaching translucency, **not** clinical X-ray.
+3. **Journal polish**: vitest expert-review §A named spot-checks (≥10: calcaneus, talus, MT1, AH, FDL, dorsalis pedis, MPA, tibial n., deep fibular n., ATFL, Achilles).
+4. **New digs**: #90 ScanTW muscle+tendon foot **NC-SA reject**; #91 MyoSuite **Apache-2.0** sim **reject** GLB; #92 jaydenpcastro Z-Anatomy Atlas **UX-borrow** (G ghost; SA geometry); #93 nqwrc/3d-anatomy **NC-SA whole** reject; #94 EF361/human-atlas MIT+BP3D **UX-borrow** explode, same pool.
+5. Soft gaps **still dry**. Census unchanged (**129/124**; ontology **126/129**). **0** mesh wire / **0** SA spam.
+6. Checks: integrity-audit + vitest + build; commit + push.
+7. **Honesty**: teaching atlas in progress — **no finished-product claim**.

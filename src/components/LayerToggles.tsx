@@ -13,6 +13,14 @@ import {
   DEFAULT_CLIP_CONSTANT,
 } from '../lib/clipPlane';
 import { CAMERA_PRESETS, type CameraPresetId } from '../lib/cameraPresets';
+import {
+  LAYER_OPACITY_MAX,
+  LAYER_OPACITY_MIN,
+  LAYER_OPACITY_STEP,
+  clampLayerOpacity,
+  isGhostLayerOpacities,
+  isSolidLayerOpacities,
+} from '../lib/layerOpacity';
 
 interface LayerTogglesProps {
   visibleLayers: Set<Layer>;
@@ -37,6 +45,10 @@ interface LayerTogglesProps {
   onClipConstantChange: (constant: number) => void;
   cameraPresetId: CameraPresetId;
   onCameraPresetChange: (id: CameraPresetId) => void;
+  layerOpacities: Record<Layer, number>;
+  onLayerOpacityChange: (layer: Layer, opacity: number) => void;
+  onGhostPreset: () => void;
+  onSolidPreset: () => void;
 }
 
 /**
@@ -68,8 +80,14 @@ export default function LayerToggles({
   onClipConstantChange,
   cameraPresetId,
   onCameraPresetChange,
+  layerOpacities,
+  onLayerOpacityChange,
+  onGhostPreset,
+  onSolidPreset,
 }: LayerTogglesProps) {
   const layers = getAllLayers();
+  const ghostOn = isGhostLayerOpacities(layerOpacities);
+  const solidOn = isSolidLayerOpacities(layerOpacities);
 
   return (
     <div
@@ -279,6 +297,101 @@ export default function LayerToggles({
         </label>
         <div style={{ fontSize: '9px', color: '#777', marginTop: '4px', lineHeight: 1.35 }}>
           单轴教学切面（非临床 MPR）。默认中足 X≈−{DEFAULT_CLIP_CONSTANT.toFixed(2)}（场景单位）。
+        </div>
+      </div>
+
+      <div
+        style={{
+          marginBottom: '12px',
+          padding: '8px',
+          background: ghostOn ? 'rgba(56, 189, 248, 0.12)' : 'rgba(68, 68, 68, 0.35)',
+          border: ghostOn ? '1px solid rgba(56, 189, 248, 0.45)' : '1px solid #444',
+          borderRadius: '6px',
+        }}
+        role="group"
+        aria-label="教学透视 Ghost opacity"
+        data-testid="teaching-ghost"
+        title="UX-borrow: Air-Sage 透视 + Z-Anatomy Atlas G-ghost habit (ideas only) — not clinical X-ray"
+      >
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '6px' }}>
+          <div style={{ fontSize: '11px', fontWeight: 600, color: '#d6d3d1' }}>
+            透视 · Ghost
+            <span style={{ fontWeight: 400, color: '#888', marginLeft: '6px' }}>G</span>
+          </div>
+          <div style={{ display: 'flex', gap: '4px' }}>
+            <button
+              type="button"
+              data-ghost-preset="true"
+              onClick={onGhostPreset}
+              aria-pressed={ghostOn}
+              title="软组织半透明，便于看骨（教学透视，非临床透视）"
+              style={{
+                padding: '3px 8px',
+                fontSize: '11px',
+                cursor: 'pointer',
+                borderRadius: '4px',
+                border: ghostOn ? '1px solid #38bdf8' : '1px solid #555',
+                background: ghostOn ? 'rgba(56, 189, 248, 0.3)' : '#333',
+                color: ghostOn ? '#e0f2fe' : '#ccc',
+              }}
+            >
+              透视
+            </button>
+            <button
+              type="button"
+              data-ghost-solid="true"
+              onClick={onSolidPreset}
+              aria-pressed={solidOn}
+              title="各层不透明（默认）"
+              style={{
+                padding: '3px 8px',
+                fontSize: '11px',
+                cursor: 'pointer',
+                borderRadius: '4px',
+                border: solidOn ? '1px solid #38bdf8' : '1px solid #555',
+                background: solidOn ? 'rgba(56, 189, 248, 0.3)' : '#333',
+                color: solidOn ? '#e0f2fe' : '#ccc',
+              }}
+            >
+              实心
+            </button>
+          </div>
+        </div>
+        {layers.map((layer) => {
+          const config = LAYER_CONFIG[layer];
+          const value = layerOpacities[layer];
+          return (
+            <label
+              key={layer}
+              style={{
+                display: 'block',
+                fontSize: '10px',
+                color: '#9ca3af',
+                marginBottom: '4px',
+              }}
+            >
+              {config.label}
+              <span style={{ marginLeft: '6px', fontVariantNumeric: 'tabular-nums', color: '#7dd3fc' }}>
+                {value.toFixed(2)}
+              </span>
+              <input
+                type="range"
+                min={LAYER_OPACITY_MIN}
+                max={LAYER_OPACITY_MAX}
+                step={LAYER_OPACITY_STEP}
+                value={value}
+                onChange={(e) =>
+                  onLayerOpacityChange(layer, clampLayerOpacity(Number(e.target.value)))
+                }
+                aria-label={`${config.label} ${config.labelEn} opacity`}
+                data-layer-opacity={layer}
+                style={{ width: '100%', marginTop: '2px', cursor: 'pointer' }}
+              />
+            </label>
+          );
+        })}
+        <div style={{ fontSize: '9px', color: '#777', marginTop: '4px', lineHeight: 1.35 }}>
+          覆盖软组织半透明以便观察骨骼。教学透视，<strong>非</strong>临床 X 线 / 透视。
         </div>
       </div>
 

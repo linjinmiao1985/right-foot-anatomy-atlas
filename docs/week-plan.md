@@ -352,3 +352,7 @@ When ending a run, update:
 ## Day 4bl note (2026-09-21)
 
 Cloud Agent still usage-blocked; local soft dig **#84–#89** — soft gaps (DI / per-ray MTA / nerve·ligament CC0/BY) **still dry**; **0** mesh wire. Census freeze unchanged (**129/124**). Next: keep mining CC0/BY; resume Cloud Agent when on-demand usage enabled; do **not** force-wire Andreassen/Henson/ScanTW-NC. **No finished-product claim.**
+
+## Day 4bm note (2026-09-21)
+
+Cloud Agent **resumed**. Teaching ghost / 透视 UX (`G`) + digs **#90–#94**. Soft gaps **still dry**; **0** mesh wire. Census freeze unchanged (**129/124**). Next: keep mining CC0/BY; do **not** force-wire Andreassen/Henson/ScanTW-NC. **No finished-product claim.**

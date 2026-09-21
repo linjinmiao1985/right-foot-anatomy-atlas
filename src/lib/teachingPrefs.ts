@@ -1,6 +1,7 @@
 /**
  * Persist teaching UI prefs in localStorage (layer visibility, label density,
- * sagittal clip on/off+position, last camera preset, per-structure hidden ids).
+ * sagittal clip on/off+position, last camera preset, per-structure hidden ids,
+ * per-layer ghost/透视 opacity).
  * UX-borrow (ideas only): Open Anatomy Studio local progress / favorites habit.
  * No third-party code copied.
  *
@@ -24,6 +25,10 @@ import {
   isCameraPresetId,
   type CameraPresetId,
 } from './cameraPresets';
+import {
+  defaultLayerOpacities,
+  parseLayerOpacities,
+} from './layerOpacity';
 
 /** Bump when the stored shape changes incompatibly. */
 export const TEACHING_PREFS_VERSION = 1 as const;
@@ -38,6 +43,8 @@ export interface TeachingPrefs {
   cameraPresetId: CameraPresetId;
   /** Structure ids hidden via per-structure dissection hide (X). */
   hiddenStructureIds: string[];
+  /** Per-layer mesh opacity (教学透视 / ghost). Missing → solid 1. */
+  layerOpacities: Record<Layer, number>;
 }
 
 interface TeachingPrefsEnvelope {
@@ -55,6 +62,7 @@ export function defaultTeachingPrefs(): TeachingPrefs {
     clipConstant: DEFAULT_CLIP_CONSTANT,
     cameraPresetId: DEFAULT_CAMERA_PRESET,
     hiddenStructureIds: [],
+    layerOpacities: defaultLayerOpacities(),
   };
 }
 
@@ -98,8 +106,9 @@ export function parseTeachingPrefs(value: unknown): TeachingPrefs | null {
   }
   if (!isCameraPresetId(raw.cameraPresetId)) return null;
 
-  // hiddenStructureIds optional for backward compat with earlier v1 payloads
+  // hiddenStructureIds / layerOpacities optional for backward compat with earlier v1 payloads
   const hiddenStructureIds = parseHiddenStructureIds(raw.hiddenStructureIds);
+  const layerOpacities = parseLayerOpacities(raw.layerOpacities);
 
   return {
     visibleLayers,
@@ -108,6 +117,7 @@ export function parseTeachingPrefs(value: unknown): TeachingPrefs | null {
     clipConstant: clampClipConstant(raw.clipConstant),
     cameraPresetId: raw.cameraPresetId,
     hiddenStructureIds,
+    layerOpacities,
   };
 }
 

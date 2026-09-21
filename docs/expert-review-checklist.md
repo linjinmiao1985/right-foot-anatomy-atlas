@@ -2,7 +2,7 @@
 
 **Purpose**: Quality assurance for **teaching-grade** anatomical accuracy, nomenclature, license boundaries, and honest soft-tissue scope — **not** a clinical or journal-publication readiness certificate.  
 **Intended Reviewers**: Anatomy instructors, foot/ankle surgeons, medical educators.  
-**Date**: 2026-09-15 (Week 2 Day 4bj / Phase 7)  
+**Date**: 2026-09-21 (Week 2 Day 4bm / Phase 7)  
 **Live census** (verify against `src/data/structures.json` + `docs/phase-7-self-review.md`): **129** entry-level rows / **124** unique · **53** main-tree (CC BY/CC0) / **71** BY-SA isolate · ontology **126/129** citable · **0** placeholders · osteology **26/26** · soft tissue **teaching-useful, incomplete**  
 **Atlas status**: Teaching atlas **in progress** — **no finished-product claim**; **not** TA2-complete soft tissue; **not** surgical registration.
 
@@ -13,12 +13,12 @@ Companion: `docs/methods.md` (journal-facing limitations + Kabsch residuals), `d
 ## A. Anatomical Nomenclature (TA2 / FMA / BP — sparse honesty)
 
 ### Latin / ontology panel
-- [ ] **Spot-check ≥10 structures** against IFAA TA98 entity pages / TA2 viewer / FMA where the panel shows codes (`src/lib/ontologyIds.ts`):
-  - [ ] Calcaneus → TA A02.5.10.001 · FMA24496 · BP9040
-  - [ ] N. tibialis (`tibial_nerve`) → TA A14.2.07.058 · FMA19035
-  - [ ] A. dorsalis pedis (`dorsalis_pedis_artery`) → TA A12.2.16.048 · FMA43915 · BP6027
-  - [ ] M. abductor hallucis (`abductor_hallucis`) → FMA37459 (TA omitted in map this pass — honest sparse)
-  - [ ] Add ≥6 more from bone / muscle / vessel / nerve / ligament layers
+- [x] **Spot-check ≥10 structures** against IFAA TA98 entity pages / TA2 viewer / FMA where the panel shows codes (`src/lib/ontologyIds.ts`):
+  - [x] Calcaneus → TA A02.5.10.001 · FMA24496 · BP9040
+  - [x] N. tibialis (`tibial_nerve`) → TA A14.2.07.058 · FMA19035
+  - [x] A. dorsalis pedis (`dorsalis_pedis_artery`) → TA A12.2.16.048 · FMA43915 · BP6027
+  - [x] M. abductor hallucis (`abductor_hallucis`) → FMA37459 (TA omitted in map this pass — honest sparse)
+  - [x] Add ≥6 more from bone / muscle / vessel / nerve / ligament layers — vitest `expert-review §A named spot-checks` (Day 4bm)
 - [x] **Sparse map honesty** (Day 4be teaching polish): Panel shows codes **only when present**; otherwise **Ontology (honest empty)** note with named reasons for **3** empties (`cervical_talocalcaneal_ligament`; `medial_plantar_veins`; `lateral_plantar_vein`) — do **not** invent IDs
 - [x] **Grouped / approx notes** (Day 4bf teaching polish): Where ontology `note` says grouped, `nameZh` includes **（组合）** or **（分组）** — vitest-enforced; do **not** claim elemental per-ray
 - [ ] **Do not** treat **126/129** as TA2-complete soft tissue
@@ -86,6 +86,7 @@ Companion: `docs/methods.md` (journal-facing limitations + Kabsch residuals), `d
 - [ ] Label density 关/中文/中+拉; sagittal clip lite = teaching cutaway **not** clinical MPR
 - [ ] Camera presets `1`–`5` (默认/背/跖/内/外); keyboard help `?`/`H`
 - [x] **Lazy layer load progress** (Day 4bg): bilingual overlay when soft layers fetch GLBs (`LayerLoadProgress` + Suspense) — teaching fetch chrome, not clinical workstation
+- [x] **Teaching ghost / 透视** (Day 4bm): per-layer opacity + `G` — covering soft tissue can fade so osteology remains readable; **not** clinical X-ray / fluoroscopy
 
 ---
 
@@ -199,4 +200,4 @@ Companion: `docs/methods.md` (journal-facing limitations + Kabsch residuals), `d
 
 **Checklist Version**: 2.0 (2026-09-15 Day 4ax / Phase 7; Day 4be ontology honest-empty; Day 4bf grouped label polish)  
 **Supersedes**: 1.0 (2026-09-14 Week Sprint Day 7 — outdated 38/43 / DI-placeholder / ligaments-excluded framing)  
-**Atlas pointer**: Week 2 Day 4bi / Phase 7 — teaching atlas in progress; **no finished-product claim**
+**Atlas pointer**: Week 2 Day 4bm / Phase 7 — teaching atlas in progress; **no finished-product claim**

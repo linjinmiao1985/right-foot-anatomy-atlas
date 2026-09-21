@@ -178,3 +178,11 @@ If issues found during manual testing:
 - [x] Outside-canvas bilingual overlay (`data-testid="layer-load-progress"`) via drei `useProgress` — percent bar + optional layer chip + loaded/total detail
 - [x] Idle / `total===0` → overlay hidden (no stuck 100% flash)
 - Honesty: teaching asset-fetch chrome — **not** a clinical workstation / finished-product claim
+
+## Day 4bm addendum — teaching ghost / 透视
+
+- [x] Layer panel **透视 / 实心** + per-layer opacity sliders (`data-ghost-preset`, `data-layer-opacity`)
+- [x] Key `G` toggles ghost preset ↔ solid (help overlay documents it)
+- [x] Prefs persist `layerOpacities`; older localStorage envelopes without the field restore solid 1
+- [x] Ghost is teaching translucency — bones stay readable under faded muscle/ligament/vessel
+- Honesty: **not** clinical X-ray / fluoroscopy / finished-product claim

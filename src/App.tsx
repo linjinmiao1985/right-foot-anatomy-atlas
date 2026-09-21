@@ -40,6 +40,13 @@ import {
   revealStructureId,
   revealAllHiddenStructures,
 } from './lib/structureVisibility';
+import {
+  defaultLayerOpacities,
+  ghostLayerOpacities,
+  isGhostLayerOpacities,
+  isGhostToggleKey,
+  toggleGhostLayerOpacities,
+} from './lib/layerOpacity';
 
 function emptyLayerCounts(): Record<Layer, number> {
   return { bone: 0, muscle: 0, nerve: 0, vessel: 0, ligament: 0 };
@@ -86,6 +93,9 @@ function App() {
   });
   const [cameraPresetToken, setCameraPresetToken] = useState(0);
   const [helpOpen, setHelpOpen] = useState(false);
+  const [layerOpacities, setLayerOpacities] = useState<Record<Layer, number>>(() => {
+    return loadTeachingPrefs()?.layerOpacities ?? defaultLayerOpacities();
+  });
 
   // Persist teaching prefs (layers / label density / clip / camera / hidden structure ids).
   useEffect(() => {
@@ -96,8 +106,9 @@ function App() {
       clipConstant,
       cameraPresetId,
       hiddenStructureIds: [...hiddenStructureIds],
+      layerOpacities,
     });
-  }, [visibleLayers, labelDensity, clipEnabled, clipConstant, cameraPresetId, hiddenStructureIds]);
+  }, [visibleLayers, labelDensity, clipEnabled, clipConstant, cameraPresetId, hiddenStructureIds, layerOpacities]);
 
   const handleCameraPresetChange = (id: CameraPresetId) => {
     setCameraPresetId(id);
@@ -239,6 +250,12 @@ function App() {
       if (isViewResetKey(e.key)) {
         e.preventDefault();
         setCameraPresetToken((n) => n + 1);
+        return;
+      }
+      // Ghost / 透视 — Air-Sage 透视 + Z-Anatomy Atlas G-ghost habit (ideas only)
+      if (isGhostToggleKey(e.key)) {
+        e.preventDefault();
+        setLayerOpacities((prev) => toggleGhostLayerOpacities(prev));
       }
     };
     window.addEventListener('keydown', handleKey);
@@ -301,6 +318,7 @@ function App() {
             : ''}
           {isolateMode ? ' · 隔离中 (I)' : ''}
           {hiddenStructureIds.size > 0 ? ` · 已隐藏 ${hiddenStructureIds.size}` : ''}
+          {isGhostLayerOpacities(layerOpacities) ? ' · 透视 (G)' : ''}
         </div>
       </div>
 
@@ -329,6 +347,12 @@ function App() {
         onClipConstantChange={(v) => setClipConstant(clampClipConstant(v))}
         cameraPresetId={cameraPresetId}
         onCameraPresetChange={handleCameraPresetChange}
+        layerOpacities={layerOpacities}
+        onLayerOpacityChange={(layer, opacity) => {
+          setLayerOpacities((prev) => ({ ...prev, [layer]: opacity }));
+        }}
+        onGhostPreset={() => setLayerOpacities(ghostLayerOpacities())}
+        onSolidPreset={() => setLayerOpacities(defaultLayerOpacities())}
       />
 
       <Viewport
@@ -346,6 +370,7 @@ function App() {
         cameraPresetId={cameraPresetId}
         cameraPresetToken={cameraPresetToken}
         hiddenStructureIds={hiddenStructureIds}
+        layerOpacities={layerOpacities}
       />
 
       <StructurePanel
@@ -449,7 +474,7 @@ function App() {
         }}
       >
         <div style={{ fontSize: '11px', color: '#666' }}>
-          提示: ?/H 快捷键 | 搜索 ZH/LA | 视角1–5 | 标签密度 | 矢状切面(lite) | 拖动旋转 | 滚轮缩放 | 右键平移 | 点击对焦 | I 隔离/退出 | X 隐藏此结构 | Esc 取消选择(不恢复已隐藏)
+          提示: ?/H 快捷键 | 搜索 ZH/LA | 视角1–5 | 标签密度 | 矢状切面(lite) | G 透视/实心 | 拖动旋转 | 滚轮缩放 | 右键平移 | 点击对焦 | I 隔离/退出 | X 隐藏此结构 | Esc 取消选择(不恢复已隐藏)
         </div>
         <div
           style={{

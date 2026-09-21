@@ -14,6 +14,7 @@ import { getAllLayers } from './layers';
 import { DEFAULT_LABEL_DENSITY } from './labelDensity';
 import { DEFAULT_CLIP_CONSTANT, DEFAULT_CLIP_ENABLED, CLIP_CONSTANT_MIN } from './clipPlane';
 import { DEFAULT_CAMERA_PRESET } from './cameraPresets';
+import { defaultLayerOpacities, GHOST_LAYER_OPACITY } from './layerOpacity';
 
 describe('teachingPrefs', () => {
   beforeEach(() => {
@@ -33,6 +34,7 @@ describe('teachingPrefs', () => {
     expect(d.clipConstant).toBe(DEFAULT_CLIP_CONSTANT);
     expect(d.cameraPresetId).toBe(DEFAULT_CAMERA_PRESET);
     expect(d.hiddenStructureIds).toEqual([]);
+    expect(d.layerOpacities).toEqual(defaultLayerOpacities());
   });
 
   it('parses valid prefs and clamps clip constant', () => {
@@ -51,6 +53,7 @@ describe('teachingPrefs', () => {
     expect(parsed!.clipConstant).toBe(CLIP_CONSTANT_MIN);
     expect(parsed!.cameraPresetId).toBe('plantar');
     expect(parsed!.hiddenStructureIds).toEqual(['talus', 'calcaneus']);
+    expect(parsed!.layerOpacities).toEqual(defaultLayerOpacities());
   });
 
   it('rejects invalid shapes', () => {
@@ -87,6 +90,7 @@ describe('teachingPrefs', () => {
     });
     expect(parsed!.visibleLayers).toEqual(['bone', 'nerve']);
     expect(parsed!.hiddenStructureIds).toEqual([]); // missing → empty (compat)
+    expect(parsed!.layerOpacities).toEqual(defaultLayerOpacities());
 
     const empty = parseTeachingPrefs({
       visibleLayers: [],
@@ -107,12 +111,14 @@ describe('teachingPrefs', () => {
       clipConstant: 1.2,
       cameraPresetId: 'lateral' as const,
       hiddenStructureIds: ['navicular', 'cuboid'] as const,
+      layerOpacities: { ...GHOST_LAYER_OPACITY },
     };
     expect(
       saveTeachingPrefs({
         ...prefs,
         visibleLayers: [...prefs.visibleLayers],
         hiddenStructureIds: [...prefs.hiddenStructureIds],
+        layerOpacities: { ...prefs.layerOpacities },
       }),
     ).toBe(true);
     const loaded = loadTeachingPrefs();
@@ -123,6 +129,7 @@ describe('teachingPrefs', () => {
       clipConstant: 1.2,
       cameraPresetId: 'lateral',
       hiddenStructureIds: ['navicular', 'cuboid'],
+      layerOpacities: { ...GHOST_LAYER_OPACITY },
     });
     const raw = window.localStorage.getItem(TEACHING_PREFS_STORAGE_KEY);
     expect(raw).toBeTruthy();
@@ -157,6 +164,7 @@ describe('teachingPrefs', () => {
     expect(loadTeachingPrefs()?.cameraPresetId).toBe('dorsal');
     expect(loadTeachingPrefs()?.visibleLayers).toEqual(['vessel']);
     expect(loadTeachingPrefs()?.hiddenStructureIds).toEqual([]);
+    expect(loadTeachingPrefs()?.layerOpacities).toEqual(defaultLayerOpacities());
   });
 
   it('parseHiddenStructureIds filters and dedupes', () => {

@@ -58,6 +58,12 @@ export const KEYBOARD_HELP_GROUPS: ReadonlyArray<KeyboardShortcutGroup> = [
         labelEn: 'Reset current teaching view',
         note: 'Re-applies the active preset after free orbit (Auckland LL visualiser reset habit — ideas only)',
       },
+      {
+        keys: 'G',
+        labelZh: '透视 / 实心',
+        labelEn: 'Toggle ghost / solid layers',
+        note: 'Soft-tissue translucency so osteology shows through — teaching 透视, not clinical X-ray (Air-Sage / Z-Anatomy Atlas G-ghost habit — ideas only)',
+      },
     ],
   },
   {

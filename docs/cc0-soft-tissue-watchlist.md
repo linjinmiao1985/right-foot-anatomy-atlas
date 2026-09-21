@@ -213,3 +213,16 @@ Distinct from Sheffield Figshare **9934055** (**CC BY-NC** STL pack — already 
 | Cloud Agent | Still **quota / usage blocked** |
 
 Watchlist still tracks where a true **CC0/BY** soft find would matter. Day **4bl** confirms soft gaps remain **dry**. Handback: `docs/cloud-agent-handback.md`. **No finished-product claim**.
+
+## Day 4bm dig summary
+
+| Check | Result |
+|-------|--------|
+| New CC0/BY soft packs for DI / per-ray MTA / nerves / ligaments | **None** — #90 NC-SA tendon/muscle united GLB; #91 MuJoCo sim; #92/#93 ZA SA/NC; #94 same BP3D pool |
+| Gastroc/soleus | No new belly surface; Andreassen/Henson still **blocked** |
+| Tempting false leads | ScanTW **muscle and tendon structure of a foot** (Zenodo **21375254**, NC); nqwrc whole-atlas **NC-SA** from Dundee inner-ear + kidney |
+| Teaching polish | Layer **ghost / 透视** (`G`) — not a mesh integrate |
+| Andreassen / Utah / Henson wire | **Skipped** / not re-opened / **0** wire |
+| Cloud Agent | **Resumed** this pass |
+
+Watchlist still tracks where a true **CC0/BY** soft find would matter. Day **4bm** confirms soft gaps remain **dry**. Handback: `docs/cloud-agent-handback.md`. **No finished-product claim**.

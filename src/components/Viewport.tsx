@@ -39,6 +39,8 @@ interface ViewportProps {
   cameraPresetToken?: number;
   /** Per-structure hide set (beyond isolate). */
   hiddenStructureIds?: Set<string>;
+  /** Per-layer opacity multiplier (教学透视). */
+  layerOpacities?: Record<Layer, number>;
 }
 
 export default function Viewport({
@@ -56,6 +58,7 @@ export default function Viewport({
   cameraPresetId = DEFAULT_CAMERA_PRESET,
   cameraPresetToken = 0,
   hiddenStructureIds,
+  layerOpacities,
 }: ViewportProps) {
   return (
     <Canvas
@@ -92,6 +95,7 @@ export default function Viewport({
           visibleMuscleGroups={visibleMuscleGroups}
           labelDensity={labelDensity}
           hiddenStructureIds={hiddenStructureIds}
+          layerOpacities={layerOpacities}
         />
       </Suspense>
 

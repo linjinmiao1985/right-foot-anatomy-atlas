@@ -1,8 +1,8 @@
 # Methods
 
 **Project**: Right Foot Anatomy Atlas (Teaching-Grade Interactive 3D)  
-**Version**: Week 2 Day 4bi / Phase 7 (teaching atlas in progress; see README + `docs/phase-7-self-review.md` live census; **129** entries / **124** unique; **53** main-tree / **71** BY-SA; ontology **126/129** citable with StructurePanel honest-empty notes; 134 discrete GLBs; expert-review checklist v2.0; mining through #65; Andreassen blocked — TA2 soft-tissue still incomplete — **not a finished product**)
-**Date**: 2026-09-15  
+**Version**: Week 2 Day 4bm / Phase 7 (teaching atlas in progress; see README + `docs/phase-7-self-review.md` live census; **129** entries / **124** unique; **53** main-tree / **71** BY-SA; ontology **126/129** citable with StructurePanel honest-empty notes; 134 discrete GLBs; expert-review checklist v2.0; mining through #94; Andreassen blocked — TA2 soft-tissue still incomplete — **not a finished product**)
+**Date**: 2026-09-21  
 **Licenses**: Code MIT | Assets CC BY 4.0 / CC0 1.0 / CC BY-SA 4.0 (isolated)
 
 ---
@@ -282,8 +282,9 @@ Repo scripts (prefer these over ad-hoc one-offs):
 - `scripts/integrity-audit.py` — `placeholder:false` ↔ `REAL_*_MODELS` ↔ GLB existence (+ orphan allowlist)
 - `scripts/screenshot-pipeline.mjs` — optional teaching QA screenshots → `docs/screenshots/` (`npm run screenshots`; 9-shot pack incl. dorsal/plantar/medial/lateral; **not** a product gallery)
 - `src/lib/cameraPresets.ts` — teaching camera presets (默认/背/跖/内/外); FOOT_TEACHING_TARGET from BP3D bone midfoot
-- `src/lib/teachingPrefs.ts` — localStorage persist for layers / label density / clip / last camera preset / hidden structure ids (SSR-safe)
-- `src/lib/keyboardHelp.ts` + `KeyboardHelpOverlay` — bilingual shortcut sheet (`?`/`H`); Esc closes help first
+- `src/lib/teachingPrefs.ts` — localStorage persist for layers / label density / clip / last camera preset / hidden structure ids / **layerOpacities** (SSR-safe)
+- `src/lib/keyboardHelp.ts` + `KeyboardHelpOverlay` — bilingual shortcut sheet (`?`/`H`); Esc closes help first; `G` teaching ghost / 透视
+- `src/lib/layerOpacity.ts` — per-layer opacity compose + ghost preset (teaching translucency, **not** clinical X-ray)
 - `scripts/expand-structures.py` — structures helpers (when used)
 - `update_structures_bp3d.py` / `update_structures_um.py` — historical structure wiring
 - `third_party/z-anatomy/*` — Blender inventory/export **recipes** (Blender 4.2.9 LTS may be local; Zenodo `.blend` gitignored)
@@ -599,3 +600,10 @@ Downloaded Andreassen VHM Final STLs (CC BY 4.0). Documented Kabsch + spatial QA
 1. **Henson Sheffield**: feasibility note for one-subject marching-cubes sandbox (~80–160 MB; **not** full 5.65 GB). Metadata/NOTICE under `third_party/henson-sheffield/` — **0** DICOM in git; **0** GLB wire.
 2. Expert-review 踇/laterality spot-check; digs #71–#76 (MIT/CC0 companions + NC rejects + Apache LE bones). Andreassen **skipped**.
 3. Version pointer Day 4bi / Phase 7. **No finished-product claim.** Census unchanged.
+
+## Day 4bm — Teaching ghost / 透视 + mining #90–#94 (2026-09-21)
+
+1. **UX**: Per-layer opacity (`layerOpacity.ts`) + LayerToggles 透视/实心 + key **G** (Air-Sage 透视 / Z-Anatomy Atlas G-ghost habit — ideas only). Prefs persist `layerOpacities`. Teaching translucency only — **not** clinical X-ray.
+2. Expert-review §A named ontology spot-checks locked in vitest (≥10).
+3. Open mining **#90–#94** — soft gaps still **dry**; **0** mesh wire; Andreassen/Henson skipped.
+4. Version pointer Day 4bm / Phase 7. **No finished-product claim.** Census unchanged.

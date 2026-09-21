@@ -15,7 +15,7 @@ describe('keyboardHelp', () => {
     ]);
   });
 
-  it('lists camera presets 1–5 plus view reset', () => {
+  it('lists camera presets 1–5 plus view reset and ghost', () => {
     const nav = KEYBOARD_HELP_GROUPS.find((g) => g.id === 'navigation');
     expect(nav?.shortcuts.map((s) => s.keys)).toEqual([
       '1',
@@ -24,6 +24,7 @@ describe('keyboardHelp', () => {
       '4',
       '5',
       '0 / Home',
+      'G',
     ]);
   });
 

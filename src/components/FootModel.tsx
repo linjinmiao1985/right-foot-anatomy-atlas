@@ -28,6 +28,11 @@ import {
   type MuscleGroupId,
 } from '../lib/muscleGroups';
 import { isStructureHidden } from '../lib/structureVisibility';
+import {
+  composeLayerOpacity,
+  DEFAULT_LAYER_OPACITY,
+  opacityNeedsTransparency,
+} from '../lib/layerOpacity';
 
 interface FootModelProps {
   visibleLayers: Set<Layer>;
@@ -47,6 +52,8 @@ interface FootModelProps {
   labelDensity?: LabelDensity;
   /** Per-structure hide set (undergravity/human-atlas dissection UX-borrow; beyond isolate). */
   hiddenStructureIds?: Set<string>;
+  /** Per-layer opacity multiplier (教学透视 / ghost). Missing → 1. */
+  layerOpacities?: Record<Layer, number>;
 }
 
 interface PlaceholderMesh {
@@ -241,7 +248,7 @@ const REAL_LIGAMENT_MODELS: Record<string, string> = {
   'dorsal_intercuneiform_ligaments': '/models/right-foot/by-sa/dorsal_intercuneiform_ligaments.glb',
 };
 
-export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName, isolateMode = false, visibleLigamentGroups, visibleNerveGroups, visibleVesselGroups, visibleMuscleGroups, labelDensity = DEFAULT_LABEL_DENSITY, hiddenStructureIds }: FootModelProps) {
+export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName, isolateMode = false, visibleLigamentGroups, visibleNerveGroups, visibleVesselGroups, visibleMuscleGroups, labelDensity = DEFAULT_LABEL_DENSITY, hiddenStructureIds, layerOpacities }: FootModelProps) {
   const ligGroups = visibleLigamentGroups ?? new Set(getAllLigamentGroupIds());
   const nerveGroups = visibleNerveGroups ?? new Set(getAllNerveGroupIds());
   const vesselGroups = visibleVesselGroups ?? new Set(getAllVesselGroupIds());
@@ -371,6 +378,7 @@ export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName
         const color = LAYER_CONFIG[structure.layer].color;
         const isSelected = meshName === selectedMeshName;
         const isHovered = meshName === hoveredMesh;
+        const layerOpacity = layerOpacities?.[structure.layer] ?? DEFAULT_LAYER_OPACITY;
         // Teaching polish: when something is selected (and not isolating), dim peers
         const selectedStruct = selectedMeshName ? getStructureByMeshName(selectedMeshName) : null;
         const isPeerOfSelection =
@@ -402,6 +410,7 @@ export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName
               onMeshClick={onMeshClick}
               onHoverChange={setHoveredMesh}
               labelDensity={labelDensity}
+              layerOpacity={layerOpacity}
             />
           );
         }
@@ -421,6 +430,7 @@ export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName
               onMeshClick={onMeshClick}
               onHoverChange={setHoveredMesh}
               labelDensity={labelDensity}
+              layerOpacity={layerOpacity}
             />
           );
         }
@@ -440,6 +450,7 @@ export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName
               onMeshClick={onMeshClick}
               onHoverChange={setHoveredMesh}
               labelDensity={labelDensity}
+              layerOpacity={layerOpacity}
             />
           );
         }
@@ -459,6 +470,7 @@ export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName
               onMeshClick={onMeshClick}
               onHoverChange={setHoveredMesh}
               labelDensity={labelDensity}
+              layerOpacity={layerOpacity}
             />
           );
         }
@@ -477,6 +489,7 @@ export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName
               onMeshClick={onMeshClick}
               onHoverChange={setHoveredMesh}
               labelDensity={labelDensity}
+              layerOpacity={layerOpacity}
             />
           );
         }
@@ -526,12 +539,16 @@ export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName
                   : structure.layer === 'vessel' ? 0.1
                   : 0
                 }
-                opacity={
-                  isHovered && !isSelected ? 0.9 
-                  : structure.layer === 'muscle' ? 0.85
-                  : structure.layer === 'vessel' ? 0.8
-                  : 1
-                }
+                opacity={composeLayerOpacity(
+                  isHovered && !isSelected
+                    ? 0.9
+                    : structure.layer === 'muscle'
+                      ? 0.85
+                      : structure.layer === 'vessel'
+                        ? 0.8
+                        : 1,
+                  layerOpacity,
+                )}
                 transparent={true}
                 roughness={structure.layer === 'muscle' ? 0.7 : 0.4}
                 metalness={structure.layer === 'vessel' ? 0.2 : 0}
@@ -570,6 +587,7 @@ interface RealBoneModelProps {
   onMeshClick: (meshName: string) => void;
   onHoverChange: (meshName: string | null) => void;
   labelDensity?: LabelDensity;
+  layerOpacity?: number;
 }
 
 function RealBoneModel({
@@ -582,6 +600,7 @@ function RealBoneModel({
   onMeshClick,
   onHoverChange,
   labelDensity = DEFAULT_LABEL_DENSITY,
+  layerOpacity = DEFAULT_LAYER_OPACITY,
 }: RealBoneModelProps) {
   const { scene } = useGLTF(modelPath);
   
@@ -597,12 +616,13 @@ function RealBoneModel({
         mesh.material.color.set(color);
         mesh.material.emissive.set(isSelected ? '#00ffff' : (isHovered ? '#ffffff' : '#000000'));
         mesh.material.emissiveIntensity = isSelected ? 0.6 : (isHovered ? 0.3 : 0);
-        mesh.material.transparent = isHovered && !isSelected;
-        mesh.material.opacity = isHovered && !isSelected ? 0.9 : 1;
+        const opacity = composeLayerOpacity(isHovered && !isSelected ? 0.9 : 1, layerOpacity);
+        mesh.material.transparent = opacityNeedsTransparency(opacity);
+        mesh.material.opacity = opacity;
         mesh.material.needsUpdate = true;
       }
     });
-  }, [clonedScene, color, isSelected, isHovered]);
+  }, [clonedScene, color, isSelected, isHovered, layerOpacity]);
   
   return (
     <group
@@ -650,6 +670,7 @@ interface RealMuscleModelProps {
   onMeshClick: (meshName: string) => void;
   onHoverChange: (meshName: string | null) => void;
   labelDensity?: LabelDensity;
+  layerOpacity?: number;
 }
 
 function RealMuscleModel({
@@ -663,6 +684,7 @@ function RealMuscleModel({
   onMeshClick,
   onHoverChange,
   labelDensity = DEFAULT_LABEL_DENSITY,
+  layerOpacity = DEFAULT_LAYER_OPACITY,
 }: RealMuscleModelProps) {
   const { scene } = useGLTF(modelPath);
   const additionalScenes = (additionalParts || []).map(path => useGLTF(path).scene);
@@ -682,13 +704,16 @@ function RealMuscleModel({
           mesh.material.emissive.set(isSelected ? '#ff6600' : (isHovered ? '#ffffff' : '#000000'));
           mesh.material.emissiveIntensity = isSelected ? 0.4 : (isHovered ? 0.2 : 0);
           mesh.material.transparent = true;
-          mesh.material.opacity = isHovered && !isSelected ? 0.85 : 0.75;
+          mesh.material.opacity = composeLayerOpacity(
+            isHovered && !isSelected ? 0.85 : 0.75,
+            layerOpacity,
+          );
           mesh.material.roughness = 0.7;
           mesh.material.needsUpdate = true;
         }
       });
     });
-  }, [clonedScene, clonedAdditional, color, isSelected, isHovered]);
+  }, [clonedScene, clonedAdditional, color, isSelected, isHovered, layerOpacity]);
   
   return (
     <group
@@ -743,6 +768,7 @@ interface RealVesselModelProps {
   onMeshClick: (meshName: string) => void;
   onHoverChange: (meshName: string | null) => void;
   labelDensity?: LabelDensity;
+  layerOpacity?: number;
 }
 
 function RealVesselModel({
@@ -756,6 +782,7 @@ function RealVesselModel({
   onMeshClick,
   onHoverChange,
   labelDensity = DEFAULT_LABEL_DENSITY,
+  layerOpacity = DEFAULT_LAYER_OPACITY,
 }: RealVesselModelProps) {
   const { scene } = useGLTF(modelPath);
   
@@ -773,12 +800,15 @@ function RealVesselModel({
         );
         mesh.material.emissiveIntensity = isSelected ? 0.35 : isHovered ? 0.22 : isDimmed ? 0.04 : 0.1;
         mesh.material.transparent = true;
-        mesh.material.opacity = isSelected ? 0.92 : isHovered ? 0.85 : isDimmed ? 0.22 : 0.78;
+        mesh.material.opacity = composeLayerOpacity(
+          isSelected ? 0.92 : isHovered ? 0.85 : isDimmed ? 0.22 : 0.78,
+          layerOpacity,
+        );
         mesh.material.metalness = 0.2;
         mesh.material.needsUpdate = true;
       }
     });
-  }, [clonedScene, color, isSelected, isHovered, isDimmed]);
+  }, [clonedScene, color, isSelected, isHovered, isDimmed, layerOpacity]);
   
   return (
     <group
@@ -830,6 +860,7 @@ interface RealNerveModelProps {
   onMeshClick: (meshName: string) => void;
   onHoverChange: (meshName: string | null) => void;
   labelDensity?: LabelDensity;
+  layerOpacity?: number;
 }
 
 function RealNerveModel({
@@ -843,6 +874,7 @@ function RealNerveModel({
   onMeshClick,
   onHoverChange,
   labelDensity = DEFAULT_LABEL_DENSITY,
+  layerOpacity = DEFAULT_LAYER_OPACITY,
 }: RealNerveModelProps) {
   const { scene } = useGLTF(modelPath);
   
@@ -860,13 +892,16 @@ function RealNerveModel({
         );
         mesh.material.emissiveIntensity = isSelected ? 0.55 : isHovered ? 0.32 : isDimmed ? 0.06 : 0.2;
         mesh.material.transparent = true;
-        mesh.material.opacity = isSelected ? 1 : isHovered ? 0.95 : isDimmed ? 0.2 : 0.9;
+        mesh.material.opacity = composeLayerOpacity(
+          isSelected ? 1 : isHovered ? 0.95 : isDimmed ? 0.2 : 0.9,
+          layerOpacity,
+        );
         mesh.material.metalness = 0.1;
         mesh.material.roughness = 0.8;
         mesh.material.needsUpdate = true;
       }
     });
-  }, [clonedScene, color, isSelected, isHovered, isDimmed]);
+  }, [clonedScene, color, isSelected, isHovered, isDimmed, layerOpacity]);
   
   return (
     <group
@@ -927,6 +962,7 @@ interface RealLigamentModelProps {
   onMeshClick: (meshName: string) => void;
   onHoverChange: (meshName: string | null) => void;
   labelDensity?: LabelDensity;
+  layerOpacity?: number;
 }
 
 function RealLigamentModel({
@@ -939,6 +975,7 @@ function RealLigamentModel({
   onMeshClick,
   onHoverChange,
   labelDensity = DEFAULT_LABEL_DENSITY,
+  layerOpacity = DEFAULT_LAYER_OPACITY,
 }: RealLigamentModelProps) {
   const { scene } = useGLTF(modelPath);
   const clonedScene = scene.clone();
@@ -952,13 +989,16 @@ function RealLigamentModel({
         mesh.material.emissive.set(isSelected ? '#d4a574' : (isHovered ? '#ffffff' : '#3a3020'));
         mesh.material.emissiveIntensity = isSelected ? 0.45 : (isHovered ? 0.25 : 0.08);
         mesh.material.transparent = true;
-        mesh.material.opacity = isHovered && !isSelected ? 0.9 : 0.82;
+        mesh.material.opacity = composeLayerOpacity(
+          isHovered && !isSelected ? 0.9 : 0.82,
+          layerOpacity,
+        );
         mesh.material.roughness = 0.55;
         mesh.material.metalness = 0.05;
         mesh.material.needsUpdate = true;
       }
     });
-  }, [clonedScene, color, isSelected, isHovered]);
+  }, [clonedScene, color, isSelected, isHovered, layerOpacity]);
 
   return (
     <group
