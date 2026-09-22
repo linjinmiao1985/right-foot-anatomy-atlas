@@ -2309,7 +2309,7 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 
 **Commit**: `Day 4cx: README LIMITATIONS SYNC - sync with Day 4cv/4cw docs (license mix 53/71 main/BY-SA + soft-ceiling #1-170 + teaching compromises + expert-review-checklist v3.0/soft-ceiling memo links + no finished/clinical/TA2-complete disclaimers) + cloud-agent-handback refresh`
 
-**Push**: SHA `<pending>`
+**Push**: SHA `1dafc14`
 
 **Summary**: README Limitations section synced with Day 4cv/4cw docs. §Anatomical: added License mix lead item (53/124 main-tree vs 71/124 BY-SA; cross-link methods.md license matrix + expert-review-checklist v3.0); updated soft-ceiling dig range #1–#170 (was #1–#166); retained teaching compromises for grouped DI/MTA. §Technical: expanded "Not validated for surgery" (surgical planning → surgical planning/navigation/implant sizing/clinical diagnosis); added "Teaching atlas in progress" disclaimer item (not TA2-complete; not finished product; not clinical-grade; cross-link expert-review-checklist v3.0). Documentation section: added expert-review-checklist v3.0 + soft-ceiling memo items; updated methods/phase-8 descriptions; removed superseded phase-7 line. Soft digs watch-only (0 new). Cloud-agent-handback refreshed. Gates green. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
 
