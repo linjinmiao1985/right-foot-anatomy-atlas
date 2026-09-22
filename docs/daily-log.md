@@ -2750,8 +2750,75 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 
 **Commit**: `Day 4df: LINK REMAINING CAPTIONS to screenshots - linked Figures 4-7 from journal-figure-captions.md with honest mapping: (4) BY-SA nerve 04-nerve-bysa.png; (5) soft-ceiling all-layers 01-default-all-layers.png; (6) ontology honest empties NO screenshot (UI-specific text; reviewers inspect running app + ontologyIds.ts HONEST_ONTOLOGY_EMPTIES); (7) Kabsch residuals 02-bone-only.png (honest note: residuals are numeric JSON data not visible in 3D view; bone shows co-registered result) + cloud-agent-handback refresh`
 
-**Push**: SHA `<pending>`
+**Push**: SHA `08221ae`
 
 **Summary**: Remaining journal figure captions linked to screenshots with honest mapping. Figures 4–7 mapped to existing screenshots or honest no-screenshot notes: (4) BY-SA Isolate vs Main Tree → `04-nerve-bysa.png` (nerve layer BY-SA badge visible); (5) Soft-Ceiling Grouped DI-MTA → `01-default-all-layers.png` (all layers with grouped structures + StructurePanel gap notes); (6) Ontology Honest Empties → **no screenshot** (honest note: UI-specific text; reviewers can inspect running app for 3 honest empties or see `ontologyIds.ts` HONEST_ONTOLOGY_EMPTIES); (7) Kabsch Residuals → `02-bone-only.png` (honest caption note: residuals are numeric data in `kabsch_*.json` files, not visible as 3D overlays; bone screenshot shows co-registered result only). All 7 journal figures (1–7) now have screenshot links or honest no-screenshot explanations. Soft digs watch-only (0 new). Cloud-agent-handback refreshed. Gates green. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+---
+
+## Day 4dg — SPARSE SOFT WATCH (journal pack complete) (2026-09-22)
+
+**Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3)
+**Goals**: (1) Soft-tissue WATCH: at most digs #174–#175 NEW only; DRY OK. No NC/SA/unclear wires. (2) Optional Fig6 screenshot if screenshot-pipeline can select honest-empty structure without fake overlays; otherwise skip. (3) Refresh cloud-agent-handback tip to 08221ae / Day 4df; note journal figure pack complete.
+
+**Context**: Journal caption pack is complete (Figs 1–7 linked honestly Day 4de+4df). Prefer sparse watch over more docs.
+
+### Soft-tissue watch digs #174–#175 (sparse; 2 NEW)
+
+**Day 4dg**: sparse watch-only monitoring (2 digs max)
+
+1. **Dig #174** (AnatomyZone/Kenhub/Open3DModel quadratus plantae):
+   - **Query**: `"quadratus plantae" OR "plantar muscle layers" 3D model anatomy CC0 CC-BY open license 2026`
+   - **Result**: **DRY** — no new CC0/BY quadratus plantae meshes
+   - AnatomyZone/Kenhub/TeachMeAnatomy: educational sites with 3D viewers; confirm quadratus plantae is 2nd plantar layer muscle (medial+lateral heads; calcaneus origins; FDL insertion); **no CC0/BY downloadable STL/OBJ**
+   - AnatomyTOOL Open3DModel lower-limb / muscle-attachments (July 2025 / March 2026): includes plantar muscles; **CC BY-SA** (Open3D Project) — not CC0/BY
+   - **Action**: MONITOR — Open3DModel is BY-SA (excluded per Week 2 SA ceiling stance); no CC0/BY alternative
+
+2. **Dig #175** (BodyParts3D/Open3DModel abductor digiti minimi / flexor digitorum brevis):
+   - **Query**: `"abductor digiti minimi" OR "flexor digitorum brevis" foot 3D mesh STL OBJ anatomy open data CC0 2026`
+   - **Result**: **DRY** — no new CC0/BY per-muscle isolated meshes
+   - BodyParts3D GitHub (Kevin-Mattheus-Moerman): converted OBJ→STL archive from BP3D 3.0; **CC BY-SA 2.1 Japan** — not CC0/BY; BP3D V3.0 legacy SA 2.1 JP already rejected (current project uses V4.0 CC BY 4.0 main-tree)
+   - Open3DModel Hand (AnatomyTOOL July 2025): hand flexors; **CC BY-SA** — not foot intrinsics
+   - TA2 Viewer (openanatomy.org): online terminology viewer; no downloadable mesh; reference only
+   - 3D Atlas of Neurological Surgery: educational 3D diagrams foot muscle layers; no download; anatomy reference only
+   - Kenhub: educational site with 3D animation; no CC0/BY downloadable mesh
+   - **Action**: MONITOR — BP3D V3.0 SA 2.1 JP already rejected; no CC0/BY per-muscle isolated foot intrinsics found
+
+**Day 4dg watch dig summary**: 2 digs (#174–#175); **all DRY** (no new CC0/BY quadratus plantae, abductor digiti minimi, flexor digitorum brevis meshes). Open3DModel/AnatomyTOOL is BY-SA (excluded per Week 2 SA ceiling stance); BP3D V3.0 SA 2.1 JP already rejected. Soft-tissue open-data ceiling reconfirmed.
+
+**Total watch digs through Day 4dg**: #147–#175 (29 digs over Day 4cl–4dg); **0** new CC0/BY ready-to-use soft meshes integrated.
+
+### Optional Fig6 screenshot: SKIPPED
+
+**Figure 6: Ontology Honest Empties (126/129 Citable)** — No additional screenshot captured.
+
+**Rationale**: Screenshot-pipeline would require complex automation to:
+1. Select one of the 3 honest-empty structures (`cervical_talocalcaneal_ligament`, `medial_plantar_veins`, or `lateral_plantar_vein`)
+2. Capture StructurePanel with "Ontology (honest empty)" label + bilingual reason visible
+3. Ensure no fake 3D overlays or fabricated UI elements
+
+Existing honest no-screenshot note in `docs/journal-figure-captions.md` (Day 4df) is already appropriate: *"No dedicated screenshot; ontology IDs and honest-empty labels are UI-specific text in StructurePanel. Reviewers can inspect the 3 honest empties by selecting structures in the running app to see the 'Ontology (honest empty)' label with bilingual reasons. See `src/lib/ontologyIds.ts` HONEST_ONTOLOGY_EMPTIES for implementation."*
+
+**Decision**: Skip optional screenshot; prefer honest no-screenshot note over complex automation risk or fake overlays.
+
+### Journal figure caption pack: COMPLETE
+
+**Status**: All 7 journal figures (1–7) have screenshot links or honest no-screenshot notes (Day 4de+4df). No further caption work needed.
+
+### Docs refresh
+- **cloud-agent-handback**: updated tip SHA to 08221ae / Day 4df; date Day 4dg (SPARSE SOFT WATCH — journal pack complete); noted journal figure caption pack complete + soft digs #174–#175 DRY.
+
+### Gates (green)
+- `npm test -- --run`: **138/138** passed (19 test files)
+- `python3 scripts/integrity-audit.py`: **0** violations (129 structures / 134 GLBs)
+- `npm run build`: ✓ (dist built; 1.2 MB chunk size warning expected)
+
+**Census**: unchanged (129/124 entries/unique; 126/129 ontology citable; 53 main-tree / 71 BY-SA; 134 GLB on-disk)
+
+**Commit**: `Day 4dg: SPARSE SOFT WATCH - watch digs #174-#175 (AnatomyZone/Kenhub/Open3DModel quadratus plantae BY-SA; BodyParts3D V3.0 SA 2.1 JP abductor digiti minimi/FDB) both DRY (no new CC0/BY foot intrinsics) + learning-log append + optional Fig6 screenshot SKIPPED (honest no-screenshot note already appropriate; complex automation risk) + cloud-agent-handback refresh (journal caption pack COMPLETE Figs 1-7)`
+
+**Push**: SHA `<pending>`
+
+**Summary**: Sparse soft watch digs #174–#175 (Day 4dg). Both DRY: (174) quadratus plantae — AnatomyZone/Kenhub/TeachMeAnatomy educational viewers (no download); Open3DModel BY-SA (excluded per Week 2 SA ceiling); (175) abductor digiti minimi / flexor digitorum brevis — BP3D V3.0 SA 2.1 JP already rejected (current project uses V4.0 CC BY 4.0 main-tree); Open3DModel/AnatomyTOOL BY-SA; TA2 Viewer / 3D Atlas / Kenhub reference-only (no download). Total watch digs #147–#175 (29 digs; 0 new CC0/BY soft meshes integrated). Optional Fig6 screenshot SKIPPED (honest no-screenshot note in journal-figure-captions.md Day 4df already appropriate; complex automation to select honest-empty structure + capture StructurePanel without fake overlays — prefer honest note over risk). Journal figure caption pack **COMPLETE** (Figs 1–7 linked Day 4de+4df with honest mapping). Cloud-agent-handback refreshed. Gates green. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
 
 ---

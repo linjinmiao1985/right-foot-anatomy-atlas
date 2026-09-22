@@ -28,11 +28,11 @@ Henson Sheffield **Option A** one-subject MC POC completed (`Aug_8`): surfaces O
 
 # Cloud Agent handback — Phase 8 resume brief
 
-**Date**: 2026-09-22 · Day **4df** (Week 2 LINK REMAINING CAPTIONS to screenshots)  
+**Date**: 2026-09-22 · Day **4dg** (Week 2 SPARSE SOFT WATCH — journal pack complete)  
 **Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3)  
-**HEAD tip**: `0936fa4` (Day 4de: TEACHING SCREENSHOTS — 12 PNG captured)  
-**Status**: All 7 journal figure captions linked to screenshots (Figs 1–3 Day 4de + Figs 4–7 Day 4df with honest mapping: BY-SA nerve/soft-ceiling all-layers/ontology-no-screenshot-UI-specific/Kabsch-numeric-bone-result); teaching-grade atlas **in progress** — **not** a finished-product claim  
-**Companion**: `docs/journal-figure-captions.md` (Day 4db + Day 4de screenshots 1–3 + Day 4df screenshots 4–7 linked), `docs/screenshots/` (12 PNG Day 4de), other Week 2 docs
+**HEAD tip**: `08221ae` (Day 4df: all 7 journal figures linked honestly)  
+**Status**: Journal figure caption pack **complete** (Figs 1–7 linked Day 4de+4df with honest mapping); sparse soft watch digs #174–#175 (Day 4dg DRY); teaching-grade atlas **in progress** — **not** a finished-product claim  
+**Companion**: `docs/journal-figure-captions.md` (Day 4db + Day 4de screenshots 1–3 + Day 4df screenshots 4–7 linked; **complete**), `docs/screenshots/` (12 PNG Day 4de), `docs/open-anatomy-learning-log.md` (soft digs #147–#175 DRY), other Week 2 docs
 
 ---
 

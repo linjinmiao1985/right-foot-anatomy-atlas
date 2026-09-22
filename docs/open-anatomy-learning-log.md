@@ -2318,3 +2318,24 @@ Zenodo API metadata retrieved (DOI 10.5281/zenodo.20231309). License: **CC BY-NC
 **Day 4dd watch dig summary**: 3 digs (#171–#173); all DRY (no new CC0/BY per-toe DI, lumbricals, per-ray MTA meshes). Soft-tissue open-data ceiling reconfirmed. Generic CC0 foot surfaces (Blender/OpenGameArt) lack anatomical segmentation. Terminology/platforms (IFAA BY-SA, Complete Anatomy subscription) not mesh sources. Pennsieve whole-body license unclear — skip without confirmed CC0/BY.
 
 ---
+
+### #174 — AnatomyZone/Kenhub/Open3DModel quadratus plantae (2026-09-22 Day 4dg)
+**Query**: `"quadratus plantae" OR "plantar muscle layers" 3D model anatomy CC0 CC-BY open license 2026`  
+**Result**: DRY — no new CC0/BY quadratus plantae meshes.  
+- **AnatomyZone/Kenhub/TeachMeAnatomy**: educational anatomy sites with 3D interactive viewers; confirm quadratus plantae is 2nd plantar layer muscle (medial+lateral heads; calcaneus origins; FDL insertion); **no CC0/BY downloadable STL/OBJ** offered.  
+- **AnatomyTOOL Open3DModel** lower-limb / muscle-attachments (July 2025 / March 2026): includes plantar muscles; **CC BY-SA** (Open3D Project; Jan Kooloos/Eungyeol Lee) — not CC0/BY.  
+**Action**: MONITOR — Open3DModel quadratus plantae is BY-SA (already excluded from main-tree per Week 2 SA ceiling stance); no CC0/BY alternative found.
+
+### #175 — BodyParts3D/Open3DModel abductor digiti minimi / flexor digitorum brevis (2026-09-22 Day 4dg)
+**Query**: `"abductor digiti minimi" OR "flexor digitorum brevis" foot 3D mesh STL OBJ anatomy open data CC0 2026`  
+**Result**: DRY — no new CC0/BY per-muscle isolated meshes.  
+- **BodyParts3D GitHub** (Kevin-Mattheus-Moerman): converted OBJ→STL archive from BodyParts3D 3.0; **CC BY-SA 2.1 Japan** license — not CC0/BY; already excluded from main-tree (BP3D V3.0 legacy SA 2.1 JP rejected; current project uses BP3D V4.0 CC BY 4.0).  
+- **Open3DModel Hand** (AnatomyTOOL July 2025): hand flexors/extensors; **CC BY-SA** — not foot intrinsics.  
+- **TA2 Viewer** (openanatomy.org): online terminology viewer for abductor digiti minimi pedis / flexor brevis digitorum; no downloadable mesh; reference only.  
+- **3D Atlas of Neurological Surgery**: educational 3D diagrams of foot muscle layers (plantar layer 1: abductor hallucis / flexor digitorum brevis / abductor digiti minimi); **no download offered**; anatomy reference only.  
+- **Kenhub**: educational anatomy site with 3D animation; confirms abductor digiti minimi origin/insertion/action; **no CC0/BY downloadable mesh**.  
+**Action**: MONITOR — BP3D V3.0 SA 2.1 JP already rejected; no CC0/BY per-muscle isolated foot intrinsics found.
+
+**Day 4dg watch dig summary**: 2 digs (#174–#175); **all DRY** (no new CC0/BY quadratus plantae, abductor digiti minimi, flexor digitorum brevis meshes). Open3DModel/AnatomyTOOL is BY-SA (excluded per Week 2 SA ceiling stance); BP3D V3.0 SA 2.1 JP already rejected (current project uses V4.0 CC BY 4.0 main-tree only). Soft-tissue open-data ceiling reconfirmed.
+
+---
