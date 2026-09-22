@@ -2270,3 +2270,47 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 **Summary**: Expert review prep completed per Week 2 checkpoint next goals. Refreshed expert-review-checklist.md v3.0 (header Day 4cw; key docs section with methods.md Day 4cv + soft-ceiling memo links; §B Myology/Angiology teaching compromise details for grouped DI/MTA + lumbricals absent; §E Soft-tissue ceilings comprehensive 8-item breakdown with per-landmark Kabsch max values + BY-SA weight by layer + NC rejects; §G Clinical/journal disclaimer grouped structures teaching compromises note + methods limitations table/license matrix current checks; §I Pass/Fail enhanced with teaching compromises label enforcement). Soft digs watch-only (0 new). Cloud-agent-handback refreshed. Gates green. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
 
 ---
+
+## Day 4cx — README LIMITATIONS SYNC (2026-09-22)
+
+**Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3)
+**Goals**: Sync README Limitations with Day 4cv/4cw docs (link expert-review-checklist.md v3.0; license mix 53/71 of 124 unique; soft-ceiling #1–#170 DRY; teaching compromises for grouped DI/MTA; no finished/clinical/TA2-complete claims). Keep concise.
+
+### README Limitations section sync
+- **§Anatomical License mix** (new lead item): "Code MIT; assets ≈53/124 unique main-tree (CC BY 4.0 BP3D + CC0 UM) / ≈71/124 unique BY-SA isolate (`by-sa/` directory) — teaching trade-off; prefer future CC0/BY replacements (详见 `docs/methods.md` license matrix + `docs/expert-review-checklist.md` v3.0)"
+  - Replaced old "BY-SA soft tissue: DI + proximal PTA/fibular..." single-line with comprehensive license mix summary
+  - Added cross-links to methods.md license matrix (Day 4cv) + expert-review-checklist.md v3.0 (Day 4cw)
+- **§Anatomical Soft-tissue open-data ceiling** (updated dig range): "#1–#170 verified projects Day 4cl–4ct Week 2" (was "#1–#135 through Day 4bs; #136–#166 Day 4cl–4cr")
+  - Simplified English redundancy ("detailed / see" → single mention)
+  - Retained "teaching compromises" framing + grouped DI/MTA teaching-compromise clarity
+- **§Technical Not validated for surgery** (expanded): "Educational tool, **not** surgical planning / navigation / implant sizing / clinical diagnosis software" (was "not surgical planning software")
+- **§Technical Teaching atlas in progress** (new item): "**Not** TA2-complete soft tissue; **not** a finished product; **not** clinical-grade (详见 `docs/expert-review-checklist.md` v3.0 disclaimers)"
+  - Addresses finished-product / clinical / TA2-complete disclaimers explicitly (expert-review-checklist v3.0 §G cross-link)
+
+### README Documentation section sync
+- **Methods line updated**: "data sources, extraction, journal-facing limitations table + license matrix Day 4cv" (was "journal-facing limitations table")
+- **Expert Review Checklist** (new item): "`docs/expert-review-checklist.md` v3.0 (Day 4cw: teaching-grade QA; grouped DI/MTA teaching compromises; soft-ceiling memo links; pass/fail criteria)"
+- **Soft-Ceiling Memo** (new item): "`docs/week2-soft-ceiling-memo.md` (exhaustive search #1–#170; NC/SA/unclear rejects; teaching compromises stance)"
+- **Phase 8 self-review line updated**: "Week 2 quality checkpoint Day 4cu; census 129/124; UX inventory; soft-ceiling #147–#170 DRY" (was "quality-week checkpoint; soft-tissue open-data ceiling")
+- **Phase 7 self-review line removed** (superseded by Phase 8)
+
+### Soft-tissue: WATCH ONLY
+- **0** new digs — README sync did NOT uncover obvious new CC0/BY soft hit; no incidental dig numbers appended.
+
+### Docs refresh
+- **cloud-agent-handback**: updated tip SHA to 323cdd9 / Day 4cw; date Day 4cx (README LIMITATIONS SYNC); added `README.md (Day 4cx Limitations sync)` to Companion list.
+
+### Gates (green)
+- `npm test -- --run`: **138/138** passed (19 test files)
+- `python3 scripts/integrity-audit.py`: **0** violations (129 structures / 134 GLBs)
+- `npm run build`: ✓ (dist built; 1.2 MB chunk size warning expected)
+
+**Census**: unchanged (129/124 entries/unique; 126/129 ontology citable; 53 main-tree / 71 BY-SA; 134 GLB on-disk)
+
+**Commit**: `Day 4cx: README LIMITATIONS SYNC - sync with Day 4cv/4cw docs (license mix 53/71 main/BY-SA + soft-ceiling #1-170 + teaching compromises + expert-review-checklist v3.0/soft-ceiling memo links + no finished/clinical/TA2-complete disclaimers) + cloud-agent-handback refresh`
+
+**Push**: SHA `<pending>`
+
+**Summary**: README Limitations section synced with Day 4cv/4cw docs. §Anatomical: added License mix lead item (53/124 main-tree vs 71/124 BY-SA; cross-link methods.md license matrix + expert-review-checklist v3.0); updated soft-ceiling dig range #1–#170 (was #1–#166); retained teaching compromises for grouped DI/MTA. §Technical: expanded "Not validated for surgery" (surgical planning → surgical planning/navigation/implant sizing/clinical diagnosis); added "Teaching atlas in progress" disclaimer item (not TA2-complete; not finished product; not clinical-grade; cross-link expert-review-checklist v3.0). Documentation section: added expert-review-checklist v3.0 + soft-ceiling memo items; updated methods/phase-8 descriptions; removed superseded phase-7 line. Soft digs watch-only (0 new). Cloud-agent-handback refreshed. Gates green. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+---

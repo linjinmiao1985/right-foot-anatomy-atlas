@@ -181,8 +181,8 @@ Open `http://localhost:5173` to view the atlas.
 ## Limitations
 
 ### Anatomical
-- **BY-SA soft tissue**: DI + proximal PTA/fibular are Open3D ShareAlike fills (prefer future CC0/CC BY)
-- **Soft-tissue open-data ceiling**: Comprehensive search (#1–#135 verified projects through Day 4bs; #136–#166 watch digs Day 4cl–4cr) found CC0/BY alternatives for DI, per-ray MTA, nerve/ligament main-tree replacements, and gastroc/soleus bellies largely **dry** — teaching trade-off accepted ShareAlike volume (~71/124 unique) over incomplete coverage (详见 **`docs/week2-soft-ceiling-memo.md`** / see **`docs/week2-soft-ceiling-memo.md`**). **Grouped structures** (e.g., DI 1st–4th combined, dorsal/plantar MTA all rays) are **teaching compromises** (教学妥协), not per-toe/per-ray elemental atlases.
+- **License mix**: Code MIT; assets ≈**53/124 unique** main-tree (CC BY 4.0 BP3D + CC0 UM) / ≈**71/124 unique** BY-SA isolate (`by-sa/` directory) — teaching trade-off; prefer future CC0/BY replacements (详见 `docs/methods.md` license matrix + `docs/expert-review-checklist.md` v3.0)
+- **Soft-tissue open-data ceiling**: Exhaustive search (#1–#170 verified projects Day 4cl–4ct Week 2) found CC0/BY alternatives for per-toe DI, lumbricals, per-ray MTA, nerve/ligament main-tree replacements, gastroc/soleus bellies **dry** — **teaching compromises** accepted ShareAlike volume over incomplete coverage (详见 **`docs/week2-soft-ceiling-memo.md`**). **Grouped structures** (DI 1st–4th combined, dorsal/plantar MTA all rays) are **teaching compromises** (教学妥协), **not** per-toe/per-ray elemental atlases.
 - **Ligament / fascia / tendon**: BP3D long plantar + Achilles; Open3D BY-SA **27** teaching meshes; further tarsal/toe bands still missing — **teaching-useful, not a finished ligament atlas**
 - **Vessel fine detail**: Per-toe digital splits not available as separate BP3D meshes (honest grouped instead)
 - **Nerve geometry**: Z-Anatomy CURVE tubes + Open3D volumetric fine branches (teaching-grade; commons/proprii grouped)
@@ -190,7 +190,8 @@ Open `http://localhost:5173` to view the atlas.
 
 ### Technical
 - **Not patient-specific**: Teaching-grade generic anatomy (not CT/MRI-derived)
-- **Not validated for surgery**: Educational tool, not surgical planning software
+- **Not validated for surgery**: Educational tool, **not** surgical planning / navigation / implant sizing / clinical diagnosis software
+- **Teaching atlas in progress**: **Not** TA2-complete soft tissue; **not** a finished product; **not** clinical-grade (详见 `docs/expert-review-checklist.md` v3.0 disclaimers)
 - **ShareAlike module**: BY-SA 4.0 applies only to `by-sa/` directory (opt-in via layer toggles)
 - **Asset load**: **134** discrete GLBs (~13 MB; 59 main + 75 `by-sa/`). Visibility-gated mount; bones eager-preload; other layers lazy-preload when toggled visible — **not** a single Draco pack
 
@@ -202,11 +203,12 @@ Open `http://localhost:5173` to view the atlas.
 - **Implementation Plan**: `docs/superpowers/plans/2026-09-14-right-foot-anatomy-atlas.md`
 - **Asset Research**: `docs/assets-research-round2.md` (≥12 sources compared)
 - **Terminology**: `docs/terminology.md` (TA2 Latin + PRC Chinese standards)
-- **Methods**: `docs/methods.md` (data sources, extraction, journal-facing limitations table)
+- **Methods**: `docs/methods.md` (data sources, extraction, journal-facing limitations table + license matrix Day 4cv)
+- **Expert Review Checklist**: `docs/expert-review-checklist.md` v3.0 (Day 4cw: teaching-grade QA; grouped DI/MTA teaching compromises; soft-ceiling memo links; pass/fail criteria)
+- **Soft-Ceiling Memo**: `docs/week2-soft-ceiling-memo.md` (exhaustive search #1–#170; NC/SA/unclear rejects; teaching compromises stance)
 - **Contributing**: `CONTRIBUTING.md` (license boundaries, NC-trap exclusions)
 - **Spatial Alignment QA**: `docs/spatial-alignment-qa.md` (0.01 scale verification)
-- **Phase 7 self-review**: `docs/phase-7-self-review.md` (week-quality board; census 129/124; UX inventory; ceilings)
-- **Phase 8 self-review**: `docs/phase-8-self-review.md` (quality-week checkpoint; soft-tissue open-data ceiling)
+- **Phase 8 self-review**: `docs/phase-8-self-review.md` (Week 2 quality checkpoint Day 4cu; census 129/124; UX inventory; soft-ceiling #147–#170 DRY)
 - **Screenshots** (optional QA pack, embedded above): `docs/screenshots/` via `npm run screenshots` — not a product gallery
 
 ---

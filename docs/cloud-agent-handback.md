@@ -28,11 +28,11 @@ Henson Sheffield **Option A** one-subject MC POC completed (`Aug_8`): surfaces O
 
 # Cloud Agent handback — Phase 8 resume brief
 
-**Date**: 2026-09-22 · Day **4cw** (Week 2 EXPERT REVIEW PREP)  
+**Date**: 2026-09-22 · Day **4cx** (Week 2 README LIMITATIONS SYNC)  
 **Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3)  
-**HEAD tip**: `5eccb7c` (Day 4cv: update daily-log SHA e136253 — methods.md limitations table + license matrix + cloud-agent-handback refresh)  
-**Status**: Expert review prep (checklist v3.0); teaching-grade atlas **in progress** — **not** a finished-product claim  
-**Companion**: `docs/phase-8-self-review.md` (Week 2 checkpoint added Day 4cu), `docs/cc0-soft-tissue-watchlist.md`, `third_party/andreassen/`, `docs/week2-soft-ceiling-memo.md`, `docs/methods.md` (Day 4cv polish), `docs/expert-review-checklist.md` (Day 4cw v3.0 EXPERT REVIEW PREP)
+**HEAD tip**: `323cdd9` (Day 4cw: finalize daily-log SHA — expert-review-checklist.md v3.0 + docs links)  
+**Status**: README limitations synced (license mix + soft-ceiling #1–#170 + teaching compromises + expert-review-checklist v3.0 links); teaching-grade atlas **in progress** — **not** a finished-product claim  
+**Companion**: `docs/phase-8-self-review.md` (Week 2 checkpoint added Day 4cu), `docs/cc0-soft-tissue-watchlist.md`, `third_party/andreassen/`, `docs/week2-soft-ceiling-memo.md`, `docs/methods.md` (Day 4cv polish), `docs/expert-review-checklist.md` (Day 4cw v3.0 EXPERT REVIEW PREP), `README.md` (Day 4cx Limitations sync)
 
 ---
 
