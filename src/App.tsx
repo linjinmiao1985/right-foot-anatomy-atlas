@@ -151,6 +151,10 @@ function App() {
   const handleShowAll = () => setVisibleLayers(new Set(getAllLayers()));
   const handleHideAll = () => setVisibleLayers(new Set());
 
+  // Detect when all soft layers are off (only bone or nothing visible) — teaching empty-state.
+  const softLayers: Layer[] = ['muscle', 'nerve', 'vessel', 'ligament'];
+  const anySoftLayerVisible = softLayers.some((layer) => visibleLayers.has(layer));
+
   const handleLigamentGroupToggle = (group: LigamentGroupId) => {
     setVisibleLigamentGroups((prev) => {
       const next = new Set(prev);
@@ -423,6 +427,39 @@ function App() {
         quizMode={quizMode}
         onQuizModeChange={setQuizMode}
       />
+
+      {!anySoftLayerVisible && visibleLayers.size > 0 && (
+        <div
+          style={{
+            position: 'fixed',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            zIndex: 95,
+            background: 'rgba(26, 26, 26, 0.95)',
+            border: '2px solid #f59e0b',
+            borderRadius: '12px',
+            padding: '20px 28px',
+            maxWidth: '480px',
+            boxShadow: '0 8px 32px rgba(0, 0, 0, 0.5)',
+            pointerEvents: 'none',
+          }}
+          role="status"
+          aria-label="软组织图层空状态提示"
+          data-testid="soft-layers-empty-state"
+        >
+          <div style={{ fontSize: '15px', fontWeight: 600, color: '#fbbf24', marginBottom: '12px', textAlign: 'center' }}>
+            💡 软组织图层已关闭
+          </div>
+          <div style={{ fontSize: '13px', color: '#e0e0e0', lineHeight: 1.6, marginBottom: '10px' }}>
+            当前仅显示<strong>骨骼图层</strong>。若需查看肌肉、神经、血管或韧带，请在右侧图层面板中打开相应图层。
+          </div>
+          <div style={{ fontSize: '12px', color: '#9ca3af', lineHeight: 1.5, fontStyle: 'italic', borderTop: '1px solid #444', paddingTop: '10px' }}>
+            <strong>Soft tissue layers disabled</strong><br />
+            Only <strong>bone layer</strong> is visible. To view muscles, nerves, vessels, or ligaments, enable the corresponding layers in the right panel.
+          </div>
+        </div>
+      )}
 
       <Viewport
         onMeshClick={handleMeshClick}

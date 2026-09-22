@@ -1596,3 +1596,15 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 7. **Honesty**: teaching atlas in progress — **not** clinical; **not** TA2-complete; **no finished-product claim**.
 
 **Outcome**: Census unchanged (**129/124**; ontology **126/129**). **0** meshes integrated; **0** SA spam. Soft gaps (DI / per-ray MTA / NV / ligaments / gastroc-soleus) remain **dry** after comprehensive LESS-obvious pool search (dig #127–#135).
+
+## Day 4bw (2026-09-22) — Teaching soft-layer empty-state (bilingual)
+
+**Target**: Continue Week 2 quality sprint. ONE solid teaching UX (soft-layer bilingual empty-state OR focus outline contrast OR export prefs JSON OR quiz+ghost screenshot). Light watch dig only if new CC0/BY appears (expect 0). integrity-audit + vitest + build; commit; push. No finished-product claims.
+
+1. Continued on `cursor/week2-day4bm-ghost-opacity-096e` (Day 4bs tip @ 6f6bf5b).
+2. **UX choice**: Bilingual soft-layer empty-state (`App.tsx`) — when all soft layers (muscle/nerve/vessel/ligament) off but bone visible, overlay teaching hint (ZH+EN) suggesting user enable soft layers via right panel. Overlay: centered, amber border, `pointer-events: none`, `role="status"`. Teaching clarity polish.
+3. **Soft dig**: Expect 0 new CC0/BY sources — comprehensive search Day 4bo–4bs (#100–#135) already exhausted less-obvious pools. **Skipped** redundant watch (open-data ceiling acknowledged).
+4. **Checks**: integrity-audit + vitest + build; commit + push same PR branch.
+5. **Honesty**: teaching atlas in progress — **not** clinical; **not** TA2-complete; **no finished-product claim**.
+
+**Outcome**: Census unchanged (**129/124**; ontology **126/129**). **0** meshes wire / **0** SA spam. Soft-layer empty-state teaching UX added.
