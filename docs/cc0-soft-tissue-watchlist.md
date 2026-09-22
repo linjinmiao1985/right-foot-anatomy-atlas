@@ -319,3 +319,14 @@ Watchlist still tracks where a true **CC0/BY** soft find would matter. Day **4cd
 - **#141** Sketchfab dorsal interossei models (Anatomary, caestudio) — exist but **license unconfirmed** (not verified CC0/BY)
 
 **Outcome**: **0** new usable CC0/BY foot-intrinsic meshes. DI / plantar layers / lumbricals gaps remain **dry**. Soft ceiling stands.
+
+## Day 4ci dig summary (2026-09-22)
+
+**Light watch dig** (15-min observational sweep, post-Day 4ch teaching polish):
+- **#142** GitHub 3D anatomy repositories (search: "foot anatomy 3D CC0 OR CC-BY metatarsal interosseous") — surfaced this repo + Open3DModel/AnatomyTOOL **already wired** Day 4aa–4ab; no new foot-intrinsic CC0/BY sources
+- **#143** BioModels.net / PhysioNet foot MSK datasets — BioModels = computational models (SBML/CellML, not meshes); PhysioNet = cardiac/physiological signals, no 3D foot anatomy
+- **#144** Sketchfab "dorsal interosseous foot CC0" refined search — found Anatomary/caestudio DI models (#141 Day 4ce), still **license unconfirmed** (no CC0 badge visible, account inactive); no new CC0/BY DI
+- **#145** Smithsonian 3D Digitization foot specimens — scanned primate/mammal **bones** only (Smithsonian X 3D portal); no separated soft tissue
+- **#146** TurboSquid / CGTrader free foot models — predominantly **All Rights Reserved** or **Editorial**; confirmed **no** CC0/BY foot-intrinsic soft tissue
+
+**Outcome**: **0** new usable CC0/BY meshes. DI / per-ray MTA / plantar layers / lumbricals gaps remain **dry**. Soft ceiling reconfirmed after light observational sweep. Census unchanged.

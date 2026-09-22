@@ -1833,3 +1833,29 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 6. **Honesty**: teaching atlas in progress — **not** clinical; **not** TA2-complete; **no finished-product claim**.
 
 **Outcome**: Census unchanged (**129/124**; ontology **126/129**). **0** meshes wire / **0** SA spam. Keyboard help now documents master ghost opacity + focus-visible a11y. All gates PASSED. Day 4ch complete.
+
+## Day 4ci (2026-09-22) — Denser bilingual gap notes for grouped DI/MTA + light watch dig
+
+**Target**: Complete Day 4ci with: (1) StructurePanel denser bilingual gap note when selected structure is grouped DI or grouped MTA (honest soft-ceiling pointer); (2) Light watch dig 15min; log; 0 wire expected; (3) vitest + integrity-audit + build; daily-log; commit; push; (4) No finished-product claims.
+
+1. Continued on `cursor/week2-day4bm-ghost-opacity-096e` (Day 4ch tip @ 6a3bf97).
+2. **StructurePanel gap notes** (denser bilingual soft-ceiling pointers):
+   - Updated `getTeachingMeshNote()` in `assetProvenance.ts` to surface denser gap notes for grouped structures:
+     - **`interossei_dorsales`** (grouped DI): Added bilingual note explaining 1st–4th dorsal interossei combined (no per-toe elemental split), pointing to census soft ceiling (no CC0/BY per-toe DI source meshes available); by-sa/ isolated; teaching-grade grouped annotation, not per-toe muscle atlas
+     - **`dorsal_metatarsal_arteries`** (grouped dorsal MTA): Added bilingual note explaining 1st–4th dorsal metatarsal arteries combined (no per-ray elemental split), pointing to census soft ceiling (no CC0/BY per-ray dorsal MTA source meshes); by-sa/ isolated; teaching-grade grouped annotation, not per-ray vessel atlas
+     - **`plantar_metatarsal_arteries`** (grouped plantar MTA): Added bilingual note explaining BP3D FJ2096 grouped plantar metatarsal arteries (no 1st–4th ray split), pointing to census soft ceiling (ISA lacks per-ray plantar/dorsal MTA elementals; no CC0/BY per-ray source meshes); teaching-grade grouped annotation, not per-ray vessel atlas
+   - All three notes explicitly surface "census 软天花板 / census soft ceiling" honesty language for teaching transparency
+   - Notes emphasize grouped vs. elemental split gap (teaching-grade vs. per-ray/per-toe atlas)
+3. **Mesh dig** (15-min light watch):
+   - **#142–#146**: GitHub 3D anatomy repos; BioModels.net/PhysioNet MSK datasets; Sketchfab refined DI search; Smithsonian 3D foot specimens; TurboSquid/CGTrader free models
+   - **Outcome**: **0** new usable CC0/BY meshes. All digs dry — GitHub surfaced already-wired sources; BioModels/PhysioNet = computational models/signals (not meshes); Sketchfab DI = license unconfirmed; Smithsonian = bones-only; TurboSquid/CGTrader = All Rights Reserved / Editorial
+   - DI / per-ray MTA / plantar layers / lumbricals gaps remain **dry**. Soft ceiling reconfirmed.
+   - Watchlist updated with Day 4ci dig summary.
+4. **Gates**: Run full gates:
+   - `npm test -- --run` → **138/138 PASSED** (19 test files)
+   - `python3 scripts/integrity-audit.py` → **PASSED** (129 structures / 134 GLBs / 0 violations)
+   - `npm run build` → **OK** (dist built)
+5. **Checks**: daily-log Day 4ci updated; commit + push same PR branch.
+6. **Honesty**: teaching atlas in progress — **not** clinical; **not** TA2-complete; **no finished-product claim**.
+
+**Outcome**: Census unchanged (**129/124**; ontology **126/129**). **0** meshes wire / **0** SA spam. Denser bilingual gap notes added for grouped DI and grouped MTA (soft-ceiling teaching transparency). Light watch dig #142–#146 dry. All gates PASSED. Day 4ci complete.
