@@ -2339,3 +2339,17 @@ Zenodo API metadata retrieved (DOI 10.5281/zenodo.20231309). License: **CC BY-NC
 **Day 4dg watch dig summary**: 2 digs (#174–#175); **all DRY** (no new CC0/BY quadratus plantae, abductor digiti minimi, flexor digitorum brevis meshes). Open3DModel/AnatomyTOOL is BY-SA (excluded per Week 2 SA ceiling stance); BP3D V3.0 SA 2.1 JP already rejected (current project uses V4.0 CC BY 4.0 main-tree only). Soft-tissue open-data ceiling reconfirmed.
 
 ---
+
+### #176 — foot plantar intrinsic muscles CC0/BY open anatomy 2026 (2026-09-22 Day 4dj)
+**Query**: `foot plantar intrinsic muscles 3D mesh CC0 CC-BY open anatomy download 2026`  
+**Result**: **DRY** — no new CC0/BY plantar intrinsic muscle meshes; all hits already known or excluded.  
+- **Open3DModel Ankle and Foot** (AnatomyTOOL November 2025): includes plantar structures; **CC BY-SA** (Open3D Project; Jan Kooloos/Eungyeol Lee) — already excluded from main-tree per Week 2 SA ceiling stance.  
+- **Visible Korean foot muscles PDF** (intjmorphol.com; 24 foot muscles including sole layers): requires registration/agreement; **NC-ND** license — already rejected (Visible Korean NC-ND excluded).  
+- **Zenodo 10.5281/zenodo.20231309** "Muscles of the foot and ankle" (Scan-the-World 2026-05-12 CT): already deep-checked as dig #161b (Day 4cq); **CC BY-NC-SA** — rejected (NC+SA incompatible).  
+- **Cults3D Human Lower Leg and Foot Muscle Anatomy** (MeEzra February 2026 STL/OBJ): **license unclear** (no explicit CC0/BY badge) — already noted as unclear-license source (digs #171, #173 Cults3D generics).  
+- **Proko 3D Model: Intrinsic Foot Muscles** (Stan Prokopenko anatomy course): educational/commercial platform; **no downloadable open data** — subscription-based lessons.  
+**Action**: MONITOR — all hits either BY-SA (excluded per Week 2 SA ceiling), NC/NC-SA (rejected), license unclear (Cults3D no explicit CC0/BY), or subscription/no-download platforms (Proko). No new CC0/BY plantar intrinsic muscle meshes found.
+
+**Day 4dj watch dig summary**: 1 dig (#176); **DRY** (no new CC0/BY plantar intrinsic muscle meshes). Open3DModel BY-SA already excluded; Visible Korean NC-ND already rejected; Zenodo Scan-the-World #161b NC+SA already rejected; Cults3D license unclear; Proko subscription platform. Soft-tissue open-data ceiling reconfirmed through #176.
+
+---

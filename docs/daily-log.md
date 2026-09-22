@@ -2884,3 +2884,35 @@ Existing honest no-screenshot note in `docs/journal-figure-captions.md` (Day 4df
 **Commit**: `Day 4di: LINK TABLE 1 + quiet wrap - README Documentation Methods bullet appended Table 1 Kabsch Co-Registration Residuals Day 4dh cross-link + cloud-agent-handback refresh (Week 2 journal pack READY: methods/checklist/captions/screenshots/Table1)`
 
 **Summary**: Quiet wrap completed per Day 4di request. README Documentation Methods bullet now cross-links Table 1 Kabsch Co-Registration Residuals Day 4dh (concise inline mention; no sprawl). Cloud-agent-handback refreshed to be17876 / Day 4dh; stated Week 2 journal pack **ready** (methods limitations + license matrix + Table 1 + journal-figure-captions Figs 1–7 + expert-review-checklist v3.0 + screenshots 12 PNG). Soft digs watch-only (0 new Day 4di; journal pack essentially complete). Gates green. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product; residuals are teaching-grade not surgical bounds.
+
+---
+
+## Day 4dj: LIGHT SOFT WATCH only (2026-09-22)
+
+**Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3)
+
+**Goals**: Per Day 4dj request (light watch): at most ONE dig #176 NEW source; no new features/docs unless clear bug; refresh handback to 0289539 / Day 4di; gates; commit + push only if dig or handback changed.
+
+**Changes**:
+1. **Dig #176** (foot plantar intrinsic muscles CC0/BY open anatomy 2026): **DRY** — no new CC0/BY plantar intrinsic muscle meshes found. All search hits already known or excluded:
+   - Open3DModel Ankle and Foot (AnatomyTOOL November 2025): **CC BY-SA** — already excluded from main-tree per Week 2 SA ceiling stance
+   - Visible Korean foot muscles PDF (24 foot muscles including sole layers): **NC-ND** license — already rejected
+   - Zenodo 10.5281/zenodo.20231309 "Muscles of the foot and ankle" (Scan-the-World 2026-05-12 CT): already deep-checked as dig #161b (Day 4cq); **CC BY-NC-SA** — rejected
+   - Cults3D Human Lower Leg and Foot Muscle Anatomy (MeEzra February 2026 STL/OBJ): **license unclear** (no explicit CC0/BY badge) — already noted as unclear-license source
+   - Proko 3D Model: Intrinsic Foot Muscles (Stan Prokopenko anatomy course): educational/commercial platform; **no downloadable open data** — subscription-based lessons
+   - **Action**: MONITOR — all hits either BY-SA (excluded per Week 2 SA ceiling), NC/NC-SA (rejected), license unclear (Cults3D no explicit CC0/BY), or subscription/no-download platforms (Proko)
+
+2. **Cloud-agent-handback refresh**: Updated to `0289539` (Day 4di: finalize daily-log SHA) / Day 4dj; noted light soft watch dig #176 DRY + journal pack ready (no expand).
+
+3. **No new features/docs**: Week 2 journal pack READY — no expand per Day 4dj light watch constraint.
+
+**Verification gates (all green)**:
+- `npm test -- --run`: ✓ 138/138 passed (19 test files; 4.0 s)
+- `python3 scripts/integrity-audit.py`: ✓ 0 violations (129 structures / 134 GLBs)
+- `npm run build`: ✓ (dist built; 1.2 MB chunk size warning expected)
+
+**Census**: unchanged (129/124 entries/unique; 126/129 ontology citable; 53 main-tree / 71 BY-SA; 134 GLB on-disk)
+
+**Commit**: `Day 4dj: LIGHT SOFT WATCH - dig #176 foot plantar intrinsic muscles CC0/BY open anatomy 2026 DRY (Open3DModel BY-SA / Visible Korean NC-ND / Zenodo Scan-the-World NC+SA / Cults3D unclear / Proko subscription — all already excluded or known) + learning-log append + cloud-agent-handback refresh`
+
+**Summary**: Light soft watch completed per Day 4dj request. Dig #176 (foot plantar intrinsic muscles CC0/BY open anatomy 2026) **DRY** — all hits already known or excluded: Open3DModel BY-SA (Week 2 SA ceiling excludes); Visible Korean NC-ND (already rejected); Zenodo Scan-the-World #161b NC+SA (already rejected Day 4cq); Cults3D license unclear (no explicit CC0/BY); Proko subscription platform (no downloadable open data). Soft-tissue open-data ceiling reconfirmed through dig #176. Cloud-agent-handback refreshed to 0289539 / Day 4di. No new features/docs (Week 2 journal pack READY; no expand per light watch constraint). Gates green. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.

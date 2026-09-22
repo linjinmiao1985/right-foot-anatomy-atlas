@@ -28,11 +28,11 @@ Henson Sheffield **Option A** one-subject MC POC completed (`Aug_8`): surfaces O
 
 # Cloud Agent handback — Phase 8 resume brief
 
-**Date**: 2026-09-22 · Day **4di** (Week 2 QUIET WRAP — journal pack ready)  
+**Date**: 2026-09-22 · Day **4dj** (Week 2 LIGHT SOFT WATCH — journal pack ready)  
 **Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3)  
-**HEAD tip**: `54f2852` (Day 4di: LINK TABLE 1 + quiet wrap)  
-**Status**: Week 2 journal pack **ready** (methods limitations + license matrix + Table 1 Kabsch residuals Day 4dh + journal-figure-captions Figs 1–7 Day 4db-4df + expert-review-checklist v3.0 Day 4cw + screenshots 12 PNG Day 4de); README Table 1 link added Day 4di; teaching-grade atlas **in progress** — **not** a finished-product claim  
-**Companion**: `docs/methods.md` (Table 1: Kabsch Co-Registration Residuals Day 4dh), `docs/journal-figure-captions.md` (7 figs complete), `docs/expert-review-checklist.md` v3.0, `docs/screenshots/` (12 PNG), other Week 2 docs
+**HEAD tip**: `0289539` (Day 4di: finalize daily-log SHA)  
+**Status**: Week 2 journal pack **ready** (no expand); light soft watch dig #176 DRY (Open3DModel BY-SA / Visible Korean NC-ND / Zenodo Scan-the-World NC+SA / Cults3D unclear / Proko subscription — all already excluded or known); teaching-grade atlas **in progress** — **not** a finished-product claim  
+**Companion**: `docs/methods.md` (Table 1: Kabsch Co-Registration Residuals Day 4dh), `docs/journal-figure-captions.md` (7 figs complete), `docs/expert-review-checklist.md` v3.0, `docs/screenshots/` (12 PNG), `docs/open-anatomy-learning-log.md` (soft digs #147–#176 DRY), other Week 2 docs
 
 ---
 
