@@ -2509,7 +2509,7 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 
 **Commit**: `Day 4db: JOURNAL FIGURE CAPTIONS stub - created docs/journal-figure-captions.md with 7 bilingual teaching figure stubs (bones/layers-ghost/explode/BY-SA-isolate/soft-ceiling-grouped-DI-MTA/ontology-empties/Kabsch-residuals; 1-2 sentence ZH+EN; honesty: not clinical / teaching compromises where relevant; no fabricated metrics) + cloud-agent-handback refresh`
 
-**Push**: SHA `<pending>`
+**Push**: SHA `f741075`
 
 **Summary**: Journal figure captions stub created. New file `docs/journal-figure-captions.md` v1.0 with 7 concise bilingual teaching figure captions (bones overview 26; layers/ghost opacity/explode teaching UX with census 53/71; BY-SA isolate vs main-tree license boundaries with NC rejects; soft-ceiling/teaching-compromise grouped DI-MTA with #1–#170 DRY; ontology 126/129 with 3 honest empties; Kabsch residuals teaching visualization grade). Each 1–2 sentence ZH + EN. Honesty stance: not clinical; teaching compromises documented; no fabricated metrics. Cross-links to methods.md/soft-ceiling-memo/expert-review-checklist. Soft digs watch-only (0 new). Cloud-agent-handback refreshed. Gates green. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
 
