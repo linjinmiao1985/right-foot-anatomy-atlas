@@ -2545,7 +2545,7 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 
 **Commit**: `Day 4dc: LINK JOURNAL CAPTIONS - added one-line journal-figure-captions.md link to README Documentation section (after Soft-Ceiling Memo) + methods.md after license matrix (bilingual teaching figure stubs cross-reference; Day 4db) + cloud-agent-handback refresh`
 
-**Push**: SHA `<pending>`
+**Push**: SHA `45e2cc4`
 
 **Summary**: Journal figure captions linked. Added concise one-line `docs/journal-figure-captions.md` cross-reference to (1) README.md Documentation section (new bullet after Soft-Ceiling Memo: bilingual teaching figure stubs for bones/layers/explode/BY-SA-isolate/soft-ceiling-grouped-DI-MTA/ontology-empties/Kabsch-residuals Day 4db); (2) methods.md after license matrix table Total row (paragraph listing 7 figure categories). Soft digs watch-only (0 new). Cloud-agent-handback refreshed. Gates green. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
 
