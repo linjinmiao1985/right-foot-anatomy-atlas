@@ -2404,7 +2404,7 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 
 **Commit**: `Day 4cz: ONTOLOGY HONEST GAPS review - confirmed 3 empties (cervical_talocalcaneal_ligament, medial_plantar_veins, lateral_plantar_vein) with clear bilingual StructurePanel "honest empty" labels (TNA-only/no-distinct-TA98-A-code reasons); no UI delta needed + cloud-agent-handback refresh`
 
-**Push**: SHA `<pending>`
+**Push**: SHA `fccf661`
 
 **Summary**: Ontology honest gaps audit complete. Identified 3 honest empties: (1) cervical_talocalcaneal_ligament (no distinct TA98 A-code; often lateral TC clinical synonym); (2) medial_plantar_veins (TNA-only TAH U15825; no TA98 A-code / clear FMA); (3) lateral_plantar_vein (TNA-only TAH U15824; no TA98 A-code / clear FMA). StructurePanel ontology UI already displays clear bilingual "本体论 · Ontology (honest empty)" labels with specific reasons (TNA-only / no-distinct-TA98-A-code) — not silently blank. Vitest-enforced (ontologyIds.test.ts lines 30-34, 97-116). No UI delta needed. Soft digs watch-only (0 new). Cloud-agent-handback refreshed. Gates green. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete (126/129 ontology citable; 3 honest empties documented); **not** a finished product.
 
