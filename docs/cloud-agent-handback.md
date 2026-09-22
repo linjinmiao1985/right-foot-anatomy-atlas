@@ -28,11 +28,11 @@ Henson Sheffield **Option A** one-subject MC POC completed (`Aug_8`): surfaces O
 
 # Cloud Agent handback — Phase 8 resume brief
 
-**Date**: 2026-09-22 · Day **4cv** (Week 2 JOURNAL METHODS POLISH)  
+**Date**: 2026-09-22 · Day **4cw** (Week 2 EXPERT REVIEW PREP)  
 **Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3)  
-**HEAD tip**: `34f97f3` (Day 4cu: WEEK 2 QUALITY CHECKPOINT - phase-8 Week 2 section UX shipped + soft-ceiling #147-170 DRY summary + teaching-compromise consistency)  
-**Status**: Journal methods polish (limitations table + license matrix); teaching-grade atlas **in progress** — **not** a finished-product claim  
-**Companion**: `docs/phase-8-self-review.md` (Week 2 checkpoint added Day 4cu), `docs/cc0-soft-tissue-watchlist.md`, `third_party/andreassen/`, `docs/week2-soft-ceiling-memo.md`, `docs/methods.md` (Day 4cv polish)
+**HEAD tip**: `5eccb7c` (Day 4cv: update daily-log SHA e136253 — methods.md limitations table + license matrix + cloud-agent-handback refresh)  
+**Status**: Expert review prep (checklist v3.0); teaching-grade atlas **in progress** — **not** a finished-product claim  
+**Companion**: `docs/phase-8-self-review.md` (Week 2 checkpoint added Day 4cu), `docs/cc0-soft-tissue-watchlist.md`, `third_party/andreassen/`, `docs/week2-soft-ceiling-memo.md`, `docs/methods.md` (Day 4cv polish), `docs/expert-review-checklist.md` (Day 4cw v3.0 EXPERT REVIEW PREP)
 
 ---
 

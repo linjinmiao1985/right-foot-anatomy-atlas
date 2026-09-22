@@ -2230,3 +2230,43 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 **Summary**: Methods polish completed per Week 2 checkpoint next goals. Enhanced limitations table (soft-tissue open-data ceiling row + per-landmark Kabsch residuals + NC rejects + grouped DI/MTA reality); added license matrix (6-row × 3-col: main tree 53/124 vs BY-SA 71/124 vs rejected with NC/unclear/spatial-QA-fail rationale). Soft digs watch-only (0 new). Cloud-agent-handback refreshed. Gates green. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
 
 ---
+
+## Day 4cw — EXPERT REVIEW PREP (2026-09-22)
+
+**Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3)
+**Goals**: Per Week 2 checkpoint next targets: refresh `docs/expert-review-checklist.md` (teaching-useful/incomplete stance; link methods.md + soft-ceiling memo; checklist items for grouped DI/MTA teaching compromises); watch-only soft digs; refresh cloud-agent-handback; gates; commit + push.
+
+### Expert review checklist refresh (v3.0)
+- **Header updated**: Date Day 4cw / Phase 8 EXPERT REVIEW PREP; live census 129/124 verified against `phase-8-self-review.md` Week 2 checkpoint; atlas status "in progress — no finished-product claim; not TA2-complete; not surgical registration"
+- **Key docs section added**: 
+  - `docs/methods.md` (Day 4cv limitations table + license matrix + Kabsch residuals)
+  - `docs/week2-soft-ceiling-memo.md` (exhaustive search #1–#170; no CC0/BY per-toe DI, lumbricals, per-ray MTA; NC/SA/unclear rejects; teaching compromises stance)
+  - `docs/cc0-soft-tissue-watchlist.md` (ongoing watch-only monitoring)
+  - `docs/phase-8-self-review.md` (Week 2 checkpoint: UX shipped + soft-ceiling #147–#170 DRY + teaching-compromise consistency)
+- **§B Myology enhanced**: "Dorsal interossei" checklist item expanded with "teaching compromise (教学妥协), not per-toe elemental atlas; exhaustive search #1–#170 found no CC0/BY per-toe DI source (soft-ceiling memo)"; "Lumbricals" item added (absent; UM excludes intrinsics; Visible Korean NC-ND; AnatomyTOOL Open3DModel SA-only; no CC0/BY source); "Gastroc/soleus bellies" expanded (Andreassen spatial QA fail; Henson alignment fail; soft-ceiling memo)
+- **§B Angiology enhanced**: "Dorsal MTA" checklist item added (Open3D BY-SA grouped all rays — teaching compromise, not per-ray 1st–4th elemental; #1–#170 found no CC0/BY per-ray dorsal MTA; TotalSegmentator lacks named foot vessels; ISA lacks per-ray MTA elementals; soft-ceiling memo); "Plantar MTA" item added (BP3D FJ2096 grouped all rays — teaching compromise, not per-ray elemental; no CC0/BY per-ray split source)
+- **§E Soft-tissue ceilings comprehensive rewrite**: (a) "Soft-tissue open-data ceiling" lead item (exhaustive search #1–#170 found no CC0/BY per-toe DI, lumbricals, per-ray MTA; grouped structures are teaching compromises, not elemental atlases; soft-ceiling memo); (b) "Per-toe DI" detail (Open3D grouped; Zenodo Scan-the-World NC rejected; UMLUB Sketchfab unclear; no usable source); (c) "Lumbricals" detail (absent placeholder; UM excludes; Visible Korean NC-ND; AnatomyTOOL SA-only; no CC0/BY); (d) "Per-ray MTA" detail (dorsal Open3D BY-SA all rays; plantar BP3D FJ2096 all rays; TotalSegmentator lacks; ISA lacks; no CC0/BY); (e) "Gastroc/soleus bellies" detail (Andreassen 7-tarsal Kabsch mean ≈4.5 mm fail; Henson alignment sketch fail; no aligned source); (f) "BY-SA weight" breakdown (nerves 100% SA 17/17; ligaments 93% SA 27/29; vessels 76% SA 22/29; muscles 22% SA 5/23 unique; total 71/124 unique BY-SA isolate); (g) "Ontology" (3 honest empties; 126/129 citable; not TA2-complete); (h) "Residuals" per-landmark max values (Open3D→BP3D max 4.41 mm MT1; UM→BP3D max 4.38 mm talus; ZA→BP3D max 3.52 mm calcaneus; cross-link `third_party/*/kabsch_*.json` + `docs/methods.md`)
+- **§G Clinical/journal disclaimer enhanced**: "Grouped structures are teaching compromises" note added (DI 1st–4th combined, dorsal/plantar MTA all rays; soft-ceiling documented); "Methods journal-facing limitations table current" item expanded (Day 4cv: soft-tissue open-data ceiling row + per-landmark Kabsch residuals + license mix + grouped vessels/muscles + BY-SA share + NC rejects + no clinical claim + ontology partial); "Methods license matrix present" item added (Day 4cv: 6-row × 3-col — main tree 53/124 CC BY/CC0 vs BY-SA isolate 71/124 vs rejected with NC/unclear/spatial-QA-fail rationale)
+- **§I Pass/Fail criteria enhanced**: "Pass" item updated (teaching compromises explicitly labeled; NC excluded; soft-ceiling memo documented; per-landmark max values cited); "Fail" item expanded (per-toe DI/per-ray MTA elemental claims forbidden; grouped structures must be labeled teaching compromises; TA2-complete soft tissue claims forbidden; soft-ceiling/teaching compromises undocumented = fail; NC sources integrated without soft-ceiling memo reject rationale = fail; license matrix missing = fail)
+- **Version footer updated**: v3.0 (Day 4cw / Week 2 Phase 8 EXPERT REVIEW PREP); supersedes 2.0 (Day 4ax/4be/4bf); atlas pointer Week 2 Day 4cw Phase 8; key Week 2 updates list (methods.md limitations table + license matrix; soft-ceiling memo digs #1–#170 + teaching compromises stance; grouped DI/MTA teaching compromise explicit labels; per-landmark Kabsch residuals max values; NC rejects documented Zenodo Scan-the-World, Visible Korean, BoneHub)
+
+### Soft-tissue: WATCH ONLY
+- **0** new digs — expert review checklist refresh did NOT uncover obvious new CC0/BY soft hit; no incidental dig numbers appended.
+
+### Docs refresh
+- **cloud-agent-handback**: updated tip SHA to 5eccb7c / Day 4cv; date Day 4cw (EXPERT REVIEW PREP); added `docs/expert-review-checklist.md (Day 4cw v3.0 EXPERT REVIEW PREP)` to Companion list.
+
+### Gates (green)
+- `npm test -- --run`: **138/138** passed (19 test files)
+- `python3 scripts/integrity-audit.py`: **0** violations (129 structures / 134 GLBs)
+- `npm run build`: ✓ (dist built; 1.2 MB chunk size warning expected)
+
+**Census**: unchanged (129/124 entries/unique; 126/129 ontology citable; 53 main-tree / 71 BY-SA; 134 GLB on-disk)
+
+**Commit**: `Day 4cw: EXPERT REVIEW PREP - docs/expert-review-checklist.md v3.0 (teaching-useful/incomplete stance + methods.md/soft-ceiling memo links + grouped DI/MTA teaching compromises checklist items + per-landmark Kabsch residuals + NC rejects) + cloud-agent-handback refresh`
+
+**Push**: SHA `<pending>`
+
+**Summary**: Expert review prep completed per Week 2 checkpoint next goals. Refreshed expert-review-checklist.md v3.0 (header Day 4cw; key docs section with methods.md Day 4cv + soft-ceiling memo links; §B Myology/Angiology teaching compromise details for grouped DI/MTA + lumbricals absent; §E Soft-tissue ceilings comprehensive 8-item breakdown with per-landmark Kabsch max values + BY-SA weight by layer + NC rejects; §G Clinical/journal disclaimer grouped structures teaching compromises note + methods limitations table/license matrix current checks; §I Pass/Fail enhanced with teaching compromises label enforcement). Soft digs watch-only (0 new). Cloud-agent-handback refreshed. Gates green. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+---
