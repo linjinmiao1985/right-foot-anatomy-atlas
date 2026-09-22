@@ -329,7 +329,7 @@ export default function StructurePanel({
               : 'License tree: Main tree CC BY 4.0 or CC0'
           }
         >
-          {provenance.isolatedBySa ? 'ShareAlike' : '主树 · Main'}
+          {provenance.isolatedBySa ? 'BY-SA 隔离 · ShareAlike' : '主树 · Main'}
         </span>
         <span style={{ fontSize: '11px', color: '#bbb', lineHeight: 1.4 }}>
           {licenseLabel(provenance.license)}

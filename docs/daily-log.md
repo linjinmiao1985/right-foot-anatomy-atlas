@@ -1658,3 +1658,22 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 6. **Honesty**: teaching atlas in progress — **not** clinical; **not** TA2-complete; **no finished-product claim**.
 
 **Outcome**: Census unchanged (**129/124**; ontology **126/129**). **0** meshes wire / **0** SA spam. prefers-reduced-motion teaching accessibility added (WCAG guidance — ideas only). All gates PASSED. Day 4bz complete.
+
+## Day 4ca (2026-09-22) — StructurePanel BY-SA license chip bilingual
+
+**Target**: Complete Day 4ca with ONE teaching quality polish from three options (StructurePanel bilingual BY-SA vs main-tree license chip / Escape clears search+blur / empty selection bilingual tip). Chose option 1: bilingual BY-SA license chip. Daily-log Day 4ca; vitest run (no head pipe); integrity-audit; build; commit; push. No mesh dig; no finished-product claims.
+
+1. Continued on `cursor/week2-day4bm-ghost-opacity-096e` (Day 4bz tip @ f0d2b02).
+2. **Teaching quality polish** (option 1): **StructurePanel bilingual BY-SA license chip** — improved teaching clarity for ShareAlike isolate label:
+   - Changed license chip text from "ShareAlike" to "BY-SA 隔离 · ShareAlike" (matching bilingual format of "主树 · Main")
+   - Provides clear Chinese context for students reading BY-SA isolation concept
+   - Maintains existing aria-label and title accessibility (English explanation unchanged)
+3. **Mesh dig**: **Skipped** — CC0/BY ceiling acknowledged after comprehensive search Day 4bo–4bs (dig #100–#135).
+4. **Gates**: Run full gates WITHOUT piping to head:
+   - `npx vitest run` → **127/127 PASSED** (19 test files)
+   - `python3 scripts/integrity-audit.py` → **PASSED** (129 structures / 134 GLBs / 0 violations)
+   - `npm run build` → **OK** (dist built 3.30s)
+5. **Checks**: daily-log Day 4ca updated; commit + push same PR branch.
+6. **Honesty**: teaching atlas in progress — **not** clinical; **not** TA2-complete; **no finished-product claim**.
+
+**Outcome**: Census unchanged (**129/124**; ontology **126/129**). **0** meshes wire / **0** SA spam. BY-SA license chip bilingual polish added. All gates PASSED. Day 4ca complete.
