@@ -2817,7 +2817,7 @@ Existing honest no-screenshot note in `docs/journal-figure-captions.md` (Day 4df
 
 **Commit**: `Day 4dg: SPARSE SOFT WATCH - watch digs #174-#175 (AnatomyZone/Kenhub/Open3DModel quadratus plantae BY-SA; BodyParts3D V3.0 SA 2.1 JP abductor digiti minimi/FDB) both DRY (no new CC0/BY foot intrinsics) + learning-log append + optional Fig6 screenshot SKIPPED (honest no-screenshot note already appropriate; complex automation risk) + cloud-agent-handback refresh (journal caption pack COMPLETE Figs 1-7)`
 
-**Push**: SHA `<pending>`
+**Push**: SHA `<CURRENT_SHA>`
 
 **Summary**: Sparse soft watch digs #174–#175 (Day 4dg). Both DRY: (174) quadratus plantae — AnatomyZone/Kenhub/TeachMeAnatomy educational viewers (no download); Open3DModel BY-SA (excluded per Week 2 SA ceiling); (175) abductor digiti minimi / flexor digitorum brevis — BP3D V3.0 SA 2.1 JP already rejected (current project uses V4.0 CC BY 4.0 main-tree); Open3DModel/AnatomyTOOL BY-SA; TA2 Viewer / 3D Atlas / Kenhub reference-only (no download). Total watch digs #147–#175 (29 digs; 0 new CC0/BY soft meshes integrated). Optional Fig6 screenshot SKIPPED (honest no-screenshot note in journal-figure-captions.md Day 4df already appropriate; complex automation to select honest-empty structure + capture StructurePanel without fake overlays — prefer honest note over risk). Journal figure caption pack **COMPLETE** (Figs 1–7 linked Day 4de+4df with honest mapping). Cloud-agent-handback refreshed. Gates green. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
 
