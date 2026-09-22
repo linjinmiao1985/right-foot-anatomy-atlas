@@ -6,12 +6,14 @@ import {
   EXPLODE_DISTANCE,
   EXPLODE_PRESET_AMOUNT,
   LAYER_EXPLODE_FACTOR,
+  REDUCED_MOTION_SCALE,
   clampExplodeAmount,
   isAssembledExplode,
   isExplodePreset,
   isExplodeToggleKey,
   layerExplodeOffset,
   parseExplodeAmount,
+  prefersReducedMotion,
   toggleExplodeAmount,
 } from './layerExplode';
 
@@ -60,5 +62,38 @@ describe('layerExplode', () => {
     expect(isExplodeToggleKey('E')).toBe(true);
     expect(isExplodeToggleKey('g')).toBe(false);
     expect(isExplodeToggleKey('Escape')).toBe(false);
+  });
+
+  it('returns false for prefersReducedMotion in test environment', () => {
+    expect(prefersReducedMotion()).toBe(false);
+  });
+
+  it('respects reducedMotion flag to scale explode distance', () => {
+    const fullNerve = layerExplodeOffset(1, 'nerve', false);
+    const reducedNerve = layerExplodeOffset(1, 'nerve', true);
+    expect(fullNerve[1]).toBe(EXPLODE_DISTANCE);
+    expect(reducedNerve[1]).toBeCloseTo(EXPLODE_DISTANCE * REDUCED_MOTION_SCALE, 5);
+    expect(reducedNerve[1]).toBeLessThan(fullNerve[1]);
+  });
+
+  it('scales all layer offsets when reducedMotion is true', () => {
+    const layers: Array<'bone' | 'ligament' | 'muscle' | 'vessel' | 'nerve'> = [
+      'bone',
+      'ligament',
+      'muscle',
+      'vessel',
+      'nerve',
+    ];
+    layers.forEach((layer) => {
+      const full = layerExplodeOffset(0.5, layer, false);
+      const reduced = layerExplodeOffset(0.5, layer, true);
+      if (LAYER_EXPLODE_FACTOR[layer] === 0) {
+        expect(full[1]).toBe(0);
+        expect(reduced[1]).toBe(0);
+      } else {
+        expect(reduced[1]).toBeCloseTo(full[1] * REDUCED_MOTION_SCALE, 5);
+        expect(reduced[1]).toBeLessThan(full[1]);
+      }
+    });
   });
 });

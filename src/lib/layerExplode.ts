@@ -23,6 +23,13 @@ export const EXPLODE_PRESET_AMOUNT = 0.7;
 export const EXPLODE_DISTANCE = 0.8;
 
 /**
+ * When user enables prefers-reduced-motion, scale explode distance down to this
+ * fraction (gentler teaching effect while preserving layer visibility).
+ * UX-borrow: WCAG reduced-motion guidance (ideas only).
+ */
+export const REDUCED_MOTION_SCALE = 0.2;
+
+/**
  * Relative peel order (0 = stay with osteology). Ligament hugs bone;
  * muscle then vessel then nerve peel further so NV stay readable.
  */
@@ -58,9 +65,29 @@ export function toggleExplodeAmount(current: number): number {
   return isAssembledExplode(current) ? EXPLODE_PRESET_AMOUNT : DEFAULT_EXPLODE_AMOUNT;
 }
 
-export function layerExplodeOffset(amount: number, layer: Layer): [number, number, number] {
+/**
+ * Check if user prefers reduced motion. When true, teaching explode / 抽出
+ * uses gentler distances (WCAG accessibility guidance — ideas only).
+ * SSR / test safety: returns false when matchMedia unavailable.
+ */
+export function prefersReducedMotion(): boolean {
+  if (typeof window === 'undefined' || !window.matchMedia) return false;
+  try {
+    return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  } catch {
+    return false;
+  }
+}
+
+export function layerExplodeOffset(
+  amount: number,
+  layer: Layer,
+  reducedMotion?: boolean,
+): [number, number, number] {
   const t = clampExplodeAmount(amount);
-  const y = LAYER_EXPLODE_FACTOR[layer] * t * EXPLODE_DISTANCE;
+  const shouldReduce = reducedMotion ?? prefersReducedMotion();
+  const scale = shouldReduce ? REDUCED_MOTION_SCALE : 1;
+  const y = LAYER_EXPLODE_FACTOR[layer] * t * EXPLODE_DISTANCE * scale;
   return [0, y, 0];
 }
 

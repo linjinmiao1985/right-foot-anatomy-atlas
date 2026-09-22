@@ -43,6 +43,8 @@ interface ViewportProps {
   layerOpacities?: Record<Layer, number>;
   /** Teaching explode / 抽出 (0 assembled). */
   explodeAmount?: number;
+  /** User prefers reduced motion (WCAG accessibility). */
+  reducedMotion?: boolean;
   /** Teaching quiz stub — hide hover names. */
   quizMode?: boolean;
 }
@@ -64,6 +66,7 @@ export default function Viewport({
   hiddenStructureIds,
   layerOpacities,
   explodeAmount,
+  reducedMotion = false,
   quizMode = false,
 }: ViewportProps) {
   return (
@@ -103,6 +106,7 @@ export default function Viewport({
           hiddenStructureIds={hiddenStructureIds}
           layerOpacities={layerOpacities}
           explodeAmount={explodeAmount}
+          reducedMotion={reducedMotion}
           quizMode={quizMode}
         />
       </Suspense>

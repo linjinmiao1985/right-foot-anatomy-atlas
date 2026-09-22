@@ -53,6 +53,7 @@ import {
   isAssembledExplode,
   isExplodeToggleKey,
   toggleExplodeAmount,
+  prefersReducedMotion,
 } from './lib/layerExplode';
 import {
   DEFAULT_QUIZ_MODE,
@@ -115,6 +116,22 @@ function App() {
   const [quizMode, setQuizMode] = useState(() => {
     return loadTeachingPrefs()?.quizMode ?? DEFAULT_QUIZ_MODE;
   });
+
+  // Track prefers-reduced-motion media query (WCAG accessibility — ideas only).
+  const [reducedMotion, setReducedMotion] = useState(() => prefersReducedMotion());
+
+  // Listen for prefers-reduced-motion changes.
+  useEffect(() => {
+    if (typeof window === 'undefined' || !window.matchMedia) return;
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const handler = (e: MediaQueryListEvent) => setReducedMotion(e.matches);
+    // Modern browsers use addEventListener; legacy uses addListener
+    if (mediaQuery.addEventListener) {
+      mediaQuery.addEventListener('change', handler);
+      return () => mediaQuery.removeEventListener('change', handler);
+    }
+    return undefined;
+  }, []);
 
   // Persist teaching prefs (layers / label density / clip / camera / hidden / ghost / explode / quiz).
   useEffect(() => {
@@ -478,6 +495,7 @@ function App() {
         hiddenStructureIds={hiddenStructureIds}
         layerOpacities={layerOpacities}
         explodeAmount={explodeAmount}
+        reducedMotion={reducedMotion}
         quizMode={quizMode}
       />
 

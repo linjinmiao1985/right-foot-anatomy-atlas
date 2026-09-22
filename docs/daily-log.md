@@ -1636,3 +1636,25 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 6. **Honesty**: teaching atlas in progress — **not** clinical; **not** TA2-complete; **no finished-product claim**.
 
 **Outcome**: Census unchanged (**129/124**; ontology **126/129**). **0** meshes wire / **0** SA spam. All gates PASSED cleanly without pipe hang. Day 4by complete.
+
+## Day 4bz (2026-09-22) — prefers-reduced-motion teaching accessibility
+
+**Target**: Complete Day 4bz with ONE real teaching change from options A–D. Chose option A: prefers-reduced-motion support for teaching explode/抽出. Daily-log Day 4bz; vitest run (no head pipe); integrity-audit; build; commit; push. No mesh dig; no finished-product claims.
+
+1. Continued on `cursor/week2-day4bm-ghost-opacity-096e` (Day 4by tip @ e816a6d).
+2. **Teaching change** (option A): **prefers-reduced-motion support** — WCAG accessibility for teaching explode/抽出:
+   - Added `prefersReducedMotion()` helper in `layerExplode.ts` (SSR/test-safe matchMedia query)
+   - Added `REDUCED_MOTION_SCALE = 0.2` constant (gentler 20% teaching peel when motion-sensitive)
+   - Modified `layerExplodeOffset()` to accept optional `reducedMotion` param; scales explode distance by 20% when true (preserves layer visibility teaching effect while respecting user preference)
+   - Added `reducedMotion` state in `App.tsx` with useEffect listener for media query changes
+   - Threaded `reducedMotion` prop through `Viewport.tsx` → `FootModel.tsx` → `layerExplodeOffset()` call
+   - Added vitest tests: `prefersReducedMotion()` test-env behavior, scale factor validation, all-layer scaling check
+3. **Mesh dig**: **Skipped** — CC0/BY ceiling acknowledged after comprehensive search Day 4bo–4bs (dig #100–#135).
+4. **Gates**: Run full gates WITHOUT piping to head:
+   - `npx vitest run` → **127/127 PASSED** (19 test files, +3 new reduced-motion tests)
+   - `python3 scripts/integrity-audit.py` → **PASSED** (129 structures / 134 GLBs / 0 violations)
+   - `npm run build` → **OK**
+5. **Checks**: daily-log Day 4bz updated; commit + push same PR branch.
+6. **Honesty**: teaching atlas in progress — **not** clinical; **not** TA2-complete; **no finished-product claim**.
+
+**Outcome**: Census unchanged (**129/124**; ontology **126/129**). **0** meshes wire / **0** SA spam. prefers-reduced-motion teaching accessibility added (WCAG guidance — ideas only). All gates PASSED. Day 4bz complete.

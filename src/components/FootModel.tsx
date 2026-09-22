@@ -60,6 +60,8 @@ interface FootModelProps {
   layerOpacities?: Record<Layer, number>;
   /** Teaching explode / 抽出 amount (0 assembled). Missing → 0. */
   explodeAmount?: number;
+  /** User prefers reduced motion (WCAG accessibility). Missing → false. */
+  reducedMotion?: boolean;
   /** Teaching quiz stub — hide hover names. */
   quizMode?: boolean;
 }
@@ -256,7 +258,7 @@ const REAL_LIGAMENT_MODELS: Record<string, string> = {
   'dorsal_intercuneiform_ligaments': '/models/right-foot/by-sa/dorsal_intercuneiform_ligaments.glb',
 };
 
-export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName, isolateMode = false, visibleLigamentGroups, visibleNerveGroups, visibleVesselGroups, visibleMuscleGroups, labelDensity = DEFAULT_LABEL_DENSITY, hiddenStructureIds, layerOpacities, explodeAmount = DEFAULT_EXPLODE_AMOUNT, quizMode = false }: FootModelProps) {
+export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName, isolateMode = false, visibleLigamentGroups, visibleNerveGroups, visibleVesselGroups, visibleMuscleGroups, labelDensity = DEFAULT_LABEL_DENSITY, hiddenStructureIds, layerOpacities, explodeAmount = DEFAULT_EXPLODE_AMOUNT, reducedMotion = false, quizMode = false }: FootModelProps) {
   const ligGroups = visibleLigamentGroups ?? new Set(getAllLigamentGroupIds());
   const nerveGroups = visibleNerveGroups ?? new Set(getAllNerveGroupIds());
   const vesselGroups = visibleVesselGroups ?? new Set(getAllVesselGroupIds());
@@ -387,7 +389,7 @@ export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName
         const isSelected = meshName === selectedMeshName;
         const isHovered = meshName === hoveredMesh;
         const layerOpacity = layerOpacities?.[structure.layer] ?? DEFAULT_LAYER_OPACITY;
-        const explodeOffset = layerExplodeOffset(explodeAmount, structure.layer);
+        const explodeOffset = layerExplodeOffset(explodeAmount, structure.layer, reducedMotion);
         // Teaching polish: when something is selected (and not isolating), dim peers
         const selectedStruct = selectedMeshName ? getStructureByMeshName(selectedMeshName) : null;
         const isPeerOfSelection =
