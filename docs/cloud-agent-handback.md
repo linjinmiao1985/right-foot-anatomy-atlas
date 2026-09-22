@@ -30,7 +30,7 @@ Henson Sheffield **Option A** one-subject MC POC completed (`Aug_8`): surfaces O
 
 **Date**: 2026-09-22 · Day **4dh** (Week 2 KABSCH RESIDUALS TABLE for Fig7 honesty)  
 **Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3)  
-**HEAD tip**: `19929bb` (Day 4dg: finalize daily-log SHA)  
+**HEAD tip**: `0cb4cfa` (Day 4dh: Kabsch residuals Table 1 added)  
 **Status**: Kabsch residuals **Table 1** added to `docs/methods.md` (Open3D→BP3D / UM→BP3D / ZA→BP3D: mean/max per landmark) + cross-linked from `docs/journal-figure-captions.md` Fig7; teaching-grade atlas **in progress** — **not** a finished-product claim  
 **Companion**: `docs/methods.md` (Table 1: Kabsch Co-Registration Residuals Day 4dh; journal limitations + license matrix + Kabsch cross-links complete), `docs/journal-figure-captions.md` (Fig7 now links Table 1 + transform JSONs), other Week 2 docs
 
