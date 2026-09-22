@@ -1859,3 +1859,28 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 6. **Honesty**: teaching atlas in progress — **not** clinical; **not** TA2-complete; **no finished-product claim**.
 
 **Outcome**: Census unchanged (**129/124**; ontology **126/129**). **0** meshes wire / **0** SA spam. Denser bilingual gap notes added for grouped DI and grouped MTA (soft-ceiling teaching transparency). Light watch dig #142–#146 dry. All gates PASSED. Day 4ci complete.
+
+## Day 4cj (2026-09-22) — Soft ceiling memo documentation
+
+**Target**: Complete Day 4cj with: (1) Write short `docs/week2-soft-ceiling-memo.md` (1 page) summarizing searches, rejects (NC/SA/UM/Andreassen), remaining gaps, teaching stance; (2) Optional UX: link text in StructurePanel to soft ceiling memo (meshNote already done); (3) vitest + integrity-audit + build; daily-log; commit; push; (4) No finished-product claims.
+
+1. Continued on `cursor/week2-day4bm-ghost-opacity-096e` (Day 4ci tip @ aba5996).
+2. **Soft ceiling memo** (`docs/week2-soft-ceiling-memo.md`):
+   - **What we searched**: Exhaustive 109+ sources (digs #38–#146, Day 4ay–4ci) — Zenodo, HuBMAP, HRA/CCF, TotalSegmentator, DU VH, Visible Korean, Andreassen, Henson Sheffield, U Malaya Asian LE, academic repos, Sketchfab/Cults3D, simulation platforms, 3D print repos, BP3D/Z-A/Open3D existing pools
+   - **Rejects documented**:
+     - **NC (Non-Commercial)**: Zenodo ScanTW 20228270/20231308/21354714/21527865 (CC BY-NC-SA 4.0, has DI but NC blocks MIT); NIH foot (NC-SA bones-only); Sheffield 9934055 (NC); Visible Korean (NC-ND, has DI/lumbricals)
+     - **SA (ShareAlike)**: Open3D DI/ankle ligament pack already in `by-sa/` isolate (~71/124 unique); prefer CC0/BY replacement over net SA volume growth; BP3D legacy mirrors SA 2.1 JP not mixed to main-tree
+     - **UM (U Malaya Asian LE)**: CC0 1.0 license OK but readme **explicitly excludes intrinsic foot muscles** (DI/plantar/lumbricals) due to MRI boundary difficulty; whole LE pack (hip→foot), no foot-specific named soft; 58.3 MB download not justified
+     - **Andreassen (VHM gastroc/soleus)**: CC BY 4.0 license OK but **7-tarsal Kabsch spatial QA FAIL** (Day 4az+4ba); gastroc/soleus wrong laterality (X>0), Achilles continuity broken (gastroc ≈109 mm / soleus ≈32 mm gaps); Option A LE landmarks retry **0** pass integrate gate; single similarity transform insufficient for whole LE (hip→foot); **0 GLB wired**; artifacts in `third_party/andreassen/`
+   - **Remaining gaps**: DI 1st–4th (only grouped Open3D BY-SA available); per-ray 1st–4th dorsal/plantar MTA (only grouped BP3D/Open3D); lumbricals (absent); plantar layers (absent/grouped); gastroc/soleus bellies (Andreassen/Henson alignment blocked)
+   - **Teaching stance**: Census soft ceiling acknowledged; grouped annotations are teaching compromises; panel gap notes surface "census 软天花板 / soft ceiling" bilingual transparency; footer factual (no "complete atlas" claim); README census table openly shows `placeholder: true` / `grouped: true` / `by-sa/` isolation; NC/unclear license rejected; spatial QA gate enforced (Andreassen not force-wired); SA volume not expanded for its own sake; active monitoring (Henson CC0 DICOM labels, TotalSegmentator, HuBMAP/HRA/Zenodo feeds); prefer evidence over spam; user-facing honesty copy in meshNote (Day 4ci); **not a finished product**
+   - Memo 1 page (comprehensive table format); companion docs cross-referenced (watchlist, DI search, belly alternatives, daily-log Day 4ay–4ci, cloud handback)
+3. **Optional UX**: meshNote for `interossei_dorsales`, `dorsal_metatarsal_arteries`, `plantar_metatarsal_arteries` already done Day 4ci (bilingual soft-ceiling pointers in `getTeachingMeshNote()`); no additional link text added this pass (task states "optional").
+4. **Gates**: Run full gates:
+   - `npm test -- --run` → **138/138 PASSED** (19 test files)
+   - `python3 scripts/integrity-audit.py` → **PASSED** (129 structures / 134 GLBs / 0 violations)
+   - `npm run build` → **OK** (dist built 3.63s)
+5. **Checks**: daily-log Day 4cj updated; commit + push same PR branch.
+6. **Honesty**: teaching atlas in progress — **not** clinical; **not** TA2-complete; **no finished-product claim**.
+
+**Outcome**: Census unchanged (**129/124**; ontology **126/129**). **0** meshes wire / **0** SA spam. Soft ceiling memo documented (1-page comprehensive summary: 109+ searches, NC/SA/UM/Andreassen rejects, DI/MTA/lumbricals/belly gaps, teaching transparency stance). All gates PASSED. Day 4cj complete.
