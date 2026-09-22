@@ -1791,3 +1791,24 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 6. **Honesty**: teaching atlas in progress — **not** clinical; **not** TA2-complete; **no finished-product claim**.
 
 **Outcome**: Census unchanged (**129/124**; ontology **126/129**). **0** meshes wire / **0** SA spam. masterGhostOpacity now persists in localStorage with teachingPrefs. All gates PASSED. Day 4cf complete.
+
+## Day 4cg (2026-09-22) — Teaching quality polish: focus-visible ring on layer controls
+
+**Target**: Complete Day 4cg with ONE teaching polish from three options. Chose option 1: focus-visible ring on layer toggles/sliders. Skip mesh dig (ceiling). Daily-log Day 4cg; vitest + integrity-audit + build; commit; push. No finished-product claims.
+
+1. Continued on `cursor/week2-day4bm-ghost-opacity-096e` (Day 4cf tip @ 7a767ce).
+2. **Teaching polish** (option 1): **Focus-visible ring on layer toggles/sliders** — keyboard accessibility improvement:
+   - Added global `:focus-visible` CSS rules in `src/index.css` for buttons, checkboxes, and range inputs
+   - Applied 2px solid blue outline (`#60a5fa`) with 2px offset
+   - Added soft focus shadow (`rgba(96, 165, 250, 0.2)`) for better visibility
+   - Benefits: Users navigating with Tab key now see clear focus indicators on all layer controls (toggle buttons, checkboxes, opacity sliders, camera presets, clip toggle, ghost/solid presets, explode controls, quiz mode)
+   - Accessibility best practice: `:focus-visible` only shows for keyboard navigation, not mouse clicks
+3. **Mesh dig**: **Skipped** — CC0/BY ceiling acknowledged after comprehensive search Day 4bo–4bs (dig #100–#135) + Day 4cd dig (#136).
+4. **Gates**: Run full gates:
+   - `npm test -- --run` → **138/138 PASSED** (19 test files)
+   - `python3 scripts/integrity-audit.py` → **PASSED** (129 structures / 134 GLBs / 0 violations)
+   - `npm run build` → **OK** (dist built 3.66s)
+5. **Checks**: daily-log Day 4cg updated; commit + push same PR branch.
+6. **Honesty**: teaching atlas in progress — **not** clinical; **not** TA2-complete; **no finished-product claim**.
+
+**Outcome**: Census unchanged (**129/124**; ontology **126/129**). **0** meshes wire / **0** SA spam. Focus-visible accessibility polish added (keyboard navigation UX improvement). All gates PASSED (138 tests). Day 4cg complete.
