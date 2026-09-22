@@ -68,9 +68,9 @@
 
 ## Figure 7: Kabsch Co-Registration Residuals (Teaching Visualization Grade)
 
-**中文**: Kabsch 刚性对齐残差（Open3D→BP3D 均值 ≈**2.61 mm** 最大 ≈**4.41 mm** MT1；UM→BP3D 均值 ≈**2.22 mm** 最大 ≈**4.38 mm** 距骨；ZA→BP3D 均值 ≈**1.81 mm** 最大 ≈**3.52 mm** 跟骨）。教学可视化级；**非**手术配准 / 植入物定尺 / 导航误差界限。逐地标残差详见 `third_party/*/kabsch_*.json` + `docs/methods.md` 限制表格。
+**中文**: Kabsch 刚性对齐残差（Open3D→BP3D 均值 ≈**2.61 mm** 最大 ≈**4.41 mm** MT1；UM→BP3D 均值 ≈**2.22 mm** 最大 ≈**4.38 mm** 距骨；ZA→BP3D 均值 ≈**1.81 mm** 最大 ≈**3.52 mm** 跟骨）。教学可视化级；**非**手术配准 / 植入物定尺 / 导航误差界限。逐地标残差详见 **`docs/methods.md` Table 1: Kabsch Co-Registration Residuals** + `third_party/*/kabsch_*.json` + `docs/methods.md` 限制表格。
 
-**English**: Kabsch rigid alignment residuals (Open3D→BP3D mean ≈**2.61 mm** max ≈**4.41 mm** MT1; UM→BP3D mean ≈**2.22 mm** max ≈**4.38 mm** talus; ZA→BP3D mean ≈**1.81 mm** max ≈**3.52 mm** calcaneus). Teaching visualization grade; **not** surgical registration / implant sizing / navigation error bounds. Per-landmark residuals see `third_party/*/kabsch_*.json` + `docs/methods.md` limitations table.
+**English**: Kabsch rigid alignment residuals (Open3D→BP3D mean ≈**2.61 mm** max ≈**4.41 mm** MT1; UM→BP3D mean ≈**2.22 mm** max ≈**4.38 mm** talus; ZA→BP3D mean ≈**1.81 mm** max ≈**3.52 mm** calcaneus). Teaching visualization grade; **not** surgical registration / implant sizing / navigation error bounds. Per-landmark residuals see **`docs/methods.md` Table 1: Kabsch Co-Registration Residuals** + `third_party/open3dmodel/open3d_to_bp3d_transform.json` (12 landmarks with per-landmark breakdown), `third_party/um/um_to_bp3d_transform.json` (7 landmarks), `third_party/z-anatomy/za_to_bp3d_transform.json` (9 landmarks) + `docs/methods.md` limitations table.
 
 **Screenshot**: `screenshots/02-bone-only.png` *(Bone layer only — note: Kabsch residuals are **numeric data** in `kabsch_*.json` transform files, not visible as overlays or color-coded heatmaps in the 3D view; this bone screenshot illustrates the co-registered result, not the residuals themselves)*
 

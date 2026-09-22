@@ -28,11 +28,11 @@ Henson Sheffield **Option A** one-subject MC POC completed (`Aug_8`): surfaces O
 
 # Cloud Agent handback — Phase 8 resume brief
 
-**Date**: 2026-09-22 · Day **4dg** (Week 2 SPARSE SOFT WATCH — journal pack complete)  
+**Date**: 2026-09-22 · Day **4dh** (Week 2 KABSCH RESIDUALS TABLE for Fig7 honesty)  
 **Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3)  
-**HEAD tip**: `08221ae` (Day 4df: all 7 journal figures linked honestly)  
-**Status**: Journal figure caption pack **complete** (Figs 1–7 linked Day 4de+4df with honest mapping); sparse soft watch digs #174–#175 (Day 4dg DRY); teaching-grade atlas **in progress** — **not** a finished-product claim  
-**Companion**: `docs/journal-figure-captions.md` (Day 4db + Day 4de screenshots 1–3 + Day 4df screenshots 4–7 linked; **complete**), `docs/screenshots/` (12 PNG Day 4de), `docs/open-anatomy-learning-log.md` (soft digs #147–#175 DRY), other Week 2 docs
+**HEAD tip**: `19929bb` (Day 4dg: finalize daily-log SHA)  
+**Status**: Kabsch residuals **Table 1** added to `docs/methods.md` (Open3D→BP3D / UM→BP3D / ZA→BP3D: mean/max per landmark) + cross-linked from `docs/journal-figure-captions.md` Fig7; teaching-grade atlas **in progress** — **not** a finished-product claim  
+**Companion**: `docs/methods.md` (Table 1: Kabsch Co-Registration Residuals Day 4dh; journal limitations + license matrix + Kabsch cross-links complete), `docs/journal-figure-captions.md` (Fig7 now links Table 1 + transform JSONs), other Week 2 docs
 
 ---
 

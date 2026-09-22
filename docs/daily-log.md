@@ -2817,8 +2817,44 @@ Existing honest no-screenshot note in `docs/journal-figure-captions.md` (Day 4df
 
 **Commit**: `Day 4dg: SPARSE SOFT WATCH - watch digs #174-#175 (AnatomyZone/Kenhub/Open3DModel quadratus plantae BY-SA; BodyParts3D V3.0 SA 2.1 JP abductor digiti minimi/FDB) both DRY (no new CC0/BY foot intrinsics) + learning-log append + optional Fig6 screenshot SKIPPED (honest no-screenshot note already appropriate; complex automation risk) + cloud-agent-handback refresh (journal caption pack COMPLETE Figs 1-7)`
 
-**Push**: SHA `<CURRENT_SHA>`
+**Push**: SHA `522996a`
 
 **Summary**: Sparse soft watch digs #174–#175 (Day 4dg). Both DRY: (174) quadratus plantae — AnatomyZone/Kenhub/TeachMeAnatomy educational viewers (no download); Open3DModel BY-SA (excluded per Week 2 SA ceiling); (175) abductor digiti minimi / flexor digitorum brevis — BP3D V3.0 SA 2.1 JP already rejected (current project uses V4.0 CC BY 4.0 main-tree); Open3DModel/AnatomyTOOL BY-SA; TA2 Viewer / 3D Atlas / Kenhub reference-only (no download). Total watch digs #147–#175 (29 digs; 0 new CC0/BY soft meshes integrated). Optional Fig6 screenshot SKIPPED (honest no-screenshot note in journal-figure-captions.md Day 4df already appropriate; complex automation to select honest-empty structure + capture StructurePanel without fake overlays — prefer honest note over risk). Journal figure caption pack **COMPLETE** (Figs 1–7 linked Day 4de+4df with honest mapping). Cloud-agent-handback refreshed. Gates green. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
 
 ---
+
+---
+
+## Day 4dh: KABSCH RESIDUALS TABLE for Fig7 honesty (2026-09-22)
+
+**Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3)
+
+**Goals**: Per Day 4dh request: extract Kabsch residuals from existing `*_to_bp3d_transform.json` files; create compact reproducible residuals table in `docs/methods.md` with landmark / mean mm / max mm; cross-link from `docs/journal-figure-captions.md` Fig7; watch-only soft digs; refresh cloud-agent-handback; gates; commit + push.
+
+**Changes**:
+1. **Kabsch Residuals Table 1 (docs/methods.md Day 4dh)**: Added "**Table 1: Kabsch Co-Registration Residuals (Teaching Visualization Grade)**" after Spatial residual row in journal-facing limitations table. 3-row × 6-col compact table:
+   - **Open3D→BP3D**: Kabsch similarity; 12 landmarks (7 tarsals + MT1–5); mean **2.61 mm**; max **4.41 mm** (MT1 / metatarsal_1)
+   - **UM→BP3D**: Kabsch similarity; 7 landmarks (7 tarsals); mean **2.22 mm**; max **4.38 mm** (Talus)
+   - **ZA→BP3D**: Kabsch similarity; 9 landmarks (7 tarsals + MT1, MT5); mean **1.81 mm**; max **3.52 mm** (Calcaneus)
+   - **Note**: Residuals are teaching visualization grade co-registration quality metrics. **Not** surgical registration error bounds / implant sizing tolerances / navigation accuracy specifications. Per-landmark residuals and full transform matrices: `third_party/open3dmodel/open3d_to_bp3d_transform.json` (Open3D; 12 landmarks with per-landmark breakdown); `third_party/um/um_to_bp3d_transform.json` (UM; 7 landmarks); `third_party/z-anatomy/za_to_bp3d_transform.json` (ZA; 9 landmarks).
+
+2. **Fig7 caption cross-link (docs/journal-figure-captions.md Day 4dh)**: Updated Figure 7 Chinese and English captions to add bold cross-reference to **`docs/methods.md` Table 1: Kabsch Co-Registration Residuals** + full transform JSON paths for per-landmark breakdown.
+
+3. **Methods.md dig range refresh**: Updated CC0/BY soft watchlist reference from `digs #1–#170 through Day 4ct` to `digs #1–#175 through Day 4dg`.
+
+4. **Spatial residual row refresh**: Updated existing Spatial residual row in limitations table to cross-link Table 1 and correct transform JSON paths from `kabsch_*.json` (non-existent glob) to actual filenames `open3d_to_bp3d_transform.json` + `um_to_bp3d_transform.json` + `za_to_bp3d_transform.json`.
+
+5. **Soft-tissue watch**: WATCH ONLY — no new dig numbers (Day 4dh focus on Fig7 residuals table honesty; digs #174–#175 already appended Day 4dg).
+
+6. **Cloud-agent-handback refresh**: Updated to `19929bb` (Day 4dg) / Day 4dh; noted Kabsch residuals Table 1 added + Fig7 cross-linked.
+
+**Verification gates (all green)**:
+- `npm test -- --run`: ✓ 138/138 passed (19 test files; 4.1 s)
+- `python3 scripts/integrity-audit.py`: ✓ 0 violations (129 structures / 134 GLBs)
+- `npm run build`: ✓ (dist built; 1.2 MB chunk size warning expected)
+
+**Census**: unchanged (129/124 entries/unique; 126/129 ontology citable; 53 main-tree / 71 BY-SA; 134 GLB on-disk)
+
+**Commit**: `Day 4dh: KABSCH RESIDUALS TABLE for Fig7 honesty - docs/methods.md Table 1 Kabsch Co-Registration Residuals (Open3D→BP3D / UM→BP3D / ZA→BP3D: mean/max per landmark from transform JSONs) + docs/journal-figure-captions.md Fig7 cross-link + spatial residual row correct JSON paths + cloud-agent-handback refresh`
+
+**Summary**: Kabsch residuals table completed per Day 4dh request. Added **Table 1: Kabsch Co-Registration Residuals** to `docs/methods.md` journal-facing section with 3-source × 6-col compact table (Open3D→BP3D / UM→BP3D / ZA→BP3D: landmarks / mean mm / max mm / max landmark) extracted from existing `third_party/*/open3d_to_bp3d_transform.json` + `um_to_bp3d_transform.json` + `za_to_bp3d_transform.json` files. Cross-linked from `docs/journal-figure-captions.md` Figure 7 caption (Chinese + English) with bold Table 1 reference + full transform JSON paths for per-landmark breakdown. Corrected existing Spatial residual row in limitations table to cite correct transform JSON filenames (not glob pattern) + Table 1. Updated dig range to #1–#175 through Day 4dg. Soft digs watch-only (0 new Day 4dh). Cloud-agent-handback refreshed. Gates green. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
