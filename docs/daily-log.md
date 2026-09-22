@@ -1860,6 +1860,32 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 
 **Outcome**: Census unchanged (**129/124**; ontology **126/129**). **0** meshes wire / **0** SA spam. Denser bilingual gap notes added for grouped DI and grouped MTA (soft-ceiling teaching transparency). Light watch dig #142–#146 dry. All gates PASSED. Day 4ci complete.
 
+## Day 4cl (2026-09-22) — Soft-tissue watch dig #147+ (DRY)
+
+**Target**: Day 4cl soft-tissue WATCH dig #147+: search Zenodo / Figshare / GitHub / HuBMAP / TotalSegmentator / academic repos for NEW CC0 or clear CC BY meshes of foot dorsal interossei (per toe), lumbricals, plantar layers, or per-ray dorsal/plantar metatarsal arteries. Append dig rows to open-anatomy-learning-log. Do NOT wire NC, NC-SA, unclear licenses, or spatially-failed assets. If nothing new meshes, record DRY. ONE tiny teaching polish (highest-value unused): a11y focus ring, keyboard-help sync with prefs, or soft-ceiling footer clarity. Gates: npm test, integrity-audit, build. Update daily-log Day 4cl. Commit + push.
+
+1. Continued on `cursor/week2-day4bm-ghost-opacity-096e` (Day 4ck tip @ 157cf76).
+2. **Soft-tissue watch dig #147–#153** (open-anatomy-learning-log):
+   - **#147**: Zenodo 20228270 (Scan-the-World right foot muscles) — **CC BY-NC-SA** (NC = reject; already in soft-ceiling memo)
+   - **#148**: Visible Korean foot muscles — **CC BY-NC-ND** (NC+ND = reject; already in soft-ceiling memo)
+   - **#149**: TotalSegmentator v3 — Apache 2.0, but **grouped bones only** (no per-structure DI/lumbricals/per-ray MTA) → **monitor**
+   - **#150**: HuBMAP 2026 foot soft — **no new CC0/CC-BY meshes found** → **monitor**
+   - **#151**: Open3DModel/AnatomyTOOL lumbricals update — **CC BY-SA already in by-sa/ isolate** (~71/124 unique); Q3-Q4 2025/Q1-Q2 2026 work mentioned but no per-toe DI elemental split confirmed → **existing SA isolate**
+   - **#152**: Proko intrinsic foot muscles — **license unclear** (course purchase required; no explicit CC0/CC-BY) → **reject**
+   - **#153**: University of Dundee Sketchfab foot models — **license unclear** in search; no per-structure soft detail verified → **reject**
+   - **Result**: All digs #147–#153 **DRY** for NEW CC0/CC-BY per-toe DI, lumbricals, plantar layers, or per-ray MTA. NC/NC-ND sources rejected (MIT incompatible); license-unclear sources rejected; BY-SA already integrated; grouped-only segmentations do not address per-structure gap. Soft-tissue open-data ceiling stance (Day 4cj soft-ceiling memo) **reconfirmed** — prefer watch-only mode.
+3. **ONE tiny teaching polish** (keyboard help prefs sync):
+   - Added brief localStorage persistence note to `KeyboardHelpOverlay.tsx` footer: "教学偏好持久化 · Teaching prefs persist: Layers · label density · clip · camera preset · per-structure hides (X) · layer opacities (G) · explode amount (E) · quiz mode (Q) restore on next visit (localStorage; teaching-grade only — not clinical)."
+   - Clarifies which settings persist across sessions — high-value educational polish; users now know their teaching chrome restores on reload
+   - No new feature sprawl; minimal 2-line text addition
+4. **Gates**: Run full gates:
+   - `python3 scripts/integrity-audit.py` → **PASSED** (129 structures / 134 GLBs / 0 violations)
+   - `npm test -- --run` → **138/138 PASSED** (19 test files)
+   - `npm run build` → **OK** (dist built 3.81s; 1.2 MB chunk size warning expected)
+5. **Checks**: daily-log Day 4cl updated; commit + push same PR branch.
+
+**Progress snapshot**: Day 4cl soft-tissue watch dig #147–#153 all **DRY** (0 new CC0/CC-BY per-toe/per-ray meshes). NC/unclear licenses rejected; BY-SA already isolated; grouped segmentations insufficient. Soft-ceiling stance reconfirmed. Tiny keyboard-help polish: localStorage prefs list added. Census unchanged **129/124**; ontology **126/129**. Teaching atlas in progress — **not** clinical; **not** TA2-complete; **no finished-product claim**.
+
 ## Day 4ck (2026-09-22) — Quality week wrap
 
 **Target**: Day 4ck wrap: (1) Link soft-ceiling memo from README Limitations + phase-8-self-review next-targets section; (2) Refresh cloud-agent-handback tip SHA to 0bb3449 / Day 4cj; (3) Optional tiny UX: footer already mentions soft ceiling — add plain text "详见 docs/week2-soft-ceiling-memo.md" to StructurePanel gap notes for DI/MTA; (4) vitest + integrity-audit + build; daily-log; commit; push; (5) No finished-product claims.

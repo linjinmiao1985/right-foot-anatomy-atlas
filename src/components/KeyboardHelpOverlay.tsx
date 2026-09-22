@@ -158,6 +158,9 @@ export default function KeyboardHelpOverlay({ open, onClose }: KeyboardHelpOverl
           <kbd style={{ color: '#d1d5db' }}>H</kbd> anytime (except while typing in search).
           Panel controls (master ghost opacity, per-layer sliders, clip position) are mouse/Tab accessible.
         </p>
+        <p style={{ margin: '8px 0 0', fontSize: '10px', color: '#6b7280', lineHeight: 1.4 }}>
+          教学偏好持久化 · Teaching prefs persist: Layers · label density · clip · camera preset · per-structure hides (X) · layer opacities (G) · explode amount (E) · quiz mode (Q) restore on next visit (localStorage; teaching-grade only — not clinical).
+        </p>
       </div>
     </div>
   );

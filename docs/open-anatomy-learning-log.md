@@ -1769,3 +1769,101 @@ Continue Week 2 sprint after Day 4br quiz honesty. **Change angle**: search LESS
 - **0** meshes integrated; **0** SA spam; Andreassen/Henson/Utah **not** force-wired.
 - Teaching UX polish options (G/E/Q/0/Home keyboard help ✓ Day 4ao; panel gap notes ✓ meshNote live; screenshots ✓ 9 shots Day 4an) **all done prior** — no new polish this pass.
 - Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+---
+
+## Session additions (2026-09-22 · Day 4cl — #147-#153 soft-tissue watch dig)
+
+**Scope**: Soft-tissue WATCH dig #147+ per Day 4cl task. Search Zenodo / Figshare / GitHub / HuBMAP / TotalSegmentator / academic repos for NEW CC0 or clear CC BY meshes of foot dorsal interossei (per toe), lumbricals, plantar layers, or per-ray dorsal/plantar metatarsal arteries. Append dig rows. Do NOT wire NC, NC-SA, unclear licenses, or spatially-failed assets. Record DRY if nothing new meshes.
+
+### #147 Zenodo 20228270 — Scan-the-World right foot muscles (RE-VERIFY REJECT — NC-SA)
+
+**Dataset**: Muscles of the foot and ankle (Scan-the-World)  
+**DOI**: 10.5281/zenodo.20228270 (published 2026-05-12)  
+**URL**: https://doi.org/10.5281/zenodo.20228270  
+**License**: **CC BY-NC-SA 4.0** (per soft-ceiling memo Day 4cj; Zenodo API re-verified Day 4cl)  
+**Content**: CT-derived right foot and ankle muscular structure  
+**Reject reason**: **NC (Non-Commercial)** clause blocks MIT-licensed atlas redistribution  
+**Teaching value**: ❌ None — NC incompatible  
+**Action**: **reject** (NC clause; already documented in soft-ceiling memo #1–#146)
+
+### #148 Visible Korean foot muscles (RE-VERIFY REJECT — NC-ND)
+
+**Dataset**: Movable Surface Models of the Foot (Visible Korean)  
+**URL**: https://123dok.co/document/qvl85xvr-visible-korean-movable-surface-models-foot.html  
+**License**: **CC BY-NC-ND 3.0** (per soft-ceiling memo Day 4cj)  
+**Content**: 24 foot muscles including lumbricals, dorsal interossei, plantar interossei; STL/OBJ export available  
+**Reject reason**: **NC (Non-Commercial) + ND (No Derivatives)** — blocks both redistribution and modification  
+**Teaching value**: ❌ None — NC+ND incompatible  
+**Action**: **reject** (NC+ND clauses; already documented in soft-ceiling memo #1–#146)
+
+### #149 TotalSegmentator v3 foot soft tissue (MONITOR — no per-structure foot muscles)
+
+**Project**: TotalSegmentator (CT/MRI segmentation)  
+**URL**: https://github.com/wasserth/TotalSegmentator  
+**License**: Apache 2.0 (code); segmentation labels vary by dataset  
+**Search**: Zenodo datasets 22688904 / 22688334 (TotalSegmentator training data)  
+**Foot soft content**: Grouped `tarsal` / `metatarsal` / `phalanges_feet` bones only — **no per-structure DI, lumbricals, or per-ray MTA segmentations**  
+**Teaching value**: ❌ None for per-toe/per-ray soft atlas  
+**Action**: **monitor** — re-check catalog updates for future named foot vessels/muscles
+
+### #150 HuBMAP 2026 foot soft tissue (DRY — no new CC0/CC-BY meshes)
+
+**Project**: HuBMAP (Human BioMolecular Atlas Program)  
+**URL**: https://hubmapconsortium.org  
+**Search**: 2026 foot anatomy intrinsic muscles / interossei 3D mesh STL GLB  
+**Result**: No new foot intrinsic muscle 3D meshes with CC0/CC-BY license found  
+**Teaching value**: ❌ None — no downloadable foot DI/lumbricals meshes  
+**Action**: **monitor** — re-check HuBMAP data portal for future foot soft segmentations
+
+### #151 Open3DModel/AnatomyTOOL lumbricals update (EXISTING — already BY-SA isolate)
+
+**Project**: Open3DModel/AnatomyTOOL  
+**URL**: https://anatomytool.org/open3dmodel-about  
+**License**: **CC BY-SA 4.0** (per Day 4w existing integration)  
+**Content**: Includes lumbricals, dorsal/plantar interossei — but **already in `by-sa/` isolate** (~71/124 unique)  
+**Update**: Q3-Q4 2025 / Q1-Q2 2026 work mentioned on internal structures — **no per-toe DI elemental split confirmed**  
+**Teaching value**: ⚠️ Already integrated as grouped teaching meshes  
+**Action**: **existing BY-SA isolate** — prefer CC0/BY replacement over net SA volume growth
+
+### #152 Proko intrinsic foot muscles (REJECT — license unclear)
+
+**Project**: Proko Anatomy Course — 3D Model: Intrinsic Foot Muscles  
+**URL**: https://www.proko.com/course-lesson/3d-model-intrinsic-foot-muscles  
+**License**: **Unspecified** (download requires course purchase; no clear CC license stated)  
+**Content**: Intrinsic foot muscle 3D model (13 MB PNG.zip)  
+**Reject reason**: No explicit CC0/CC-BY license; commercial course content  
+**Teaching value**: ❌ None — license unconfirmed  
+**Action**: **reject** (unclear license; not verified CC0/CC-BY)
+
+### #153 University of Dundee Sketchfab foot models (REJECT — license unclear)
+
+**Project**: CAHID Lower Limb collection (Sketchfab)  
+**URL**: https://sketchfab.com/anatomy_dundee/collections/lower-limb-fb0d112a1b404cb09a4a6e0c4b1177be  
+**License**: **Unspecified** in search results — Sketchfab models vary (CC BY / CC BY-SA / All Rights Reserved)  
+**Content**: "Normal Foot Anatomy" + "Right Foot Bones" — **no confirmation of per-toe DI coverage or license**  
+**Reject reason**: License not confirmed CC0/CC-BY in search; no per-structure soft detail verified  
+**Teaching value**: ❌ None — license unconfirmed, soft content unclear  
+**Action**: **reject** (license unclear; would require manual Sketchfab inspection to verify)
+
+---
+
+**Day 4cl dig summary (#147–#153)**:
+
+| Dig # | Source | License | DI/lumbricals/per-ray MTA? | Action |
+|-------|--------|---------|---------------------------|--------|
+| #147 | Zenodo 20228270 (Scan-the-World) | CC BY-NC-SA | Has foot muscles | **reject** (NC) |
+| #148 | Visible Korean foot | CC BY-NC-ND | Has DI/lumbricals | **reject** (NC+ND) |
+| #149 | TotalSegmentator v3 | Apache 2.0 | Grouped bones only | **monitor** |
+| #150 | HuBMAP 2026 | varies | No meshes found | **monitor** |
+| #151 | Open3DModel/AnatomyTOOL | CC BY-SA | Already in by-sa/ | **existing SA** |
+| #152 | Proko intrinsic foot | Unclear | Unknown | **reject** (license) |
+| #153 | Dundee Sketchfab | Unclear | Unknown | **reject** (license) |
+
+**Result**: All digs #147–#153 **DRY** for NEW CC0/CC-BY per-toe DI, lumbricals, plantar layers, or per-ray MTA. NC/NC-ND sources rejected (MIT incompatible); license-unclear sources rejected (verification required); BY-SA already integrated; grouped-only segmentations do not address per-structure gap. Soft-tissue open-data ceiling stance (Day 4cj soft-ceiling memo) **reconfirmed** — prefer watch-only mode over force-wiring dry NC/unclear/SA spam.
+
+**Update tracking**:
+- Census unchanged (**129/124**; ontology **126/129**).
+- **0** meshes integrated; **0** SA spam; NC/unclear **not** force-wired.
+- Soft gaps (per-toe DI / lumbricals / per-ray MTA) remain **dry**.
+- Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
