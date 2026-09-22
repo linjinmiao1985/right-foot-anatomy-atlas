@@ -2,6 +2,7 @@
  * Keyboard shortcut catalog for the teaching viewer help overlay.
  * UX-borrow (ideas only): Open Anatomy Studio / BioLens shortcut sheets;
  * GraphAnatomy isolate key habit; undergravity/human-atlas per-structure hide. No third-party UI code copied.
+ * Accessibility: focus-visible outlines (see index.css) for keyboard navigation; all interactive controls tab-reachable.
  */
 
 export interface KeyboardShortcut {
@@ -62,7 +63,7 @@ export const KEYBOARD_HELP_GROUPS: ReadonlyArray<KeyboardShortcutGroup> = [
         keys: 'G',
         labelZh: '透视 / 实心',
         labelEn: 'Toggle ghost / solid layers',
-        note: 'Soft-tissue translucency so osteology shows through — teaching 透视, not clinical X-ray (Air-Sage / Z-Anatomy Atlas G-ghost habit — ideas only)',
+        note: 'Soft-tissue translucency so osteology shows through — teaching 透视, not clinical X-ray (Air-Sage / Z-Anatomy Atlas G-ghost habit — ideas only). Fine-tune via master opacity slider in panel',
       },
       {
         keys: 'E',

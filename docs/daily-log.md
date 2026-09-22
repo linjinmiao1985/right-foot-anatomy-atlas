@@ -1812,3 +1812,24 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 6. **Honesty**: teaching atlas in progress — **not** clinical; **not** TA2-complete; **no finished-product claim**.
 
 **Outcome**: Census unchanged (**129/124**; ontology **126/129**). **0** meshes wire / **0** SA spam. Focus-visible accessibility polish added (keyboard navigation UX improvement). All gates PASSED (138 tests). Day 4cg complete.
+
+## Day 4ch (2026-09-22) — Keyboard help: master ghost opacity note + focus-visible/a11y doc
+
+**Target**: Complete Day 4ch with keyboard help updates: add master ghost opacity note in G-key entry; document focus-visible/a11y in code comments; keep bilingual. Skip mesh dig. vitest + integrity-audit + build; daily-log; commit; push. No finished-product claims.
+
+1. Continued on `cursor/week2-day4bm-ghost-opacity-096e` (Day 4cg tip @ caec497).
+2. **Keyboard help polish**:
+   - Updated `keyboardHelp.ts` G-key note: added "Fine-tune via master opacity slider in panel" to explain post-Day-4ce master opacity control
+   - Added top-level a11y comment in `keyboardHelp.ts`: "Accessibility: focus-visible outlines (see index.css) for keyboard navigation; all interactive controls tab-reachable"
+   - Updated `KeyboardHelpOverlay.tsx` component docstring: added "All interactive controls support keyboard navigation via focus-visible outlines (see index.css)"
+   - Updated tip text in overlay: added "Panel controls (master ghost opacity, per-layer sliders, clip position) are mouse/Tab accessible" to clarify non-keyboard-shortcut controls
+   - Bilingual integrity preserved throughout
+3. **Mesh dig**: **Skipped** — per task instruction.
+4. **Gates**: Run full gates:
+   - `npm test -- --run` → **138/138 PASSED** (19 test files)
+   - `python3 scripts/integrity-audit.py` → **PASSED** (129 structures / 134 GLBs / 0 violations)
+   - `npm run build` → **OK** (dist built 3.78s)
+5. **Checks**: daily-log Day 4ch updated; commit + push same PR branch.
+6. **Honesty**: teaching atlas in progress — **not** clinical; **not** TA2-complete; **no finished-product claim**.
+
+**Outcome**: Census unchanged (**129/124**; ontology **126/129**). **0** meshes wire / **0** SA spam. Keyboard help now documents master ghost opacity + focus-visible a11y. All gates PASSED. Day 4ch complete.

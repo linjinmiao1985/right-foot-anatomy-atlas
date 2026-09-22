@@ -9,6 +9,7 @@ interface KeyboardHelpOverlayProps {
 /**
  * Teaching keyboard / pointer help overlay.
  * Accessibility: role=dialog, aria-modal, Escape closes via parent, focus close button on open.
+ * All interactive controls support keyboard navigation via focus-visible outlines (see index.css).
  */
 export default function KeyboardHelpOverlay({ open, onClose }: KeyboardHelpOverlayProps) {
   const closeRef = useRef<HTMLButtonElement>(null);
@@ -155,6 +156,7 @@ export default function KeyboardHelpOverlay({ open, onClose }: KeyboardHelpOverl
         <p style={{ margin: '4px 0 0', fontSize: '10px', color: '#6b7280', lineHeight: 1.4 }}>
           Tip: press <kbd style={{ color: '#d1d5db' }}>?</kbd> or{' '}
           <kbd style={{ color: '#d1d5db' }}>H</kbd> anytime (except while typing in search).
+          Panel controls (master ghost opacity, per-layer sliders, clip position) are mouse/Tab accessible.
         </p>
       </div>
     </div>
