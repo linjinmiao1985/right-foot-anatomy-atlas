@@ -15,6 +15,12 @@ import {
   composeLayerOpacity,
   opacityNeedsTransparency,
   isGhostToggleKey,
+  MASTER_GHOST_OPACITY_MIN,
+  MASTER_GHOST_OPACITY_MAX,
+  DEFAULT_MASTER_GHOST_OPACITY,
+  clampMasterGhostOpacity,
+  applyMasterGhostOpacity,
+  inferMasterGhostOpacity,
 } from './layerOpacity';
 import { getAllLayers } from './layers';
 
@@ -86,5 +92,82 @@ describe('layerOpacity', () => {
     expect(isGhostToggleKey('G')).toBe(true);
     expect(isGhostToggleKey('h')).toBe(false);
     expect(isGhostToggleKey('Escape')).toBe(false);
+  });
+
+  describe('master ghost opacity', () => {
+    it('clamps master opacity below min', () => {
+      expect(clampMasterGhostOpacity(0.1)).toBe(MASTER_GHOST_OPACITY_MIN);
+    });
+
+    it('clamps master opacity above max', () => {
+      expect(clampMasterGhostOpacity(1.5)).toBe(MASTER_GHOST_OPACITY_MAX);
+    });
+
+    it('preserves valid master opacity values', () => {
+      expect(clampMasterGhostOpacity(0.5)).toBe(0.5);
+      expect(clampMasterGhostOpacity(0.8)).toBe(0.8);
+    });
+
+    it('handles invalid master opacity values', () => {
+      expect(clampMasterGhostOpacity(NaN)).toBe(DEFAULT_MASTER_GHOST_OPACITY);
+      expect(clampMasterGhostOpacity(Infinity)).toBe(DEFAULT_MASTER_GHOST_OPACITY);
+    });
+
+    it('scales all non-bone layers by master opacity', () => {
+      const base = ghostLayerOpacities();
+      const scaled = applyMasterGhostOpacity(base, 0.5);
+      
+      expect(scaled.bone).toBe(base.bone);
+      expect(scaled.muscle).toBeCloseTo(base.muscle * 0.5, 2);
+      expect(scaled.nerve).toBeCloseTo(base.nerve * 0.5, 2);
+      expect(scaled.vessel).toBeCloseTo(base.vessel * 0.5, 2);
+      expect(scaled.ligament).toBeCloseTo(base.ligament * 0.5, 2);
+    });
+
+    it('preserves bone opacity regardless of master scale', () => {
+      const base = ghostLayerOpacities();
+      const scaled = applyMasterGhostOpacity(base, 0.2);
+      expect(scaled.bone).toBe(1.0);
+    });
+
+    it('clamps scaled values to valid layer opacity range', () => {
+      const base = ghostLayerOpacities();
+      const scaled = applyMasterGhostOpacity(base, 0.1);
+      
+      expect(scaled.muscle).toBeGreaterThanOrEqual(LAYER_OPACITY_MIN);
+      expect(scaled.nerve).toBeGreaterThanOrEqual(LAYER_OPACITY_MIN);
+      expect(scaled.vessel).toBeGreaterThanOrEqual(LAYER_OPACITY_MIN);
+      expect(scaled.ligament).toBeGreaterThanOrEqual(LAYER_OPACITY_MIN);
+    });
+
+    it('infers master opacity as 1.0 for solid preset', () => {
+      const solid = defaultLayerOpacities();
+      expect(inferMasterGhostOpacity(solid)).toBe(1.0);
+    });
+
+    it('infers master opacity as 1.0 for standard ghost preset', () => {
+      const ghost = ghostLayerOpacities();
+      expect(inferMasterGhostOpacity(ghost)).toBe(1.0);
+    });
+
+    it('infers correct scale from scaled ghost opacities', () => {
+      const base = ghostLayerOpacities();
+      const scaled = applyMasterGhostOpacity(base, 0.6);
+      const inferred = inferMasterGhostOpacity(scaled);
+      expect(inferred).toBeCloseTo(0.6, 1);
+    });
+
+    it('handles custom per-layer opacity tweaks', () => {
+      const custom = {
+        bone: 1.0,
+        muscle: 0.4,
+        nerve: 0.7,
+        vessel: 0.3,
+        ligament: 0.5,
+      };
+      const inferred = inferMasterGhostOpacity(custom);
+      expect(inferred).toBeGreaterThan(0);
+      expect(inferred).toBeLessThanOrEqual(1);
+    });
   });
 });

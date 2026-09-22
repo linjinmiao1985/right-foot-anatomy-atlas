@@ -46,6 +46,10 @@ import {
   isGhostLayerOpacities,
   isGhostToggleKey,
   toggleGhostLayerOpacities,
+  DEFAULT_MASTER_GHOST_OPACITY,
+  applyMasterGhostOpacity,
+  inferMasterGhostOpacity,
+  clampMasterGhostOpacity,
 } from './lib/layerOpacity';
 import {
   DEFAULT_EXPLODE_AMOUNT,
@@ -109,6 +113,10 @@ function App() {
   const [helpOpen, setHelpOpen] = useState(false);
   const [layerOpacities, setLayerOpacities] = useState<Record<Layer, number>>(() => {
     return loadTeachingPrefs()?.layerOpacities ?? defaultLayerOpacities();
+  });
+  const [masterGhostOpacity, setMasterGhostOpacity] = useState(() => {
+    const loaded = loadTeachingPrefs()?.layerOpacities;
+    return loaded ? inferMasterGhostOpacity(loaded) : DEFAULT_MASTER_GHOST_OPACITY;
   });
   const [explodeAmount, setExplodeAmount] = useState(() => {
     return loadTeachingPrefs()?.explodeAmount ?? DEFAULT_EXPLODE_AMOUNT;
@@ -297,6 +305,7 @@ function App() {
       // Ghost / 透视 — Air-Sage 透视 + Z-Anatomy Atlas G-ghost habit (ideas only)
       if (isGhostToggleKey(e.key)) {
         e.preventDefault();
+        setMasterGhostOpacity(1);
         setLayerOpacities((prev) => toggleGhostLayerOpacities(prev));
         return;
       }
@@ -433,10 +442,27 @@ function App() {
         onCameraPresetChange={handleCameraPresetChange}
         layerOpacities={layerOpacities}
         onLayerOpacityChange={(layer, opacity) => {
-          setLayerOpacities((prev) => ({ ...prev, [layer]: opacity }));
+          setLayerOpacities((prev) => {
+            const updated = { ...prev, [layer]: opacity };
+            setMasterGhostOpacity(inferMasterGhostOpacity(updated));
+            return updated;
+          });
         }}
-        onGhostPreset={() => setLayerOpacities(ghostLayerOpacities())}
-        onSolidPreset={() => setLayerOpacities(defaultLayerOpacities())}
+        masterGhostOpacity={masterGhostOpacity}
+        onMasterGhostOpacityChange={(scale) => {
+          const clamped = clampMasterGhostOpacity(scale);
+          setMasterGhostOpacity(clamped);
+          const base = isGhostLayerOpacities(layerOpacities) ? ghostLayerOpacities() : layerOpacities;
+          setLayerOpacities(applyMasterGhostOpacity(base, clamped));
+        }}
+        onGhostPreset={() => {
+          setMasterGhostOpacity(1);
+          setLayerOpacities(ghostLayerOpacities());
+        }}
+        onSolidPreset={() => {
+          setMasterGhostOpacity(1);
+          setLayerOpacities(defaultLayerOpacities());
+        }}
         explodeAmount={explodeAmount}
         onExplodeAmountChange={setExplodeAmount}
         onExplodePreset={() => setExplodeAmount(EXPLODE_PRESET_AMOUNT)}

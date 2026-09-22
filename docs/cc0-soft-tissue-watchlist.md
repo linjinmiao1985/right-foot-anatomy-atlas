@@ -308,3 +308,14 @@ Watchlist still tracks where a true **CC0/BY** soft find would matter. Day **4cc
 | Meshes integrated | **0** |
 
 Watchlist still tracks where a true **CC0/BY** soft find would matter. Day **4cd** confirms soft gaps remain **dry** — #136 intrinsic foot exclusion documented. Teaching atlas in progress — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+## Day 4ce dig summary (2026-09-22)
+
+**Digs #137–#141** (15-min NEW CC0/BY foot-intrinsic search):
+- **#137** OpenGameArt CC0 low-poly foot (byzmod3d, March 2026) — realistic surface mesh, **not** separated anatomy
+- **#138** Wikimedia CC0 Blender foot STL (Blender Studio, 2024) — high-res mesh, **not** separated soft tissue
+- **#139** Visible Korean foot-muscle PDF (CC BY-NC-ND 3.0) — surface models include lumbricalis / plantar & dorsal interosseus, but **ND** prohibits derivatives
+- **#140** U Denver Visible Human LE geometries (SimTK / digitalcommons.du.edu) — 76 muscles iliacus→flexor digitorum, pelvis→feet bones, STL downloadable; **same** Andreassen VH dataset evaluated Day 4az-4ba: whole LE pack (hip→ankle), single Kabsch transform fails foot+calf; flexor digitorum = extrinsic longus, **not** foot intrinsics (DI / lumbricals)
+- **#141** Sketchfab dorsal interossei models (Anatomary, caestudio) — exist but **license unconfirmed** (not verified CC0/BY)
+
+**Outcome**: **0** new usable CC0/BY foot-intrinsic meshes. DI / plantar layers / lumbricals gaps remain **dry**. Soft ceiling stands.

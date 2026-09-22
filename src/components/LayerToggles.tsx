@@ -20,6 +20,10 @@ import {
   clampLayerOpacity,
   isGhostLayerOpacities,
   isSolidLayerOpacities,
+  MASTER_GHOST_OPACITY_MIN,
+  MASTER_GHOST_OPACITY_MAX,
+  MASTER_GHOST_OPACITY_STEP,
+  clampMasterGhostOpacity,
 } from '../lib/layerOpacity';
 import {
   EXPLODE_AMOUNT_MAX,
@@ -55,6 +59,8 @@ interface LayerTogglesProps {
   onCameraPresetChange: (id: CameraPresetId) => void;
   layerOpacities: Record<Layer, number>;
   onLayerOpacityChange: (layer: Layer, opacity: number) => void;
+  masterGhostOpacity: number;
+  onMasterGhostOpacityChange: (scale: number) => void;
   onGhostPreset: () => void;
   onSolidPreset: () => void;
   explodeAmount: number;
@@ -96,6 +102,8 @@ export default function LayerToggles({
   onCameraPresetChange,
   layerOpacities,
   onLayerOpacityChange,
+  masterGhostOpacity,
+  onMasterGhostOpacityChange,
   onGhostPreset,
   onSolidPreset,
   explodeAmount,
@@ -380,6 +388,37 @@ export default function LayerToggles({
             </button>
           </div>
         </div>
+        <label
+          style={{
+            display: 'block',
+            fontSize: '11px',
+            color: '#e0f2fe',
+            marginBottom: '8px',
+            paddingBottom: '8px',
+            borderBottom: '1px solid rgba(56, 189, 248, 0.25)',
+          }}
+        >
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '4px' }}>
+            <span>主透明度 · Master</span>
+            <span style={{ fontVariantNumeric: 'tabular-nums', color: '#7dd3fc', fontSize: '10px' }}>
+              {masterGhostOpacity.toFixed(2)}
+            </span>
+          </div>
+          <input
+            type="range"
+            min={MASTER_GHOST_OPACITY_MIN}
+            max={MASTER_GHOST_OPACITY_MAX}
+            step={MASTER_GHOST_OPACITY_STEP}
+            value={masterGhostOpacity}
+            onChange={(e) =>
+              onMasterGhostOpacityChange(clampMasterGhostOpacity(Number(e.target.value)))
+            }
+            aria-label="主透明度 Master ghost opacity"
+            data-master-ghost-opacity="true"
+            style={{ width: '100%', cursor: 'pointer' }}
+            title="统一调节所有软组织层透明度（骨层保持实心）— 教学便利性"
+          />
+        </label>
         {layers.map((layer) => {
           const config = LAYER_CONFIG[layer];
           const value = layerOpacities[layer];
@@ -414,7 +453,7 @@ export default function LayerToggles({
           );
         })}
         <div style={{ fontSize: '9px', color: '#777', marginTop: '4px', lineHeight: 1.35 }}>
-          覆盖软组织半透明以便观察骨骼。教学透视，<strong>非</strong>临床 X 线 / 透视。
+          主透明度统调所有软组织；逐层滑块可微调。教学透视，<strong>非</strong>临床 X 线 / 透视。
         </div>
       </div>
 

@@ -16,6 +16,12 @@ export const LAYER_OPACITY_MAX = 1;
 export const LAYER_OPACITY_STEP = 0.05;
 export const DEFAULT_LAYER_OPACITY = 1;
 
+/** Master ghost opacity scale (multiplier for all non-bone layers). */
+export const MASTER_GHOST_OPACITY_MIN = 0.2;
+export const MASTER_GHOST_OPACITY_MAX = 1;
+export const MASTER_GHOST_OPACITY_STEP = 0.05;
+export const DEFAULT_MASTER_GHOST_OPACITY = 1;
+
 /**
  * Ghost / 透视 preset: osteology solid; fade muscle / ligament / vessel so
  * bones remain visible. Nerves stay relatively opaque (thin teaching paths).
@@ -100,4 +106,54 @@ export function opacityNeedsTransparency(opacity: number): boolean {
 
 export function isGhostToggleKey(key: string): boolean {
   return key === 'g' || key === 'G';
+}
+
+export function clampMasterGhostOpacity(value: number): number {
+  if (!Number.isFinite(value)) return DEFAULT_MASTER_GHOST_OPACITY;
+  return Math.min(MASTER_GHOST_OPACITY_MAX, Math.max(MASTER_GHOST_OPACITY_MIN, value));
+}
+
+/**
+ * Scale layer opacities by master ghost opacity multiplier (teaching ease-of-use).
+ * Bone layer exempt (always solid when visible).
+ */
+export function applyMasterGhostOpacity(
+  baseOpacities: Record<Layer, number>,
+  masterScale: number,
+): Record<Layer, number> {
+  const scale = clampMasterGhostOpacity(masterScale);
+  const out = { ...baseOpacities };
+  // Scale all non-bone layers
+  for (const layer of getAllLayers()) {
+    if (layer !== 'bone') {
+      out[layer] = clampLayerOpacity(baseOpacities[layer] * scale);
+    }
+  }
+  return out;
+}
+
+/**
+ * Extract effective master scale from current layer opacities relative to ghost preset.
+ * Returns 1.0 if solid or custom; otherwise inferred scale. Used to sync slider on preset toggle.
+ */
+export function inferMasterGhostOpacity(
+  current: Record<Layer, number>,
+): number {
+  // If solid, master is conceptually 1
+  if (isSolidLayerOpacities(current)) return 1;
+  // If ghost preset, master is 1
+  if (isGhostLayerOpacities(current)) return 1;
+  
+  // Custom opacities: infer scale from non-bone layers average ratio vs ghost preset
+  const layers = getAllLayers().filter(l => l !== 'bone');
+  let sumRatio = 0;
+  let count = 0;
+  for (const layer of layers) {
+    const ghostBase = GHOST_LAYER_OPACITY[layer];
+    if (ghostBase > 0.01) {
+      sumRatio += current[layer] / ghostBase;
+      count++;
+    }
+  }
+  return count > 0 ? clampMasterGhostOpacity(sumRatio / count) : 1;
 }

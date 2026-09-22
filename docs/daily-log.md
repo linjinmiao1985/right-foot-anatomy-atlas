@@ -1743,3 +1743,28 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 7. **Honesty**: teaching atlas in progress — **not** clinical; **not** TA2-complete; **no finished-product claim**.
 
 **Outcome**: Census unchanged (**129/124**; ontology **126/129**). **0** meshes integrated; **0** SA spam. #136 intrinsic foot muscles explicitly excluded per readme — DI/plantar/lumbricals not present. Soft gaps (DI / per-ray MTA / foot intrinsics) remain **dry**. Day 4cd complete.
+
+## Day 4ce (2026-09-22) — Teaching polish ONE: master ghost opacity slider
+
+**Target**: Complete Day 4ce with ONE teaching polish from three options (focus-visible outlines for layer toggles / denser keyboard cheat sheet modal / opacity slider for ghost mode). Chose option 3: master ghost opacity slider. Watch dig 20min NEW CC0/BY foot-intrinsic only; log; 0 wire expected. Daily-log Day 4ce; vitest + integrity-audit + build; commit; push. No finished-product claims.
+
+1. Continued on `cursor/week2-day4bm-ghost-opacity-096e` (Day 4cd tip @ 104e6c4).
+2. **Teaching polish** (option 3): **Master ghost opacity slider** — improved teaching ease-of-use for overall transparency control:
+   - Added `MASTER_GHOST_OPACITY_MIN/MAX/STEP/DEFAULT` constants (0.2–1.0, step 0.05) in `layerOpacity.ts`
+   - Implemented `clampMasterGhostOpacity()` / `applyMasterGhostOpacity()` / `inferMasterGhostOpacity()` — master scale multiplies all non-bone layer opacities; bone exempt (always solid)
+   - Added `masterGhostOpacity` state in `App.tsx` with handler `onMasterGhostOpacityChange` — scales current layer opacities; syncs when preset toggled (G key / ghost/solid buttons reset master to 1.0)
+   - Added master opacity slider UI in `LayerToggles.tsx` (above per-layer sliders, bilingual label "主透明度 · Master", 0.2–1.0 range with real-time numeric display)
+   - Updated help text: "主透明度统调所有软组织;逐层滑块可微调" (master adjusts all soft tissue; per-layer fine-tunes)
+   - Added 11 vitest tests: clamp/apply/infer master opacity behavior, bone exemption, scaled-value clamping, solid/ghost/custom inference
+3. **Mesh dig** (15-min NEW CC0/BY foot-intrinsic):
+   - **#137–#141**: OpenGameArt CC0 foot (low-poly, not separated); Wikimedia CC0 Blender foot (surface only); Visible Korean PDF (intrinsic muscles present but CC BY-NC-ND, no derivatives); U Denver Visible Human LE geometries (76 muscles STL, but same Andreassen LE pack blocker Day 4az-4ba — whole LE not foot-specific, Kabsch fails foot+calf); Sketchfab dorsal interossei (license unconfirmed)
+   - **Outcome**: **0** new usable CC0/BY foot-intrinsic meshes. DI / plantar layers / lumbricals gaps remain **dry**.
+   - Watchlist updated with Day 4ce dig summary; learning-log (pending).
+4. **Gates**: Run full gates WITHOUT piping to head:
+   - `npm test -- --run` → **138/138 PASSED** (19 test files, +11 new master opacity tests)
+   - `python3 scripts/integrity-audit.py` → **PASSED** (129 structures / 134 GLBs / 0 violations)
+   - `npm run build` → **OK** (dist built 4.01s)
+5. **Checks**: daily-log Day 4ce updated; commit + push same PR branch.
+6. **Honesty**: teaching atlas in progress — **not** clinical; **not** TA2-complete; **no finished-product claim**.
+
+**Outcome**: Census unchanged (**129/124**; ontology **126/129**). **0** meshes wire / **0** SA spam. Master ghost opacity slider teaching polish added (unified soft-tissue transparency control). All gates PASSED (138 tests). Day 4ce complete.
