@@ -28,11 +28,11 @@ Henson Sheffield **Option A** one-subject MC POC completed (`Aug_8`): surfaces O
 
 # Cloud Agent handback — Phase 8 resume brief
 
-**Date**: 2026-09-22 · Day **4cu** (Week 2 Quality Checkpoint)  
+**Date**: 2026-09-22 · Day **4cv** (Week 2 JOURNAL METHODS POLISH)  
 **Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3)  
-**HEAD tip**: `c0f8b2d` (Day 4ct: watch digs #169-170 + soft-ceiling Day 4ct summary + footer teaching-compromise alignment)  
-**Status**: Week 2 quality checkpoint complete; teaching-grade atlas **in progress** — **not** a finished-product claim  
-**Companion**: `docs/phase-8-self-review.md` (Week 2 checkpoint added), `docs/cc0-soft-tissue-watchlist.md`, `third_party/andreassen/`, `docs/week2-soft-ceiling-memo.md`
+**HEAD tip**: `34f97f3` (Day 4cu: WEEK 2 QUALITY CHECKPOINT - phase-8 Week 2 section UX shipped + soft-ceiling #147-170 DRY summary + teaching-compromise consistency)  
+**Status**: Journal methods polish (limitations table + license matrix); teaching-grade atlas **in progress** — **not** a finished-product claim  
+**Companion**: `docs/phase-8-self-review.md` (Week 2 checkpoint added Day 4cu), `docs/cc0-soft-tissue-watchlist.md`, `third_party/andreassen/`, `docs/week2-soft-ceiling-memo.md`, `docs/methods.md` (Day 4cv polish)
 
 ---
 

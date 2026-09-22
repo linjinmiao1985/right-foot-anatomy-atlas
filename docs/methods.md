@@ -21,13 +21,27 @@ This atlas integrates open-licensed anatomical meshes from BodyParts3D, Universi
 | Limitation | What it means | Implication for readers |
 |------------|---------------|-------------------------|
 | **License mix** | Code MIT; main-tree meshes CC BY 4.0 (BP3D) / CC0 (UM); soft-tissue majority under **CC BY-SA 4.0** isolate (`by-sa/`) | Redistribution of BY-SA meshes (and derivatives) requires ShareAlike; deleting `by-sa/` yields MIT+BY/CC0-only surface |
-| **Spatial residual** | Kabsch co-registration residuals: Open3D→BP3D ≈**2.61 mm** mean; UM→BP3D ≈**2.22 mm**; ZA→BP3D ≈**1.81 mm** (see transform JSONs `third_party/*/`) | Teaching visualization grade only — **not** surgical registration / implant / navigation error bounds |
-| **Grouped vessels** | Several arteries/nerves are **combined** meshes (e.g. dorsal digital, plantar/dorsal metatarsal) labeled （组合）/grouped | Do not treat as per-ray / per-toe elemental atlas; no license-clean per-ray MTA found (open-data ceiling) |
-| **BY-SA share** | ≈**71/124** unique structures live under ShareAlike isolate | Exhaustive CC0/BY search (digs #115–#135) found DI / per-ray MTA / gastroc-soleus alternatives dry; soft-tissue open-data ceiling largely reached |
+| **Spatial residual** | Kabsch co-registration residuals: Open3D→BP3D ≈**2.61 mm** mean (max ≈4.41 mm MT1); UM→BP3D ≈**2.22 mm** (max ≈4.38 mm talus); ZA→BP3D ≈**1.81 mm** (max ≈3.52 mm calcaneus) | Teaching visualization grade only — **not** surgical registration / implant / navigation error bounds (see transform JSONs `third_party/*/kabsch_*.json` for per-landmark residuals) |
+| **Soft-tissue open-data ceiling** | Exhaustive search (digs #1–#170, Day 4cl–4ct Week 2) found **no CC0/BY per-toe DI, lumbricals, per-ray MTA** meshes | **Grouped structures** (DI 1st–4th combined, dorsal/plantar MTA all rays) are **teaching compromises**, not per-toe/per-ray elemental atlases (详见 `docs/week2-soft-ceiling-memo.md`) |
+| **Grouped vessels/muscles** | Several arteries/nerves/muscles are **combined** meshes (e.g. dorsal digital, plantar/dorsal metatarsal, DI 1st–4th) labeled （组合）/grouped | Do not treat as per-ray / per-toe elemental atlas; license-clear per-ray MTA / per-toe DI alternatives unavailable (open-data ceiling) |
+| **BY-SA share** | ≈**71/124** unique structures live under ShareAlike isolate (`by-sa/` directory) | Exhaustive CC0/BY search (digs #1–#170) found DI / per-ray MTA / gastroc-soleus alternatives dry; soft-tissue open-data ceiling reached; NC (Non-Commercial) sources rejected (Zenodo Scan-the-World, Visible Korean, BoneHub) |
 | **No clinical claim** | Atlas is anatomy **education** (named structures, layers, classroom cutaways, ghost/explode/quiz teaching modes) | **Not** for diagnosis, treatment planning, interventional guidance, or patient-specific modeling |
 | **Ontology IDs partial** | **126/129** structures have ≥1 citable TA2 / FMA / BP in `src/lib/ontologyIds.ts`; **3** honest empties (cervical TC; med/lat plantar veins TNA-only) | Panel shows codes when present; named honest-empty note otherwise (Day 4be) — not TA2-complete soft tissue |
 
-Full census, UX inventory, and open-data ceilings: `docs/phase-8-self-review.md` (quality-week checkpoint; phase-7 retained as prior week board). CC0/BY soft watchlist: `docs/cc0-soft-tissue-watchlist.md` (digs #115–#135 through Day 4bs; DI / per-ray MTA / gastroc-soleus alternatives remain dry). Soft-tissue open-data ceiling: `docs/week2-soft-ceiling-memo.md` (detailed reject rationale + teaching stance). Ontology source notes: `src/lib/ontologyIds.ts` header + `docs/terminology.md`.
+### License matrix (summary)
+
+| Category | Main tree (CC BY 4.0 / CC0) | BY-SA isolate (`by-sa/`) | Rejected (not integrated) |
+|----------|----------------------------|--------------------------|---------------------------|
+| **Bones** | **26/26** (BP3D CC BY 4.0; UM CC0 duplicate) | 0 | BP3D V3.0 legacy (SA 2.1 JP) |
+| **Muscles** | **18/23** unique (BP3D+UM CC BY/CC0) | **5** (Open3D DI grouped + FB + FT + opponens + ZA plantaris) | UM excludes intrinsics per readme; Andreassen gastroc/soleus spatial QA fail |
+| **Vessels** | **7** (BP3D CC BY 4.0) | **22** (Open3D 12 + ZA 10 veins/circumflex) | Per-ray 1st–4th MTA elementals unavailable (open-data ceiling) |
+| **Nerves** | **0** (no CC BY/CC0 nerve meshes found) | **17** (ZA 6 trunks + Open3D 11 fine/cutaneous) | — |
+| **Ligaments/tendons** | **2** (BP3D long plantar + Achilles) | **27** (Open3D ankle bands/retinacula/aponeuroses) | Further tarsal/toe bands incomplete vs named ATFL-set in some texts |
+| **Total** | **53/124** unique (43%) | **71/124** unique (57%) | **NC rejected**: Zenodo Scan-the-World (CC BY-NC-SA), Visible Korean (NC-ND), BoneHub vsd-feet-seg (NC-SA); **License unclear**: Cults3D/Sketchfab models without explicit CC0/BY badge |
+
+**Key**: Main tree = MIT code + CC BY 4.0 / CC0 meshes (redistribution/derivatives permissive); BY-SA isolate = `by-sa/` directory (ShareAlike applies to derivatives); NC rejected = Non-Commercial incompatible with MIT-licensed atlas; License unclear = no explicit CC0/CC-BY badge verified.
+
+Full census, UX inventory, and open-data ceilings: `docs/phase-8-self-review.md` (quality-week checkpoint; Week 2 section added Day 4cu). CC0/BY soft watchlist: `docs/cc0-soft-tissue-watchlist.md` (digs #1–#170 through Day 4ct Week 2; DI / per-ray MTA / gastroc-soleus alternatives remain dry). Soft-tissue open-data ceiling: `docs/week2-soft-ceiling-memo.md` (detailed reject rationale + teaching stance + Day 4ct summary). Ontology source notes: `src/lib/ontologyIds.ts` header + `docs/terminology.md`.
 
 ---
 

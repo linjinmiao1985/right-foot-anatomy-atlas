@@ -2199,3 +2199,34 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 **Result**: Week 2 quality checkpoint complete. Teaching UX shipped + soft-ceiling documented + honest limitations maintained. Teaching atlas **in progress** — **not** clinical, **not** TA2-complete, **not** a finished product.
 
 ---
+
+## Day 4cv — JOURNAL METHODS POLISH (2026-09-22)
+
+**Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3)
+**Goals**: Per Week 2 checkpoint next targets: polish `docs/methods.md` (limitations table + license matrix + Kabsch residuals cross-link); watch-only soft digs (no new digs unless obvious CC0/BY hit); refresh cloud-agent-handback; gates; commit + push.
+
+### Methods polish (docs/methods.md)
+- **Enhanced limitations table**: (a) added "Soft-tissue open-data ceiling" row (exhaustive search #1–#170 found no CC0/BY per-toe DI, lumbricals, per-ray MTA; grouped structures are teaching compromises — cross-link `docs/week2-soft-ceiling-memo.md`); (b) expanded "Spatial residual" row with per-landmark max residuals (4.41 mm MT1, 4.38 mm talus, 3.52 mm calcaneus) + explicit transform JSON cross-link (`third_party/*/kabsch_*.json`); (c) updated "Grouped vessels/muscles" to reflect DI 1st–4th + MTA grouped reality; (d) updated "BY-SA share" to cite digs #1–#170 (not just #115–#135) + NC rejects (Zenodo Scan-the-World, Visible Korean, BoneHub).
+- **Added license matrix table**: 6-row matrix (bones, muscles, vessels, nerves, ligaments, total) × 3 columns (main tree CC BY/CC0, BY-SA isolate `by-sa/`, rejected); bones 26/26 main tree (0 SA); muscles 18/23 main (5 SA); vessels 7 main (22 SA); nerves 0 main (17 SA); ligaments 2 main (27 SA); total 53/124 main (71/124 SA); "Rejected" column cites NC rejects (Zenodo Scan-the-World CC BY-NC-SA, Visible Korean NC-ND, BoneHub NC-SA), license-unclear (Cults3D/Sketchfab no explicit CC0/BY badge), UM intrinsics excluded, Andreassen spatial QA fail, per-ray MTA elementals unavailable (open-data ceiling).
+- **Updated paragraph footer**: refreshed census context to cite phase-8-self-review Week 2 checkpoint (Day 4cu), digs #1–#170 (not #115–#135), week2-soft-ceiling-memo Day 4ct summary, methods.md Day 4cv.
+
+### Soft-tissue: WATCH ONLY
+- **0** new digs — methods polish research did NOT uncover obvious new CC0/BY soft hit; no incidental dig numbers appended.
+
+### Docs refresh
+- **cloud-agent-handback**: updated tip SHA to 34f97f3 / Day 4cu (WEEK 2 QUALITY CHECKPOINT); date Day 4cv (JOURNAL METHODS POLISH); added `docs/methods.md (Day 4cv polish)` to Companion list.
+
+### Gates (green)
+- `npm test -- --run`: **138/138** passed (19 test files)
+- `python3 scripts/integrity-audit.py`: **0** violations (129 structures / 134 GLBs)
+- `npm run build`: ✓ (dist built; 1.2 MB chunk size warning expected)
+
+**Census**: unchanged (129/124 entries/unique; 126/129 ontology citable; 53 main-tree / 71 BY-SA; 134 GLB on-disk)
+
+**Commit**: `Day 4cv: JOURNAL METHODS POLISH - docs/methods.md enhanced limitations table (soft-tissue open-data ceiling + per-landmark Kabsch residuals + NC rejects) + license matrix (main tree CC BY/CC0 vs BY-SA isolate vs rejected) + cloud-agent-handback refresh`
+
+**Push**: SHA `<pending>`
+
+**Summary**: Methods polish completed per Week 2 checkpoint next goals. Enhanced limitations table (soft-tissue open-data ceiling row + per-landmark Kabsch residuals + NC rejects + grouped DI/MTA reality); added license matrix (6-row × 3-col: main tree 53/124 vs BY-SA 71/124 vs rejected with NC/unclear/spatial-QA-fail rationale). Soft digs watch-only (0 new). Cloud-agent-handback refreshed. Gates green. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+---
