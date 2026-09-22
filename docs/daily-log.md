@@ -2344,7 +2344,7 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 
 **Commit**: `Day 4cy: UI LICENSE HONESTY SYNC - footer census hint (≈53 main / ≈71 BY-SA of 124 unique) added to ATLAS_SOURCE_FOOTER; StructurePanel/LayerToggles BY-SA vs main-tree badges/tooltips already aligned + cloud-agent-handback refresh`
 
-**Push**: SHA `<pending>`
+**Push**: SHA `fdd5b68`
 
 **Summary**: UI license honesty audit complete. StructurePanel license badge ("BY-SA 隔离 · ShareAlike" vs "主树 · Main") + tooltips ("ShareAlike isolate (by-sa/) — not main-tree CC BY/CC0" vs "Main tree CC BY 4.0 / CC0") already aligned. LayerToggles BY-SA warnings ("当前图层可能加载 **BY-SA** 网格") already clear. Footer census hint ADDED: "网格来源 (census ≈53 主树 / ≈71 BY-SA of 124 unique)" + "Mesh sources (census ≈53 main-tree / ≈71 BY-SA of 124 unique)" — natural placement in existing footer without clutter. Soft digs watch-only (0 new). Cloud-agent-handback refreshed. Gates green. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
 
