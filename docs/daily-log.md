@@ -2314,3 +2314,38 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 **Summary**: README Limitations section synced with Day 4cv/4cw docs. §Anatomical: added License mix lead item (53/124 main-tree vs 71/124 BY-SA; cross-link methods.md license matrix + expert-review-checklist v3.0); updated soft-ceiling dig range #1–#170 (was #1–#166); retained teaching compromises for grouped DI/MTA. §Technical: expanded "Not validated for surgery" (surgical planning → surgical planning/navigation/implant sizing/clinical diagnosis); added "Teaching atlas in progress" disclaimer item (not TA2-complete; not finished product; not clinical-grade; cross-link expert-review-checklist v3.0). Documentation section: added expert-review-checklist v3.0 + soft-ceiling memo items; updated methods/phase-8 descriptions; removed superseded phase-7 line. Soft digs watch-only (0 new). Cloud-agent-handback refreshed. Gates green. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
 
 ---
+
+## Day 4cy — UI LICENSE HONESTY SYNC (2026-09-22)
+
+**Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3)
+**Goals**: Audit StructurePanel / footer / license chips for BY-SA vs main-tree clarity; optional census hint (≈53 main / ≈71 BY-SA of 124 unique) if natural UI place exists — no clutter.
+
+### UI license honesty audit
+- **StructurePanel license badge** (already aligned): Clear "BY-SA 隔离 · ShareAlike" vs "主树 · Main" badge visible; provenance.isolatedBySa flag correctly drives badge color (purple #7c3aed for BY-SA, green #15803d for main-tree)
+- **StructurePanel tooltips** (already aligned): Hover text explains "CC BY-SA ShareAlike isolate (by-sa/) — not main-tree CC BY/CC0" for BY-SA structures vs "Main tree (CC BY 4.0 / CC0) — redistributable with attribution where required" for main-tree
+- **Footer census hint** (ADDED): Updated `ATLAS_SOURCE_FOOTER` in `src/lib/assetProvenance.ts` line 180:
+  - Chinese: "网格来源 (census ≈53 主树 / ≈71 BY-SA of 124 unique):" (was "网格来源:")
+  - English: "Mesh sources (census ≈53 main-tree / ≈71 BY-SA of 124 unique):" (was bilingual mixed; now parallel structure)
+  - Retained existing soft-ceiling text ("软组织 census 软天花板：逐趾 DI/蚓状肌、逐射线 MTA 仍为开放数据空白；分组结构为教学妥协 / Soft-tissue census soft ceiling: per-toe DI/lumbricals, per-ray MTA remain open-data gaps; grouped structures are teaching compromises")
+- **LayerToggles BY-SA warnings** (already aligned): Layer toggle panel shows "⚠️ 当前图层可能加载 **BY-SA** 网格" with clear by-sa/ isolation explanation
+
+### Soft-tissue: WATCH ONLY
+- **0** new digs — UI license sync did NOT uncover obvious new CC0/BY soft hit; no incidental dig numbers appended.
+
+### Docs refresh
+- **cloud-agent-handback**: updated tip SHA to d704f0d / Day 4cx; date Day 4cy (UI LICENSE HONESTY SYNC); added `src/lib/assetProvenance.ts (Day 4cy footer census hint)` to Companion list.
+
+### Gates (green)
+- `npm test -- --run`: **138/138** passed (19 test files)
+- `python3 scripts/integrity-audit.py`: **0** violations (129 structures / 134 GLBs)
+- `npm run build`: ✓ (dist built; 1.2 MB chunk size warning expected)
+
+**Census**: unchanged (129/124 entries/unique; 126/129 ontology citable; 53 main-tree / 71 BY-SA; 134 GLB on-disk)
+
+**Commit**: `Day 4cy: UI LICENSE HONESTY SYNC - footer census hint (≈53 main / ≈71 BY-SA of 124 unique) added to ATLAS_SOURCE_FOOTER; StructurePanel/LayerToggles BY-SA vs main-tree badges/tooltips already aligned + cloud-agent-handback refresh`
+
+**Push**: SHA `<pending>`
+
+**Summary**: UI license honesty audit complete. StructurePanel license badge ("BY-SA 隔离 · ShareAlike" vs "主树 · Main") + tooltips ("ShareAlike isolate (by-sa/) — not main-tree CC BY/CC0" vs "Main tree CC BY 4.0 / CC0") already aligned. LayerToggles BY-SA warnings ("当前图层可能加载 **BY-SA** 网格") already clear. Footer census hint ADDED: "网格来源 (census ≈53 主树 / ≈71 BY-SA of 124 unique)" + "Mesh sources (census ≈53 main-tree / ≈71 BY-SA of 124 unique)" — natural placement in existing footer without clutter. Soft digs watch-only (0 new). Cloud-agent-handback refreshed. Gates green. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+---

@@ -28,11 +28,11 @@ Henson Sheffield **Option A** one-subject MC POC completed (`Aug_8`): surfaces O
 
 # Cloud Agent handback — Phase 8 resume brief
 
-**Date**: 2026-09-22 · Day **4cx** (Week 2 README LIMITATIONS SYNC)  
+**Date**: 2026-09-22 · Day **4cy** (Week 2 UI LICENSE HONESTY SYNC)  
 **Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3)  
-**HEAD tip**: `323cdd9` (Day 4cw: finalize daily-log SHA — expert-review-checklist.md v3.0 + docs links)  
-**Status**: README limitations synced (license mix + soft-ceiling #1–#170 + teaching compromises + expert-review-checklist v3.0 links); teaching-grade atlas **in progress** — **not** a finished-product claim  
-**Companion**: `docs/phase-8-self-review.md` (Week 2 checkpoint added Day 4cu), `docs/cc0-soft-tissue-watchlist.md`, `third_party/andreassen/`, `docs/week2-soft-ceiling-memo.md`, `docs/methods.md` (Day 4cv polish), `docs/expert-review-checklist.md` (Day 4cw v3.0 EXPERT REVIEW PREP), `README.md` (Day 4cx Limitations sync)
+**HEAD tip**: `d704f0d` (Day 4cx: finalize daily-log SHA — README Limitations sync with docs)  
+**Status**: UI license honesty synced (footer census hint ≈53 main / ≈71 BY-SA added); teaching-grade atlas **in progress** — **not** a finished-product claim  
+**Companion**: `docs/phase-8-self-review.md` (Week 2 checkpoint added Day 4cu), `docs/cc0-soft-tissue-watchlist.md`, `third_party/andreassen/`, `docs/week2-soft-ceiling-memo.md`, `docs/methods.md` (Day 4cv polish), `docs/expert-review-checklist.md` (Day 4cw v3.0), `README.md` (Day 4cx Limitations sync), `src/lib/assetProvenance.ts` (Day 4cy footer census hint)
 
 ---
 
