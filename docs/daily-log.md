@@ -2015,3 +2015,31 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 6. **Honesty**: teaching atlas in progress — **not** clinical; **not** TA2-complete; **no finished-product claim**.
 
 **Outcome**: Census unchanged (**129/124**; ontology **126/129**). **0** meshes wire / **0** SA spam. Soft ceiling memo documented (1-page comprehensive summary: 109+ searches, NC/SA/UM/Andreassen rejects, DI/MTA/lumbricals/belly gaps, teaching transparency stance). All gates PASSED. Day 4cj complete.
+
+## 2026-09-22 · Day 4cp
+
+### Priority: LABIM3D dig #158b rejection + NEW watch digs #161–#163 + methods.md soft-ceiling cross-link
+
+**Tasks**:
+1. ✅ Append LABIM3D dig #158b REJECT (no foot inventory; ear/shoulder/knee/pelvis/spine only; CC BY claimed but zero foot soft) into `docs/week2-soft-ceiling-memo.md` and `open-anatomy-learning-log`
+2. ✅ Soft-tissue WATCH digs #161–#163 NEW sources only:
+   - **#161** Zenodo 10.5281/zenodo.20231309 "Muscles of the foot and ankle" (Scan-the-World): **MONITOR** (license unspecified in abstract/synthesis; requires full DOI inspection)
+   - **#162** Kaggle/GitHub Foot3D (OllieBoyne): **REJECT** (external skin surface scans only; no internal anatomy)
+   - **#163** HuggingFace BoneHub/vsd-feet-seg: **REJECT** (CC BY-NC-SA 4.0 NC disqualifies; bone-only; zero soft tissue)
+3. ✅ ONE tiny teaching polish: `docs/methods.md` one-line soft-ceiling memo cross-link (line 30: added `Soft-tissue open-data ceiling: docs/week2-soft-ceiling-memo.md`)
+4. ✅ Gates: `npm test -- --run` (138 passed), `python3 scripts/integrity-audit.py` (0 violations), `npm run build` (✓ 3.14s)
+5. ✅ Commit + push PR #3
+
+**Dig outcomes**:
+- **#161 Zenodo Scan-the-World**: MONITOR (CT-derived right foot model; license unspecified; requires deeper inspection)
+- **#162 Foot3D**: REJECT (118 external surface scans; no interossei/lumbricals/MTA)
+- **#163 BoneHub vsd-feet-seg**: REJECT (NC license + bone-only)
+- All NEW digs inconclusive or DRY for CC0/CC-BY foot soft tissue
+
+**Polish**: methods.md soft-ceiling cross-link
+
+**Census unchanged**: **129/124**; ontology **126/129**
+
+**Result**: **0** new meshes wired; soft-ceiling stance maintained — teaching in progress, **not** clinical, **not** TA2-complete, **not** a finished product.
+
+---

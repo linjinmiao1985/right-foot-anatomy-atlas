@@ -59,6 +59,22 @@
 
 **Verdict**: ❌ **REJECT** integrate — intrinsic foot muscles excluded; `third_party/u-malaya-asian-le/NOTICE.txt` documents CC0 verification + exclusion rationale.
 
+### LABIM3D (Universidad Austral de Chile) — no foot anatomy in catalog
+
+**GitHub**: FernandandreaTM/labim3d · **CC BY 4.0** (README claim; no LICENSE file) ✅ license compatible
+
+**Content** (deep-check Day 4co, dig #158b): Open-access platform for curated 3D anatomical models (JSON-based CMS, Three.js viewer, print-ready STL); **9 models** catalogued (March 2026 v1.0):
+- aparato-vestibular, articulacion-hombro (2 variants), articulacion-rodilla, oido-interno (2 variants), pelvis-completa, vertebra-lumbar, vertebra-toracica
+
+**Foot anatomy search** (Day 4co): Repository cloned and fully inspected; `grep -r "foot\|pie\|inteross\|lumbric\|metatars"` (HTML+JSON) → **0 matches**; 20+ STL files present but **no foot anatomy** (ear/shoulder/knee/pelvis/vertebrae only)
+
+**Reject rationale**:
+- **0** foot anatomy models in current catalog (no DI, lumbricals, plantar layers, MTA, calf, or even foot bones)
+- Platform architecture promising for future contributions (TecMedHub educational focus; CC BY 4.0; STL + metadata workflow)
+- Current content scope excludes foot anatomy entirely
+
+**Verdict**: ❌ **REJECT** as foot soft-tissue source — **monitor** for future foot additions to catalog
+
 ### Andreassen (VHM gastroc/soleus) — spatial alignment FAIL
 
 **DU Visible Human Male Final STL** (DOI 10.56902/COB.vh.2022.2) · **CC BY 4.0** ✅ license OK

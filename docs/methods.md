@@ -27,7 +27,7 @@ This atlas integrates open-licensed anatomical meshes from BodyParts3D, Universi
 | **No clinical claim** | Atlas is anatomy **education** (named structures, layers, classroom cutaways, ghost/explode/quiz teaching modes) | **Not** for diagnosis, treatment planning, interventional guidance, or patient-specific modeling |
 | **Ontology IDs partial** | **126/129** structures have ≥1 citable TA2 / FMA / BP in `src/lib/ontologyIds.ts`; **3** honest empties (cervical TC; med/lat plantar veins TNA-only) | Panel shows codes when present; named honest-empty note otherwise (Day 4be) — not TA2-complete soft tissue |
 
-Full census, UX inventory, and open-data ceilings: `docs/phase-8-self-review.md` (quality-week checkpoint; phase-7 retained as prior week board). CC0/BY soft watchlist: `docs/cc0-soft-tissue-watchlist.md` (digs #115–#135 through Day 4bs; DI / per-ray MTA / gastroc-soleus alternatives remain dry). Ontology source notes: `src/lib/ontologyIds.ts` header + `docs/terminology.md`.
+Full census, UX inventory, and open-data ceilings: `docs/phase-8-self-review.md` (quality-week checkpoint; phase-7 retained as prior week board). CC0/BY soft watchlist: `docs/cc0-soft-tissue-watchlist.md` (digs #115–#135 through Day 4bs; DI / per-ray MTA / gastroc-soleus alternatives remain dry). Soft-tissue open-data ceiling: `docs/week2-soft-ceiling-memo.md` (detailed reject rationale + teaching stance). Ontology source notes: `src/lib/ontologyIds.ts` header + `docs/terminology.md`.
 
 ---
 

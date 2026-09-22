@@ -2057,3 +2057,45 @@ Continue Week 2 sprint after Day 4br quiz honesty. **Change angle**: search LESS
 **Day 4co LABIM3D deep-check summary**:
 
 Repository cloned and fully inspected. README claims CC BY 4.0 (no LICENSE file). Current catalog: 9 models (ear, shoulder, knee, pelvis, vertebrae). **0 foot anatomy** models (no DI, lumbricals, plantar layers, MTA, calf). **Reject** as foot soft-tissue source. Platform architecture suitable for future contributions but **current inventory DRY for foot**.
+
+---
+
+## Session additions (2026-09-22 · Day 4cp — soft-tissue WATCH digs #161–#163)
+
+**Scope**: Day 4cp NEW watch digs (at most #161–#163); DRY OK; no NC/unclear wires.
+
+**Date**: 2026-09-22 (Day 4cp)
+
+### #161: Zenodo 10.5281/zenodo.20231309 "Muscles of the foot and ankle" (Scan-the-World)
+
+**Source**: Zenodo DOI 10.5281/zenodo.20231309  
+**URL**: https://doi.org/10.5281/zenodo.20231309  
+**Content**: CT-derived right foot and ankle muscular model (2026-05-12 publication; Scan-the-World author)  
+**License**: **Unspecified** in abstract/landing page synthesis — no explicit CC0/CC BY badge visible in search results  
+**Reject reason**: No license clarity; requires full DOI page inspection + potential STL download + license file verification before assessment; **soft-tissue inventory unknown** (abstract says "muscular structure" but no per-muscle catalog visible without DOI fetch)  
+**Teaching value**: 🔍 **MONITOR** — could be relevant if license = CC0/CC BY + contains DI/lumbricals/plantar layers; unverifiable without deeper investigation  
+**Action**: **monitor** (license unspecified; requires full DOI page + ZIP inspection)
+
+### #162: Kaggle/GitHub Foot3D (OllieBoyne/Foot3D; FIND/FOUND)
+
+**Source**: Kaggle dataset + GitHub repo OllieBoyne/Foot3D  
+**URL**: https://www.kaggle.com/datasets/ollieboyne/foot3d + https://github.com/OllieBoyne/Foot3D  
+**Content**: High-resolution textured foot scans (118 meshes "Meshes" dataset + 474 calibrated multiview images); 3D external foot surface reconstruction research (BMVC 2022 FIND paper + WACV 2024 FOUND paper)  
+**License**: Not explicitly stated for dataset (Google form gated access; academic reconstruction benchmark focus)  
+**Reject reason**: **External skin surface scans only** — no internal anatomy (no interossei, lumbricals, metatarsal arteries, plantar layers, calf muscles); dataset designed for foot shape/articulation modeling, not anatomical atlas  
+**Teaching value**: ❌ None — surface-only; no soft-tissue musculature/vasculature  
+**Action**: **reject** (no internal anatomy; external surface scans)
+
+### #163: HuggingFace BoneHub/vsd-feet-seg (VSD CT foot bone segmentation)
+
+**Source**: HuggingFace Datasets BoneHub/vsd-feet-seg (M. C. M. Fischer VSD Full Body Bone Models v3.0 source)  
+**URL**: https://huggingface.co/datasets/BoneHub/vsd-feet-seg  
+**Content**: 30 CT scans of feet with 56 individual bone labels (left/right separate); label maps + STL meshes derived from VSD Zenodo releases; training data for BoneHub/total-feet-seg model  
+**License**: **CC BY-NC-SA 4.0** (stated in dataset card, same as VSD source bone models)  
+**Reject reason**: **NC (Non-Commercial)** disqualifies for MIT-licensed atlas main tree; dataset is **bone-only** (CT + bone segmentation; zero soft-tissue muscle/vessel labels or meshes)  
+**Teaching value**: ❌ None — NC license + no soft tissue  
+**Action**: **reject** (NC license; bone-only; no soft tissue)
+
+**Day 4cp watch dig summary**:
+
+Digs #161–#163 NEW sources only. **#161** Zenodo Scan-the-World foot/ankle CT model: **MONITOR** (license unspecified, requires DOI inspection). **#162** Foot3D: **REJECT** (external skin surface scans, no internal anatomy). **#163** BoneHub vsd-feet-seg: **REJECT** (CC BY-NC-SA; bone-only; zero soft tissue). Census unchanged (**129/124**; ontology **126/129**). **0** new meshes wired. Soft-ceiling stance maintained.
