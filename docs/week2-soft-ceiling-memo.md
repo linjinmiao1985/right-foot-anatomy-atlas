@@ -59,6 +59,20 @@
 
 **Verdict**: ❌ **REJECT** integrate — intrinsic foot muscles excluded; `third_party/u-malaya-asian-le/NOTICE.txt` documents CC0 verification + exclusion rationale.
 
+### NIH 3D Print Exchange 3DPX-015850 "Anatomic Human Foot" — bones-only; license unclear
+
+**NIH 3DPX**: entry 15850 (https://3d.nih.gov/entries/15850/1) · License **unclear** (no explicit CC0/CC-BY stated in search results)
+
+**Content** (Day 4cr dig #164 provisional assessment): Anatomic foot model designed in Lightwave 3D (Dr Glass); **26 proper bones + 2 sesamoids** (1st MTP); X3D format available; newer processed .glb versions in version history
+
+**Foot soft-tissue inventory**: ❌ **Bones-only** — description emphasizes foot skeletal anatomy (26 proper + 2 sesamoids); **no mention** of muscles (DI, lumbricals, plantar layers, calf) in search results or entry summary
+
+**Reject rationale**: **Bones-only** (not soft-tissue gap filler); license unclear without full entry page inspection (NIH 3DPX entries vary: some CC0, some CC-BY, some unclear); atlas already has BP3D + UM bones (26 foot bones covered); bones-only = not useful for DI/lumbricals/MTA soft gaps
+
+**Teaching value**: ❌ None — bones-only (atlas bone coverage complete); no soft-tissue inventory
+
+**Verdict**: 🔍 **MONITOR** for license clarity only — **not a soft-tissue gap filler** (bones-only; atlas already complete for foot osteology)
+
 ### Zenodo 20231309 Scan-the-World "Muscles of the foot and ankle" — NC disqualifies
 
 **Zenodo DOI 10.5281/zenodo.20231309** (2026-05-12) · **CC BY-NC-SA 4.0** ❌ license **NOT** compatible (NC + SA)

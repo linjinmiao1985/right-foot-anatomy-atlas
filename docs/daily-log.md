@@ -2101,3 +2101,30 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 **Result**: **0** meshes downloaded; **0** Kabsch QA; **0** wired. Soft gaps (per-toe DI / lumbricals / per-ray MTA) remain **dry** or **SA-only** (Open3D existing). Soft-ceiling stance **reconfirmed** — teaching in progress, **not** clinical, **not** TA2-complete, **not** a finished product.
 
 ---
+
+## 2026-09-22 · Day 4cs
+
+### Soft ceiling reconfirmed; teaching/docs quality over forced wires
+
+**Tasks**:
+1. ✅ Soft-tissue WATCH digs #167–#168 NEW only:
+   - **#167** Dryad + MRI research studies: **REJECT** (no downloadable mesh; research segmentation not archived; same as #166)
+   - **#168** Thingiverse BodyParts3D Foot + Cults3D: **REJECT** (Thingiverse SA bones-only BP3D V3.0 legacy; Cults3D license unclear same as #160)
+2. ✅ Optional: one-line NIH 3DPX #164 note in soft-ceiling memo (bones-only / license unclear / not soft-gap filler)
+3. ✅ Refresh cloud-agent-handback tip to 6ddd2c7 / Day 4cr
+4. ✅ ONE tiny teaching polish: StructurePanel gap-note consistency with README teaching-compromise wording — updated assetProvenance.ts gap notes for DI/dorsal MTA/plantar MTA from "教学级组合标注" → "教学妥协 (teaching compromise)" to match README Limitations section
+5. ✅ Gates: `npm test -- --run` (138 passed), `python3 scripts/integrity-audit.py` (0 violations), `npm run build` (✓ 3.26s)
+6. ✅ Commit + push PR #3
+
+**Dig outcomes (#167–#168)**:
+- **#167 Dryad + MRI studies**: REJECT (no downloadable mesh; segmentation not archived; same as #166)
+- **#168 Thingiverse/Cults3D**: REJECT (SA bones-only; license unclear)
+- All NEW digs **DRY or REJECT** for CC0/CC-BY foot soft tissue
+
+**Polish**: StructurePanel gap-note terminology consistency — changed "教学级组合标注，非逐趾肌肉图谱" / "Teaching-grade grouped annotation, not per-toe muscle atlas" → "教学妥协（teaching compromise），非逐趾肌肉图谱" / "Teaching compromise, not per-toe muscle atlas" (matches README Limitations "**Grouped structures** ... are **teaching compromises** (教学妥协)")
+
+**Census unchanged**: **129/124**; ontology **126/129**
+
+**Result**: **0** meshes downloaded; **0** Kabsch QA; **0** wired. Soft gaps (per-toe DI / lumbricals / per-ray MTA) remain **dry** or **SA-only**. Soft-ceiling stance **reconfirmed** — teaching in progress, **not** clinical, **not** TA2-complete, **not** a finished product.
+
+---

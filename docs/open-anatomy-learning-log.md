@@ -2200,3 +2200,48 @@ Zenodo API metadata retrieved (DOI 10.5281/zenodo.20231309). License: **CC BY-NC
 - Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
 
 ---
+
+## Session additions (2026-09-22 · Day 4cs — soft-tissue WATCH digs #167–#168)
+
+**Scope**: Day 4cs NEW watch digs (at most #167–#168); DRY OK; no NC/SA/unclear wires. Skip #147–#166 re-log.
+
+**Date**: 2026-09-22 (Day 4cs)
+
+### #167: Dryad + MRI research studies (REJECT — no downloadable mesh; research segmentation not archived)
+
+**Source**: Dryad data repository search + MRI-based intrinsic foot muscle studies (PMC 7818930 7T MRI; SpringerMedizin plantar intrinsic muscle classification; CGTrader MakeHuman CC0 base mesh)  
+**URL**: Dryad (no foot muscle match); various MRI segmentation studies (no mesh release)  
+**Content**: Dryad = research data repository (primarily datasets/code/images, not 3D mesh archives); MRI studies = 7T intrinsic foot muscle segmentation (3D Slicer manual contour: lumbricals, dorsal/plantar interossei) + plantar muscle PCSA/fiber length classification (MR volumetric segmentation) but **no STL/OBJ/GLB files released**; CGTrader MakeHuman-derived CC0 base mesh = generic body surface (feet as modular parts) without labeled internal anatomy  
+**License**: MRI studies CC BY 4.0 article license; MakeHuman CC0 public domain (surface mesh only)  
+**Foot soft-tissue inventory**: MRI studies confirm intrinsic foot muscle segmentation **technically feasible** (lumbricals 1.5 cm³, dorsal/plantar interossei 19.8 cm³) but datasets not archived on Zenodo/Dataverse/institutional repos; MakeHuman base mesh = external surface only (no internal musculature)  
+**Reject reason**: **No downloadable mesh** — MRI research segmentation (3D Slicer ROI masks, SliceOmatic segmentation) not publicly released as STL/OBJ; same issue as dig #166 (7T MRI); MakeHuman CC0 = surface-only (no DI/lumbricals/MTA internal anatomy)  
+**Teaching value**: ❌ None — no mesh files released; research segmentation not archived  
+**Action**: **reject** (no downloadable mesh; Dryad DRY for foot muscle STL; MRI segmentation same as #166)
+
+### #168: Thingiverse BodyParts3D Foot + Cults3D lower leg/foot muscle (REJECT — SA bones / license unclear)
+
+**Source**: Thingiverse thing:31865 BodyParts3D Foot (Cbonsig) + Thingiverse thing:368202 Foot_Right Human Skeleton (profguy) + Cults3D 4090856 Human Lower Leg and Foot Muscle Anatomy (MeEzra)  
+**URL**: https://www.thingiverse.com/thing:31865 + https://www.thingiverse.com/thing:368202 + https://cults3d.com/en/3d-model/various/human-lower-leg-and-foot-muscle-anatomy  
+**Content**: Thingiverse BodyParts3D Foot = **skeletal foot** (bones only; derived from BP3D database OBJ source; sliced near ankle for 3D printing); Foot_Right Human Skeleton = bones-only (1:1 scale); Cults3D lower leg/foot muscle = STL + OBJ with textures (major muscles, tendons, bones, joints; educational/visualization/3D printing)  
+**License**: Thingiverse BodyParts3D Foot = **CC BY-SA 2.1 Japan** (from BP3D database V3.0 legacy; main atlas uses V4.0 CC BY 4.0 LSDB); Foot_Right = CC BY-SA; Cults3D = **license unclear** ("License" + "Usages" rows **blank** in page metadata; same author MeEzra as dig #160 rejected)  
+**Foot soft-tissue inventory**: Thingiverse models = **bones-only** (no DI/lumbricals/MTA); Cults3D = description states "major muscles, tendons, bones, joints" but **no per-muscle catalog** (lumbricals? DI 1–4 separate?)  
+**Reject reason**: Thingiverse = **SA (ShareAlike)** bones-only (not soft-tissue; BP3D V3.0 SA 2.1 JP vs atlas V4.0 CC BY 4.0); Cults3D = **license unclear** (no explicit CC0/CC-BY badge; same author as #160 rejected for license ambiguity)  
+**Teaching value**: ❌ None — Thingiverse bones-only + SA; Cults3D license unclear + inventory unverified  
+**Action**: **reject** (Thingiverse SA bones-only; Cults3D license unclear same as #160)
+
+**Day 4cs watch dig summary (#167–#168)**:
+
+| Dig # | Source | License | DI/lumbricals/per-ray MTA? | Action |
+|-------|--------|---------|---------------------------|--------|
+| #167 | Dryad + MRI studies | N/A (no mesh) | Segmented but not released | **reject** (no downloadable mesh; same as #166) |
+| #168 | Thingiverse BP3D Foot + Cults3D | SA / unclear | Bones-only / inventory unclear | **reject** (SA bones; Cults3D license unclear) |
+
+**Result**: All digs #167–#168 **DRY or REJECT** for NEW CC0/CC-BY foot soft tissue. Dryad = no foot muscle mesh matches; MRI studies = segmentation not archived (same as #166). Thingiverse = SA bones-only (BP3D V3.0 legacy). Cults3D = license unclear (same author as #160). Soft-tissue open-data ceiling stance **reconfirmed** — license-clear per-toe DI/lumbricals/per-ray MTA remain unavailable.
+
+**Update tracking**:
+- Census unchanged (**129/124**; ontology **126/129**).
+- **0** meshes integrated; **0** SA spam; unclear licenses/no-mesh sources **not** force-wired.
+- Soft gaps (per-toe DI / lumbricals / per-ray MTA) remain **dry** or **SA-only** (Open3D existing).
+- Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+---

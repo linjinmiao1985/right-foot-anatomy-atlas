@@ -183,16 +183,16 @@ export const ATLAS_SOURCE_FOOTER =
 export function getTeachingMeshNote(structureId: string, layer: string): string | null {
   // Day 4ci: denser bilingual gap notes for grouped DI / grouped MTA (soft-ceiling pointers)
   if (structureId === 'interossei_dorsales') {
-    return '网格：Open3D Interossei_dorsales.r 组合体（CC BY-SA）——背侧骨间肌 1–4 未按逐趾独立分割（census 软天花板：无 CC0/BY 逐趾 DI 网格源）；by-sa/ 隔离。教学级组合标注，非逐趾肌肉图谱。详见 docs/week2-soft-ceiling-memo.md\n' +
-      'Mesh: Open3D grouped DI 1st–4th (CC BY-SA), no per-toe elemental split (census soft ceiling: no CC0/BY per-toe DI source meshes); by-sa/ isolate. Teaching-grade grouped annotation, not per-toe muscle atlas. See docs/week2-soft-ceiling-memo.md';
+    return '网格：Open3D Interossei_dorsales.r 组合体（CC BY-SA）——背侧骨间肌 1–4 未按逐趾独立分割（census 软天花板：无 CC0/BY 逐趾 DI 网格源）；by-sa/ 隔离。教学妥协（teaching compromise），非逐趾肌肉图谱。详见 docs/week2-soft-ceiling-memo.md\n' +
+      'Mesh: Open3D grouped DI 1st–4th (CC BY-SA), no per-toe elemental split (census soft ceiling: no CC0/BY per-toe DI source meshes); by-sa/ isolate. Teaching compromise, not per-toe muscle atlas. See docs/week2-soft-ceiling-memo.md';
   }
   if (structureId === 'dorsal_metatarsal_arteries') {
-    return '网格：Open3D Dorsal_metatarsal_arteries.r 组合体（CC BY-SA）——无跖背动脉 1–4 独立分割（census 软天花板：无 CC0/BY 逐射线跖背动脉网格源）；by-sa/ 隔离。教学级组合标注，非逐射线血管图谱。详见 docs/week2-soft-ceiling-memo.md\n' +
-      'Mesh: Open3D grouped dorsal MTA (CC BY-SA), no 1st–4th elemental split (census soft ceiling: no CC0/BY per-ray dorsal metatarsal artery source meshes); by-sa/ isolate. Teaching-grade grouped annotation, not per-ray vessel atlas. See docs/week2-soft-ceiling-memo.md';
+    return '网格：Open3D Dorsal_metatarsal_arteries.r 组合体（CC BY-SA）——无跖背动脉 1–4 独立分割（census 软天花板：无 CC0/BY 逐射线跖背动脉网格源）；by-sa/ 隔离。教学妥协（teaching compromise），非逐射线血管图谱。详见 docs/week2-soft-ceiling-memo.md\n' +
+      'Mesh: Open3D grouped dorsal MTA (CC BY-SA), no 1st–4th elemental split (census soft ceiling: no CC0/BY per-ray dorsal metatarsal artery source meshes); by-sa/ isolate. Teaching compromise, not per-ray vessel atlas. See docs/week2-soft-ceiling-memo.md';
   }
   if (structureId === 'plantar_metatarsal_arteries') {
-    return '网格：BP3D FJ2096 组合体（CC BY）——跖底跖骨动脉未按 1–4 间隙分拆（census 软天花板：ISA 无逐射线跖底/跖背 MTA elemental；无 CC0/BY 逐射线网格源）。教学级组合标注，非逐射线血管图谱。详见 docs/week2-soft-ceiling-memo.md\n' +
-      'Mesh: BP3D FJ2096 grouped plantar MTA (CC BY), no 1st–4th ray split (census soft ceiling: ISA lacks per-ray plantar/dorsal MTA elementals; no CC0/BY per-ray source meshes). Teaching-grade grouped annotation, not per-ray vessel atlas. See docs/week2-soft-ceiling-memo.md';
+    return '网格：BP3D FJ2096 组合体（CC BY）——跖底跖骨动脉未按 1–4 间隙分拆（census 软天花板：ISA 无逐射线跖底/跖背 MTA elemental；无 CC0/BY 逐射线网格源）。教学妥协（teaching compromise），非逐射线血管图谱。详见 docs/week2-soft-ceiling-memo.md\n' +
+      'Mesh: BP3D FJ2096 grouped plantar MTA (CC BY), no 1st–4th ray split (census soft ceiling: ISA lacks per-ray plantar/dorsal MTA elementals; no CC0/BY per-ray source meshes). Teaching compromise, not per-ray vessel atlas. See docs/week2-soft-ceiling-memo.md';
   }
   if (structureId === 'fibularis_brevis' || structureId === 'fibularis_tertius' || structureId === 'opponens_digiti_minimi') {
     return '网格：Open3DModel lower-limb（CC BY-SA），Kabsch→BP3D mm；census 缺口补齐；仅 by-sa/ 加载。肌肉层仍不完整。';
