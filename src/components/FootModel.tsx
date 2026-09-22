@@ -420,6 +420,7 @@ export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName
                 onHoverChange={setHoveredMesh}
                 labelDensity={labelDensity}
                 layerOpacity={layerOpacity}
+                quizMode={quizMode}
               />
             </group>
           );
@@ -441,6 +442,7 @@ export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName
                 onHoverChange={setHoveredMesh}
                 labelDensity={labelDensity}
                 layerOpacity={layerOpacity}
+                quizMode={quizMode}
               />
             </group>
           );
@@ -462,6 +464,7 @@ export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName
                 onHoverChange={setHoveredMesh}
                 labelDensity={labelDensity}
                 layerOpacity={layerOpacity}
+                quizMode={quizMode}
               />
             </group>
           );
@@ -483,6 +486,7 @@ export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName
                 onHoverChange={setHoveredMesh}
                 labelDensity={labelDensity}
                 layerOpacity={layerOpacity}
+                quizMode={quizMode}
               />
             </group>
           );
@@ -503,6 +507,7 @@ export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName
                 onHoverChange={setHoveredMesh}
                 labelDensity={labelDensity}
                 layerOpacity={layerOpacity}
+                quizMode={quizMode}
               />
             </group>
           );
@@ -603,6 +608,7 @@ interface RealBoneModelProps {
   onHoverChange: (meshName: string | null) => void;
   labelDensity?: LabelDensity;
   layerOpacity?: number;
+  quizMode?: boolean;
 }
 
 function RealBoneModel({
@@ -616,6 +622,7 @@ function RealBoneModel({
   onHoverChange,
   labelDensity = DEFAULT_LABEL_DENSITY,
   layerOpacity = DEFAULT_LAYER_OPACITY,
+  quizMode = false,
 }: RealBoneModelProps) {
   const { scene } = useGLTF(modelPath);
   
@@ -687,6 +694,7 @@ interface RealMuscleModelProps {
   onHoverChange: (meshName: string | null) => void;
   labelDensity?: LabelDensity;
   layerOpacity?: number;
+  quizMode?: boolean;
 }
 
 function RealMuscleModel({
@@ -701,6 +709,7 @@ function RealMuscleModel({
   onHoverChange,
   labelDensity = DEFAULT_LABEL_DENSITY,
   layerOpacity = DEFAULT_LAYER_OPACITY,
+  quizMode = false,
 }: RealMuscleModelProps) {
   const { scene } = useGLTF(modelPath);
   const additionalScenes = (additionalParts || []).map(path => useGLTF(path).scene);
@@ -786,6 +795,7 @@ interface RealVesselModelProps {
   onHoverChange: (meshName: string | null) => void;
   labelDensity?: LabelDensity;
   layerOpacity?: number;
+  quizMode?: boolean;
 }
 
 function RealVesselModel({
@@ -800,6 +810,7 @@ function RealVesselModel({
   onHoverChange,
   labelDensity = DEFAULT_LABEL_DENSITY,
   layerOpacity = DEFAULT_LAYER_OPACITY,
+  quizMode = false,
 }: RealVesselModelProps) {
   const { scene } = useGLTF(modelPath);
   
@@ -879,6 +890,7 @@ interface RealNerveModelProps {
   onHoverChange: (meshName: string | null) => void;
   labelDensity?: LabelDensity;
   layerOpacity?: number;
+  quizMode?: boolean;
 }
 
 function RealNerveModel({
@@ -893,6 +905,7 @@ function RealNerveModel({
   onHoverChange,
   labelDensity = DEFAULT_LABEL_DENSITY,
   layerOpacity = DEFAULT_LAYER_OPACITY,
+  quizMode = false,
 }: RealNerveModelProps) {
   const { scene } = useGLTF(modelPath);
   
@@ -982,6 +995,7 @@ interface RealLigamentModelProps {
   onHoverChange: (meshName: string | null) => void;
   labelDensity?: LabelDensity;
   layerOpacity?: number;
+  quizMode?: boolean;
 }
 
 function RealLigamentModel({
@@ -995,6 +1009,7 @@ function RealLigamentModel({
   onHoverChange,
   labelDensity = DEFAULT_LABEL_DENSITY,
   layerOpacity = DEFAULT_LAYER_OPACITY,
+  quizMode = false,
 }: RealLigamentModelProps) {
   const { scene } = useGLTF(modelPath);
   const clonedScene = scene.clone();
