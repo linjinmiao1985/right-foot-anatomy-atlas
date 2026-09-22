@@ -1,3 +1,7 @@
+## Day 4bu status addendum (2026-09-22)
+
+Cloud Agent **continued** (PR #3 `cursor/week2-day4bm-ghost-opacity-096e` tip `66e1c81`). **Phase 8 target #1** (journal readiness): methods refresh — limitations table / license matrix / Kabsch residuals / soft-ceiling citation to phase-8; version bump **1.6**. **Target #2**: cloud-agent-handback refresh — current branch/PR #3 tip / census / known blockers (DI/MTA/nerve·lig/gastroc). **No** new meshes. Teaching atlas in progress — **not** clinical; **not** TA2-complete; **no finished-product claim**.
+
 ## Day 4bo status addendum (2026-09-22)
 
 Cloud Agent **continued**. Teaching **quiz stub / 测验** UX (`Q` + hide names/search; prefs persist). Soft dig **#100–#107**. Soft gaps **still dry**. **0** mesh wire. Andreassen/Henson **not** force-wired. Teaching atlas in progress — **not** clinical; **not** TA2-complete; **no finished-product claim**.
@@ -22,12 +26,13 @@ Docs-only soft dig **#77–#83** + `docs/belly-registration-alternatives.md` (wh
 
 Henson Sheffield **Option A** one-subject MC POC completed (`Aug_8`): surfaces OK; BP3D Achilles continuity sketch **FAIL** — **0** wire. See `docs/henson-sheffield-sandbox-feasibility.md` § Day 4bj + `third_party/henson-sheffield/poc_spatial_qa.json`. Andreassen still skipped. Soft gaps dry. Teaching atlas in progress — **no finished-product claim**.
 
-# Cloud Agent handback — Phase 7 resume brief
+# Cloud Agent handback — Phase 8 resume brief
 
-**Date**: 2026-09-15 · Day **4bh**  
-**Branch**: `cursor/right-foot-anatomy-atlas-mvp-af85`  
-**Status**: Teaching-grade atlas **in progress** — **not** a finished-product claim  
-**Companion**: `docs/phase-7-self-review.md`, `docs/cc0-soft-tissue-watchlist.md`, `third_party/andreassen/`
+**Date**: 2026-09-22 · Day **4bu**  
+**Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3)  
+**HEAD tip**: `66e1c81` (Day 4bt: Phase 8 self-review + README soft-ceiling paragraph)  
+**Status**: Quality-week checkpoint; teaching-grade atlas **in progress** — **not** a finished-product claim  
+**Companion**: `docs/phase-8-self-review.md`, `docs/cc0-soft-tissue-watchlist.md`, `third_party/andreassen/`
 
 ---
 
@@ -43,7 +48,7 @@ Prefer **CC0 / CC BY** over further ShareAlike volume. Update census in README /
 
 ---
 
-## Live census freeze (unchanged through Day 4bh)
+## Live census freeze (unchanged through Day 4bu / Phase 8)
 
 | Metric | Value |
 |--------|-------|
@@ -51,8 +56,9 @@ Prefer **CC0 / CC BY** over further ShareAlike volume. Update census in README /
 | Main-tree / BY-SA | **53** / **71** |
 | Ontology citable | **126** / **129** (3 honest empties) |
 | Discrete GLBs | **134** (~59 main + ~75 `by-sa/`) |
+| Open mining | Through **#135** (Day 4bs; digs #115–#135 all dry) |
 
-Osteology complete (26/26). Soft tissue **teaching-useful and incomplete**.
+Osteology complete (26/26). Soft tissue **teaching-useful and incomplete**. Soft-tissue open-data ceiling largely reached.
 
 ---
 
@@ -124,9 +130,9 @@ Osteology complete (26/26). Soft tissue **teaching-useful and incomplete**.
 
 ## Suggested next agent priorities (pick one; quality over volume)
 
-1. **CC0/BY soft dig** against `docs/cc0-soft-tissue-watchlist.md` (DI, per-ray MTA, nerve/ligament main-tree replacements) — integrate **only** with spatial QA pass.
-2. **Journal readiness polish** — keep methods / expert-review checklist synced; no hype; no TA2-complete claim.
-3. **UX teaching polish** — accessibility / prefs / help sheet only if a concrete gap is named; avoid SA mesh spam. Day **4bm** shipped layer ghost / 透视 (`G`). Day **4bn** shipped layer explode / 抽出 (`E`). Day **4bo** shipped quiz stub / 测验 (`Q`) because the CC0/BY dig stayed dry.
+1. **Watch-only soft dig** — monitor new open CT foot soft segmentations; soft-tissue open-data ceiling largely reached (digs #115–#135 all dry); integrate **only** with spatial QA pass; **0 wire expected**.
+2. **Journal readiness polish** — keep methods / expert-review checklist / README synced; no hype; no TA2-complete claim. **Phase 8 target**.
+3. **UX teaching polish (largely complete)** — Day **4bm** shipped layer ghost / 透视 (`G`); Day **4bn** shipped layer explode / 抽出 (`E`); Day **4bo** shipped quiz stub / 测验 (`Q`); keyboard help / prefs persist / camera presets / clip / hide all live.
 4. **Alternate belly registration research** (docs-only until QA-ready) — TPS / two-stage proximal–distal / BP3D-native donors — not force Kabsch.
 
 ---
