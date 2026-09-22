@@ -2156,3 +2156,46 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 **Result**: **0** meshes downloaded; **0** Kabsch QA; **0** wired. Soft gaps (per-toe DI / lumbricals / per-ray MTA) remain **dry** or **SA-only**. Soft-ceiling stance **reconfirmed through #170** — teaching in progress, **not** clinical, **not** TA2-complete, **not** a finished product.
 
 ---
+
+## 2026-09-22 · Day 4cu — WEEK 2 QUALITY CHECKPOINT
+
+### Checkpoint: soft ceiling reconfirmed; teaching UX shipped; honest limitations maintained
+
+**Tasks**:
+1. ✅ Write Week 2 checkpoint section in `docs/phase-8-self-review.md`: census (129/124; 126/129 ontology); soft-ceiling stance reconfirmed through #170; teaching UX shipped (ghost, explode, gap notes, reduced-motion, focus-visible, teaching-compromise wording); honest limitations; next week = watch-only soft digs + journal methods polish — NOT finished-product claim
+2. ✅ Refresh cloud-agent-handback tip to c0f8b2d / Day 4ct (Week 2 Quality Checkpoint)
+3. ✅ Soft-tissue WATCH: skipped new digs (checkpoint focus; 24 watch digs #147–#170 already documented in Week 2 summary)
+4. ✅ Tiny polish: skipped (badge/footer already aligned to teaching-compromise terminology; no redundant work needed)
+5. ✅ Gates: `npm test -- --run` (138 passed), `python3 scripts/integrity-audit.py` (0 violations), `npm run build` (✓ 3.24s)
+6. ✅ Commit + push PR #3
+
+**Week 2 checkpoint summary** (Day 4ck–4cu):
+
+**Teaching UX shipped**:
+- Master ghost opacity (G preset; per-layer 0.0–1.0; prefs persist)
+- Explode amount (E preset; 0–50 mm spatial separation; prefs persist)
+- Gap notes enhancement (bilingual DI/MTA soft-ceiling pointers)
+- Soft-ceiling memo (comprehensive 1-page `docs/week2-soft-ceiling-memo.md`)
+- Reduced-motion CSS (`@media prefers-reduced-motion`)
+- Focus-visible a11y (search/text input keyboard rings)
+- Quiz panel soft-ceiling note (bilingual open-data gaps mention)
+- Teaching-compromise wording (consistent across README/gap notes/footer)
+
+**Soft-tissue watch digs**: 24 NEW sources (#147–#170)
+- **0 new CC0/BY ready-to-use soft meshes** integrated
+- NC rejected: Zenodo Scan-the-World (#147, #161b), BoneHub (#163)
+- SA rejected: AnatomyTOOL Open3DModel (#165; 4 DI + 4 lumbricals + 3 PI present but SA-only)
+- No downloadable mesh: 7T MRI + Micromachines 2022 (#166, #169; segmentation feasible but not archived)
+- CT-only: PhysioNet/SimTK (#170; raw CT public domain but labor-intensive manual segmentation)
+
+**Key finding**: 7T MRI + Micromachines 2022 confirm intrinsic foot muscle segmentation **technically feasible** but research datasets **not publicly archived**. Open3DModel confirms 4 DI + 4 lumbricals + 3 PI **present but SA-only**.
+
+**Soft-ceiling reconfirmed through #170**: License-clear ready-to-use per-toe DI, lumbricals, per-ray MTA meshes **remain unavailable**. Grouped structures are **teaching compromises** (教学妥协), not elemental atlases.
+
+**Next week targets**: Watch-only soft monitoring (pause active digging unless new obvious CC0/BY hit); journal methods polish; expert-review prep; **no finished-product claim**.
+
+**Census unchanged**: **129/124**; ontology **126/129**
+
+**Result**: Week 2 quality checkpoint complete. Teaching UX shipped + soft-ceiling documented + honest limitations maintained. Teaching atlas **in progress** — **not** clinical, **not** TA2-complete, **not** a finished product.
+
+---

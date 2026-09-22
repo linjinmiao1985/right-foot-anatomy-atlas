@@ -174,6 +174,73 @@ Maintain a short **monitor/reject** list (see `docs/cc0-soft-tissue-watchlist.md
 
 ---
 
+## Week 2 Quality Checkpoint (Day 4ck–4cu · 2026-09-22)
+
+**Date**: 2026-09-22 · Day 4ck through Day 4cu  
+**Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3)  
+**HEAD tip**: `c0f8b2d` (Day 4ct)
+
+### Census (unchanged)
+
+- **129/124** entries/unique
+- **126/129** ontology citable (3 honest empties)
+- **53** main-tree CC BY/CC0; **71** BY-SA isolate
+- **134** GLB on-disk (~13 MB)
+- **0** placeholders (entry-level)
+
+### Teaching UX shipped this week
+
+1. **Master ghost opacity** (Day 4bm): global per-layer opacity control (0.0–1.0); `G` preset; prefs persist
+2. **Explode amount** (Day 4bn): spatial separation slider (0–50 mm); `E` preset; prefs persist  
+3. **Gap notes enhancement** (Day 4ci): denser bilingual meshNote for grouped DI/MTA (census soft-ceiling pointers)
+4. **Soft-ceiling memo** (Day 4cj): `docs/week2-soft-ceiling-memo.md` comprehensive 1-page summary (109+ searches, NC/SA/UM/Andreassen rejects, teaching stance)
+5. **Reduced-motion** (Day 4cm): `@media (prefers-reduced-motion: reduce)` CSS (a11y)
+6. **Focus-visible** (Day 4cl, 4co): keyboard navigation rings for search/text inputs (a11y)
+7. **Quiz panel soft-ceiling note** (Day 4cq): bilingual teaching stub mentions per-toe DI/lumbricals/per-ray MTA open-data gaps
+8. **Teaching-compromise wording** (Day 4cr–4ct): consistent terminology across README Limitations, StructurePanel gap notes, footer (grouped structures are "teaching compromises" not elemental atlases)
+
+### Soft-tissue watch digs (24 NEW sources #147–#170)
+
+**Day 4cl–4ct**: Zenodo, HuBMAP, TotalSegmentator, LABIM3D GitHub, Foot3D, BoneHub, Scan-the-World, NIH 3DPX, AnatomyTOOL, MorphoSource, 7T MRI, Dryad, Thingiverse, Cults3D, Figshare, PhysioNet/SimTK
+
+**Result**: **0 new CC0/BY ready-to-use soft meshes** integrated
+- **NC rejected**: Zenodo Scan-the-World 20228270/20231308/20231309 (#147, #161b); BoneHub vsd-feet-seg (#163)
+- **SA rejected**: AnatomyTOOL Open3DModel (#165; confirms 4 DI + 4 lumbricals + 3 PI present but SA-only)
+- **License unclear rejected**: Cults3D models (#160, #168)
+- **No foot inventory**: LABIM3D (#158b ear/shoulder/knee/pelvis/vertebrae only)
+- **Bones-only**: NIH 3DPX 15850 (#164); Thingiverse BP3D V3.0 (#168)
+- **No downloadable mesh**: 7T MRI + Micromachines 2022 (#166, #169; segmentation technically feasible but not archived)
+- **CT-only (labor-intensive)**: PhysioNet/SimTK Multidomain (#170; raw CT public domain but no pre-segmented mesh)
+
+**Key finding**: 7T MRI + Micromachines 2022 AR study confirm intrinsic foot muscle segmentation **technically feasible** (lumbricals 1.5 cm³, DI/PI 19.8 cm³) but research datasets **not publicly archived** as STL/OBJ. Open3DModel confirms 4 DI + 4 lumbricals + 3 PI **present but SA-only** (Open3D lineage already in by-sa/ isolate).
+
+**Soft-ceiling stance reconfirmed through #170**: License-clear ready-to-use per-toe DI, lumbricals, per-ray MTA meshes **remain unavailable**. Grouped structures (DI 1st–4th combined, dorsal/plantar MTA all rays) are **teaching compromises** (教学妥协), not per-toe/per-ray elemental atlases.
+
+### Honest limitations maintained
+
+- README Limitations section: updated dig range #1–#135 → #1–#170; added "teaching compromises" clarity
+- StructurePanel gap notes: changed "teaching-grade grouped annotation" → "teaching compromise" (consistency)
+- Footer: added "grouped structures are teaching compromises"; fixed typo 腰肌 → 蚓状肌
+- Soft-ceiling memo: comprehensive reject documentation (NC/SA/UM/Andreassen/LABIM3D/NIH 3DPX/Zenodo Scan-the-World) + Day 4ct summary (24 digs #147–#170)
+
+### Next week targets (watch-only + journal polish — NOT finished-product claim)
+
+1. **Watch-only soft monitoring**: pause active mesh-digging unless **new obvious CC0/BY soft hit** appears; monitor Henson Sheffield CC0 DICOM labels (future mesh-extraction path), TotalSegmentator updates, HuBMAP/HRA/Zenodo feeds
+2. **Journal methods refresh**: limitations table polish, license matrix clarity, Kabsch residuals interpretation (teaching visualization grade only — not surgical registration)
+3. **Expert-review sync**: prepare teaching-useful/incomplete stance; no TA2-complete claim; no clinical claim
+4. **No finished-product marketing**: teaching atlas **in progress**; grouped structures = teaching compromises; soft-tissue census soft-ceiling documented
+
+### Week 2 verification gates (all green)
+
+- `python3 scripts/integrity-audit.py`: 0 violations (129 structures / 134 GLBs)
+- `npm test -- --run`: 138/138 passed (19 test files)
+- `npm run build`: ✓ (dist built; 1.2 MB chunk size warning expected)
+- Git: all Day 4ck–4cu commits pushed to PR #3
+
+**Bottom line Week 2**: Teaching UX shipped (ghost/explode/gap notes/reduced-motion/focus-visible/teaching-compromise wording); soft-ceiling reconfirmed through 24 watch digs (#147–#170; 0 new CC0/BY soft meshes); honest limitations maintained (README/gap notes/footer consistency). Census unchanged (129/124; ontology 126/129). Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+---
+
 ## Bottom line
 
 Phase 8 freezes a quality-week honest checkpoint: census **129** / **124**; ontology **126** / **129**; UX (prefs · hide · help · clip · cameras · ghost · explode · quiz + honesty banners) live; BY-SA **71/124**; open mining through **#135** with **0** late soft integrates. Soft-tissue open-data ceiling largely reached for DI / per-ray MTA / nerve·ligament CC0/BY / gastroc-soleus. Treat this as a **checkpoint for journal prep / handback / watch-only soft monitoring** — **no finished-product claim**.
