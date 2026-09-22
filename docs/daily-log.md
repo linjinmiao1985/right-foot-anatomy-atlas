@@ -2623,7 +2623,7 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 
 **Commit**: `Day 4dd: SPARSE SOFT WATCH + WEEK HANDOFF - watch digs #171-#173 (Cults3D/CGTrader/Wikimedia generic; IFAA terminology BY-SA; Open3DModel/Complete Anatomy/Pennsieve) all DRY (no new CC0/BY per-toe DI/lumbricals/per-ray MTA) + Week 2 journal-readiness handoff added to phase-8-self-review (Day 4cv-4dd subsection: methods limitations+license matrix; expert-checklist v3; journal-figure-captions; README sync; soft digs #147-#173 watch-only DRY) + cloud-agent-handback summary + learning-log digs append`
 
-**Push**: SHA `<pending>`
+**Push**: SHA `6080b05`
 
 **Summary**: Week 2 journal-readiness handoff complete. Sparse soft watch digs #171–#173 (3 NEW; all DRY — no new CC0/BY per-toe DI, lumbricals, per-ray MTA meshes). Added comprehensive Week 2 journal-readiness handoff blurb to phase-8-self-review.md (new subsection Day 4cv–4dd: methods limitations table + license matrix; expert-review-checklist v3.0; journal-figure-captions 7 bilingual stubs; README Limitations + Documentation links; StructurePanel/footer census hint; soft digs #171–#173 sparse DRY; verification gates green; census unchanged; bottom line teaching atlas in progress). Cloud-agent-handback.md summary added (concise Week 2 journal polish recap). Learning-log appended digs #171–#173. Soft-ceiling reconfirmed through #173 (27 watch digs total #147–#173; 0 new CC0/BY soft meshes). Gates green. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
 
