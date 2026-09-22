@@ -2349,3 +2349,63 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 **Summary**: UI license honesty audit complete. StructurePanel license badge ("BY-SA 隔离 · ShareAlike" vs "主树 · Main") + tooltips ("ShareAlike isolate (by-sa/) — not main-tree CC BY/CC0" vs "Main tree CC BY 4.0 / CC0") already aligned. LayerToggles BY-SA warnings ("当前图层可能加载 **BY-SA** 网格") already clear. Footer census hint ADDED: "网格来源 (census ≈53 主树 / ≈71 BY-SA of 124 unique)" + "Mesh sources (census ≈53 main-tree / ≈71 BY-SA of 124 unique)" — natural placement in existing footer without clutter. Soft digs watch-only (0 new). Cloud-agent-handback refreshed. Gates green. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
 
 ---
+
+## Day 4cz — ONTOLOGY HONEST GAPS review (2026-09-22)
+
+**Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3)
+**Goals**: Review the 3 honest ontology empties (≈126/129 citable); ensure StructurePanel / ontology UI shows clear bilingual "honest empty / TNA-only" notes — not silently blank. Document names. Tiny copy polish only if unclear; do not invent TA2 codes.
+
+### The 3 honest ontology empties (identified)
+1. **`cervical_talocalcaneal_ligament`** (颈距跟韧带)
+   - **Reason**: No distinct TA98 A-code (often a clinical synonym of lateral talocalcaneal ligament A03.6.10.102)
+   - **Source**: `src/lib/ontologyIds.ts` lines 361-362 + 392-396
+   - **Bilingual note**: "无独立 TA98 A 码（常作外侧距跟韧带临床同义）— 不编造编号 / No distinct TA98 A-code (often a clinical synonym of lateral talocalcaneal) — IDs not invented"
+
+2. **`medial_plantar_veins`** (足底内侧静脉)
+   - **Reason**: TNA-only (TAH U15825) without TA98 A-code / clear FMA — omit this pass
+   - **Source**: `src/lib/ontologyIds.ts` lines 246 + 266 + 397-400
+   - **Bilingual note**: "仅见 TNA 编码，本教学图未收录可引用 TA2/FMA/BP / TNA-only in sources consulted — no citable TA2/FMA/BP in this map"
+
+3. **`lateral_plantar_vein`** (足底外侧静脉)
+   - **Reason**: TNA-only (TAH U15824) without TA98 A-code / clear FMA — omit this pass
+   - **Source**: `src/lib/ontologyIds.ts` lines 246 + 266 + 401-404
+   - **Bilingual note**: "仅见 TNA 编码，本教学图未收录可引用 TA2/FMA/BP / TNA-only in sources consulted — no citable TA2/FMA/BP in this map"
+
+### StructurePanel ontology UI audit (already clear — no delta ✅)
+- **Ontology display logic** (lines 149-251): When `getOntologyIds()` returns `undefined` AND `getHonestOntologyEmptyReason()` exists, StructurePanel shows:
+  - **Header**: "本体论 · Ontology (honest empty)" (line 235) — clear bilingual label
+  - **Background**: `rgba(0,0,0,0.18)` with dashed border `#444` (lines 226-232) — visually distinct from regular ontology box
+  - **Content**: Bilingual reason from `HONEST_ONTOLOGY_EMPTIES` map (lines 238-243):
+    - Chinese reason (`reasonZh`)
+    - English reason (`reasonEn`) in gray `#6b7280`
+  - **ARIA label**: `Ontology honest empty: ${ontologyEmpty.reasonEn}` (line 220) — accessibility support
+  - **test-id**: `data-testid="ontology-honest-empty"` (line 216) — vitest-enforced
+- **Fallback for unnamed empties**: If `getHonestOntologyEmptyReason()` returns `undefined` (structure not in the 3-named list), shows generic "本教学图暂无可用 TA2 / FMA / BP 引用编号 — 不编造 / No citable TA2 / FMA / BP in this teaching map — IDs not invented" (lines 244-249)
+- **Verdict**: ✅ **Already clear** — bilingual "honest empty" labels visible; TNA-only / no-distinct-TA98-A-code reasons explained; not silently blank. No UI delta needed.
+
+### Vitest enforcement (ontologyIds.test.ts audit)
+- **Test lines 30-34**: Confirms `getOntologyIds()` returns `undefined` for all 3 honest empties (cervical TC, medial_plantar_veins, lateral_plantar_vein)
+- **Test lines 97-116**: Confirms `getHonestOntologyEmptyReason()` returns bilingual reasons for all 3 named empties
+- **Test line 115**: Spot-checks cervical TC reason contains "No distinct TA98 A-code"
+- **Verdict**: ✅ Vitest enforces honest-empty behavior; 138/138 tests passed (gates green)
+
+### Soft-tissue: WATCH ONLY
+- **0** new digs — ontology review did NOT uncover obvious new CC0/BY soft hit; no incidental dig numbers appended.
+
+### Docs refresh
+- **cloud-agent-handback**: updated tip SHA to 5307173 / Day 4cy; date Day 4cz (ONTOLOGY HONEST GAPS review); noted 3 empties (cervical TC, medial/lateral plantar veins) + StructurePanel honest-empty labels already clear.
+
+### Gates (green)
+- `npm test -- --run`: **138/138** passed (19 test files)
+- `python3 scripts/integrity-audit.py`: **0** violations (129 structures / 134 GLBs)
+- `npm run build`: ✓ (dist built; 1.2 MB chunk size warning expected)
+
+**Census**: unchanged (129/124 entries/unique; **126/129 ontology citable** = 3 honest empties confirmed; 53 main-tree / 71 BY-SA; 134 GLB on-disk)
+
+**Commit**: `Day 4cz: ONTOLOGY HONEST GAPS review - confirmed 3 empties (cervical_talocalcaneal_ligament, medial_plantar_veins, lateral_plantar_vein) with clear bilingual StructurePanel "honest empty" labels (TNA-only/no-distinct-TA98-A-code reasons); no UI delta needed + cloud-agent-handback refresh`
+
+**Push**: SHA `<pending>`
+
+**Summary**: Ontology honest gaps audit complete. Identified 3 honest empties: (1) cervical_talocalcaneal_ligament (no distinct TA98 A-code; often lateral TC clinical synonym); (2) medial_plantar_veins (TNA-only TAH U15825; no TA98 A-code / clear FMA); (3) lateral_plantar_vein (TNA-only TAH U15824; no TA98 A-code / clear FMA). StructurePanel ontology UI already displays clear bilingual "本体论 · Ontology (honest empty)" labels with specific reasons (TNA-only / no-distinct-TA98-A-code) — not silently blank. Vitest-enforced (ontologyIds.test.ts lines 30-34, 97-116). No UI delta needed. Soft digs watch-only (0 new). Cloud-agent-handback refreshed. Gates green. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete (126/129 ontology citable; 3 honest empties documented); **not** a finished product.
+
+---

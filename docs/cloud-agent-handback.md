@@ -28,10 +28,10 @@ Henson Sheffield **Option A** one-subject MC POC completed (`Aug_8`): surfaces O
 
 # Cloud Agent handback — Phase 8 resume brief
 
-**Date**: 2026-09-22 · Day **4cy** (Week 2 UI LICENSE HONESTY SYNC)  
+**Date**: 2026-09-22 · Day **4cz** (Week 2 ONTOLOGY HONEST GAPS review)  
 **Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3)  
-**HEAD tip**: `d704f0d` (Day 4cx: finalize daily-log SHA — README Limitations sync with docs)  
-**Status**: UI license honesty synced (footer census hint ≈53 main / ≈71 BY-SA added); teaching-grade atlas **in progress** — **not** a finished-product claim  
+**HEAD tip**: `5307173` (Day 4cy: finalize daily-log SHA — UI license honesty sync with footer census hint)  
+**Status**: Ontology honest gaps reviewed (3 empties: cervical TC, medial/lateral plantar veins; StructurePanel "honest empty" labels already clear — no UI delta); teaching-grade atlas **in progress** — **not** a finished-product claim  
 **Companion**: `docs/phase-8-self-review.md` (Week 2 checkpoint added Day 4cu), `docs/cc0-soft-tissue-watchlist.md`, `third_party/andreassen/`, `docs/week2-soft-ceiling-memo.md`, `docs/methods.md` (Day 4cv polish), `docs/expert-review-checklist.md` (Day 4cw v3.0), `README.md` (Day 4cx Limitations sync), `src/lib/assetProvenance.ts` (Day 4cy footer census hint)
 
 ---
