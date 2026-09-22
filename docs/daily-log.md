@@ -2447,7 +2447,7 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 
 **Commit**: `Day 4da: METHODS ONTOLOGY GAPS row - enhanced methods.md "Ontology IDs partial" row with 3 honest empties detailed (cervical_talocalcaneal_ligament no-distinct-TA98-A-code; medial_plantar_veins/lateral_plantar_vein TNA-only TAH U15825/U15824) + StructurePanel honest-empty UI pointer + cross-links (ontologyIds.ts lines 392-404 + expert-review-checklist v3.0 §E) + cloud-agent-handback refresh`
 
-**Push**: SHA `<pending>`
+**Push**: SHA `d50f2d1`
 
 **Summary**: Methods ontology gaps row enhanced. Expanded "Ontology IDs partial" limitation row in methods.md with: (1) 3 honest empties detailed by full structure IDs + numbered list; (2) specific reasons for each (cervical TC: no distinct TA98 A-code / often lateral TC clinical synonym; medial/lateral plantar veins: TNA-only TAH U15825/U15824; no TA98 A-code / clear FMA); (3) StructurePanel honest-empty UI pointer (bilingual "TNA-only" / "no distinct TA98 A-code" reasons shown); (4) cross-links to implementation (ontologyIds.ts lines 392-404) + expert-review-checklist v3.0 §E ontology gaps. Soft digs watch-only (0 new; no dig #171 unless obvious hit). Cloud-agent-handback refreshed. Gates green. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete (126/129 ontology citable; 3 honest empties documented); **not** a finished product.
 
