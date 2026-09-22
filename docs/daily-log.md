@@ -2409,3 +2409,46 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 **Summary**: Ontology honest gaps audit complete. Identified 3 honest empties: (1) cervical_talocalcaneal_ligament (no distinct TA98 A-code; often lateral TC clinical synonym); (2) medial_plantar_veins (TNA-only TAH U15825; no TA98 A-code / clear FMA); (3) lateral_plantar_vein (TNA-only TAH U15824; no TA98 A-code / clear FMA). StructurePanel ontology UI already displays clear bilingual "本体论 · Ontology (honest empty)" labels with specific reasons (TNA-only / no-distinct-TA98-A-code) — not silently blank. Vitest-enforced (ontologyIds.test.ts lines 30-34, 97-116). No UI delta needed. Soft digs watch-only (0 new). Cloud-agent-handback refreshed. Gates green. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete (126/129 ontology citable; 3 honest empties documented); **not** a finished product.
 
 ---
+
+## Day 4da — METHODS ONTOLOGY GAPS row (2026-09-22)
+
+**Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3)
+**Goals**: Add concise row/paragraph to docs/methods.md journal limitations: the 3 honest ontology empties (cervical_talocalcaneal_ligament; medial_plantar_veins; lateral_plantar_vein) with reasons (no distinct TA98 A-code / TNA-only) and UI pointer (StructurePanel honest-empty). Cross-link ontologyIds / expert-review-checklist.
+
+### Methods limitations table row enhancement
+- **Row**: "Ontology IDs partial" (line 29)
+- **Old**: "**126/129** structures have ≥1 citable TA2 / FMA / BP in `src/lib/ontologyIds.ts`; **3** honest empties (cervical TC; med/lat plantar veins TNA-only) | Panel shows codes when present; named honest-empty note otherwise (Day 4be) — not TA2-complete soft tissue"
+- **New**: "**126/129** structures have ≥1 citable TA2 / FMA / BP in `src/lib/ontologyIds.ts`; **3 honest empties**: (1) `cervical_talocalcaneal_ligament` (no distinct TA98 A-code; often lateral TC clinical synonym); (2) `medial_plantar_veins` (TNA-only TAH U15825; no TA98 A-code / clear FMA); (3) `lateral_plantar_vein` (TNA-only TAH U15824; no TA98 A-code / clear FMA) | StructurePanel shows codes when present; **named honest-empty note** (bilingual \"TNA-only\" / \"no distinct TA98 A-code\" reasons) when absent — **not** TA2-complete soft tissue (see `src/lib/ontologyIds.ts` lines 392-404 + `docs/expert-review-checklist.md` v3.0 §E ontology gaps)"
+
+### Delta summary
+- **3 honest empties detailed**:
+  1. Added full structure IDs (`cervical_talocalcaneal_ligament`, `medial_plantar_veins`, `lateral_plantar_vein`) — was "cervical TC; med/lat plantar veins"
+  2. Added numbered list (1)-(3) for clarity
+  3. Added specific reasons for each:
+     - cervical TC: "no distinct TA98 A-code; often lateral TC clinical synonym"
+     - medial_plantar_veins: "TNA-only TAH U15825; no TA98 A-code / clear FMA"
+     - lateral_plantar_vein: "TNA-only TAH U15824; no TA98 A-code / clear FMA"
+- **UI pointer added**: "StructurePanel shows codes when present; **named honest-empty note** (bilingual \"TNA-only\" / \"no distinct TA98 A-code\" reasons) when absent" — was "Panel shows codes when present; named honest-empty note otherwise"
+- **Cross-links added**: "`src/lib/ontologyIds.ts` lines 392-404 + `docs/expert-review-checklist.md` v3.0 §E ontology gaps" — natural pointer to implementation + QA checklist
+- **Emphasis added**: "**not** TA2-complete soft tissue" (bold) — consistency with other limitation rows
+
+### Soft-tissue: WATCH ONLY
+- **0** new digs — methods row edit did NOT uncover obvious new CC0/BY soft hit; no dig #171 appended (watch-only; skip dig numbers unless obvious hit).
+
+### Docs refresh
+- **cloud-agent-handback**: updated tip SHA to fb3c7f6 / Day 4cz; date Day 4da (METHODS ONTOLOGY GAPS row); noted methods.md Day 4da ontology gaps row enhancement.
+
+### Gates (green)
+- `npm test -- --run`: **138/138** passed (19 test files)
+- `python3 scripts/integrity-audit.py`: **0** violations (129 structures / 134 GLBs)
+- `npm run build`: ✓ (dist built; 1.2 MB chunk size warning expected)
+
+**Census**: unchanged (129/124 entries/unique; **126/129 ontology citable** = 3 honest empties confirmed; 53 main-tree / 71 BY-SA; 134 GLB on-disk)
+
+**Commit**: `Day 4da: METHODS ONTOLOGY GAPS row - enhanced methods.md "Ontology IDs partial" row with 3 honest empties detailed (cervical_talocalcaneal_ligament no-distinct-TA98-A-code; medial_plantar_veins/lateral_plantar_vein TNA-only TAH U15825/U15824) + StructurePanel honest-empty UI pointer + cross-links (ontologyIds.ts lines 392-404 + expert-review-checklist v3.0 §E) + cloud-agent-handback refresh`
+
+**Push**: SHA `<pending>`
+
+**Summary**: Methods ontology gaps row enhanced. Expanded "Ontology IDs partial" limitation row in methods.md with: (1) 3 honest empties detailed by full structure IDs + numbered list; (2) specific reasons for each (cervical TC: no distinct TA98 A-code / often lateral TC clinical synonym; medial/lateral plantar veins: TNA-only TAH U15825/U15824; no TA98 A-code / clear FMA); (3) StructurePanel honest-empty UI pointer (bilingual "TNA-only" / "no distinct TA98 A-code" reasons shown); (4) cross-links to implementation (ontologyIds.ts lines 392-404) + expert-review-checklist v3.0 §E ontology gaps. Soft digs watch-only (0 new; no dig #171 unless obvious hit). Cloud-agent-handback refreshed. Gates green. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete (126/129 ontology citable; 3 honest empties documented); **not** a finished product.
+
+---

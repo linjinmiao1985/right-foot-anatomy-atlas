@@ -28,11 +28,11 @@ Henson Sheffield **Option A** one-subject MC POC completed (`Aug_8`): surfaces O
 
 # Cloud Agent handback — Phase 8 resume brief
 
-**Date**: 2026-09-22 · Day **4cz** (Week 2 ONTOLOGY HONEST GAPS review)  
+**Date**: 2026-09-22 · Day **4da** (Week 2 METHODS ONTOLOGY GAPS row)  
 **Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3)  
-**HEAD tip**: `5307173` (Day 4cy: finalize daily-log SHA — UI license honesty sync with footer census hint)  
-**Status**: Ontology honest gaps reviewed (3 empties: cervical TC, medial/lateral plantar veins; StructurePanel "honest empty" labels already clear — no UI delta); teaching-grade atlas **in progress** — **not** a finished-product claim  
-**Companion**: `docs/phase-8-self-review.md` (Week 2 checkpoint added Day 4cu), `docs/cc0-soft-tissue-watchlist.md`, `third_party/andreassen/`, `docs/week2-soft-ceiling-memo.md`, `docs/methods.md` (Day 4cv polish), `docs/expert-review-checklist.md` (Day 4cw v3.0), `README.md` (Day 4cx Limitations sync), `src/lib/assetProvenance.ts` (Day 4cy footer census hint)
+**HEAD tip**: `fb3c7f6` (Day 4cz: finalize daily-log SHA — ontology honest gaps review)  
+**Status**: Methods ontology gaps row enhanced (3 empties detailed: cervical TC / medial-lateral plantar veins with TNA-only/no-distinct-TA98-A-code reasons + StructurePanel honest-empty UI pointer + cross-links); teaching-grade atlas **in progress** — **not** a finished-product claim  
+**Companion**: `docs/phase-8-self-review.md` (Week 2 checkpoint added Day 4cu), `docs/cc0-soft-tissue-watchlist.md`, `third_party/andreassen/`, `docs/week2-soft-ceiling-memo.md`, `docs/methods.md` (Day 4cv polish + Day 4da ontology gaps row), `docs/expert-review-checklist.md` (Day 4cw v3.0), `README.md` (Day 4cx Limitations sync), `src/lib/assetProvenance.ts` (Day 4cy footer census hint)
 
 ---
 
