@@ -2452,3 +2452,65 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 **Summary**: Methods ontology gaps row enhanced. Expanded "Ontology IDs partial" limitation row in methods.md with: (1) 3 honest empties detailed by full structure IDs + numbered list; (2) specific reasons for each (cervical TC: no distinct TA98 A-code / often lateral TC clinical synonym; medial/lateral plantar veins: TNA-only TAH U15825/U15824; no TA98 A-code / clear FMA); (3) StructurePanel honest-empty UI pointer (bilingual "TNA-only" / "no distinct TA98 A-code" reasons shown); (4) cross-links to implementation (ontologyIds.ts lines 392-404) + expert-review-checklist v3.0 §E ontology gaps. Soft digs watch-only (0 new; no dig #171 unless obvious hit). Cloud-agent-handback refreshed. Gates green. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete (126/129 ontology citable; 3 honest empties documented); **not** a finished product.
 
 ---
+
+## Day 4db — JOURNAL FIGURE CAPTIONS stub (2026-09-22)
+
+**Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3)
+**Goals**: Create `docs/journal-figure-captions.md` with concise bilingual caption stubs for teaching figures reviewers may need: bones overview, layer toggles/ghost opacity, explode, BY-SA isolate vs main tree, soft-ceiling/teaching-compromise grouped DI-MTA. Each 1–2 sentence ZH + EN; honesty (not clinical; teaching compromise where relevant). No fabricated metrics.
+
+### Journal figure captions created (7 figures)
+
+**File**: `docs/journal-figure-captions.md` (new; version 1.0 Day 4db)
+
+1. **Figure 1: Bones Overview (Osteology Complete)**
+   - 中文: 右足骨骼全视图（26 骨；CC BY 4.0 BodyParts3D / CC0 UM）。跗骨 7 + 跖骨 5 + 趾骨 13 + 籽骨。教学可视化级；非手术配准 / 非患者特异性模型。
+   - English: Right foot skeletal overview (26 bones; CC BY 4.0 BodyParts3D / CC0 UM). 7 tarsals + 5 metatarsals + 13 phalanges + sesamoids. Teaching visualization grade; not surgical registration / patient-specific modeling.
+
+2. **Figure 2: Layer Toggles / Ghost Opacity (Teaching UX)**
+   - 中文: 层切换面板附 **ghost / 透视** 功能（`G` 热键；每层不透明度 0.0–1.0）。教学用偏好持久化（localStorage）；非临床 X 光 / 透视。清单：≈53/124 唯一主树（CC BY/CC0）vs ≈71/124 唯一 BY-SA 隔离。
+   - English: Layer toggle panel with **ghost / 透视** feature (`G` hotkey; per-layer opacity 0.0–1.0). Teaching prefs persist (localStorage); not clinical X-ray / fluoroscopy. Census: ≈53/124 unique main-tree (CC BY/CC0) vs ≈71/124 unique BY-SA isolate.
+
+3. **Figure 3: Explode / 抽出 (Spatial Separation)**
+   - 中文: **explode / 抽出** 功能（`E` 热键；每层 +Y 空间分离 0–50 mm）。覆盖层剥离，使夹层可读（教学 3D 解剖演示）；非手术解剖。教学用偏好持久化；非固定标本拍摄。
+   - English: **Explode / 抽出** feature (`E` hotkey; per-layer +Y spatial separation 0–50 mm). Superficial layers peel apart so layer sandwich is readable (teaching 3D anatomy demo); not surgical dissection. Teaching prefs persist; not fixed-specimen photography.
+
+4. **Figure 4: BY-SA Isolate vs Main Tree (License Boundaries)**
+   - 中文: **BY-SA 隔离 · ShareAlike** vs **主树 · Main** 许可证徽章（StructurePanel）。BY-SA 结构（神经 17/17；韧带 27/29；血管 22/29；肌肉 5/23 唯一）置于 `by-sa/` 隔离目录。NC（非商业）源已拒绝；详见 `docs/week2-soft-ceiling-memo.md` 拒绝理由。
+   - English: **BY-SA 隔离 · ShareAlike** vs **主树 · Main** license badges (StructurePanel). BY-SA structures (nerves 17/17; ligaments 27/29; vessels 22/29; muscles 5/23 unique) isolated in `by-sa/` directory. NC (Non-Commercial) sources rejected; see `docs/week2-soft-ceiling-memo.md` for reject rationale.
+
+5. **Figure 5: Soft-Ceiling / Teaching-Compromise Grouped DI-MTA (Honest Gaps)**
+   - 中文: **软组织 census 软天花板**：详尽搜索 #1–#170 未发现 CC0/BY 逐趾 DI、蚓状肌、逐射线 MTA 网格源。**分组结构为教学妥协（teaching compromises）**：DI 1st–4th 组合；跖背/跖底 MTA 所有射线。StructurePanel 显示诚实度文案。详见 `docs/week2-soft-ceiling-memo.md` + `docs/methods.md` 限制表格。
+   - English: **Soft-tissue census soft ceiling**: Exhaustive search #1–#170 found **no CC0/BY per-toe DI, lumbricals, per-ray MTA** sources. **Grouped structures are teaching compromises**: DI 1st–4th combined; dorsal/plantar MTA all rays. StructurePanel shows honesty text. See `docs/week2-soft-ceiling-memo.md` + `docs/methods.md` limitations table.
+
+6. **Figure 6: Ontology Honest Empties (126/129 Citable)**
+   - 中文: 本体论 IDs 部分：**126/129** 结构有 ≥1 可引用 TA2 / FMA / BP；**3 诚实空**（StructurePanel 显示双语原因）：cervical TC（无独立 TA98 A 码）；medial/lateral plantar veins（仅 TNA）。非 TA2 完整软组织。
+   - English: Ontology IDs partial: **126/129** structures have ≥1 citable TA2 / FMA / BP; **3 honest empties** (StructurePanel shows bilingual reasons): cervical TC (no distinct TA98 A-code); medial/lateral plantar veins (TNA-only). Not TA2-complete soft tissue.
+
+7. **Figure 7: Kabsch Co-Registration Residuals (Teaching Visualization Grade)**
+   - 中文: Kabsch 刚性对齐残差（Open3D→BP3D 均值 ≈**2.61 mm** 最大 ≈**4.41 mm** MT1；UM→BP3D 均值 ≈**2.22 mm** 最大 ≈**4.38 mm** 距骨；ZA→BP3D 均值 ≈**1.81 mm** 最大 ≈**3.52 mm** 跟骨）。教学可视化级；**非**手术配准 / 植入物定尺 / 导航误差界限。
+   - English: Kabsch rigid alignment residuals (Open3D→BP3D mean ≈**2.61 mm** max ≈**4.41 mm** MT1; UM→BP3D mean ≈**2.22 mm** max ≈**4.38 mm** talus; ZA→BP3D mean ≈**1.81 mm** max ≈**3.52 mm** calcaneus). Teaching visualization grade; **not** surgical registration / implant sizing / navigation error bounds.
+
+**General Figure Notes**: All figures for **teaching use** (not clinical diagnosis / treatment planning / surgical navigation / patient-specific modeling). Teaching atlas **in progress**; **not** TA2-complete soft tissue; **not** a finished product. Census 129/124 entries/unique (126/129 ontology citable; 3 honest empties); 53 main-tree / 71 BY-SA; 134 GLBs on-disk (≈13 MB).
+
+**Companion docs cross-linked**: methods.md (limitations table + license matrix), week2-soft-ceiling-memo.md (NC/SA rejects + teaching compromises), expert-review-checklist.md v3.0 (QA), README.md (Limitations)
+
+### Soft-tissue: WATCH ONLY
+- **0** new digs — journal captions edit did NOT uncover obvious new CC0/BY soft hit; no dig appended (watch-only).
+
+### Docs refresh
+- **cloud-agent-handback**: updated tip SHA to cd0ec46 / Day 4da; date Day 4db (JOURNAL FIGURE CAPTIONS stub); added `docs/journal-figure-captions.md (Day 4db bilingual teaching figure stubs)` to Companion list.
+
+### Gates (green)
+- `npm test -- --run`: **138/138** passed (19 test files)
+- `python3 scripts/integrity-audit.py`: **0** violations (129 structures / 134 GLBs)
+- `npm run build`: ✓ (dist built; 1.2 MB chunk size warning expected)
+
+**Census**: unchanged (129/124 entries/unique; 126/129 ontology citable; 53 main-tree / 71 BY-SA; 134 GLB on-disk)
+
+**Commit**: `Day 4db: JOURNAL FIGURE CAPTIONS stub - created docs/journal-figure-captions.md with 7 bilingual teaching figure stubs (bones/layers-ghost/explode/BY-SA-isolate/soft-ceiling-grouped-DI-MTA/ontology-empties/Kabsch-residuals; 1-2 sentence ZH+EN; honesty: not clinical / teaching compromises where relevant; no fabricated metrics) + cloud-agent-handback refresh`
+
+**Push**: SHA `<pending>`
+
+**Summary**: Journal figure captions stub created. New file `docs/journal-figure-captions.md` v1.0 with 7 concise bilingual teaching figure captions (bones overview 26; layers/ghost opacity/explode teaching UX with census 53/71; BY-SA isolate vs main-tree license boundaries with NC rejects; soft-ceiling/teaching-compromise grouped DI-MTA with #1–#170 DRY; ontology 126/129 with 3 honest empties; Kabsch residuals teaching visualization grade). Each 1–2 sentence ZH + EN. Honesty stance: not clinical; teaching compromises documented; no fabricated metrics. Cross-links to methods.md/soft-ceiling-memo/expert-review-checklist. Soft digs watch-only (0 new). Cloud-agent-handback refreshed. Gates green. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+---
