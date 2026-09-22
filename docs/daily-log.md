@@ -1697,3 +1697,25 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 6. **Honesty**: teaching atlas in progress — **not** clinical; **not** TA2-complete; **no finished-product claim**.
 
 **Outcome**: Census unchanged (**129/124**; ontology **126/129**). **0** meshes wire / **0** SA spam. Search Escape key polish added (standard UX pattern). All gates PASSED. Day 4cb complete.
+
+## Day 4cc (2026-09-22) — Empty-selection tip verification + light mesh dig
+
+**Target**: Complete Day 4cc with StructurePanel empty-selection bilingual tip check; 15–20 min NEW CC0/BY soft tissue dig; daily-log Day 4cc; vitest run; integrity-audit; build; commit; push. No finished-product claims.
+
+1. Continued on `cursor/week2-day4bm-ghost-opacity-096e` (Day 4cb tip @ 6e8a572).
+2. **StructurePanel empty-selection bilingual tip**: Verified **already present** — empty-state panel (lines 40–72) shows bilingual guidance since Day 4bo (commit 34fa8326): "点击网格或用搜索选择结构" / "Click a mesh or use search". **0** new code required.
+3. **Light mesh dig** (15–20 min NEW CC0/BY soft tissue):
+   - **#136** U Malaya Asian LE MSK model (doi:10.22452/RD/5T6TZ7 · 2026-04-22): **CC0 1.0** — 67 STL (42 muscles, 13 bones, 5 ligaments, 2 tendons, 1 meniscus) from hip to foot. MRI-derived. Data Use Agreement verified.
+   - **Why not wired**: Whole lower-extremity pack, not foot-specific DI/nerve/per-ray vessels; 42-muscle list lacks per-structure detail; foot content (plantar layers?) needs extract + verify + naming QA.
+   - Re-verified: Z-Anatomy / Open3D / BodyParts3D / Proko / AnatomyTOOL = **CC BY-SA** (SA isolate); MyMiniFactory ScanTW / Thingiverse / Printables foot models = **NC** (non-commercial).
+   - Logged in `cc0-soft-tissue-watchlist.md` (Day 4cc dig summary + #136 monitor entry).
+   - **Outcome**: **0** new foot-specific CC0/BY soft tissue for DI / MTA / gastroc-soleus. Soft gaps still **dry**.
+4. **Mesh dig**: **Skipped** — CC0/BY ceiling acknowledged after comprehensive search Day 4bo–4bs (dig #100–#135) + Day 4cc light dig (#136).
+5. **Gates**: Run full gates WITHOUT piping to head:
+   - `npx vitest run` → **127/127 PASSED** (19 test files)
+   - `python3 scripts/integrity-audit.py` → **PASSED** (129 structures / 134 GLBs / 0 violations)
+   - `npm run build` → **OK**
+6. **Checks**: daily-log Day 4cc updated; commit + push same PR branch.
+7. **Honesty**: teaching atlas in progress — **not** clinical; **not** TA2-complete; **no finished-product claim**.
+
+**Outcome**: Census unchanged (**129/124**; ontology **126/129**). **0** meshes wire / **0** SA spam. Empty-selection bilingual tip confirmed existing (Day 4bo). Light dig #136 = CC0 whole LE, not foot-specific. All gates PASSED. Day 4cc complete.
