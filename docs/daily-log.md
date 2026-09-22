@@ -1860,6 +1860,35 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 
 **Outcome**: Census unchanged (**129/124**; ontology **126/129**). **0** meshes wire / **0** SA spam. Denser bilingual gap notes added for grouped DI and grouped MTA (soft-ceiling teaching transparency). Light watch dig #142–#146 dry. All gates PASSED. Day 4ci complete.
 
+## Day 4co (2026-09-22) — LABIM3D deep-check (DRY) + search input focus-visible
+
+**Target**: Day 4co priority DEEP-CHECK dig #158 LABIM3D (UAustral Chile, claimed CC BY 4.0): Clone/inspect repo for RIGHT FOOT soft tissue (DI per toe, lumbricals, plantar layers, MTA, calf). If foot soft exists under clear CC BY/CC0: assess Kabsch/QA; wire only if pass. Else: log outcome, no wire. Optional polish if DRY. Gates: npm test, integrity-audit, build. daily-log Day 4co. Commit + push.
+
+1. Continued on `cursor/week2-day4bm-ghost-opacity-096e` (Day 4cn tip @ fc94701).
+2. **LABIM3D deep-check (dig #158b)**:
+   - **Repository cloned**: `git clone --depth 1 https://github.com/FernandandreaTM/labim3d.git` to `/tmp/labim3d`
+   - **README license claim**: CC BY 4.0 (line 5: "Licencia: CC BY 4.0")
+   - **LICENSE file**: ❌ **Absent** (no LICENSE file in repo root; would strengthen claim but not critical for platform repo)
+   - **Model catalog inspection** (`data/index.json`): **9 models** listed
+     - aparato-vestibular, articulacion-hombro (2 variants), articulacion-rodilla, oido-interno (2 variants), pelvis-completa, vertebra-lumbar, vertebra-toracica
+   - **Foot anatomy search**: `grep -r "foot\|pie\|inteross\|lumbric\|metatars"` (HTML+JSON) → **0 matches**
+   - **STL files**: 20+ STL files in `models/` directory (shoulder, knee, inner ear, pelvis, vertebrae)
+   - **Foot soft-tissue inventory**: ❌ **ABSENT** — **0** foot anatomy models (no DI, lumbricals, plantar layers, MTA, calf, or even foot bones)
+   - **Result**: **REJECT** as foot soft-tissue source — LABIM3D is an ear/shoulder/knee/pelvis/vertebrae-focused educational platform (TecMedHub, Universidad Austral de Chile); platform architecture promising (CC BY 4.0, JSON-based CMS, Three.js viewer, print-ready STL workflow) but **current content scope excludes foot anatomy entirely**
+   - **Wire decision**: **0** meshes downloaded; **0** Kabsch QA; **0** wired
+3. **ONE tiny teaching polish** (search input focus-visible a11y):
+   - Extended `index.css` focus-visible rule to include `input[type="search"]` and `input[type="text"]`
+   - Search input in `StructureSearch.tsx` now gets proper keyboard focus ring (blue outline + shadow)
+   - Complements existing focus-visible for button/checkbox/range controls (Day 4ao)
+   - High-value a11y improvement; no feature sprawl; 2-line CSS addition
+4. **Gates**: Run full gates:
+   - `python3 scripts/integrity-audit.py` → **PASSED** (129 structures / 134 GLBs / 0 violations)
+   - `npm test -- --run` → **138/138 PASSED** (19 test files)
+   - `npm run build` → **OK** (dist built 3.35s; CSS 0.70 kB)
+5. **Checks**: daily-log Day 4co updated; commit + push same PR branch.
+
+**Progress snapshot**: Day 4co LABIM3D priority deep-check **DRY** (repo cloned and fully inspected; 9 models catalogued but **0 foot anatomy**; platform architecture suitable for future contributions but current inventory lacks foot soft-tissue entirely). Search input focus-visible a11y added. Census unchanged **129/124**; ontology **126/129**. Teaching atlas in progress — **not** clinical; **not** TA2-complete; **no finished-product claim**.
+
 ## Day 4cn (2026-09-22) — Soft-tissue watch dig #158+ (inconclusive) + footer clarity
 
 **Target**: Day 4cn soft-tissue WATCH dig #158+ (NEW sources only; skip #147–#157): Seek CC0/clear CC-BY meshes for per-toe DI, lumbricals, plantar layers, per-ray MTA. Append log. No NC/unclear/failed-alignment wires. DRY OK. ONE tiny teaching polish unused: prefer focus-visible rings on remaining controls, bilingual empty-state tweak, or soft-ceiling footer clarity. Gates: npm test, integrity-audit, build. daily-log Day 4cn. Commit + push.

@@ -1994,3 +1994,66 @@ Continue Week 2 sprint after Day 4br quiz honesty. **Change angle**: search LESS
 - **0** meshes integrated; **0** SA spam; unclear licenses **not** force-wired.
 - Soft gaps (per-toe DI / lumbricals / per-ray MTA) remain **dry** or **license-unclear**.
 - Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+---
+
+## Session additions (2026-09-22 · Day 4co — #158b LABIM3D deep-check)
+
+**Scope**: Day 4co priority DEEP-CHECK dig #158 LABIM3D (UAustral Chile). Clone/inspect repo for RIGHT FOOT soft tissue (DI per toe, lumbricals, plantar layers, MTA, calf). If foot soft exists under clear CC BY/CC0: assess Kabsch/QA; wire only if pass. Else: log outcome (monitor/reject), no wire.
+
+### #158b LABIM3D deep-check (REJECT — no foot inventory)
+
+**Repository**: FernandandreaTM/labim3d (GitHub)  
+**Clone date**: 2026-09-22 (Day 4co)  
+**Commit**: Latest (depth=1 clone)  
+**README license claim**: **CC BY 4.0** (stated in README.md line 5)  
+**LICENSE file**: ❌ **Absent** (no LICENSE file in repo root)  
+**Version**: 1.0 (Marzo 2026)  
+
+**Deep inventory inspection**:
+1. **Model catalog** (`data/index.json`): 9 models listed
+   - aparato-vestibular (vestibular apparatus)
+   - articulacion-de-hombro-funcional (functional shoulder joint)
+   - articulacion-hombro (shoulder joint)
+   - articulacion-rodilla (knee joint)
+   - oido-interno (inner ear)
+   - oido-interno-nervios (inner ear nerves)
+   - pelvis-completa (complete pelvis)
+   - vertebra-lumbar (lumbar vertebra)
+   - vertebra-toracica (thoracic vertebra)
+
+2. **Foot anatomy search**: `grep -r "foot\|pie\|inteross\|lumbric\|metatars" (HTML+JSON)` → **0 matches**
+
+3. **STL files**: 20+ STL files in `models/` directory, but **NO foot anatomy** (shoulder, knee, inner ear, pelvis, vertebrae only)
+
+4. **Foot soft-tissue inventory**: ❌ **ABSENT**
+   - No dorsal interossei (per-toe or grouped)
+   - No lumbricals
+   - No plantar layer muscles
+   - No metatarsal arteries (per-ray or grouped)
+   - No calf muscles (gastrocnemius/soleus)
+   - No foot bones
+   - **0** foot-related models in catalog
+
+**License verification**:
+- README claims "Licencia: CC BY 4.0" (line 5)
+- **No LICENSE file present** in repo (would strengthen claim but not critical for platform repo)
+- Individual model JSONs in `data/models/*.json` would specify per-model licenses (not inspected since no foot content)
+
+**Reject reason**: **No foot soft-tissue inventory** — repository is ear/shoulder/knee/pelvis/vertebrae-focused educational platform (TecMedHub, UAustral Chile); **0** foot anatomy models catalogued or stored
+
+**Teaching value**: ❌ None for right-foot atlas — platform architecture is promising (CC BY 4.0, JSON-based CMS, Three.js viewer, print-ready STL workflow) but current content scope does not include foot anatomy
+
+**Action**: **reject** (no foot inventory; DRY for foot soft-tissue)
+
+**Update tracking**:
+- Census unchanged (**129/124**; ontology **126/129**).
+- **0** meshes downloaded; **0** Kabsch QA; **0** wired.
+- LABIM3D platform promising for future foot additions but **currently DRY**.
+- Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+---
+
+**Day 4co LABIM3D deep-check summary**:
+
+Repository cloned and fully inspected. README claims CC BY 4.0 (no LICENSE file). Current catalog: 9 models (ear, shoulder, knee, pelvis, vertebrae). **0 foot anatomy** models (no DI, lumbricals, plantar layers, MTA, calf). **Reject** as foot soft-tissue source. Platform architecture suitable for future contributions but **current inventory DRY for foot**.
