@@ -1860,6 +1860,30 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 
 **Outcome**: Census unchanged (**129/124**; ontology **126/129**). **0** meshes wire / **0** SA spam. Denser bilingual gap notes added for grouped DI and grouped MTA (soft-ceiling teaching transparency). Light watch dig #142–#146 dry. All gates PASSED. Day 4ci complete.
 
+## Day 4cn (2026-09-22) — Soft-tissue watch dig #158+ (inconclusive) + footer clarity
+
+**Target**: Day 4cn soft-tissue WATCH dig #158+ (NEW sources only; skip #147–#157): Seek CC0/clear CC-BY meshes for per-toe DI, lumbricals, plantar layers, per-ray MTA. Append log. No NC/unclear/failed-alignment wires. DRY OK. ONE tiny teaching polish unused: prefer focus-visible rings on remaining controls, bilingual empty-state tweak, or soft-ceiling footer clarity. Gates: npm test, integrity-audit, build. daily-log Day 4cn. Commit + push.
+
+1. Continued on `cursor/week2-day4bm-ghost-opacity-096e` (Day 4cm tip @ e0a89db).
+2. **Soft-tissue watch dig #158–#160** (open-anatomy-learning-log):
+   - **#158**: LABIM3D (GitHub FernandandreaTM/labim3d, Universidad Austral de Chile) — **CC BY 4.0** repository for curated 3D anatomical models (March 2026), but **no foot inventory visible in README** (would require catalog inspection) → **monitor**
+   - **#159**: UMLUB Sketchfab "Dorsal Interossei I–IV" — Medical University of Lublin has **per-toe DI models** (4 separate models) + "Lumbricals Human Anatomy" model, but **license unclear** (library catalog shows various CC licenses; not specified which applies to Sketchfab) → **reject** (license unconfirmed)
+   - **#160**: Cults3D lower leg and foot muscle anatomy (MeEzra, Feb 2026) — STL+OBJ, **license unclear** ("Usages" field empty) → **reject** (license unconfirmed)
+   - **Result**: All digs #158–#160 **inconclusive or DRY**. LABIM3D promising (CC BY 4.0 repo) but no foot inventory detail. UMLUB has per-toe DI models but license unclear. Cults3D license unclear. Soft-tissue open-data ceiling stance (Day 4cj/4cl/4cm) **reconfirmed** — license-clear per-toe DI/lumbricals/per-ray MTA remain unavailable.
+3. **ONE tiny teaching polish** (soft-ceiling footer clarity):
+   - Enhanced `ATLAS_SOURCE_FOOTER` in `assetProvenance.ts` with bilingual soft-ceiling summary
+   - Added: "· 软组织 census 软天花板：逐趾 DI/腰肌、逐射线 MTA 仍为开放数据空白 / Soft-tissue census soft ceiling: per-toe DI/lumbricals, per-ray MTA remain open-data gaps (详见 docs/week2-soft-ceiling-memo.md)"
+   - Clarifies what "soft ceiling" means for users viewing footer
+   - References soft-ceiling memo for full context
+   - High-value clarity improvement; no feature sprawl; ~2-line text addition
+4. **Gates**: Run full gates:
+   - `python3 scripts/integrity-audit.py` → **PASSED** (129 structures / 134 GLBs / 0 violations)
+   - `npm test -- --run` → **138/138 PASSED** (19 test files)
+   - `npm run build` → **OK** (dist built 3.17s; 1.2 MB chunk size warning expected)
+5. **Checks**: daily-log Day 4cn updated; commit + push same PR branch.
+
+**Progress snapshot**: Day 4cn soft-tissue watch dig #158–#160 **inconclusive or DRY** (LABIM3D promising but no foot detail; UMLUB has per-toe DI but license unclear; Cults3D license unclear). Soft-ceiling stance quadruple-confirmed. Tiny clarity polish: footer now explains soft-ceiling gaps. Census unchanged **129/124**; ontology **126/129**. Teaching atlas in progress — **not** clinical; **not** TA2-complete; **no finished-product claim**.
+
 ## Day 4cm (2026-09-22) — Soft-tissue watch dig #154+ (DRY) + reduced-motion a11y
 
 **Target**: Day 4cm soft-tissue WATCH dig #154+ (NEW sources only; avoid re-logging #147–#153): Look for CC0/clear CC BY meshes: per-toe DI, lumbricals, plantar layers, per-ray MTA. Append log rows. No wire of NC/unclear/spatially-failed assets. DRY OK. ONE tiny teaching polish (unused): prefer a11y (focus-visible/reduced-motion) or empty-state clarity. Gates: npm test, integrity-audit, build. daily-log Day 4cm. Commit + push.

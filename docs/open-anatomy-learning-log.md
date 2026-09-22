@@ -1936,3 +1936,61 @@ Continue Week 2 sprint after Day 4br quiz honesty. **Change angle**: search LESS
 - **0** meshes integrated; **0** SA spam; NC/unclear **not** force-wired.
 - Soft gaps (per-toe DI / lumbricals / per-ray MTA) remain **dry**.
 - Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+---
+
+## Session additions (2026-09-22 · Day 4cn — #158-#160 soft-tissue watch dig continued)
+
+**Scope**: Day 4cn soft-tissue WATCH dig #158+ continuation (NEW sources only; skip #147–#157). Seek CC0/clear CC-BY meshes: per-toe DI, lumbricals, plantar layers, per-ray MTA. Append log. No NC/unclear/failed-alignment wires. DRY OK.
+
+### #158 LABIM3D (Universidad Austral de Chile) — repository (MONITOR — no foot DI detail)
+
+**Repository**: FernandandreaTM/labim3d (GitHub)  
+**URL**: https://github.com/FernandandreaTM/labim3d  
+**Institution**: TecMedHub, Escuela de Tecnología Médica, Universidad Austral de Chile — Puerto Montt  
+**License**: **CC BY 4.0** (repository)  
+**Version**: 1.0 (Marzo 2026)  
+**Content**: Open-access platform for curated 3D anatomical models (STL + metadata + educational cases); JSON-based CMS; Three.js visualization; links local models + external repos (Thingiverse, NIH 3D Print Exchange)  
+**Foot DI/lumbricals search**: Repository README does not list specific foot interossei or lumbricals models in summary; would require cloning repo and inspecting `public/data/models.json` catalog  
+**Teaching value**: ❓ Unknown — no foot soft-tissue inventory visible in README  
+**Action**: **monitor** — CC BY 4.0 license OK; re-check model catalog for foot-specific content
+
+### #159 UMLUB Sketchfab Dorsal Interossei I–IV (REJECT — license unclear)
+
+**Source**: Medical University of Lublin Sketchfab (@umlub)  
+**URL**: https://sketchfab.com/umlub/models  
+**Content**: 98 human anatomy models including "Dorsal Interossei I–IV Human Anatomy" (separate per-toe models confirmed from profile)  
+**License**: **Unspecified in search results** — UMLUB library catalog shows various CC licenses (CC-BY, CC-BY-SA, CC-BY-NC-SA, CC-BY-NC-ND, CC0/public domain) but **not** which specific license applies to Sketchfab uploads  
+**Foot DI/lumbricals search**: "Dorsal Interossei I–IV" models exist (4 per-toe models); "Lumbricals Human Anatomy" model also listed in earlier search  
+**Reject reason**: License not confirmed CC0/CC-BY from search results; would require manual Sketchfab page inspection per model to verify license badge  
+**Teaching value**: ❌ None — license unconfirmed  
+**Action**: **reject** (license unclear; Sketchfab access required for verification)
+
+### #160 Cults3D lower leg and foot muscle (REJECT — license unclear)
+
+**Source**: Cults3D model by MeEzra  
+**URL**: https://cults3d.com/en/3d-model/various/human-lower-leg-and-foot-muscle-anatomy  
+**Content**: STL + OBJ lower leg and foot muscle anatomy (includes major muscles, tendons, bones, joints)  
+**License**: **Unspecified** — "Usages" field empty in search results; "License" row blank  
+**Publication date**: February 28, 2026  
+**Reject reason**: No explicit CC0/CC-BY license stated; Cults3D models often proprietary or unclear licensing  
+**Teaching value**: ❌ None — license unconfirmed  
+**Action**: **reject** (license unclear; no CC0/CC-BY confirmation)
+
+---
+
+**Day 4cn dig summary (#158–#160)**:
+
+| Dig # | Source | License | DI/lumbricals/per-ray MTA? | Action |
+|-------|--------|---------|---------------------------|--------|
+| #158 | LABIM3D (GitHub UAustral Chile) | CC BY 4.0 (repo) | Unknown foot inventory | **monitor** |
+| #159 | UMLUB Sketchfab DI I–IV | Unclear | Has per-toe DI models | **reject** (license) |
+| #160 | Cults3D lower leg/foot muscles | Unclear | Unknown | **reject** (license) |
+
+**Result**: All digs #158–#160 **inconclusive or DRY** for NEW CC0/CC-BY per-toe DI. LABIM3D CC BY 4.0 repository promising but no foot inventory visible in README (would require catalog inspection). UMLUB has per-toe DI models but license unclear (multiple CC licenses in library, not specified for Sketchfab). Cults3D license unclear. Soft-tissue open-data ceiling stance (Day 4cj/4cl/4cm) **reconfirmed** — license-clear per-toe DI/lumbricals/per-ray MTA remain unavailable.
+
+**Update tracking**:
+- Census unchanged (**129/124**; ontology **126/129**).
+- **0** meshes integrated; **0** SA spam; unclear licenses **not** force-wired.
+- Soft gaps (per-toe DI / lumbricals / per-ray MTA) remain **dry** or **license-unclear**.
+- Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.

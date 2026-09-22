@@ -177,7 +177,7 @@ export function licenseLabel(license: AssetLicense): string {
 
 /** Persistent footer copy — keep factual, no “complete atlas” claims. */
 export const ATLAS_SOURCE_FOOTER =
-  '网格来源: BodyParts3D CC BY 4.0 · UM CC0 1.0 · Z-Anatomy 干神经+跖肌/踇短屈肌外侧腹/足底趾动脉+腓回旋支+足静脉示意 / Open3D DI+FB/FT/小趾对掌肌+近端/细支动脉+踝足韧带/支持带/腱膜+细支神经 CC BY-SA 4.0（by-sa/ 隔离）';
+  '网格来源: BodyParts3D CC BY 4.0 · UM CC0 1.0 · Z-Anatomy 干神经+跖肌/踇短屈肌外侧腹/足底趾动脉+腓回旋支+足静脉示意 / Open3D DI+FB/FT/小趾对掌肌+近端/细支动脉+踝足韧带/支持带/腱膜+细支神经 CC BY-SA 4.0（by-sa/ 隔离）· 软组织 census 软天花板：逐趾 DI/腰肌、逐射线 MTA 仍为开放数据空白 / Soft-tissue census soft ceiling: per-toe DI/lumbricals, per-ray MTA remain open-data gaps (详见 docs/week2-soft-ceiling-memo.md)';
 
 /** Short panel copy about mesh fidelity — teaching honesty, not finished-product claims. */
 export function getTeachingMeshNote(structureId: string, layer: string): string | null {
