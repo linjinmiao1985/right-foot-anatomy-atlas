@@ -249,3 +249,9 @@ OMFAtlas schematic-vs-source honesty UX (`schematicHonesty` + StructurePanel + f
 - **Teaching polish**: layer explode / 抽出 (`layerExplode` + `E`); prefs persist; **not** surgical dissection.
 - **Open mining**: **#95–#99**; soft gaps still **dry**; **0** mesh wire.
 - Census unchanged **129/124**; ontology **126/129**. **No finished-product claim**.
+
+## Progress note (Day 4bo)
+
+- **Teaching polish**: quiz stub / 测验 (`quizMode` + `Q`); prefs persist; **not** Anki / exam.
+- **Open mining**: **#100–#107**; soft gaps still **dry**; **0** mesh wire.
+- Census unchanged **129/124**; ontology **126/129**. Teaching atlas in progress — **not** clinical; **not** TA2-complete; **no finished-product claim**.

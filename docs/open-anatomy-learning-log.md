@@ -5,7 +5,7 @@ Living log of open-source human anatomy projects studied for the right-foot atla
 (CC0 / CC BY into main tree; BY-SA isolated under `public/models/right-foot/by-sa/` + NOTICE;
 reject NC / unknown / All Rights Reserved).
 
-**Last updated**: 2026-09-15 (Day 4be: ontology honest-empty UX + digs #63–#65; Andreassen skipped)  
+**Last updated**: 2026-09-22 (Day 4bo: quiz stub + digs #100–#107; soft gaps still dry)  
 **Status**: ongoing research — not a finished catalog.
 
 ---
@@ -1545,3 +1545,48 @@ Continue Week 2 sprint after Day 4bm ghost UX. Teaching polish (layer explode) +
 - Census unchanged (**129/124**; ontology **126/129**).
 - **0** meshes integrated; **0** SA spam; Andreassen/Henson/Utah **not** force-wired.
 - **No finished-product claim.**
+
+## Session additions (2026-09-22 · Day 4bo — teaching quiz stub + dig #100–#107)
+
+### Context
+
+Continue Week 2 sprint after Day 4bn explode UX. License-verified soft dig **#100–#107**. Soft gaps **still dry**. **0** mesh wire. Teaching quiz stub (names hidden) only because no CC0/BY elemental soft mesh appeared. Teaching-grade atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+### Teaching polish (ONE UX borrow — dig stayed dry)
+
+| Change | Detail |
+|--------|--------|
+| **Quiz stub / 测验** | Hide ZH/LA names + search + ontology/summary. **测验 / 对照** + key **Q**. Prefs persist `quizMode`. Honesty badges / license chips stay visible. |
+| Source | Grypa-JJ quiz/pin-point (#102; deepen #80) + MedicalPlab tutor→viewport (#106) — **ideas only**; no third-party UI / quiz-bank code |
+| Files | `src/lib/quizMode.ts` (+ vitest) · `teachingPrefs.ts` · `LayerToggles.tsx` · `StructurePanel.tsx` · `StructureHoverLabel.tsx` · `FootModel.tsx` · `Viewport.tsx` · `App.tsx` · `keyboardHelp.ts` |
+| Honesty | Teaching self-test stub — **not** Anki / exam / finished product |
+
+### NEW license-verified projects (≥5; #100–#107)
+
+| # | Project | URL / DOI | License verified | Foot relevance | Decision |
+|---|---------|-----------|------------------|----------------|----------|
+| **100** | **Scan-the-World — Muscles of the foot and ankle** | Zenodo DOI **10.5281/zenodo.21527865** | Zenodo API `license.id` = **cc-by-nc-sa-4.0** re-verified 2026-09-22 (united CT right-foot/ankle muscle GLB/USDZ) | Tempting **united** muscle GLB (deepen of **#84**) — **NC** blocks main-tree | **reject** (NC). Do **not** wire; do **not** treat as DI / per-ray MTA fill |
+| **101** | **Scan-the-World — Muscles of the foot and ankle** (sibling) | Zenodo DOI **10.5281/zenodo.21354714** | Zenodo API `license.id` = **cc-by-nc-sa-4.0** re-verified 2026-09-22 | Same title / same CT muscle family as **#100/#84** | **reject** (NC) |
+| **102** | **Anatomy Atlas 3D** (Grypa-JJ/anatomy-atlas-3d) | https://github.com/Grypa-JJ/anatomy-atlas-3d | Code **MIT** (`LICENSE` 2026-09-22: “APPLICATION CODE ONLY”); geometry **CC BY-SA 2.1 JP** (BP3D) + **CC BY-SA 4.0** (Z-Anatomy) in `ATTRIBUTION.md`. GitHub SPDX **NOASSERTION** (dual license) | ~2500-structure whole-body atlas; quiz / scalpel / Anki / split-screen — **0** new CC0/BY foot elemental | **UX-borrow** (quiz stub). Meshes **isolate-SA**. **reject** main-tree soft. Deepen of **#80** |
+| **103** | **Anatomy Atlas RU** (zigmyndovi4-ship-it/anatomy-atlas-ru) | https://github.com/zigmyndovi4-ship-it/anatomy-atlas-ru | Code **MIT** (LICENSE copyright **ashemag**, verified 2026-09-22); anatomy **CC BY 4.0** BodyParts3D 4.0 (`public/ATTRIBUTION.md`) | RU localization of Human Atlas (#95/#94) — **same BP3D pool** already in main tree | **UX-borrow** (RU localization honesty). **reject** new soft. Deepen of **#37** |
+| **104** | **Dayly / daylyfitness** (starramble) | https://github.com/starramble/daylyfitness | **No SPDX**; README + `public/models/NOTICE.txt` verified 2026-09-22: ZA **CC BY-SA 4.0** + BP3D source-embedded **CC BY-SA 2.1 JP** (conservatively retained); code license **undeclared** | ZH muscle highlight / 主练红·辅助金 on SA whole-body fitness mesh — **0** named right-foot DI/NV/ligament elementals | **UX-borrow** (ZH muscle-emphasis idea only). **reject** SA re-wire |
+| **105** | **Z-Anatomy Unity fork** (ChristianKleineidam/Z-Anatomy) | https://github.com/ChristianKleineidam/Z-Anatomy | README + `LICENSE` = **CC BY-SA 4.0** (full CC legal code); GitHub SPDX **NOASSERTION** verified 2026-09-22 | Unity PC fork of LluisV Z-Anatomy models — same SA geometry lineage | **isolate-SA** / **reject** main-tree |
+| **106** | **MedicalPlab** (AdhamElsayedAI) | https://github.com/AdhamElsayedAI/MedicalPlab | Code **MIT** (`LICENSE` verified 2026-09-22); anatomy **HuBMAP HRA CC BY 4.0** (README Data Licensing) | Tutor → 3D viewport on **kidney/HRA organs**, not foot | **UX-borrow** (tutor→viewport). **reject** as foot soft mesh |
+| **107** | **BodyParts3D archive clone** (bcl200n) | https://github.com/bcl200n/BodyParts3D | Code **MIT** (`LICENSE` verified 2026-09-22); STLs from **20110915 / v3.0** archive **CC BY-SA 2.1 JP** (README; older than official R4 **CC BY 4.0** we already use) | Whole-body FMA-named STLs — **not** a new right-foot DI/NV pack; license older SA | **reject** soft fill (already on official BP3D R4 CC BY) |
+
+**Also checked (not re-numbered)**: Zenodo **4977162** Dryad “The foot is more than a spring” **cc-zero** = `FootAsActuator.mat` EMG/work, **0** meshes. GitHub repo search `anatomy atlas foot` = this repo + `HolsteredSoul/crus-atlas` (already **#85**). Scan-the-World community query returned **0** extra hits beyond **#84/#90/#100/#101**. **No** fresh CC0/BY elemental foot soft pack this pass.
+
+### Soft-gap check
+
+| Gap | Day 4bo |
+|-----|---------|
+| DI / per-ray MTA / nerve·ligament CC0/BY | **Still dry** — #100/#101 NC united muscle; #102/#104/#105 SA; #103/#107 same/older BP3D; #106 HRA organs |
+| Gastroc/soleus | Andreassen + Henson still **blocked**; no new CC0/BY belly surface pack this pass |
+| Utah Hive | Still **reject** — not re-opened |
+
+### Outcome
+
+- Learning log **#100–#107**; teaching quiz stub live; watchlist / handback / daily-log / week-plan Day 4bo.
+- Census unchanged (**129/124**; ontology **126/129**).
+- **0** meshes integrated; **0** SA spam; Andreassen/Henson/Utah **not** force-wired.
+- Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.

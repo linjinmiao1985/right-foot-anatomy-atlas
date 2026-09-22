@@ -1542,3 +1542,14 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 4. Soft gaps **still dry**. Census unchanged (**129/124**; ontology **126/129**). **0** mesh wire / **0** SA spam.
 5. Checks: integrity-audit + vitest + build; commit + push.
 6. **Honesty**: teaching atlas in progress — **no finished-product claim**.
+
+## Day 4bo (2026-09-22) — Teaching quiz stub / 测验 + dig #100–#107
+
+**Target**: Continue Week 2 quality sprint. License-verified soft dig **#100–#105+**. ONE tiny teaching UX polish **only if** dig stays dry. Prefer CC0/BY mesh; **0** mesh wire unless a true elemental fill appears. No SA spam; no Andreassen/Henson force-wire.
+
+1. Continued on `cursor/week2-day4bm-ghost-opacity-096e` (Day 4bn tip).
+2. **Digs**: #100/#101 ScanTW foot/ankle muscle **NC-SA reject** (re-verify #84 siblings); #102 Grypa-JJ MIT+SA **UX-borrow** quiz (deepen #80); #103 anatomy-atlas-ru MIT+BP3D **UX-borrow** RU (deepen #37); #104 daylyfitness ZA/BP3D SA **UX-borrow** ZH highlight; #105 ChristianKleineidam Z-Anatomy **isolate-SA**; #106 MedicalPlab MIT+HRA **UX-borrow** tutor; #107 bcl200n BP3D v3 SA archive **reject**. Fresh hunt: Zenodo 4977162 CC0 `.mat` EMG — **0** meshes.
+3. **UX** (dig dry): `src/lib/quizMode.ts` — hide names/search/ontology + **测验 / 对照** + key `Q`. Prefs persist `quizMode`. Honesty: teaching stub, **not** Anki / exam.
+4. Soft gaps **still dry**. Census unchanged (**129/124**; ontology **126/129**). **0** mesh wire / **0** SA spam.
+5. Checks: integrity-audit + vitest + build; commit + push.
+6. **Honesty**: teaching atlas in progress — **not** clinical; **not** TA2-complete; **no finished-product claim**.

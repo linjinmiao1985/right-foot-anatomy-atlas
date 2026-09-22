@@ -43,6 +43,8 @@ interface ViewportProps {
   layerOpacities?: Record<Layer, number>;
   /** Teaching explode / 抽出 (0 assembled). */
   explodeAmount?: number;
+  /** Teaching quiz stub — hide hover names. */
+  quizMode?: boolean;
 }
 
 export default function Viewport({
@@ -62,6 +64,7 @@ export default function Viewport({
   hiddenStructureIds,
   layerOpacities,
   explodeAmount,
+  quizMode = false,
 }: ViewportProps) {
   return (
     <Canvas
@@ -100,6 +103,7 @@ export default function Viewport({
           hiddenStructureIds={hiddenStructureIds}
           layerOpacities={layerOpacities}
           explodeAmount={explodeAmount}
+          quizMode={quizMode}
         />
       </Suspense>
 

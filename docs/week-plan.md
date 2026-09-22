@@ -360,3 +360,7 @@ Cloud Agent **resumed**. Teaching ghost / 透视 UX (`G`) + digs **#90–#94**. 
 ## Day 4bn note (2026-09-21)
 
 Teaching explode / 抽出 UX (`E`) + digs **#95–#99**. Soft gaps **still dry**; **0** mesh wire. Census freeze unchanged (**129/124**). Next: keep mining CC0/BY; do **not** force-wire Andreassen/Henson/ScanTW-NC. **No finished-product claim.**
+
+## Day 4bo note (2026-09-22)
+
+Teaching quiz stub / 测验 UX (`Q`) + digs **#100–#107**. Soft gaps **still dry**; **0** mesh wire. Census freeze unchanged (**129/124**). Next: keep mining CC0/BY; do **not** force-wire Andreassen/Henson/ScanTW-NC. Teaching atlas in progress — **not** clinical; **not** TA2-complete; **no finished-product claim.**

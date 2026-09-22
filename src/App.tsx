@@ -54,6 +54,12 @@ import {
   isExplodeToggleKey,
   toggleExplodeAmount,
 } from './lib/layerExplode';
+import {
+  DEFAULT_QUIZ_MODE,
+  isQuizToggleKey,
+  quizDisplayNames,
+  toggleQuizMode,
+} from './lib/quizMode';
 
 function emptyLayerCounts(): Record<Layer, number> {
   return { bone: 0, muscle: 0, nerve: 0, vessel: 0, ligament: 0 };
@@ -106,8 +112,11 @@ function App() {
   const [explodeAmount, setExplodeAmount] = useState(() => {
     return loadTeachingPrefs()?.explodeAmount ?? DEFAULT_EXPLODE_AMOUNT;
   });
+  const [quizMode, setQuizMode] = useState(() => {
+    return loadTeachingPrefs()?.quizMode ?? DEFAULT_QUIZ_MODE;
+  });
 
-  // Persist teaching prefs (layers / label density / clip / camera / hidden / ghost / explode).
+  // Persist teaching prefs (layers / label density / clip / camera / hidden / ghost / explode / quiz).
   useEffect(() => {
     saveTeachingPrefs({
       visibleLayers: [...visibleLayers],
@@ -118,8 +127,9 @@ function App() {
       hiddenStructureIds: [...hiddenStructureIds],
       layerOpacities,
       explodeAmount,
+      quizMode,
     });
-  }, [visibleLayers, labelDensity, clipEnabled, clipConstant, cameraPresetId, hiddenStructureIds, layerOpacities, explodeAmount]);
+  }, [visibleLayers, labelDensity, clipEnabled, clipConstant, cameraPresetId, hiddenStructureIds, layerOpacities, explodeAmount, quizMode]);
 
   const handleCameraPresetChange = (id: CameraPresetId) => {
     setCameraPresetId(id);
@@ -273,6 +283,12 @@ function App() {
       if (isExplodeToggleKey(e.key)) {
         e.preventDefault();
         setExplodeAmount((prev) => toggleExplodeAmount(prev));
+        return;
+      }
+      // Quiz stub — Grypa-JJ quiz + MedicalPlab tutor→viewport habit (ideas only)
+      if (isQuizToggleKey(e.key)) {
+        e.preventDefault();
+        setQuizMode((prev) => toggleQuizMode(prev));
       }
     };
     window.addEventListener('keydown', handleKey);
@@ -337,10 +353,11 @@ function App() {
           {hiddenStructureIds.size > 0 ? ` · 已隐藏 ${hiddenStructureIds.size}` : ''}
           {isGhostLayerOpacities(layerOpacities) ? ' · 透视 (G)' : ''}
           {!isAssembledExplode(explodeAmount) ? ' · 抽出 (E)' : ''}
+          {quizMode ? ' · 测验 (Q)' : ''}
         </div>
       </div>
 
-      <StructureSearch onSelect={handleSearchSelect} clearSignal={searchClearSignal} />
+      {!quizMode && <StructureSearch onSelect={handleSearchSelect} clearSignal={searchClearSignal} />}
 
       <LayerToggles
         visibleLayers={visibleLayers}
@@ -375,6 +392,8 @@ function App() {
         onExplodeAmountChange={setExplodeAmount}
         onExplodePreset={() => setExplodeAmount(EXPLODE_PRESET_AMOUNT)}
         onAssemblePreset={() => setExplodeAmount(DEFAULT_EXPLODE_AMOUNT)}
+        quizMode={quizMode}
+        onQuizModeChange={setQuizMode}
       />
 
       <Viewport
@@ -394,6 +413,7 @@ function App() {
         hiddenStructureIds={hiddenStructureIds}
         layerOpacities={layerOpacities}
         explodeAmount={explodeAmount}
+        quizMode={quizMode}
       />
 
       <StructurePanel
@@ -412,6 +432,7 @@ function App() {
                 )
             : undefined
         }
+        quizMode={quizMode}
       />
 
       {hiddenStructureIds.size > 0 && (
@@ -439,13 +460,19 @@ function App() {
           </span>
           {[...hiddenStructureIds].map((id) => {
             const struct = structures.find((x) => x.id === id);
-            const label = struct?.nameZh ?? id;
+            const label = quizMode
+              ? quizDisplayNames(true, struct?.nameZh ?? id, struct?.nameLa ?? id).nameZh
+              : (struct?.nameZh ?? id);
             return (
               <button
                 key={id}
                 type="button"
                 onClick={() => setHiddenStructureIds((prev) => revealStructureId(prev, id))}
-                title={`恢复显示 Restore: ${struct?.nameLa ?? id}`}
+                title={
+                  quizMode
+                    ? '恢复显示 Restore hidden structure (quiz stub — name hidden)'
+                    : `恢复显示 Restore: ${struct?.nameLa ?? id}`
+                }
                 style={{
                   fontSize: '11px',
                   padding: '3px 8px',
@@ -497,7 +524,7 @@ function App() {
         }}
       >
         <div style={{ fontSize: '11px', color: '#666' }}>
-          提示: ?/H 快捷键 | 搜索 ZH/LA | 视角1–5 | 标签密度 | 矢状切面(lite) | G 透视/实心 | E 抽出/合拢 | 拖动旋转 | 滚轮缩放 | 右键平移 | 点击对焦 | I 隔离/退出 | X 隐藏此结构 | Esc 取消选择(不恢复已隐藏)
+          提示: ?/H 快捷键 | 搜索 ZH/LA | 视角1–5 | 标签密度 | 矢状切面(lite) | G 透视/实心 | E 抽出/合拢 | Q 测验/对照 | 拖动旋转 | 滚轮缩放 | 右键平移 | 点击对焦 | I 隔离/退出 | X 隐藏此结构 | Esc 取消选择(不恢复已隐藏)
         </div>
         <div
           style={{

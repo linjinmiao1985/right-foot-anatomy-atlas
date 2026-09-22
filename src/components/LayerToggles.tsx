@@ -61,6 +61,8 @@ interface LayerTogglesProps {
   onExplodeAmountChange: (amount: number) => void;
   onExplodePreset: () => void;
   onAssemblePreset: () => void;
+  quizMode: boolean;
+  onQuizModeChange: (on: boolean) => void;
 }
 
 /**
@@ -100,6 +102,8 @@ export default function LayerToggles({
   onExplodeAmountChange,
   onExplodePreset,
   onAssemblePreset,
+  quizMode,
+  onQuizModeChange,
 }: LayerTogglesProps) {
   const layers = getAllLayers();
   const ghostOn = isGhostLayerOpacities(layerOpacities);
@@ -503,6 +507,68 @@ export default function LayerToggles({
         </label>
         <div style={{ fontSize: '9px', color: '#777', marginTop: '4px', lineHeight: 1.35 }}>
           骨为锚，韧带/肌/血管/神经沿 +Y 分层。教学抽出，<strong>非</strong>手术剥离。
+        </div>
+      </div>
+
+      <div
+        style={{
+          marginBottom: '12px',
+          padding: '8px',
+          background: quizMode ? 'rgba(244, 114, 182, 0.12)' : 'rgba(68, 68, 68, 0.35)',
+          border: quizMode ? '1px solid rgba(244, 114, 182, 0.45)' : '1px solid #444',
+          borderRadius: '6px',
+        }}
+        role="group"
+        aria-label="教学测验 Quiz stub"
+        data-testid="teaching-quiz"
+        title="UX-borrow: Grypa-JJ quiz + MedicalPlab tutor→viewport (ideas only) — not Anki / exam"
+      >
+        <div style={{ fontSize: '11px', fontWeight: 600, color: '#d6d3d1', marginBottom: '6px' }}>
+          测验 · Quiz
+          <span style={{ fontWeight: 400, color: '#888', marginLeft: '6px' }}>Q</span>
+        </div>
+        <div style={{ display: 'flex', gap: '4px', marginBottom: '6px' }}>
+          <button
+            type="button"
+            data-quiz-on="true"
+            onClick={() => onQuizModeChange(true)}
+            aria-pressed={quizMode}
+            title="隐藏名称，按网格+图层识别（教学测验 stub，非考试）"
+            style={{
+              flex: 1,
+              padding: '3px 8px',
+              fontSize: '11px',
+              cursor: 'pointer',
+              borderRadius: '4px',
+              border: quizMode ? '1px solid #f9a8d4' : '1px solid #555',
+              background: quizMode ? 'rgba(244, 114, 182, 0.3)' : '#333',
+              color: quizMode ? '#fce7f3' : '#ccc',
+            }}
+          >
+            测验
+          </button>
+          <button
+            type="button"
+            data-quiz-off="true"
+            onClick={() => onQuizModeChange(false)}
+            aria-pressed={!quizMode}
+            title="显示名称（对照）"
+            style={{
+              flex: 1,
+              padding: '3px 8px',
+              fontSize: '11px',
+              cursor: 'pointer',
+              borderRadius: '4px',
+              border: !quizMode ? '1px solid #f9a8d4' : '1px solid #555',
+              background: !quizMode ? 'rgba(244, 114, 182, 0.3)' : '#333',
+              color: !quizMode ? '#fce7f3' : '#ccc',
+            }}
+          >
+            对照
+          </button>
+        </div>
+        <div style={{ fontSize: '9px', color: '#777', lineHeight: 1.35 }}>
+          隐藏中/拉名称与检索。教学测验 stub，<strong>非</strong> Anki / 考试 / 成品。
         </div>
       </div>
 

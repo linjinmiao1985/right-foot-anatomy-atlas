@@ -60,6 +60,8 @@ interface FootModelProps {
   layerOpacities?: Record<Layer, number>;
   /** Teaching explode / 抽出 amount (0 assembled). Missing → 0. */
   explodeAmount?: number;
+  /** Teaching quiz stub — hide hover names. */
+  quizMode?: boolean;
 }
 
 interface PlaceholderMesh {
@@ -254,7 +256,7 @@ const REAL_LIGAMENT_MODELS: Record<string, string> = {
   'dorsal_intercuneiform_ligaments': '/models/right-foot/by-sa/dorsal_intercuneiform_ligaments.glb',
 };
 
-export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName, isolateMode = false, visibleLigamentGroups, visibleNerveGroups, visibleVesselGroups, visibleMuscleGroups, labelDensity = DEFAULT_LABEL_DENSITY, hiddenStructureIds, layerOpacities, explodeAmount = DEFAULT_EXPLODE_AMOUNT }: FootModelProps) {
+export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName, isolateMode = false, visibleLigamentGroups, visibleNerveGroups, visibleVesselGroups, visibleMuscleGroups, labelDensity = DEFAULT_LABEL_DENSITY, hiddenStructureIds, layerOpacities, explodeAmount = DEFAULT_EXPLODE_AMOUNT, quizMode = false }: FootModelProps) {
   const ligGroups = visibleLigamentGroups ?? new Set(getAllLigamentGroupIds());
   const nerveGroups = visibleNerveGroups ?? new Set(getAllNerveGroupIds());
   const vesselGroups = visibleVesselGroups ?? new Set(getAllVesselGroupIds());
@@ -571,6 +573,7 @@ export default function FootModel({ visibleLayers, onMeshClick, selectedMeshName
                 <StructureHoverLabel
                   nameZh={structure.nameZh}
                   nameLa={structure.nameLa}
+                  quizMode={quizMode}
                   density={labelDensity}
                   borderColor={color}
                   footnote={
@@ -660,6 +663,7 @@ function RealBoneModel({
           <StructureHoverLabel
             nameZh={structure.nameZh}
             nameLa={structure.nameLa}
+            quizMode={quizMode}
             density={labelDensity}
             borderColor={color}
             footnote={<div style={{ fontSize: '0.7rem', color: '#00ff00', marginTop: '0.25rem' }}>BodyParts3D</div>}
@@ -754,6 +758,7 @@ function RealMuscleModel({
           <StructureHoverLabel
             nameZh={structure.nameZh}
             nameLa={structure.nameLa}
+            quizMode={quizMode}
             density={labelDensity}
             borderColor={color}
             footnote={
@@ -846,6 +851,7 @@ function RealVesselModel({
           <StructureHoverLabel
             nameZh={structure.nameZh}
             nameLa={structure.nameLa}
+            quizMode={quizMode}
             density={labelDensity}
             borderColor={color}
             footnote={
@@ -938,6 +944,7 @@ function RealNerveModel({
           <StructureHoverLabel
             nameZh={structure.nameZh}
             nameLa={structure.nameLa}
+            quizMode={quizMode}
             density={labelDensity}
             borderColor="rgba(255, 255, 0, 0.5)"
             style={{ boxShadow: '0 2px 8px rgba(0,0,0,0.3)', fontSize: '13px' }}
@@ -1036,6 +1043,7 @@ function RealLigamentModel({
           <StructureHoverLabel
             nameZh={structure.nameZh}
             nameLa={structure.nameLa}
+            quizMode={quizMode}
             density={labelDensity}
             borderColor={color}
             footnote={

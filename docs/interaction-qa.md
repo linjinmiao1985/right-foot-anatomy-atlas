@@ -194,3 +194,11 @@ If issues found during manual testing:
 - [x] Prefs persist `explodeAmount`; older localStorage envelopes without the field restore assembled 0
 - [x] Osteology stays the spatial anchor; covering layers peel along +Y
 - Honesty: **not** surgical dissection / clinical exposure / finished-product claim
+
+## Day 4bo addendum — teaching quiz stub / 测验
+
+- [x] Layer panel **测验 / 对照** (`data-quiz-on`, `data-quiz-off`, `data-testid="teaching-quiz"`)
+- [x] Key `Q` toggles quiz stub ↔ names (help overlay documents it)
+- [x] Prefs persist `quizMode`; older localStorage envelopes without the field restore quiz off
+- [x] Names, search, ontology IDs, and summaries hide while quiz is on; license / honesty chips stay
+- Honesty: **not** Anki / exam / finished-product claim

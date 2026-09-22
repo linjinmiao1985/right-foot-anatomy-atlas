@@ -70,6 +70,12 @@ export const KEYBOARD_HELP_GROUPS: ReadonlyArray<KeyboardShortcutGroup> = [
         labelEn: 'Toggle explode / assemble layers',
         note: 'Peel covering layers along +Y so the sandwich is readable — teaching 抽出, not surgical dissection (Air-Sage / Human Atlas explode habit — ideas only)',
       },
+      {
+        keys: 'Q',
+        labelZh: '测验 / 对照',
+        labelEn: 'Toggle quiz stub / names',
+        note: 'Hide names so students identify from mesh + layer — teaching quiz stub, not Anki / exam (Grypa-JJ / MedicalPlab habit — ideas only)',
+      },
     ],
   },
   {

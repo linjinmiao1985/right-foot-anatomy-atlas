@@ -16,6 +16,7 @@ import { DEFAULT_CLIP_CONSTANT, DEFAULT_CLIP_ENABLED, CLIP_CONSTANT_MIN } from '
 import { DEFAULT_CAMERA_PRESET } from './cameraPresets';
 import { defaultLayerOpacities, GHOST_LAYER_OPACITY } from './layerOpacity';
 import { DEFAULT_EXPLODE_AMOUNT, EXPLODE_PRESET_AMOUNT } from './layerExplode';
+import { DEFAULT_QUIZ_MODE } from './quizMode';
 
 describe('teachingPrefs', () => {
   beforeEach(() => {
@@ -37,6 +38,7 @@ describe('teachingPrefs', () => {
     expect(d.hiddenStructureIds).toEqual([]);
     expect(d.layerOpacities).toEqual(defaultLayerOpacities());
     expect(d.explodeAmount).toBe(DEFAULT_EXPLODE_AMOUNT);
+    expect(d.quizMode).toBe(DEFAULT_QUIZ_MODE);
   });
 
   it('parses valid prefs and clamps clip constant', () => {
@@ -57,6 +59,7 @@ describe('teachingPrefs', () => {
     expect(parsed!.hiddenStructureIds).toEqual(['talus', 'calcaneus']);
     expect(parsed!.layerOpacities).toEqual(defaultLayerOpacities());
     expect(parsed!.explodeAmount).toBe(DEFAULT_EXPLODE_AMOUNT);
+    expect(parsed!.quizMode).toBe(false);
   });
 
   it('rejects invalid shapes', () => {
@@ -95,6 +98,7 @@ describe('teachingPrefs', () => {
     expect(parsed!.hiddenStructureIds).toEqual([]); // missing → empty (compat)
     expect(parsed!.layerOpacities).toEqual(defaultLayerOpacities());
     expect(parsed!.explodeAmount).toBe(DEFAULT_EXPLODE_AMOUNT);
+    expect(parsed!.quizMode).toBe(false);
 
     const empty = parseTeachingPrefs({
       visibleLayers: [],
@@ -117,6 +121,7 @@ describe('teachingPrefs', () => {
       hiddenStructureIds: ['navicular', 'cuboid'] as const,
       layerOpacities: { ...GHOST_LAYER_OPACITY },
       explodeAmount: EXPLODE_PRESET_AMOUNT,
+      quizMode: true,
     };
     expect(
       saveTeachingPrefs({
@@ -125,6 +130,7 @@ describe('teachingPrefs', () => {
         hiddenStructureIds: [...prefs.hiddenStructureIds],
         layerOpacities: { ...prefs.layerOpacities },
         explodeAmount: prefs.explodeAmount,
+        quizMode: prefs.quizMode,
       }),
     ).toBe(true);
     const loaded = loadTeachingPrefs();
@@ -137,6 +143,7 @@ describe('teachingPrefs', () => {
       hiddenStructureIds: ['navicular', 'cuboid'],
       layerOpacities: { ...GHOST_LAYER_OPACITY },
       explodeAmount: EXPLODE_PRESET_AMOUNT,
+      quizMode: true,
     });
     const raw = window.localStorage.getItem(TEACHING_PREFS_STORAGE_KEY);
     expect(raw).toBeTruthy();
@@ -173,6 +180,7 @@ describe('teachingPrefs', () => {
     expect(loadTeachingPrefs()?.hiddenStructureIds).toEqual([]);
     expect(loadTeachingPrefs()?.layerOpacities).toEqual(defaultLayerOpacities());
     expect(loadTeachingPrefs()?.explodeAmount).toBe(DEFAULT_EXPLODE_AMOUNT);
+    expect(loadTeachingPrefs()?.quizMode).toBe(false);
   });
 
   it('parseHiddenStructureIds filters and dedupes', () => {

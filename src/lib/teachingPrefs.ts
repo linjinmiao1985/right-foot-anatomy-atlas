@@ -1,7 +1,8 @@
 /**
  * Persist teaching UI prefs in localStorage (layer visibility, label density,
  * sagittal clip on/off+position, last camera preset, per-structure hidden ids,
- * per-layer ghost/透视 opacity, teaching explode / 抽出 amount).
+ * per-layer ghost/透视 opacity, teaching explode / 抽出 amount,
+ * teaching quiz-mode stub).
  * UX-borrow (ideas only): Open Anatomy Studio local progress / favorites habit.
  * No third-party code copied.
  *
@@ -33,6 +34,7 @@ import {
   DEFAULT_EXPLODE_AMOUNT,
   parseExplodeAmount,
 } from './layerExplode';
+import { DEFAULT_QUIZ_MODE, parseQuizMode } from './quizMode';
 
 /** Bump when the stored shape changes incompatibly. */
 export const TEACHING_PREFS_VERSION = 1 as const;
@@ -51,6 +53,8 @@ export interface TeachingPrefs {
   layerOpacities: Record<Layer, number>;
   /** Teaching explode / 抽出 (0 assembled → 1 max peel). Missing → 0. */
   explodeAmount: number;
+  /** Teaching quiz-mode stub (hide names). Missing → false. */
+  quizMode: boolean;
 }
 
 interface TeachingPrefsEnvelope {
@@ -70,6 +74,7 @@ export function defaultTeachingPrefs(): TeachingPrefs {
     hiddenStructureIds: [],
     layerOpacities: defaultLayerOpacities(),
     explodeAmount: DEFAULT_EXPLODE_AMOUNT,
+    quizMode: DEFAULT_QUIZ_MODE,
   };
 }
 
@@ -113,10 +118,11 @@ export function parseTeachingPrefs(value: unknown): TeachingPrefs | null {
   }
   if (!isCameraPresetId(raw.cameraPresetId)) return null;
 
-  // hiddenStructureIds / layerOpacities / explodeAmount optional for backward compat
+  // hiddenStructureIds / layerOpacities / explodeAmount / quizMode optional for backward compat
   const hiddenStructureIds = parseHiddenStructureIds(raw.hiddenStructureIds);
   const layerOpacities = parseLayerOpacities(raw.layerOpacities);
   const explodeAmount = parseExplodeAmount(raw.explodeAmount);
+  const quizMode = parseQuizMode(raw.quizMode);
 
   return {
     visibleLayers,
@@ -127,6 +133,7 @@ export function parseTeachingPrefs(value: unknown): TeachingPrefs | null {
     hiddenStructureIds,
     layerOpacities,
     explodeAmount,
+    quizMode,
   };
 }
 

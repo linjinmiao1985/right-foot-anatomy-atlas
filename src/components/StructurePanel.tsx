@@ -10,6 +10,7 @@ import {
   formatFma,
   formatOntologyCopy,
 } from '../lib/ontologyIds';
+import { quizDisplayNames } from '../lib/quizMode';
 
 interface StructurePanelProps {
   structure: AnatomyStructure | null;
@@ -20,6 +21,8 @@ interface StructurePanelProps {
   structureHidden?: boolean;
   /** Toggle hide for the selected structure (undergravity dissection UX-borrow). */
   onToggleStructureHidden?: () => void;
+  /** Teaching quiz stub — hide names / summaries / ontology (Grypa-JJ habit). */
+  quizMode?: boolean;
 }
 
 export default function StructurePanel({
@@ -29,6 +32,7 @@ export default function StructurePanel({
   onToggleIsolate,
   structureHidden = false,
   onToggleStructureHidden,
+  quizMode = false,
 }: StructurePanelProps) {
   const [copyFlash, setCopyFlash] = useState(false);
 
@@ -54,11 +58,14 @@ export default function StructurePanel({
           结构信息 · Structure
         </div>
         <p style={{ fontSize: '12px', color: '#888', margin: 0, lineHeight: 1.55 }}>
-          点击网格或用搜索选择结构，查看中文/拉丁名、来源许可与可选本体论 ID（TA2 / FMA / BP）。
+          {quizMode
+            ? '测验 stub：点击网格识别结构（名称已隐藏）。教学自测，非考试。'
+            : '点击网格或用搜索选择结构，查看中文/拉丁名、来源许可与可选本体论 ID（TA2 / FMA / BP）。'}
           <br />
           <span style={{ color: '#666' }}>
-            Click a mesh or use search — panel shows names, license, and sparse ontology IDs when
-            cited.
+            {quizMode
+              ? 'Quiz stub: click a mesh to identify — names hidden. Teaching self-test, not an exam.'
+              : 'Click a mesh or use search — panel shows names, license, and sparse ontology IDs when cited.'}
           </span>
         </p>
       </div>
@@ -72,6 +79,7 @@ export default function StructurePanel({
   const showOntology = hasOntologyIds(ontology);
   const ontologyEmpty = getHonestOntologyEmptyReason(structure.id);
   const honesty = getSchematicHonesty(structure.id, structure.placeholder, structure.layer);
+  const displayNames = quizDisplayNames(quizMode, structure.nameZh, structure.nameLa);
   const sourceChipBg =
     provenance.license === 'placeholder'
       ? '#f59e0b'
@@ -110,7 +118,7 @@ export default function StructurePanel({
       }}
     >
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '12px' }}>
-        <h3 style={{ fontSize: '18px', fontWeight: 600, color: '#e0e0e0', margin: 0 }}>{structure.nameZh}</h3>
+        <h3 style={{ fontSize: '18px', fontWeight: 600, color: '#e0e0e0', margin: 0 }}>{displayNames.nameZh}</h3>
         <button
           onClick={onClose}
           style={{
@@ -127,9 +135,18 @@ export default function StructurePanel({
         </button>
       </div>
 
-      <p style={{ fontSize: '13px', color: '#aaa', fontStyle: 'italic', marginBottom: '12px' }}>{structure.nameLa}</p>
+      <p style={{ fontSize: '13px', color: '#aaa', fontStyle: 'italic', marginBottom: '12px' }}>{displayNames.nameLa}</p>
 
-      {showOntology && ontology ? (
+      {quizMode && (
+        <p
+          data-testid="teaching-quiz-panel-note"
+          style={{ fontSize: '11px', color: '#f9a8d4', margin: '0 0 12px', lineHeight: 1.5 }}
+        >
+          测验 stub：名称 / 摘要 / 本体论已隐藏。对照（Q）后查看。教学自测，非考试。
+        </p>
+      )}
+
+      {!quizMode && (showOntology && ontology ? (
         <div
           style={{
             marginBottom: '12px',
@@ -235,7 +252,7 @@ export default function StructurePanel({
             )}
           </p>
         </div>
-      )}
+      ))}
 
       <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '10px', flexWrap: 'wrap' }}>
         <div
@@ -460,9 +477,11 @@ export default function StructurePanel({
         )}
       </div>
 
+      {!quizMode && (
       <p style={{ fontSize: '14px', lineHeight: '1.6', color: '#ccc', margin: 0 }}>{structure.summaryZh}</p>
+      )}
 
-      {meshNote && (
+      {!quizMode && meshNote && (
         <p
           style={{
             fontSize: '12px',
