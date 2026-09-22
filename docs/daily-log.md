@@ -2225,7 +2225,7 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 
 **Commit**: `Day 4cv: JOURNAL METHODS POLISH - docs/methods.md enhanced limitations table (soft-tissue open-data ceiling + per-landmark Kabsch residuals + NC rejects) + license matrix (main tree CC BY/CC0 vs BY-SA isolate vs rejected) + cloud-agent-handback refresh`
 
-**Push**: SHA `<pending>`
+**Push**: SHA `e136253`
 
 **Summary**: Methods polish completed per Week 2 checkpoint next goals. Enhanced limitations table (soft-tissue open-data ceiling row + per-landmark Kabsch residuals + NC rejects + grouped DI/MTA reality); added license matrix (6-row × 3-col: main tree 53/124 vs BY-SA 71/124 vs rejected with NC/unclear/spatial-QA-fail rationale). Soft digs watch-only (0 new). Cloud-agent-handback refreshed. Gates green. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
 
