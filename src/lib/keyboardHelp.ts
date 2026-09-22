@@ -97,10 +97,10 @@ export const KEYBOARD_HELP_GROUPS: ReadonlyArray<KeyboardShortcutGroup> = [
       },
       {
         keys: 'Esc',
-        labelZh: '取消选择 · 退出隔离 · 清空搜索',
-        labelEn: 'Clear selection, isolate, search',
+        labelZh: '取消选择 · 退出隔离 · 清空搜索 / 失焦',
+        labelEn: 'Clear selection, isolate, search / blur',
         note:
-          'Closes help first if open. Does NOT clear per-structure hides (X) — those persist in localStorage; use chip bar / Restore all',
+          'Closes help first if open. In search box: clears query (1st press), then blurs input (2nd). Global: clears selection + isolate. Does NOT clear per-structure hides (X) — use chip bar / Restore all',
       },
     ],
   },

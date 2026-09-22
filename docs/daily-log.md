@@ -1677,3 +1677,23 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 6. **Honesty**: teaching atlas in progress — **not** clinical; **not** TA2-complete; **no finished-product claim**.
 
 **Outcome**: Census unchanged (**129/124**; ontology **126/129**). **0** meshes wire / **0** SA spam. BY-SA license chip bilingual polish added. All gates PASSED. Day 4ca complete.
+
+## Day 4cb (2026-09-22) — Search Escape key clears query + blurs input (keyboard help updated)
+
+**Target**: Complete Day 4cb with ONE teaching quality polish from two options (Escape clears search query + blurs input with keyboard help update / empty-selection bilingual tip in StructurePanel). Chose option 1: Escape key polish. Daily-log Day 4cb; skip mesh dig; vitest run; integrity-audit; build; commit; push. No finished-product claims.
+
+1. Continued on `cursor/week2-day4bm-ghost-opacity-096e` (Day 4ca tip @ 760652c).
+2. **Teaching quality polish** (option 1): **Search Escape key clears query + blurs input** — improved standard search UX pattern:
+   - Added `onKeyDown` handler to search input in `StructureSearch.tsx`: first Escape press clears query if present, second press blurs input (with `stopPropagation` to prevent global handler)
+   - Updated keyboard help (`keyboardHelp.ts`) Escape shortcut label: "取消选择 · 退出隔离 · 清空搜索 / 失焦" (added "/ 失焦" suffix)
+   - Updated keyboard help Escape note: clarified search box behavior ("In search box: clears query (1st press), then blurs input (2nd)")
+   - Standard search field UX: in-field Escape handling before global shortcuts
+3. **Mesh dig**: **Skipped** — CC0/BY ceiling acknowledged after comprehensive search Day 4bo–4bs (dig #100–#135).
+4. **Gates**: Run full gates WITHOUT piping to head:
+   - `npx vitest run` → **127/127 PASSED** (19 test files)
+   - `python3 scripts/integrity-audit.py` → **PASSED** (129 structures / 134 GLBs / 0 violations)
+   - `npm run build` → **OK** (dist built 3.49s)
+5. **Checks**: daily-log Day 4cb updated; commit + push same PR branch.
+6. **Honesty**: teaching atlas in progress — **not** clinical; **not** TA2-complete; **no finished-product claim**.
+
+**Outcome**: Census unchanged (**129/124**; ontology **126/129**). **0** meshes wire / **0** SA spam. Search Escape key polish added (standard UX pattern). All gates PASSED. Day 4cb complete.

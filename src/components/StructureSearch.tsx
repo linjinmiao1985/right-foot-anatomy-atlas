@@ -54,6 +54,19 @@ export default function StructureSearch({ onSelect, clearSignal = 0 }: Structure
           // delay so click on result registers
           window.setTimeout(() => setOpen(false), 150);
         }}
+        onKeyDown={(e) => {
+          // Escape: clear query if present, else blur (standard search UX)
+          if (e.key === 'Escape') {
+            if (query.trim()) {
+              setQuery('');
+              setOpen(false);
+            } else {
+              e.currentTarget.blur();
+            }
+            e.preventDefault();
+            e.stopPropagation();
+          }
+        }}
         style={{
           width: '100%',
           boxSizing: 'border-box',
