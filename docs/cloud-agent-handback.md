@@ -28,11 +28,11 @@ Henson Sheffield **Option A** one-subject MC POC completed (`Aug_8`): surfaces O
 
 # Cloud Agent handback — Phase 8 resume brief
 
-**Date**: 2026-09-22 · Day **4dd** (Week 2 SPARSE SOFT WATCH + WEEK HANDOFF note)  
+**Date**: 2026-09-22 · Day **4de** (Week 2 TEACHING SCREENSHOTS for journal captions)  
 **Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3)  
-**HEAD tip**: `f56dbc2` (Day 4dc: finalize daily-log SHA — link journal captions)  
-**Status**: Week 2 journal-readiness handoff complete (methods limitations+license matrix; expert-checklist v3; journal-figure-captions; README sync; soft digs #147–#173 watch-only DRY); teaching-grade atlas **in progress** — **not** a finished-product claim  
-**Companion**: `docs/phase-8-self-review.md` (Week 2 quality checkpoint Day 4cu + journal-readiness handoff Day 4cv–4dd added), `docs/cc0-soft-tissue-watchlist.md`, `third_party/andreassen/`, `docs/week2-soft-ceiling-memo.md`, `docs/methods.md` (Day 4cv polish + Day 4da ontology gaps row + Day 4dc journal captions link), `docs/expert-review-checklist.md` (Day 4cw v3.0), `README.md` (Day 4cx Limitations sync + Day 4dc journal captions link), `src/lib/assetProvenance.ts` (Day 4cy footer census hint), `docs/journal-figure-captions.md` (Day 4db bilingual teaching figure stubs), `docs/open-anatomy-learning-log.md` (Day 4dd sparse watch digs #171–#173 DRY)
+**HEAD tip**: `3ea7d94` (Day 4dd: finalize daily-log SHA — sparse soft watch + week handoff)  
+**Status**: Teaching screenshots captured (12 shots incl. 3 NEW Week 2: ghost opacity / explode / ghost+explode combined); linked from journal-figure-captions.md (Figures 1–3); teaching-grade atlas **in progress** — **not** a finished-product claim  
+**Companion**: `docs/phase-8-self-review.md` (Week 2 quality checkpoint Day 4cu + journal-readiness handoff Day 4cv–4dd), `docs/screenshots/` (**12 PNG** Day 4de: bones/layers/ghost/explode teaching modes), `docs/journal-figure-captions.md` (Day 4db + Day 4de screenshot links), `scripts/screenshot-pipeline.mjs` (Day 4de enhanced: ghost/explode shots), `docs/open-anatomy-learning-log.md` (soft digs #147–#173 DRY), other Week 2 docs
 
 ---
 

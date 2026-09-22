@@ -2628,3 +2628,76 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 **Summary**: Week 2 journal-readiness handoff complete. Sparse soft watch digs #171–#173 (3 NEW; all DRY — no new CC0/BY per-toe DI, lumbricals, per-ray MTA meshes). Added comprehensive Week 2 journal-readiness handoff blurb to phase-8-self-review.md (new subsection Day 4cv–4dd: methods limitations table + license matrix; expert-review-checklist v3.0; journal-figure-captions 7 bilingual stubs; README Limitations + Documentation links; StructurePanel/footer census hint; soft digs #171–#173 sparse DRY; verification gates green; census unchanged; bottom line teaching atlas in progress). Cloud-agent-handback.md summary added (concise Week 2 journal polish recap). Learning-log appended digs #171–#173. Soft-ceiling reconfirmed through #173 (27 watch digs total #147–#173; 0 new CC0/BY soft meshes). Gates green. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
 
 ---
+
+## Day 4de — TEACHING SCREENSHOTS for journal captions (2026-09-22)
+
+**Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3)
+**Goals**: (1) After npm build/preview, capture at least 3 teaching screenshots matching `docs/journal-figure-captions.md` (prefer: bones overview; layers/ghost; explode). Save under `docs/screenshots/` with stable names; link them from journal-figure-captions.md. If headless capture blocked, document exact command path — no fake images. (2) Soft-tissue WATCH ONLY. (3) Refresh cloud-agent-handback tip to 3ea7d94 / Day 4dd.
+
+### Teaching screenshots captured (12 PNG)
+
+**Script**: `scripts/screenshot-pipeline.mjs` (enhanced Day 4de to add ghost/explode shots)
+
+**Enhancement**: Added 3 NEW shot functions:
+- `setGhostPreset(page)`: triggers `G` keyboard preset (ghost opacity Day 4bm)
+- `setExplodePreset(page)`: triggers `E` keyboard preset (explode Day 4bn)
+- Combined: ghost + explode teaching modes
+
+**12 shots generated** (Day 4de; `npm run build && npm run screenshots`):
+
+1. `01-default-all-layers.png`: Default view — all teaching layers on
+2. `02-bone-only.png`: **Bone layer only (default oblique)** → **linked from journal-figure-captions.md Figure 1**
+3. `03-muscle-only.png`: Muscle layer only (intrinsics + extrinsics teaching set)
+4. `04-nerve-bysa.png`: Nerve layer only — BY-SA isolate visible in panel/legend
+5. `05-clip-lite.png`: Sagittal clip lite on (teaching cutaway, not clinical MPR)
+6. `06-bone-dorsal.png`: Bone only — dorsal preset (+Z)
+7. `07-bone-plantar.png`: Bone only — plantar preset (−Z); sole teaching view
+8. `08-bone-medial.png`: Bone only — medial preset (+X / hallux side)
+9. `09-all-lateral.png`: All layers — lateral preset (−X); multi-view expand
+10. **`10-ghost-opacity.png`** (NEW Day 4de): **Ghost opacity preset** (`G` key) — muscle layers semi-transparent over bones (teaching mode Day 4bm) → **linked from journal-figure-captions.md Figure 2**
+11. **`11-explode-separation.png`** (NEW Day 4de): **Explode spatial separation** (`E` key) — layers separated +Y for teaching sandwich visibility (Day 4bn) → **linked from journal-figure-captions.md Figure 3**
+12. **`12-ghost-explode-combined.png`** (NEW Day 4de): Ghost + Explode combined — semi-transparent separated layers (teaching modes combined)
+
+**Manifest**: `docs/screenshots/manifest.json` updated (generatedAt: 2026-09-22T05:09:18.531Z; 12 shots)
+
+**Total size**: 108 KB (12 PNG files ≈5.8 KB each; headless Chrome 1440×900 viewport)
+
+### Journal figure captions linked (3 screenshots)
+
+**File**: `docs/journal-figure-captions.md` (updated Day 4de)
+
+- **Figure 1: Bones Overview** → `screenshots/02-bone-only.png` (Bone layer only — default oblique)
+- **Figure 2: Layer Toggles / Ghost Opacity** → `screenshots/10-ghost-opacity.png` (Ghost opacity preset — muscle layers semi-transparent over bones; teaching mode Day 4bm)
+- **Figure 3: Explode / 抽出 (Spatial Separation)** → `screenshots/11-explode-separation.png` (Explode spatial separation — layers separated +Y for teaching sandwich visibility; Day 4bn)
+
+**Screenshot references format**: `**Screenshot**: screenshots/<filename>.png (<note>)` appended after bilingual captions
+
+### Screenshots README updated
+
+**File**: `docs/screenshots/README.md` (updated Day 4de)
+
+- Pack now **12 shots** (Day 4de; was 9 shots Day 4an)
+- Added note about Week 2 teaching modes (`10`–`12`: ghost opacity Day 4bm / explode Day 4bn / ghost+explode combined)
+- Ghost and explode shots use `G` and `E` keyboard presets (teaching prefs persist in localStorage)
+- Cross-link to `docs/journal-figure-captions.md` (Figures 1–3: bones overview, layers/ghost, explode)
+
+### Soft-tissue: WATCH ONLY
+- **0** new digs — screenshot capture did NOT uncover obvious new CC0/BY soft hit; no dig appended (watch-only).
+
+### Docs refresh
+- **cloud-agent-handback**: updated tip SHA to 3ea7d94 / Day 4dd; date Day 4de (TEACHING SCREENSHOTS for journal captions); added `docs/screenshots/` (12 PNG Day 4de) + `scripts/screenshot-pipeline.mjs` (enhanced) to Companion list.
+
+### Gates (green)
+- `npm test -- --run`: **138/138** passed (19 test files)
+- `python3 scripts/integrity-audit.py`: **0** violations (129 structures / 134 GLBs)
+- `npm run build`: ✓ (dist built; 1.2 MB chunk size warning expected)
+
+**Census**: unchanged (129/124 entries/unique; 126/129 ontology citable; 53 main-tree / 71 BY-SA; 134 GLB on-disk)
+
+**Commit**: `Day 4de: TEACHING SCREENSHOTS for journal captions - enhanced screenshot-pipeline.mjs to add 3 NEW ghost/explode shots (10-ghost-opacity G-key Day 4bm; 11-explode-separation E-key Day 4bn; 12-ghost-explode-combined) + npm run screenshots generated 12 PNG (108 KB; headless Chrome 1440x900) + linked screenshots/02-bone-only, 10-ghost-opacity, 11-explode-separation from journal-figure-captions.md Figures 1-3 (bones overview / layers-ghost / explode) + screenshots/README updated (12 shots Day 4de; Week 2 teaching modes note) + cloud-agent-handback refresh`
+
+**Push**: SHA `<pending>`
+
+**Summary**: Teaching screenshots for journal captions captured. Enhanced `scripts/screenshot-pipeline.mjs` with 3 NEW shot functions for Week 2 teaching modes (ghost opacity `G` Day 4bm; explode separation `E` Day 4bn; ghost+explode combined). Ran `npm run build && npm run screenshots` successfully (headless Chrome; 12 PNG files generated 2026-09-22T05:09:18.531Z; 108 KB total; ≈5.8 KB each). Linked 3 screenshots from `docs/journal-figure-captions.md` Figures 1–3: (1) bones overview → screenshots/02-bone-only.png; (2) layers/ghost opacity → screenshots/10-ghost-opacity.png; (3) explode separation → screenshots/11-explode-separation.png. Updated `docs/screenshots/README.md` (12 shots Day 4de; Week 2 teaching modes note; journal-captions cross-link). Soft digs watch-only (0 new). Cloud-agent-handback refreshed. Gates green. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+---

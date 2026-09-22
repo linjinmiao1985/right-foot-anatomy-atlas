@@ -12,6 +12,8 @@
 
 **English**: Right foot skeletal overview (26 bones; CC BY 4.0 BodyParts3D / CC0 UM). 7 tarsals (calcaneus, talus, navicular, cuboid, 3 cuneiforms) + 5 metatarsals + 13 phalanges + sesamoids (1st MTP). Teaching visualization grade; not surgical registration / patient-specific modeling.
 
+**Screenshot**: `screenshots/02-bone-only.png` (Bone layer only — default oblique)
+
 ---
 
 ## Figure 2: Layer Toggles / Ghost Opacity (Teaching UX)
@@ -20,6 +22,8 @@
 
 **English**: Layer toggle panel with **ghost / 透视** feature (`G` hotkey; per-layer opacity 0.0–1.0). Superficial soft tissue can fade so underlying osteology remains visible (teaching mode). Teaching prefs persist (localStorage); not clinical X-ray / fluoroscopy. Census: ≈53/124 unique main-tree (CC BY/CC0) vs ≈71/124 unique BY-SA isolate.
 
+**Screenshot**: `screenshots/10-ghost-opacity.png` (Ghost opacity preset — muscle layers semi-transparent over bones; teaching mode Day 4bm)
+
 ---
 
 ## Figure 3: Explode / 抽出 (Spatial Separation)
@@ -27,6 +31,8 @@
 **中文**: **explode / 抽出** 功能（`E` 热键；每层 +Y 空间分离 0–50 mm）。覆盖层剥离，使夹层可读（教学 3D 解剖演示）；非手术解剖。教学用偏好持久化；非固定标本拍摄。
 
 **English**: **Explode / 抽出** feature (`E` hotkey; per-layer +Y spatial separation 0–50 mm). Superficial layers peel apart so layer sandwich is readable (teaching 3D anatomy demo); not surgical dissection. Teaching prefs persist; not fixed-specimen photography.
+
+**Screenshot**: `screenshots/11-explode-separation.png` (Explode spatial separation — layers separated +Y for teaching sandwich visibility; Day 4bn)
 
 ---
 
