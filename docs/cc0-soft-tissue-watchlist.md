@@ -253,3 +253,17 @@ Watchlist still tracks where a true **CC0/BY** soft find would matter. Day **4bn
 | Cloud Agent | **Continued** this pass |
 
 Watchlist still tracks where a true **CC0/BY** soft find would matter. Day **4bo** confirms soft gaps remain **dry**. Handback: `docs/cloud-agent-handback.md`. Teaching atlas in progress — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+
+## Day 4br dig summary (2026-09-22)
+
+| Check | Result |
+|-------|--------|
+| New CC0/BY soft packs for DI / per-ray MTA / nerves / ligaments / gastroc-soleus | **None** — #122 OpenGameArt CC0 **skin** only; #123/#124 ScanTW NC re-verify; #125 Grant bones only; #126 VH/OpenSim **blocked**/opaque |
+| Gastroc/soleus | No new belly surface; Andreassen/Henson still **blocked** |
+| Tempting false leads | OpenGameArt outer-foot CC0 (not named anatomy); Sketchfab BodyParts3D foot dorsal (license unstated); Zenodo 1056750 **PDF** nerve diagram |
+| Teaching polish | Quiz mode **honesty banner** (`App.tsx`) — teaching self-test stub, **not** Anki / exam |
+| Andreassen / Utah / Hensen wire | **Skipped** / not re-opened / **0** wire |
+| Cloud Agent | **Continued** this pass |
+
+Watchlist still tracks where a true **CC0/BY** soft find would matter. Day **4br** confirms soft gaps remain **dry**. Teaching atlas in progress — **not** clinical; **not** TA2-complete; **not** a finished product.

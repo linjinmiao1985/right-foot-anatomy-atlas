@@ -1553,3 +1553,23 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 4. Soft gaps **still dry**. Census unchanged (**129/124**; ontology **126/129**). **0** mesh wire / **0** SA spam.
 5. Checks: integrity-audit + vitest + build; commit + push.
 6. **Honesty**: teaching atlas in progress — **not** clinical; **not** TA2-complete; **no finished-product claim**.
+
+## Day 4br (2026-09-22) — Quiz honesty banner + dig #122–#126 (0 wire)
+
+**Target**: Continue Week 2 quality sprint. Soft dig **#122+** (NEW license-verified CC0/CC BY only for DI / per-ray MTA / nerves / ligaments / gastroc-soleus). If dry → teaching UX polish from expert-review not yet done. **0** mesh wire; **no** force-wire blocked sources.
+
+1. Continued on `cursor/week2-day4bm-ghost-opacity-096e` (Day 4bo tip).
+2. **Digs #122–#126**: 
+   - #122 OpenGameArt byzmod3d foot **CC0** — external skin-surface `.obj` (~14 KB), **not** named DI/MTA/NV (**reject** soft)
+   - #123 ScanTW Zenodo 20228270 **NC-SA** — united muscle CT GLB (**reject** NC, same as #84/#90/#100/#101)
+   - #124 ScanTW Zenodo 20207804 **NC-SA** — muscle+tendon (**reject** NC)
+   - #125 Grant Zenodo 3464747 **CC BY** — bone SSM STLs only (**reject** soft; reconfirm #55)
+   - #126 VH/OpenSim — VH gastroc/soleus Kabsch **FAIL** Day 4az+4ba (**blocked**); SimTK license **opaque** (**monitor**)
+   - Also checked: Sketchfab foot dorsal (license unclear); Zenodo 1056750 (**PDF** only); MSD viewer (view-only); NIH Printables (**bones** only)
+3. **Soft gaps still dry** → **0 mesh wire**. Andreassen/Henson/Utah **not** re-opened.
+4. **Teaching polish** (dig dry): Quiz mode **honesty banner** (`App.tsx`) — fixed banner below title when `quizMode` active; explains teaching self-test (hide names/search/ontology), **not** Anki/exam; press **Q** to restore. Parallels ligament/nerve/vessel/muscle incomplete banners. Expert-review checklist §C reminder fulfilled.
+5. **Checks**: integrity-audit **PASSED** (129 / 134 GLBs / 0 violations); vitest **124/124**; build **OK**.
+6. **Docs**: watchlist + learning-log Day 4br; this log; commit + push same PR branch.
+7. **Honesty**: teaching atlas in progress — **not** clinical; **not** TA2-complete; **no finished-product claim**.
+
+**Outcome**: Census unchanged (**129/124**; ontology **126/129**). **0** meshes integrated; **0** SA spam. Soft gaps (DI / per-ray MTA / NV / ligaments / gastroc-soleus) remain **dry** after dig #122–#126.

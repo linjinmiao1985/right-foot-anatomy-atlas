@@ -1590,3 +1590,46 @@ Continue Week 2 sprint after Day 4bn explode UX. License-verified soft dig **#10
 - Census unchanged (**129/124**; ontology **126/129**).
 - **0** meshes integrated; **0** SA spam; Andreassen/Henson/Utah **not** force-wired.
 - Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+
+## Session additions (2026-09-22 · Day 4br — quiz honesty banner + dig #122–#126)
+
+### Context
+
+Continue Week 2 sprint after Day 4bo quiz stub. Soft dig **#122–#126**. Soft gaps **still dry**. **0** mesh wire. Teaching **quiz honesty banner** (UX polish from expert-review checklist) because no CC0/BY elemental soft mesh appeared. Teaching-grade atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+### Teaching polish (ONE UX honesty — dig stayed dry)
+
+| Change | Detail |
+|--------|--------|
+| **Quiz mode honesty banner** | When `quizMode` active, fixed banner below title explains: teaching self-test (hide ZH/LA names + search + ontology); **not** Anki / exam / finished product; press **Q** to restore. Located `App.tsx` top-left under title bar. |
+| Source | Expert-review checklist §C teaching UX gate reminder (quiz stub needs honesty like ligament/nerve/vessel/muscle incomplete banners); parallels ligament/nerve incomplete banners in `LayerToggles` |
+| Files | `src/App.tsx` |
+| Honesty | Teaching classroom self-test chrome — **not** Anki / spaced-repetition / standardized exam |
+
+### NEW license-verified projects (≥5; #122–#126)
+
+| # | Project | URL / DOI | License verified | Foot relevance | Decision |
+|---|---------|-----------|------------------|----------------|----------|
+| **122** | **OpenGameArt Human Foot 3D Model** (byzmod3d) | https://opengameart.org/content/human-foot-3d-model | **CC0** page license box verified 2026-09-22; `.obj` external foot-surface model (~14 KB) | External **skin**-surface foot for game dev — **not** named DI/MTA/NV teaching anatomy | **reject** soft (monitor for UX skin-surface only) |
+| **123** | **Scan-the-World — Muscles of the foot and ankle** (Zenodo 20228270) | DOI **10.5281/zenodo.20228270** | Zenodo API `license.id` = **cc-by-nc-sa-4.0** re-verified Day **4br** (same as Day **4bo** #100) | United right-foot/ankle muscle CT GLB — tempting but **NC** blocks main-tree | **reject** (NC). Same lineage as #84/#90/#100/#101 |
+| **124** | **Scan-the-World — Muscle and tendon structure of a foot** (Zenodo 20207804) | DOI **10.5281/zenodo.20207804** | Zenodo API `license.id` = **cc-by-nc-sa-4.0** verified Day **4br** | Right-foot muscle+tendon — same Scan-the-World CT NC family as #123 | **reject** (NC) |
+| **125** | **Grant et al. foot bone SSMs** (Zenodo 3464747) | DOI **10.5281/zenodo.3464747** | **CC BY 4.0** Zenodo API verified Day **4br** (reconfirm of Day 4ay #55) | MRI talus/calcaneus/midfoot/1st MT STL point-clouds — bones only, **0** soft | **reject** soft (monitor bones; already covered in #55) |
+| **126** | **Visible Human / OpenSim foot-ankle MSK models** (DU Digital Commons / SimTK) | DU CC BY 4.0 (Day 4az+4ba **blocked**) · SimTK license unclear (Day 4bb) | VH gastroc/soleus Kabsch **FAIL** Day 4az+4ba; OpenSim foot-anklemodel page "License: Model" **opaque** (SimTK) | VH bellies: Andreassen alignment **blocked** after LE trials; OpenSim 36-lig model: license opaque | **blocked** (VH) / **monitor** (OpenSim). Do **not** wire |
+
+**Also checked (not re-numbered)**: Sketchfab "Foot Dorsal M." (BodyParts3D-based but license **not stated** in search result — reject unclear); AnatomyZone / Kenhub (teaching refs, not downloadable licensed meshes); Zenodo 1056750 nerve model (Day 1 known **CC BY PDF** diagram only, not 3D GLB); MSD 3D model nerve/artery viewer (view-only); NIH Printables left-foot CT bones (**CC BY** but bones only; orig. MySegmenter). **No** fresh CC0/BY elemental foot DI / per-ray MTA / nerve / ligament / belly pack this pass.
+
+### Soft-gap check
+
+| Gap | Day 4br |
+|-----|---------|
+| DI / per-ray MTA / nerve·ligament CC0/BY | **Still dry** — #122 skin only; #123/#124 NC; #125 bones only; #126 blocked/opaque |
+| Gastroc/soleus | Andreassen + Henson still **blocked**; no new CC0/BY belly surface pack this pass |
+| Utah Hive | Still **reject** — not re-opened |
+
+### Outcome
+
+- Learning log **#122–#126** (includes Day 4br digs); quiz honesty banner live; watchlist / handback / daily-log / week-plan Day 4br.
+- Census unchanged (**129/124**; ontology **126/129**).
+- **0** meshes integrated; **0** SA spam; Andreassen/Henson/Utah **not** force-wired.
+- Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.

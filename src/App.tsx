@@ -359,6 +359,34 @@ function App() {
 
       {!quizMode && <StructureSearch onSelect={handleSearchSelect} clearSignal={searchClearSignal} />}
 
+      {quizMode && (
+        <div
+          role="status"
+          style={{
+            position: 'fixed',
+            top: '80px',
+            left: '20px',
+            maxWidth: '360px',
+            padding: '10px 14px',
+            background: 'rgba(251, 146, 60, 0.12)',
+            border: '1px solid rgba(251, 146, 60, 0.45)',
+            borderRadius: '6px',
+            color: '#fdba74',
+            fontSize: '11px',
+            lineHeight: 1.5,
+            zIndex: 105,
+            boxShadow: '0 2px 8px rgba(0,0,0,0.2)',
+          }}
+          title="Teaching quiz-mode stub — not Anki / exam"
+        >
+          <strong>ℹ️ 测验模式 · Quiz Stub</strong>
+          <div style={{ marginTop: '4px' }}>
+            教学自测：隐藏名称/搜索/本体编码,仅通过网格+图层识别结构。<strong>非</strong> Anki /
+            正式考试 / 完整产品。按 <code style={{ background: 'rgba(251,146,60,0.2)', padding: '1px 4px', borderRadius: '3px' }}>Q</code> 恢复对照。
+          </div>
+        </div>
+      )}
+
       <LayerToggles
         visibleLayers={visibleLayers}
         onToggle={handleLayerToggle}
