@@ -115,8 +115,7 @@ function App() {
     return loadTeachingPrefs()?.layerOpacities ?? defaultLayerOpacities();
   });
   const [masterGhostOpacity, setMasterGhostOpacity] = useState(() => {
-    const loaded = loadTeachingPrefs()?.layerOpacities;
-    return loaded ? inferMasterGhostOpacity(loaded) : DEFAULT_MASTER_GHOST_OPACITY;
+    return loadTeachingPrefs()?.masterGhostOpacity ?? DEFAULT_MASTER_GHOST_OPACITY;
   });
   const [explodeAmount, setExplodeAmount] = useState(() => {
     return loadTeachingPrefs()?.explodeAmount ?? DEFAULT_EXPLODE_AMOUNT;
@@ -141,7 +140,7 @@ function App() {
     return undefined;
   }, []);
 
-  // Persist teaching prefs (layers / label density / clip / camera / hidden / ghost / explode / quiz).
+  // Persist teaching prefs (layers / label density / clip / camera / hidden / ghost / explode / quiz / masterGhostOpacity).
   useEffect(() => {
     saveTeachingPrefs({
       visibleLayers: [...visibleLayers],
@@ -153,8 +152,9 @@ function App() {
       layerOpacities,
       explodeAmount,
       quizMode,
+      masterGhostOpacity,
     });
-  }, [visibleLayers, labelDensity, clipEnabled, clipConstant, cameraPresetId, hiddenStructureIds, layerOpacities, explodeAmount, quizMode]);
+  }, [visibleLayers, labelDensity, clipEnabled, clipConstant, cameraPresetId, hiddenStructureIds, layerOpacities, explodeAmount, quizMode, masterGhostOpacity]);
 
   const handleCameraPresetChange = (id: CameraPresetId) => {
     setCameraPresetId(id);

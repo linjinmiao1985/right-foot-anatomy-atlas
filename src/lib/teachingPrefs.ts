@@ -29,6 +29,8 @@ import {
 import {
   defaultLayerOpacities,
   parseLayerOpacities,
+  DEFAULT_MASTER_GHOST_OPACITY,
+  clampMasterGhostOpacity,
 } from './layerOpacity';
 import {
   DEFAULT_EXPLODE_AMOUNT,
@@ -55,6 +57,8 @@ export interface TeachingPrefs {
   explodeAmount: number;
   /** Teaching quiz-mode stub (hide names). Missing → false. */
   quizMode: boolean;
+  /** Master ghost opacity multiplier (scales all non-bone layers). Missing → 1. */
+  masterGhostOpacity: number;
 }
 
 interface TeachingPrefsEnvelope {
@@ -75,6 +79,7 @@ export function defaultTeachingPrefs(): TeachingPrefs {
     layerOpacities: defaultLayerOpacities(),
     explodeAmount: DEFAULT_EXPLODE_AMOUNT,
     quizMode: DEFAULT_QUIZ_MODE,
+    masterGhostOpacity: DEFAULT_MASTER_GHOST_OPACITY,
   };
 }
 
@@ -118,11 +123,15 @@ export function parseTeachingPrefs(value: unknown): TeachingPrefs | null {
   }
   if (!isCameraPresetId(raw.cameraPresetId)) return null;
 
-  // hiddenStructureIds / layerOpacities / explodeAmount / quizMode optional for backward compat
+  // hiddenStructureIds / layerOpacities / explodeAmount / quizMode / masterGhostOpacity optional for backward compat
   const hiddenStructureIds = parseHiddenStructureIds(raw.hiddenStructureIds);
   const layerOpacities = parseLayerOpacities(raw.layerOpacities);
   const explodeAmount = parseExplodeAmount(raw.explodeAmount);
   const quizMode = parseQuizMode(raw.quizMode);
+  const masterGhostOpacity =
+    typeof raw.masterGhostOpacity === 'number' && Number.isFinite(raw.masterGhostOpacity)
+      ? clampMasterGhostOpacity(raw.masterGhostOpacity)
+      : DEFAULT_MASTER_GHOST_OPACITY;
 
   return {
     visibleLayers,
@@ -134,6 +143,7 @@ export function parseTeachingPrefs(value: unknown): TeachingPrefs | null {
     layerOpacities,
     explodeAmount,
     quizMode,
+    masterGhostOpacity,
   };
 }
 

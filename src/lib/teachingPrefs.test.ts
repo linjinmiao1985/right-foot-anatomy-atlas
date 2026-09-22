@@ -122,6 +122,7 @@ describe('teachingPrefs', () => {
       layerOpacities: { ...GHOST_LAYER_OPACITY },
       explodeAmount: EXPLODE_PRESET_AMOUNT,
       quizMode: true,
+      masterGhostOpacity: 1,
     };
     expect(
       saveTeachingPrefs({
@@ -131,6 +132,7 @@ describe('teachingPrefs', () => {
         layerOpacities: { ...prefs.layerOpacities },
         explodeAmount: prefs.explodeAmount,
         quizMode: prefs.quizMode,
+        masterGhostOpacity: prefs.masterGhostOpacity,
       }),
     ).toBe(true);
     const loaded = loadTeachingPrefs();
@@ -144,6 +146,7 @@ describe('teachingPrefs', () => {
       layerOpacities: { ...GHOST_LAYER_OPACITY },
       explodeAmount: EXPLODE_PRESET_AMOUNT,
       quizMode: true,
+      masterGhostOpacity: 1,
     });
     const raw = window.localStorage.getItem(TEACHING_PREFS_STORAGE_KEY);
     expect(raw).toBeTruthy();

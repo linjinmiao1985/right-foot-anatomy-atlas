@@ -1768,3 +1768,26 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 6. **Honesty**: teaching atlas in progress — **not** clinical; **not** TA2-complete; **no finished-product claim**.
 
 **Outcome**: Census unchanged (**129/124**; ontology **126/129**). **0** meshes wire / **0** SA spam. Master ghost opacity slider teaching polish added (unified soft-tissue transparency control). All gates PASSED (138 tests). Day 4ce complete.
+
+## Day 4cf (2026-09-22) — Persist masterGhostOpacity in teachingPrefs
+
+**Target**: Persist masterGhostOpacity in teachingPrefs localStorage with other prefs; restore on load; clamp. Watch dig 15min; expect 0. vitest + integrity-audit + build; daily-log; commit; push. No finished-product claims.
+
+1. Continued on `cursor/week2-day4bm-ghost-opacity-096e` (Day 4ce tip @ fecbc66).
+2. **TeachingPrefs persistence**:
+   - Added `masterGhostOpacity: number` field to `TeachingPrefs` interface
+   - Updated `defaultTeachingPrefs()` to include `DEFAULT_MASTER_GHOST_OPACITY` (1)
+   - Added imports: `DEFAULT_MASTER_GHOST_OPACITY`, `clampMasterGhostOpacity` in `teachingPrefs.ts`
+   - Updated `parseTeachingPrefs()` to parse and clamp `masterGhostOpacity` (backward compatible, missing → default 1)
+   - Updated `saveTeachingPrefs()` effect in `App.tsx` to include `masterGhostOpacity` in saved prefs
+   - Changed `masterGhostOpacity` state initialization to load from `loadTeachingPrefs()?.masterGhostOpacity` instead of inferring from layer opacities
+   - Updated test (`teachingPrefs.test.ts`): added `masterGhostOpacity: 1` to test prefs object and expected loaded result
+3. **Mesh dig**: Watched 15 min; **0** new digs (soft tissue CC0/BY ceiling reached Day 4ce).
+4. **Gates**:
+   - `npm test -- --run` → **138/138 PASSED** (19 test files)
+   - `python3 scripts/integrity-audit.py` → **PASSED** (129 structures / 134 GLBs / 0 violations)
+   - `npm run build` → **OK** (dist built 3.90s)
+5. **Checks**: daily-log Day 4cf updated; commit + push same PR branch.
+6. **Honesty**: teaching atlas in progress — **not** clinical; **not** TA2-complete; **no finished-product claim**.
+
+**Outcome**: Census unchanged (**129/124**; ontology **126/129**). **0** meshes wire / **0** SA spam. masterGhostOpacity now persists in localStorage with teachingPrefs. All gates PASSED. Day 4cf complete.
