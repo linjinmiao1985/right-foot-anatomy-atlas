@@ -1719,3 +1719,27 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 7. **Honesty**: teaching atlas in progress — **not** clinical; **not** TA2-complete; **no finished-product claim**.
 
 **Outcome**: Census unchanged (**129/124**; ontology **126/129**). **0** meshes wire / **0** SA spam. Empty-selection bilingual tip confirmed existing (Day 4bo). Light dig #136 = CC0 whole LE, not foot-specific. All gates PASSED. Day 4cc complete.
+
+## Day 4cd (2026-09-22) — Deep assess #136 U Malaya Asian LE (intrinsic foot EXCLUDED)
+
+**Target**: Complete Day 4cd with deep assess of watchlist #136 (U Malaya Asian LE MSK CC0). Fetch metadata + file list legally; identify RIGHT foot–relevant structures (esp. DI, plantar/dorsal soft, gastroc/soleus if present); document CC0 license clearly. If usable named foot soft meshes exist: download + convert + Kabsch + spatial QA; integrate main-tree ONLY if QA passes. Else document reject/blocker. Update watchlist + daily-log + learning-log; vitest + integrity-audit + build; commit (binaries: only small GLBs if integrated; large STLs gitignore or LFS policy); push. No finished-product claims; no SA spam.
+
+1. Continued on `cursor/week2-day4bm-ghost-opacity-096e` (Day 4cc tip @ 51d4a22).
+2. **#136 assess**:
+   - **License**: CC0 1.0 (verified via dataset API + webpage 2026-09-22) — public-domain dedication
+   - **Metadata fetched**: 67 STL files (58.3 MB zip); 42 muscles, 13 bones, 5 lig., 4 cartilages, 2 tendons, 1 meniscus
+   - **readme.txt downloaded** (7.4 KB, MD5: d938e8bb8d460acd0ba7bbceefb93901): MRI-derived Asian male hip-to-foot LE
+   - **CRITICAL FINDING**: readme explicitly states **"intrinsic foot muscles which were hard to identify"** were **NOT INCLUDED** due to MRI boundary difficulty
+   - **Excluded structures**: dorsal interossei (DI), plantar intrinsics, lumbricals, minor foot tendons/ligaments
+   - **42-muscle list**: "psoas major to abductor digiti minimi" — likely hip/thigh/leg muscles + extrinsic foot tendons only
+3. **Integration decision**: **REJECT** — 0 usable foot-specific named soft meshes
+   - DI / plantar layers explicitly excluded per readme
+   - Whole LE pack (hip→foot), not foot-specific anatomy
+   - Even if gastroc/soleus present: same LE Kabsch blocker as Andreassen Day 4az+4ba (single similarity transform fails foot+calf)
+   - 58.3 MB STL zip **not downloaded** (pre-download reject; readme sufficient for assessment)
+4. **Artifacts**: `third_party/u-malaya-asian-le/NOTICE.txt` (assessment rationale + CC0 verification + readme citation)
+5. **Docs**: watchlist #136 updated (intrinsic exclusion + reject status + NOTICE path); watchlist Day 4cd dig summary; learning-log (pending); this log.
+6. **Checks**: integrity-audit + vitest + build; commit + push same PR branch.
+7. **Honesty**: teaching atlas in progress — **not** clinical; **not** TA2-complete; **no finished-product claim**.
+
+**Outcome**: Census unchanged (**129/124**; ontology **126/129**). **0** meshes integrated; **0** SA spam. #136 intrinsic foot muscles explicitly excluded per readme — DI/plantar/lumbricals not present. Soft gaps (DI / per-ray MTA / foot intrinsics) remain **dry**. Day 4cd complete.

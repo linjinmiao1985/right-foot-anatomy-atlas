@@ -1,0 +1,80 @@
+University of Malaya Asian Male Lower-Limb MSK Model - Assessment
+================================================================
+
+Dataset: A Three-Dimensional Lower Extremity Musculoskeletal Geometry Model of An Asian Male
+DOI: 10.22452/RD/5T6TZ7
+License: CC0 1.0 (verified 2026-09-22)
+URL: https://researchdata.um.edu.my/dataset.xhtml?persistentId=doi:10.22452/RD/5T6TZ7
+
+Content:
+- 67 STL files (58.3 MB zip)
+- 42 muscles, 13 bones, 5 ligaments, 4 cartilages, 2 tendons, 1 meniscus
+- MRI-derived, hip-to-foot lower extremity
+- Published: 2026-04-22
+
+Assessment Date: 2026-09-22 (Day 4cd)
+Assessed By: Cloud Agent (right-foot-anatomy-atlas project)
+
+RIGHT-FOOT RELEVANCE: REJECTED
+==============================
+
+CRITICAL EXCLUSION from readme.txt:
+"In some regions, the boundaries between anatomical structures on the MRI images 
+were challenging to distinguish. Such geometries were not included in the dataset, 
+particularly minor tendon, minor ligaments and INTRINSIC FOOT MUSCLES which were 
+hard to identify."
+
+This explicitly states that INTRINSIC FOOT MUSCLES (including dorsal interossei, 
+plantar intrinsics, lumbricals, etc.) are NOT INCLUDED in the dataset.
+
+Target structures for right-foot-anatomy-atlas:
+❌ Dorsal interossei (DI) - EXCLUDED (intrinsic foot muscles)
+❌ Plantar layer muscles - EXCLUDED (intrinsic foot muscles)
+❌ Per-ray digital vessels - No evidence in muscle-focused dataset
+❓ Gastrocnemius/soleus - Likely present as leg muscles, but:
+   - Already blocked: Andreassen VH bellies (Day 4az+4ba) failed Kabsch alignment
+   - Need full file list to confirm presence
+   - Even if present: single LE pack alignment = same Kabsch blocker as Andreassen
+
+42-muscle list (from readme):
+- "ranging from the most proximal psoas major to the most distal abductor digiti minimi"
+- Despite mentioning "abductor digiti minimi", readme explicitly excludes intrinsic 
+  foot muscles due to MRI identification difficulty
+- Likely contains: hip muscles (psoas, gluteals), thigh muscles (quads, hamstrings), 
+  leg muscles (gastroc, soleus, tibialis anterior/posterior, peroneals), possibly 
+  extrinsic foot tendons (EDL, EHL, FDL, FHL)
+
+INTEGRATION DECISION: REJECT
+============================
+
+Reasons:
+1. Intrinsic foot muscles (DI, plantar layers) explicitly excluded per readme
+2. Whole lower-extremity pack (hip→foot), not foot-specific anatomy
+3. 42-muscle list lacks per-structure detail; no evidence of named foot soft tissue
+4. Even if gastroc/soleus present: same LE Kabsch alignment blocker as Andreassen 
+   (Day 4az+4ba failed; requires non-similarity registration)
+5. 58.3 MB download not justified for 0 usable foot-specific named soft meshes
+
+RECOMMENDATION: Monitor only; do not download; do not integrate.
+
+License verification:
+- CC0 1.0 confirmed in dataset metadata (2026-09-22)
+- License URI: http://creativecommons.org/publicdomain/zero/1.0
+- Public domain dedication, legally reusable
+
+Citation:
+JEEVARAAJ N VIVEKANANDAN; JULIANA BINTI USMAN, 2026, "A Three-Dimensional Lower 
+Extremity Musculoskeletal Geometry Model of An Asian Male", 
+https://doi.org/10.22452/RD/5T6TZ7, Universiti Malaya Research Data Repository, V1
+
+References:
+[1] readme.txt (MD5: d938e8bb8d460acd0ba7bbceefb93901, 7.4 KB)
+[2] Dataset webpage accessed 2026-09-22
+[3] Andreassen et al. 2023 (Sci Data 10:34) - cited as segmentation reference
+
+Files downloaded for assessment:
+- readme.txt (7.4 KB) - metadata review only
+- NOT downloaded: Final Model STL files.zip (58.3 MB) - rejected pre-download
+
+Watchlist status: MONITOR (foot subset unusable; intrinsic exclusion confirmed)
+Integration status: 0 meshes integrated

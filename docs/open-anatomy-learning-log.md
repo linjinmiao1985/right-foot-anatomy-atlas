@@ -1667,6 +1667,104 @@ Continue Week 2 sprint after Day 4br quiz honesty. **Change angle**: search LESS
 ### Outcome
 
 - Learning log **#127–#135**; watchlist / daily-log Day 4bs.
+
+---
+
+## Session additions (2026-09-22 · Day 4cd — #136 U Malaya Asian LE intrinsic foot exclusion)
+
+**Scope**: Deep assess watchlist #136 (U Malaya Asian LE MSK CC0) per Day 4cd task. Fetch metadata + file list legally; identify RIGHT foot–relevant structures (esp. DI, plantar/dorsal soft, gastroc/soleus). Document CC0 license clearly. If usable named foot soft exist: download + Kabsch + QA; integrate main-tree only if pass. Else document reject/blocker. **0 integrate** unless clear foot-specific teaching value.
+
+### #136 University of Malaya Asian Male Lower-Limb MSK (REJECT — intrinsic foot excluded)
+
+**Dataset**: A Three-Dimensional Lower Extremity Musculoskeletal Geometry Model of An Asian Male  
+**DOI**: 10.22452/RD/5T6TZ7 (2026-04-22)  
+**URL**: https://researchdata.um.edu.my/dataset.xhtml?persistentId=doi:10.22452/RD/5T6TZ7  
+**License**: **CC0 1.0** (verified 2026-09-22 via Dataverse API + webpage metadata)  
+**License URI**: http://creativecommons.org/publicdomain/zero/1.0  
+**Authors**: JEEVARAAJ N VIVEKANANDAN, JULIANA BINTI USMAN (Universiti Malaya)
+
+**Content**:
+- 67 STL files in "Final Model STL files.zip" (58.3 MB)
+- 42 muscles, 13 bones, 5 ligaments, 4 cartilages, 2 tendons, 1 meniscus
+- MRI-derived (Siemens Prisma Magnetom 3T), hip-to-foot lower extremity
+- Asian male anatomical morphology (addresses Caucasian-dominant dataset gap)
+- Segmentation created with reference to Andreassen et al. 2023 (VH LE) + Hansen anatomy + MRIMaster
+- Validated by UMMC radiologist and radiographer
+
+**Files assessed**:
+- readme.txt (7.4 KB, MD5: d938e8bb8d460acd0ba7bbceefb93901) — downloaded + reviewed
+- Final Model STL files.zip (58.3 MB) — **NOT downloaded** (pre-download reject; see below)
+
+**42-muscle description** (from readme + webpage):
+> "ranging from the most proximal **psoas major** to the most distal **abductor digiti minimi**"
+
+**CRITICAL EXCLUSION** (readme.txt quality-assurance section):
+> "In some regions, the boundaries between anatomical structures on the MRI images were challenging to distinguish. Such geometries were **not included in the dataset**, particularly **minor tendon, minor ligaments and intrinsic foot muscles which were hard to identify**."
+
+**Right-foot relevance assessment**:
+
+| Target structure | Present? | Rationale |
+|-----------------|----------|-----------|
+| **Dorsal interossei (DI)** | ❌ **NO** | Explicitly excluded as "intrinsic foot muscles" per readme |
+| **Plantar layer muscles** | ❌ **NO** | Explicitly excluded as "intrinsic foot muscles" per readme |
+| **Lumbricals** | ❌ **NO** | Explicitly excluded as "intrinsic foot muscles" per readme |
+| **Abductor digiti minimi** | ❓ **Unclear** | Mentioned in description, but readme excludes intrinsic foot; may be naming confusion |
+| **Per-ray MTA / digital arteries** | ❌ **NO** | Muscle-focused dataset; no evidence of named vessel segmentations |
+| **Foot nerves** | ❌ **NO** | Not listed in 67-structure breakdown |
+| **Gastrocnemius / soleus** | ❓ **Likely YES** | Leg muscles, likely present in 42-muscle LE pack |
+| **Minor foot ligaments** | ❌ **NO** | Explicitly excluded per readme |
+| **Minor foot tendons** | ❌ **NO** | Explicitly excluded per readme (only Achilles + quad tendons listed) |
+
+**Integration decision**: **REJECT**
+
+**Reasons for rejection**:
+1. **Intrinsic foot muscles explicitly excluded** — readme states "intrinsic foot muscles which were hard to identify" were not included due to MRI boundary challenges. This eliminates:
+   - Dorsal interossei (DI) — primary gap target
+   - Plantar intrinsics (abd. hallucis, flex. dig. brevis, etc.)
+   - Lumbricals
+   - Other small foot muscles
+2. **Whole lower-extremity pack** (hip→foot) — 42 muscles span psoas to foot; no per-structure file list provided; cannot isolate foot-specific anatomy without full download
+3. **No named foot soft tissue** — despite 42-muscle count, description + readme indicate hip/thigh/leg muscles (psoas, quads, hamstrings, gastroc, soleus, peroneals, tib ant/post) + extrinsic foot tendons only
+4. **LE Kabsch alignment blocker** — even if gastroc/soleus present as leg muscles, whole-LE pack faces same single-similarity registration failure as Andreassen VH bellies (Day 4az+4ba Option A FAIL: 7-tarsal laterality then foot residual ~8.8 mm). Would require non-similarity / two-stage registration (same as Andreassen blocked path)
+5. **58.3 MB download not justified** — no evidence of usable foot-specific named soft meshes; readme assessment sufficient for reject decision
+6. **Not a foot DI/NV/ligament source** — MRI identification difficulty explicitly prevented small foot structure segmentation
+
+**Artifact created**:
+- `third_party/u-malaya-asian-le/NOTICE.txt` (assessment rationale + CC0 verification + readme citation)
+
+**License compliance**:
+- CC0 1.0 (public domain dedication) — legally reusable for any purpose
+- Citation provided in NOTICE.txt
+- No attribution required by license, but good scientific practice cited
+
+**Comparison to Andreassen VH LE** (learning-log #46):
+- Both: whole LE packs (hip/pelvis→foot)
+- Both: MRI-derived muscle segmentations
+- Both: include gastroc/soleus as leg muscles
+- Both: **exclude intrinsic foot muscles** (U Malaya explicit; Andreassen focus on major LE groups)
+- Both: single-similarity Kabsch **blocked** for foot teaching (Day 4az+4ba trials FAIL)
+- Difference: Andreassen = Visible Human (Caucasian); U Malaya = Asian morphology
+- Difference: U Malaya readme explicitly documents intrinsic foot exclusion; Andreassen segmentation scope implicit
+
+**Why "abductor digiti minimi" mentioned despite exclusion**:
+- Likely naming ambiguity or segmentation boundary interpretation
+- Readme's intrinsic-exclusion statement takes precedence over isolated mention
+- May refer to proximal muscle belly vs. distal intrinsic portion
+- Without file list, cannot verify presence; pre-download reject applies
+
+**Teaching value**: ❌ None for right-foot anatomy atlas  
+**SA shrink potential**: N/A (no foot-specific CC0 soft to replace BY-SA)  
+**Integrate**: **NO**  
+**Download**: **NO** (58.3 MB zip rejected pre-download)  
+**Watchlist**: Updated #136 → **reject** (intrinsic foot excluded; 0 DI/NV)
+
+**Bottom line**: U Malaya Asian LE MSK is a high-quality **whole lower-extremity** resource with clear CC0 licensing, but **intrinsic foot muscles** (DI, plantar layers, lumbricals) are **explicitly excluded** per readme due to MRI segmentation difficulty. The 42-muscle pack likely contains hip/thigh/leg muscles + extrinsic foot tendons only — **not** a source for foot-specific named soft tissue teaching. Even if gastroc/soleus present, LE Kabsch alignment faces same blocker as Andreassen Day 4az+4ba. Soft gaps (DI / per-ray MTA / foot intrinsics) remain **dry**.
+
+**Update tracking**:
+- Watchlist #136 status: **monitor** → **reject** (intrinsic foot exclusion documented)
+- Watchlist Day 4cd dig summary added
+- Daily-log Day 4cd entry complete
+- Learning-log #136 entry added
 - Census unchanged (**129/124**; ontology **126/129**).
 - **0** meshes integrated; **0** SA spam; Andreassen/Henson/Utah **not** force-wired.
 - Teaching UX polish options (G/E/Q/0/Home keyboard help ✓ Day 4ao; panel gap notes ✓ meshNote live; screenshots ✓ 9 shots Day 4an) **all done prior** — no new polish this pass.

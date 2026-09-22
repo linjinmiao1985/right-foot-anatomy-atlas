@@ -37,7 +37,7 @@ Companion: `docs/open-anatomy-learning-log.md` (#38–#107), `docs/belly-registr
 | Future Zenodo / open CT foot soft segmentations | TBD | Named DI, vessels, ligaments | Only if SPDX CC0/BY and elemental teaching value | **monitor** dig queue |
 | **#66** Henson Sheffield augmented LE muscle segmentations (Figshare **10.15131/shef.data.20440203** + MR **20440164**) | **CC0** (Figshare API Day 4bg; path detail Day **4bh**) | 69 DICOM label volumes · 37 LE muscle classes incl. gastroc/soleus / long flex-ext / peronei — see **Henson path** below | Masks ≠ elemental foot DI/NV GLBs; ~5.6 GB/side; no surface meshes | **monitor** masks; **reject** ready teaching mesh wire; **not** Andreassen Kabsch retry |
 | **#68** CEINMS-RT LowerLimbModel | Code **Apache-2.0**; Zenodo 6457662 open / SPDX unset | OpenSim MSK paths (soleus + gastroc + tib_ant …) | Simulation lines, not surface atlas meshes | **monitor** process; **reject** soft GLB substitute |
-| **#136** U Malaya Asian LE MSK model (doi:10.22452/RD/5T6TZ7 · 2026-04-22) | **CC0 1.0** (Data Use Agreement verified) | 67 STL: 42 muscles (psoas→abd. dig. min.) + 13 bones + 5 lig. + 2 tendons (Achilles/quad) + 1 meniscus — MRI-derived hip-to-foot LE | Whole LE pack, not foot-specific DI/NV; 42-muscle list lacks per-structure detail; foot content (plantar layers?) needs extract+verify+naming | **monitor** foot subset; **reject** unsegmented LE pack as foot DI/NV teaching wire |
+| **#136** U Malaya Asian LE MSK model (doi:10.22452/RD/5T6TZ7 · 2026-04-22) | **CC0 1.0** (verified Day 4cd; readme + API) | 67 STL: 42 muscles (psoas→abd. dig. min.) + 13 bones + 5 lig. + 2 tendons (Achilles/quad) + 1 meniscus — MRI-derived hip-to-foot LE | **Day 4cd assess**: readme **explicitly excludes intrinsic foot muscles** (DI/plantar/lumbricals) due to MRI boundary difficulty. Whole LE pack (hip→foot); likely hip/thigh/leg muscles + extrinsic tendons only. No foot-specific named soft. Same LE Kabsch blocker as Andreassen Day 4az+4ba | **reject** — intrinsic foot muscles excluded per readme; 0 DI/NV; 58.3 MB download not justified; NOTICE in `third_party/u-malaya-asian-le/` |
 
 ---
 
@@ -294,3 +294,17 @@ Watchlist still tracks where a true **CC0/BY** soft find would matter. Day **4bs
 | Meshes integrated | **0** |
 
 Watchlist still tracks where a true **CC0/BY** soft find would matter. Day **4cc** confirms soft gaps remain **dry**. Teaching atlas in progress — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+## Day 4cd dig summary (2026-09-22)
+
+| Check | Result |
+|-------|--------|
+| #136 U Malaya Asian LE deep dive | **Readme assessed** — intrinsic foot muscles (DI/plantar/lumbricals) **explicitly excluded** due to MRI identification difficulty |
+| New CC0/BY soft packs for DI / per-ray MTA / nerves / ligaments / foot intrinsics | **None** — #136 hip-to-foot LE pack lacks foot-specific named soft; 42 muscles = likely hip/thigh/leg + extrinsic tendons |
+| Gastroc/soleus | Possibly present in #136 as leg muscles, but whole-LE Kabsch blocker same as Andreassen Day 4az+4ba; STL zip **not downloaded** (58.3 MB not justified) |
+| Files downloaded | readme.txt only (7.4 KB); STL zip rejected pre-download |
+| Assessment artifact | `third_party/u-malaya-asian-le/NOTICE.txt` (reject rationale + CC0 license verification) |
+| Andreassen / Utah / Hensen wire | **Skipped** / not re-opened / **0** wire |
+| Meshes integrated | **0** |
+
+Watchlist still tracks where a true **CC0/BY** soft find would matter. Day **4cd** confirms soft gaps remain **dry** — #136 intrinsic foot exclusion documented. Teaching atlas in progress — **not** clinical; **not** TA2-complete; **not** a finished product.
