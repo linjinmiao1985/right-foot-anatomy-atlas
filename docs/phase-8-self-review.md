@@ -230,6 +230,51 @@ Maintain a short **monitor/reject** list (see `docs/cc0-soft-tissue-watchlist.md
 3. **Expert-review sync**: prepare teaching-useful/incomplete stance; no TA2-complete claim; no clinical claim
 4. **No finished-product marketing**: teaching atlas **in progress**; grouped structures = teaching compromises; soft-tissue census soft-ceiling documented
 
+### Week 2 journal-readiness handoff (Day 4cv–4dd · 2026-09-22)
+
+**Date**: 2026-09-22 · Day 4cv through Day 4dd  
+**Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3)  
+**HEAD tip**: `f56dbc2` (Day 4dc)
+
+**Documentation refreshed (journal-facing polish):**
+
+1. **methods.md** (Day 4cv + Day 4da):
+   - Enhanced "Journal-facing limitations" table: added "Soft-tissue open-data ceiling" row (exhaustive search #1–#170; DRY; teaching compromises); "Ontology IDs partial" row now details 3 honest empties (cervical TC no-distinct-TA98-A-code; medial/lateral plantar veins TNA-only TAH U15825/U15824) + StructurePanel honest-empty UI pointer + cross-links
+   - Added "License matrix (summary)" table: bones 26/26 main; muscles 18/23 main + 5 BY-SA; vessels 7 main + 22 BY-SA; nerves 0 main + 17 BY-SA; ligaments 2 main + 27 BY-SA; total 53/124 main (43%) vs 71/124 BY-SA (57%)
+   - Journal figure captions cross-link (Day 4dc): one-line pointer to `docs/journal-figure-captions.md` after license matrix
+
+2. **expert-review-checklist.md** (Day 4cw v3.0):
+   - Teaching-useful/incomplete stance; methods.md limitations + license matrix links; soft-ceiling memo; no TA2-complete/clinical claims
+   - Checklist items: bones coverage 26/26; Kabsch residuals teaching visualization grade; BY-SA isolation 71/124; teaching compromises for grouped DI/MTA; ontology gaps 126/129 (3 honest empties)
+   - Pass/fail criteria for reviewer QA
+
+3. **journal-figure-captions.md** (Day 4db):
+   - **7 bilingual teaching figure stubs** (1–2 sentence ZH + EN): (1) Bones overview 26; (2) Layer toggles/ghost opacity teaching UX census 53/71; (3) Explode spatial separation; (4) BY-SA isolate vs main-tree license boundaries NC rejects; (5) Soft-ceiling/teaching-compromise grouped DI-MTA #1–#170 DRY; (6) Ontology honest empties 126/129; (7) Kabsch residuals teaching visualization grade
+   - Honesty: not clinical; teaching compromises where relevant; no fabricated metrics
+   - Cross-links: methods.md limitations + license matrix, week2-soft-ceiling-memo.md NC/SA rejects, expert-review-checklist.md v3.0, README Limitations
+
+4. **README.md** (Day 4cx + Day 4dc):
+   - Limitations section synced: license mix ≈53 main / ≈71 BY-SA of 124 unique; soft-ceiling #1–#170 DRY; teaching compromises for grouped DI/MTA; no finished/clinical/TA2-complete claims
+   - Documentation section: added journal-figure-captions.md link (after Soft-Ceiling Memo)
+
+5. **StructurePanel / footer UI** (Day 4cy):
+   - BY-SA structures clearly labeled (徽章 "BY-SA 隔离 · ShareAlike" vs "主树 · Main")
+   - Footer census hint added: census ≈53 主树 / ≈71 BY-SA of 124 unique
+
+6. **Soft-tissue watch digs #171–#173** (Day 4dd):
+   - 3 NEW sparse digs: Cults3D/CGTrader/Wikimedia generic foot meshes (#171 DRY; license unclear / no anatomy); IFAA terminology BY-SA (#172 DRY; terminology not meshes); Open3DModel/Complete Anatomy/Pennsieve (#173 DRY; BY-SA / subscription / license unclear)
+   - **All DRY**: no new CC0/BY per-toe DI, lumbricals, per-ray MTA meshes
+   - Soft-ceiling reconfirmed through #173
+
+**Verification gates (Day 4cv–4dd; all green):**
+- `npm test -- --run`: 138/138 passed (19 test files)
+- `python3 scripts/integrity-audit.py`: 0 violations (129 structures / 134 GLBs)
+- `npm run build`: ✓ (dist built; 1.2 MB chunk size warning expected)
+
+**Census**: unchanged (129/124 entries/unique; 126/129 ontology citable; 53 main-tree / 71 BY-SA; 134 GLB on-disk)
+
+**Bottom line (Day 4cv–4dd journal-readiness polish):** Methods limitations table + license matrix + journal figure captions + expert-review-checklist v3.0 + README Limitations + StructurePanel/footer census hint refreshed. Soft digs #171–#173 watch-only (DRY). Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
 ### Week 2 verification gates (all green)
 
 - `python3 scripts/integrity-audit.py`: 0 violations (129 structures / 134 GLBs)

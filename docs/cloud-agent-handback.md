@@ -28,11 +28,31 @@ Henson Sheffield **Option A** one-subject MC POC completed (`Aug_8`): surfaces O
 
 # Cloud Agent handback — Phase 8 resume brief
 
-**Date**: 2026-09-22 · Day **4dc** (Week 2 LINK JOURNAL CAPTIONS)  
+**Date**: 2026-09-22 · Day **4dd** (Week 2 SPARSE SOFT WATCH + WEEK HANDOFF note)  
 **Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3)  
-**HEAD tip**: `bb75a8d` (Day 4db: finalize daily-log SHA — journal figure captions stub)  
-**Status**: Journal figure captions linked (README Documentation section + methods.md after license matrix; one-line concise); teaching-grade atlas **in progress** — **not** a finished-product claim  
-**Companion**: `docs/phase-8-self-review.md` (Week 2 checkpoint added Day 4cu), `docs/cc0-soft-tissue-watchlist.md`, `third_party/andreassen/`, `docs/week2-soft-ceiling-memo.md`, `docs/methods.md` (Day 4cv polish + Day 4da ontology gaps row + Day 4dc journal captions link), `docs/expert-review-checklist.md` (Day 4cw v3.0), `README.md` (Day 4cx Limitations sync + Day 4dc journal captions link), `src/lib/assetProvenance.ts` (Day 4cy footer census hint), `docs/journal-figure-captions.md` (Day 4db bilingual teaching figure stubs)
+**HEAD tip**: `f56dbc2` (Day 4dc: finalize daily-log SHA — link journal captions)  
+**Status**: Week 2 journal-readiness handoff complete (methods limitations+license matrix; expert-checklist v3; journal-figure-captions; README sync; soft digs #147–#173 watch-only DRY); teaching-grade atlas **in progress** — **not** a finished-product claim  
+**Companion**: `docs/phase-8-self-review.md` (Week 2 quality checkpoint Day 4cu + journal-readiness handoff Day 4cv–4dd added), `docs/cc0-soft-tissue-watchlist.md`, `third_party/andreassen/`, `docs/week2-soft-ceiling-memo.md`, `docs/methods.md` (Day 4cv polish + Day 4da ontology gaps row + Day 4dc journal captions link), `docs/expert-review-checklist.md` (Day 4cw v3.0), `README.md` (Day 4cx Limitations sync + Day 4dc journal captions link), `src/lib/assetProvenance.ts` (Day 4cy footer census hint), `docs/journal-figure-captions.md` (Day 4db bilingual teaching figure stubs), `docs/open-anatomy-learning-log.md` (Day 4dd sparse watch digs #171–#173 DRY)
+
+---
+
+## Week 2 Journal-Readiness Summary (Day 4cv–4dd · 2026-09-22)
+
+**Documentation refreshed for journal/expert review:**
+- **methods.md**: limitations table enhanced (soft-ceiling row #1–#170; ontology empties 3 detailed); license matrix added (53/124 main 43% vs 71/124 BY-SA 57%); journal-figure-captions cross-link
+- **expert-review-checklist.md v3.0**: teaching-useful/incomplete stance; methods/soft-ceiling-memo links; pass/fail criteria (bones 26/26; Kabsch teaching-grade; BY-SA 71/124; grouped DI/MTA teaching compromises; ontology 126/129)
+- **journal-figure-captions.md**: 7 bilingual teaching figure stubs (bones/layers-ghost/explode/BY-SA-isolate/soft-ceiling-grouped-DI-MTA/ontology-empties/Kabsch-residuals; 1–2 sentence ZH+EN; honesty: not clinical / teaching compromises)
+- **README.md**: Limitations synced (license mix ≈53/71 of 124; soft-ceiling #1–#173 DRY; teaching compromises; no finished/clinical/TA2-complete claims); Documentation section links journal-figure-captions
+- **StructurePanel/footer UI**: BY-SA labels clear; census hint ≈53 主树 / ≈71 BY-SA of 124 unique
+- **Soft-tissue watch digs #171–#173** (Day 4dd sparse): Cults3D/CGTrader/Wikimedia generic (#171 DRY); IFAA terminology BY-SA (#172 DRY); Open3DModel/Complete Anatomy/Pennsieve (#173 DRY) — **all DRY** (no new CC0/BY per-toe DI/lumbricals/per-ray MTA)
+
+**Verification**: npm test 138/138 ✓; integrity-audit 0 violations ✓; npm run build ✓
+
+**Census**: unchanged (129/124 entries/unique; 126/129 ontology citable; 53 main-tree / 71 BY-SA; 134 GLB)
+
+**Bottom line**: Week 2 journal-readiness polish complete (methods/expert-checklist/journal-captions/README/UI synced; soft digs #147–#173 watch-only DRY). Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+---
 
 ---
 

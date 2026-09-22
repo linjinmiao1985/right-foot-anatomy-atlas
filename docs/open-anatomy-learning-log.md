@@ -2290,3 +2290,31 @@ Zenodo API metadata retrieved (DOI 10.5281/zenodo.20231309). License: **CC BY-NC
 - Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
 
 ---
+
+### #171 — Cults3D/CGTrader/Wikimedia foot meshes (2026-09-22 Day 4dd)
+**Query**: `CC0 CC BY foot intrinsic muscles lumbricals 3D mesh STL OBJ GLB 2026`  
+**Result**: DRY — no new CC0/BY lumbrical or per-toe DI meshes.  
+- **Cults3D** "Human Lower Leg and Foot Muscle Anatomy" (STL/OBJ Feb 2026): license unclear (MeEzra designer); no explicit CC0/BY badge; did NOT dig further.  
+- **CGTrader** "Foot Muscles low-poly" (FBX/glTF): not 3D printable (digital-use-only flag); no CC0/BY license confirmed; did NOT dig further.  
+- **Wikimedia Commons** "Blender Foot realistic by Dan Ulrich (CC0).stl" (2024): genuine CC0 BUT generic foot surface mesh (Blender Studio high-res base mesh) — **not** anatomical muscle segmentation (no lumbricals/DI/MTA).  
+**Action**: MONITOR — no wire.
+
+### #172 — IFAA terminology for dorsal interossei (2026-09-22 Day 4dd)
+**Query**: `"dorsal interosseous" foot anatomy 3D model CC0 "CC BY" open license 2026`  
+**Result**: DRY — terminology only; no 3D meshes.  
+- **IFAA Terminologia Anatomica Histology** (ifaa.unifr.ch): TAH:U14426 (second DI), TAH:U12960 (fourth DI branch), TAH:U12969 (third DI branch), TAH:U12963 (first DI branch) — official Latin + English nomenclature; **CC BY-SA 4.0** (text/terminology license).  
+- **Ultrasound of the plantar foot** (DOI 10.15557/jou.2023.0024): clinical review of dorsal/plantar interossei US imaging; no 3D mesh source.  
+**Action**: MONITOR — terminology is BY-SA (not CC0/BY); no mesh assets available.
+
+### #173 — Open3DModel/Complete Anatomy/Pennsieve whole-body (2026-09-22 Day 4dd)
+**Query**: `plantar metatarsal arteries foot anatomy 3D mesh open data CC0 2026`  
+**Result**: DRY — no new CC0/BY per-ray plantar MTA meshes.  
+- **Open3DModel Ankle and Foot** (anatomytool.org Nov 2025): **CC BY-SA** (Open3D Project; Jan Kooloos/Eungyeol Lee); listed structures do NOT explicitly confirm per-ray plantar MTA inventory — did NOT confirm foot soft tissue gaps filled.  
+- **Complete Anatomy** (Elsevier): platform-based subscription service; documents plantar MTA anatomy but **not** downloadable open data.  
+- **Wikimedia Commons / OpenGameArt CC0 foot meshes**: generic foot surfaces (Blender Studio; byzmod3d) — **no** vascular anatomy.  
+- **Pennsieve whole-body scaffold** (SPARC dataset 307; DOI 10.26275/BBVG-GJ86): includes organs/vasculature/musculoskeletal/nervous systems; vasculature sourced from Anatomography; **license NOT specified** in search results — did NOT dig further without confirmed CC0/BY.  
+**Action**: MONITOR — no new CC0/BY per-ray MTA.
+
+**Day 4dd watch dig summary**: 3 digs (#171–#173); all DRY (no new CC0/BY per-toe DI, lumbricals, per-ray MTA meshes). Soft-tissue open-data ceiling reconfirmed. Generic CC0 foot surfaces (Blender/OpenGameArt) lack anatomical segmentation. Terminology/platforms (IFAA BY-SA, Complete Anatomy subscription) not mesh sources. Pennsieve whole-body license unclear — skip without confirmed CC0/BY.
+
+---

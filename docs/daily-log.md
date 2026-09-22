@@ -2550,3 +2550,81 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 **Summary**: Journal figure captions linked. Added concise one-line `docs/journal-figure-captions.md` cross-reference to (1) README.md Documentation section (new bullet after Soft-Ceiling Memo: bilingual teaching figure stubs for bones/layers/explode/BY-SA-isolate/soft-ceiling-grouped-DI-MTA/ontology-empties/Kabsch-residuals Day 4db); (2) methods.md after license matrix table Total row (paragraph listing 7 figure categories). Soft digs watch-only (0 new). Cloud-agent-handback refreshed. Gates green. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
 
 ---
+
+## Day 4dd — SPARSE SOFT WATCH + WEEK HANDOFF note (2026-09-22)
+
+**Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3)
+**Goals**: (1) Soft-tissue WATCH: at most digs #171–#173 NEW sources only; DRY OK. No NC/SA/unclear wires. Append learning-log rows. (2) Add short Week 2 journal-readiness handoff blurb to cloud-agent-handback (and/or phase-8 self-review): methods limitations+license matrix; expert-checklist v3; journal-figure-captions; README sync; soft digs #147–#173 DRY + watch-only posture; tip f56dbc2. Not a finished-product claim.
+
+### Soft-tissue watch digs #171–#173 (sparse; 3 NEW)
+
+**Day 4dd**: sparse watch-only monitoring (3 digs max; no active mesh-hunting unless obvious CC0/BY hit)
+
+1. **Dig #171** (Cults3D/CGTrader/Wikimedia foot meshes):
+   - **Query**: `CC0 CC BY foot intrinsic muscles lumbricals 3D mesh STL OBJ GLB 2026`
+   - **Result**: **DRY** — no new CC0/BY lumbrical or per-toe DI meshes
+   - Cults3D "Human Lower Leg and Foot Muscle Anatomy" (STL/OBJ Feb 2026 MeEzra): license unclear; no explicit CC0/BY badge; did NOT dig further
+   - CGTrader "Foot Muscles low-poly" (FBX/glTF): not 3D printable (digital-use-only flag); no CC0/BY license confirmed; did NOT dig further
+   - Wikimedia Commons "Blender Foot realistic by Dan Ulrich (CC0).stl" (2024): genuine CC0 BUT generic foot surface mesh (Blender Studio high-res base mesh) — **not** anatomical muscle segmentation (no lumbricals/DI/MTA)
+   - **Action**: MONITOR — no wire
+
+2. **Dig #172** (IFAA terminology for dorsal interossei):
+   - **Query**: `"dorsal interosseous" foot anatomy 3D model CC0 "CC BY" open license 2026`
+   - **Result**: **DRY** — terminology only; no 3D meshes
+   - IFAA Terminologia Anatomica Histology (ifaa.unifr.ch): TAH:U14426 (second DI), TAH:U12960/12969/12963 (fourth/third/first DI branches) — official Latin + English nomenclature; **CC BY-SA 4.0** (text/terminology license)
+   - Ultrasound of the plantar foot (DOI 10.15557/jou.2023.0024): clinical review of dorsal/plantar interossei US imaging; no 3D mesh source
+   - **Action**: MONITOR — terminology is BY-SA (not CC0/BY); no mesh assets available
+
+3. **Dig #173** (Open3DModel/Complete Anatomy/Pennsieve whole-body):
+   - **Query**: `plantar metatarsal arteries foot anatomy 3D mesh open data CC0 2026`
+   - **Result**: **DRY** — no new CC0/BY per-ray plantar MTA meshes
+   - Open3DModel Ankle and Foot (anatomytool.org Nov 2025): **CC BY-SA** (Open3D Project; Jan Kooloos/Eungyeol Lee); listed structures do NOT explicitly confirm per-ray plantar MTA inventory — did NOT confirm foot soft tissue gaps filled
+   - Complete Anatomy (Elsevier): platform-based subscription service; documents plantar MTA anatomy but **not** downloadable open data
+   - Wikimedia Commons / OpenGameArt CC0 foot meshes: generic foot surfaces (Blender Studio; byzmod3d) — **no** vascular anatomy
+   - Pennsieve whole-body scaffold (SPARC dataset 307; DOI 10.26275/BBVG-GJ86): includes organs/vasculature/musculoskeletal/nervous systems; vasculature sourced from Anatomography; **license NOT specified** in search results — did NOT dig further without confirmed CC0/BY
+   - **Action**: MONITOR — no new CC0/BY per-ray MTA
+
+**Day 4dd watch dig summary**: 3 digs (#171–#173); **all DRY** (no new CC0/BY per-toe DI, lumbricals, per-ray MTA meshes). Soft-tissue open-data ceiling reconfirmed. Generic CC0 foot surfaces (Blender/OpenGameArt) lack anatomical segmentation. Terminology/platforms (IFAA BY-SA, Complete Anatomy subscription) not mesh sources. Pennsieve whole-body license unclear — skip without confirmed CC0/BY.
+
+**Total watch digs through Day 4dd**: #147–#173 (27 digs over Day 4cl–4dd); **0** new CC0/BY ready-to-use soft meshes integrated.
+
+### Week 2 journal-readiness handoff (added to docs)
+
+**Files updated:**
+
+1. **docs/phase-8-self-review.md** (new subsection "Week 2 journal-readiness handoff (Day 4cv–4dd)"):
+   - Methods limitations table + license matrix (Day 4cv + Day 4da + Day 4dc)
+   - Expert-review-checklist v3.0 (Day 4cw)
+   - Journal-figure-captions 7 bilingual stubs (Day 4db)
+   - README Limitations + Documentation links (Day 4cx + Day 4dc)
+   - StructurePanel/footer UI census hint (Day 4cy)
+   - Soft-tissue watch digs #171–#173 Day 4dd sparse (all DRY)
+   - Verification gates green; census unchanged (129/124; 126/129 ontology; 53 main / 71 BY-SA)
+   - Bottom line: journal-readiness polish complete; teaching atlas **in progress** — **not** clinical / TA2-complete / finished product
+
+2. **docs/cloud-agent-handback.md** (new section "Week 2 Journal-Readiness Summary"):
+   - Concise 1-paragraph recap of Week 2 journal polish (methods/expert-checklist/journal-captions/README/UI synced)
+   - Soft digs #147–#173 watch-only DRY
+   - Verification ✓; census unchanged
+   - Bottom line: teaching atlas **in progress** — **not** clinical / TA2-complete / finished product
+
+3. **docs/open-anatomy-learning-log.md** (appended digs #171–#173):
+   - #171 Cults3D/CGTrader/Wikimedia: license unclear / generic surface (no anatomy) → DRY
+   - #172 IFAA terminology: BY-SA text (no meshes) → DRY
+   - #173 Open3DModel/Complete Anatomy/Pennsieve: BY-SA / subscription / license unclear → DRY
+   - Day 4dd summary: 3 digs; all DRY; soft-ceiling reconfirmed
+
+### Gates (green)
+- `npm test -- --run`: **138/138** passed (19 test files)
+- `python3 scripts/integrity-audit.py`: **0** violations (129 structures / 134 GLBs)
+- `npm run build`: ✓ (dist built; 1.2 MB chunk size warning expected)
+
+**Census**: unchanged (129/124 entries/unique; 126/129 ontology citable; 53 main-tree / 71 BY-SA; 134 GLB on-disk)
+
+**Commit**: `Day 4dd: SPARSE SOFT WATCH + WEEK HANDOFF - watch digs #171-#173 (Cults3D/CGTrader/Wikimedia generic; IFAA terminology BY-SA; Open3DModel/Complete Anatomy/Pennsieve) all DRY (no new CC0/BY per-toe DI/lumbricals/per-ray MTA) + Week 2 journal-readiness handoff added to phase-8-self-review (Day 4cv-4dd subsection: methods limitations+license matrix; expert-checklist v3; journal-figure-captions; README sync; soft digs #147-#173 watch-only DRY) + cloud-agent-handback summary + learning-log digs append`
+
+**Push**: SHA `<pending>`
+
+**Summary**: Week 2 journal-readiness handoff complete. Sparse soft watch digs #171–#173 (3 NEW; all DRY — no new CC0/BY per-toe DI, lumbricals, per-ray MTA meshes). Added comprehensive Week 2 journal-readiness handoff blurb to phase-8-self-review.md (new subsection Day 4cv–4dd: methods limitations table + license matrix; expert-review-checklist v3.0; journal-figure-captions 7 bilingual stubs; README Limitations + Documentation links; StructurePanel/footer census hint; soft digs #171–#173 sparse DRY; verification gates green; census unchanged; bottom line teaching atlas in progress). Cloud-agent-handback.md summary added (concise Week 2 journal polish recap). Learning-log appended digs #171–#173. Soft-ceiling reconfirmed through #173 (27 watch digs total #147–#173; 0 new CC0/BY soft meshes). Gates green. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+---
