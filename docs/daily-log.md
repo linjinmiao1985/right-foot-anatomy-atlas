@@ -1620,3 +1620,19 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 5. **Honesty**: teaching atlas in progress — **not** clinical; **not** TA2-complete; **no finished-product claim**.
 
 **Outcome**: Census unchanged (**129/124**; ontology **126/129**). **0** meshes wire / **0** SA spam. Search empty-result bilingual teaching hint added.
+
+## Day 4by (2026-09-22) — Gate-run pass (Day 4bx polish already present)
+
+**Target**: Complete Day 4by cleanly after prior agent hang. ONE teaching polish if not on tip (prefers-reduced-motion / BY-SA license chip / Escape search / bilingual empty tip); daily-log Day 4by; run gates WITHOUT head pipe: vitest + build + integrity-audit; commit if changes; push. No finished-product claims; no mesh dig.
+
+1. Continued on `cursor/week2-day4bm-ghost-opacity-096e` (Day 4bx tip @ a714815).
+2. **Teaching polish**: **Already present** on tip — Day 4bx (a714815) added structure search empty-result bilingual hint. **Skipped** redundant polish per instructions (check git log, skip if done).
+3. **Mesh dig**: **Skipped** — CC0/BY ceiling acknowledged after comprehensive search Day 4bo–4bs (dig #100–#135).
+4. **Gates**: Run full gates WITHOUT piping to head (prior agent hung on `npm test | head`):
+   - `npx vitest run` → **124/124 PASSED** (19 test files)
+   - `npm run build` → **OK** (dist built 4.97s)
+   - `python3 scripts/integrity-audit.py` → **PASSED** (129 structures / 134 GLBs / 0 violations)
+5. **Checks**: daily-log Day 4by updated; commit + push same PR branch.
+6. **Honesty**: teaching atlas in progress — **not** clinical; **not** TA2-complete; **no finished-product claim**.
+
+**Outcome**: Census unchanged (**129/124**; ontology **126/129**). **0** meshes wire / **0** SA spam. All gates PASSED cleanly without pipe hang. Day 4by complete.
