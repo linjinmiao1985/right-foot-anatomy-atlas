@@ -182,6 +182,7 @@ Open `http://localhost:5173` to view the atlas.
 
 ### Anatomical
 - **BY-SA soft tissue**: DI + proximal PTA/fibular are Open3D ShareAlike fills (prefer future CC0/CC BY)
+- **Soft-tissue open-data ceiling**: Comprehensive search (#1–#135 verified projects through Day 4bs) found CC0/BY alternatives for DI, per-ray MTA, nerve/ligament main-tree replacements, and gastroc/soleus bellies largely **dry** — teaching trade-off accepted ShareAlike volume (~71/124 unique) over incomplete coverage
 - **Ligament / fascia / tendon**: BP3D long plantar + Achilles; Open3D BY-SA **27** teaching meshes; further tarsal/toe bands still missing — **teaching-useful, not a finished ligament atlas**
 - **Vessel fine detail**: Per-toe digital splits not available as separate BP3D meshes (honest grouped instead)
 - **Nerve geometry**: Z-Anatomy CURVE tubes + Open3D volumetric fine branches (teaching-grade; commons/proprii grouped)
@@ -204,7 +205,8 @@ Open `http://localhost:5173` to view the atlas.
 - **Methods**: `docs/methods.md` (data sources, extraction, journal-facing limitations table)
 - **Contributing**: `CONTRIBUTING.md` (license boundaries, NC-trap exclusions)
 - **Spatial Alignment QA**: `docs/spatial-alignment-qa.md` (0.01 scale verification)
-- **Phase 6 self-review**: `docs/phase-6-self-review.md` (census, UX inventory, open-data ceilings)
+- **Phase 7 self-review**: `docs/phase-7-self-review.md` (week-quality board; census 129/124; UX inventory; ceilings)
+- **Phase 8 self-review**: `docs/phase-8-self-review.md` (quality-week checkpoint; soft-tissue open-data ceiling)
 - **Screenshots** (optional QA pack, embedded above): `docs/screenshots/` via `npm run screenshots` — not a product gallery
 
 ---
@@ -262,7 +264,7 @@ See `CONTRIBUTING.md` for:
 
 ---
 
-**Project Status**: Teaching-grade atlas in progress (Week 2 / Phase 6) — **not a finished product**  
+**Project Status**: Teaching-grade atlas in progress (Week 2 / Phase 8) — **not a finished product**  
 **Coverage**: **124** unique / **129** entries; main **53** vs BY-SA **71**; ligament/tendon teaching-useful but incomplete (BP3D 1+1 + Open3D 27)  
-**Self-review**: `docs/phase-6-self-review.md`  
+**Self-review**: `docs/phase-8-self-review.md` (quality-week checkpoint; soft-tissue open-data ceiling)  
 **Repository**: https://github.com/linjinmiao1985/right-foot-anatomy-atlas
