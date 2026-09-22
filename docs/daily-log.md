@@ -1608,3 +1608,15 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 5. **Honesty**: teaching atlas in progress — **not** clinical; **not** TA2-complete; **no finished-product claim**.
 
 **Outcome**: Census unchanged (**129/124**; ontology **126/129**). **0** meshes wire / **0** SA spam. Soft-layer empty-state teaching UX added.
+
+## Day 4bx (2026-09-22) — Search empty-result bilingual hint
+
+**Target**: Day 4bx quality: ONE solid teaching polish (structure search empty-result bilingual hint); daily-log Day 4bx; skip mesh dig (CC0/BY ceiling); integrity-audit + vitest + build; commit; push. No finished-product claims.
+
+1. Continued on `cursor/week2-day4bm-ghost-opacity-096e` (Day 4bw tip @ 077aa73).
+2. **Teaching polish**: Structure search empty-result (`StructureSearch.tsx`) — bilingual hint (ZH "无匹配结果" + EN "No matching structures · Try Chinese or Latin names") with `role="status"` + `aria-live="polite"` for screen readers. Improved teaching clarity when user query returns no results. Contrast improved (`#d0d0d0` / `#777`).
+3. **Mesh dig**: **Skipped** — comprehensive CC0/BY soft pool search Day 4bo–4bs (dig #100–#135) already exhausted less-obvious sources. Open-data ceiling acknowledged.
+4. **Checks**: integrity-audit + vitest + build; commit + push same PR branch.
+5. **Honesty**: teaching atlas in progress — **not** clinical; **not** TA2-complete; **no finished-product claim**.
+
+**Outcome**: Census unchanged (**129/124**; ontology **126/129**). **0** meshes wire / **0** SA spam. Search empty-result bilingual teaching hint added.
