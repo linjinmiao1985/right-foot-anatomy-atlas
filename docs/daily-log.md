@@ -2265,7 +2265,7 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 
 **Commit**: `Day 4cw: EXPERT REVIEW PREP - docs/expert-review-checklist.md v3.0 (teaching-useful/incomplete stance + methods.md/soft-ceiling memo links + grouped DI/MTA teaching compromises checklist items + per-landmark Kabsch residuals + NC rejects) + cloud-agent-handback refresh`
 
-**Push**: SHA `<pending>`
+**Push**: SHA `6d3f89b`
 
 **Summary**: Expert review prep completed per Week 2 checkpoint next goals. Refreshed expert-review-checklist.md v3.0 (header Day 4cw; key docs section with methods.md Day 4cv + soft-ceiling memo links; §B Myology/Angiology teaching compromise details for grouped DI/MTA + lumbricals absent; §E Soft-tissue ceilings comprehensive 8-item breakdown with per-landmark Kabsch max values + BY-SA weight by layer + NC rejects; §G Clinical/journal disclaimer grouped structures teaching compromises note + methods limitations table/license matrix current checks; §I Pass/Fail enhanced with teaching compromises label enforcement). Soft digs watch-only (0 new). Cloud-agent-handback refreshed. Gates green. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
 
