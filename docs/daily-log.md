@@ -2043,3 +2043,33 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 **Result**: **0** new meshes wired; soft-ceiling stance maintained — teaching in progress, **not** clinical, **not** TA2-complete, **not** a finished product.
 
 ---
+
+## 2026-09-22 · Day 4cq
+
+### Priority: DEEP-CHECK dig #161 Zenodo 10.5281/zenodo.20231309 "Muscles of the foot and ankle"
+
+**Tasks**:
+1. ✅ Fetch Zenodo record page + files metadata via API; record exact license
+2. ✅ Inventory: CT-derived right foot/ankle muscular model; per-muscle detail unknown
+3. ✅ License check: **CC BY-NC-SA 4.0** (NC + SA) → **REJECT** (NC disqualifies for MIT-licensed main tree)
+4. ✅ Log #161b REJECT in `docs/week2-soft-ceiling-memo.md` and `open-anatomy-learning-log` with rationale
+5. ✅ ONE tiny polish: quiz honesty badge — added bilingual soft-ceiling note to quiz panel (StructurePanel.tsx): "软组织 census 软天花板 (soft-tissue census soft-ceiling): 逐趾 DI/腰肌、逐射线 MTA 为开放数据空白 (per-toe DI/lumbricals, per-ray MTA = open-data gaps; 详见 docs/week2-soft-ceiling-memo.md)"
+6. ✅ Gates: `npm test -- --run` (138 passed), `python3 scripts/integrity-audit.py` (0 violations), `npm run build` (✓ 3.25s)
+7. ✅ Commit + push PR #3
+
+**Dig #161b outcomes**:
+- **Zenodo API fetch**: DOI 10.5281/zenodo.20231309 metadata retrieved
+- **License**: **CC BY-NC-SA 4.0** ❌ (NC + SA disqualifies)
+- **Content**: CT-derived right foot/ankle muscular model (Scan-the-World; embodi3d source; 1.99 MB GLB + 12.3 MB USDZ + preview PNGs)
+- **Inventory**: Unknown per-muscle detail — description = "muscular structure" but no enumeration of DI per-toe, lumbricals, plantar layers, gastroc/soleus; would require GLB inspection but license already fails gate
+- **Reject rationale**: NC (Non-Commercial) clause disqualifies for MIT-licensed atlas main tree (same NC policy as Zenodo ScanTW 20228270/20231308/21354714/21527865, Visible Korean, NIH foot, Sheffield 9934055); SA clause would require by-sa/ isolate even if NC waived; inventory inspection not justified when license already fails
+- **Teaching value**: ❌ None — NC license blocks integration regardless of muscle inventory
+- **Action**: 🔍 **MONITOR** (Day 4cp) → ❌ **REJECT** (Day 4cq #161b deep-check; NC + SA confirmed via API)
+
+**Polish**: Quiz honesty badge — added bilingual soft-ceiling note to quiz panel teaching stub (StructurePanel.tsx line 140–148): mentions soft-tissue census soft-ceiling + per-toe DI/lumbricals, per-ray MTA open-data gaps + docs/week2-soft-ceiling-memo.md cross-reference
+
+**Census unchanged**: **129/124**; ontology **126/129**
+
+**Result**: **0** meshes downloaded; **0** Kabsch QA; **0** wired. Dig #161 Zenodo Scan-the-World foot/ankle muscles confirmed **NC + SA** via API → **REJECT**. Soft-ceiling stance maintained — teaching in progress, **not** clinical, **not** TA2-complete, **not** a finished product.
+
+---

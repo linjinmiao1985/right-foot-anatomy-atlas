@@ -2066,15 +2066,16 @@ Repository cloned and fully inspected. README claims CC BY 4.0 (no LICENSE file)
 
 **Date**: 2026-09-22 (Day 4cp)
 
-### #161: Zenodo 10.5281/zenodo.20231309 "Muscles of the foot and ankle" (Scan-the-World)
+### #161: Zenodo 10.5281/zenodo.20231309 "Muscles of the foot and ankle" (Scan-the-World) → Day 4cq #161b REJECT
 
 **Source**: Zenodo DOI 10.5281/zenodo.20231309  
 **URL**: https://doi.org/10.5281/zenodo.20231309  
-**Content**: CT-derived right foot and ankle muscular model (2026-05-12 publication; Scan-the-World author)  
-**License**: **Unspecified** in abstract/landing page synthesis — no explicit CC0/CC BY badge visible in search results  
-**Reject reason**: No license clarity; requires full DOI page inspection + potential STL download + license file verification before assessment; **soft-tissue inventory unknown** (abstract says "muscular structure" but no per-muscle catalog visible without DOI fetch)  
-**Teaching value**: 🔍 **MONITOR** — could be relevant if license = CC0/CC BY + contains DI/lumbricals/plantar layers; unverifiable without deeper investigation  
-**Action**: **monitor** (license unspecified; requires full DOI page + ZIP inspection)
+**Content**: CT-derived right foot and ankle muscular model (2026-05-12 publication; Scan-the-World author; embodi3d source)  
+**License** (Day 4cq deep-check via Zenodo API): **CC BY-NC-SA 4.0** ❌ (NC + SA)  
+**Inventory**: **Unknown per-muscle detail** — API metadata description = "muscular structure" but no enumeration of individual muscles (DI per-toe? lumbricals? plantar layers? gastroc/soleus?); would require GLB download + Blender inspection, but license already disqualifies  
+**Reject reason** (Day 4cq #161b): **NC (Non-Commercial)** + **SA (ShareAlike)** disqualifies for MIT-licensed atlas main tree; same NC rejection policy as Zenodo ScanTW 20228270/20231308/21354714/21527865, Visible Korean, NIH foot, Sheffield 9934055; inventory inspection not justified when license already fails gate  
+**Teaching value**: ❌ None — NC license blocks integration regardless of inventory  
+**Action**: 🔍 **MONITOR** (Day 4cp) → ❌ **REJECT** (Day 4cq #161b deep-check; NC + SA confirmed via API)
 
 ### #162: Kaggle/GitHub Foot3D (OllieBoyne/Foot3D; FIND/FOUND)
 
@@ -2099,3 +2100,46 @@ Repository cloned and fully inspected. README claims CC BY 4.0 (no LICENSE file)
 **Day 4cp watch dig summary**:
 
 Digs #161–#163 NEW sources only. **#161** Zenodo Scan-the-World foot/ankle CT model: **MONITOR** (license unspecified, requires DOI inspection). **#162** Foot3D: **REJECT** (external skin surface scans, no internal anatomy). **#163** BoneHub vsd-feet-seg: **REJECT** (CC BY-NC-SA; bone-only; zero soft tissue). Census unchanged (**129/124**; ontology **126/129**). **0** new meshes wired. Soft-ceiling stance maintained.
+
+## Session additions (2026-09-22 · Day 4cq — DEEP-CHECK dig #161b Zenodo 20231309)
+
+**Scope**: Day 4cq priority DEEP-CHECK dig #161 Zenodo 10.5281/zenodo.20231309 "Muscles of the foot and ankle". Fetch Zenodo record page + files metadata; record exact license + inventory. If CC0/CC-BY (non-SA) + useful: download, Kabsch QA, wire if pass. Else: log #161b REJECT/MONITOR.
+
+### #161b Zenodo 20231309 Scan-the-World "Muscles of the foot and ankle" (REJECT — NC + SA)
+
+**Zenodo DOI**: 10.5281/zenodo.20231309  
+**Publication date**: 2026-05-12  
+**Author**: Scan-the-World  
+**Source**: embodi3d (medical CT scan)  
+**Fetch date**: 2026-09-22 (Day 4cq; Zenodo API metadata retrieved)
+
+**License** (from Zenodo API metadata): **CC BY-NC-SA 4.0** ❌
+
+**Content**:
+- **Description**: "This is a model of the muscular structure of a right foot and ankle. It was created from a medical CT scan."
+- **Files**: 1 GLB (1.99 MB: `c5c95549a5851dbc4050fc770073d5dc.glb`), 1 USDZ (12.3 MB), preview PNGs (rotations + top view), metadata XML/JSON
+- **Keywords**: anatomy, body, foot, structure, medical, muscle, embodi3d, ankle
+
+**Foot soft-tissue inventory**: **Unknown per-muscle detail** — API metadata and description do not enumerate individual muscles (e.g., whether DI 1st–4th per-toe, lumbricals, plantar layers, gastroc/soleus bellies are present, grouped, or absent). Zenodo preview thumbnails show CT-derived textured meshes but no muscle segmentation visible at thumbnail resolution. Would require GLB download + inspection (e.g., Blender outliner, GLTF validator mesh count) to verify inventory, but **license already disqualifies** integration.
+
+**Reject rationale**:
+1. **NC (Non-Commercial)** clause disqualifies for MIT-licensed atlas main tree — same policy as Zenodo ScanTW 20228270/20231308/21354714/21527865 (all CC BY-NC-SA 4.0; has DI but NC blocks), Visible Korean (NC-ND, has DI/lumbricals), NIH foot (NC-SA bones-only), Sheffield 9934055 (NC)
+2. **SA (ShareAlike)** clause would require `by-sa/` isolate even if NC were waived — but atlas policy (Day 4cj soft-ceiling memo) prefers CC0/CC-BY main-tree replacements over net SA volume growth (~71/124 unique already in `by-sa/`)
+3. **Inventory unverifiable without license**: Description states "muscular structure" but no per-muscle catalog visible without GLB download + Blender inspection; teaching value indeterminate when license already fails gate
+4. **embodi3d sourcing**: embodi3d.com hosts medical 3D-printable models; many user-uploaded with unclear provenance or NC restrictions; Zenodo upload does not reference original embodi3d model ID or confirm segmentation source (CT auto-segmentation vs manual vs commercial software export)
+
+**Teaching value**: ❌ None — NC license blocks integration regardless of muscle inventory quality or per-toe detail
+
+**Action**: **reject** (NC + SA disqualifies; inventory inspection not justified)
+
+**Update tracking**:
+- Census unchanged (**129/124**; ontology **126/129**).
+- **0** meshes downloaded; **0** Kabsch QA; **0** wired.
+- Dig #161 Zenodo Scan-the-World foot/ankle muscles confirmed **NC + SA** via API → **REJECT**.
+- Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+---
+
+**Day 4cq Zenodo 20231309 deep-check summary**:
+
+Zenodo API metadata retrieved (DOI 10.5281/zenodo.20231309). License: **CC BY-NC-SA 4.0** (NC + SA). Content: CT-derived right foot/ankle muscular model (1.99 MB GLB; embodi3d source). Inventory: unknown per-muscle detail (description = "muscular structure"; no enumeration). **Reject** as foot soft-tissue source due to **NC (Non-Commercial)** license disqualification. Inventory inspection not justified when license already fails gate. Census unchanged. **0** new meshes wired. Soft-ceiling stance maintained.

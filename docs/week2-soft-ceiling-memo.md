@@ -59,6 +59,23 @@
 
 **Verdict**: ❌ **REJECT** integrate — intrinsic foot muscles excluded; `third_party/u-malaya-asian-le/NOTICE.txt` documents CC0 verification + exclusion rationale.
 
+### Zenodo 20231309 Scan-the-World "Muscles of the foot and ankle" — NC disqualifies
+
+**Zenodo DOI 10.5281/zenodo.20231309** (2026-05-12) · **CC BY-NC-SA 4.0** ❌ license **NOT** compatible (NC + SA)
+
+**Content** (deep-check Day 4cq, dig #161b): CT-derived right foot and ankle muscular model (Scan-the-World; embodi3d source); 1 GLB file (1.99 MB) + USDZ + preview PNGs; description: "model of the muscular structure of a right foot and ankle"
+
+**Foot soft-tissue inventory**: Unknown per-muscle detail — API metadata and description do not enumerate individual muscles (e.g., whether DI per-toe, lumbricals, plantar layers, calf bellies are present or grouped); would require GLB inspection to verify inventory, but **license already disqualifies**
+
+**Reject rationale**:
+- **NC (Non-Commercial)** clause disqualifies for MIT-licensed atlas main tree (same as Zenodo ScanTW 20228270/20231308/21354714/21527865, Visible Korean, NIH foot, Sheffield 9934055)
+- **SA (ShareAlike)** clause would require `by-sa/` isolate even if NC were waived — but atlas policy prefers CC0/CC-BY main-tree replacements over net SA volume growth
+- Inventory unknown: description states "muscular structure" but no per-muscle catalog visible without GLB download + inspection; teaching value unverifiable without license compatibility
+
+**Teaching value**: ❌ None — NC license blocks integration regardless of muscle inventory
+
+**Verdict**: ❌ **REJECT** integrate — **NC + SA** disqualifies; inventory inspection not justified when license already fails gate
+
 ### LABIM3D (Universidad Austral de Chile) — no foot anatomy in catalog
 
 **GitHub**: FernandandreaTM/labim3d · **CC BY 4.0** (README claim; no LICENSE file) ✅ license compatible

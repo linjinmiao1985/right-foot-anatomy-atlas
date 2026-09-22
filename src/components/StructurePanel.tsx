@@ -142,7 +142,7 @@ export default function StructurePanel({
           data-testid="teaching-quiz-panel-note"
           style={{ fontSize: '11px', color: '#f9a8d4', margin: '0 0 12px', lineHeight: 1.5 }}
         >
-          测验 stub：名称 / 摘要 / 本体论已隐藏。对照（Q）后查看。教学自测，非考试。
+          测验 stub：名称 / 摘要 / 本体论已隐藏。对照（Q）后查看。教学自测（teaching self-test），非考试（not exam）。软组织 census 软天花板（soft-tissue census soft-ceiling）：逐趾 DI/腰肌、逐射线 MTA 为开放数据空白 (per-toe DI/lumbricals, per-ray MTA = open-data gaps; 详见 docs/week2-soft-ceiling-memo.md)。
         </p>
       )}
 
