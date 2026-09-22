@@ -2143,3 +2143,60 @@ Digs #161–#163 NEW sources only. **#161** Zenodo Scan-the-World foot/ankle CT 
 **Day 4cq Zenodo 20231309 deep-check summary**:
 
 Zenodo API metadata retrieved (DOI 10.5281/zenodo.20231309). License: **CC BY-NC-SA 4.0** (NC + SA). Content: CT-derived right foot/ankle muscular model (1.99 MB GLB; embodi3d source). Inventory: unknown per-muscle detail (description = "muscular structure"; no enumeration). **Reject** as foot soft-tissue source due to **NC (Non-Commercial)** license disqualification. Inventory inspection not justified when license already fails gate. Census unchanged. **0** new meshes wired. Soft-ceiling stance maintained.
+
+## Session additions (2026-09-22 · Day 4cr — soft-tissue WATCH digs #164–#166)
+
+**Scope**: Day 4cr NEW watch digs (at most #164–#166); DRY OK; no NC/SA/unclear wires. Skip re-logging #147–#163.
+
+**Date**: 2026-09-22 (Day 4cr)
+
+### #164: NIH 3D Print Exchange 3DPX-015850 "Anatomic Human Foot" (MONITOR — bone-focused; license unclear)
+
+**Source**: NIH 3D Print Exchange entry 15850  
+**URL**: https://3d.nih.gov/entries/15850/1  
+**Content**: Anatomic foot model designed in Lightwave 3D (Dr Glass); 26 proper foot bones (28 if including 1st MTP sesamoids); X3D format available; newer processed .glb versions in version history  
+**License**: **Unclear** — search results do not state explicit CC0/CC-BY/NC badge; NIH 3DPX entries vary (some CC0, some CC-BY, some unclear); would require entry page inspection + license field verification  
+**Foot soft-tissue inventory**: Description emphasizes **bones** (26 proper + 2 sesamoids); no mention of muscles (DI, lumbricals, plantar layers, calf) in search results; likely bones-only model  
+**Reject reason** (provisional): **Bone-focused** (no soft-tissue mention); license unclear without full entry inspection; even if CC0/CC-BY, bones-only = not useful for DI/lumbricals/MTA gaps  
+**Teaching value**: ❌ Likely none — bone anatomy (atlas already has BP3D + UM bones); no soft-tissue inventory visible  
+**Action**: **monitor** (bone-focused; license unclear; soft-tissue inventory likely absent)
+
+### #165: AnatomyTOOL Open3DModel ankle/foot + lower-limb (REJECT — CC BY-SA; already in by-sa/ isolate)
+
+**Source**: AnatomyTOOL Open3DModel  
+**URL**: https://anatomytool.org/content/open3dmodel-ankle-and-foot-english-labels + https://anatomytool.org/open3dmodel-create  
+**Content**: 3D foot/lower-limb model (OBJ, GLB, Blender source archives); includes foot muscles (abductor hallucis, flexor digitorum brevis, quadratus plantae, lumbricals, dorsal/plantar interossei, etc.); viewer + downloadable source files  
+**License**: **CC BY-SA 4.0** (stated in page footer: "Open3D project, Jan Kooloos, RadboudUMC, Eungyeol Lee, LUMC et al, license: CC BY-SA")  
+**Foot soft-tissue inventory**: Contains intrinsic foot muscles including **4 lumbricals**, **4 dorsal interossei**, **3 plantar interossei**, per anatomical completeness (AnatomyZone confirms 4 DI, 3 PI, 4 lumbricals standard anatomy)  
+**Reject reason**: **SA (ShareAlike)** — Open3DModel = Open3D Project successor (same CC BY-SA 4.0 as Z-Anatomy + Open3D repositories already in `by-sa/` isolate); atlas policy (Day 4cj soft-ceiling memo) prefers CC0/CC-BY main-tree replacements over net SA volume growth (~71/124 unique already in `by-sa/`); DI/lumbricals present but **SA-only** (no CC0/CC-BY alternative found)  
+**Teaching value**: ✅ Educational value (4 DI, 4 lumbricals, 3 PI present) but **SA license blocks main-tree integration**  
+**Action**: **reject** integrate — SA disqualifies for net SA reduction goal; Open3D DI/lumbricals/plantar interossei already in `by-sa/` isolate (no new content vs existing Open3D pack)
+
+### #166: MorphoSource + 7T MRI foot muscle studies (REJECT — no downloadable mesh; research-only segmentation)
+
+**Source**: MorphoSource database search + PMC 7818930 (7-Tesla MRI foot muscle morphology study) + PMC 7376695 (diabetic foot intrinsic muscle volume CT study)  
+**URL**: MorphoSource (no foot muscle match); https://pmc.ncbi.nlm.nih.gov/articles/PMC7818930/ + https://pmc.ncbi.nlm.nih.gov/articles/PMC7376695/  
+**Content**: MorphoSource = paleontological/comparative anatomy 3D scan repository (Smithsonian CC0 skeletal models available, e.g., orangutan pes bones, but **no human foot muscle meshes**); 7T MRI study = intrinsic foot muscle segmentation in 3D Slicer (abductor hallucis, flexor digitorum brevis, quadratus plantae, lumbricals, dorsal/plantar interossei manually contoured; muscle volumes + fat infiltration measured); diabetic foot study = Mimics LiveWire + Smart Expand segmentation (CT-based intrinsic muscle 3D surface models)  
+**License**: 7T MRI study = CC BY 4.0 article license (PMC); Smithsonian skeletal = CC0; **no mesh files released** for either study  
+**Foot soft-tissue inventory**: 7T MRI study segmented **all intrinsic foot muscles** (lumbricals volume = 1.5 cm³; dorsal/plantar interossei = 19.8 cm³); diabetic foot study segmented intrinsic muscle volume (no per-muscle STL export mentioned)  
+**Reject reason**: **No downloadable mesh** — studies describe segmentation methodology + volumetric measurements but do not provide STL/OBJ/GLB files for download; research datasets (3D Slicer masks, Mimics segmentation masks) not publicly archived on Zenodo/Dataverse/institutional repos per search results; MorphoSource lacks human foot muscle inventory (skeletal only; e.g., CC0 orangutan pes bones ≠ human foot soft tissue)  
+**Teaching value**: ❌ None — no mesh files released; research segmentation not archived as downloadable 3D models  
+**Action**: **reject** (no downloadable mesh; research-only segmentation; MorphoSource DRY for human foot soft tissue)
+
+**Day 4cr watch dig summary (#164–#166)**:
+
+| Dig # | Source | License | DI/lumbricals/per-ray MTA? | Action |
+|-------|--------|---------|---------------------------|--------|
+| #164 | NIH 3DPX 15850 Anatomic Human Foot | Unclear | Bones-only (26+2); no soft tissue | **monitor** (license unclear; bone-focused) |
+| #165 | AnatomyTOOL Open3DModel foot | CC BY-SA 4.0 | Has 4 DI, 4 lumbricals, 3 PI | **reject** (SA; already in by-sa/ isolate; no new content) |
+| #166 | MorphoSource + 7T MRI studies | N/A (no mesh) | Segmented but not released | **reject** (no downloadable mesh) |
+
+**Result**: All digs #164–#166 **inconclusive or DRY** for NEW CC0/CC-BY foot soft tissue. NIH 3DPX = bones-only (license unclear). AnatomyTOOL = SA (Open3D lineage; already in by-sa/). MorphoSource + 7T MRI = no downloadable mesh (research segmentation not archived). Soft-tissue open-data ceiling stance **reconfirmed** — license-clear per-toe DI/lumbricals/per-ray MTA remain unavailable.
+
+**Update tracking**:
+- Census unchanged (**129/124**; ontology **126/129**).
+- **0** meshes integrated; **0** SA spam; unclear licenses/no-mesh sources **not** force-wired.
+- Soft gaps (per-toe DI / lumbricals / per-ray MTA) remain **dry** or **SA-only** (Open3D existing).
+- Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+---

@@ -28,9 +28,9 @@ Henson Sheffield **Option A** one-subject MC POC completed (`Aug_8`): surfaces O
 
 # Cloud Agent handback — Phase 8 resume brief
 
-**Date**: 2026-09-22 · Day **4ck**  
+**Date**: 2026-09-22 · Day **4cr**  
 **Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3)  
-**HEAD tip**: `0bb3449` (Day 4cj: soft ceiling memo)  
+**HEAD tip**: `9d0ff0c` (Day 4cq: dig #161b Zenodo 20231309 REJECT NC+SA + quiz panel soft-ceiling note)  
 **Status**: Quality-week checkpoint; teaching-grade atlas **in progress** — **not** a finished-product claim  
 **Companion**: `docs/phase-8-self-review.md`, `docs/cc0-soft-tissue-watchlist.md`, `third_party/andreassen/`, `docs/week2-soft-ceiling-memo.md`
 

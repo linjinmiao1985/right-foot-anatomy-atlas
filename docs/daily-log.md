@@ -2073,3 +2073,31 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 **Result**: **0** meshes downloaded; **0** Kabsch QA; **0** wired. Dig #161 Zenodo Scan-the-World foot/ankle muscles confirmed **NC + SA** via API → **REJECT**. Soft-ceiling stance maintained — teaching in progress, **not** clinical, **not** TA2-complete, **not** a finished product.
 
 ---
+
+## 2026-09-22 · Day 4cr
+
+### Soft-tissue open-data ceiling reconfirmed; quality docs/UX over forced mesh wires
+
+**Tasks**:
+1. ✅ Soft-tissue WATCH digs #164–#166 NEW sources only:
+   - **#164** NIH 3D Print Exchange 3DPX-015850 "Anatomic Human Foot": **MONITOR** (bones-only; 26 proper + 2 sesamoids; license unclear; no soft-tissue mention)
+   - **#165** AnatomyTOOL Open3DModel ankle/foot + lower-limb: **REJECT** (CC BY-SA 4.0; 4 DI, 4 lumbricals, 3 PI present but SA-only; Open3D lineage already in by-sa/ isolate; no new content)
+   - **#166** MorphoSource + 7T MRI foot muscle studies: **REJECT** (no downloadable mesh; research segmentation not archived; MorphoSource DRY for human foot soft tissue)
+2. ✅ Docs: refreshed `cloud-agent-handback` tip SHA to 9d0ff0c / Day 4cq
+3. ✅ ONE tiny teaching polish: README Limitations — updated soft-tissue open-data ceiling paragraph to mention #136–#166 watch digs + added bilingual "**Grouped structures** (e.g., DI 1st–4th combined, dorsal/plantar MTA all rays) are **teaching compromises** (教学妥协), not per-toe/per-ray elemental atlases" clarity
+4. ✅ Gates: `npm test -- --run` (138 passed), `python3 scripts/integrity-audit.py` (0 violations), `npm run build` (✓ 3.84s)
+5. ✅ Commit + push PR #3
+
+**Dig outcomes (#164–#166)**:
+- **#164 NIH 3DPX 15850**: MONITOR (bones-only; license unclear)
+- **#165 AnatomyTOOL Open3DModel**: REJECT (SA; 4 DI + 4 lumbricals + 3 PI present but SA-only; Open3D lineage already in by-sa/)
+- **#166 MorphoSource + 7T MRI**: REJECT (no downloadable mesh; research segmentation not archived)
+- All NEW digs **inconclusive or DRY** for CC0/CC-BY foot soft tissue
+
+**Polish**: README Limitations soft-ceiling paragraph — added #136–#166 dig range update + bilingual "grouped structures are teaching compromises" clarity (not per-toe/per-ray elemental atlases)
+
+**Census unchanged**: **129/124**; ontology **126/129**
+
+**Result**: **0** meshes downloaded; **0** Kabsch QA; **0** wired. Soft gaps (per-toe DI / lumbricals / per-ray MTA) remain **dry** or **SA-only** (Open3D existing). Soft-ceiling stance **reconfirmed** — teaching in progress, **not** clinical, **not** TA2-complete, **not** a finished product.
+
+---
