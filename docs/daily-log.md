@@ -1860,6 +1860,31 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 
 **Outcome**: Census unchanged (**129/124**; ontology **126/129**). **0** meshes wire / **0** SA spam. Denser bilingual gap notes added for grouped DI and grouped MTA (soft-ceiling teaching transparency). Light watch dig #142–#146 dry. All gates PASSED. Day 4ci complete.
 
+## Day 4cm (2026-09-22) — Soft-tissue watch dig #154+ (DRY) + reduced-motion a11y
+
+**Target**: Day 4cm soft-tissue WATCH dig #154+ (NEW sources only; avoid re-logging #147–#153): Look for CC0/clear CC BY meshes: per-toe DI, lumbricals, plantar layers, per-ray MTA. Append log rows. No wire of NC/unclear/spatially-failed assets. DRY OK. ONE tiny teaching polish (unused): prefer a11y (focus-visible/reduced-motion) or empty-state clarity. Gates: npm test, integrity-audit, build. daily-log Day 4cm. Commit + push.
+
+1. Continued on `cursor/week2-day4bm-ghost-opacity-096e` (Day 4cl tip @ db0bae7).
+2. **Soft-tissue watch dig #154–#157** (open-anatomy-learning-log):
+   - **#154**: MorphoSource Media 000040059 (Muscles) — human foot/ankle CT mesh, **license unclear** (MorphoSource access required) → **reject**
+   - **#155**: Embodi3D foot/ankle muscles (MyMiniFactory) — **CC BY-NC-SA** (same Scan-the-World source family as Zenodo 20228270) → **reject** (NC clause; already in soft-ceiling memo)
+   - **#156**: Open Anatomy Project foot atlas — **not found** (Brain/Liver/Knee/Abdominal atlases exist; partner site mentions "Foot" but no detail/launch link) → **monitor**
+   - **#157**: RadImageNet foot MRI — CC BY 4.0 research paper but **imaging dataset** (1.35M MRI/CT/US images for AI training), not 3D mesh source → **reject** (not mesh data)
+   - **Result**: All digs #154–#157 **DRY** for NEW CC0/CC-BY per-toe DI, lumbricals, or per-ray MTA meshes. License-unclear/NC sources rejected; imaging dataset (not mesh) rejected; Open Anatomy foot atlas not found. Soft-tissue open-data ceiling stance (Day 4cj/4cl) **reconfirmed again**.
+3. **ONE tiny teaching polish** (reduced-motion a11y):
+   - Added `@media (prefers-reduced-motion: reduce)` rule to `index.css`
+   - Disables animations/transitions for users who prefer reduced motion (OS-level accessibility setting)
+   - Respects WCAG 2.1 Level AAA guideline for motion-triggered disorders
+   - Applies to all animations/transitions site-wide with `!important` override
+   - High-value a11y improvement; no feature sprawl; 9-line CSS addition
+4. **Gates**: Run full gates:
+   - `python3 scripts/integrity-audit.py` → **PASSED** (129 structures / 134 GLBs / 0 violations)
+   - `npm test -- --run` → **138/138 PASSED** (19 test files)
+   - `npm run build` → **OK** (dist built 3.50s; 1.2 MB chunk size warning expected)
+5. **Checks**: daily-log Day 4cm updated; commit + push same PR branch.
+
+**Progress snapshot**: Day 4cm soft-tissue watch dig #154–#157 all **DRY** (0 new CC0/CC-BY per-toe/per-ray meshes). License-unclear/NC/imaging-only rejected. Soft-ceiling stance triple-confirmed. Tiny a11y polish: reduced-motion CSS added. Census unchanged **129/124**; ontology **126/129**. Teaching atlas in progress — **not** clinical; **not** TA2-complete; **no finished-product claim**.
+
 ## Day 4cl (2026-09-22) — Soft-tissue watch dig #147+ (DRY)
 
 **Target**: Day 4cl soft-tissue WATCH dig #147+: search Zenodo / Figshare / GitHub / HuBMAP / TotalSegmentator / academic repos for NEW CC0 or clear CC BY meshes of foot dorsal interossei (per toe), lumbricals, plantar layers, or per-ray dorsal/plantar metatarsal arteries. Append dig rows to open-anatomy-learning-log. Do NOT wire NC, NC-SA, unclear licenses, or spatially-failed assets. If nothing new meshes, record DRY. ONE tiny teaching polish (highest-value unused): a11y focus ring, keyboard-help sync with prefs, or soft-ceiling footer clarity. Gates: npm test, integrity-audit, build. Update daily-log Day 4cl. Commit + push.

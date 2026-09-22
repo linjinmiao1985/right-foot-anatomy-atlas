@@ -1867,3 +1867,72 @@ Continue Week 2 sprint after Day 4br quiz honesty. **Change angle**: search LESS
 - **0** meshes integrated; **0** SA spam; NC/unclear **not** force-wired.
 - Soft gaps (per-toe DI / lumbricals / per-ray MTA) remain **dry**.
 - Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+---
+
+## Session additions (2026-09-22 · Day 4cm — #154-#157 soft-tissue watch dig continued)
+
+**Scope**: Day 4cm soft-tissue WATCH dig #154+ continuation (NEW sources only; avoid re-logging #147–#153). Search for CC0/clear CC-BY meshes: per-toe DI, lumbricals, plantar layers, per-ray MTA. Append log rows. No wire of NC/unclear/spatially-failed assets. DRY OK.
+
+### #154 MorphoSource Media 000040059 — Muscles (REJECT — license unclear)
+
+**Dataset**: Media 000040059: Muscles (Homo sapiens foot/ankle)  
+**URL**: https://www.morphosource.org/media/000040059  
+**Managed by**: Faes Kerkhof  
+**Content**: CT/microCT-derived mesh STL — specimen ku:692L, includes "Abductor Digiti Minimi" (foot muscle)  
+**License**: **Unspecified in search results** — MorphoSource metadata page does not display explicit CC0/CC-BY badge  
+**Reject reason**: License not confirmed CC0/CC-BY from search; would require MorphoSource account login + per-file license verification  
+**Teaching value**: ❌ None — license unconfirmed  
+**Action**: **reject** (license unclear; MorphoSource access required for full verification)
+
+### #155 Embodi3D foot/ankle muscles via MyMiniFactory (RE-VERIFY REJECT — NC-SA)
+
+**Dataset**: Muscles of the foot and ankle (Scan The World / Embodi3D)  
+**URL**: https://www.myminifactory.com/object/3d-print-muscles-of-the-foot-and-ankle-72472  
+**Embodi3D record**: https://www.embodi3d.com/files/file/8937-normal-right-foot-and-ankle-muscle-model-3d-printable-stl-file-converted-from-ct-scan/  
+**License**: **CC BY-NC-SA** (per MyMiniFactory listing; same Zenodo 20228270 source family)  
+**Content**: CT-derived right foot and ankle muscular structure STL  
+**Reject reason**: **NC (Non-Commercial)** clause blocks MIT-licensed atlas redistribution  
+**Teaching value**: ❌ None — NC incompatible  
+**Action**: **reject** (NC clause; already documented in soft-ceiling memo + Day 4cl dig #147)
+
+### #156 Open Anatomy Project foot atlas (MONITOR — not found / no detail)
+
+**Project**: Open Anatomy Project (Brigham and Women's Hospital / Harvard)  
+**URL**: https://www.openanatomy.org  
+**License**: Slicer contribution license (broad reuse); individual atlas licenses vary  
+**Search**: Atlases page lists Brain / Liver / Inner Ear / Head-Neck / Knee / Abdominal / Thoracic — **no dedicated foot atlas found**  
+**Partner site mention**: MedTec4SusDev mentions "Hand | Foot" in atlas list, but no detail / launch link  
+**Content**: 3D Slicer scene export supports glTF/OBJ with hierarchy/colors; no confirmed per-toe DI or per-ray MTA foot data  
+**Teaching value**: ❌ None — no foot soft-tissue atlas found  
+**Action**: **monitor** — re-check OA atlas catalog for future foot segmentations
+
+### #157 RadImageNet foot MRI (REJECT — imaging dataset, not mesh data)
+
+**Dataset**: RadImageNet (open radiologic deep learning dataset)  
+**URL**: https://www.radimagenet.com  
+**License**: CC BY 4.0 (research paper); dataset access by request  
+**Content**: 1.35M annotated CT/MRI/US images — MRI includes ankle/foot modality but **images only, not 3D meshes or per-structure labels** (DI/lumbricals/MTA)  
+**Purpose**: Transfer learning for medical AI models (ResNet50, DenseNet121, etc.)  
+**Reject reason**: Not mesh data; medical imaging dataset for deep learning, not anatomical atlas STL/GLB source  
+**Teaching value**: ❌ None — no redistributable foot soft-tissue meshes  
+**Action**: **reject** (not mesh source; medical AI training dataset)
+
+---
+
+**Day 4cm dig summary (#154–#157)**:
+
+| Dig # | Source | License | DI/lumbricals/per-ray MTA? | Action |
+|-------|--------|---------|---------------------------|--------|
+| #154 | MorphoSource 000040059 | Unclear | Unknown foot muscle | **reject** (license) |
+| #155 | Embodi3D foot/ankle (MyMiniFactory) | CC BY-NC-SA | Has foot muscles | **reject** (NC) |
+| #156 | Open Anatomy foot atlas | Varies | Not found | **monitor** |
+| #157 | RadImageNet foot MRI | CC BY 4.0 (paper) | Images not meshes | **reject** (not mesh) |
+
+**Result**: All digs #154–#157 **DRY** for NEW CC0/CC-BY per-toe DI, lumbricals, or per-ray MTA meshes. License-unclear/NC sources rejected; imaging dataset (not mesh) rejected; Open Anatomy foot atlas not found. Soft-tissue open-data ceiling stance (Day 4cj/4cl) **reconfirmed again** — CC0/CC-BY per-structure foot soft-tissue meshes remain unavailable across usual + alternate pools.
+
+**Update tracking**:
+- Census unchanged (**129/124**; ontology **126/129**).
+- **0** meshes integrated; **0** SA spam; NC/unclear **not** force-wired.
+- Soft gaps (per-toe DI / lumbricals / per-ray MTA) remain **dry**.
+- Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
