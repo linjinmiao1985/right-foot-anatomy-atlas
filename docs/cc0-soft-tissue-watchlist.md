@@ -267,3 +267,16 @@ Watchlist still tracks where a true **CC0/BY** soft find would matter. Day **4bo
 | Cloud Agent | **Continued** this pass |
 
 Watchlist still tracks where a true **CC0/BY** soft find would matter. Day **4br** confirms soft gaps remain **dry**. Teaching atlas in progress — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+## Day 4bs dig summary (2026-09-22)
+
+| Check | Result |
+|-------|--------|
+| Dig #127–#135 (LESS-obvious CC0/BY pools) | **All dry** — Zenodo FootNet CC BY = 2D smartphone seg (not 3D mesh); ScanTW Zenodo 20228270 **NC-SA** re-verify; Visible Korean **NC-ND**; NIH 15850 bones-only; Andreassen **blocked** Day 4az+4ba; SlicerOpenAnatomy = tool/viewer, not data; Figshare PLOS **research tables**, not 3D; Blender CC0 **skin-surface**, not named anatomy |
+| Zenodo / MorphoSource / NIH / Open Anatomy / Figshare CC0 foot soft with mesh or convertible labels | **None found** — all rejects (NC, 2D, bones-only, skin-only, tools, tables) |
+| Gastroc/soleus | No new belly surface; Andreassen/Henson still **blocked** |
+| Teaching polish chosen | G/E/Q/0/Home keyboard help ✓ (Day 4ao); panel gap notes ✓ (meshNote); screenshots ✓ (9 shots Day 4an) — **all done prior** |
+| Andreassen / Utah / Henson wire | **Skipped** / not re-opened / **0** wire |
+| Meshes integrated | **0** |
+
+Watchlist still tracks where a true **CC0/BY** soft find would matter. Day **4bs** confirms soft gaps remain **dry** after comprehensive LESS-obvious pool search. Teaching atlas in progress — **not** clinical; **not** TA2-complete; **not** a finished product.

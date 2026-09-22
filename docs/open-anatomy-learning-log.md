@@ -1633,3 +1633,41 @@ Continue Week 2 sprint after Day 4bo quiz stub. Soft dig **#122–#126**. Soft g
 - Census unchanged (**129/124**; ontology **126/129**).
 - **0** meshes integrated; **0** SA spam; Andreassen/Henson/Utah **not** force-wired.
 - Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+## Session additions (2026-09-22 · Day 4bs — LESS-obvious pool dig #127–#135)
+
+### Context
+
+Continue Week 2 sprint after Day 4br quiz honesty. **Change angle**: search LESS-obvious pools (university Zenodo foot soft segmentations CC0/BY with mesh or convertible labels; MorphoSource human foot soft CC BY; NIH 3D print exchange foot soft CC; Open Anatomy Project / Slicer scenes; Figshare CC0 foot muscles). Soft gaps **still dry** after comprehensive dig. **0** mesh wire. Teaching UX polish options (G/E/Q/0/Home keyboard help; panel gap notes; screenshots) **all done prior**. Teaching-grade atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+### NEW license-verified projects (≥8; #127–#135)
+
+| # | Project | URL / DOI | License verified | Foot relevance | Decision |
+|---|---------|-----------|------------------|----------------|----------|
+| **127** | **FootNet — Multi-View Human Feet Image Dataset** | Zenodo DOI **10.5281/zenodo.20457252** | **CC BY 4.0** Zenodo page verified 2026-09-22 | 191 smartphone foot images + binary foreground masks — 2D **image segmentation**, not 3D mesh | **reject** soft (2D dataset, not 3D teaching mesh) |
+| **128** | **Scan-the-World — Muscles of the foot and ankle** (Zenodo 20228270) | DOI **10.5281/zenodo.20228270** | **CC BY-NC-SA 4.0** Zenodo API re-verified Day **4bs** (same as Day 4br #123) | CT-derived united right-foot/ankle muscle GLB — **NC** blocks main-tree | **reject** (NC). Re-verify of #84/#90/#100/#101/#123 |
+| **129** | **Visible Korean foot muscles PDF** | http://www.anatomy.re.kr (intjmorphol.com PDF) | **CC BY-NC-ND 3.0** page footer verified 2026-09-22 | STL/OBJ/PDF surface models — DI + PI present but **NC + ND** | **reject** (NC-ND). Re-verify of prior learning-log note |
+| **130** | **NIH 3D Print Exchange — Anatomic Human Foot** (15850) | https://3d.nih.gov/entries/15850/1 | Page states **CC BY-NC-SA** (NIH repo general CC0, but individual model licenses vary) | 26 foot **bones** (+ 2 sesamoids) — **0** DI/NV/ligament soft | **reject** soft (bones-only; NC blocks if soft existed) |
+| **131** | **Andreassen VH LE muscles** (Digital Commons @ DU) | DOI **10.56902/COB.vh.2022.0** | **CC BY 4.0** page license + package README verified Day 4az | VHM gastroc med/lat + soleus — **Kabsch FAIL** Day 4az+4ba (foot residuals / laterality) | **blocked** (alignment). Re-verify of Day 4az+4ba; still **not** wired |
+| **132** | **SlicerOpenAnatomy extension** | https://github.com/PerkLab/SlicerOpenAnatomy | Code **Apache-2.0** + **MIT** components (`LICENSE` files verified 2026-09-22) | Exporter/importer for OpenAnatomy atlases — **tool**, not foot muscle Slicer scene dataset | **reject** soft (tool/viewer, not data source) |
+| **133** | **Figshare PLOS ONE intrinsic foot muscles** (6553301) | DOI **10.1371/journal.pone.0199055.t005** | **CC BY 4.0** Figshare page verified 2026-09-22 | Study results **data table** (ultrasound intrinsic muscle measurements) — not 3D model | **reject** soft (research tables, not 3D mesh) |
+| **134** | **Wikimedia Commons — Blender Foot realistic (CC0)** | https://commons.wikimedia.org/wiki/File:Blender_Foot_realistic_by_Dan_Ulrich_(CC0).stl | **CC0 1.0** page deed verified 2026-09-22 | Blender Studio Human Base Meshes v1.2 external **skin**-surface foot STL — not named anatomy | **reject** soft (external skin-surface, not named DI/NV/ligament teaching) |
+| **135** | **Visible Korean foot muscles PDF** (intjmorphol.com) | http://intjmorphol.com/wp-content/uploads/2016/01/art_16_334.pdf | **CC BY-NC-ND 3.0** (footer verified 2026-09-22; same as #129) | VK Visible Korean STL/OBJ/PDF — **NC + ND** blocks | **reject** (NC-ND). Duplicate search of #129 |
+
+**Also checked (not re-numbered)**: AnatomyZone / Kenhub DI teaching pages (view-only refs, not downloadable licensed meshes). MorphoSource search returned mammalogy foot bones CT (not human soft). Figshare foot segmentation = PLOS ONE table only. **No** fresh CC0/BY elemental foot DI / per-ray MTA / nerve / ligament pack this pass.
+
+### Soft-gap check
+
+| Gap | Day 4bs |
+|-----|---------|
+| DI / per-ray MTA / nerve·ligament CC0/BY | **Still dry** — #127 2D seg; #128 NC; #129/#135 NC-ND; #130 bones-only; #131 **blocked**; #132 tool; #133 tables; #134 skin-only |
+| Gastroc/soleus | Andreassen **blocked** Day 4az+4ba; Henson **blocked** Day 4bj; no new CC0/BY belly surface pack this pass |
+| Utah Hive | Still **reject** — not re-opened |
+
+### Outcome
+
+- Learning log **#127–#135**; watchlist / daily-log Day 4bs.
+- Census unchanged (**129/124**; ontology **126/129**).
+- **0** meshes integrated; **0** SA spam; Andreassen/Henson/Utah **not** force-wired.
+- Teaching UX polish options (G/E/Q/0/Home keyboard help ✓ Day 4ao; panel gap notes ✓ meshNote live; screenshots ✓ 9 shots Day 4an) **all done prior** — no new polish this pass.
+- Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.

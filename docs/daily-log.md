@@ -1573,3 +1573,26 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 7. **Honesty**: teaching atlas in progress — **not** clinical; **not** TA2-complete; **no finished-product claim**.
 
 **Outcome**: Census unchanged (**129/124**; ontology **126/129**). **0** meshes integrated; **0** SA spam. Soft gaps (DI / per-ray MTA / NV / ligaments / gastroc-soleus) remain **dry** after dig #122–#126.
+
+## Day 4bs (2026-09-22) — LESS-obvious pool dig #127–#135 (0 wire)
+
+**Target**: Comprehensive LESS-obvious CC0/BY soft pool search (Zenodo foot soft segmentations with mesh or convertible labels; MorphoSource human foot soft; NIH 3D print foot soft; Open Anatomy / Slicer scenes; Figshare CC0 muscles). **0** mesh wire; **no** force-wire blocked sources.
+
+1. Continued on `cursor/week2-day4bm-ghost-opacity-096e` (Day 4br tip @ 181d0f1).
+2. **Digs #127–#135**:
+   - #127 FootNet Zenodo 20457252 **CC BY** — 191-image 2D smartphone foot segmentation, **not** 3D mesh (**reject** soft)
+   - #128 Scan-the-World Zenodo 20228270 **NC-SA** re-verify (same as #123) — CT united muscle GLB (**reject** NC)
+   - #129/#135 Visible Korean foot PDF **NC-ND** re-verify (prior learning-log note) — STL/OBJ/PDF muscles incl. DI+PI (**reject** NC-ND)
+   - #130 NIH 15850 **CC BY-NC-SA** (individual) — anatomic foot 26 **bones** only, **0** soft (**reject** bones-only + NC)
+   - #131 Andreassen VH LE **CC BY** — gastroc/soleus Kabsch **FAIL** Day 4az+4ba (**blocked**)
+   - #132 SlicerOpenAnatomy **Apache-2.0** code — exporter/importer **tool**, not foot muscle scene dataset (**reject** tool)
+   - #133 Figshare PLOS 6553301 **CC BY** — ultrasound intrinsic muscle **data table**, not 3D model (**reject** tables)
+   - #134 Wikimedia Blender Foot **CC0** — external **skin**-surface STL, not named DI/NV anatomy (**reject** skin-only)
+   - Also checked: AnatomyZone/Kenhub (view-only refs); MorphoSource (mammal bones); Figshare foot seg (table only)
+3. **Soft gaps still dry** → **0 mesh wire**. Andreassen/Henson/Utah **not** re-opened.
+4. **Teaching polish**: G/E/Q/0/Home keyboard help ✓ (Day 4ao); panel gap notes ✓ (meshNote live); screenshots ✓ (9 shots Day 4an) — **all done prior**, no new polish this pass.
+5. **Checks**: integrity-audit **PASSED** (129 / 134 GLBs / 0 violations); vitest **124/124**; build **OK**.
+6. **Docs**: watchlist + learning-log Day 4bs; this log; commit + push same PR branch.
+7. **Honesty**: teaching atlas in progress — **not** clinical; **not** TA2-complete; **no finished-product claim**.
+
+**Outcome**: Census unchanged (**129/124**; ontology **126/129**). **0** meshes integrated; **0** SA spam. Soft gaps (DI / per-ray MTA / NV / ligaments / gastroc-soleus) remain **dry** after comprehensive LESS-obvious pool search (dig #127–#135).
