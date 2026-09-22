@@ -28,11 +28,11 @@ Henson Sheffield **Option A** one-subject MC POC completed (`Aug_8`): surfaces O
 
 # Cloud Agent handback — Phase 8 resume brief
 
-**Date**: 2026-09-22 · Day **4db** (Week 2 JOURNAL FIGURE CAPTIONS stub)  
+**Date**: 2026-09-22 · Day **4dc** (Week 2 LINK JOURNAL CAPTIONS)  
 **Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3)  
-**HEAD tip**: `cd0ec46` (Day 4da: finalize daily-log SHA — methods ontology gaps row)  
-**Status**: Journal figure captions created (7 figures: bones/layers/explode/BY-SA-isolate/soft-ceiling-grouped-DI-MTA/ontology-empties/Kabsch-residuals; bilingual 1–2 sentence stubs; honesty stance); teaching-grade atlas **in progress** — **not** a finished-product claim  
-**Companion**: `docs/phase-8-self-review.md` (Week 2 checkpoint added Day 4cu), `docs/cc0-soft-tissue-watchlist.md`, `third_party/andreassen/`, `docs/week2-soft-ceiling-memo.md`, `docs/methods.md` (Day 4cv polish + Day 4da ontology gaps row), `docs/expert-review-checklist.md` (Day 4cw v3.0), `README.md` (Day 4cx Limitations sync), `src/lib/assetProvenance.ts` (Day 4cy footer census hint), `docs/journal-figure-captions.md` (Day 4db bilingual teaching figure stubs)
+**HEAD tip**: `bb75a8d` (Day 4db: finalize daily-log SHA — journal figure captions stub)  
+**Status**: Journal figure captions linked (README Documentation section + methods.md after license matrix; one-line concise); teaching-grade atlas **in progress** — **not** a finished-product claim  
+**Companion**: `docs/phase-8-self-review.md` (Week 2 checkpoint added Day 4cu), `docs/cc0-soft-tissue-watchlist.md`, `third_party/andreassen/`, `docs/week2-soft-ceiling-memo.md`, `docs/methods.md` (Day 4cv polish + Day 4da ontology gaps row + Day 4dc journal captions link), `docs/expert-review-checklist.md` (Day 4cw v3.0), `README.md` (Day 4cx Limitations sync + Day 4dc journal captions link), `src/lib/assetProvenance.ts` (Day 4cy footer census hint), `docs/journal-figure-captions.md` (Day 4db bilingual teaching figure stubs)
 
 ---
 

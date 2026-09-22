@@ -39,6 +39,8 @@ This atlas integrates open-licensed anatomical meshes from BodyParts3D, Universi
 | **Ligaments/tendons** | **2** (BP3D long plantar + Achilles) | **27** (Open3D ankle bands/retinacula/aponeuroses) | Further tarsal/toe bands incomplete vs named ATFL-set in some texts |
 | **Total** | **53/124** unique (43%) | **71/124** unique (57%) | **NC rejected**: Zenodo Scan-the-World (CC BY-NC-SA), Visible Korean (NC-ND), BoneHub vsd-feet-seg (NC-SA); **License unclear**: Cults3D/Sketchfab models without explicit CC0/BY badge |
 
+**Journal figure captions**: For concise bilingual teaching figure stubs (bones overview, layer toggles/ghost opacity, explode, BY-SA isolate vs main tree, soft-ceiling/teaching-compromise grouped DI-MTA, ontology honest empties, Kabsch residuals), see `docs/journal-figure-captions.md` (Day 4db).
+
 **Key**: Main tree = MIT code + CC BY 4.0 / CC0 meshes (redistribution/derivatives permissive); BY-SA isolate = `by-sa/` directory (ShareAlike applies to derivatives); NC rejected = Non-Commercial incompatible with MIT-licensed atlas; License unclear = no explicit CC0/CC-BY badge verified.
 
 Full census, UX inventory, and open-data ceilings: `docs/phase-8-self-review.md` (quality-week checkpoint; Week 2 section added Day 4cu). CC0/BY soft watchlist: `docs/cc0-soft-tissue-watchlist.md` (digs #1–#170 through Day 4ct Week 2; DI / per-ray MTA / gastroc-soleus alternatives remain dry). Soft-tissue open-data ceiling: `docs/week2-soft-ceiling-memo.md` (detailed reject rationale + teaching stance + Day 4ct summary). Ontology source notes: `src/lib/ontologyIds.ts` header + `docs/terminology.md`.

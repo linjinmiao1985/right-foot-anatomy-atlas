@@ -206,6 +206,7 @@ Open `http://localhost:5173` to view the atlas.
 - **Methods**: `docs/methods.md` (data sources, extraction, journal-facing limitations table + license matrix Day 4cv)
 - **Expert Review Checklist**: `docs/expert-review-checklist.md` v3.0 (Day 4cw: teaching-grade QA; grouped DI/MTA teaching compromises; soft-ceiling memo links; pass/fail criteria)
 - **Soft-Ceiling Memo**: `docs/week2-soft-ceiling-memo.md` (exhaustive search #1–#170; NC/SA/unclear rejects; teaching compromises stance)
+- **Journal Figure Captions**: `docs/journal-figure-captions.md` (bilingual teaching figure stubs: bones/layers/explode/BY-SA-isolate/soft-ceiling-grouped-DI-MTA/ontology-empties/Kabsch-residuals; Day 4db)
 - **Contributing**: `CONTRIBUTING.md` (license boundaries, NC-trap exclusions)
 - **Spatial Alignment QA**: `docs/spatial-alignment-qa.md` (0.01 scale verification)
 - **Phase 8 self-review**: `docs/phase-8-self-review.md` (Week 2 quality checkpoint Day 4cu; census 129/124; UX inventory; soft-ceiling #147–#170 DRY)

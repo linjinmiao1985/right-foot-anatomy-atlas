@@ -2514,3 +2514,39 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 **Summary**: Journal figure captions stub created. New file `docs/journal-figure-captions.md` v1.0 with 7 concise bilingual teaching figure captions (bones overview 26; layers/ghost opacity/explode teaching UX with census 53/71; BY-SA isolate vs main-tree license boundaries with NC rejects; soft-ceiling/teaching-compromise grouped DI-MTA with #1–#170 DRY; ontology 126/129 with 3 honest empties; Kabsch residuals teaching visualization grade). Each 1–2 sentence ZH + EN. Honesty stance: not clinical; teaching compromises documented; no fabricated metrics. Cross-links to methods.md/soft-ceiling-memo/expert-review-checklist. Soft digs watch-only (0 new). Cloud-agent-handback refreshed. Gates green. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
 
 ---
+
+## Day 4dc — LINK JOURNAL CAPTIONS (2026-09-22)
+
+**Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3)
+**Goals**: Add one-line link to `docs/journal-figure-captions.md` from README Documentation section and from `docs/methods.md` (near figures/limitations). Keep concise.
+
+### Link sites
+
+1. **README.md Documentation section** (line ~208):
+   - Added new bullet: `- **Journal Figure Captions**: docs/journal-figure-captions.md (bilingual teaching figure stubs: bones/layers/explode/BY-SA-isolate/soft-ceiling-grouped-DI-MTA/ontology-empties/Kabsch-residuals; Day 4db)`
+   - Placement: after Soft-Ceiling Memo, before Contributing
+
+2. **methods.md after license matrix table** (line ~42):
+   - Added paragraph: `**Journal figure captions**: For concise bilingual teaching figure stubs (bones overview, layer toggles/ghost opacity, explode, BY-SA isolate vs main tree, soft-ceiling/teaching-compromise grouped DI-MTA, ontology honest empties, Kabsch residuals), see docs/journal-figure-captions.md (Day 4db).`
+   - Placement: immediately after the "License matrix (summary)" table Total row
+
+### Soft-tissue: WATCH ONLY
+- **0** new digs — linking journal captions did NOT uncover obvious new CC0/BY soft hit; no dig appended (watch-only).
+
+### Docs refresh
+- **cloud-agent-handback**: updated tip SHA to bb75a8d / Day 4db; date Day 4dc (LINK JOURNAL CAPTIONS); updated Companion list to reflect Day 4dc journal captions links in README + methods.md.
+
+### Gates (green)
+- `npm test -- --run`: **138/138** passed (19 test files)
+- `python3 scripts/integrity-audit.py`: **0** violations (129 structures / 134 GLBs)
+- `npm run build`: ✓ (dist built; 1.2 MB chunk size warning expected)
+
+**Census**: unchanged (129/124 entries/unique; 126/129 ontology citable; 53 main-tree / 71 BY-SA; 134 GLB on-disk)
+
+**Commit**: `Day 4dc: LINK JOURNAL CAPTIONS - added one-line journal-figure-captions.md link to README Documentation section (after Soft-Ceiling Memo) + methods.md after license matrix (bilingual teaching figure stubs cross-reference; Day 4db) + cloud-agent-handback refresh`
+
+**Push**: SHA `<pending>`
+
+**Summary**: Journal figure captions linked. Added concise one-line `docs/journal-figure-captions.md` cross-reference to (1) README.md Documentation section (new bullet after Soft-Ceiling Memo: bilingual teaching figure stubs for bones/layers/explode/BY-SA-isolate/soft-ceiling-grouped-DI-MTA/ontology-empties/Kabsch-residuals Day 4db); (2) methods.md after license matrix table Total row (paragraph listing 7 figure categories). Soft digs watch-only (0 new). Cloud-agent-handback refreshed. Gates green. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+---
