@@ -1860,6 +1860,33 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 
 **Outcome**: Census unchanged (**129/124**; ontology **126/129**). **0** meshes wire / **0** SA spam. Denser bilingual gap notes added for grouped DI and grouped MTA (soft-ceiling teaching transparency). Light watch dig #142–#146 dry. All gates PASSED. Day 4ci complete.
 
+## Day 4ck (2026-09-22) — Quality week wrap
+
+**Target**: Day 4ck wrap: (1) Link soft-ceiling memo from README Limitations + phase-8-self-review next-targets section; (2) Refresh cloud-agent-handback tip SHA to 0bb3449 / Day 4cj; (3) Optional tiny UX: footer already mentions soft ceiling — add plain text "详见 docs/week2-soft-ceiling-memo.md" to StructurePanel gap notes for DI/MTA; (4) vitest + integrity-audit + build; daily-log; commit; push; (5) No finished-product claims.
+
+1. Continued on `cursor/week2-day4bm-ghost-opacity-096e` (Day 4cj tip @ 0bb3449).
+2. **Soft-ceiling memo links**:
+   - **README Limitations**: Added "(详见 **`docs/week2-soft-ceiling-memo.md`** / see **`docs/week2-soft-ceiling-memo.md`**)" to soft-tissue open-data ceiling paragraph
+   - **phase-8-self-review**: Added "Soft-ceiling context: `docs/week2-soft-ceiling-memo.md`" to Cloud Agent handback section (target #2)
+   - **phase-8-self-review**: Added "Soft-ceiling memo: `docs/week2-soft-ceiling-memo.md`" to CC0 soft-tissue watchlist section (target #3)
+3. **Cloud-agent-handback refresh**:
+   - Updated HEAD tip: `66e1c81` → `0bb3449` (Day 4cj)
+   - Updated date: Day **4bu** → Day **4ck**
+   - Added companion doc: `docs/week2-soft-ceiling-memo.md`
+4. **Optional tiny UX** (StructurePanel gap notes):
+   - Added "详见 docs/week2-soft-ceiling-memo.md" / "See docs/week2-soft-ceiling-memo.md" to bilingual gap notes in `assetProvenance.ts` for:
+     - `interossei_dorsales` (DI grouped)
+     - `dorsal_metatarsal_arteries` (dorsal MTA grouped)
+     - `plantar_metatarsal_arteries` (plantar MTA grouped)
+   - Plain text append after existing census soft-ceiling explanation (non-intrusive; footer already has soft-ceiling mention Day 4ci)
+5. **Gates**: Run full gates:
+   - `python3 scripts/integrity-audit.py` → **PASSED** (129 structures / 134 GLBs / 0 violations)
+   - `npm test` → **138/138 PASSED** (19 test files)
+   - `npm run build` → **OK** (dist built 3.76s; 1.2 MB chunk size warning expected)
+6. **Checks**: daily-log Day 4ck updated; commit + push same PR branch.
+
+**Progress snapshot**: Phase 8 quality-week checkpoint complete; soft-ceiling memo (Day 4cj) now linked from README + phase-8 docs; cloud-agent-handback refreshed to current tip; optional UX adds doc path to DI/MTA gap notes. Census unchanged **129/124**; ontology **126/129**. Teaching atlas in progress — **not** clinical; **not** TA2-complete; **no finished-product claim**.
+
 ## Day 4cj (2026-09-22) — Soft ceiling memo documentation
 
 **Target**: Complete Day 4cj with: (1) Write short `docs/week2-soft-ceiling-memo.md` (1 page) summarizing searches, rejects (NC/SA/UM/Andreassen), remaining gaps, teaching stance; (2) Optional UX: link text in StructurePanel to soft ceiling memo (meshNote already done); (3) vitest + integrity-audit + build; daily-log; commit; push; (4) No finished-product claims.

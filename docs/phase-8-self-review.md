@@ -124,7 +124,7 @@ Living log: `docs/open-anatomy-learning-log.md` — **135** numbered license-ver
 
 ### 2. Cloud Agent handback (when quota returns)
 
-Resume only with green local gates (`python3 scripts/integrity-audit.py`, `npx vitest run`, `npm run build`). Prefer CC0/CC BY over SA volume. Prep refreshed Day **4ba** after Option A LE Kabsch blocker — see `docs/cloud-agent-handback.md`.
+Resume only with green local gates (`python3 scripts/integrity-audit.py`, `npx vitest run`, `npm run build`). Prefer CC0/CC BY over SA volume. Prep refreshed Day **4ba** after Option A LE Kabsch blocker — see `docs/cloud-agent-handback.md`. Soft-ceiling context: `docs/week2-soft-ceiling-memo.md`.
 
 | Deferred item | Why deferred | Suggested resume |
 |---------------|--------------|------------------|
@@ -138,7 +138,7 @@ Resume only with green local gates (`python3 scripts/integrity-audit.py`, `npx v
 
 ### 3. CC0 soft-tissue watchlist (watch-only mode)
 
-Maintain a short **monitor/reject** list (see `docs/cc0-soft-tissue-watchlist.md`) for DI, per-ray MTA, gastroc/soleus, nerve/ligament main-tree replacements. **Day 4az + 4ba**: Andreassen belly Kabsch **blocked** (laterality then LE-residual/Achilles); trials JSON recorded; **0** wire. **Day 4bo–4bs**: digs #100–#135 across usual + alternate pools all **dry**. DI/per-ray MTA still dry. Never treat NC or "License: Model" as main-tree OK.
+Maintain a short **monitor/reject** list (see `docs/cc0-soft-tissue-watchlist.md`) for DI, per-ray MTA, gastroc/soleus, nerve/ligament main-tree replacements. **Day 4az + 4ba**: Andreassen belly Kabsch **blocked** (laterality then LE-residual/Achilles); trials JSON recorded; **0** wire. **Day 4bo–4bs**: digs #100–#135 across usual + alternate pools all **dry**. DI/per-ray MTA still dry. Never treat NC or "License: Model" as main-tree OK. Soft-ceiling memo: `docs/week2-soft-ceiling-memo.md`.
 
 **Do not**: claim TA2 completeness; re-add Open3D duplicates of BP3D main-tree vessels; treat residuals as surgical registration.
 
