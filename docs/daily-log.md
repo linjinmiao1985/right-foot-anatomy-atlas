@@ -2858,3 +2858,29 @@ Existing honest no-screenshot note in `docs/journal-figure-captions.md` (Day 4df
 **Commit**: `Day 4dh: KABSCH RESIDUALS TABLE for Fig7 honesty - docs/methods.md Table 1 Kabsch Co-Registration Residuals (Open3D→BP3D / UM→BP3D / ZA→BP3D: mean/max per landmark from transform JSONs) + docs/journal-figure-captions.md Fig7 cross-link + spatial residual row correct JSON paths + cloud-agent-handback refresh`
 
 **Summary**: Kabsch residuals table completed per Day 4dh request. Added **Table 1: Kabsch Co-Registration Residuals** to `docs/methods.md` journal-facing section with 3-source × 6-col compact table (Open3D→BP3D / UM→BP3D / ZA→BP3D: landmarks / mean mm / max mm / max landmark) extracted from existing `third_party/*/open3d_to_bp3d_transform.json` + `um_to_bp3d_transform.json` + `za_to_bp3d_transform.json` files. Cross-linked from `docs/journal-figure-captions.md` Figure 7 caption (Chinese + English) with bold Table 1 reference + full transform JSON paths for per-landmark breakdown. Corrected existing Spatial residual row in limitations table to cite correct transform JSON filenames (not glob pattern) + Table 1. Updated dig range to #1–#175 through Day 4dg. Soft digs watch-only (0 new Day 4dh). Cloud-agent-handback refreshed. Gates green. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+---
+
+## Day 4di: LINK TABLE 1 + quiet wrap (2026-09-22)
+
+**Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3)
+
+**Goals**: Per Day 4di request (quiet wrap): add one-line README link to docs/methods.md Table 1 Kabsch residuals; watch-only soft digs; refresh cloud-agent-handback to be17876 / Day 4dh + note Week 2 journal pack ready including Table 1; gates; commit + push.
+
+**Changes**:
+1. **README Documentation link (Day 4di)**: Updated Methods bullet to append "+ **Table 1: Kabsch Co-Registration Residuals** Day 4dh" — concise inline mention (no separate bullet to avoid sprawl).
+
+2. **Cloud-agent-handback refresh**: Updated to `be17876` (Day 4dh: finalize daily-log SHA) / Day 4di; stated Week 2 journal pack **ready** (methods limitations + license matrix + Table 1 Kabsch residuals Day 4dh + journal-figure-captions Figs 1–7 Day 4db-4df + expert-review-checklist v3.0 Day 4cw + screenshots 12 PNG Day 4de).
+
+3. **Soft-tissue watch**: WATCH ONLY — no new dig numbers (Day 4di quiet wrap; journal pack essentially complete).
+
+**Verification gates (all green)**:
+- `npm test -- --run`: ✓ 138/138 passed (19 test files; 4.0 s)
+- `python3 scripts/integrity-audit.py`: ✓ 0 violations (129 structures / 134 GLBs)
+- `npm run build`: ✓ (dist built; 1.2 MB chunk size warning expected)
+
+**Census**: unchanged (129/124 entries/unique; 126/129 ontology citable; 53 main-tree / 71 BY-SA; 134 GLB on-disk)
+
+**Commit**: `Day 4di: LINK TABLE 1 + quiet wrap - README Documentation Methods bullet appended Table 1 Kabsch Co-Registration Residuals Day 4dh cross-link + cloud-agent-handback refresh (Week 2 journal pack READY: methods/checklist/captions/screenshots/Table1)`
+
+**Summary**: Quiet wrap completed per Day 4di request. README Documentation Methods bullet now cross-links Table 1 Kabsch Co-Registration Residuals Day 4dh (concise inline mention; no sprawl). Cloud-agent-handback refreshed to be17876 / Day 4dh; stated Week 2 journal pack **ready** (methods limitations + license matrix + Table 1 + journal-figure-captions Figs 1–7 + expert-review-checklist v3.0 + screenshots 12 PNG). Soft digs watch-only (0 new Day 4di; journal pack essentially complete). Gates green. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product; residuals are teaching-grade not surgical bounds.

@@ -203,7 +203,7 @@ Open `http://localhost:5173` to view the atlas.
 - **Implementation Plan**: `docs/superpowers/plans/2026-09-14-right-foot-anatomy-atlas.md`
 - **Asset Research**: `docs/assets-research-round2.md` (≥12 sources compared)
 - **Terminology**: `docs/terminology.md` (TA2 Latin + PRC Chinese standards)
-- **Methods**: `docs/methods.md` (data sources, extraction, journal-facing limitations table + license matrix Day 4cv)
+- **Methods**: `docs/methods.md` (data sources, extraction, journal-facing limitations table + license matrix Day 4cv + **Table 1: Kabsch Co-Registration Residuals** Day 4dh)
 - **Expert Review Checklist**: `docs/expert-review-checklist.md` v3.0 (Day 4cw: teaching-grade QA; grouped DI/MTA teaching compromises; soft-ceiling memo links; pass/fail criteria)
 - **Soft-Ceiling Memo**: `docs/week2-soft-ceiling-memo.md` (exhaustive search #1–#170; NC/SA/unclear rejects; teaching compromises stance)
 - **Journal Figure Captions**: `docs/journal-figure-captions.md` (bilingual teaching figure stubs: bones/layers/explode/BY-SA-isolate/soft-ceiling-grouped-DI-MTA/ontology-empties/Kabsch-residuals; Day 4db)
