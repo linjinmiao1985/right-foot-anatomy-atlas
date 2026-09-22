@@ -2128,3 +2128,31 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 **Result**: **0** meshes downloaded; **0** Kabsch QA; **0** wired. Soft gaps (per-toe DI / lumbricals / per-ray MTA) remain **dry** or **SA-only**. Soft-ceiling stance **reconfirmed** — teaching in progress, **not** clinical, **not** TA2-complete, **not** a finished product.
 
 ---
+
+## 2026-09-22 · Day 4ct
+
+### Soft ceiling stable; journal/teaching docs over identical dry digs
+
+**Tasks**:
+1. ✅ Soft-tissue WATCH digs #169–#170 NEW only:
+   - **#169** Figshare + MRI AR study: **REJECT** (Figshare search redirected to Zenodo NC+SA #161b; Micromachines 2022 AR segmentation not archived)
+   - **#170** PhysioNet + SimTK Multidomain: **MONITOR** (raw CT public domain; no pre-segmented muscle mesh; labor-intensive manual segmentation path)
+2. ✅ Docs quality: refresh cloud-agent-handback to b7baf3e / Day 4cs; add Day 4ct note to soft-ceiling memo (digs through #170 reconfirm DRY: 0 new CC0/BY soft meshes; 24 watch digs #147–#170 summary)
+3. ✅ ONE tiny teaching polish: footer wording aligned to "teaching compromise" — updated ATLAS_SOURCE_FOOTER to add "分组结构为教学妥协 / grouped structures are teaching compromises" + fixed typo (腰肌 → 蚓状肌 lumbricals)
+4. ✅ Gates: `npm test -- --run` (138 passed), `python3 scripts/integrity-audit.py` (0 violations), `npm run build` (✓ 3.23s)
+5. ✅ Commit + push PR #3
+
+**Dig outcomes (#169–#170)**:
+- **#169 Figshare + MRI AR**: REJECT (search redirected to Zenodo NC+SA; Micromachines 2022 segmentation not archived)
+- **#170 PhysioNet/SimTK**: MONITOR (raw CT public domain but no pre-segmented mesh; manual segmentation labor-intensive)
+- All NEW digs **DRY or MONITOR** for ready-to-use CC0/CC-BY foot soft tissue
+
+**Polish**: Footer "teaching compromise" alignment + typo fix — ATLAS_SOURCE_FOOTER updated to add "分组结构为教学妥协 / grouped structures are teaching compromises" (matches README + gap notes terminology); fixed Chinese typo "腰肌" → "蚓状肌" (lumbricals)
+
+**Soft-ceiling memo update**: Added Day 4ct watch dig summary (24 digs #147–#170) confirming **0 new CC0/BY ready-to-use soft meshes**; 7T MRI/Micromachines confirm segmentation technically feasible but datasets not archived; Open3DModel confirms 4 DI + 4 lumbricals + 3 PI present but SA-only
+
+**Census unchanged**: **129/124**; ontology **126/129**
+
+**Result**: **0** meshes downloaded; **0** Kabsch QA; **0** wired. Soft gaps (per-toe DI / lumbricals / per-ray MTA) remain **dry** or **SA-only**. Soft-ceiling stance **reconfirmed through #170** — teaching in progress, **not** clinical, **not** TA2-complete, **not** a finished product.
+
+---

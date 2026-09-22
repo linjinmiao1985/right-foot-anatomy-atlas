@@ -28,9 +28,9 @@ Henson Sheffield **Option A** one-subject MC POC completed (`Aug_8`): surfaces O
 
 # Cloud Agent handback — Phase 8 resume brief
 
-**Date**: 2026-09-22 · Day **4cs**  
+**Date**: 2026-09-22 · Day **4ct**  
 **Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3)  
-**HEAD tip**: `6ddd2c7` (Day 4cr: watch digs #164-166 + cloud-agent-handback SHA refresh + README grouped-structures teaching-compromise clarity)  
+**HEAD tip**: `b7baf3e` (Day 4cs: watch digs #167-168 + NIH 3DPX #164 soft-ceiling note + cloud-agent-handback refresh + gap-note teaching-compromise consistency)  
 **Status**: Quality-week checkpoint; teaching-grade atlas **in progress** — **not** a finished-product claim  
 **Companion**: `docs/phase-8-self-review.md`, `docs/cc0-soft-tissue-watchlist.md`, `third_party/andreassen/`, `docs/week2-soft-ceiling-memo.md`
 

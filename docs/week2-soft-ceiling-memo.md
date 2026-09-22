@@ -192,3 +192,27 @@
 
 **Memo authored**: Day 4cj (2026-09-22)  
 **Companion docs**: `docs/cc0-soft-tissue-watchlist.md`, `docs/week2-dorsal-interossei-search.md`, `docs/belly-registration-alternatives.md`, `docs/daily-log.md` Day 4ay–4ci, `docs/cloud-agent-handback.md`
+
+---
+
+## Day 4ct watch dig status (through #170)
+
+**Date**: 2026-09-22 · Day 4ct  
+**Dig range**: #147 (Day 4cl) → #170 (Day 4ct)  
+**Total watch digs**: 24 NEW source checks (Day 4cl–4ct; skip re-logging #1–#146)
+
+**Summary**:
+- **#147–#170** (24 digs across Zenodo, HuBMAP, TotalSegmentator, LABIM3D GitHub, Foot3D, BoneHub, Scan-the-World, NIH 3DPX, AnatomyTOOL, MorphoSource, 7T MRI, Dryad, Thingiverse, Cults3D, Figshare, PhysioNet/SimTK):
+  - **0** new CC0/CC-BY ready-to-use foot soft-tissue meshes integrated
+  - **NC (Non-Commercial)**: Zenodo Scan-the-World 20228270/20231308/20231309 (#147, #161b); BoneHub vsd-feet-seg (#163)
+  - **SA (ShareAlike)**: AnatomyTOOL Open3DModel (#165); Thingiverse BodyParts3D V3.0 legacy (#168)
+  - **License unclear**: Cults3D MeEzra models (#160, #168)
+  - **No foot inventory**: LABIM3D GitHub (#158b ear/shoulder/knee/pelvis/spine only)
+  - **Bones-only**: NIH 3DPX 15850 (#164); Thingiverse/Foot_Right (#168)
+  - **No downloadable mesh**: MorphoSource + 7T MRI studies (#166); Dryad + MRI studies (#167); Figshare + Micromachines 2022 AR (#169)
+  - **CT-only (no pre-segmented mesh)**: PhysioNet/SimTK Multidomain (#170; raw CT public domain but requires manual 3D Slicer segmentation + Kabsch QA; labor-intensive path)
+  - **External surface scans only**: Foot3D Kaggle/GitHub (#162)
+
+**Result**: Soft-tissue open-data ceiling **reconfirmed through #170** (Day 4ct). License-clear ready-to-use per-toe DI, lumbricals, per-ray MTA meshes **remain unavailable**. 7T MRI + Micromachines 2022 confirm high-resolution intrinsic foot muscle segmentation **technically feasible** (lumbricals, dorsal/plantar interossei successfully segmented) but research datasets **not publicly archived** as downloadable STL/OBJ. PhysioNet/SimTK Multidomain raw CT = public domain but manual segmentation labor-intensive (not immediate gap filler). Open3DModel/AnatomyTOOL confirms 4 DI + 4 lumbricals + 3 PI present but **SA-only** (Open3D lineage already in `by-sa/` isolate; no CC0/CC-BY alternative).
+
+**Teaching stance**: **Grouped structures** (DI 1st–4th combined, dorsal/plantar MTA all rays) are **teaching compromises** (教学妥协), not per-toe/per-ray elemental atlases. Census unchanged (**129/124**; ontology **126/129**). **0** new meshes wired. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.

@@ -2245,3 +2245,48 @@ Zenodo API metadata retrieved (DOI 10.5281/zenodo.20231309). License: **CC BY-NC
 - Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
 
 ---
+
+## Session additions (2026-09-22 · Day 4ct — soft-tissue WATCH digs #169–#170)
+
+**Scope**: Day 4ct NEW watch digs (at most #169–#170); DRY OK; no NC/SA/unclear wires.
+
+**Date**: 2026-09-22 (Day 4ct)
+
+### #169: Figshare + MRI AR study (REJECT — Zenodo redirect / no Figshare download)
+
+**Source**: Figshare repository search + Micromachines 2022 AR foot anatomy study (DOI 10.3390/mi13101701)  
+**URL**: Figshare (search redirected to Zenodo Scan-the-World records already assessed); https://doi.org/10.3390/mi13101701  
+**Content**: Figshare search = returned Zenodo 20231308/20231309/20228269/20228270 "Muscles of the foot and ankle" (already assessed #161b: CC BY-NC-SA 4.0 NC+SA reject); Micromachines 2022 = MRI-segmented ankle/foot anatomy (3D Slicer seed-planting + interpolation; bones + musculature exported as OBJ + STL groups: extrinsic, dorsal layer, plantar layers 1–4)  
+**License**: Zenodo = NC+SA (already rejected #161b); Micromachines article = CC BY 4.0 (MDPI open access) but **no mesh files released** (article describes segmentation methodology + AR HoloLens 2 app; OBJ/STL models generated but not archived on Figshare/Zenodo/supplementary materials)  
+**Foot soft-tissue inventory**: Micromachines study segmented **extrinsic + intrinsic foot muscles** (dorsal layer + plantar layers 1–4 including lumbricals, interossei per anatomical layer convention) but datasets **not publicly released** (no Figshare/Zenodo link; no supplementary STL/OBJ files)  
+**Reject reason**: Figshare search = redirected to Zenodo NC+SA records (already rejected #161b); Micromachines 2022 = **no downloadable mesh** (research segmentation not archived; same issue as #166 7T MRI / #167 MRI studies)  
+**Teaching value**: ❌ None — no mesh files released; research segmentation not archived  
+**Action**: **reject** (Figshare DRY redirected to Zenodo NC+SA #161b; Micromachines no downloadable mesh)
+
+### #170: PhysioNet Multidomain cadaver-foot CT + SimTK (MONITOR — CT-only; no pre-segmented muscle mesh)
+
+**Source**: PhysioNet database search + PMC 2896021 Multidomain cadaver-foot mechanical response dataset (SimTK project)  
+**URL**: PhysioNet (no foot anatomical mesh matches); https://simtk.org/home/multidomain (SimTK archived project)  
+**Content**: PhysioNet = biomedical database (ECG, physiological signals, clinical datasets); **no foot anatomical 3D segmentation/mesh** catalogued; Multidomain = cadaver-foot CT + mechanical testing data (regional + overall response; formerly SimTK public domain; CT suitable for reconstruction)  
+**License**: PhysioNet = **CC0 1.0 Universal** available for datasets; Multidomain = **public domain** (freely accessible; open copy; SimTK archived 2009)  
+**Foot soft-tissue inventory**: Multidomain = **CT imaging only** (no pre-segmented muscle STL/OBJ meshes; raw CT data suitable for 3D Slicer reconstruction but would require manual segmentation work); PhysioNet foot-related datasets = external surface scans / gait kinematics / plantar pressure (no internal anatomy meshes)  
+**Reject reason**: **CT-only** (no pre-segmented muscle mesh; raw CT ≠ ready-to-use STL/OBJ; manual segmentation labor intensive + skill-dependent); PhysioNet = no foot anatomical mesh matches; Multidomain CT from 2009 (older imaging vs modern 7T MRI; lower resolution)  
+**Teaching value**: 🔍 **MONITOR** for future manual segmentation project only — raw CT public domain but **not a ready-to-use soft-gap filler** (requires 3D Slicer + anatomy expertise + Kabsch alignment)  
+**Action**: **monitor** (CT-only; no pre-segmented mesh; labor-intensive path)
+
+**Day 4ct watch dig summary (#169–#170)**:
+
+| Dig # | Source | License | DI/lumbricals/per-ray MTA? | Action |
+|-------|--------|---------|---------------------------|--------|
+| #169 | Figshare + MRI AR study | NC+SA / N/A | Zenodo redirect (NC+SA #161b) / segmented not released | **reject** (Zenodo NC+SA; no downloadable mesh) |
+| #170 | PhysioNet + SimTK Multidomain | CC0 / public domain | CT-only; no pre-segmented mesh | **monitor** (CT-only; labor-intensive; not ready-to-use) |
+
+**Result**: All digs #169–#170 **DRY or MONITOR** for NEW ready-to-use CC0/CC-BY foot soft tissue. Figshare = search redirected to Zenodo NC+SA (already rejected #161b); Micromachines 2022 = segmentation not archived. PhysioNet/SimTK Multidomain = raw CT public domain but **no pre-segmented muscle mesh** (requires manual 3D Slicer segmentation + Kabsch QA; labor-intensive path; not immediate gap filler). Soft-tissue open-data ceiling stance **reconfirmed through #170** — license-clear ready-to-use per-toe DI/lumbricals/per-ray MTA remain unavailable.
+
+**Update tracking**:
+- Census unchanged (**129/124**; ontology **126/129**).
+- **0** meshes integrated; **0** SA spam; CT-only/no-mesh sources **not** force-wired.
+- Soft gaps (per-toe DI / lumbricals / per-ray MTA) remain **dry** or **SA-only** (Open3D existing).
+- Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+---
