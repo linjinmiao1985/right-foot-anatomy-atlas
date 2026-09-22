@@ -28,11 +28,11 @@ Henson Sheffield **Option A** one-subject MC POC completed (`Aug_8`): surfaces O
 
 # Cloud Agent handback — Phase 8 resume brief
 
-**Date**: 2026-09-22 · Day **4de** (Week 2 TEACHING SCREENSHOTS for journal captions)  
+**Date**: 2026-09-22 · Day **4df** (Week 2 LINK REMAINING CAPTIONS to screenshots)  
 **Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3)  
-**HEAD tip**: `3ea7d94` (Day 4dd: finalize daily-log SHA — sparse soft watch + week handoff)  
-**Status**: Teaching screenshots captured (12 shots incl. 3 NEW Week 2: ghost opacity / explode / ghost+explode combined); linked from journal-figure-captions.md (Figures 1–3); teaching-grade atlas **in progress** — **not** a finished-product claim  
-**Companion**: `docs/phase-8-self-review.md` (Week 2 quality checkpoint Day 4cu + journal-readiness handoff Day 4cv–4dd), `docs/screenshots/` (**12 PNG** Day 4de: bones/layers/ghost/explode teaching modes), `docs/journal-figure-captions.md` (Day 4db + Day 4de screenshot links), `scripts/screenshot-pipeline.mjs` (Day 4de enhanced: ghost/explode shots), `docs/open-anatomy-learning-log.md` (soft digs #147–#173 DRY), other Week 2 docs
+**HEAD tip**: `0936fa4` (Day 4de: TEACHING SCREENSHOTS — 12 PNG captured)  
+**Status**: All 7 journal figure captions linked to screenshots (Figs 1–3 Day 4de + Figs 4–7 Day 4df with honest mapping: BY-SA nerve/soft-ceiling all-layers/ontology-no-screenshot-UI-specific/Kabsch-numeric-bone-result); teaching-grade atlas **in progress** — **not** a finished-product claim  
+**Companion**: `docs/journal-figure-captions.md` (Day 4db + Day 4de screenshots 1–3 + Day 4df screenshots 4–7 linked), `docs/screenshots/` (12 PNG Day 4de), other Week 2 docs
 
 ---
 

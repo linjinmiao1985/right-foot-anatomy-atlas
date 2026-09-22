@@ -2696,8 +2696,62 @@ Hallux proximal ID and UM distal frame still open; soft-tissue BY-SA fills uncha
 
 **Commit**: `Day 4de: TEACHING SCREENSHOTS for journal captions - enhanced screenshot-pipeline.mjs to add 3 NEW ghost/explode shots (10-ghost-opacity G-key Day 4bm; 11-explode-separation E-key Day 4bn; 12-ghost-explode-combined) + npm run screenshots generated 12 PNG (108 KB; headless Chrome 1440x900) + linked screenshots/02-bone-only, 10-ghost-opacity, 11-explode-separation from journal-figure-captions.md Figures 1-3 (bones overview / layers-ghost / explode) + screenshots/README updated (12 shots Day 4de; Week 2 teaching modes note) + cloud-agent-handback refresh`
 
-**Push**: SHA `<pending>`
+**Push**: SHA `0936fa4`
 
 **Summary**: Teaching screenshots for journal captions captured. Enhanced `scripts/screenshot-pipeline.mjs` with 3 NEW shot functions for Week 2 teaching modes (ghost opacity `G` Day 4bm; explode separation `E` Day 4bn; ghost+explode combined). Ran `npm run build && npm run screenshots` successfully (headless Chrome; 12 PNG files generated 2026-09-22T05:09:18.531Z; 108 KB total; ≈5.8 KB each). Linked 3 screenshots from `docs/journal-figure-captions.md` Figures 1–3: (1) bones overview → screenshots/02-bone-only.png; (2) layers/ghost opacity → screenshots/10-ghost-opacity.png; (3) explode separation → screenshots/11-explode-separation.png. Updated `docs/screenshots/README.md` (12 shots Day 4de; Week 2 teaching modes note; journal-captions cross-link). Soft digs watch-only (0 new). Cloud-agent-handback refreshed. Gates green. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+---
+
+## Day 4df — LINK REMAINING CAPTIONS to screenshots (2026-09-22)
+
+**Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3)
+**Goals**: (1) In `docs/journal-figure-captions.md`, link Figures 4–7 to best-fit existing screenshots (prefer honest mapping over force-fit). (2) Soft-tissue WATCH ONLY. (3) Refresh cloud-agent-handback tip to 0936fa4 / Day 4de.
+
+### Journal figure captions — remaining 4 figures linked (Figs 4–7)
+
+**File**: `docs/journal-figure-captions.md` (updated Day 4df)
+
+**Honest mapping** (4 figures):
+
+1. **Figure 4: BY-SA Isolate vs Main Tree (License Boundaries)**
+   - **Screenshot linked**: `screenshots/04-nerve-bysa.png` (Nerve layer only — BY-SA isolate visible in panel/legend with license badge)
+   - **Rationale**: Best-fit screenshot showing BY-SA license badge in StructurePanel for nerve layer (all nerves 17/17 are BY-SA); demonstrates main-tree vs BY-SA isolate distinction
+
+2. **Figure 5: Soft-Ceiling / Teaching-Compromise Grouped DI-MTA (Honest Gaps)**
+   - **Screenshot linked**: `screenshots/01-default-all-layers.png` (Default view with all teaching layers — grouped DI and MTA structures visible; StructurePanel shows meshNote/gap notes for teaching compromises)
+   - **Rationale**: Shows all layers including the grouped structures (DI 1st–4th combined, dorsal/plantar MTA all rays); StructurePanel visible with gap notes
+
+3. **Figure 6: Ontology Honest Empties (126/129 Citable)**
+   - **Screenshot**: *(No dedicated screenshot; ontology IDs and honest-empty labels are UI-specific text in StructurePanel. Reviewers can inspect the 3 honest empties by selecting `cervical_talocalcaneal_ligament`, `medial_plantar_veins`, or `lateral_plantar_vein` in the running app to see the "Ontology (honest empty)" label with bilingual reasons. See `src/lib/ontologyIds.ts` HONEST_ONTOLOGY_EMPTIES for implementation.)*
+   - **Rationale**: **Honest mapping** — no screenshot can show ontology text labels without fabrication; pointed reviewers to running app + source code; avoided force-fit or fake screenshots
+
+4. **Figure 7: Kabsch Co-Registration Residuals (Teaching Visualization Grade)**
+   - **Screenshot linked**: `screenshots/02-bone-only.png` *(Bone layer only — note: Kabsch residuals are **numeric data** in `kabsch_*.json` transform files, not visible as overlays or color-coded heatmaps in the 3D view; this bone screenshot illustrates the co-registered result, not the residuals themselves)*
+   - **Rationale**: **Honest caption** — residuals are numeric data (mean/max mm per landmark) in JSON files, not pictured in 3D view; bone screenshot shows the co-registered result; added explicit honesty note to avoid misleading readers
+
+### All 7 journal figures now have screenshot links or honest no-screenshot notes
+
+**Summary**:
+- **Figures 1–3** (Day 4de): bones overview / layers-ghost / explode → dedicated NEW Week 2 teaching mode screenshots
+- **Figures 4–7** (Day 4df): BY-SA nerve / soft-ceiling all-layers / ontology-no-screenshot-UI-specific / Kabsch-numeric-bone-result → best-fit honest mapping
+
+### Soft-tissue: WATCH ONLY
+- **0** new digs — linking journal captions did NOT uncover obvious new CC0/BY soft hit; no dig appended (watch-only).
+
+### Docs refresh
+- **cloud-agent-handback**: updated tip SHA to 0936fa4 / Day 4de; date Day 4df (LINK REMAINING CAPTIONS to screenshots); noted all 7 figures linked with honest mapping.
+
+### Gates (green)
+- `npm test -- --run`: **138/138** passed (19 test files)
+- `python3 scripts/integrity-audit.py`: **0** violations (129 structures / 134 GLBs)
+- `npm run build`: ✓ (dist built; 1.2 MB chunk size warning expected)
+
+**Census**: unchanged (129/124 entries/unique; 126/129 ontology citable; 53 main-tree / 71 BY-SA; 134 GLB on-disk)
+
+**Commit**: `Day 4df: LINK REMAINING CAPTIONS to screenshots - linked Figures 4-7 from journal-figure-captions.md with honest mapping: (4) BY-SA nerve 04-nerve-bysa.png; (5) soft-ceiling all-layers 01-default-all-layers.png; (6) ontology honest empties NO screenshot (UI-specific text; reviewers inspect running app + ontologyIds.ts HONEST_ONTOLOGY_EMPTIES); (7) Kabsch residuals 02-bone-only.png (honest note: residuals are numeric JSON data not visible in 3D view; bone shows co-registered result) + cloud-agent-handback refresh`
+
+**Push**: SHA `<pending>`
+
+**Summary**: Remaining journal figure captions linked to screenshots with honest mapping. Figures 4–7 mapped to existing screenshots or honest no-screenshot notes: (4) BY-SA Isolate vs Main Tree → `04-nerve-bysa.png` (nerve layer BY-SA badge visible); (5) Soft-Ceiling Grouped DI-MTA → `01-default-all-layers.png` (all layers with grouped structures + StructurePanel gap notes); (6) Ontology Honest Empties → **no screenshot** (honest note: UI-specific text; reviewers can inspect running app for 3 honest empties or see `ontologyIds.ts` HONEST_ONTOLOGY_EMPTIES); (7) Kabsch Residuals → `02-bone-only.png` (honest caption note: residuals are numeric data in `kabsch_*.json` files, not visible as 3D overlays; bone screenshot shows co-registered result only). All 7 journal figures (1–7) now have screenshot links or honest no-screenshot explanations. Soft digs watch-only (0 new). Cloud-agent-handback refreshed. Gates green. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
 
 ---

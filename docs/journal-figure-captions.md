@@ -42,6 +42,8 @@
 
 **English**: **BY-SA 隔离 · ShareAlike** vs **主树 · Main** license badges (StructurePanel). BY-SA structures (nerves 17/17; ligaments 27/29; vessels 22/29; muscles 5/23 unique) isolated in `public/models/right-foot/by-sa/` directory; derivatives require ShareAlike. Main tree (bones 26/26; muscles 18/23 unique; vessels 7/29) = MIT code + CC BY 4.0 / CC0 meshes. NC (Non-Commercial) sources rejected (Zenodo Scan-the-World; Visible Korean; BoneHub); see `docs/week2-soft-ceiling-memo.md` for reject rationale.
 
+**Screenshot**: `screenshots/04-nerve-bysa.png` (Nerve layer only — BY-SA isolate visible in panel/legend with license badge)
+
 ---
 
 ## Figure 5: Soft-Ceiling / Teaching-Compromise Grouped DI-MTA (Honest Gaps)
@@ -49,6 +51,8 @@
 **中文**: **软组织 census 软天花板**：详尽搜索 #1–#170（Day 4cl–4ct Week 2）未发现 CC0/BY 逐趾背侧骨间肌（DI）、蚓状肌、逐射线跖骨动脉（MTA）网格源。**分组结构为教学妥协（teaching compromises）**，非逐趾/逐射线元素图谱：(1) DI 1st–4th 组合（Open3D BY-SA 隔离）；(2) 跖背 MTA 所有射线（Open3D BY-SA 隔离）；(3) 跖底 MTA 所有射线（BP3D FJ2096 CC BY）。StructurePanel 显示 meshNote（"census 软天花板：无 CC0/BY 逐趾 DI 网格源"）+ 双语 "教学妥协（teaching compromise），非逐趾肌肉图谱" 诚实度文案。详见 `docs/week2-soft-ceiling-memo.md` NC/SA/不明拒绝 + `docs/methods.md` 限制表格。
 
 **English**: **Soft-tissue census soft ceiling**: Exhaustive search #1–#170 (Day 4cl–4ct Week 2) found **no CC0/BY per-toe dorsal interossei (DI), lumbricals, per-ray metatarsal arteries (MTA)** mesh sources. **Grouped structures are teaching compromises**, not per-toe/per-ray elemental atlases: (1) DI 1st–4th combined (Open3D BY-SA isolate); (2) dorsal MTA all rays (Open3D BY-SA isolate); (3) plantar MTA all rays (BP3D FJ2096 CC BY). StructurePanel shows meshNote ("census soft ceiling: no CC0/BY per-toe DI source meshes") + bilingual "teaching compromise, not per-toe muscle atlas" honesty text. See `docs/week2-soft-ceiling-memo.md` for NC/SA/unclear rejects + `docs/methods.md` limitations table.
+
+**Screenshot**: `screenshots/01-default-all-layers.png` (Default view with all teaching layers — grouped DI and MTA structures visible; StructurePanel shows meshNote/gap notes for teaching compromises)
 
 ---
 
@@ -58,6 +62,8 @@
 
 **English**: Ontology IDs partial: **126/129** structures have ≥1 citable TA2 / FMA / BP; **3 honest empties** (StructurePanel shows bilingual reasons): (1) `cervical_talocalcaneal_ligament` cervical talocalcaneal ligament (no distinct TA98 A-code; often lateral TC clinical synonym); (2) `medial_plantar_veins` medial plantar veins (TNA-only TAH U15825; no TA98 A-code / clear FMA); (3) `lateral_plantar_vein` lateral plantar vein (TNA-only TAH U15824; no TA98 A-code / clear FMA). StructurePanel shows "本体论 · Ontology (honest empty)" label + specific reasons; not TA2-complete soft tissue. See `src/lib/ontologyIds.ts` lines 392-404 + `docs/expert-review-checklist.md` v3.0 §E.
 
+**Screenshot**: *(No dedicated screenshot; ontology IDs and honest-empty labels are UI-specific text in StructurePanel. Reviewers can inspect the 3 honest empties by selecting `cervical_talocalcaneal_ligament`, `medial_plantar_veins`, or `lateral_plantar_vein` in the running app to see the "Ontology (honest empty)" label with bilingual reasons. See `src/lib/ontologyIds.ts` HONEST_ONTOLOGY_EMPTIES for implementation.)*
+
 ---
 
 ## Figure 7: Kabsch Co-Registration Residuals (Teaching Visualization Grade)
@@ -65,6 +71,8 @@
 **中文**: Kabsch 刚性对齐残差（Open3D→BP3D 均值 ≈**2.61 mm** 最大 ≈**4.41 mm** MT1；UM→BP3D 均值 ≈**2.22 mm** 最大 ≈**4.38 mm** 距骨；ZA→BP3D 均值 ≈**1.81 mm** 最大 ≈**3.52 mm** 跟骨）。教学可视化级；**非**手术配准 / 植入物定尺 / 导航误差界限。逐地标残差详见 `third_party/*/kabsch_*.json` + `docs/methods.md` 限制表格。
 
 **English**: Kabsch rigid alignment residuals (Open3D→BP3D mean ≈**2.61 mm** max ≈**4.41 mm** MT1; UM→BP3D mean ≈**2.22 mm** max ≈**4.38 mm** talus; ZA→BP3D mean ≈**1.81 mm** max ≈**3.52 mm** calcaneus). Teaching visualization grade; **not** surgical registration / implant sizing / navigation error bounds. Per-landmark residuals see `third_party/*/kabsch_*.json` + `docs/methods.md` limitations table.
+
+**Screenshot**: `screenshots/02-bone-only.png` *(Bone layer only — note: Kabsch residuals are **numeric data** in `kabsch_*.json` transform files, not visible as overlays or color-coded heatmaps in the 3D view; this bone screenshot illustrates the co-registered result, not the residuals themselves)*
 
 ---
 
