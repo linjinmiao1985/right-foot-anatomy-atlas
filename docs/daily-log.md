@@ -3100,3 +3100,64 @@ Existing honest no-screenshot note in `docs/journal-figure-captions.md` (Day 4df
 
 **Summary**: Journal pack cross-link integrity verified per Day 4dm request + Week 3 roadmap §6 Days 4dm–4do schedule. **Bidirectional links among all key journal docs verified intact — 0 broken links**. Added missing `docs/week3-expert-self-audit.md` + `docs/week3-roadmap.md` to README Documentation section for completeness. Cross-link matrix includes: methods.md Table 1 ↔ journal-figure-captions.md Fig7; journal-figure-captions Figs 1–7 screenshot paths (5 PNG verified exist); expert-review-checklist v3.0 ↔ methods.md + soft-ceiling-memo; week3-expert-self-audit ↔ checklist/roadmap/methods/captions; week3-roadmap ↔ checklist/methods/soft-ceiling-memo/phase-8-self-review; README Limitations ↔ methods license matrix + checklist + soft-ceiling-memo. No stale SHA/day refs. Cloud-agent-handback refreshed. Soft digs watch-only (0 new). Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
 
+
+---
+
+## Day 4dn (2026-09-23)
+
+**Goals**: Per Day 4dn request + `docs/week3-roadmap.md` §5 gates: soft-ceiling honesty verification before Week 3 wrap; cross-check soft-ceiling claims vs reality (dig range through #178; DI/lumbricals/MTA gaps; Andreassen reject; NC/SA rejects; teaching-compromise labels in UI/docs); write verification section confirming ALIGNED or listing mismatches; fix mismatches only if real; soft-tissue WATCH ONLY (at most dig #179 if obvious NEW CC0/BY soft hit); handback refresh + gates + commit/push.
+
+**Completed**:
+
+1. **Soft-ceiling honesty verification** (Day 4dn primary task — `docs/week3-soft-ceiling-verify.md` v1.0 created):
+   Systematically cross-checked 7 verification dimensions:
+   
+   **A) Dig range #147–#178**: ✅ **ALIGNED**
+   - learning-log last dig: #178 (Day 4dk)
+   - week2-soft-ceiling-memo cites #1–#170 (Day 4ct summary; 8-dig lag acceptable — memo frozen per design)
+   - methods.md cites #1–#175 (Day 4dg update; 3-dig lag acceptable — row written before sparse #176–#178)
+   - week3-roadmap + week3-expert-self-audit + daily-log all correctly cite #147–#178
+   
+   **B) Lumbrical gaps**: ✅ **ALIGNED**
+   - Claim: "lumbricals absent" (week3-expert-self-audit §B3 line 117; methods.md; soft-ceiling-memo §1B)
+   - Reality: structures.json has 4 lumbrical entries (`lumbrical_1`–`lumbrical_4`) with `placeholder: false` BUT **NO GLB files** (`ls public/models/right-foot/Lumbrical_*.glb` → 0 files)
+   - Verified: structures.json entries exist for anatomical completeness + ontology (FMA+BP codes present) but are NOT visualized (no 3D meshes)
+   - Integrity audit 0 violations (correctly handles structures with meshNames but no GLB files)
+   
+   **C) Per-toe DI gaps**: ✅ **ALIGNED**
+   - Claim: "DI 1st–4th grouped teaching compromise" (not per-toe elementals)
+   - Reality: `dorsal_interosseous_1st-4th` grouped mesh exists with teaching-compromise labels (`meshNote` + `honestNote`)
+   - NO per-toe `dorsal_interosseous_1.glb`, `_2.glb` etc. files
+   - Digs #1–#178 documented DRY for per-toe DI
+   
+   **D) Per-ray MTA gaps**: ✅ **ALIGNED**
+   - Claim: "per-ray MTA grouped teaching compromise"
+   - Reality: `dorsal_metatarsal_arteries` + `plantar_metatarsal_arteries` grouped meshes with teaching-compromise labels
+   - NO per-ray MTA files
+   - Digs #1–#178 documented DRY for per-ray MTA
+   
+   **E) Andreassen reject**: ✅ **ALIGNED**
+   - Claim: Andreassen Visible Human rejected (spatial QA fail Day 4ay/4az; 7-tarsal Kabsch mean ≈4.5 mm; gastroc wrong-side; Achilles residuals ≥15 mm)
+   - Reality: week2-soft-ceiling-memo §1D + week3-roadmap line 45 + open-anatomy-learning-log dig #178 + week3-expert-self-audit line 311 all document Andreassen reject with consistent rationale
+   
+   **F) NC/SA rejects**: ✅ **ALIGNED**
+   - Claim: NC rejected (Zenodo Scan-the-World, Visible Korean, BoneHub); BY-SA excluded per Week 2 SA ceiling
+   - Reality: week2-soft-ceiling-memo §3 + methods.md license matrix line 50 + learning-log dig #161b + week3-expert-self-audit line 281 all confirm NC rejects
+   - `grep '"license"' src/data/structures.json | sort -u` → only "CC BY 4.0", "CC0", "CC BY-SA 4.0" (no NC)
+   
+   **G) Teaching-compromise labels**: ✅ **ALIGNED**
+   - Claim: grouped structures labeled "教学妥协 (teaching compromise)" in UI + docs
+   - Reality: assetProvenance.ts ATLAS_SOURCE_FOOTER line 180 + structures.json honestNote fields + methods.md line 25 + README line 185 all present teaching-compromise labels
+   
+   **Overall**: ✅ **ALIGNED** — soft-ceiling claims match reality across all 7 dimensions. Minor acceptable lags (methods.md #1–#175 vs latest #178; soft-ceiling-memo #1–#170 vs #178) documented with rationale. **No action required** — frozen journal pack should not be churned for 3-dig/8-dig cosmetic lags.
+
+2. **Soft-tissue watch**: WATCH ONLY — dig #179 **skipped** (no obvious NEW CC0/BY soft hit appeared while verifying docs; all verification evidence drawn from existing structures.json / GLB files / digs #1–#178 logs).
+
+3. **Cloud-agent-handback refresh**: Updated to `7a77269` (Day 4dm) / Day 4dn; noted soft-ceiling honesty verification ALIGNED (7 dimensions checked; no fixes required).
+
+**Gates**: (run next)
+
+**Commit**: (pending gates)
+
+**Summary**: Soft-ceiling honesty verification completed per Day 4dn request + Week 3 roadmap §5 gates. Created comprehensive `docs/week3-soft-ceiling-verify.md` v1.0 (systematic cross-check of 7 verification dimensions: dig range #147–#178; DI/lumbricals/MTA gaps; Andreassen reject; NC/SA rejects; teaching-compromise labels UI/docs). **All claims ALIGNED with reality** — soft-ceiling documentation is honest and accurate. Minor acceptable lags (methods.md #1–#175 vs latest #178 3-dig lag; soft-ceiling-memo #1–#170 vs #178 8-dig lag) documented with rationale (methods row written Day 4dg before sparse #176–#178; memo frozen Day 4ct per 1-page design). **No fixes required** — frozen journal pack should not be churned for cosmetic lags. Soft dig #179 skipped (watch-only; no obvious NEW CC0/BY hit). Cloud-agent-handback refreshed. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+

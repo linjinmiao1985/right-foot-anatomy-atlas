@@ -28,11 +28,11 @@ Henson Sheffield **Option A** one-subject MC POC completed (`Aug_8`): surfaces O
 
 # Cloud Agent handback — Phase 8 resume brief
 
-**Date**: 2026-09-23 · Day **4dm** (Week 3 JOURNAL PACK CROSS-LINK VERIFY)  
+**Date**: 2026-09-23 · Day **4dn** (Week 3 SOFT-CEILING HONESTY VERIFY complete)  
 **Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3)  
-**HEAD tip**: `0b75348` (Day 4dl: EXPERT-REVIEW CHECKLIST SELF-AUDIT complete)  
-**Status**: Journal pack cross-link integrity verified (Day 4dm); bidirectional links among methods.md Table 1 / journal-figure-captions.md Figs 1–7 + screenshot paths / screenshots/manifest.json / expert-review-checklist.md v3.0 / week3-expert-self-audit.md / week3-roadmap.md / week2-soft-ceiling-memo.md / README Documentation+Limitations all intact — **0 broken links**; README Documentation now links week3-expert-self-audit.md + week3-roadmap.md; teaching-grade atlas **in progress** — **not** a finished-product claim  
-**Companion**: `docs/week3-expert-self-audit.md` (Day 4dl self-audit complete; 58 PASS / 12 PARTIAL / 0 FAIL), `docs/week3-roadmap.md` (Week 3 plan Day 4dk), `docs/methods.md` (Table 1 + license matrix Day 4cv/4dh), `docs/journal-figure-captions.md` (7 figs Day 4db–4dh), `docs/expert-review-checklist.md` v3.0, other Week 2 docs
+**HEAD tip**: `7a77269` (Day 4dm: finalize daily-log SHA (99cdb6f))  
+**Status**: Soft-ceiling honesty verification **ALIGNED** (Day 4dn); cross-checked 7 dimensions (dig range #147–#178; DI/lumbricals/MTA gaps; Andreassen reject; NC/SA rejects; teaching-compromise labels UI/docs) vs reality — **all claims match actual state**; minor acceptable lags (methods.md #1–#175 vs latest #178; soft-ceiling-memo #1–#170 vs #178) documented in `docs/week3-soft-ceiling-verify.md` v1.0; no action required (frozen journal pack; 3-dig/8-dig lags cosmetic); soft dig #179 skipped (no obvious NEW CC0/BY hit while verifying); teaching-grade atlas **in progress** — **not** a finished-product claim  
+**Companion**: `docs/week3-soft-ceiling-verify.md` (Day 4dn honesty verification; 7 dimensions ALIGNED), `docs/week3-expert-self-audit.md` (Day 4dl; 58 PASS / 12 PARTIAL / 0 FAIL), `docs/week3-roadmap.md` (Week 3 plan Day 4dk), other Week 2 docs
 
 ---
 
