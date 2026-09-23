@@ -3096,7 +3096,7 @@ Existing honest no-screenshot note in `docs/journal-figure-captions.md` (Day 4df
 
 **Gates**: (run next)
 
-**Commit**: (pending gates)
+**Commit**: `Day 4dm: JOURNAL PACK CROSS-LINK VERIFY - bidirectional links among methods.md Table 1 / journal-figure-captions.md Figs 1-7 + screenshot paths / screenshots/manifest.json / expert-review-checklist.md v3.0 / week3-expert-self-audit.md / week3-roadmap.md / week2-soft-ceiling-memo.md / README Documentation+Limitations all verified intact (0 broken links) + README Documentation now links week3-expert-self-audit.md + week3-roadmap.md + cloud-agent-handback refresh` (SHA: 99cdb6f)
 
 **Summary**: Journal pack cross-link integrity verified per Day 4dm request + Week 3 roadmap §6 Days 4dm–4do schedule. **Bidirectional links among all key journal docs verified intact — 0 broken links**. Added missing `docs/week3-expert-self-audit.md` + `docs/week3-roadmap.md` to README Documentation section for completeness. Cross-link matrix includes: methods.md Table 1 ↔ journal-figure-captions.md Fig7; journal-figure-captions Figs 1–7 screenshot paths (5 PNG verified exist); expert-review-checklist v3.0 ↔ methods.md + soft-ceiling-memo; week3-expert-self-audit ↔ checklist/roadmap/methods/captions; week3-roadmap ↔ checklist/methods/soft-ceiling-memo/phase-8-self-review; README Limitations ↔ methods license matrix + checklist + soft-ceiling-memo. No stale SHA/day refs. Cloud-agent-handback refreshed. Soft digs watch-only (0 new). Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
 
