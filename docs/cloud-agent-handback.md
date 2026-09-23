@@ -28,11 +28,11 @@ Henson Sheffield **Option A** one-subject MC POC completed (`Aug_8`): surfaces O
 
 # Cloud Agent handback — Phase 8 resume brief
 
-**Date**: 2026-09-23 · Day **4dl** (Week 3 EXPERT SELF-AUDIT complete)  
+**Date**: 2026-09-23 · Day **4dm** (Week 3 JOURNAL PACK CROSS-LINK VERIFY)  
 **Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3)  
-**HEAD tip**: `ae17c87` (Day 4dk: Week 3 START)  
-**Status**: Expert-review checklist v3.0 self-audit **complete** (`docs/week3-expert-self-audit.md`: 73 items audited; **58 PASS** / **12 PARTIAL** disclosed teaching-useful incomplete / **0 FAIL**; teaching-grade pass bar ✅ PASS; no blockers); soft dig #179 skipped (no obvious NEW CC0/BY hit while auditing); teaching-grade atlas **in progress** — **not** a finished-product claim  
-**Companion**: `docs/week3-expert-self-audit.md` (Day 4dl self-audit complete), `docs/week3-roadmap.md` (Week 3 plan Day 4dk), `docs/open-anatomy-learning-log.md` (soft digs #147–#178 DRY), other Week 2 docs
+**HEAD tip**: `0b75348` (Day 4dl: EXPERT-REVIEW CHECKLIST SELF-AUDIT complete)  
+**Status**: Journal pack cross-link integrity verified (Day 4dm); bidirectional links among methods.md Table 1 / journal-figure-captions.md Figs 1–7 + screenshot paths / screenshots/manifest.json / expert-review-checklist.md v3.0 / week3-expert-self-audit.md / week3-roadmap.md / week2-soft-ceiling-memo.md / README Documentation+Limitations all intact — **0 broken links**; README Documentation now links week3-expert-self-audit.md + week3-roadmap.md; teaching-grade atlas **in progress** — **not** a finished-product claim  
+**Companion**: `docs/week3-expert-self-audit.md` (Day 4dl self-audit complete; 58 PASS / 12 PARTIAL / 0 FAIL), `docs/week3-roadmap.md` (Week 3 plan Day 4dk), `docs/methods.md` (Table 1 + license matrix Day 4cv/4dh), `docs/journal-figure-captions.md` (7 figs Day 4db–4dh), `docs/expert-review-checklist.md` v3.0, other Week 2 docs
 
 ---
 

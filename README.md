@@ -205,6 +205,8 @@ Open `http://localhost:5173` to view the atlas.
 - **Terminology**: `docs/terminology.md` (TA2 Latin + PRC Chinese standards)
 - **Methods**: `docs/methods.md` (data sources, extraction, journal-facing limitations table + license matrix Day 4cv + **Table 1: Kabsch Co-Registration Residuals** Day 4dh)
 - **Expert Review Checklist**: `docs/expert-review-checklist.md` v3.0 (Day 4cw: teaching-grade QA; grouped DI/MTA teaching compromises; soft-ceiling memo links; pass/fail criteria)
+- **Week 3 Expert Self-Audit**: `docs/week3-expert-self-audit.md` (Day 4dl: systematic checklist v3.0 self-audit; 73 items: 58 PASS / 12 PARTIAL disclosed teaching-useful incomplete / 0 FAIL; teaching-grade pass bar ✅ PASS)
+- **Week 3 Roadmap**: `docs/week3-roadmap.md` (Day 4dk: soft-ceiling honesty / quality targets no-new-meshes / research tracks / explicit non-goals)
 - **Soft-Ceiling Memo**: `docs/week2-soft-ceiling-memo.md` (exhaustive search #1–#170; NC/SA/unclear rejects; teaching compromises stance)
 - **Journal Figure Captions**: `docs/journal-figure-captions.md` (bilingual teaching figure stubs: bones/layers/explode/BY-SA-isolate/soft-ceiling-grouped-DI-MTA/ontology-empties/Kabsch-residuals; Day 4db)
 - **Contributing**: `CONTRIBUTING.md` (license boundaries, NC-trap exclusions)

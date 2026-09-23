@@ -3062,3 +3062,41 @@ Existing honest no-screenshot note in `docs/journal-figure-captions.md` (Day 4df
 **Commit**: `Day 4dl: EXPERT-REVIEW CHECKLIST SELF-AUDIT complete - docs/week3-expert-self-audit.md created (73 items: 58 PASS / 12 PARTIAL disclosed teaching-useful incomplete / 0 FAIL; teaching-grade pass bar ✅ PASS; no blockers) + cloud-agent-handback refresh`
 
 **Summary**: Expert-review checklist v3.0 self-audit completed per Day 4dl request + Week 3 roadmap §2 HIGH priority. Created comprehensive `docs/week3-expert-self-audit.md` (systematic walk-through §A–§I; 73 items audited): **58 PASS** items (all critical license boundaries, nomenclature accuracy, clinical disclaimers, soft-ceiling honesty, reproducibility pass without defects); **12 PARTIAL** items (all disclosed teaching-useful incomplete scope — lumbricals absent, DI/MTA grouped, nerves/ligaments/vessels teaching sets not complete — documented `week2-soft-ceiling-memo.md` + structures.json labels + methods.md limitations table); **0 FAIL** items (no defects requiring correction). **Teaching-Grade Pass Bar**: ✅ **PASS**. **Blockers**: None — all PARTIAL items are honest teaching-useful incomplete scope, not defects requiring correction before PR #3 merge. Soft dig #179 skipped (no obvious NEW CC0/BY hit while auditing). Cloud-agent-handback refreshed. Gates green. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+---
+
+## Day 4dm (2026-09-23)
+
+**Goals**: Per Day 4dm request + `docs/week3-roadmap.md` Days 4dm–4do: journal pack cross-link integrity verification; verify bidirectional links among methods.md (Table 1), journal-figure-captions.md Figs 1–7 + screenshot paths, screenshots/manifest.json, expert-review-checklist.md v3.0, week3-expert-self-audit.md, week3-roadmap.md, week2-soft-ceiling-memo.md, README Documentation/Limitations; fix any broken relative paths or stale SHAs/day refs; add self-audit + roadmap to README Documentation one-liner if missing; soft-tissue WATCH ONLY (skip digs unless obvious NEW CC0/BY soft hit); handback refresh + gates + commit/push.
+
+**Completed**:
+
+1. **Journal pack cross-link integrity verification** (Day 4dm primary task):
+   - **README Documentation section** (lines 200–214): ✅ **Added missing entries**:
+     - `docs/week3-expert-self-audit.md` (Day 4dl: 58 PASS / 12 PARTIAL / 0 FAIL)
+     - `docs/week3-roadmap.md` (Day 4dk: soft-ceiling honesty / quality targets / research tracks / non-goals)
+   - **Bidirectional cross-links verified** (0 broken links found):
+     - ✅ `docs/methods.md` (Table 1 Day 4dh) ↔ `docs/journal-figure-captions.md` Fig7 caption (cross-link intact)
+     - ✅ `docs/journal-figure-captions.md` Figs 1–7 screenshot paths → all 5 PNG files exist (`screenshots/01-default-all-layers.png`, `02-bone-only.png`, `04-nerve-bysa.png`, `10-ghost-opacity.png`, `11-explode-separation.png`)
+     - ✅ `docs/screenshots/manifest.json` exists (1.8K)
+     - ✅ `docs/expert-review-checklist.md` v3.0 ↔ `docs/methods.md` + `docs/week2-soft-ceiling-memo.md` (cross-links intact)
+     - ✅ `docs/week3-expert-self-audit.md` ↔ `docs/expert-review-checklist.md` v3.0 + `docs/week3-roadmap.md` + `docs/methods.md` + `docs/journal-figure-captions.md` (all cross-links intact)
+     - ✅ `docs/week3-roadmap.md` ↔ `docs/expert-review-checklist.md` + `docs/methods.md` + `docs/week2-soft-ceiling-memo.md` + `docs/phase-8-self-review.md` (cross-links intact)
+     - ✅ README Limitations (lines 183–186) ↔ `docs/methods.md` license matrix + `docs/expert-review-checklist.md` v3.0 + `docs/week2-soft-ceiling-memo.md` (cross-links intact)
+   - **No stale SHA/day refs found**: all Day 4d[x] references verified current
+   - **Cross-link matrix integrity**: ✅ **PASS** — all bidirectional links verified intact
+
+2. **Cloud-agent-handback refresh** (`docs/cloud-agent-handback.md`):
+   - Updated HEAD tip to `0b75348` / Day 4dl
+   - Updated date to Day **4dm** (Week 3 JOURNAL PACK CROSS-LINK VERIFY)
+   - Updated Status: "Journal pack cross-link integrity verified (Day 4dm); bidirectional links ... all intact — **0 broken links**; README Documentation now links week3-expert-self-audit.md + week3-roadmap.md"
+   - Updated Companion: added explicit file mentions for methods.md (Table 1 + license matrix), journal-figure-captions.md (7 figs), expert-review-checklist.md v3.0
+
+3. **Soft-tissue WATCH ONLY** (Day 4dm): No digs (no obvious new CC0/BY soft hit while verifying docs); soft digs remain #147–#178 (all DRY/REJECT)
+
+**Gates**: (run next)
+
+**Commit**: (pending gates)
+
+**Summary**: Journal pack cross-link integrity verified per Day 4dm request + Week 3 roadmap §6 Days 4dm–4do schedule. **Bidirectional links among all key journal docs verified intact — 0 broken links**. Added missing `docs/week3-expert-self-audit.md` + `docs/week3-roadmap.md` to README Documentation section for completeness. Cross-link matrix includes: methods.md Table 1 ↔ journal-figure-captions.md Fig7; journal-figure-captions Figs 1–7 screenshot paths (5 PNG verified exist); expert-review-checklist v3.0 ↔ methods.md + soft-ceiling-memo; week3-expert-self-audit ↔ checklist/roadmap/methods/captions; week3-roadmap ↔ checklist/methods/soft-ceiling-memo/phase-8-self-review; README Limitations ↔ methods license matrix + checklist + soft-ceiling-memo. No stale SHA/day refs. Cloud-agent-handback refreshed. Soft digs watch-only (0 new). Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
