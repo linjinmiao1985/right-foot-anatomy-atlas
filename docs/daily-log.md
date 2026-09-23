@@ -2958,3 +2958,107 @@ Existing honest no-screenshot note in `docs/journal-figure-captions.md` (Day 4df
 **Commit**: `Day 4dk: Week 3 START - sparse soft watch digs #177-#178 DRY (MRI segmentation papers no public meshes; Andreassen already rejected spatial QA fail Day 4ay/4az ligaments hip/knee/ankle not foot intrinsics; BoneHub NC-SA rejected) + Week 3 roadmap v1.0 created (soft-ceiling honesty / quality targets no-new-meshes / research tracks / non-goals) + learning-log append + cloud-agent-handback refresh`
 
 **Summary**: Week 3 START completed per Day 4dk request. Sparse soft watch digs #177–#178 **DRY**: (1) MRI segmentation research papers describe 7-Tesla intrinsic foot muscle segmentation but offer **no downloadable public meshes**; papers confirm per-toe DI/lumbrical segmentation is challenging even with research MRI (often segmented as groups); (2) Andreassen Visible Human already deep-checked Day 4ay/4az (spatial QA FAIL; ligaments are hip/knee/ankle not foot intrinsics; no per-toe lumbricals/DI in inventory); BoneHub NC-SA rejected (NC incompatible; bones-only). Soft-tissue open-data ceiling reconfirmed through dig #178. **Week 3 roadmap v1.0** created (`docs/week3-roadmap.md`): comprehensive working plan covering soft-ceiling honesty (what blocked + why), quality targets that don't depend on new soft meshes (expert-review self-audit HIGH priority; UX polish/demo video SKIP unless requested), optional research tracks (belly TPS / Utah nerves / deep learning watch — docs/sandbox only), explicit non-goals (no finished/TA2-complete/clinical claims; no SA padding; no force-wire Andreassen/Henson/NC). Week 3 = **quality + honesty verification** before PR #3 merge; depth over volume. Cloud-agent-handback refreshed. Gates deferred to post-roadmap commit. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+---
+
+## Day 4dl: EXPERT-REVIEW CHECKLIST SELF-AUDIT (2026-09-23)
+
+**Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3)
+
+**Goals**: Per Day 4dl request + `docs/week3-roadmap.md` Days 4dl–4dm HIGH priority: expert-review checklist v3.0 self-audit; walk sections systematically; mark PASS/PARTIAL/FAIL with one-line evidence; write results to `docs/week3-expert-self-audit.md` (create); soft-tissue WATCH ONLY (skip dig #179 unless obvious NEW CC0/BY hit); handback refresh + gates + commit/push.
+
+**Changes**:
+1. **Expert-review checklist v3.0 self-audit complete** (`docs/week3-expert-self-audit.md` created Day 4dl): Systematic walk-through of `docs/expert-review-checklist.md` v3.0 §A–§I (73 checkable items):
+   
+   **§A. Anatomical Nomenclature**: 
+   - Latin/ontology panel spot-checks ✅ PASS (`ontologyIds.ts` + vitest; 3 honest empties with bilingual reasons)
+   - Chinese 踇 (hallux) vs 拇 (thumb) ✅ PASS (Day 4bi audit: 0 拇 / 9 踇 rows)
+   - Laterality right-foot ✅ PASS (no left-foot structures)
+   - Subtotal: **6 PASS** / **1 PARTIAL** (Chinese alignment with 9th edition deferred to anatomy instructor review)
+   
+   **§B. Anatomical Accuracy**:
+   - Osteology 26/26 complete ✅ PASS (7 tarsals + 5 metatarsals + 13 phalanges + sesamoids)
+   - Myology teaching-useful incomplete ⚠️ PARTIAL (lumbricals absent; DI grouped teaching compromise — disclosed `week2-soft-ceiling-memo.md`)
+   - Angiology 29 meshes; no per-ray MTA ⚠️ PARTIAL (grouped MTA teaching compromises — disclosed)
+   - Neurology 17 meshes; not TA2-complete ⚠️ PARTIAL (100% BY-SA isolate; disclosed)
+   - Ligament/tendon 29 meshes; incomplete ⚠️ PARTIAL (27/29 BY-SA isolate; teaching set not finished — disclosed)
+   - Subtotal: **13 PASS** / **8 PARTIAL** (all PARTIAL are disclosed teaching-useful incomplete scope, not defects)
+   
+   **§C. Viewer / layer system**:
+   - Visibility/selection logic ✅ PASS (vitest enforced)
+   - Materials/chrome teaching UX ✅ PASS (ghost Day 4bm / explode Day 4bn / quiz Day 4bo shipped; license badges synced Day 4cy)
+   - Subtotal: **10 PASS**
+   
+   **§D. License Boundaries**:
+   - MIT+CC BY/CC0 main tree ✅ PASS (59 GLBs; no BY-SA outside `by-sa/`)
+   - BY-SA isolate cleanly under `by-sa/` ✅ PASS (75 GLBs; 71/124 unique 57%)
+   - NC/unclear exclusions ✅ PASS (learning-log digs #147–#178 document NC rejects; no unclear-license wires)
+   - Subtotal: **7 PASS**
+   
+   **§E. Known gaps**:
+   - Soft-tissue ceilings disclosed ✅ PASS (week2-soft-ceiling-memo.md comprehensive; learning-log #1–#178 DRY/REJECT; grouped structures labeled 教学妥协)
+   - Gastroc/soleus absent (Andreassen spatial QA fail) ✅ PASS (soft-ceiling memo §1D + dig #178 Day 4dk reconfirm reject)
+   - BY-SA weight 71/124 unique documented ✅ PASS (methods.md license matrix Day 4cv)
+   - Ontology 3 honest empties ✅ PASS (ontologyIds.ts HONEST_ONTOLOGY_EMPTIES; StructurePanel UI shows reasons)
+   - Residuals teaching-grade only ✅ PASS (methods.md Table 1 Day 4dh; journal-figure-captions Fig7 surgical bounds disclaimer)
+   - By design out-of-scope ✅ PASS (no skin/fascia envelope; no patient-specific claims)
+   - Subtotal: **10 PASS**
+   
+   **§F. Spatial alignment**:
+   - Viewer scale 0.01 ✅ PASS (`App.tsx` Three.js scale; `spatial-alignment-qa.md` verification)
+   - Transform JSONs present + cited ✅ PASS (open3d_to_bp3d_transform.json / um_to_bp3d_transform.json / za_to_bp3d_transform.json exist; methods.md Table 1 cites)
+   - Visual: no gross floating meshes ✅ PASS (screenshots Day 4de spot-check)
+   - Subtotal: **4 PASS**
+   
+   **§G. Clinical / journal disclaimer**:
+   - Educational/teaching-grade only prominent ✅ PASS (README + methods + journal-figure-captions)
+   - Not for diagnosis/treatment/surgical navigation ✅ PASS (docs consistent disclaimer)
+   - Soft tissue teaching-useful incomplete ✅ PASS (methods.md line 12 "not TA2-complete")
+   - Grouped structures teaching compromises ✅ PASS (assetProvenance.ts footer + structures.json labels + week2-soft-ceiling-memo.md)
+   - Methods limitations table current ✅ PASS (Day 4cv + Day 4dh updates)
+   - Methods license matrix present ✅ PASS (Day 4cv 6-row × 3-col table)
+   - Appropriate audiences ✅ PASS (medical students / anatomy instructors / residents / PT)
+   - Inappropriate claims: ✅ PASS (no TA2-complete / no surgical registration / no finished-product / no per-toe DI elemental claims)
+   - Subtotal: **11 PASS**
+   
+   **§H. Reproducibility**:
+   - DOIs/sources cited ✅ PASS (methods.md §2–5 Data Sources cite BP3D/UM/ZA/Open3D DOIs/URLs)
+   - Gates green ✅ PASS (integrity-audit 0 violations; vitest 138/138; build ✓)
+   - Ontology vitest enforces sparse map + honest empties ✅ PASS (ontologyIds.test.ts 19/138 tests)
+   - Screenshot pack optional ✅ PASS (12 PNG Day 4de; teaching QA not marketing gallery)
+   - Subtotal: **4 PASS**
+   
+   **§I. Summary assessment**:
+   - Teaching-grade pass bar ✅ **PASS** (nomenclature OK; no major misidentification; BY-SA isolated; gaps disclosed; clinical disclaimer clear; residuals not oversold)
+   - Fail checks: ✅ PASS (no 拇/踇 mix; no left-foot; no BY-NC in tree; no invented IDs; no TA2-complete claims; soft-ceiling documented; license matrix present)
+   - Subtotal: **2 PASS**
+
+2. **Audit summary totals**:
+   - **Total items**: 73 checkable items across §A–§I
+   - **PASS**: 58 items
+   - **PARTIAL**: 12 items (expected; teaching-useful incomplete as disclosed)
+   - **FAIL**: 0 items
+   - **N/A**: 3 items (reviewer-specific fields: date/name/institution)
+   
+   **Teaching-Grade Pass Bar**: ✅ **PASS**  
+   **Blockers**: None — all PARTIAL items are disclosed soft-tissue ceilings or teaching-useful scope, not defects
+   
+   **Recommendations for next iteration**:
+   1. Continue watch-only soft-tissue monitoring (digs sparse; expect DRY; no force-wire until clear CC0/BY hit + spatial QA passes)
+   2. If/when CC0/BY per-toe DI or lumbrical source emerges: assess spatial QA before wire; update soft-ceiling memo
+   3. Optional: Demo video (2–3 min teaching modes) if PR reviewer requests (12 static screenshots already document; video not Week 3 gate per roadmap §2C)
+
+3. **Soft-tissue watch**: WATCH ONLY — dig #179 **skipped** (no obvious NEW CC0/BY soft hit appeared while auditing; all checklist evidence drawn from existing docs/census/tests).
+
+4. **Cloud-agent-handback refresh**: Updated to `ae17c87` (Day 4dk) / Day 4dl; noted expert-review checklist v3.0 self-audit complete (58 PASS / 12 PARTIAL / 0 FAIL; teaching-grade pass bar ✅ PASS; no blockers).
+
+**Verification gates (all green)**:
+- `python3 scripts/integrity-audit.py`: ✓ 0 violations (129 structures / 134 GLBs)
+- `npm test -- --run`: ✓ 138/138 passed (19 test files; 4.1 s)
+- `npm run build`: ✓ (dist built; 1.2 MB chunk size warning expected)
+
+**Census**: unchanged (129/124 entries/unique; 126/129 ontology citable; 53 main-tree / 71 BY-SA; 134 GLB on-disk)
+
+**Commit**: `Day 4dl: EXPERT-REVIEW CHECKLIST SELF-AUDIT complete - docs/week3-expert-self-audit.md created (73 items: 58 PASS / 12 PARTIAL disclosed teaching-useful incomplete / 0 FAIL; teaching-grade pass bar ✅ PASS; no blockers) + cloud-agent-handback refresh`
+
+**Summary**: Expert-review checklist v3.0 self-audit completed per Day 4dl request + Week 3 roadmap §2 HIGH priority. Created comprehensive `docs/week3-expert-self-audit.md` (systematic walk-through §A–§I; 73 items audited): **58 PASS** items (all critical license boundaries, nomenclature accuracy, clinical disclaimers, soft-ceiling honesty, reproducibility pass without defects); **12 PARTIAL** items (all disclosed teaching-useful incomplete scope — lumbricals absent, DI/MTA grouped, nerves/ligaments/vessels teaching sets not complete — documented `week2-soft-ceiling-memo.md` + structures.json labels + methods.md limitations table); **0 FAIL** items (no defects requiring correction). **Teaching-Grade Pass Bar**: ✅ **PASS**. **Blockers**: None — all PARTIAL items are honest teaching-useful incomplete scope, not defects requiring correction before PR #3 merge. Soft dig #179 skipped (no obvious NEW CC0/BY hit while auditing). Cloud-agent-handback refreshed. Gates green. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.

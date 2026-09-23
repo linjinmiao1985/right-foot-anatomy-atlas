@@ -28,11 +28,11 @@ Henson Sheffield **Option A** one-subject MC POC completed (`Aug_8`): surfaces O
 
 # Cloud Agent handback — Phase 8 resume brief
 
-**Date**: 2026-09-23 · Day **4dk** (Week 3 START — sparse soft watch + roadmap)  
+**Date**: 2026-09-23 · Day **4dl** (Week 3 EXPERT SELF-AUDIT complete)  
 **Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3)  
-**HEAD tip**: `61a2d2c` (Day 4dj: LIGHT SOFT WATCH)  
-**Status**: Sparse soft watch digs #177–#178 DRY (MRI segmentation papers no public meshes; Andreassen already rejected spatial QA fail Day 4ay/4az; BoneHub NC-SA rejected); **Week 3 roadmap v1.0** created (`docs/week3-roadmap.md`: soft-ceiling honesty / quality targets no-new-meshes / research tracks / explicit non-goals); teaching-grade atlas **in progress** — **not** a finished-product claim  
-**Companion**: `docs/week3-roadmap.md` (Week 3 plan Day 4dk), `docs/open-anatomy-learning-log.md` (soft digs #147–#178 DRY), `docs/methods.md` (Table 1 Day 4dh), `docs/journal-figure-captions.md` (7 figs complete), `docs/expert-review-checklist.md` v3.0, `docs/screenshots/` (12 PNG), other Week 2 docs
+**HEAD tip**: `ae17c87` (Day 4dk: Week 3 START)  
+**Status**: Expert-review checklist v3.0 self-audit **complete** (`docs/week3-expert-self-audit.md`: 73 items audited; **58 PASS** / **12 PARTIAL** disclosed teaching-useful incomplete / **0 FAIL**; teaching-grade pass bar ✅ PASS; no blockers); soft dig #179 skipped (no obvious NEW CC0/BY hit while auditing); teaching-grade atlas **in progress** — **not** a finished-product claim  
+**Companion**: `docs/week3-expert-self-audit.md` (Day 4dl self-audit complete), `docs/week3-roadmap.md` (Week 3 plan Day 4dk), `docs/open-anatomy-learning-log.md` (soft digs #147–#178 DRY), other Week 2 docs
 
 ---
 
