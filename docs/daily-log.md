@@ -3157,7 +3157,7 @@ Existing honest no-screenshot note in `docs/journal-figure-captions.md` (Day 4df
 
 **Gates**: (run next)
 
-**Commit**: (pending gates)
+**Commit**: `Day 4dn: SOFT-CEILING HONESTY VERIFY - docs/week3-soft-ceiling-verify.md v1.0 created (systematic cross-check 7 dimensions: dig range #147-#178 / DI-lumbricals-MTA gaps / Andreassen reject / NC-SA rejects / teaching-compromise labels UI-docs; all ALIGNED - soft-ceiling claims match reality; minor acceptable lags documented; no fixes required) + cloud-agent-handback refresh` (SHA: 66593a4)
 
 **Summary**: Soft-ceiling honesty verification completed per Day 4dn request + Week 3 roadmap §5 gates. Created comprehensive `docs/week3-soft-ceiling-verify.md` v1.0 (systematic cross-check of 7 verification dimensions: dig range #147–#178; DI/lumbricals/MTA gaps; Andreassen reject; NC/SA rejects; teaching-compromise labels UI/docs). **All claims ALIGNED with reality** — soft-ceiling documentation is honest and accurate. Minor acceptable lags (methods.md #1–#175 vs latest #178 3-dig lag; soft-ceiling-memo #1–#170 vs #178 8-dig lag) documented with rationale (methods row written Day 4dg before sparse #176–#178; memo frozen Day 4ct per 1-page design). **No fixes required** — frozen journal pack should not be churned for cosmetic lags. Soft dig #179 skipped (watch-only; no obvious NEW CC0/BY hit). Cloud-agent-handback refreshed. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
 
