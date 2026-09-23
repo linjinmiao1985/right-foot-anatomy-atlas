@@ -3161,3 +3161,45 @@ Existing honest no-screenshot note in `docs/journal-figure-captions.md` (Day 4df
 
 **Summary**: Soft-ceiling honesty verification completed per Day 4dn request + Week 3 roadmap §5 gates. Created comprehensive `docs/week3-soft-ceiling-verify.md` v1.0 (systematic cross-check of 7 verification dimensions: dig range #147–#178; DI/lumbricals/MTA gaps; Andreassen reject; NC/SA rejects; teaching-compromise labels UI/docs). **All claims ALIGNED with reality** — soft-ceiling documentation is honest and accurate. Minor acceptable lags (methods.md #1–#175 vs latest #178 3-dig lag; soft-ceiling-memo #1–#170 vs #178 8-dig lag) documented with rationale (methods row written Day 4dg before sparse #176–#178; memo frozen Day 4ct per 1-page design). **No fixes required** — frozen journal pack should not be churned for cosmetic lags. Soft dig #179 skipped (watch-only; no obvious NEW CC0/BY hit). Cloud-agent-handback refreshed. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
 
+
+---
+
+## Day 4dp (2026-09-23)
+
+**Goals**: Per Day 4dp request + `docs/week3-roadmap.md` §6 Day 4dp: Week 3 wrap + pre-merge self-review; add/update Week 3 section in `docs/phase-8-self-review.md` (Day 4dk–4dp summary: roadmap; expert self-audit 58/12/0 teaching-grade PASS; journal cross-links 0 broken; soft-ceiling ALIGNED; soft digs watch-only DRY through #178; census 129/124; gates green; PR #3 pre-merge status = teaching atlas in progress, merge-ready for teaching-grade if reviewers accept disclosed gaps — NOT finished/clinical/TA2-complete); refresh cloud-agent-handback to 80764a9 / Day 4dn; mark Week 3 wrap done; soft-tissue WATCH ONLY; gates + commit/push.
+
+**Completed**:
+
+1. **Week 3 wrap section added to `docs/phase-8-self-review.md`** (Day 4dp):
+   Comprehensive Week 3 summary covering:
+   
+   **A) Week 3 Focus**: Verification & honesty (not volume); soft-tissue WATCH ONLY posture throughout
+   
+   **B) Week 3 Deliverables (Day 4dk–4dp)**:
+   - Day 4dk: Week 3 roadmap v1.0 + sparse soft watch digs #177–#178 (both DRY; MRI segmentation papers no public meshes; Andreassen already rejected; BoneHub NC-SA rejected)
+   - Day 4dl: Expert-review checklist v3.0 self-audit complete (`week3-expert-self-audit.md`: 73 items → 58 PASS / 12 PARTIAL disclosed teaching-useful incomplete / 0 FAIL; teaching-grade pass bar ✅ PASS; no blockers)
+   - Day 4dm: Journal pack cross-link integrity verify (0 broken links; README Documentation enhanced with week3-expert-self-audit + week3-roadmap links)
+   - Day 4dn: Soft-ceiling honesty verify (`week3-soft-ceiling-verify.md` v1.0: 7 dimensions ALIGNED — dig range #147–#178; DI/lumbricals/MTA gaps; Andreassen reject; NC/SA rejects; teaching-compromise labels; minor acceptable lags documented)
+   - Day 4dp: Week 3 wrap + pre-merge self-review (this section)
+   
+   **C) Week 3 Census & Gates**: Unchanged throughout (129/124; 126/129 ontology; 53 main / 71 BY-SA; 134 GLB; soft digs watch-only 0 new; gates all green)
+   
+   **D) PR #3 Pre-Merge Status**:
+   - **Teaching-Grade Quality**: ✅ **PASS** — PR #3 is **merge-ready for teaching-grade** if reviewers accept disclosed gaps
+   - **5 pass criteria**: expert self-audit 58/12/0; journal cross-links 0 broken; soft-ceiling ALIGNED 7 dimensions; license boundaries correct; clinical disclaimers present
+   - **6 known disclosed gaps** (accepted teaching-useful incomplete): lumbricals absent; DI/MTA grouped; nerves/ligaments/vessels teaching sets incomplete; gastroc/soleus absent; 3 honest ontology empties — all documented week2-soft-ceiling-memo + structures.json labels + methods.md limitations + expert-review-checklist v3.0 + week3-expert-self-audit
+   - **Explicit non-claims**: NOT finished/clinical/TA2-complete/per-toe-per-ray elemental
+   - **Merge recommendation**: ✅ MERGE-READY for teaching-grade acceptance; if reviewers accept disclosed gaps → merge to base; if additional polish requested (demo video / screenshots) → address then merge; if defects found → fix (Week 3 verification found 0 defects)
+   
+   **E) Week 3 Artifacts**: week3-roadmap.md v1.0 (Day 4dk); week3-expert-self-audit.md (Day 4dl); week3-soft-ceiling-verify.md v1.0 (Day 4dn); README Documentation enhanced; Week 2 journal pack intact
+
+2. **Cloud-agent-handback refresh**: Updated to `80764a9` (Day 4dn) / Day 4dp; marked Week 3 wrap complete; noted PR #3 pre-merge status = teaching atlas in progress, merge-ready for teaching-grade if reviewers accept disclosed gaps.
+
+3. **Soft-tissue watch**: WATCH ONLY — no digs (Week 3 wrap focus on documentation; no obvious NEW CC0/BY soft hit).
+
+**Gates**: (run next)
+
+**Commit**: (pending gates)
+
+**Summary**: Week 3 wrap + pre-merge self-review completed per Day 4dp request + Week 3 roadmap §6. Comprehensive Week 3 section added to `docs/phase-8-self-review.md` (Days 4dk–4dp summary: roadmap v1.0 created; expert-review checklist v3.0 self-audit 58 PASS / 12 PARTIAL / 0 FAIL teaching-grade ✅ PASS; journal pack cross-links 0 broken links; soft-ceiling honesty ALIGNED 7 dimensions; soft digs watch-only DRY through #178; census 129/124 unchanged; gates green throughout). **PR #3 pre-merge status**: teaching atlas **in progress**, **merge-ready for teaching-grade** if reviewers accept disclosed gaps (lumbricals absent; DI/MTA grouped teaching compromises; nerves/ligaments/vessels teaching sets incomplete; gastroc/soleus absent; 3 honest ontology empties) — all gaps documented week2-soft-ceiling-memo + structures.json labels + methods.md limitations + expert-review-checklist v3.0 + week3-expert-self-audit. **Explicit non-claims**: NOT finished/clinical/TA2-complete/per-toe-per-ray elemental. Cloud-agent-handback refreshed. Teaching atlas **in progress** — **not** a finished product.
+

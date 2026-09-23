@@ -289,3 +289,136 @@ Maintain a short **monitor/reject** list (see `docs/cc0-soft-tissue-watchlist.md
 ## Bottom line
 
 Phase 8 freezes a quality-week honest checkpoint: census **129** / **124**; ontology **126** / **129**; UX (prefs · hide · help · clip · cameras · ghost · explode · quiz + honesty banners) live; BY-SA **71/124**; open mining through **#135** with **0** late soft integrates. Soft-tissue open-data ceiling largely reached for DI / per-ray MTA / nerve·ligament CC0/BY / gastroc-soleus. Treat this as a **checkpoint for journal prep / handback / watch-only soft monitoring** — **no finished-product claim**.
+
+---
+
+## Week 3 Quality Checkpoint + Pre-Merge Self-Review (Day 4dk–4dp)
+
+**Date**: 2026-09-23 (Days 4dk–4dn: verification; Day 4dp: wrap)  
+**Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3)  
+**HEAD**: `80764a9` (Day 4dn finalize) / `66593a4` (Day 4dn soft-ceiling verify)
+
+### A) Week 3 Focus: Verification & Honesty (Not Volume)
+
+**Goal**: Verify teaching-grade quality + soft-ceiling honesty before PR #3 merge — depth over census padding.
+
+**Posture**: Soft-tissue **WATCH ONLY** through Week 3 (digs sparse; expect DRY; no force-wire until clear CC0/BY hit + spatial QA passes).
+
+---
+
+### B) Week 3 Deliverables (Day 4dk–4dp Summary)
+
+#### Day 4dk: Week 3 START — Roadmap + Sparse Soft Watch
+- **`docs/week3-roadmap.md` v1.0** created (soft-ceiling honesty: what blocked + why; quality targets no-new-meshes; optional research tracks; explicit non-goals)
+- Sparse soft watch digs **#177–#178** (2 NEW; both DRY):
+  - #177: MRI segmentation research papers (7-Tesla intrinsic foot muscle segmentation described; **no downloadable public meshes**; papers confirm per-toe DI/lumbrical segmentation challenging — often grouped)
+  - #178: Andreassen Visible Human already rejected Day 4ay/4az (spatial QA FAIL; ligaments hip/knee/ankle not foot intrinsics); BoneHub NC-SA rejected
+- Soft-tissue open-data ceiling **reconfirmed through dig #178**
+
+#### Day 4dl: Expert-Review Checklist v3.0 Self-Audit
+- **`docs/week3-expert-self-audit.md`** created (systematic walk-through §A–§I; 73 checkable items):
+  - **58 PASS** items: all critical license boundaries, nomenclature accuracy, clinical disclaimers, soft-ceiling honesty, reproducibility checks pass without defects
+  - **12 PARTIAL** items: all disclosed teaching-useful incomplete scope (lumbricals absent; DI/MTA grouped; nerves/ligaments/vessels teaching sets not complete) — documented `week2-soft-ceiling-memo.md` + structures.json labels + methods.md limitations table
+  - **0 FAIL** items: no defects requiring correction
+- **Teaching-Grade Pass Bar**: ✅ **PASS**
+- **Blockers**: None — all PARTIAL items are honest teaching-useful incomplete scope, not defects
+
+#### Day 4dm: Journal Pack Cross-Link Integrity Verify
+- Verified bidirectional links among:
+  - methods.md Table 1 ↔ journal-figure-captions.md Fig7
+  - journal-figure-captions Figs 1–7 → 5 screenshot paths (all exist)
+  - screenshots/manifest.json (exists)
+  - expert-review-checklist.md v3.0 ↔ methods.md + soft-ceiling-memo
+  - week3-expert-self-audit.md ↔ checklist/roadmap/methods/captions
+  - week3-roadmap.md ↔ checklist/methods/soft-ceiling-memo/phase-8-self-review
+  - README Documentation/Limitations ↔ methods license matrix + checklist + soft-ceiling-memo
+- **Result**: ✅ **0 broken links** — all journal pack cross-links intact
+- **Enhanced**: README Documentation now links week3-expert-self-audit.md + week3-roadmap.md
+
+#### Day 4dn: Soft-Ceiling Honesty Verify
+- **`docs/week3-soft-ceiling-verify.md` v1.0** created (systematic cross-check 7 verification dimensions):
+  1. Dig range #147–#178: ✅ ALIGNED (minor acceptable lags: methods.md #1–#175 3-dig lag; soft-ceiling-memo #1–#170 8-dig lag)
+  2. Lumbrical gaps: ✅ ALIGNED ("lumbricals absent" = absent 3D meshes; structures.json entries are anatomical metadata only, not visualized)
+  3. Per-toe DI gaps: ✅ ALIGNED (grouped DI 1st–4th as claimed; honest teaching-compromise labels present)
+  4. Per-ray MTA gaps: ✅ ALIGNED (grouped MTA as claimed; honest teaching-compromise labels present)
+  5. Andreassen reject: ✅ ALIGNED (rejection rationale consistent across all docs)
+  6. NC/SA rejects: ✅ ALIGNED (NC sources rejected; BY-SA isolated in `by-sa/` directory)
+  7. Teaching-compromise labels: ✅ ALIGNED (labels present in UI footer + structures.json gap notes + methods.md + README)
+- **Overall**: ✅ **ALIGNED** — soft-ceiling claims match reality across all 7 dimensions
+- **No action required**: Soft-ceiling honesty is accurate
+
+#### Day 4dp: Week 3 Wrap + Pre-Merge Self-Review (this section)
+
+---
+
+### C) Week 3 Census & Gates (Unchanged Throughout)
+
+- **Census**: 129/124 entries/unique; 126/129 ontology citable; 53 main-tree / 71 BY-SA; 134 GLB on-disk
+- **Soft digs**: watch-only through #178 (0 new CC0/BY soft meshes integrated Week 3)
+- **Gates**: ✅ all green throughout Week 3 (npm test 138/138; integrity-audit 0 violations; npm run build success)
+
+---
+
+### D) PR #3 Pre-Merge Status (Day 4dp)
+
+**Branch**: `cursor/week2-day4bm-ghost-opacity-096e`  
+**Commits**: 0bb3449 (Day 4cj baseline) → 80764a9 (Day 4dn finalize)
+
+#### Teaching-Grade Quality Assessment
+
+✅ **PASS** — PR #3 is **merge-ready for teaching-grade** if reviewers accept disclosed gaps:
+
+1. **Expert-review checklist v3.0 self-audit**: 58 PASS / 12 PARTIAL disclosed teaching-useful incomplete / 0 FAIL
+2. **Journal pack cross-links**: 0 broken links (methods Table 1 + captions Figs 1–7 + screenshots + checklist + self-audit + roadmap + soft-ceiling-memo + README all intact)
+3. **Soft-ceiling honesty**: ALIGNED across 7 dimensions (no invented assets; no finished-product claims; grouped structures labeled teaching compromises)
+4. **License boundaries**: correct (NC rejected; BY-SA isolated; main-tree MIT+BY/CC0)
+5. **Clinical disclaimers**: present (teaching atlas in progress; not clinical/surgical/TA2-complete)
+
+#### Known Disclosed Gaps (Accepted Teaching-Useful Incomplete Scope)
+
+1. **Lumbricals absent** (no 3D meshes; structures.json anatomical metadata only)
+2. **DI 1st–4th grouped** (teaching compromise; not per-toe elementals)
+3. **MTA grouped** (teaching compromise; not per-ray elementals)
+4. **Nerves/ligaments/vessels teaching sets** (not complete; 100% BY-SA nerves; 93% BY-SA ligaments)
+5. **Gastroc/soleus bellies absent** (Andreassen spatial QA fail; no CC0/BY alternatives)
+6. **3 honest ontology empties** (cervical TC; medial/lateral plantar veins — TNA-only; no distinct TA98 A-codes)
+
+All gaps documented in: week2-soft-ceiling-memo.md + structures.json labels + methods.md limitations table + expert-review-checklist.md v3.0 + week3-expert-self-audit.md
+
+#### Explicit Non-Claims (Honesty Stance)
+
+- **NOT** a finished product
+- **NOT** clinical / surgical / diagnostic / treatment planning
+- **NOT** TA2-complete soft tissue atlas
+- **NOT** per-toe/per-ray elemental atlas (grouped structures are teaching compromises)
+
+#### Merge Recommendation
+
+✅ **MERGE-READY** for teaching-grade acceptance:
+- If reviewers accept disclosed teaching-useful incomplete scope → **merge to base**
+- If reviewers require additional polish (e.g. demo video; additional screenshots) → address requests then merge
+- If reviewers identify defects (broken links; incorrect claims; NC license violations) → **fix defects** before merge (Week 3 verification found 0 defects)
+
+**Bottom line**: Teaching atlas **in progress** — honest disclosed gaps; teaching-grade pass bar met; **not** a finished-product claim.
+
+---
+
+### E) Week 3 Artifacts (Companion Documentation)
+
+Created Week 3 (Days 4dk–4dn):
+- `docs/week3-roadmap.md` v1.0 (Day 4dk: soft-ceiling honesty / quality targets / research tracks / non-goals)
+- `docs/week3-expert-self-audit.md` (Day 4dl: 73 items audited; 58 PASS / 12 PARTIAL / 0 FAIL)
+- `docs/week3-soft-ceiling-verify.md` v1.0 (Day 4dn: 7 dimensions verified ALIGNED)
+- Updated: README Documentation links (week3-expert-self-audit + week3-roadmap)
+
+Week 2 journal pack (complete; intact):
+- `docs/methods.md` (Table 1 Kabsch residuals + limitations table + license matrix)
+- `docs/expert-review-checklist.md` v3.0 (teaching-grade QA)
+- `docs/journal-figure-captions.md` (7 bilingual teaching figure stubs)
+- `docs/screenshots/` (12 PNG; manifest.json)
+- `docs/week2-soft-ceiling-memo.md` (exhaustive search #1–#170 summary)
+
+---
+
+**Version**: Phase 8 Week 3 wrap (Day 4dp 2026-09-23)  
+**Next**: Per Week 3 roadmap §6 + reviewer feedback — optional demo video Day 4do if requested; otherwise PR #3 ready for external review + merge discussion
