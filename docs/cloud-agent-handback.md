@@ -28,11 +28,11 @@ Henson Sheffield **Option A** one-subject MC POC completed (`Aug_8`): surfaces O
 
 # Cloud Agent handback — Phase 8 resume brief
 
-**Date**: 2026-09-22 · Day **4dj** (Week 2 LIGHT SOFT WATCH — journal pack ready)  
+**Date**: 2026-09-23 · Day **4dk** (Week 3 START — sparse soft watch + roadmap)  
 **Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3)  
-**HEAD tip**: `0289539` (Day 4di: finalize daily-log SHA)  
-**Status**: Week 2 journal pack **ready** (no expand); light soft watch dig #176 DRY (Open3DModel BY-SA / Visible Korean NC-ND / Zenodo Scan-the-World NC+SA / Cults3D unclear / Proko subscription — all already excluded or known); teaching-grade atlas **in progress** — **not** a finished-product claim  
-**Companion**: `docs/methods.md` (Table 1: Kabsch Co-Registration Residuals Day 4dh), `docs/journal-figure-captions.md` (7 figs complete), `docs/expert-review-checklist.md` v3.0, `docs/screenshots/` (12 PNG), `docs/open-anatomy-learning-log.md` (soft digs #147–#176 DRY), other Week 2 docs
+**HEAD tip**: `61a2d2c` (Day 4dj: LIGHT SOFT WATCH)  
+**Status**: Sparse soft watch digs #177–#178 DRY (MRI segmentation papers no public meshes; Andreassen already rejected spatial QA fail Day 4ay/4az; BoneHub NC-SA rejected); **Week 3 roadmap v1.0** created (`docs/week3-roadmap.md`: soft-ceiling honesty / quality targets no-new-meshes / research tracks / explicit non-goals); teaching-grade atlas **in progress** — **not** a finished-product claim  
+**Companion**: `docs/week3-roadmap.md` (Week 3 plan Day 4dk), `docs/open-anatomy-learning-log.md` (soft digs #147–#178 DRY), `docs/methods.md` (Table 1 Day 4dh), `docs/journal-figure-captions.md` (7 figs complete), `docs/expert-review-checklist.md` v3.0, `docs/screenshots/` (12 PNG), other Week 2 docs
 
 ---
 

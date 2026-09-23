@@ -2916,3 +2916,45 @@ Existing honest no-screenshot note in `docs/journal-figure-captions.md` (Day 4df
 **Commit**: `Day 4dj: LIGHT SOFT WATCH - dig #176 foot plantar intrinsic muscles CC0/BY open anatomy 2026 DRY (Open3DModel BY-SA / Visible Korean NC-ND / Zenodo Scan-the-World NC+SA / Cults3D unclear / Proko subscription — all already excluded or known) + learning-log append + cloud-agent-handback refresh`
 
 **Summary**: Light soft watch completed per Day 4dj request. Dig #176 (foot plantar intrinsic muscles CC0/BY open anatomy 2026) **DRY** — all hits already known or excluded: Open3DModel BY-SA (Week 2 SA ceiling excludes); Visible Korean NC-ND (already rejected); Zenodo Scan-the-World #161b NC+SA (already rejected Day 4cq); Cults3D license unclear (no explicit CC0/BY); Proko subscription platform (no downloadable open data). Soft-tissue open-data ceiling reconfirmed through dig #176. Cloud-agent-handback refreshed to 0289539 / Day 4di. No new features/docs (Week 2 journal pack READY; no expand per light watch constraint). Gates green. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+---
+
+## Day 4dk: Week 3 START — sparse soft watch + Week 3 roadmap (2026-09-23)
+
+**Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3)
+
+**Goals**: Per Day 4dk request (week-task daily advance; quality over volume): sparse soft watch digs #177–#178 (2 only; NEW 2026 deposits; expect DRY); substantive Week 3 roadmap (soft-ceiling honesty + quality targets no-new-meshes + research tracks + explicit non-goals); hygiene (handback refresh + daily-log + gates + commit/push).
+
+**Changes**:
+1. **Dig #177** (Zenodo/Figshare 2026 lumbricals / dorsal interossei foot meshes): **DRY** — no downloadable CC0/BY lumbrical or per-toe DI 3D mesh datasets found; all hits are MRI segmentation research papers without public meshes:
+   - MRI segmentation studies (BMC Musculoskelet Disord 2021; Springer Nature 2024): manual 7-Tesla MRI segmentation of intrinsic foot muscles using 3D Slicer — papers describe segmentation methods but **no downloadable public meshes** offered
+   - MRI segmentation challenges: papers note "differentiation of the other individual plantar and dorsal interossei was challenging, even on 7T images. Consequently, these muscles were segmented as a group" — confirms per-toe DI/lumbrical elemental segmentation is technically challenging even in research MRI
+   - Figshare 3D models dataset: ophiuroid (brittle star) arm models — **not** human foot anatomy
+   - **Action**: MONITOR — MRI research confirms per-toe intrinsic segmentation challenging; no CC0/BY per-toe DI or lumbrical mesh datasets found from 2026 deposits
+
+2. **Dig #178** (MorphoSource/Dataverse/ORDA 2026 foot ligament/nerve meshes): **DRY** — no NEW MorphoSource/ORDA/Dataverse 2026 foot ligament or nerve mesh datasets; hits are Andreassen (already rejected spatial QA fail) + BoneHub NC-SA (already rejected):
+   - Visible Human Male/Female 3D Lower Extremity (U Denver / Nature Scientific Data 2022 / Thor Andreassen): **CC BY 4.0** — 260 geometries (76 muscles, 28 bones, 16 cartilages, 8 ligaments); **already deep-checked Day 4ay/4az** (gastroc/soleus spatial QA FAIL: 7-tarsal Kabsch mean ≈4.5 mm fail; gastroc wrong-side; Achilles residuals ≥15 mm); ligament inventory is **hip/knee/ankle** (ACL/PCL/MCL/LCL, talofibular, tibiofibular, calcaneofibular) — **NOT foot intrinsic ligaments** (no Lisfranc, no plantar plate, no toe collaterals); muscles stop at "Flexor Digitorum distally" (no per-toe lumbricals/DI in inventory)
+   - BoneHub vsd-lower-extremities-seg (Hugging Face / Zenodo / M.C.M. Fischer): **CC BY-NC-SA** 4.0 — 30 CT scans with 63 bone label maps + STL meshes — **NC rejected** per project NC-exclusion policy; bones-only (no ligaments/nerves/muscles)
+   - **Action**: MONITOR — Andreassen already rejected Day 4ay/4az (spatial QA fail; ligaments hip/knee/ankle not foot intrinsics); BoneHub NC-SA rejected (NC incompatible)
+
+3. **Week 3 roadmap v1.0** (`docs/week3-roadmap.md` created Day 4dk): Substantive working plan covering:
+   - **§1 Soft-ceiling honesty**: What remains blocked and why (per-toe DI / lumbricals / per-ray MTA / gastroc-soleus / elemental nerves / foot intrinsic ligaments) — detailed inventory of digs #1–#178 outcomes + reject rationale (Andreassen spatial QA fail; BY-SA excluded per Week 2 SA ceiling; NC rejected; MRI research confirms per-toe segmentation challenging)
+   - **§2 Quality targets no-new-meshes**: Teaching UX polish leftovers (SKIP unless clarity gap); terminology/ontology empties polish (LOW priority; 3 honest empties documented); journal figure honesty completeness (VERIFY cross-links; SKIP demo video unless requested); expert-review pass readiness (HIGH priority; self-audit checklist §A–§G)
+   - **§3 Optional research tracks**: Belly TPS / two-stage alignment (Andreassen rescue hypothesis; docs/sandbox only until QA gates); Utah CT nerves (MONITOR license clarification); deep learning auto-segmentation watch (MuscleMap / TotalSegmentator v3)
+   - **§4 Explicit non-goals**: No finished-product claim; no TA2-complete claim; no clinical/surgical claim; no SA ceiling backtrack (do NOT pad with BY-SA for census bloat); no force-wire Andreassen/Henson/NC packs
+   - **§5 Week 3 gate criteria**: Green gates (integrity-audit + vitest + build); expert-review checklist self-audit; soft-ceiling honesty verification; journal pack cross-link integrity; no regressions
+   - **§6 Week 3 daily rhythm**: Days 4dk (today sparse watch + roadmap) → 4dl–4dm (checklist self-audit) → 4dn–4do (cross-link verify) → 4dp (Week 3 wrap / pre-merge review)
+   - **§7 Success criteria**: Quality + honesty verification before PR #3 merge; depth over volume
+
+4. **Cloud-agent-handback refresh**: Updated to `61a2d2c` (Day 4dj) / Day 4dk; noted sparse soft watch digs #177–#178 DRY + Week 3 roadmap v1.0 created.
+
+**Verification gates (all green)**:
+- `npm test -- --run`: (deferred to post-roadmap commit)
+- `python3 scripts/integrity-audit.py`: (deferred)
+- `npm run build`: (deferred)
+
+**Census**: unchanged (129/124 entries/unique; 126/129 ontology citable; 53 main-tree / 71 BY-SA; 134 GLB on-disk)
+
+**Commit**: `Day 4dk: Week 3 START - sparse soft watch digs #177-#178 DRY (MRI segmentation papers no public meshes; Andreassen already rejected spatial QA fail Day 4ay/4az ligaments hip/knee/ankle not foot intrinsics; BoneHub NC-SA rejected) + Week 3 roadmap v1.0 created (soft-ceiling honesty / quality targets no-new-meshes / research tracks / non-goals) + learning-log append + cloud-agent-handback refresh`
+
+**Summary**: Week 3 START completed per Day 4dk request. Sparse soft watch digs #177–#178 **DRY**: (1) MRI segmentation research papers describe 7-Tesla intrinsic foot muscle segmentation but offer **no downloadable public meshes**; papers confirm per-toe DI/lumbrical segmentation is challenging even with research MRI (often segmented as groups); (2) Andreassen Visible Human already deep-checked Day 4ay/4az (spatial QA FAIL; ligaments are hip/knee/ankle not foot intrinsics; no per-toe lumbricals/DI in inventory); BoneHub NC-SA rejected (NC incompatible; bones-only). Soft-tissue open-data ceiling reconfirmed through dig #178. **Week 3 roadmap v1.0** created (`docs/week3-roadmap.md`): comprehensive working plan covering soft-ceiling honesty (what blocked + why), quality targets that don't depend on new soft meshes (expert-review self-audit HIGH priority; UX polish/demo video SKIP unless requested), optional research tracks (belly TPS / Utah nerves / deep learning watch — docs/sandbox only), explicit non-goals (no finished/TA2-complete/clinical claims; no SA padding; no force-wire Andreassen/Henson/NC). Week 3 = **quality + honesty verification** before PR #3 merge; depth over volume. Cloud-agent-handback refreshed. Gates deferred to post-roadmap commit. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.

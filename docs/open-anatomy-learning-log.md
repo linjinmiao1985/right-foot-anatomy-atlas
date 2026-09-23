@@ -2353,3 +2353,22 @@ Zenodo API metadata retrieved (DOI 10.5281/zenodo.20231309). License: **CC BY-NC
 **Day 4dj watch dig summary**: 1 dig (#176); **DRY** (no new CC0/BY plantar intrinsic muscle meshes). Open3DModel BY-SA already excluded; Visible Korean NC-ND already rejected; Zenodo Scan-the-World #161b NC+SA already rejected; Cults3D license unclear; Proko subscription platform. Soft-tissue open-data ceiling reconfirmed through #176.
 
 ---
+
+### #177 — Zenodo/Figshare 2026 lumbricals / dorsal interossei foot meshes (2026-09-23 Day 4dk)
+**Query**: `Zenodo Figshare 2026 lumbricals "dorsal interossei" foot 3D mesh segmentation CC0 CC-BY anatomy`  
+**Result**: **DRY** — no downloadable CC0/BY lumbrical or per-toe dorsal interossei 3D mesh datasets found; all hits are MRI segmentation research papers without public meshes.  
+- **MRI segmentation studies** (BMC Musculoskelet Disord 2021; Springer Nature 2024): manual 7-Tesla MRI segmentation of intrinsic foot muscles (abductor hallucis, flexor digitorum brevis, quadratus plantae, lumbricals, dorsal/plantar interossei) using 3D Slicer software — papers describe segmentation methods but **no downloadable public meshes** offered; segmentation was for volume/fat infiltration measurement research, not open anatomy mesh distribution.  
+- **MRI segmentation challenges**: papers note that "differentiation of the other individual plantar and dorsal interossei was challenging, even on 7T images. Consequently, these muscles were segmented as a group" — confirms per-toe DI/lumbrical elemental segmentation is technically challenging even in research MRI; no open CC0/BY per-toe mesh sources resulting from these studies.  
+- **Figshare 3D models dataset** (figshare.com/articles/dataset/3D_models/6998081): ophiuroid (brittle star) arm range of motion models — **not** human foot anatomy.  
+**Action**: MONITOR — MRI segmentation research confirms intrinsic foot muscle per-toe segmentation is challenging (lumbricals + DI often segmented as groups); no CC0/BY per-toe DI or lumbrical mesh datasets found from 2026 Zenodo/Figshare deposits.
+
+### #178 — MorphoSource/Dataverse/ORDA 2026 foot ligament/nerve meshes (2026-09-23 Day 4dk)
+**Query**: `MorphoSource Dataverse ORDA 2026 foot ankle ligament nerve 3D mesh segmentation open data CC0 CC-BY`  
+**Result**: **DRY** — no NEW MorphoSource/ORDA/Dataverse 2026 foot ligament or nerve mesh datasets; hits are Andreassen (already rejected spatial QA fail Day 4ay/4az) + BoneHub NC-SA (already rejected).  
+- **Visible Human Male/Female 3D Lower Extremity** (U Denver Digital Commons / Nature Scientific Data 2022 / Thor Andreassen): **CC BY 4.0** — 260 geometries (76 muscles, 28 bones, 16 cartilages, 8 ligaments pelvis-to-ankle); **already deep-checked Day 4ay/4az** (gastroc/soleus spatial QA FAIL: 7-tarsal Kabsch mean ≈4.5 mm fail; gastroc medial/lateral all verts X>0 wrong-side); ligament inventory is **hip/knee/ankle** (knee ligaments ACL/PCL/MCL/LCL, ankle talofibular/tibiofibular/calcaneofibular) — **NOT foot intrinsic ligaments** (e.g. Lisfranc intermetatarsal, plantar plate, collaterals); muscles stop at "Flexor Digitorum distally" (no per-toe lumbricals/DI confirmed in inventory).  
+- **BoneHub vsd-lower-extremities-seg** (Hugging Face / Zenodo VSDFullBodyBoneModels v3.0 / M.C.M. Fischer): **CC BY-NC-SA** 4.0 — 30 CT scans with 63 individual bone label maps + STL meshes (sacrum to toes) — **NC (Non-Commercial) rejected** per project NC-exclusion policy; bones-only (no ligaments/nerves/muscles offered).  
+**Action**: MONITOR — Andreassen Visible Human already rejected Day 4ay/4az (spatial QA fail); ligament inventory is hip/knee/ankle (not foot intrinsics); BoneHub NC-SA rejected (NC incompatible). No NEW 2026 foot ligament or nerve mesh datasets found.
+
+**Day 4dk watch dig summary**: 2 digs (#177–#178); **all DRY** (no new CC0/BY per-toe DI, lumbricals, foot ligament, or nerve meshes). MRI segmentation research confirms per-toe intrinsic segmentation is challenging (often grouped). Andreassen Visible Human already rejected (spatial QA fail Day 4ay/4az; ligaments are hip/knee/ankle not foot intrinsics). BoneHub NC-SA rejected (NC incompatible). Soft-tissue open-data ceiling reconfirmed through dig #178.
+
+---
