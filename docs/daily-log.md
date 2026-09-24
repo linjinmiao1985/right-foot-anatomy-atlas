@@ -3255,7 +3255,7 @@ Existing honest no-screenshot note in `docs/journal-figure-captions.md` (Day 4df
 
 **Census**: unchanged (129/124 entries/unique; 126/129 ontology citable; 53 main-tree / 71 BY-SA; 134 GLB on-disk)
 
-**Commit**: (pending)
+**Commit**: a5180a2
 
 **Summary**: Week 4 START completed per Day 4dq request. (1) Dig-range honesty lags closed: methods.md #1–#175→#1–#178 (3-dig lag); README #1–#170→#1–#178 (8-dig lag); week2-soft-ceiling-memo post–Week 2 sparse watch update appended. (2) Sparse soft watch digs #179–#180 both DRY/MONITOR: MuscleMap foot CVM still in development (MIT software; no public foot mesh dataset; monitor for future CC0/BY data release); TotalSegmentator v2.15.0 adds foot bones MR but **no foot soft tissue** (intrinsics / nerves / vessels); Zenodo Scan-the-World 2026 deposits remain NC+SA (already rejected #161b); UM Apr 2026 update adds **no new foot intrinsic muscles** (intrinsics excluded per UM readme). (3) Week 4 roadmap v1.0 created (post–Week-3 merge readiness + continuous watch; soft WATCH ONLY; research tracks docs-only; quality work; non-goals; success criteria). (4) PR #3 body refreshed (Week 3 wrap status; MERGE-READY teaching-grade with disclosed gaps; tip sha; census; soft digs through #180; link week3/week4 docs). Gates green. Census 129/124 unchanged. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product. **MERGE-READY for teaching-grade** if reviewers accept disclosed gaps.
 
