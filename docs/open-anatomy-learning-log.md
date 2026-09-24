@@ -2372,3 +2372,53 @@ Zenodo API metadata retrieved (DOI 10.5281/zenodo.20231309). License: **CC BY-NC
 **Day 4dk watch dig summary**: 2 digs (#177–#178); **all DRY** (no new CC0/BY per-toe DI, lumbricals, foot ligament, or nerve meshes). MRI segmentation research confirms per-toe intrinsic segmentation is challenging (often grouped). Andreassen Visible Human already rejected (spatial QA fail Day 4ay/4az; ligaments are hip/knee/ankle not foot intrinsics). BoneHub NC-SA rejected (NC incompatible). Soft-tissue open-data ceiling reconfirmed through dig #178.
 
 ---
+
+### Dig #179: MuscleMap Consortium 2026 foot intrinsic muscle deep learning status + TotalSegmentator v2.15.0 foot soft update
+
+**Date**: 2026-09-24 (Day 4dq Week 4 START)  
+**Query**: MuscleMap consortium public release status for foot muscle segmentations; TotalSegmentator v2.15.0 (July 1, 2026) foot soft-tissue updates  
+**Sources**:
+- MuscleMap GitHub: https://github.com/MuscleMap/MuscleMap (release v2.0 May 5, 2026)
+- MuscleMap MDPI paper: https://www.mdpi.com/2313-433X/10/11/262
+- TotalSegmentator GitHub: https://github.com/wasserth/TotalSegmentator/ (v2.15.0 changelog)
+- TotalSegmentator doc: https://totalsegmentator.com/
+
+**License verdict**:
+- MuscleMap: **MIT License** (NOT CC0 or CC-BY; software license not data license)
+- TotalSegmentator: **Apache 2.0** (software license; segmentation model outputs not explicitly CC0/CC-BY for redistribution as static meshes)
+
+**Content verdict**:
+- **MuscleMap**: Foot region **still in development** as of v2.0 (May 2026). Preliminary results show <30s segmentation time for intrinsic foot muscles using deep learning CVM, but **no public downloadable foot mesh dataset** released. MuscleMap paper (MDPI §3.8) states: "we are working to expand our MuscleMap efforts to develop a deep learning CVM to automate the segmentation of the intrinsic foot muscles." Current MuscleMap coverage: abdomen, pelvis, thigh, forearm, leg (foot NOT yet released).
+- **TotalSegmentator v2.15.0**: Added `appendicular_bones_mr` (includes tarsal, metatarsal, phalanges_feet bones); added `thigh_shoulder_muscles_mr` (thigh/shoulder muscles CT/MR; **does NOT include foot intrinsics**); added `tissue_types` / `tissue_types_mr` (skeletal muscle classification; NOT per-muscle elementals). **NO dedicated foot intrinsic muscle, foot nerve, or foot vessel task** in v2.15.0. Available foot-related labels: bones only (tarsal, metatarsal, phalanges_feet in `appendicular_bones` / `appendicular_bones_mr`).
+
+**Spatial fit**: N/A (no foot soft mesh datasets released)
+
+**Action**: **MONITOR** — MuscleMap foot intrinsic muscle CVM is promising future direction (MIT-licensed software; unclear whether resulting segmentations would be CC0/BY); TotalSegmentator v2.15.0 adds foot bones MR but **no foot soft tissue** (intrinsics / nerves / vessels remain outside TotalSegmentator scope). Continue watch for MuscleMap public foot dataset release with clear CC0/BY data license.
+
+---
+
+### Dig #180: Zenodo 2026 foot intrinsic muscle deposits + UM dataset refresh
+
+**Date**: 2026-09-24 (Day 4dq Week 4 START)  
+**Query**: New 2026 Zenodo/Figshare human foot intrinsic muscle (lumbricals / interossei) segmentation mesh deposits CC0 or CC-BY; UM Asian male lower extremity dataset update status  
+**Sources**:
+- Zenodo 10.5281/zenodo.20231309 "Muscles of the foot and ankle" (Scan-the-World; published 2026-05-12)
+- Zenodo 10.5281/zenodo.20228270 "Muscles of the foot and ankle" (Scan-the-World; published 2026-05-12; likely duplicate)
+- UM dataset: https://researchdata.um.edu.my/dataset.xhtml?persistentId=doi:10.22452/RD/5T6TZ7 (updated Apr 22, 2026)
+
+**License verdict**:
+- Zenodo 20231309 / 20228270: Already **deep-checked as dig #161b (Day 4cq)** → **CC BY-NC-SA 4.0** (NC incompatible with MIT-licensed atlas) → **REJECT**
+- UM dataset: **CC0 1.0 Universal (Public Domain)** ✅ — same dataset already integrated (main-tree CC0)
+
+**Content verdict**:
+- Zenodo 20231309 / 20228270: CT-derived right foot + ankle muscle model; **already rejected Week 2** (NC+SA; no re-evaluation)
+- UM dataset (Apr 22, 2026 update): 67 structures total (42 muscles hip-to-foot; 13 bones; 5 ligaments; 4 cartilage; 2 tendons; 1 meniscus). **Most distal muscle: abductor digiti minimi**. UM readme (already known from prior integration): **"Intrinsic foot muscles are excluded"** (no lumbricals; no per-toe DI; no per-toe/per-ray elemental foot soft tissues). UM dataset is **already integrated** as main-tree CC0 (8 muscles: 5 intrinsic plantars + 3 extrinsics); Apr 2026 update adds **no new foot intrinsic meshes** (update focuses on knee ligaments / cartilage / segmentation mask NRRD format).
+
+**Spatial fit**: N/A (Zenodo NC rejected; UM already integrated; no new foot intrinsics)
+
+**Action**: **DRY** — Zenodo Scan-the-World 2026 deposits remain NC+SA (already rejected #161b); UM dataset Apr 2026 update adds **no new foot intrinsic muscles** (most distal = abductor digiti minimi; intrinsics excluded per UM readme). Soft-tissue open-data ceiling **reconfirmed through dig #180** (Day 4dq Week 4).
+
+---
+
+**Day 4dq sparse watch dig summary**: 2 digs (#179–#180); **all DRY or MONITOR**. MuscleMap foot CVM still in development (MIT software; no public foot mesh dataset; monitor for future CC0/BY data release). TotalSegmentator v2.15.0 adds foot bones MR but **no foot soft tissue** (intrinsics / nerves / vessels). Zenodo Scan-the-World 2026 deposits remain NC+SA (already rejected #161b). UM Apr 2026 update adds **no new foot intrinsic muscles** (intrinsics excluded per UM readme). Soft-tissue open-data ceiling **reconfirmed through dig #180** (Day 4dq Week 4 START).
+

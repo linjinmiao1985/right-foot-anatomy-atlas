@@ -216,3 +216,21 @@
 **Result**: Soft-tissue open-data ceiling **reconfirmed through #170** (Day 4ct). License-clear ready-to-use per-toe DI, lumbricals, per-ray MTA meshes **remain unavailable**. 7T MRI + Micromachines 2022 confirm high-resolution intrinsic foot muscle segmentation **technically feasible** (lumbricals, dorsal/plantar interossei successfully segmented) but research datasets **not publicly archived** as downloadable STL/OBJ. PhysioNet/SimTK Multidomain raw CT = public domain but manual segmentation labor-intensive (not immediate gap filler). Open3DModel/AnatomyTOOL confirms 4 DI + 4 lumbricals + 3 PI present but **SA-only** (Open3D lineage already in `by-sa/` isolate; no CC0/CC-BY alternative).
 
 **Teaching stance**: **Grouped structures** (DI 1st–4th combined, dorsal/plantar MTA all rays) are **teaching compromises** (教学妥协), not per-toe/per-ray elemental atlases. Census unchanged (**129/124**; ontology **126/129**). **0** new meshes wired. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+---
+
+## Post–Week 2 sparse watch update (Day 4dk–4dq)
+
+**Date**: 2026-09-23–24 · Day 4dk through Day 4dq (Week 3–4 START)  
+**Additional digs**: #171–#178 (8 sparse watch digs; all DRY or MONITOR/REJECT)
+
+**Outcomes**:
+- **#171–#173** (Day 4dd): Cults3D/CGTrader/Wikimedia generic (DRY; license unclear); IFAA terminology BY-SA (DRY; terminology not meshes); Open3DModel/Complete Anatomy/Pennsieve (DRY; BY-SA / subscription / license unclear)
+- **#174–#175** (Day 4dg): AnatomyZone/Kenhub quadratus plantae BY-SA (DRY); BP3D V3.0 SA 2.1 JP already rejected
+- **#176** (Day 4dj): Foot plantar intrinsic muscles 2026 (DRY; Open3DModel BY-SA / Visible Korean NC-ND / Zenodo Scan-the-World NC+SA / Cults3D unclear / Proko subscription)
+- **#177–#178** (Day 4dk): MRI segmentation papers no public meshes (DRY); Andreassen already rejected Day 4ay/4az; BoneHub NC-SA rejected
+
+**Result**: Soft-tissue open-data ceiling **reconfirmed through #178** (Day 4dk Week 3). License-clear ready-to-use per-toe DI, lumbricals, per-ray MTA meshes **remain unavailable**. Watch posture continues Week 4.
+
+**Day 4ct summary above remains canonical** (24 digs #147–#170; comprehensive 1-page freeze). Post–Week 2 sparse watch digs #171–#178 extend the DRY outcome; no changes to teaching-compromise stance.
+

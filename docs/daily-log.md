@@ -3203,3 +3203,59 @@ Existing honest no-screenshot note in `docs/journal-figure-captions.md` (Day 4df
 
 **Summary**: Week 3 wrap + pre-merge self-review completed per Day 4dp request + Week 3 roadmap §6. Comprehensive Week 3 section added to `docs/phase-8-self-review.md` (Days 4dk–4dp summary: roadmap v1.0 created; expert-review checklist v3.0 self-audit 58 PASS / 12 PARTIAL / 0 FAIL teaching-grade ✅ PASS; journal pack cross-links 0 broken links; soft-ceiling honesty ALIGNED 7 dimensions; soft digs watch-only DRY through #178; census 129/124 unchanged; gates green throughout). **PR #3 pre-merge status**: teaching atlas **in progress**, **merge-ready for teaching-grade** if reviewers accept disclosed gaps (lumbricals absent; DI/MTA grouped teaching compromises; nerves/ligaments/vessels teaching sets incomplete; gastroc/soleus absent; 3 honest ontology empties) — all gaps documented week2-soft-ceiling-memo + structures.json labels + methods.md limitations + expert-review-checklist v3.0 + week3-expert-self-audit. **Explicit non-claims**: NOT finished/clinical/TA2-complete/per-toe-per-ray elemental. Cloud-agent-handback refreshed. Teaching atlas **in progress** — **not** a finished product.
 
+
+---
+
+## Day 4dq (2026-09-24) — Week 4 START: Post–Week-3 Merge Readiness + Continuous Open-Data Watch
+
+**Goals**: Per Day 4dq request (Week 4 START; quality-first, no rush, no finished-product claim): (1) Sync dig-range honesty lags from Day 4dn soft-ceiling verify (methods.md #1–#175→#1–#178; README #1–#170→#1–#178; week2-soft-ceiling-memo summary update); (2) Sparse soft watch digs #179–#180 (NEW CC0/BY foot soft meshes; MuscleMap/TotalSegmentator/Utah/NIH 3DPX updates; expect DRY); (3) Create docs/week4-roadmap.md v1.0 (post–Week-3 merge readiness + continuous watch; soft WATCH ONLY; research tracks docs-only; quality work; non-goals; success criteria); (4) Refresh PR #3 body (Week 3 wrap status; MERGE-READY teaching-grade with disclosed gaps; tip sha; census; soft digs through current; link week3/week4 docs); (5) Gates + commit/push.
+
+**Completed**:
+
+1. **Dig-range honesty sync** (Task 1; Day 4dn lags closed):
+   - ✅ `docs/methods.md` 3 places: #1–#175 → **#1–#178** (3-dig lag closed)
+   - ✅ `README.md` Limitations 2 places: #1–#170 → **#1–#178** (8-dig lag closed)
+   - ✅ `docs/week2-soft-ceiling-memo.md` post–Week 2 sparse watch update section appended (digs #171–#180; all DRY or MONITOR/REJECT)
+
+2. **Sparse soft watch digs #179–#180** (Task 2; both DRY/MONITOR):
+   
+   **Dig #179** (Day 4dq): MuscleMap Consortium 2026 foot intrinsic muscle CVM status + TotalSegmentator v2.15.0 foot soft update
+   - **MuscleMap**: MIT License software (NOT CC0/CC-BY data license); foot region **still in development** (v2.0 May 2026); preliminary results show <30s segmentation time for intrinsic foot muscles using deep learning CVM, but **no public downloadable foot mesh dataset** released; MuscleMap paper (MDPI §3.8) states "we are working to expand our MuscleMap efforts to develop a deep learning CVM to automate the segmentation of the intrinsic foot muscles"; current coverage: abdomen, pelvis, thigh, forearm, leg (foot NOT yet released)
+   - **TotalSegmentator v2.15.0** (July 1, 2026): Apache 2.0 software license (segmentation model outputs not explicitly CC0/CC-BY for redistribution as static meshes); added `appendicular_bones_mr` (includes tarsal, metatarsal, phalanges_feet bones); added `thigh_shoulder_muscles_mr` (thigh/shoulder muscles CT/MR; **does NOT include foot intrinsics**); added `tissue_types` / `tissue_types_mr` (skeletal muscle classification; NOT per-muscle elementals); **NO dedicated foot intrinsic muscle, foot nerve, or foot vessel task** in v2.15.0; available foot-related labels: bones only
+   - **Action**: MONITOR — MuscleMap foot CVM promising future direction (MIT software; unclear whether resulting segmentations would be CC0/BY); TotalSegmentator v2.15.0 adds foot bones MR but **no foot soft tissue** (intrinsics / nerves / vessels remain outside TotalSegmentator scope); continue watch for MuscleMap public foot dataset release with clear CC0/BY data license
+   
+   **Dig #180** (Day 4dq): Zenodo 2026 foot intrinsic muscle deposits + UM dataset refresh
+   - **Zenodo 10.5281/zenodo.20231309 / 20228270** "Muscles of the foot and ankle" (Scan-the-World; published 2026-05-12): Already **deep-checked as dig #161b (Day 4cq)** → **CC BY-NC-SA 4.0** (NC incompatible with MIT-licensed atlas) → **REJECT** (no re-evaluation)
+   - **UM dataset** (https://researchdata.um.edu.my/dataset.xhtml?persistentId=doi:10.22452/RD/5T6TZ7; updated Apr 22, 2026): **CC0 1.0 Universal (Public Domain)** ✅ — same dataset already integrated (main-tree CC0); 67 structures total (42 muscles hip-to-foot; 13 bones; 5 ligaments; 4 cartilage; 2 tendons; 1 meniscus); **most distal muscle: abductor digiti minimi**; UM readme (already known from prior integration): **"Intrinsic foot muscles are excluded"** (no lumbricals; no per-toe DI; no per-toe/per-ray elemental foot soft tissues); Apr 2026 update adds **no new foot intrinsic meshes** (update focuses on knee ligaments / cartilage / segmentation mask NRRD format)
+   - **Action**: DRY — Zenodo Scan-the-World 2026 deposits remain NC+SA (already rejected #161b); UM dataset Apr 2026 update adds **no new foot intrinsic muscles** (most distal = abductor digiti minimi; intrinsics excluded per UM readme); soft-tissue open-data ceiling **reconfirmed through dig #180** (Day 4dq Week 4)
+
+3. **Week 4 roadmap v1.0** (Task 3; `docs/week4-roadmap.md` created):
+   - **Theme**: Post–Week-3 merge readiness + continuous open-data watch; teaching atlas in progress; quality-first; no rush; no finished-product claim
+   - **§1 Soft-Tissue Posture**: WATCH ONLY until clear CC0/BY hit + spatial QA; soft gaps remain DRY (per-toe DI, lumbricals meshes, per-ray MTA, elemental nerves/ligaments CC0/BY, gastroc/soleus); teaching compromises stance accepted; SA ceiling stance (do NOT pad with more BY-SA)
+   - **§2 Optional Research Tracks**: Belly TPS / two-stage Kabsch for Andreassen (docs/sandbox ONLY; not wire); Utah foot nerve license clarification (monitor); MuscleMap / deep learning auto-segmentation watch (monitor)
+   - **§3 Quality Work**: Dig-range honesty sync (HIGH priority Day 4dq ✅); PR #3 body refresh (HIGH priority Day 4dq ✅); optional demo video (ONLY if reviewer requests; 12 screenshots sufficient); optional reviewer-facing merge note (do NOT merge self; leave draft as-is)
+   - **§4 Explicit Non-Goals**: No finished-product claim; no TA2-complete claim; no clinical/surgical claim; no SA ceiling backtrack; no force-wire Andreassen/Henson/NC packs
+   - **§5 Week 4 Success Criteria**: Teaching-grade MERGE-READY status maintained; sparse soft watch (expect DRY; no force-wire); dig-range honesty current; census stable 129/124; gates green throughout; PR #3 body current
+   - **§6 Week 4 Daily Rhythm**: Depth over volume (sparse soft watch 2–3 digs every 2–3 days; expect DRY)
+   - **§7 Bottom Line**: Post–Week-3 merge readiness + continuous open-data watch; prefer sparse watch + dig-range honesty + PR communication over census padding or SA spam; teaching atlas in progress — not finished; not clinical; not TA2-complete
+
+4. **PR #3 body refresh** (Task 4; Week 3 wrap + Day 4dq start):
+   - Updated via `ManagePullRequest` tool
+   - **Week 3 Quality Checkpoint PASS**: Expert-review checklist v3.0 self-audit (58 PASS / 12 PARTIAL / 0 FAIL; teaching-grade ✅ PASS); journal pack cross-link integrity (0 broken links); soft-ceiling honesty verified (7 dimensions ALIGNED); Week 3 artifacts (roadmap v1.0, expert-self-audit, soft-ceiling-verify)
+   - **Week 4 START**: Theme (post–Week-3 merge readiness + continuous watch); Day 4dq updates (dig-range honesty sync; sparse soft watch #179–#180 DRY/MONITOR; week4-roadmap v1.0)
+   - **Census & Gates**: 129/124; 126/129 ontology; 53 main / 71 BY-SA; 134 GLB; soft digs watch-only through #180 (0 new meshes Week 3–4); gates all green
+   - **Known Disclosed Gaps**: Lumbricals absent; DI/MTA grouped; nerves/ligaments/vessels teaching sets incomplete; gastroc/soleus absent; 3 honest ontology empties — all documented
+   - **Explicit Non-Claims**: NOT finished; NOT clinical/surgical; NOT TA2-complete; NOT per-toe/per-ray elemental
+   - **Branch tip**: bd3662c (Day 4dp: Week 3 WRAP); teaching atlas in progress — **MERGE-READY for teaching-grade** if reviewers accept disclosed gaps
+
+**Gates** (Task 5; all green):
+- `python3 scripts/integrity-audit.py`: ✅ 0 violations (129 structures / 134 GLBs)
+- `npm test -- --run`: ✅ 138/138 passed (19 test files)
+- `npm run build`: ✅ dist built (1.2 MB chunk size warning expected)
+
+**Census**: unchanged (129/124 entries/unique; 126/129 ontology citable; 53 main-tree / 71 BY-SA; 134 GLB on-disk)
+
+**Commit**: (pending)
+
+**Summary**: Week 4 START completed per Day 4dq request. (1) Dig-range honesty lags closed: methods.md #1–#175→#1–#178 (3-dig lag); README #1–#170→#1–#178 (8-dig lag); week2-soft-ceiling-memo post–Week 2 sparse watch update appended. (2) Sparse soft watch digs #179–#180 both DRY/MONITOR: MuscleMap foot CVM still in development (MIT software; no public foot mesh dataset; monitor for future CC0/BY data release); TotalSegmentator v2.15.0 adds foot bones MR but **no foot soft tissue** (intrinsics / nerves / vessels); Zenodo Scan-the-World 2026 deposits remain NC+SA (already rejected #161b); UM Apr 2026 update adds **no new foot intrinsic muscles** (intrinsics excluded per UM readme). (3) Week 4 roadmap v1.0 created (post–Week-3 merge readiness + continuous watch; soft WATCH ONLY; research tracks docs-only; quality work; non-goals; success criteria). (4) PR #3 body refreshed (Week 3 wrap status; MERGE-READY teaching-grade with disclosed gaps; tip sha; census; soft digs through #180; link week3/week4 docs). Gates green. Census 129/124 unchanged. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product. **MERGE-READY for teaching-grade** if reviewers accept disclosed gaps.
+
