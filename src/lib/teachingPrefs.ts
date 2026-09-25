@@ -1,6 +1,8 @@
 /**
  * Persist teaching UI prefs in localStorage (layer visibility, label density,
- * sagittal clip on/off+position, last camera preset, per-structure hidden ids).
+ * sagittal clip on/off+position, last camera preset, per-structure hidden ids,
+ * per-layer ghost/透视 opacity, teaching explode / 抽出 amount,
+ * teaching quiz-mode stub).
  * UX-borrow (ideas only): Open Anatomy Studio local progress / favorites habit.
  * No third-party code copied.
  *
@@ -24,6 +26,17 @@ import {
   isCameraPresetId,
   type CameraPresetId,
 } from './cameraPresets';
+import {
+  defaultLayerOpacities,
+  parseLayerOpacities,
+  DEFAULT_MASTER_GHOST_OPACITY,
+  clampMasterGhostOpacity,
+} from './layerOpacity';
+import {
+  DEFAULT_EXPLODE_AMOUNT,
+  parseExplodeAmount,
+} from './layerExplode';
+import { DEFAULT_QUIZ_MODE, parseQuizMode } from './quizMode';
 
 /** Bump when the stored shape changes incompatibly. */
 export const TEACHING_PREFS_VERSION = 1 as const;
@@ -38,6 +51,14 @@ export interface TeachingPrefs {
   cameraPresetId: CameraPresetId;
   /** Structure ids hidden via per-structure dissection hide (X). */
   hiddenStructureIds: string[];
+  /** Per-layer mesh opacity (教学透视 / ghost). Missing → solid 1. */
+  layerOpacities: Record<Layer, number>;
+  /** Teaching explode / 抽出 (0 assembled → 1 max peel). Missing → 0. */
+  explodeAmount: number;
+  /** Teaching quiz-mode stub (hide names). Missing → false. */
+  quizMode: boolean;
+  /** Master ghost opacity multiplier (scales all non-bone layers). Missing → 1. */
+  masterGhostOpacity: number;
 }
 
 interface TeachingPrefsEnvelope {
@@ -55,6 +76,10 @@ export function defaultTeachingPrefs(): TeachingPrefs {
     clipConstant: DEFAULT_CLIP_CONSTANT,
     cameraPresetId: DEFAULT_CAMERA_PRESET,
     hiddenStructureIds: [],
+    layerOpacities: defaultLayerOpacities(),
+    explodeAmount: DEFAULT_EXPLODE_AMOUNT,
+    quizMode: DEFAULT_QUIZ_MODE,
+    masterGhostOpacity: DEFAULT_MASTER_GHOST_OPACITY,
   };
 }
 
@@ -98,8 +123,15 @@ export function parseTeachingPrefs(value: unknown): TeachingPrefs | null {
   }
   if (!isCameraPresetId(raw.cameraPresetId)) return null;
 
-  // hiddenStructureIds optional for backward compat with earlier v1 payloads
+  // hiddenStructureIds / layerOpacities / explodeAmount / quizMode / masterGhostOpacity optional for backward compat
   const hiddenStructureIds = parseHiddenStructureIds(raw.hiddenStructureIds);
+  const layerOpacities = parseLayerOpacities(raw.layerOpacities);
+  const explodeAmount = parseExplodeAmount(raw.explodeAmount);
+  const quizMode = parseQuizMode(raw.quizMode);
+  const masterGhostOpacity =
+    typeof raw.masterGhostOpacity === 'number' && Number.isFinite(raw.masterGhostOpacity)
+      ? clampMasterGhostOpacity(raw.masterGhostOpacity)
+      : DEFAULT_MASTER_GHOST_OPACITY;
 
   return {
     visibleLayers,
@@ -108,6 +140,10 @@ export function parseTeachingPrefs(value: unknown): TeachingPrefs | null {
     clipConstant: clampClipConstant(raw.clipConstant),
     cameraPresetId: raw.cameraPresetId,
     hiddenStructureIds,
+    layerOpacities,
+    explodeAmount,
+    quizMode,
+    masterGhostOpacity,
   };
 }
 

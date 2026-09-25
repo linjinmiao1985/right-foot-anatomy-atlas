@@ -73,11 +73,12 @@ These residuals support **classroom visualization**, not implant planning or int
 
 | Feature | Status | Notes |
 |---------|--------|-------|
-| **Teaching prefs persist** | Live (4ap + 4av) | localStorage: layers · label density · clip · last camera preset · **hiddenStructureIds**; SSR/test-safe |
+| **Teaching prefs persist** | Live (4ap + 4av + 4bm) | localStorage: layers · label density · clip · last camera preset · **hiddenStructureIds** · **layerOpacities**; SSR/test-safe |
 | **Per-structure hide** | Live (4au/4av) | `X` / panel chip beyond isolate; restore chips; ids persist; Esc does **not** clear hides |
 | **Keyboard help** | Live (4ao) | `?` / `H` + title button; bilingual sheet; Esc closes help first; dialog a11y |
 | **Clip** | Live (lite, 4aj) | Single-axis **sagittal (X)** toggle + slider — teaching cutaway, **not** clinical MPR |
 | **Camera presets** | Live (4an) | 默认 / 背侧 / 跖侧 / 内侧 / 外侧 · keys `1`–`5`; full polar for plantar sole |
+| **Ghost / 透视** | Live (4bm) | Per-layer opacity + `G`; covering soft tissue fades; **not** clinical X-ray |
 | **Sub-groups** | Live | Ligament · nerve · vessel · muscle teaching partitions (UI only; not finished atlases) |
 | **Screenshots** | Live pack (4ak–4an) | `npm run screenshots` → `docs/screenshots/` (**9** shots); README embeds with not-product caveats |
 | Search / isolate / label density / badges / click-to-focus / lazy preload | Live | Bilingual ZH/LA; `I` isolate; 关/中文/中+拉; 主树 vs ShareAlike |
@@ -233,3 +234,24 @@ OMFAtlas schematic-vs-source honesty UX (`schematicHonesty` + StructurePanel + f
 
 - Henson Sheffield one-subject MC POC completed (Option A); BP3D align does **not** clearly pass — **not** wired.
 - Soft-tissue gaps unchanged; teaching atlas in progress — **no finished-product claim**.
+
+
+## Progress note (Day 4bm)
+
+- **Teaching polish**: layer ghost / 透视 (`layerOpacity` + `G`); prefs persist; **not** clinical X-ray.
+- **Open mining**: **#90–#94**; soft gaps still **dry**; **0** mesh wire.
+- Expert-review §A named ontology spot-checks locked in vitest.
+- Cloud Agent **resumed**. Census unchanged **129/124**; ontology **126/129**. **No finished-product claim**.
+
+
+## Progress note (Day 4bn)
+
+- **Teaching polish**: layer explode / 抽出 (`layerExplode` + `E`); prefs persist; **not** surgical dissection.
+- **Open mining**: **#95–#99**; soft gaps still **dry**; **0** mesh wire.
+- Census unchanged **129/124**; ontology **126/129**. **No finished-product claim**.
+
+## Progress note (Day 4bo)
+
+- **Teaching polish**: quiz stub / 测验 (`quizMode` + `Q`); prefs persist; **not** Anki / exam.
+- **Open mining**: **#100–#107**; soft gaps still **dry**; **0** mesh wire.
+- Census unchanged **129/124**; ontology **126/129**. Teaching atlas in progress — **not** clinical; **not** TA2-complete; **no finished-product claim**.

@@ -177,10 +177,23 @@ export function licenseLabel(license: AssetLicense): string {
 
 /** Persistent footer copy — keep factual, no “complete atlas” claims. */
 export const ATLAS_SOURCE_FOOTER =
-  '网格来源: BodyParts3D CC BY 4.0 · UM CC0 1.0 · Z-Anatomy 干神经+跖肌/踇短屈肌外侧腹/足底趾动脉+腓回旋支+足静脉示意 / Open3D DI+FB/FT/小趾对掌肌+近端/细支动脉+踝足韧带/支持带/腱膜+细支神经 CC BY-SA 4.0（by-sa/ 隔离）';
+  '网格来源 (census ≈53 主树 / ≈71 BY-SA of 124 unique): BodyParts3D CC BY 4.0 · UM CC0 1.0 · Z-Anatomy 干神经+跖肌/踇短屈肌外侧腹/足底趾动脉+腓回旋支+足静脉示意 / Open3D DI+FB/FT/小趾对掌肌+近端/细支动脉+踝足韧带/支持带/腱膜+细支神经 CC BY-SA 4.0（by-sa/ 隔离）· 软组织 census 软天花板：逐趾 DI/蚓状肌、逐射线 MTA 仍为开放数据空白；分组结构为教学妥协 / Mesh sources (census ≈53 main-tree / ≈71 BY-SA of 124 unique): BodyParts3D CC BY 4.0 · UM CC0 · Z-Anatomy nerves+plantaris/FHB-lateral/plantar digital arteries+circumflex/veins / Open3D DI+FB/FT/opponens+proximal/fine arteries+ankle ligaments/retinacula/aponeuroses+cutaneous nerves CC BY-SA 4.0 (by-sa/ isolate) · Soft-tissue census soft ceiling: per-toe DI/lumbricals, per-ray MTA remain open-data gaps; grouped structures are teaching compromises (详见 docs/week2-soft-ceiling-memo.md)';
 
 /** Short panel copy about mesh fidelity — teaching honesty, not finished-product claims. */
 export function getTeachingMeshNote(structureId: string, layer: string): string | null {
+  // Day 4ci: denser bilingual gap notes for grouped DI / grouped MTA (soft-ceiling pointers)
+  if (structureId === 'interossei_dorsales') {
+    return '网格：Open3D Interossei_dorsales.r 组合体（CC BY-SA）——背侧骨间肌 1–4 未按逐趾独立分割（census 软天花板：无 CC0/BY 逐趾 DI 网格源）；by-sa/ 隔离。教学妥协（teaching compromise），非逐趾肌肉图谱。详见 docs/week2-soft-ceiling-memo.md\n' +
+      'Mesh: Open3D grouped DI 1st–4th (CC BY-SA), no per-toe elemental split (census soft ceiling: no CC0/BY per-toe DI source meshes); by-sa/ isolate. Teaching compromise, not per-toe muscle atlas. See docs/week2-soft-ceiling-memo.md';
+  }
+  if (structureId === 'dorsal_metatarsal_arteries') {
+    return '网格：Open3D Dorsal_metatarsal_arteries.r 组合体（CC BY-SA）——无跖背动脉 1–4 独立分割（census 软天花板：无 CC0/BY 逐射线跖背动脉网格源）；by-sa/ 隔离。教学妥协（teaching compromise），非逐射线血管图谱。详见 docs/week2-soft-ceiling-memo.md\n' +
+      'Mesh: Open3D grouped dorsal MTA (CC BY-SA), no 1st–4th elemental split (census soft ceiling: no CC0/BY per-ray dorsal metatarsal artery source meshes); by-sa/ isolate. Teaching compromise, not per-ray vessel atlas. See docs/week2-soft-ceiling-memo.md';
+  }
+  if (structureId === 'plantar_metatarsal_arteries') {
+    return '网格：BP3D FJ2096 组合体（CC BY）——跖底跖骨动脉未按 1–4 间隙分拆（census 软天花板：ISA 无逐射线跖底/跖背 MTA elemental；无 CC0/BY 逐射线网格源）。教学妥协（teaching compromise），非逐射线血管图谱。详见 docs/week2-soft-ceiling-memo.md\n' +
+      'Mesh: BP3D FJ2096 grouped plantar MTA (CC BY), no 1st–4th ray split (census soft ceiling: ISA lacks per-ray plantar/dorsal MTA elementals; no CC0/BY per-ray source meshes). Teaching compromise, not per-ray vessel atlas. See docs/week2-soft-ceiling-memo.md';
+  }
   if (structureId === 'fibularis_brevis' || structureId === 'fibularis_tertius' || structureId === 'opponens_digiti_minimi') {
     return '网格：Open3DModel lower-limb（CC BY-SA），Kabsch→BP3D mm；census 缺口补齐；仅 by-sa/ 加载。肌肉层仍不完整。';
   }

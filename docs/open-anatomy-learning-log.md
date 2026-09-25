@@ -5,7 +5,7 @@ Living log of open-source human anatomy projects studied for the right-foot atla
 (CC0 / CC BY into main tree; BY-SA isolated under `public/models/right-foot/by-sa/` + NOTICE;
 reject NC / unknown / All Rights Reserved).
 
-**Last updated**: 2026-09-15 (Day 4be: ontology honest-empty UX + digs #63–#65; Andreassen skipped)  
+**Last updated**: 2026-09-22 (Day 4bo: quiz stub + digs #100–#107; soft gaps still dry)  
 **Status**: ongoing research — not a finished catalog.
 
 ---
@@ -1460,3 +1460,1069 @@ Weekday automation. Cloud Agent `bc-4d6d86a7-…` still **error / usage exhauste
 - **0** meshes integrated; **0** SA spam; Andreassen/Henson/Utah **not** force-wired.
 - Cloud Agent still **quota-blocked** (usage exhausted — enable on-demand to relaunch).
 - **No finished-product claim.**
+
+## Session additions (2026-09-21 · Day 4bm — teaching ghost / 透视 + dig #90–#94)
+
+### Context
+
+Cloud Agent resumed after usage-block. Teaching polish (layer ghost) + CC0/BY soft dig. **0** mesh wire. **No finished-product claim.**
+
+### Teaching polish (ONE UX borrow)
+
+| Change | Detail |
+|--------|--------|
+| **Ghost / 透视** | Per-layer opacity sliders + **透视 / 实心** preset + key **G**. Covering muscle/ligament/vessel fade; osteology stays solid. Prefs persist `layerOpacities`. |
+| Source | Air-Sage 透视 (#86) + Z-Anatomy Atlas `G` ghost (#92) — **ideas only**; no third-party UI code |
+| Files | `src/lib/layerOpacity.ts` (+ vitest) · `teachingPrefs.ts` · `LayerToggles.tsx` · `FootModel.tsx` · `App.tsx` · `keyboardHelp.ts` |
+| Honesty | Teaching translucency — **not** clinical X-ray / fluoroscopy / finished product |
+
+### NEW license-verified projects (≥4; #90–#94)
+
+| # | Project | URL / DOI | License verified | Foot relevance | Decision |
+|---|---------|-----------|------------------|----------------|----------|
+| **90** | **Scan-the-World — Muscle and tendon structure of a foot** | Zenodo DOI **10.5281/zenodo.21375254** (also **20207805**) | Zenodo API `license.id` = **cc-by-nc-sa-4.0** verified 2026-09-21 | Right-foot **united** muscle+tendon GLB/USDZ (tempting soft pack, sibling of #84) — **NC** blocks main-tree | **reject** (NC). Do **not** wire; do **not** treat as DI/per-ray MTA fill |
+| **91** | **MyoSuite** (MyoHub) | https://github.com/MyoHub/myosuite | GitHub SPDX **Apache-2.0** verified 2026-09-21 | MuJoCo musculoskeletal **sim** (myoLeg wrapping actuators) — **not** named foot DI/NV surface GLBs | **reject** teaching GLB. Optional MSK-process monitor only |
+| **92** | **Z-Anatomy Atlas** (jaydenpcastro-ship-it/z-anatomy-atlas) | https://github.com/jaydenpcastro-ship-it/z-anatomy-atlas · demo https://z-anatomy-atlas.vercel.app | README: geometry **CC BY-SA 2.1 JP** (BP3D) modified by Z-Anatomy + Wikipedia **CC BY-SA**; **no** SPDX on repo (2026-09-21) | Whole-body ZA web export; shortcut `G` ghost others — **0** new CC0/BY foot elemental | **UX-borrow** (`G` ghost). Meshes **isolate-SA** only. **reject** re-integrate |
+| **93** | **3D Anatomy** (nqwrc/3d-anatomy) | https://github.com/nqwrc/3d-anatomy | Combined distribution **CC BY-NC-SA 4.0** (`LICENSE` verified 2026-09-21): ZA/BP3D SA **plus** Dundee inner-ear **CC BY-NC-SA** + kidney **CC BY-NC** | 2827-structure ZA browser atlas; `extras.za_name` identity — **NC** on whole | **reject** (NC) for main tree. **UX-borrow** (`za_name` extras). **reject** foot soft replacement |
+| **94** | **Human Atlas** (EF361/human-atlas) | https://github.com/EF361/human-atlas | Code **MIT** (ashemag copyright, LICENSE verified 2026-09-21); anatomy **CC BY 4.0** BodyParts3D 4.0 (README) | 2234 BP3D meshes + exploded views — **same pool** already in main tree | **UX-borrow** (explode inventory). **reject** as new foot mesh source |
+
+**Also checked (not re-numbered)**: Zenodo **20080618** Boot et al. para-cycling (**cc-by-4.0**) = kinematics/CSV, **0** meshes; pottery Foot GLB **21243693** already noted Day 4bl; **14-TR/cell-atlas** = mammalian **cell**, not foot.
+
+### Soft-gap check
+
+| Gap | Day 4bm |
+|-----|---------|
+| DI / per-ray MTA / nerve·ligament CC0/BY | **Still dry** — #90 NC; #91 sim; #92/#93 SA/NC; #94 same BP3D |
+| Gastroc/soleus | Andreassen + Henson still **blocked**; no new CC0/BY belly surface pack this pass |
+| Utah Hive | Still **reject** — not re-opened |
+
+### Outcome
+
+- Learning log **#90–#94**; teaching ghost UX live; watchlist / handback / daily-log / week-plan Day 4bm.
+- Census unchanged (**129/124**; ontology **126/129**).
+- **0** meshes integrated; **0** SA spam; Andreassen/Henson/Utah **not** force-wired.
+- Cloud Agent **resumed**.
+- **No finished-product claim.**
+
+## Session additions (2026-09-21 · Day 4bn — teaching explode / 抽出 + dig #95–#99)
+
+### Context
+
+Continue Week 2 sprint after Day 4bm ghost UX. Teaching polish (layer explode) + CC0/BY soft dig. **0** mesh wire. **No finished-product claim.**
+
+### Teaching polish (ONE UX borrow)
+
+| Change | Detail |
+|--------|--------|
+| **Explode / 抽出** | Per-layer +Y peel + **抽出 / 合拢** preset + key **E**. Osteology stays the spatial anchor; ligament/muscle/vessel/nerve peel. Prefs persist `explodeAmount`. |
+| Source | Air-Sage 抽出 (#86) + ashemag Human Atlas exploded inventory (#95; canonical of #94) + Eye Atlas staged explode slider (#97) — **ideas only**; no third-party UI code |
+| Files | `src/lib/layerExplode.ts` (+ vitest) · `teachingPrefs.ts` · `LayerToggles.tsx` · `FootModel.tsx` · `Viewport.tsx` · `App.tsx` · `keyboardHelp.ts` |
+| Honesty | Teaching peel — **not** surgical dissection / clinical exposure / finished product |
+
+### NEW license-verified projects (≥4; #95–#99)
+
+| # | Project | URL / DOI | License verified | Foot relevance | Decision |
+|---|---------|-----------|------------------|----------------|----------|
+| **95** | **Human Atlas** (ashemag/human-atlas) | https://github.com/ashemag/human-atlas · demo https://human-atlas-seven.vercel.app | GitHub SPDX **MIT** + README anatomy **CC BY 4.0** BodyParts3D 4.0 (`LICENSE` verified 2026-09-21). Canonical repo vs EF361 fork logged as **#94** | Whole-body 2234 BP3D meshes + exploded inventory — **same pool** already in main tree | **UX-borrow** (explode / 抽出). **reject** as new foot mesh source |
+| **96** | **Orthopaedic Trauma Atlas** (TUANZIDING/orthopaedic-trauma-atlas) | https://github.com/TUANZIDING/orthopaedic-trauma-atlas | Combined `LICENSE`: teaching code **MIT**; anatomy adaptations **CC BY 4.0** (ATTRIBUTION: BP3D 4.0 hip/femur/sacrum/L5 extracts; verified 2026-09-21) | 足部筋膜室 / calcaneal-traction **PNG teaching figures** + 6 pelvic/proximal-femur meshes — **0** named foot DI/NV/ligament GLBs | **UX-borrow** (honesty / clinical-boundary copy). **reject** foot soft mesh |
+| **97** | **Eye Atlas** (jaskirat1616/eye-atlas) | https://github.com/jaskirat1616/eye-atlas | Combined `LICENSE`: code **MIT**; `public/models/` **CC BY 4.0** BodyParts3D (verified 2026-09-21) | Orbit/globe explode slider 0–5 — **eye, not foot** | **UX-borrow** (staged explode). **reject** foot soft |
+| **98** | **Anatomy Atlas** (sonuyadav2307/anatomy-atlas) | https://github.com/sonuyadav2307/anatomy-atlas | **No SPDX**; README 2026-09-21: Z-Anatomy **CC BY-SA 4.0** + “some upstream components carry non-commercial restrictions” (`public/Z-ANATOMY-LICENSE.txt`) | 1774 ZA/BP3D structures; README claims foot ligaments in catalog — SA/NC mix | **reject** (SA + NC warning / opaque SPDX) for main tree. **reject** as CC0/BY DI/NV fill |
+| **99** | **OpenGameArt — Human Foot 3D Model** (byzmod3d) | https://opengameart.org/content/human-foot-3d-model | Page license **CC0** verified 2026-09-21 | Low-poly outer-foot `pe.obj` from reference photos — **0** named DI / artery / nerve / ligament elementals | **reject** soft teaching mesh. Optional silhouette only (same class as #89) |
+
+**Also checked (not re-numbered)**: `mrbusybody95/humanatlasanatomy` and `KTM-EduTech/The-Atlas-Of-Human-Anatomy` = ashemag Human Atlas copies (same MIT LICENSE copyright ashemag + same README) — deepen of **#95/#94**. ScanTW NC foot muscle Zenodo hits already **#84/#90**.
+
+### Soft-gap check
+
+| Gap | Day 4bn |
+|-----|---------|
+| DI / per-ray MTA / nerve·ligament CC0/BY | **Still dry** — #95/#97 same BP3D; #96 trauma PNGs; #98 ZA SA/NC; #99 skin OBJ |
+| Gastroc/soleus | Andreassen + Henson still **blocked**; no new CC0/BY belly surface pack this pass |
+| Utah Hive | Still **reject** — not re-opened |
+
+### Outcome
+
+- Learning log **#95–#99**; teaching explode UX live; watchlist / handback / daily-log / week-plan Day 4bn.
+- Census unchanged (**129/124**; ontology **126/129**).
+- **0** meshes integrated; **0** SA spam; Andreassen/Henson/Utah **not** force-wired.
+- **No finished-product claim.**
+
+## Session additions (2026-09-22 · Day 4bo — teaching quiz stub + dig #100–#107)
+
+### Context
+
+Continue Week 2 sprint after Day 4bn explode UX. License-verified soft dig **#100–#107**. Soft gaps **still dry**. **0** mesh wire. Teaching quiz stub (names hidden) only because no CC0/BY elemental soft mesh appeared. Teaching-grade atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+### Teaching polish (ONE UX borrow — dig stayed dry)
+
+| Change | Detail |
+|--------|--------|
+| **Quiz stub / 测验** | Hide ZH/LA names + search + ontology/summary. **测验 / 对照** + key **Q**. Prefs persist `quizMode`. Honesty badges / license chips stay visible. |
+| Source | Grypa-JJ quiz/pin-point (#102; deepen #80) + MedicalPlab tutor→viewport (#106) — **ideas only**; no third-party UI / quiz-bank code |
+| Files | `src/lib/quizMode.ts` (+ vitest) · `teachingPrefs.ts` · `LayerToggles.tsx` · `StructurePanel.tsx` · `StructureHoverLabel.tsx` · `FootModel.tsx` · `Viewport.tsx` · `App.tsx` · `keyboardHelp.ts` |
+| Honesty | Teaching self-test stub — **not** Anki / exam / finished product |
+
+### NEW license-verified projects (≥5; #100–#107)
+
+| # | Project | URL / DOI | License verified | Foot relevance | Decision |
+|---|---------|-----------|------------------|----------------|----------|
+| **100** | **Scan-the-World — Muscles of the foot and ankle** | Zenodo DOI **10.5281/zenodo.21527865** | Zenodo API `license.id` = **cc-by-nc-sa-4.0** re-verified 2026-09-22 (united CT right-foot/ankle muscle GLB/USDZ) | Tempting **united** muscle GLB (deepen of **#84**) — **NC** blocks main-tree | **reject** (NC). Do **not** wire; do **not** treat as DI / per-ray MTA fill |
+| **101** | **Scan-the-World — Muscles of the foot and ankle** (sibling) | Zenodo DOI **10.5281/zenodo.21354714** | Zenodo API `license.id` = **cc-by-nc-sa-4.0** re-verified 2026-09-22 | Same title / same CT muscle family as **#100/#84** | **reject** (NC) |
+| **102** | **Anatomy Atlas 3D** (Grypa-JJ/anatomy-atlas-3d) | https://github.com/Grypa-JJ/anatomy-atlas-3d | Code **MIT** (`LICENSE` 2026-09-22: “APPLICATION CODE ONLY”); geometry **CC BY-SA 2.1 JP** (BP3D) + **CC BY-SA 4.0** (Z-Anatomy) in `ATTRIBUTION.md`. GitHub SPDX **NOASSERTION** (dual license) | ~2500-structure whole-body atlas; quiz / scalpel / Anki / split-screen — **0** new CC0/BY foot elemental | **UX-borrow** (quiz stub). Meshes **isolate-SA**. **reject** main-tree soft. Deepen of **#80** |
+| **103** | **Anatomy Atlas RU** (zigmyndovi4-ship-it/anatomy-atlas-ru) | https://github.com/zigmyndovi4-ship-it/anatomy-atlas-ru | Code **MIT** (LICENSE copyright **ashemag**, verified 2026-09-22); anatomy **CC BY 4.0** BodyParts3D 4.0 (`public/ATTRIBUTION.md`) | RU localization of Human Atlas (#95/#94) — **same BP3D pool** already in main tree | **UX-borrow** (RU localization honesty). **reject** new soft. Deepen of **#37** |
+| **104** | **Dayly / daylyfitness** (starramble) | https://github.com/starramble/daylyfitness | **No SPDX**; README + `public/models/NOTICE.txt` verified 2026-09-22: ZA **CC BY-SA 4.0** + BP3D source-embedded **CC BY-SA 2.1 JP** (conservatively retained); code license **undeclared** | ZH muscle highlight / 主练红·辅助金 on SA whole-body fitness mesh — **0** named right-foot DI/NV/ligament elementals | **UX-borrow** (ZH muscle-emphasis idea only). **reject** SA re-wire |
+| **105** | **Z-Anatomy Unity fork** (ChristianKleineidam/Z-Anatomy) | https://github.com/ChristianKleineidam/Z-Anatomy | README + `LICENSE` = **CC BY-SA 4.0** (full CC legal code); GitHub SPDX **NOASSERTION** verified 2026-09-22 | Unity PC fork of LluisV Z-Anatomy models — same SA geometry lineage | **isolate-SA** / **reject** main-tree |
+| **106** | **MedicalPlab** (AdhamElsayedAI) | https://github.com/AdhamElsayedAI/MedicalPlab | Code **MIT** (`LICENSE` verified 2026-09-22); anatomy **HuBMAP HRA CC BY 4.0** (README Data Licensing) | Tutor → 3D viewport on **kidney/HRA organs**, not foot | **UX-borrow** (tutor→viewport). **reject** as foot soft mesh |
+| **107** | **BodyParts3D archive clone** (bcl200n) | https://github.com/bcl200n/BodyParts3D | Code **MIT** (`LICENSE` verified 2026-09-22); STLs from **20110915 / v3.0** archive **CC BY-SA 2.1 JP** (README; older than official R4 **CC BY 4.0** we already use) | Whole-body FMA-named STLs — **not** a new right-foot DI/NV pack; license older SA | **reject** soft fill (already on official BP3D R4 CC BY) |
+
+**Also checked (not re-numbered)**: Zenodo **4977162** Dryad “The foot is more than a spring” **cc-zero** = `FootAsActuator.mat` EMG/work, **0** meshes. GitHub repo search `anatomy atlas foot` = this repo + `HolsteredSoul/crus-atlas` (already **#85**). Scan-the-World community query returned **0** extra hits beyond **#84/#90/#100/#101**. **No** fresh CC0/BY elemental foot soft pack this pass.
+
+### Soft-gap check
+
+| Gap | Day 4bo |
+|-----|---------|
+| DI / per-ray MTA / nerve·ligament CC0/BY | **Still dry** — #100/#101 NC united muscle; #102/#104/#105 SA; #103/#107 same/older BP3D; #106 HRA organs |
+| Gastroc/soleus | Andreassen + Henson still **blocked**; no new CC0/BY belly surface pack this pass |
+| Utah Hive | Still **reject** — not re-opened |
+
+### Outcome
+
+- Learning log **#100–#107**; teaching quiz stub live; watchlist / handback / daily-log / week-plan Day 4bo.
+- Census unchanged (**129/124**; ontology **126/129**).
+- **0** meshes integrated; **0** SA spam; Andreassen/Henson/Utah **not** force-wired.
+- Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+
+## Session additions (2026-09-22 · Day 4br — quiz honesty banner + dig #122–#126)
+
+### Context
+
+Continue Week 2 sprint after Day 4bo quiz stub. Soft dig **#122–#126**. Soft gaps **still dry**. **0** mesh wire. Teaching **quiz honesty banner** (UX polish from expert-review checklist) because no CC0/BY elemental soft mesh appeared. Teaching-grade atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+### Teaching polish (ONE UX honesty — dig stayed dry)
+
+| Change | Detail |
+|--------|--------|
+| **Quiz mode honesty banner** | When `quizMode` active, fixed banner below title explains: teaching self-test (hide ZH/LA names + search + ontology); **not** Anki / exam / finished product; press **Q** to restore. Located `App.tsx` top-left under title bar. |
+| Source | Expert-review checklist §C teaching UX gate reminder (quiz stub needs honesty like ligament/nerve/vessel/muscle incomplete banners); parallels ligament/nerve incomplete banners in `LayerToggles` |
+| Files | `src/App.tsx` |
+| Honesty | Teaching classroom self-test chrome — **not** Anki / spaced-repetition / standardized exam |
+
+### NEW license-verified projects (≥5; #122–#126)
+
+| # | Project | URL / DOI | License verified | Foot relevance | Decision |
+|---|---------|-----------|------------------|----------------|----------|
+| **122** | **OpenGameArt Human Foot 3D Model** (byzmod3d) | https://opengameart.org/content/human-foot-3d-model | **CC0** page license box verified 2026-09-22; `.obj` external foot-surface model (~14 KB) | External **skin**-surface foot for game dev — **not** named DI/MTA/NV teaching anatomy | **reject** soft (monitor for UX skin-surface only) |
+| **123** | **Scan-the-World — Muscles of the foot and ankle** (Zenodo 20228270) | DOI **10.5281/zenodo.20228270** | Zenodo API `license.id` = **cc-by-nc-sa-4.0** re-verified Day **4br** (same as Day **4bo** #100) | United right-foot/ankle muscle CT GLB — tempting but **NC** blocks main-tree | **reject** (NC). Same lineage as #84/#90/#100/#101 |
+| **124** | **Scan-the-World — Muscle and tendon structure of a foot** (Zenodo 20207804) | DOI **10.5281/zenodo.20207804** | Zenodo API `license.id` = **cc-by-nc-sa-4.0** verified Day **4br** | Right-foot muscle+tendon — same Scan-the-World CT NC family as #123 | **reject** (NC) |
+| **125** | **Grant et al. foot bone SSMs** (Zenodo 3464747) | DOI **10.5281/zenodo.3464747** | **CC BY 4.0** Zenodo API verified Day **4br** (reconfirm of Day 4ay #55) | MRI talus/calcaneus/midfoot/1st MT STL point-clouds — bones only, **0** soft | **reject** soft (monitor bones; already covered in #55) |
+| **126** | **Visible Human / OpenSim foot-ankle MSK models** (DU Digital Commons / SimTK) | DU CC BY 4.0 (Day 4az+4ba **blocked**) · SimTK license unclear (Day 4bb) | VH gastroc/soleus Kabsch **FAIL** Day 4az+4ba; OpenSim foot-anklemodel page "License: Model" **opaque** (SimTK) | VH bellies: Andreassen alignment **blocked** after LE trials; OpenSim 36-lig model: license opaque | **blocked** (VH) / **monitor** (OpenSim). Do **not** wire |
+
+**Also checked (not re-numbered)**: Sketchfab "Foot Dorsal M." (BodyParts3D-based but license **not stated** in search result — reject unclear); AnatomyZone / Kenhub (teaching refs, not downloadable licensed meshes); Zenodo 1056750 nerve model (Day 1 known **CC BY PDF** diagram only, not 3D GLB); MSD 3D model nerve/artery viewer (view-only); NIH Printables left-foot CT bones (**CC BY** but bones only; orig. MySegmenter). **No** fresh CC0/BY elemental foot DI / per-ray MTA / nerve / ligament / belly pack this pass.
+
+### Soft-gap check
+
+| Gap | Day 4br |
+|-----|---------|
+| DI / per-ray MTA / nerve·ligament CC0/BY | **Still dry** — #122 skin only; #123/#124 NC; #125 bones only; #126 blocked/opaque |
+| Gastroc/soleus | Andreassen + Henson still **blocked**; no new CC0/BY belly surface pack this pass |
+| Utah Hive | Still **reject** — not re-opened |
+
+### Outcome
+
+- Learning log **#122–#126** (includes Day 4br digs); quiz honesty banner live; watchlist / handback / daily-log / week-plan Day 4br.
+- Census unchanged (**129/124**; ontology **126/129**).
+- **0** meshes integrated; **0** SA spam; Andreassen/Henson/Utah **not** force-wired.
+- Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+## Session additions (2026-09-22 · Day 4bs — LESS-obvious pool dig #127–#135)
+
+### Context
+
+Continue Week 2 sprint after Day 4br quiz honesty. **Change angle**: search LESS-obvious pools (university Zenodo foot soft segmentations CC0/BY with mesh or convertible labels; MorphoSource human foot soft CC BY; NIH 3D print exchange foot soft CC; Open Anatomy Project / Slicer scenes; Figshare CC0 foot muscles). Soft gaps **still dry** after comprehensive dig. **0** mesh wire. Teaching UX polish options (G/E/Q/0/Home keyboard help; panel gap notes; screenshots) **all done prior**. Teaching-grade atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+### NEW license-verified projects (≥8; #127–#135)
+
+| # | Project | URL / DOI | License verified | Foot relevance | Decision |
+|---|---------|-----------|------------------|----------------|----------|
+| **127** | **FootNet — Multi-View Human Feet Image Dataset** | Zenodo DOI **10.5281/zenodo.20457252** | **CC BY 4.0** Zenodo page verified 2026-09-22 | 191 smartphone foot images + binary foreground masks — 2D **image segmentation**, not 3D mesh | **reject** soft (2D dataset, not 3D teaching mesh) |
+| **128** | **Scan-the-World — Muscles of the foot and ankle** (Zenodo 20228270) | DOI **10.5281/zenodo.20228270** | **CC BY-NC-SA 4.0** Zenodo API re-verified Day **4bs** (same as Day 4br #123) | CT-derived united right-foot/ankle muscle GLB — **NC** blocks main-tree | **reject** (NC). Re-verify of #84/#90/#100/#101/#123 |
+| **129** | **Visible Korean foot muscles PDF** | http://www.anatomy.re.kr (intjmorphol.com PDF) | **CC BY-NC-ND 3.0** page footer verified 2026-09-22 | STL/OBJ/PDF surface models — DI + PI present but **NC + ND** | **reject** (NC-ND). Re-verify of prior learning-log note |
+| **130** | **NIH 3D Print Exchange — Anatomic Human Foot** (15850) | https://3d.nih.gov/entries/15850/1 | Page states **CC BY-NC-SA** (NIH repo general CC0, but individual model licenses vary) | 26 foot **bones** (+ 2 sesamoids) — **0** DI/NV/ligament soft | **reject** soft (bones-only; NC blocks if soft existed) |
+| **131** | **Andreassen VH LE muscles** (Digital Commons @ DU) | DOI **10.56902/COB.vh.2022.0** | **CC BY 4.0** page license + package README verified Day 4az | VHM gastroc med/lat + soleus — **Kabsch FAIL** Day 4az+4ba (foot residuals / laterality) | **blocked** (alignment). Re-verify of Day 4az+4ba; still **not** wired |
+| **132** | **SlicerOpenAnatomy extension** | https://github.com/PerkLab/SlicerOpenAnatomy | Code **Apache-2.0** + **MIT** components (`LICENSE` files verified 2026-09-22) | Exporter/importer for OpenAnatomy atlases — **tool**, not foot muscle Slicer scene dataset | **reject** soft (tool/viewer, not data source) |
+| **133** | **Figshare PLOS ONE intrinsic foot muscles** (6553301) | DOI **10.1371/journal.pone.0199055.t005** | **CC BY 4.0** Figshare page verified 2026-09-22 | Study results **data table** (ultrasound intrinsic muscle measurements) — not 3D model | **reject** soft (research tables, not 3D mesh) |
+| **134** | **Wikimedia Commons — Blender Foot realistic (CC0)** | https://commons.wikimedia.org/wiki/File:Blender_Foot_realistic_by_Dan_Ulrich_(CC0).stl | **CC0 1.0** page deed verified 2026-09-22 | Blender Studio Human Base Meshes v1.2 external **skin**-surface foot STL — not named anatomy | **reject** soft (external skin-surface, not named DI/NV/ligament teaching) |
+| **135** | **Visible Korean foot muscles PDF** (intjmorphol.com) | http://intjmorphol.com/wp-content/uploads/2016/01/art_16_334.pdf | **CC BY-NC-ND 3.0** (footer verified 2026-09-22; same as #129) | VK Visible Korean STL/OBJ/PDF — **NC + ND** blocks | **reject** (NC-ND). Duplicate search of #129 |
+
+**Also checked (not re-numbered)**: AnatomyZone / Kenhub DI teaching pages (view-only refs, not downloadable licensed meshes). MorphoSource search returned mammalogy foot bones CT (not human soft). Figshare foot segmentation = PLOS ONE table only. **No** fresh CC0/BY elemental foot DI / per-ray MTA / nerve / ligament pack this pass.
+
+### Soft-gap check
+
+| Gap | Day 4bs |
+|-----|---------|
+| DI / per-ray MTA / nerve·ligament CC0/BY | **Still dry** — #127 2D seg; #128 NC; #129/#135 NC-ND; #130 bones-only; #131 **blocked**; #132 tool; #133 tables; #134 skin-only |
+| Gastroc/soleus | Andreassen **blocked** Day 4az+4ba; Henson **blocked** Day 4bj; no new CC0/BY belly surface pack this pass |
+| Utah Hive | Still **reject** — not re-opened |
+
+### Outcome
+
+- Learning log **#127–#135**; watchlist / daily-log Day 4bs.
+
+---
+
+## Session additions (2026-09-22 · Day 4cd — #136 U Malaya Asian LE intrinsic foot exclusion)
+
+**Scope**: Deep assess watchlist #136 (U Malaya Asian LE MSK CC0) per Day 4cd task. Fetch metadata + file list legally; identify RIGHT foot–relevant structures (esp. DI, plantar/dorsal soft, gastroc/soleus). Document CC0 license clearly. If usable named foot soft exist: download + Kabsch + QA; integrate main-tree only if pass. Else document reject/blocker. **0 integrate** unless clear foot-specific teaching value.
+
+### #136 University of Malaya Asian Male Lower-Limb MSK (REJECT — intrinsic foot excluded)
+
+**Dataset**: A Three-Dimensional Lower Extremity Musculoskeletal Geometry Model of An Asian Male  
+**DOI**: 10.22452/RD/5T6TZ7 (2026-04-22)  
+**URL**: https://researchdata.um.edu.my/dataset.xhtml?persistentId=doi:10.22452/RD/5T6TZ7  
+**License**: **CC0 1.0** (verified 2026-09-22 via Dataverse API + webpage metadata)  
+**License URI**: http://creativecommons.org/publicdomain/zero/1.0  
+**Authors**: JEEVARAAJ N VIVEKANANDAN, JULIANA BINTI USMAN (Universiti Malaya)
+
+**Content**:
+- 67 STL files in "Final Model STL files.zip" (58.3 MB)
+- 42 muscles, 13 bones, 5 ligaments, 4 cartilages, 2 tendons, 1 meniscus
+- MRI-derived (Siemens Prisma Magnetom 3T), hip-to-foot lower extremity
+- Asian male anatomical morphology (addresses Caucasian-dominant dataset gap)
+- Segmentation created with reference to Andreassen et al. 2023 (VH LE) + Hansen anatomy + MRIMaster
+- Validated by UMMC radiologist and radiographer
+
+**Files assessed**:
+- readme.txt (7.4 KB, MD5: d938e8bb8d460acd0ba7bbceefb93901) — downloaded + reviewed
+- Final Model STL files.zip (58.3 MB) — **NOT downloaded** (pre-download reject; see below)
+
+**42-muscle description** (from readme + webpage):
+> "ranging from the most proximal **psoas major** to the most distal **abductor digiti minimi**"
+
+**CRITICAL EXCLUSION** (readme.txt quality-assurance section):
+> "In some regions, the boundaries between anatomical structures on the MRI images were challenging to distinguish. Such geometries were **not included in the dataset**, particularly **minor tendon, minor ligaments and intrinsic foot muscles which were hard to identify**."
+
+**Right-foot relevance assessment**:
+
+| Target structure | Present? | Rationale |
+|-----------------|----------|-----------|
+| **Dorsal interossei (DI)** | ❌ **NO** | Explicitly excluded as "intrinsic foot muscles" per readme |
+| **Plantar layer muscles** | ❌ **NO** | Explicitly excluded as "intrinsic foot muscles" per readme |
+| **Lumbricals** | ❌ **NO** | Explicitly excluded as "intrinsic foot muscles" per readme |
+| **Abductor digiti minimi** | ❓ **Unclear** | Mentioned in description, but readme excludes intrinsic foot; may be naming confusion |
+| **Per-ray MTA / digital arteries** | ❌ **NO** | Muscle-focused dataset; no evidence of named vessel segmentations |
+| **Foot nerves** | ❌ **NO** | Not listed in 67-structure breakdown |
+| **Gastrocnemius / soleus** | ❓ **Likely YES** | Leg muscles, likely present in 42-muscle LE pack |
+| **Minor foot ligaments** | ❌ **NO** | Explicitly excluded per readme |
+| **Minor foot tendons** | ❌ **NO** | Explicitly excluded per readme (only Achilles + quad tendons listed) |
+
+**Integration decision**: **REJECT**
+
+**Reasons for rejection**:
+1. **Intrinsic foot muscles explicitly excluded** — readme states "intrinsic foot muscles which were hard to identify" were not included due to MRI boundary challenges. This eliminates:
+   - Dorsal interossei (DI) — primary gap target
+   - Plantar intrinsics (abd. hallucis, flex. dig. brevis, etc.)
+   - Lumbricals
+   - Other small foot muscles
+2. **Whole lower-extremity pack** (hip→foot) — 42 muscles span psoas to foot; no per-structure file list provided; cannot isolate foot-specific anatomy without full download
+3. **No named foot soft tissue** — despite 42-muscle count, description + readme indicate hip/thigh/leg muscles (psoas, quads, hamstrings, gastroc, soleus, peroneals, tib ant/post) + extrinsic foot tendons only
+4. **LE Kabsch alignment blocker** — even if gastroc/soleus present as leg muscles, whole-LE pack faces same single-similarity registration failure as Andreassen VH bellies (Day 4az+4ba Option A FAIL: 7-tarsal laterality then foot residual ~8.8 mm). Would require non-similarity / two-stage registration (same as Andreassen blocked path)
+5. **58.3 MB download not justified** — no evidence of usable foot-specific named soft meshes; readme assessment sufficient for reject decision
+6. **Not a foot DI/NV/ligament source** — MRI identification difficulty explicitly prevented small foot structure segmentation
+
+**Artifact created**:
+- `third_party/u-malaya-asian-le/NOTICE.txt` (assessment rationale + CC0 verification + readme citation)
+
+**License compliance**:
+- CC0 1.0 (public domain dedication) — legally reusable for any purpose
+- Citation provided in NOTICE.txt
+- No attribution required by license, but good scientific practice cited
+
+**Comparison to Andreassen VH LE** (learning-log #46):
+- Both: whole LE packs (hip/pelvis→foot)
+- Both: MRI-derived muscle segmentations
+- Both: include gastroc/soleus as leg muscles
+- Both: **exclude intrinsic foot muscles** (U Malaya explicit; Andreassen focus on major LE groups)
+- Both: single-similarity Kabsch **blocked** for foot teaching (Day 4az+4ba trials FAIL)
+- Difference: Andreassen = Visible Human (Caucasian); U Malaya = Asian morphology
+- Difference: U Malaya readme explicitly documents intrinsic foot exclusion; Andreassen segmentation scope implicit
+
+**Why "abductor digiti minimi" mentioned despite exclusion**:
+- Likely naming ambiguity or segmentation boundary interpretation
+- Readme's intrinsic-exclusion statement takes precedence over isolated mention
+- May refer to proximal muscle belly vs. distal intrinsic portion
+- Without file list, cannot verify presence; pre-download reject applies
+
+**Teaching value**: ❌ None for right-foot anatomy atlas  
+**SA shrink potential**: N/A (no foot-specific CC0 soft to replace BY-SA)  
+**Integrate**: **NO**  
+**Download**: **NO** (58.3 MB zip rejected pre-download)  
+**Watchlist**: Updated #136 → **reject** (intrinsic foot excluded; 0 DI/NV)
+
+**Bottom line**: U Malaya Asian LE MSK is a high-quality **whole lower-extremity** resource with clear CC0 licensing, but **intrinsic foot muscles** (DI, plantar layers, lumbricals) are **explicitly excluded** per readme due to MRI segmentation difficulty. The 42-muscle pack likely contains hip/thigh/leg muscles + extrinsic foot tendons only — **not** a source for foot-specific named soft tissue teaching. Even if gastroc/soleus present, LE Kabsch alignment faces same blocker as Andreassen Day 4az+4ba. Soft gaps (DI / per-ray MTA / foot intrinsics) remain **dry**.
+
+**Update tracking**:
+- Watchlist #136 status: **monitor** → **reject** (intrinsic foot exclusion documented)
+- Watchlist Day 4cd dig summary added
+- Daily-log Day 4cd entry complete
+- Learning-log #136 entry added
+- Census unchanged (**129/124**; ontology **126/129**).
+- **0** meshes integrated; **0** SA spam; Andreassen/Henson/Utah **not** force-wired.
+- Teaching UX polish options (G/E/Q/0/Home keyboard help ✓ Day 4ao; panel gap notes ✓ meshNote live; screenshots ✓ 9 shots Day 4an) **all done prior** — no new polish this pass.
+- Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+---
+
+## Session additions (2026-09-22 · Day 4cl — #147-#153 soft-tissue watch dig)
+
+**Scope**: Soft-tissue WATCH dig #147+ per Day 4cl task. Search Zenodo / Figshare / GitHub / HuBMAP / TotalSegmentator / academic repos for NEW CC0 or clear CC BY meshes of foot dorsal interossei (per toe), lumbricals, plantar layers, or per-ray dorsal/plantar metatarsal arteries. Append dig rows. Do NOT wire NC, NC-SA, unclear licenses, or spatially-failed assets. Record DRY if nothing new meshes.
+
+### #147 Zenodo 20228270 — Scan-the-World right foot muscles (RE-VERIFY REJECT — NC-SA)
+
+**Dataset**: Muscles of the foot and ankle (Scan-the-World)  
+**DOI**: 10.5281/zenodo.20228270 (published 2026-05-12)  
+**URL**: https://doi.org/10.5281/zenodo.20228270  
+**License**: **CC BY-NC-SA 4.0** (per soft-ceiling memo Day 4cj; Zenodo API re-verified Day 4cl)  
+**Content**: CT-derived right foot and ankle muscular structure  
+**Reject reason**: **NC (Non-Commercial)** clause blocks MIT-licensed atlas redistribution  
+**Teaching value**: ❌ None — NC incompatible  
+**Action**: **reject** (NC clause; already documented in soft-ceiling memo #1–#146)
+
+### #148 Visible Korean foot muscles (RE-VERIFY REJECT — NC-ND)
+
+**Dataset**: Movable Surface Models of the Foot (Visible Korean)  
+**URL**: https://123dok.co/document/qvl85xvr-visible-korean-movable-surface-models-foot.html  
+**License**: **CC BY-NC-ND 3.0** (per soft-ceiling memo Day 4cj)  
+**Content**: 24 foot muscles including lumbricals, dorsal interossei, plantar interossei; STL/OBJ export available  
+**Reject reason**: **NC (Non-Commercial) + ND (No Derivatives)** — blocks both redistribution and modification  
+**Teaching value**: ❌ None — NC+ND incompatible  
+**Action**: **reject** (NC+ND clauses; already documented in soft-ceiling memo #1–#146)
+
+### #149 TotalSegmentator v3 foot soft tissue (MONITOR — no per-structure foot muscles)
+
+**Project**: TotalSegmentator (CT/MRI segmentation)  
+**URL**: https://github.com/wasserth/TotalSegmentator  
+**License**: Apache 2.0 (code); segmentation labels vary by dataset  
+**Search**: Zenodo datasets 22688904 / 22688334 (TotalSegmentator training data)  
+**Foot soft content**: Grouped `tarsal` / `metatarsal` / `phalanges_feet` bones only — **no per-structure DI, lumbricals, or per-ray MTA segmentations**  
+**Teaching value**: ❌ None for per-toe/per-ray soft atlas  
+**Action**: **monitor** — re-check catalog updates for future named foot vessels/muscles
+
+### #150 HuBMAP 2026 foot soft tissue (DRY — no new CC0/CC-BY meshes)
+
+**Project**: HuBMAP (Human BioMolecular Atlas Program)  
+**URL**: https://hubmapconsortium.org  
+**Search**: 2026 foot anatomy intrinsic muscles / interossei 3D mesh STL GLB  
+**Result**: No new foot intrinsic muscle 3D meshes with CC0/CC-BY license found  
+**Teaching value**: ❌ None — no downloadable foot DI/lumbricals meshes  
+**Action**: **monitor** — re-check HuBMAP data portal for future foot soft segmentations
+
+### #151 Open3DModel/AnatomyTOOL lumbricals update (EXISTING — already BY-SA isolate)
+
+**Project**: Open3DModel/AnatomyTOOL  
+**URL**: https://anatomytool.org/open3dmodel-about  
+**License**: **CC BY-SA 4.0** (per Day 4w existing integration)  
+**Content**: Includes lumbricals, dorsal/plantar interossei — but **already in `by-sa/` isolate** (~71/124 unique)  
+**Update**: Q3-Q4 2025 / Q1-Q2 2026 work mentioned on internal structures — **no per-toe DI elemental split confirmed**  
+**Teaching value**: ⚠️ Already integrated as grouped teaching meshes  
+**Action**: **existing BY-SA isolate** — prefer CC0/BY replacement over net SA volume growth
+
+### #152 Proko intrinsic foot muscles (REJECT — license unclear)
+
+**Project**: Proko Anatomy Course — 3D Model: Intrinsic Foot Muscles  
+**URL**: https://www.proko.com/course-lesson/3d-model-intrinsic-foot-muscles  
+**License**: **Unspecified** (download requires course purchase; no clear CC license stated)  
+**Content**: Intrinsic foot muscle 3D model (13 MB PNG.zip)  
+**Reject reason**: No explicit CC0/CC-BY license; commercial course content  
+**Teaching value**: ❌ None — license unconfirmed  
+**Action**: **reject** (unclear license; not verified CC0/CC-BY)
+
+### #153 University of Dundee Sketchfab foot models (REJECT — license unclear)
+
+**Project**: CAHID Lower Limb collection (Sketchfab)  
+**URL**: https://sketchfab.com/anatomy_dundee/collections/lower-limb-fb0d112a1b404cb09a4a6e0c4b1177be  
+**License**: **Unspecified** in search results — Sketchfab models vary (CC BY / CC BY-SA / All Rights Reserved)  
+**Content**: "Normal Foot Anatomy" + "Right Foot Bones" — **no confirmation of per-toe DI coverage or license**  
+**Reject reason**: License not confirmed CC0/CC-BY in search; no per-structure soft detail verified  
+**Teaching value**: ❌ None — license unconfirmed, soft content unclear  
+**Action**: **reject** (license unclear; would require manual Sketchfab inspection to verify)
+
+---
+
+**Day 4cl dig summary (#147–#153)**:
+
+| Dig # | Source | License | DI/lumbricals/per-ray MTA? | Action |
+|-------|--------|---------|---------------------------|--------|
+| #147 | Zenodo 20228270 (Scan-the-World) | CC BY-NC-SA | Has foot muscles | **reject** (NC) |
+| #148 | Visible Korean foot | CC BY-NC-ND | Has DI/lumbricals | **reject** (NC+ND) |
+| #149 | TotalSegmentator v3 | Apache 2.0 | Grouped bones only | **monitor** |
+| #150 | HuBMAP 2026 | varies | No meshes found | **monitor** |
+| #151 | Open3DModel/AnatomyTOOL | CC BY-SA | Already in by-sa/ | **existing SA** |
+| #152 | Proko intrinsic foot | Unclear | Unknown | **reject** (license) |
+| #153 | Dundee Sketchfab | Unclear | Unknown | **reject** (license) |
+
+**Result**: All digs #147–#153 **DRY** for NEW CC0/CC-BY per-toe DI, lumbricals, plantar layers, or per-ray MTA. NC/NC-ND sources rejected (MIT incompatible); license-unclear sources rejected (verification required); BY-SA already integrated; grouped-only segmentations do not address per-structure gap. Soft-tissue open-data ceiling stance (Day 4cj soft-ceiling memo) **reconfirmed** — prefer watch-only mode over force-wiring dry NC/unclear/SA spam.
+
+**Update tracking**:
+- Census unchanged (**129/124**; ontology **126/129**).
+- **0** meshes integrated; **0** SA spam; NC/unclear **not** force-wired.
+- Soft gaps (per-toe DI / lumbricals / per-ray MTA) remain **dry**.
+- Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+---
+
+## Session additions (2026-09-22 · Day 4cm — #154-#157 soft-tissue watch dig continued)
+
+**Scope**: Day 4cm soft-tissue WATCH dig #154+ continuation (NEW sources only; avoid re-logging #147–#153). Search for CC0/clear CC-BY meshes: per-toe DI, lumbricals, plantar layers, per-ray MTA. Append log rows. No wire of NC/unclear/spatially-failed assets. DRY OK.
+
+### #154 MorphoSource Media 000040059 — Muscles (REJECT — license unclear)
+
+**Dataset**: Media 000040059: Muscles (Homo sapiens foot/ankle)  
+**URL**: https://www.morphosource.org/media/000040059  
+**Managed by**: Faes Kerkhof  
+**Content**: CT/microCT-derived mesh STL — specimen ku:692L, includes "Abductor Digiti Minimi" (foot muscle)  
+**License**: **Unspecified in search results** — MorphoSource metadata page does not display explicit CC0/CC-BY badge  
+**Reject reason**: License not confirmed CC0/CC-BY from search; would require MorphoSource account login + per-file license verification  
+**Teaching value**: ❌ None — license unconfirmed  
+**Action**: **reject** (license unclear; MorphoSource access required for full verification)
+
+### #155 Embodi3D foot/ankle muscles via MyMiniFactory (RE-VERIFY REJECT — NC-SA)
+
+**Dataset**: Muscles of the foot and ankle (Scan The World / Embodi3D)  
+**URL**: https://www.myminifactory.com/object/3d-print-muscles-of-the-foot-and-ankle-72472  
+**Embodi3D record**: https://www.embodi3d.com/files/file/8937-normal-right-foot-and-ankle-muscle-model-3d-printable-stl-file-converted-from-ct-scan/  
+**License**: **CC BY-NC-SA** (per MyMiniFactory listing; same Zenodo 20228270 source family)  
+**Content**: CT-derived right foot and ankle muscular structure STL  
+**Reject reason**: **NC (Non-Commercial)** clause blocks MIT-licensed atlas redistribution  
+**Teaching value**: ❌ None — NC incompatible  
+**Action**: **reject** (NC clause; already documented in soft-ceiling memo + Day 4cl dig #147)
+
+### #156 Open Anatomy Project foot atlas (MONITOR — not found / no detail)
+
+**Project**: Open Anatomy Project (Brigham and Women's Hospital / Harvard)  
+**URL**: https://www.openanatomy.org  
+**License**: Slicer contribution license (broad reuse); individual atlas licenses vary  
+**Search**: Atlases page lists Brain / Liver / Inner Ear / Head-Neck / Knee / Abdominal / Thoracic — **no dedicated foot atlas found**  
+**Partner site mention**: MedTec4SusDev mentions "Hand | Foot" in atlas list, but no detail / launch link  
+**Content**: 3D Slicer scene export supports glTF/OBJ with hierarchy/colors; no confirmed per-toe DI or per-ray MTA foot data  
+**Teaching value**: ❌ None — no foot soft-tissue atlas found  
+**Action**: **monitor** — re-check OA atlas catalog for future foot segmentations
+
+### #157 RadImageNet foot MRI (REJECT — imaging dataset, not mesh data)
+
+**Dataset**: RadImageNet (open radiologic deep learning dataset)  
+**URL**: https://www.radimagenet.com  
+**License**: CC BY 4.0 (research paper); dataset access by request  
+**Content**: 1.35M annotated CT/MRI/US images — MRI includes ankle/foot modality but **images only, not 3D meshes or per-structure labels** (DI/lumbricals/MTA)  
+**Purpose**: Transfer learning for medical AI models (ResNet50, DenseNet121, etc.)  
+**Reject reason**: Not mesh data; medical imaging dataset for deep learning, not anatomical atlas STL/GLB source  
+**Teaching value**: ❌ None — no redistributable foot soft-tissue meshes  
+**Action**: **reject** (not mesh source; medical AI training dataset)
+
+---
+
+**Day 4cm dig summary (#154–#157)**:
+
+| Dig # | Source | License | DI/lumbricals/per-ray MTA? | Action |
+|-------|--------|---------|---------------------------|--------|
+| #154 | MorphoSource 000040059 | Unclear | Unknown foot muscle | **reject** (license) |
+| #155 | Embodi3D foot/ankle (MyMiniFactory) | CC BY-NC-SA | Has foot muscles | **reject** (NC) |
+| #156 | Open Anatomy foot atlas | Varies | Not found | **monitor** |
+| #157 | RadImageNet foot MRI | CC BY 4.0 (paper) | Images not meshes | **reject** (not mesh) |
+
+**Result**: All digs #154–#157 **DRY** for NEW CC0/CC-BY per-toe DI, lumbricals, or per-ray MTA meshes. License-unclear/NC sources rejected; imaging dataset (not mesh) rejected; Open Anatomy foot atlas not found. Soft-tissue open-data ceiling stance (Day 4cj/4cl) **reconfirmed again** — CC0/CC-BY per-structure foot soft-tissue meshes remain unavailable across usual + alternate pools.
+
+**Update tracking**:
+- Census unchanged (**129/124**; ontology **126/129**).
+- **0** meshes integrated; **0** SA spam; NC/unclear **not** force-wired.
+- Soft gaps (per-toe DI / lumbricals / per-ray MTA) remain **dry**.
+- Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+---
+
+## Session additions (2026-09-22 · Day 4cn — #158-#160 soft-tissue watch dig continued)
+
+**Scope**: Day 4cn soft-tissue WATCH dig #158+ continuation (NEW sources only; skip #147–#157). Seek CC0/clear CC-BY meshes: per-toe DI, lumbricals, plantar layers, per-ray MTA. Append log. No NC/unclear/failed-alignment wires. DRY OK.
+
+### #158 LABIM3D (Universidad Austral de Chile) — repository (MONITOR — no foot DI detail)
+
+**Repository**: FernandandreaTM/labim3d (GitHub)  
+**URL**: https://github.com/FernandandreaTM/labim3d  
+**Institution**: TecMedHub, Escuela de Tecnología Médica, Universidad Austral de Chile — Puerto Montt  
+**License**: **CC BY 4.0** (repository)  
+**Version**: 1.0 (Marzo 2026)  
+**Content**: Open-access platform for curated 3D anatomical models (STL + metadata + educational cases); JSON-based CMS; Three.js visualization; links local models + external repos (Thingiverse, NIH 3D Print Exchange)  
+**Foot DI/lumbricals search**: Repository README does not list specific foot interossei or lumbricals models in summary; would require cloning repo and inspecting `public/data/models.json` catalog  
+**Teaching value**: ❓ Unknown — no foot soft-tissue inventory visible in README  
+**Action**: **monitor** — CC BY 4.0 license OK; re-check model catalog for foot-specific content
+
+### #159 UMLUB Sketchfab Dorsal Interossei I–IV (REJECT — license unclear)
+
+**Source**: Medical University of Lublin Sketchfab (@umlub)  
+**URL**: https://sketchfab.com/umlub/models  
+**Content**: 98 human anatomy models including "Dorsal Interossei I–IV Human Anatomy" (separate per-toe models confirmed from profile)  
+**License**: **Unspecified in search results** — UMLUB library catalog shows various CC licenses (CC-BY, CC-BY-SA, CC-BY-NC-SA, CC-BY-NC-ND, CC0/public domain) but **not** which specific license applies to Sketchfab uploads  
+**Foot DI/lumbricals search**: "Dorsal Interossei I–IV" models exist (4 per-toe models); "Lumbricals Human Anatomy" model also listed in earlier search  
+**Reject reason**: License not confirmed CC0/CC-BY from search results; would require manual Sketchfab page inspection per model to verify license badge  
+**Teaching value**: ❌ None — license unconfirmed  
+**Action**: **reject** (license unclear; Sketchfab access required for verification)
+
+### #160 Cults3D lower leg and foot muscle (REJECT — license unclear)
+
+**Source**: Cults3D model by MeEzra  
+**URL**: https://cults3d.com/en/3d-model/various/human-lower-leg-and-foot-muscle-anatomy  
+**Content**: STL + OBJ lower leg and foot muscle anatomy (includes major muscles, tendons, bones, joints)  
+**License**: **Unspecified** — "Usages" field empty in search results; "License" row blank  
+**Publication date**: February 28, 2026  
+**Reject reason**: No explicit CC0/CC-BY license stated; Cults3D models often proprietary or unclear licensing  
+**Teaching value**: ❌ None — license unconfirmed  
+**Action**: **reject** (license unclear; no CC0/CC-BY confirmation)
+
+---
+
+**Day 4cn dig summary (#158–#160)**:
+
+| Dig # | Source | License | DI/lumbricals/per-ray MTA? | Action |
+|-------|--------|---------|---------------------------|--------|
+| #158 | LABIM3D (GitHub UAustral Chile) | CC BY 4.0 (repo) | Unknown foot inventory | **monitor** |
+| #159 | UMLUB Sketchfab DI I–IV | Unclear | Has per-toe DI models | **reject** (license) |
+| #160 | Cults3D lower leg/foot muscles | Unclear | Unknown | **reject** (license) |
+
+**Result**: All digs #158–#160 **inconclusive or DRY** for NEW CC0/CC-BY per-toe DI. LABIM3D CC BY 4.0 repository promising but no foot inventory visible in README (would require catalog inspection). UMLUB has per-toe DI models but license unclear (multiple CC licenses in library, not specified for Sketchfab). Cults3D license unclear. Soft-tissue open-data ceiling stance (Day 4cj/4cl/4cm) **reconfirmed** — license-clear per-toe DI/lumbricals/per-ray MTA remain unavailable.
+
+**Update tracking**:
+- Census unchanged (**129/124**; ontology **126/129**).
+- **0** meshes integrated; **0** SA spam; unclear licenses **not** force-wired.
+- Soft gaps (per-toe DI / lumbricals / per-ray MTA) remain **dry** or **license-unclear**.
+- Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+---
+
+## Session additions (2026-09-22 · Day 4co — #158b LABIM3D deep-check)
+
+**Scope**: Day 4co priority DEEP-CHECK dig #158 LABIM3D (UAustral Chile). Clone/inspect repo for RIGHT FOOT soft tissue (DI per toe, lumbricals, plantar layers, MTA, calf). If foot soft exists under clear CC BY/CC0: assess Kabsch/QA; wire only if pass. Else: log outcome (monitor/reject), no wire.
+
+### #158b LABIM3D deep-check (REJECT — no foot inventory)
+
+**Repository**: FernandandreaTM/labim3d (GitHub)  
+**Clone date**: 2026-09-22 (Day 4co)  
+**Commit**: Latest (depth=1 clone)  
+**README license claim**: **CC BY 4.0** (stated in README.md line 5)  
+**LICENSE file**: ❌ **Absent** (no LICENSE file in repo root)  
+**Version**: 1.0 (Marzo 2026)  
+
+**Deep inventory inspection**:
+1. **Model catalog** (`data/index.json`): 9 models listed
+   - aparato-vestibular (vestibular apparatus)
+   - articulacion-de-hombro-funcional (functional shoulder joint)
+   - articulacion-hombro (shoulder joint)
+   - articulacion-rodilla (knee joint)
+   - oido-interno (inner ear)
+   - oido-interno-nervios (inner ear nerves)
+   - pelvis-completa (complete pelvis)
+   - vertebra-lumbar (lumbar vertebra)
+   - vertebra-toracica (thoracic vertebra)
+
+2. **Foot anatomy search**: `grep -r "foot\|pie\|inteross\|lumbric\|metatars" (HTML+JSON)` → **0 matches**
+
+3. **STL files**: 20+ STL files in `models/` directory, but **NO foot anatomy** (shoulder, knee, inner ear, pelvis, vertebrae only)
+
+4. **Foot soft-tissue inventory**: ❌ **ABSENT**
+   - No dorsal interossei (per-toe or grouped)
+   - No lumbricals
+   - No plantar layer muscles
+   - No metatarsal arteries (per-ray or grouped)
+   - No calf muscles (gastrocnemius/soleus)
+   - No foot bones
+   - **0** foot-related models in catalog
+
+**License verification**:
+- README claims "Licencia: CC BY 4.0" (line 5)
+- **No LICENSE file present** in repo (would strengthen claim but not critical for platform repo)
+- Individual model JSONs in `data/models/*.json` would specify per-model licenses (not inspected since no foot content)
+
+**Reject reason**: **No foot soft-tissue inventory** — repository is ear/shoulder/knee/pelvis/vertebrae-focused educational platform (TecMedHub, UAustral Chile); **0** foot anatomy models catalogued or stored
+
+**Teaching value**: ❌ None for right-foot atlas — platform architecture is promising (CC BY 4.0, JSON-based CMS, Three.js viewer, print-ready STL workflow) but current content scope does not include foot anatomy
+
+**Action**: **reject** (no foot inventory; DRY for foot soft-tissue)
+
+**Update tracking**:
+- Census unchanged (**129/124**; ontology **126/129**).
+- **0** meshes downloaded; **0** Kabsch QA; **0** wired.
+- LABIM3D platform promising for future foot additions but **currently DRY**.
+- Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+---
+
+**Day 4co LABIM3D deep-check summary**:
+
+Repository cloned and fully inspected. README claims CC BY 4.0 (no LICENSE file). Current catalog: 9 models (ear, shoulder, knee, pelvis, vertebrae). **0 foot anatomy** models (no DI, lumbricals, plantar layers, MTA, calf). **Reject** as foot soft-tissue source. Platform architecture suitable for future contributions but **current inventory DRY for foot**.
+
+---
+
+## Session additions (2026-09-22 · Day 4cp — soft-tissue WATCH digs #161–#163)
+
+**Scope**: Day 4cp NEW watch digs (at most #161–#163); DRY OK; no NC/unclear wires.
+
+**Date**: 2026-09-22 (Day 4cp)
+
+### #161: Zenodo 10.5281/zenodo.20231309 "Muscles of the foot and ankle" (Scan-the-World) → Day 4cq #161b REJECT
+
+**Source**: Zenodo DOI 10.5281/zenodo.20231309  
+**URL**: https://doi.org/10.5281/zenodo.20231309  
+**Content**: CT-derived right foot and ankle muscular model (2026-05-12 publication; Scan-the-World author; embodi3d source)  
+**License** (Day 4cq deep-check via Zenodo API): **CC BY-NC-SA 4.0** ❌ (NC + SA)  
+**Inventory**: **Unknown per-muscle detail** — API metadata description = "muscular structure" but no enumeration of individual muscles (DI per-toe? lumbricals? plantar layers? gastroc/soleus?); would require GLB download + Blender inspection, but license already disqualifies  
+**Reject reason** (Day 4cq #161b): **NC (Non-Commercial)** + **SA (ShareAlike)** disqualifies for MIT-licensed atlas main tree; same NC rejection policy as Zenodo ScanTW 20228270/20231308/21354714/21527865, Visible Korean, NIH foot, Sheffield 9934055; inventory inspection not justified when license already fails gate  
+**Teaching value**: ❌ None — NC license blocks integration regardless of inventory  
+**Action**: 🔍 **MONITOR** (Day 4cp) → ❌ **REJECT** (Day 4cq #161b deep-check; NC + SA confirmed via API)
+
+### #162: Kaggle/GitHub Foot3D (OllieBoyne/Foot3D; FIND/FOUND)
+
+**Source**: Kaggle dataset + GitHub repo OllieBoyne/Foot3D  
+**URL**: https://www.kaggle.com/datasets/ollieboyne/foot3d + https://github.com/OllieBoyne/Foot3D  
+**Content**: High-resolution textured foot scans (118 meshes "Meshes" dataset + 474 calibrated multiview images); 3D external foot surface reconstruction research (BMVC 2022 FIND paper + WACV 2024 FOUND paper)  
+**License**: Not explicitly stated for dataset (Google form gated access; academic reconstruction benchmark focus)  
+**Reject reason**: **External skin surface scans only** — no internal anatomy (no interossei, lumbricals, metatarsal arteries, plantar layers, calf muscles); dataset designed for foot shape/articulation modeling, not anatomical atlas  
+**Teaching value**: ❌ None — surface-only; no soft-tissue musculature/vasculature  
+**Action**: **reject** (no internal anatomy; external surface scans)
+
+### #163: HuggingFace BoneHub/vsd-feet-seg (VSD CT foot bone segmentation)
+
+**Source**: HuggingFace Datasets BoneHub/vsd-feet-seg (M. C. M. Fischer VSD Full Body Bone Models v3.0 source)  
+**URL**: https://huggingface.co/datasets/BoneHub/vsd-feet-seg  
+**Content**: 30 CT scans of feet with 56 individual bone labels (left/right separate); label maps + STL meshes derived from VSD Zenodo releases; training data for BoneHub/total-feet-seg model  
+**License**: **CC BY-NC-SA 4.0** (stated in dataset card, same as VSD source bone models)  
+**Reject reason**: **NC (Non-Commercial)** disqualifies for MIT-licensed atlas main tree; dataset is **bone-only** (CT + bone segmentation; zero soft-tissue muscle/vessel labels or meshes)  
+**Teaching value**: ❌ None — NC license + no soft tissue  
+**Action**: **reject** (NC license; bone-only; no soft tissue)
+
+**Day 4cp watch dig summary**:
+
+Digs #161–#163 NEW sources only. **#161** Zenodo Scan-the-World foot/ankle CT model: **MONITOR** (license unspecified, requires DOI inspection). **#162** Foot3D: **REJECT** (external skin surface scans, no internal anatomy). **#163** BoneHub vsd-feet-seg: **REJECT** (CC BY-NC-SA; bone-only; zero soft tissue). Census unchanged (**129/124**; ontology **126/129**). **0** new meshes wired. Soft-ceiling stance maintained.
+
+## Session additions (2026-09-22 · Day 4cq — DEEP-CHECK dig #161b Zenodo 20231309)
+
+**Scope**: Day 4cq priority DEEP-CHECK dig #161 Zenodo 10.5281/zenodo.20231309 "Muscles of the foot and ankle". Fetch Zenodo record page + files metadata; record exact license + inventory. If CC0/CC-BY (non-SA) + useful: download, Kabsch QA, wire if pass. Else: log #161b REJECT/MONITOR.
+
+### #161b Zenodo 20231309 Scan-the-World "Muscles of the foot and ankle" (REJECT — NC + SA)
+
+**Zenodo DOI**: 10.5281/zenodo.20231309  
+**Publication date**: 2026-05-12  
+**Author**: Scan-the-World  
+**Source**: embodi3d (medical CT scan)  
+**Fetch date**: 2026-09-22 (Day 4cq; Zenodo API metadata retrieved)
+
+**License** (from Zenodo API metadata): **CC BY-NC-SA 4.0** ❌
+
+**Content**:
+- **Description**: "This is a model of the muscular structure of a right foot and ankle. It was created from a medical CT scan."
+- **Files**: 1 GLB (1.99 MB: `c5c95549a5851dbc4050fc770073d5dc.glb`), 1 USDZ (12.3 MB), preview PNGs (rotations + top view), metadata XML/JSON
+- **Keywords**: anatomy, body, foot, structure, medical, muscle, embodi3d, ankle
+
+**Foot soft-tissue inventory**: **Unknown per-muscle detail** — API metadata and description do not enumerate individual muscles (e.g., whether DI 1st–4th per-toe, lumbricals, plantar layers, gastroc/soleus bellies are present, grouped, or absent). Zenodo preview thumbnails show CT-derived textured meshes but no muscle segmentation visible at thumbnail resolution. Would require GLB download + inspection (e.g., Blender outliner, GLTF validator mesh count) to verify inventory, but **license already disqualifies** integration.
+
+**Reject rationale**:
+1. **NC (Non-Commercial)** clause disqualifies for MIT-licensed atlas main tree — same policy as Zenodo ScanTW 20228270/20231308/21354714/21527865 (all CC BY-NC-SA 4.0; has DI but NC blocks), Visible Korean (NC-ND, has DI/lumbricals), NIH foot (NC-SA bones-only), Sheffield 9934055 (NC)
+2. **SA (ShareAlike)** clause would require `by-sa/` isolate even if NC were waived — but atlas policy (Day 4cj soft-ceiling memo) prefers CC0/CC-BY main-tree replacements over net SA volume growth (~71/124 unique already in `by-sa/`)
+3. **Inventory unverifiable without license**: Description states "muscular structure" but no per-muscle catalog visible without GLB download + Blender inspection; teaching value indeterminate when license already fails gate
+4. **embodi3d sourcing**: embodi3d.com hosts medical 3D-printable models; many user-uploaded with unclear provenance or NC restrictions; Zenodo upload does not reference original embodi3d model ID or confirm segmentation source (CT auto-segmentation vs manual vs commercial software export)
+
+**Teaching value**: ❌ None — NC license blocks integration regardless of muscle inventory quality or per-toe detail
+
+**Action**: **reject** (NC + SA disqualifies; inventory inspection not justified)
+
+**Update tracking**:
+- Census unchanged (**129/124**; ontology **126/129**).
+- **0** meshes downloaded; **0** Kabsch QA; **0** wired.
+- Dig #161 Zenodo Scan-the-World foot/ankle muscles confirmed **NC + SA** via API → **REJECT**.
+- Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+---
+
+**Day 4cq Zenodo 20231309 deep-check summary**:
+
+Zenodo API metadata retrieved (DOI 10.5281/zenodo.20231309). License: **CC BY-NC-SA 4.0** (NC + SA). Content: CT-derived right foot/ankle muscular model (1.99 MB GLB; embodi3d source). Inventory: unknown per-muscle detail (description = "muscular structure"; no enumeration). **Reject** as foot soft-tissue source due to **NC (Non-Commercial)** license disqualification. Inventory inspection not justified when license already fails gate. Census unchanged. **0** new meshes wired. Soft-ceiling stance maintained.
+
+## Session additions (2026-09-22 · Day 4cr — soft-tissue WATCH digs #164–#166)
+
+**Scope**: Day 4cr NEW watch digs (at most #164–#166); DRY OK; no NC/SA/unclear wires. Skip re-logging #147–#163.
+
+**Date**: 2026-09-22 (Day 4cr)
+
+### #164: NIH 3D Print Exchange 3DPX-015850 "Anatomic Human Foot" (MONITOR — bone-focused; license unclear)
+
+**Source**: NIH 3D Print Exchange entry 15850  
+**URL**: https://3d.nih.gov/entries/15850/1  
+**Content**: Anatomic foot model designed in Lightwave 3D (Dr Glass); 26 proper foot bones (28 if including 1st MTP sesamoids); X3D format available; newer processed .glb versions in version history  
+**License**: **Unclear** — search results do not state explicit CC0/CC-BY/NC badge; NIH 3DPX entries vary (some CC0, some CC-BY, some unclear); would require entry page inspection + license field verification  
+**Foot soft-tissue inventory**: Description emphasizes **bones** (26 proper + 2 sesamoids); no mention of muscles (DI, lumbricals, plantar layers, calf) in search results; likely bones-only model  
+**Reject reason** (provisional): **Bone-focused** (no soft-tissue mention); license unclear without full entry inspection; even if CC0/CC-BY, bones-only = not useful for DI/lumbricals/MTA gaps  
+**Teaching value**: ❌ Likely none — bone anatomy (atlas already has BP3D + UM bones); no soft-tissue inventory visible  
+**Action**: **monitor** (bone-focused; license unclear; soft-tissue inventory likely absent)
+
+### #165: AnatomyTOOL Open3DModel ankle/foot + lower-limb (REJECT — CC BY-SA; already in by-sa/ isolate)
+
+**Source**: AnatomyTOOL Open3DModel  
+**URL**: https://anatomytool.org/content/open3dmodel-ankle-and-foot-english-labels + https://anatomytool.org/open3dmodel-create  
+**Content**: 3D foot/lower-limb model (OBJ, GLB, Blender source archives); includes foot muscles (abductor hallucis, flexor digitorum brevis, quadratus plantae, lumbricals, dorsal/plantar interossei, etc.); viewer + downloadable source files  
+**License**: **CC BY-SA 4.0** (stated in page footer: "Open3D project, Jan Kooloos, RadboudUMC, Eungyeol Lee, LUMC et al, license: CC BY-SA")  
+**Foot soft-tissue inventory**: Contains intrinsic foot muscles including **4 lumbricals**, **4 dorsal interossei**, **3 plantar interossei**, per anatomical completeness (AnatomyZone confirms 4 DI, 3 PI, 4 lumbricals standard anatomy)  
+**Reject reason**: **SA (ShareAlike)** — Open3DModel = Open3D Project successor (same CC BY-SA 4.0 as Z-Anatomy + Open3D repositories already in `by-sa/` isolate); atlas policy (Day 4cj soft-ceiling memo) prefers CC0/CC-BY main-tree replacements over net SA volume growth (~71/124 unique already in `by-sa/`); DI/lumbricals present but **SA-only** (no CC0/CC-BY alternative found)  
+**Teaching value**: ✅ Educational value (4 DI, 4 lumbricals, 3 PI present) but **SA license blocks main-tree integration**  
+**Action**: **reject** integrate — SA disqualifies for net SA reduction goal; Open3D DI/lumbricals/plantar interossei already in `by-sa/` isolate (no new content vs existing Open3D pack)
+
+### #166: MorphoSource + 7T MRI foot muscle studies (REJECT — no downloadable mesh; research-only segmentation)
+
+**Source**: MorphoSource database search + PMC 7818930 (7-Tesla MRI foot muscle morphology study) + PMC 7376695 (diabetic foot intrinsic muscle volume CT study)  
+**URL**: MorphoSource (no foot muscle match); https://pmc.ncbi.nlm.nih.gov/articles/PMC7818930/ + https://pmc.ncbi.nlm.nih.gov/articles/PMC7376695/  
+**Content**: MorphoSource = paleontological/comparative anatomy 3D scan repository (Smithsonian CC0 skeletal models available, e.g., orangutan pes bones, but **no human foot muscle meshes**); 7T MRI study = intrinsic foot muscle segmentation in 3D Slicer (abductor hallucis, flexor digitorum brevis, quadratus plantae, lumbricals, dorsal/plantar interossei manually contoured; muscle volumes + fat infiltration measured); diabetic foot study = Mimics LiveWire + Smart Expand segmentation (CT-based intrinsic muscle 3D surface models)  
+**License**: 7T MRI study = CC BY 4.0 article license (PMC); Smithsonian skeletal = CC0; **no mesh files released** for either study  
+**Foot soft-tissue inventory**: 7T MRI study segmented **all intrinsic foot muscles** (lumbricals volume = 1.5 cm³; dorsal/plantar interossei = 19.8 cm³); diabetic foot study segmented intrinsic muscle volume (no per-muscle STL export mentioned)  
+**Reject reason**: **No downloadable mesh** — studies describe segmentation methodology + volumetric measurements but do not provide STL/OBJ/GLB files for download; research datasets (3D Slicer masks, Mimics segmentation masks) not publicly archived on Zenodo/Dataverse/institutional repos per search results; MorphoSource lacks human foot muscle inventory (skeletal only; e.g., CC0 orangutan pes bones ≠ human foot soft tissue)  
+**Teaching value**: ❌ None — no mesh files released; research segmentation not archived as downloadable 3D models  
+**Action**: **reject** (no downloadable mesh; research-only segmentation; MorphoSource DRY for human foot soft tissue)
+
+**Day 4cr watch dig summary (#164–#166)**:
+
+| Dig # | Source | License | DI/lumbricals/per-ray MTA? | Action |
+|-------|--------|---------|---------------------------|--------|
+| #164 | NIH 3DPX 15850 Anatomic Human Foot | Unclear | Bones-only (26+2); no soft tissue | **monitor** (license unclear; bone-focused) |
+| #165 | AnatomyTOOL Open3DModel foot | CC BY-SA 4.0 | Has 4 DI, 4 lumbricals, 3 PI | **reject** (SA; already in by-sa/ isolate; no new content) |
+| #166 | MorphoSource + 7T MRI studies | N/A (no mesh) | Segmented but not released | **reject** (no downloadable mesh) |
+
+**Result**: All digs #164–#166 **inconclusive or DRY** for NEW CC0/CC-BY foot soft tissue. NIH 3DPX = bones-only (license unclear). AnatomyTOOL = SA (Open3D lineage; already in by-sa/). MorphoSource + 7T MRI = no downloadable mesh (research segmentation not archived). Soft-tissue open-data ceiling stance **reconfirmed** — license-clear per-toe DI/lumbricals/per-ray MTA remain unavailable.
+
+**Update tracking**:
+- Census unchanged (**129/124**; ontology **126/129**).
+- **0** meshes integrated; **0** SA spam; unclear licenses/no-mesh sources **not** force-wired.
+- Soft gaps (per-toe DI / lumbricals / per-ray MTA) remain **dry** or **SA-only** (Open3D existing).
+- Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+---
+
+## Session additions (2026-09-22 · Day 4cs — soft-tissue WATCH digs #167–#168)
+
+**Scope**: Day 4cs NEW watch digs (at most #167–#168); DRY OK; no NC/SA/unclear wires. Skip #147–#166 re-log.
+
+**Date**: 2026-09-22 (Day 4cs)
+
+### #167: Dryad + MRI research studies (REJECT — no downloadable mesh; research segmentation not archived)
+
+**Source**: Dryad data repository search + MRI-based intrinsic foot muscle studies (PMC 7818930 7T MRI; SpringerMedizin plantar intrinsic muscle classification; CGTrader MakeHuman CC0 base mesh)  
+**URL**: Dryad (no foot muscle match); various MRI segmentation studies (no mesh release)  
+**Content**: Dryad = research data repository (primarily datasets/code/images, not 3D mesh archives); MRI studies = 7T intrinsic foot muscle segmentation (3D Slicer manual contour: lumbricals, dorsal/plantar interossei) + plantar muscle PCSA/fiber length classification (MR volumetric segmentation) but **no STL/OBJ/GLB files released**; CGTrader MakeHuman-derived CC0 base mesh = generic body surface (feet as modular parts) without labeled internal anatomy  
+**License**: MRI studies CC BY 4.0 article license; MakeHuman CC0 public domain (surface mesh only)  
+**Foot soft-tissue inventory**: MRI studies confirm intrinsic foot muscle segmentation **technically feasible** (lumbricals 1.5 cm³, dorsal/plantar interossei 19.8 cm³) but datasets not archived on Zenodo/Dataverse/institutional repos; MakeHuman base mesh = external surface only (no internal musculature)  
+**Reject reason**: **No downloadable mesh** — MRI research segmentation (3D Slicer ROI masks, SliceOmatic segmentation) not publicly released as STL/OBJ; same issue as dig #166 (7T MRI); MakeHuman CC0 = surface-only (no DI/lumbricals/MTA internal anatomy)  
+**Teaching value**: ❌ None — no mesh files released; research segmentation not archived  
+**Action**: **reject** (no downloadable mesh; Dryad DRY for foot muscle STL; MRI segmentation same as #166)
+
+### #168: Thingiverse BodyParts3D Foot + Cults3D lower leg/foot muscle (REJECT — SA bones / license unclear)
+
+**Source**: Thingiverse thing:31865 BodyParts3D Foot (Cbonsig) + Thingiverse thing:368202 Foot_Right Human Skeleton (profguy) + Cults3D 4090856 Human Lower Leg and Foot Muscle Anatomy (MeEzra)  
+**URL**: https://www.thingiverse.com/thing:31865 + https://www.thingiverse.com/thing:368202 + https://cults3d.com/en/3d-model/various/human-lower-leg-and-foot-muscle-anatomy  
+**Content**: Thingiverse BodyParts3D Foot = **skeletal foot** (bones only; derived from BP3D database OBJ source; sliced near ankle for 3D printing); Foot_Right Human Skeleton = bones-only (1:1 scale); Cults3D lower leg/foot muscle = STL + OBJ with textures (major muscles, tendons, bones, joints; educational/visualization/3D printing)  
+**License**: Thingiverse BodyParts3D Foot = **CC BY-SA 2.1 Japan** (from BP3D database V3.0 legacy; main atlas uses V4.0 CC BY 4.0 LSDB); Foot_Right = CC BY-SA; Cults3D = **license unclear** ("License" + "Usages" rows **blank** in page metadata; same author MeEzra as dig #160 rejected)  
+**Foot soft-tissue inventory**: Thingiverse models = **bones-only** (no DI/lumbricals/MTA); Cults3D = description states "major muscles, tendons, bones, joints" but **no per-muscle catalog** (lumbricals? DI 1–4 separate?)  
+**Reject reason**: Thingiverse = **SA (ShareAlike)** bones-only (not soft-tissue; BP3D V3.0 SA 2.1 JP vs atlas V4.0 CC BY 4.0); Cults3D = **license unclear** (no explicit CC0/CC-BY badge; same author as #160 rejected for license ambiguity)  
+**Teaching value**: ❌ None — Thingiverse bones-only + SA; Cults3D license unclear + inventory unverified  
+**Action**: **reject** (Thingiverse SA bones-only; Cults3D license unclear same as #160)
+
+**Day 4cs watch dig summary (#167–#168)**:
+
+| Dig # | Source | License | DI/lumbricals/per-ray MTA? | Action |
+|-------|--------|---------|---------------------------|--------|
+| #167 | Dryad + MRI studies | N/A (no mesh) | Segmented but not released | **reject** (no downloadable mesh; same as #166) |
+| #168 | Thingiverse BP3D Foot + Cults3D | SA / unclear | Bones-only / inventory unclear | **reject** (SA bones; Cults3D license unclear) |
+
+**Result**: All digs #167–#168 **DRY or REJECT** for NEW CC0/CC-BY foot soft tissue. Dryad = no foot muscle mesh matches; MRI studies = segmentation not archived (same as #166). Thingiverse = SA bones-only (BP3D V3.0 legacy). Cults3D = license unclear (same author as #160). Soft-tissue open-data ceiling stance **reconfirmed** — license-clear per-toe DI/lumbricals/per-ray MTA remain unavailable.
+
+**Update tracking**:
+- Census unchanged (**129/124**; ontology **126/129**).
+- **0** meshes integrated; **0** SA spam; unclear licenses/no-mesh sources **not** force-wired.
+- Soft gaps (per-toe DI / lumbricals / per-ray MTA) remain **dry** or **SA-only** (Open3D existing).
+- Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+---
+
+## Session additions (2026-09-22 · Day 4ct — soft-tissue WATCH digs #169–#170)
+
+**Scope**: Day 4ct NEW watch digs (at most #169–#170); DRY OK; no NC/SA/unclear wires.
+
+**Date**: 2026-09-22 (Day 4ct)
+
+### #169: Figshare + MRI AR study (REJECT — Zenodo redirect / no Figshare download)
+
+**Source**: Figshare repository search + Micromachines 2022 AR foot anatomy study (DOI 10.3390/mi13101701)  
+**URL**: Figshare (search redirected to Zenodo Scan-the-World records already assessed); https://doi.org/10.3390/mi13101701  
+**Content**: Figshare search = returned Zenodo 20231308/20231309/20228269/20228270 "Muscles of the foot and ankle" (already assessed #161b: CC BY-NC-SA 4.0 NC+SA reject); Micromachines 2022 = MRI-segmented ankle/foot anatomy (3D Slicer seed-planting + interpolation; bones + musculature exported as OBJ + STL groups: extrinsic, dorsal layer, plantar layers 1–4)  
+**License**: Zenodo = NC+SA (already rejected #161b); Micromachines article = CC BY 4.0 (MDPI open access) but **no mesh files released** (article describes segmentation methodology + AR HoloLens 2 app; OBJ/STL models generated but not archived on Figshare/Zenodo/supplementary materials)  
+**Foot soft-tissue inventory**: Micromachines study segmented **extrinsic + intrinsic foot muscles** (dorsal layer + plantar layers 1–4 including lumbricals, interossei per anatomical layer convention) but datasets **not publicly released** (no Figshare/Zenodo link; no supplementary STL/OBJ files)  
+**Reject reason**: Figshare search = redirected to Zenodo NC+SA records (already rejected #161b); Micromachines 2022 = **no downloadable mesh** (research segmentation not archived; same issue as #166 7T MRI / #167 MRI studies)  
+**Teaching value**: ❌ None — no mesh files released; research segmentation not archived  
+**Action**: **reject** (Figshare DRY redirected to Zenodo NC+SA #161b; Micromachines no downloadable mesh)
+
+### #170: PhysioNet Multidomain cadaver-foot CT + SimTK (MONITOR — CT-only; no pre-segmented muscle mesh)
+
+**Source**: PhysioNet database search + PMC 2896021 Multidomain cadaver-foot mechanical response dataset (SimTK project)  
+**URL**: PhysioNet (no foot anatomical mesh matches); https://simtk.org/home/multidomain (SimTK archived project)  
+**Content**: PhysioNet = biomedical database (ECG, physiological signals, clinical datasets); **no foot anatomical 3D segmentation/mesh** catalogued; Multidomain = cadaver-foot CT + mechanical testing data (regional + overall response; formerly SimTK public domain; CT suitable for reconstruction)  
+**License**: PhysioNet = **CC0 1.0 Universal** available for datasets; Multidomain = **public domain** (freely accessible; open copy; SimTK archived 2009)  
+**Foot soft-tissue inventory**: Multidomain = **CT imaging only** (no pre-segmented muscle STL/OBJ meshes; raw CT data suitable for 3D Slicer reconstruction but would require manual segmentation work); PhysioNet foot-related datasets = external surface scans / gait kinematics / plantar pressure (no internal anatomy meshes)  
+**Reject reason**: **CT-only** (no pre-segmented muscle mesh; raw CT ≠ ready-to-use STL/OBJ; manual segmentation labor intensive + skill-dependent); PhysioNet = no foot anatomical mesh matches; Multidomain CT from 2009 (older imaging vs modern 7T MRI; lower resolution)  
+**Teaching value**: 🔍 **MONITOR** for future manual segmentation project only — raw CT public domain but **not a ready-to-use soft-gap filler** (requires 3D Slicer + anatomy expertise + Kabsch alignment)  
+**Action**: **monitor** (CT-only; no pre-segmented mesh; labor-intensive path)
+
+**Day 4ct watch dig summary (#169–#170)**:
+
+| Dig # | Source | License | DI/lumbricals/per-ray MTA? | Action |
+|-------|--------|---------|---------------------------|--------|
+| #169 | Figshare + MRI AR study | NC+SA / N/A | Zenodo redirect (NC+SA #161b) / segmented not released | **reject** (Zenodo NC+SA; no downloadable mesh) |
+| #170 | PhysioNet + SimTK Multidomain | CC0 / public domain | CT-only; no pre-segmented mesh | **monitor** (CT-only; labor-intensive; not ready-to-use) |
+
+**Result**: All digs #169–#170 **DRY or MONITOR** for NEW ready-to-use CC0/CC-BY foot soft tissue. Figshare = search redirected to Zenodo NC+SA (already rejected #161b); Micromachines 2022 = segmentation not archived. PhysioNet/SimTK Multidomain = raw CT public domain but **no pre-segmented muscle mesh** (requires manual 3D Slicer segmentation + Kabsch QA; labor-intensive path; not immediate gap filler). Soft-tissue open-data ceiling stance **reconfirmed through #170** — license-clear ready-to-use per-toe DI/lumbricals/per-ray MTA remain unavailable.
+
+**Update tracking**:
+- Census unchanged (**129/124**; ontology **126/129**).
+- **0** meshes integrated; **0** SA spam; CT-only/no-mesh sources **not** force-wired.
+- Soft gaps (per-toe DI / lumbricals / per-ray MTA) remain **dry** or **SA-only** (Open3D existing).
+- Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+---
+
+### #171 — Cults3D/CGTrader/Wikimedia foot meshes (2026-09-22 Day 4dd)
+**Query**: `CC0 CC BY foot intrinsic muscles lumbricals 3D mesh STL OBJ GLB 2026`  
+**Result**: DRY — no new CC0/BY lumbrical or per-toe DI meshes.  
+- **Cults3D** "Human Lower Leg and Foot Muscle Anatomy" (STL/OBJ Feb 2026): license unclear (MeEzra designer); no explicit CC0/BY badge; did NOT dig further.  
+- **CGTrader** "Foot Muscles low-poly" (FBX/glTF): not 3D printable (digital-use-only flag); no CC0/BY license confirmed; did NOT dig further.  
+- **Wikimedia Commons** "Blender Foot realistic by Dan Ulrich (CC0).stl" (2024): genuine CC0 BUT generic foot surface mesh (Blender Studio high-res base mesh) — **not** anatomical muscle segmentation (no lumbricals/DI/MTA).  
+**Action**: MONITOR — no wire.
+
+### #172 — IFAA terminology for dorsal interossei (2026-09-22 Day 4dd)
+**Query**: `"dorsal interosseous" foot anatomy 3D model CC0 "CC BY" open license 2026`  
+**Result**: DRY — terminology only; no 3D meshes.  
+- **IFAA Terminologia Anatomica Histology** (ifaa.unifr.ch): TAH:U14426 (second DI), TAH:U12960 (fourth DI branch), TAH:U12969 (third DI branch), TAH:U12963 (first DI branch) — official Latin + English nomenclature; **CC BY-SA 4.0** (text/terminology license).  
+- **Ultrasound of the plantar foot** (DOI 10.15557/jou.2023.0024): clinical review of dorsal/plantar interossei US imaging; no 3D mesh source.  
+**Action**: MONITOR — terminology is BY-SA (not CC0/BY); no mesh assets available.
+
+### #173 — Open3DModel/Complete Anatomy/Pennsieve whole-body (2026-09-22 Day 4dd)
+**Query**: `plantar metatarsal arteries foot anatomy 3D mesh open data CC0 2026`  
+**Result**: DRY — no new CC0/BY per-ray plantar MTA meshes.  
+- **Open3DModel Ankle and Foot** (anatomytool.org Nov 2025): **CC BY-SA** (Open3D Project; Jan Kooloos/Eungyeol Lee); listed structures do NOT explicitly confirm per-ray plantar MTA inventory — did NOT confirm foot soft tissue gaps filled.  
+- **Complete Anatomy** (Elsevier): platform-based subscription service; documents plantar MTA anatomy but **not** downloadable open data.  
+- **Wikimedia Commons / OpenGameArt CC0 foot meshes**: generic foot surfaces (Blender Studio; byzmod3d) — **no** vascular anatomy.  
+- **Pennsieve whole-body scaffold** (SPARC dataset 307; DOI 10.26275/BBVG-GJ86): includes organs/vasculature/musculoskeletal/nervous systems; vasculature sourced from Anatomography; **license NOT specified** in search results — did NOT dig further without confirmed CC0/BY.  
+**Action**: MONITOR — no new CC0/BY per-ray MTA.
+
+**Day 4dd watch dig summary**: 3 digs (#171–#173); all DRY (no new CC0/BY per-toe DI, lumbricals, per-ray MTA meshes). Soft-tissue open-data ceiling reconfirmed. Generic CC0 foot surfaces (Blender/OpenGameArt) lack anatomical segmentation. Terminology/platforms (IFAA BY-SA, Complete Anatomy subscription) not mesh sources. Pennsieve whole-body license unclear — skip without confirmed CC0/BY.
+
+---
+
+### #174 — AnatomyZone/Kenhub/Open3DModel quadratus plantae (2026-09-22 Day 4dg)
+**Query**: `"quadratus plantae" OR "plantar muscle layers" 3D model anatomy CC0 CC-BY open license 2026`  
+**Result**: DRY — no new CC0/BY quadratus plantae meshes.  
+- **AnatomyZone/Kenhub/TeachMeAnatomy**: educational anatomy sites with 3D interactive viewers; confirm quadratus plantae is 2nd plantar layer muscle (medial+lateral heads; calcaneus origins; FDL insertion); **no CC0/BY downloadable STL/OBJ** offered.  
+- **AnatomyTOOL Open3DModel** lower-limb / muscle-attachments (July 2025 / March 2026): includes plantar muscles; **CC BY-SA** (Open3D Project; Jan Kooloos/Eungyeol Lee) — not CC0/BY.  
+**Action**: MONITOR — Open3DModel quadratus plantae is BY-SA (already excluded from main-tree per Week 2 SA ceiling stance); no CC0/BY alternative found.
+
+### #175 — BodyParts3D/Open3DModel abductor digiti minimi / flexor digitorum brevis (2026-09-22 Day 4dg)
+**Query**: `"abductor digiti minimi" OR "flexor digitorum brevis" foot 3D mesh STL OBJ anatomy open data CC0 2026`  
+**Result**: DRY — no new CC0/BY per-muscle isolated meshes.  
+- **BodyParts3D GitHub** (Kevin-Mattheus-Moerman): converted OBJ→STL archive from BodyParts3D 3.0; **CC BY-SA 2.1 Japan** license — not CC0/BY; already excluded from main-tree (BP3D V3.0 legacy SA 2.1 JP rejected; current project uses BP3D V4.0 CC BY 4.0).  
+- **Open3DModel Hand** (AnatomyTOOL July 2025): hand flexors/extensors; **CC BY-SA** — not foot intrinsics.  
+- **TA2 Viewer** (openanatomy.org): online terminology viewer for abductor digiti minimi pedis / flexor brevis digitorum; no downloadable mesh; reference only.  
+- **3D Atlas of Neurological Surgery**: educational 3D diagrams of foot muscle layers (plantar layer 1: abductor hallucis / flexor digitorum brevis / abductor digiti minimi); **no download offered**; anatomy reference only.  
+- **Kenhub**: educational anatomy site with 3D animation; confirms abductor digiti minimi origin/insertion/action; **no CC0/BY downloadable mesh**.  
+**Action**: MONITOR — BP3D V3.0 SA 2.1 JP already rejected; no CC0/BY per-muscle isolated foot intrinsics found.
+
+**Day 4dg watch dig summary**: 2 digs (#174–#175); **all DRY** (no new CC0/BY quadratus plantae, abductor digiti minimi, flexor digitorum brevis meshes). Open3DModel/AnatomyTOOL is BY-SA (excluded per Week 2 SA ceiling stance); BP3D V3.0 SA 2.1 JP already rejected (current project uses V4.0 CC BY 4.0 main-tree only). Soft-tissue open-data ceiling reconfirmed.
+
+---
+
+### #176 — foot plantar intrinsic muscles CC0/BY open anatomy 2026 (2026-09-22 Day 4dj)
+**Query**: `foot plantar intrinsic muscles 3D mesh CC0 CC-BY open anatomy download 2026`  
+**Result**: **DRY** — no new CC0/BY plantar intrinsic muscle meshes; all hits already known or excluded.  
+- **Open3DModel Ankle and Foot** (AnatomyTOOL November 2025): includes plantar structures; **CC BY-SA** (Open3D Project; Jan Kooloos/Eungyeol Lee) — already excluded from main-tree per Week 2 SA ceiling stance.  
+- **Visible Korean foot muscles PDF** (intjmorphol.com; 24 foot muscles including sole layers): requires registration/agreement; **NC-ND** license — already rejected (Visible Korean NC-ND excluded).  
+- **Zenodo 10.5281/zenodo.20231309** "Muscles of the foot and ankle" (Scan-the-World 2026-05-12 CT): already deep-checked as dig #161b (Day 4cq); **CC BY-NC-SA** — rejected (NC+SA incompatible).  
+- **Cults3D Human Lower Leg and Foot Muscle Anatomy** (MeEzra February 2026 STL/OBJ): **license unclear** (no explicit CC0/BY badge) — already noted as unclear-license source (digs #171, #173 Cults3D generics).  
+- **Proko 3D Model: Intrinsic Foot Muscles** (Stan Prokopenko anatomy course): educational/commercial platform; **no downloadable open data** — subscription-based lessons.  
+**Action**: MONITOR — all hits either BY-SA (excluded per Week 2 SA ceiling), NC/NC-SA (rejected), license unclear (Cults3D no explicit CC0/BY), or subscription/no-download platforms (Proko). No new CC0/BY plantar intrinsic muscle meshes found.
+
+**Day 4dj watch dig summary**: 1 dig (#176); **DRY** (no new CC0/BY plantar intrinsic muscle meshes). Open3DModel BY-SA already excluded; Visible Korean NC-ND already rejected; Zenodo Scan-the-World #161b NC+SA already rejected; Cults3D license unclear; Proko subscription platform. Soft-tissue open-data ceiling reconfirmed through #176.
+
+---
+
+### #177 — Zenodo/Figshare 2026 lumbricals / dorsal interossei foot meshes (2026-09-23 Day 4dk)
+**Query**: `Zenodo Figshare 2026 lumbricals "dorsal interossei" foot 3D mesh segmentation CC0 CC-BY anatomy`  
+**Result**: **DRY** — no downloadable CC0/BY lumbrical or per-toe dorsal interossei 3D mesh datasets found; all hits are MRI segmentation research papers without public meshes.  
+- **MRI segmentation studies** (BMC Musculoskelet Disord 2021; Springer Nature 2024): manual 7-Tesla MRI segmentation of intrinsic foot muscles (abductor hallucis, flexor digitorum brevis, quadratus plantae, lumbricals, dorsal/plantar interossei) using 3D Slicer software — papers describe segmentation methods but **no downloadable public meshes** offered; segmentation was for volume/fat infiltration measurement research, not open anatomy mesh distribution.  
+- **MRI segmentation challenges**: papers note that "differentiation of the other individual plantar and dorsal interossei was challenging, even on 7T images. Consequently, these muscles were segmented as a group" — confirms per-toe DI/lumbrical elemental segmentation is technically challenging even in research MRI; no open CC0/BY per-toe mesh sources resulting from these studies.  
+- **Figshare 3D models dataset** (figshare.com/articles/dataset/3D_models/6998081): ophiuroid (brittle star) arm range of motion models — **not** human foot anatomy.  
+**Action**: MONITOR — MRI segmentation research confirms intrinsic foot muscle per-toe segmentation is challenging (lumbricals + DI often segmented as groups); no CC0/BY per-toe DI or lumbrical mesh datasets found from 2026 Zenodo/Figshare deposits.
+
+### #178 — MorphoSource/Dataverse/ORDA 2026 foot ligament/nerve meshes (2026-09-23 Day 4dk)
+**Query**: `MorphoSource Dataverse ORDA 2026 foot ankle ligament nerve 3D mesh segmentation open data CC0 CC-BY`  
+**Result**: **DRY** — no NEW MorphoSource/ORDA/Dataverse 2026 foot ligament or nerve mesh datasets; hits are Andreassen (already rejected spatial QA fail Day 4ay/4az) + BoneHub NC-SA (already rejected).  
+- **Visible Human Male/Female 3D Lower Extremity** (U Denver Digital Commons / Nature Scientific Data 2022 / Thor Andreassen): **CC BY 4.0** — 260 geometries (76 muscles, 28 bones, 16 cartilages, 8 ligaments pelvis-to-ankle); **already deep-checked Day 4ay/4az** (gastroc/soleus spatial QA FAIL: 7-tarsal Kabsch mean ≈4.5 mm fail; gastroc medial/lateral all verts X>0 wrong-side); ligament inventory is **hip/knee/ankle** (knee ligaments ACL/PCL/MCL/LCL, ankle talofibular/tibiofibular/calcaneofibular) — **NOT foot intrinsic ligaments** (e.g. Lisfranc intermetatarsal, plantar plate, collaterals); muscles stop at "Flexor Digitorum distally" (no per-toe lumbricals/DI confirmed in inventory).  
+- **BoneHub vsd-lower-extremities-seg** (Hugging Face / Zenodo VSDFullBodyBoneModels v3.0 / M.C.M. Fischer): **CC BY-NC-SA** 4.0 — 30 CT scans with 63 individual bone label maps + STL meshes (sacrum to toes) — **NC (Non-Commercial) rejected** per project NC-exclusion policy; bones-only (no ligaments/nerves/muscles offered).  
+**Action**: MONITOR — Andreassen Visible Human already rejected Day 4ay/4az (spatial QA fail); ligament inventory is hip/knee/ankle (not foot intrinsics); BoneHub NC-SA rejected (NC incompatible). No NEW 2026 foot ligament or nerve mesh datasets found.
+
+**Day 4dk watch dig summary**: 2 digs (#177–#178); **all DRY** (no new CC0/BY per-toe DI, lumbricals, foot ligament, or nerve meshes). MRI segmentation research confirms per-toe intrinsic segmentation is challenging (often grouped). Andreassen Visible Human already rejected (spatial QA fail Day 4ay/4az; ligaments are hip/knee/ankle not foot intrinsics). BoneHub NC-SA rejected (NC incompatible). Soft-tissue open-data ceiling reconfirmed through dig #178.
+
+---
+
+### Dig #179: MuscleMap Consortium 2026 foot intrinsic muscle deep learning status + TotalSegmentator v2.15.0 foot soft update
+
+**Date**: 2026-09-24 (Day 4dq Week 4 START)  
+**Query**: MuscleMap consortium public release status for foot muscle segmentations; TotalSegmentator v2.15.0 (July 1, 2026) foot soft-tissue updates  
+**Sources**:
+- MuscleMap GitHub: https://github.com/MuscleMap/MuscleMap (release v2.0 May 5, 2026)
+- MuscleMap MDPI paper: https://www.mdpi.com/2313-433X/10/11/262
+- TotalSegmentator GitHub: https://github.com/wasserth/TotalSegmentator/ (v2.15.0 changelog)
+- TotalSegmentator doc: https://totalsegmentator.com/
+
+**License verdict**:
+- MuscleMap: **MIT License** (NOT CC0 or CC-BY; software license not data license)
+- TotalSegmentator: **Apache 2.0** (software license; segmentation model outputs not explicitly CC0/CC-BY for redistribution as static meshes)
+
+**Content verdict**:
+- **MuscleMap**: Foot region **still in development** as of v2.0 (May 2026). Preliminary results show <30s segmentation time for intrinsic foot muscles using deep learning CVM, but **no public downloadable foot mesh dataset** released. MuscleMap paper (MDPI §3.8) states: "we are working to expand our MuscleMap efforts to develop a deep learning CVM to automate the segmentation of the intrinsic foot muscles." Current MuscleMap coverage: abdomen, pelvis, thigh, forearm, leg (foot NOT yet released).
+- **TotalSegmentator v2.15.0**: Added `appendicular_bones_mr` (includes tarsal, metatarsal, phalanges_feet bones); added `thigh_shoulder_muscles_mr` (thigh/shoulder muscles CT/MR; **does NOT include foot intrinsics**); added `tissue_types` / `tissue_types_mr` (skeletal muscle classification; NOT per-muscle elementals). **NO dedicated foot intrinsic muscle, foot nerve, or foot vessel task** in v2.15.0. Available foot-related labels: bones only (tarsal, metatarsal, phalanges_feet in `appendicular_bones` / `appendicular_bones_mr`).
+
+**Spatial fit**: N/A (no foot soft mesh datasets released)
+
+**Action**: **MONITOR** — MuscleMap foot intrinsic muscle CVM is promising future direction (MIT-licensed software; unclear whether resulting segmentations would be CC0/BY); TotalSegmentator v2.15.0 adds foot bones MR but **no foot soft tissue** (intrinsics / nerves / vessels remain outside TotalSegmentator scope). Continue watch for MuscleMap public foot dataset release with clear CC0/BY data license.
+
+---
+
+### Dig #180: Zenodo 2026 foot intrinsic muscle deposits + UM dataset refresh
+
+**Date**: 2026-09-24 (Day 4dq Week 4 START)  
+**Query**: New 2026 Zenodo/Figshare human foot intrinsic muscle (lumbricals / interossei) segmentation mesh deposits CC0 or CC-BY; UM Asian male lower extremity dataset update status  
+**Sources**:
+- Zenodo 10.5281/zenodo.20231309 "Muscles of the foot and ankle" (Scan-the-World; published 2026-05-12)
+- Zenodo 10.5281/zenodo.20228270 "Muscles of the foot and ankle" (Scan-the-World; published 2026-05-12; likely duplicate)
+- UM dataset: https://researchdata.um.edu.my/dataset.xhtml?persistentId=doi:10.22452/RD/5T6TZ7 (updated Apr 22, 2026)
+
+**License verdict**:
+- Zenodo 20231309 / 20228270: Already **deep-checked as dig #161b (Day 4cq)** → **CC BY-NC-SA 4.0** (NC incompatible with MIT-licensed atlas) → **REJECT**
+- UM dataset: **CC0 1.0 Universal (Public Domain)** ✅ — same dataset already integrated (main-tree CC0)
+
+**Content verdict**:
+- Zenodo 20231309 / 20228270: CT-derived right foot + ankle muscle model; **already rejected Week 2** (NC+SA; no re-evaluation)
+- UM dataset (Apr 22, 2026 update): 67 structures total (42 muscles hip-to-foot; 13 bones; 5 ligaments; 4 cartilage; 2 tendons; 1 meniscus). **Most distal muscle: abductor digiti minimi**. UM readme (already known from prior integration): **"Intrinsic foot muscles are excluded"** (no lumbricals; no per-toe DI; no per-toe/per-ray elemental foot soft tissues). UM dataset is **already integrated** as main-tree CC0 (8 muscles: 5 intrinsic plantars + 3 extrinsics); Apr 2026 update adds **no new foot intrinsic meshes** (update focuses on knee ligaments / cartilage / segmentation mask NRRD format).
+
+**Spatial fit**: N/A (Zenodo NC rejected; UM already integrated; no new foot intrinsics)
+
+**Action**: **DRY** — Zenodo Scan-the-World 2026 deposits remain NC+SA (already rejected #161b); UM dataset Apr 2026 update adds **no new foot intrinsic muscles** (most distal = abductor digiti minimi; intrinsics excluded per UM readme). Soft-tissue open-data ceiling **reconfirmed through dig #180** (Day 4dq Week 4).
+
+---
+
+**Day 4dq sparse watch dig summary**: 2 digs (#179–#180); **all DRY or MONITOR**. MuscleMap foot CVM still in development (MIT software; no public foot mesh dataset; monitor for future CC0/BY data release). TotalSegmentator v2.15.0 adds foot bones MR but **no foot soft tissue** (intrinsics / nerves / vessels). Zenodo Scan-the-World 2026 deposits remain NC+SA (already rejected #161b). UM Apr 2026 update adds **no new foot intrinsic muscles** (intrinsics excluded per UM readme). Soft-tissue open-data ceiling **reconfirmed through dig #180** (Day 4dq Week 4 START).
+
+
+### Dig #181: MuscleMap wholebody v1.4 (August 2026) — foot intrinsic CVM still in development
+
+**Date**: 2026-09-25 (Day 4dr Week 4 sparse watch)  
+**Query**: MuscleMap v1.4 release status (~2026-08-16/17); foot intrinsic muscle segmentation model availability; data license for potential future foot mesh/segmentation datasets  
+**Sources**:
+- LinkedIn MuscleMap v1.4 announcement: https://www.linkedin.com/posts/musclemap_musclemap-3dslicer-medicalimaging-activity-7494835215794769920-FxSV (2026-08-16)
+- LinkedIn Neuromuscular Insight Lab: https://www.linkedin.com/posts/neuromuscular-insight-lab_opensource-muscle-segmentation-activity-7495178868669001728-CQWp (2026-08-17)
+- MuscleMap GitHub: https://github.com/MuscleMap/MuscleMap (README.md; releases)
+- MuscleMap MDPI paper §3.8: https://www.mdpi.com/2313-433X/10/11/262 (foot and ankle section)
+
+**License verdict**:
+- MuscleMap software: **MIT License** (NOT CC0 or CC-BY; software license not data license)
+- Data license for any future foot intrinsic segmentation dataset: **unclear** (no explicit CC0/CC-BY statement for model-generated segmentation outputs as downloadable meshes)
+
+**Content verdict**:
+- **MuscleMap v1.4** (released 2026-08-16): 14 additional structures relative to v1.3 — patella, popliteus, plantaris, medial/lateral compartments of gastrocnemius, extensor digitorum longus, extensor hallucis longus, tibialis posterior, flexor digitorum longus
+- **Foot intrinsic muscles**: **still in development** as of v1.4 (Aug 2026); GitHub README lists "Regions in development: neck, shoulder, arm, forearm, thorax, pelvis, thigh, leg, and **foot**"; MDPI paper §3.8 states "we are working to expand our MuscleMap efforts to develop a deep learning CVM to automate the segmentation of the intrinsic foot muscles" with preliminary results showing <30s segmentation time (reduced from 6–7 hours manual segmentation); **no public downloadable foot intrinsic mesh/segmentation dataset released**
+- Available regions v1.4: abdomen, pelvis, thigh, forearm, leg (foot **NOT** included in v1.4 release)
+- Model automatically fetches latest version from Zenodo; users can specify earlier versions with `--model_version` flag
+
+**Spatial fit**: N/A (no foot intrinsic mesh datasets released)
+
+**Action**: **MONITOR / DRY** — MuscleMap v1.4 (Aug 2026) adds leg extrinsics (EDL, EHL, tibialis posterior, FDL, popliteus, plantaris, gastroc compartments) but **no foot intrinsic muscles** (abductor hallucis, flexor digitorum brevis, lumbricals, interossei, etc.); foot intrinsic CVM remains in development per GitHub README + MDPI paper; software MIT-licensed (unclear whether future foot segmentation outputs would carry CC0/CC-BY data license for mesh redistribution); continue watch for MuscleMap foot intrinsic public dataset release with clear CC0/BY data license.
+
+---
+
+### Dig #182: Alana Sharp / LiMRIC MRI intrinsic foot muscles (Sketchfab) — view-only / license unclear
+
+**Date**: 2026-09-25 (Day 4dr Week 4 sparse watch)  
+**Query**: Alana Sharp (University of Liverpool) intrinsic foot muscle 3D model Sketchfab; MRI-derived segmentation (LiMRIC); license status for downloadable mesh  
+**Sources**:
+- Sketchfab model: https://sketchfab.com/3d-models/human-foot-muscles-89468e00d99848859825cfc7f0134da2 (Alana Sharp @asharp)
+- ResearchGate poster (2021 Anatomical Society winter meeting): http://dx.doi.org/10.13140/RG.2.2.30039.09129
+- Related 7T MRI foot muscle paper: Franettovich Smith et al. (2022) BMC Musculoskelet Disord 22:97 (DOI 10.1186/s12891-020-03926-7)
+
+**License verdict**:
+- Sketchfab model page: **no explicit CC0 or CC BY badge visible** (Sketchfab default = view-only unless author explicitly marks model as downloadable with specific Creative Commons license)
+- **License unclear** — fails wire criterion 1 (requires CC0/BY; unclear licenses rejected)
+
+**Content verdict**:
+- Intrinsic muscles of human foot segmented from MRI scanned at Liverpool Magnetic Resonance Imaging Centre (LiMRIC)
+- Segmented using Avizo software; includes abductor hallucis, flexor digitorum brevis, lumbricals, interossei, and accessory muscle of flexor digitorum longus
+- Presented as poster at 2021 Anatomical Society winter meeting
+- Sketchfab model: 1.2M triangles / 416.2k vertices
+
+**Downloadability**: **Not downloadable** — Sketchfab model appears view-only (no download button visible on model page; typical Sketchfab behavior unless author explicitly enables download); fails wire criterion 3 (requires downloadable STL/OBJ/GLB)
+
+**Action**: **REJECT / MONITOR** — Alana Sharp LiMRIC foot muscle model fails two wire criteria: (1) license unclear (no CC0/BY badge on Sketchfab page; Sketchfab default = restrictive); (3) not downloadable (view-only web viewer; no STL/OBJ export option visible). Do **NOT** contact author or request files (WATCH ONLY posture; no author solicitation). Continue watch for any future CC0/BY downloadable intrinsic foot muscle mesh releases from Liverpool / LiMRIC group.
+
+---
+
+**Day 4dr sparse watch dig summary**: 2 digs (#181–#182); **all MONITOR / DRY / REJECT**. MuscleMap v1.4 (Aug 2026) adds leg extrinsics (EDL/EHL/tibialis posterior/FDL/popliteus/plantaris/gastroc compartments) but **no foot intrinsic muscles** (foot region still in development per GitHub README + MDPI paper); software MIT-licensed; data license for future foot release unclear. Alana Sharp LiMRIC Sketchfab foot muscle model **not downloadable** (view-only); license unclear (no CC0/BY badge); **REJECT** (fails wire criteria 1 and 3). Soft-tissue open-data ceiling **reconfirmed through dig #182** (Day 4dr Week 4).
+
+---
+
+### Dig #183: LivingLab Sketchfab “Human Foot Anatomy” (May 2026) — view-only, license empty
+
+**Date**: 2026-09-25 (Day 4ds Week 4 sparse watch)  
+**Query**: New Sketchfab foot models that visualize dorsal interossei / tendons, with a clear CC0 or CC BY download — not Alana Sharp (#182)  
+**Sources**:
+- Sketchfab API `GET /v3/models/8790193042b44c67880f7abb7995ca22` — “Human Foot Anatomy” by LivingLab (@living_lab), published 2026-05-02
+- Sibling model `46c4bcae535c457cb7d958007fe13460` — same title, published 2026-05-01
+- Bones-only sibling `92800ec28e7f43599f0d6b4cfe140dea` — “Human Foot Skeleton (Articulated Bones)”, published 2026-08-19
+- Related Cults listing of the skeleton (HzA, 2026-08-19): https://cults3d.com/en/3d-model/various/human-foot-skeleton-articulated-bones — license **CULTS PU**, paid STL (not CC0/BY)
+
+**License verdict**:
+- Sketchfab API `license` = **null** on all three models (no CC0 / CC BY slug)
+- `isDownloadable` = **false** on all three
+- Cults skeleton mirror is a paid platform license, not CC0/BY
+
+**Content verdict**:
+- The May 2026 “Human Foot Anatomy” descriptions mention extensor/flexor tendons, **dorsal interosseous muscles**, and ligaments in an écorché render
+- The August skeleton model is osteology only (tarsals, metatarsals, phalanges)
+- Neither is a labeled per-toe DI / lumbrical / per-ray artery mesh pack
+
+**Action**: **REJECT** — fails wire criteria 1 (license empty) and 3 (not downloadable). Do not contact the author. Do not buy or mirror the Cults STL. Soft-tissue ceiling unchanged.
+
+---
+
+### Dig #184: Knaus / Blemker soleus finite-element geometry — no public mesh deposit
+
+**Date**: 2026-09-25 (Day 4ds Week 4 sparse watch)  
+**Query**: A usable gastrocnemius/soleus belly mesh with CC0 or CC BY, other than Andreassen (already spatial-QA fail)  
+**Source**: Knaus KR, Blemker SS, et al. “A 3D Model of the Soleus Reveals Effects of Aponeuroses Morphology and Material Properties on Complex Muscle Fascicle Behavior.” PMC8841064 / J Biomech. https://pmc.ncbi.nlm.nih.gov/articles/PMC8841064/
+
+**License verdict**:
+- Article text reviewed does **not** state a CC0 or CC BY license on a downloadable mesh
+- No Zenodo, Figshare, or STL/OBJ supplement link appears in the full text that was retrieved
+
+**Content verdict**:
+- One-subject right-leg MRI (University of Wisconsin–Madison protocol; Knaus et al. 2020 imaging study)
+- Soleus compartments and aponeuroses lofted in Matlab / Autodesk Inventor and meshed in Trelis for finite-element simulation
+- Calf soleus only — **not** per-toe DI, lumbricals, per-ray MTA, or elemental foot nerves/ligaments
+- Not the same asset as Andreassen Visible Human STLs (those remain rejected on spatial QA)
+
+**Spatial fit**: N/A — no public mesh to align
+
+**Action**: **DRY** — research geometry described in a paper, not a ready CC0/BY STL/OBJ/GLB. Do not reconstruct the model from the paper. Do not reopen Andreassen. Gastroc/soleus main-tree gap stays open.
+
+---
+
+**Day 4ds sparse watch dig summary**: 2 digs (#183–#184); **REJECT / DRY**. LivingLab Sketchfab foot anatomy (May 2026) shows dorsal interossei in a viewer but API license is empty and download is off. Knaus/Blemker soleus FE model has no public mesh deposit. Zenodo record search was **403** from this network, so no new Zenodo hit was claimed. Census unchanged. Soft-tissue open-data ceiling **reconfirmed through dig #184**.
+

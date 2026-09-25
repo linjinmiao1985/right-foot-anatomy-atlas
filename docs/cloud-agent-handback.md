@@ -1,3 +1,19 @@
+## Day 4bu status addendum (2026-09-22)
+
+Cloud Agent **continued** (PR #3 `cursor/week2-day4bm-ghost-opacity-096e` tip `66e1c81`). **Phase 8 target #1** (journal readiness): methods refresh — limitations table / license matrix / Kabsch residuals / soft-ceiling citation to phase-8; version bump **1.6**. **Target #2**: cloud-agent-handback refresh — current branch/PR #3 tip / census / known blockers (DI/MTA/nerve·lig/gastroc). **No** new meshes. Teaching atlas in progress — **not** clinical; **not** TA2-complete; **no finished-product claim**.
+
+## Day 4bo status addendum (2026-09-22)
+
+Cloud Agent **continued**. Teaching **quiz stub / 测验** UX (`Q` + hide names/search; prefs persist). Soft dig **#100–#107**. Soft gaps **still dry**. **0** mesh wire. Andreassen/Henson **not** force-wired. Teaching atlas in progress — **not** clinical; **not** TA2-complete; **no finished-product claim**.
+
+## Day 4bn status addendum (2026-09-21)
+
+Cloud Agent **continued**. Teaching **explode / 抽出** UX (`E` + per-layer +Y peel; prefs persist). Soft dig **#95–#99**. Soft gaps **still dry**. **0** mesh wire. Andreassen/Henson **not** force-wired. Teaching atlas in progress — **no finished-product claim**.
+
+## Day 4bm status addendum (2026-09-21)
+
+Cloud Agent **resumed** (`bc-25636a9a-…`). Teaching **ghost / 透视** UX (`G` + per-layer opacity; prefs persist). Soft dig **#90–#94**. Soft gaps **still dry**. **0** mesh wire. Andreassen/Henson **not** force-wired. Teaching atlas in progress — **no finished-product claim**.
+
 ## Day 4bl status addendum (2026-09-21)
 
 Soft dig **#84–#89** (ScanTW NC foot muscles; CRUS / Air-Sage UX-borrow SA; AnyBody proprietary; SimTK kul license opaque; CC0 outer-foot PLYs). Soft gaps **still dry**. **0** mesh wire. Cloud Agent reply still **usage-exhausted** — enable on-demand usage to relaunch `bc-4d6d86a7-…` or a new agent on `cursor/right-foot-anatomy-atlas-mvp-af85`. Teaching atlas in progress — **no finished-product claim**.
@@ -10,12 +26,33 @@ Docs-only soft dig **#77–#83** + `docs/belly-registration-alternatives.md` (wh
 
 Henson Sheffield **Option A** one-subject MC POC completed (`Aug_8`): surfaces OK; BP3D Achilles continuity sketch **FAIL** — **0** wire. See `docs/henson-sheffield-sandbox-feasibility.md` § Day 4bj + `third_party/henson-sheffield/poc_spatial_qa.json`. Andreassen still skipped. Soft gaps dry. Teaching atlas in progress — **no finished-product claim**.
 
-# Cloud Agent handback — Phase 7 resume brief
+# Cloud Agent handback — Phase 8 resume brief
 
-**Date**: 2026-09-15 · Day **4bh**  
-**Branch**: `cursor/right-foot-anatomy-atlas-mvp-af85`  
-**Status**: Teaching-grade atlas **in progress** — **not** a finished-product claim  
-**Companion**: `docs/phase-7-self-review.md`, `docs/cc0-soft-tissue-watchlist.md`, `third_party/andreassen/`
+**Date**: 2026-09-25 · Day **4ds** (Week 4 sparse soft watch #183–#184)  
+**Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3)  
+**HEAD tip**: `28b686a` (Day 4ds: digs #183–#184 REJECT/DRY; dig-range through #184)  
+**Status**: Week 4 sparse watch continued. Dig **#183 REJECT** (LivingLab Sketchfab Human Foot Anatomy, May 2026: API license empty, not downloadable). Dig **#184 DRY** (Knaus/Blemker soleus FE geometry: no public CC0/BY STL). Zenodo API returned 403 this session — no new Zenodo asset claimed. Census **129/124** unchanged. **MERGE-READY for teaching-grade** if disclosed gaps accepted — **NOT** finished/clinical/TA2-complete  
+**Companion**: `docs/week4-roadmap.md`, `docs/week2-soft-ceiling-memo.md` (digs through #184), `docs/phase-8-self-review.md` (Week 3 section), `docs/week3-expert-self-audit.md`
+
+---
+
+## Week 2 Journal-Readiness Summary (Day 4cv–4dd · 2026-09-22)
+
+**Documentation refreshed for journal/expert review:**
+- **methods.md**: limitations table enhanced (soft-ceiling row #1–#170; ontology empties 3 detailed); license matrix added (53/124 main 43% vs 71/124 BY-SA 57%); journal-figure-captions cross-link
+- **expert-review-checklist.md v3.0**: teaching-useful/incomplete stance; methods/soft-ceiling-memo links; pass/fail criteria (bones 26/26; Kabsch teaching-grade; BY-SA 71/124; grouped DI/MTA teaching compromises; ontology 126/129)
+- **journal-figure-captions.md**: 7 bilingual teaching figure stubs (bones/layers-ghost/explode/BY-SA-isolate/soft-ceiling-grouped-DI-MTA/ontology-empties/Kabsch-residuals; 1–2 sentence ZH+EN; honesty: not clinical / teaching compromises)
+- **README.md**: Limitations synced (license mix ≈53/71 of 124; soft-ceiling #1–#173 DRY; teaching compromises; no finished/clinical/TA2-complete claims); Documentation section links journal-figure-captions
+- **StructurePanel/footer UI**: BY-SA labels clear; census hint ≈53 主树 / ≈71 BY-SA of 124 unique
+- **Soft-tissue watch digs #171–#173** (Day 4dd sparse): Cults3D/CGTrader/Wikimedia generic (#171 DRY); IFAA terminology BY-SA (#172 DRY); Open3DModel/Complete Anatomy/Pennsieve (#173 DRY) — **all DRY** (no new CC0/BY per-toe DI/lumbricals/per-ray MTA)
+
+**Verification**: npm test 138/138 ✓; integrity-audit 0 violations ✓; npm run build ✓
+
+**Census**: unchanged (129/124 entries/unique; 126/129 ontology citable; 53 main-tree / 71 BY-SA; 134 GLB)
+
+**Bottom line**: Week 2 journal-readiness polish complete (methods/expert-checklist/journal-captions/README/UI synced; soft digs #147–#173 watch-only DRY). Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+---
 
 ---
 
@@ -31,7 +68,7 @@ Prefer **CC0 / CC BY** over further ShareAlike volume. Update census in README /
 
 ---
 
-## Live census freeze (unchanged through Day 4bh)
+## Live census freeze (unchanged through Day 4bu / Phase 8)
 
 | Metric | Value |
 |--------|-------|
@@ -39,8 +76,9 @@ Prefer **CC0 / CC BY** over further ShareAlike volume. Update census in README /
 | Main-tree / BY-SA | **53** / **71** |
 | Ontology citable | **126** / **129** (3 honest empties) |
 | Discrete GLBs | **134** (~59 main + ~75 `by-sa/`) |
+| Open mining | Through **#135** (Day 4bs; digs #115–#135 all dry) |
 
-Osteology complete (26/26). Soft tissue **teaching-useful and incomplete**.
+Osteology complete (26/26). Soft tissue **teaching-useful and incomplete**. Soft-tissue open-data ceiling largely reached.
 
 ---
 
@@ -112,9 +150,9 @@ Osteology complete (26/26). Soft tissue **teaching-useful and incomplete**.
 
 ## Suggested next agent priorities (pick one; quality over volume)
 
-1. **CC0/BY soft dig** against `docs/cc0-soft-tissue-watchlist.md` (DI, per-ray MTA, nerve/ligament main-tree replacements) — integrate **only** with spatial QA pass.
-2. **Journal readiness polish** — keep methods / expert-review checklist synced; no hype; no TA2-complete claim.
-3. **UX teaching polish** — accessibility / prefs / help sheet only if a concrete gap is named; avoid SA mesh spam.
+1. **Watch-only soft dig** — monitor new open CT foot soft segmentations; soft-tissue open-data ceiling largely reached (digs #115–#135 all dry); integrate **only** with spatial QA pass; **0 wire expected**.
+2. **Journal readiness polish** — keep methods / expert-review checklist / README synced; no hype; no TA2-complete claim. **Phase 8 target**.
+3. **UX teaching polish (largely complete)** — Day **4bm** shipped layer ghost / 透视 (`G`); Day **4bn** shipped layer explode / 抽出 (`E`); Day **4bo** shipped quiz stub / 测验 (`Q`); keyboard help / prefs persist / camera presets / clip / hide all live.
 4. **Alternate belly registration research** (docs-only until QA-ready) — TPS / two-stage proximal–distal / BP3D-native donors — not force Kabsch.
 
 ---

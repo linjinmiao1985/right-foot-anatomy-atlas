@@ -62,6 +62,9 @@ Interactive web-based teaching atlas for right foot anatomy.
 - **Label density**: hover chips 关 / 中文 / 中+拉 (Day 4ai)
 - **Sagittal clip (lite)**: single X-axis teaching cutaway + slider — **not** clinical MPR (Day 4aj)
 - **Camera presets**: 默认 / 背侧 / 跖侧 / 内侧 / 外侧 (keys `1`–`5`) — plantar sole view enabled (Day 4an)
+- **Teaching ghost / 透视**: per-layer opacity + `G` toggle (muscle/ligament/vessel fade; osteology stays solid) — classroom translucency, **not** clinical X-ray (Day 4bm)
+- **Teaching explode / 抽出**: per-layer +Y peel + `E` toggle (osteology stays the anchor) — classroom sandwich, **not** surgical dissection (Day 4bn)
+- **Teaching quiz stub / 测验**: hide names/search + `Q` toggle — classroom self-test, **not** Anki / exam (Day 4bo)
 - **Keyboard help overlay**: `?` / `H` or title **? 帮助** — bilingual shortcut sheet (Day 4ao); Esc closes help first
 - **Teaching prefs persist**: localStorage restores layer visibility, label density, sagittal clip, last camera preset (Day 4ap; teaching chrome only)
 - **Ontology IDs (partial)**: StructurePanel shows TA2 / FMA / BP when mapped (`src/lib/ontologyIds.ts`); honest empty when unknown (Day 4aq)
@@ -71,7 +74,7 @@ Interactive web-based teaching atlas for right foot anatomy.
 - **OrbitControls**: Zoom, rotate, pan around foot (full polar range for plantar teaching)
 - **Loading states**: Progress indicators for GLB assets
 - **Per-structure hide**: Hide this (X) chip beyond isolate; restore chips for hidden names; ids persist in teaching prefs (Day 4au/4av; undergravity UX-borrow)
-- **Keyboard**: `?`/`H` help · `1`–`5` view presets · `I` isolate · `X` hide this · `Esc` closes help or clears selection + isolate + search (**not** per-structure hides — those persist in teaching prefs)
+- **Keyboard**: `?`/`H` help · `1`–`5` view presets · `G` 透视/实心 · `E` 抽出/合拢 · `Q` 测验/对照 · `I` isolate · `X` hide this · `Esc` closes help or clears selection + isolate + search (**not** per-structure hides — those persist in teaching prefs)
 - **Search**: bilingual ZH/LA includes ligament/tendon entries (e.g. 跖长韧带, 跟腱); results sorted by teaching layer after match score
 - **Screenshot pack** (optional): `npm run screenshots` → `docs/screenshots/` (teaching QA; not a product gallery)
 
@@ -178,7 +181,8 @@ Open `http://localhost:5173` to view the atlas.
 ## Limitations
 
 ### Anatomical
-- **BY-SA soft tissue**: DI + proximal PTA/fibular are Open3D ShareAlike fills (prefer future CC0/CC BY)
+- **License mix**: Code MIT; assets ≈**53/124 unique** main-tree (CC BY 4.0 BP3D + CC0 UM) / ≈**71/124 unique** BY-SA isolate (`by-sa/` directory) — teaching trade-off; prefer future CC0/BY replacements (详见 `docs/methods.md` license matrix + `docs/expert-review-checklist.md` v3.0)
+- **Soft-tissue open-data ceiling**: Exhaustive search (#1–#184 verified projects Day 4cl–4ds Week 2–4) found CC0/BY alternatives for per-toe DI, lumbricals, per-ray MTA, nerve/ligament main-tree replacements, gastroc/soleus bellies **dry** — **teaching compromises** accepted ShareAlike volume over incomplete coverage (详见 **`docs/week2-soft-ceiling-memo.md`**). **Grouped structures** (DI 1st–4th combined, dorsal/plantar MTA all rays) are **teaching compromises** (教学妥协), **not** per-toe/per-ray elemental atlases.
 - **Ligament / fascia / tendon**: BP3D long plantar + Achilles; Open3D BY-SA **27** teaching meshes; further tarsal/toe bands still missing — **teaching-useful, not a finished ligament atlas**
 - **Vessel fine detail**: Per-toe digital splits not available as separate BP3D meshes (honest grouped instead)
 - **Nerve geometry**: Z-Anatomy CURVE tubes + Open3D volumetric fine branches (teaching-grade; commons/proprii grouped)
@@ -186,7 +190,8 @@ Open `http://localhost:5173` to view the atlas.
 
 ### Technical
 - **Not patient-specific**: Teaching-grade generic anatomy (not CT/MRI-derived)
-- **Not validated for surgery**: Educational tool, not surgical planning software
+- **Not validated for surgery**: Educational tool, **not** surgical planning / navigation / implant sizing / clinical diagnosis software
+- **Teaching atlas in progress**: **Not** TA2-complete soft tissue; **not** a finished product; **not** clinical-grade (详见 `docs/expert-review-checklist.md` v3.0 disclaimers)
 - **ShareAlike module**: BY-SA 4.0 applies only to `by-sa/` directory (opt-in via layer toggles)
 - **Asset load**: **134** discrete GLBs (~13 MB; 59 main + 75 `by-sa/`). Visibility-gated mount; bones eager-preload; other layers lazy-preload when toggled visible — **not** a single Draco pack
 
@@ -198,10 +203,15 @@ Open `http://localhost:5173` to view the atlas.
 - **Implementation Plan**: `docs/superpowers/plans/2026-09-14-right-foot-anatomy-atlas.md`
 - **Asset Research**: `docs/assets-research-round2.md` (≥12 sources compared)
 - **Terminology**: `docs/terminology.md` (TA2 Latin + PRC Chinese standards)
-- **Methods**: `docs/methods.md` (data sources, extraction, journal-facing limitations table)
+- **Methods**: `docs/methods.md` (data sources, extraction, journal-facing limitations table + license matrix Day 4cv + **Table 1: Kabsch Co-Registration Residuals** Day 4dh)
+- **Expert Review Checklist**: `docs/expert-review-checklist.md` v3.0 (Day 4cw: teaching-grade QA; grouped DI/MTA teaching compromises; soft-ceiling memo links; pass/fail criteria)
+- **Week 3 Expert Self-Audit**: `docs/week3-expert-self-audit.md` (Day 4dl: systematic checklist v3.0 self-audit; 73 items: 58 PASS / 12 PARTIAL disclosed teaching-useful incomplete / 0 FAIL; teaching-grade pass bar ✅ PASS)
+- **Week 3 Roadmap**: `docs/week3-roadmap.md` (Day 4dk: soft-ceiling honesty / quality targets no-new-meshes / research tracks / explicit non-goals)
+- **Soft-Ceiling Memo**: `docs/week2-soft-ceiling-memo.md` (exhaustive search #1–#184; NC/SA/unclear rejects; teaching compromises stance)
+- **Journal Figure Captions**: `docs/journal-figure-captions.md` (bilingual teaching figure stubs: bones/layers/explode/BY-SA-isolate/soft-ceiling-grouped-DI-MTA/ontology-empties/Kabsch-residuals; Day 4db)
 - **Contributing**: `CONTRIBUTING.md` (license boundaries, NC-trap exclusions)
 - **Spatial Alignment QA**: `docs/spatial-alignment-qa.md` (0.01 scale verification)
-- **Phase 6 self-review**: `docs/phase-6-self-review.md` (census, UX inventory, open-data ceilings)
+- **Phase 8 self-review**: `docs/phase-8-self-review.md` (Week 2 quality checkpoint Day 4cu; census 129/124; UX inventory; soft-ceiling #147–#170 DRY)
 - **Screenshots** (optional QA pack, embedded above): `docs/screenshots/` via `npm run screenshots` — not a product gallery
 
 ---
@@ -259,7 +269,7 @@ See `CONTRIBUTING.md` for:
 
 ---
 
-**Project Status**: Teaching-grade atlas in progress (Week 2 / Phase 6) — **not a finished product**  
+**Project Status**: Teaching-grade atlas in progress (Week 2 / Phase 8) — **not a finished product**  
 **Coverage**: **124** unique / **129** entries; main **53** vs BY-SA **71**; ligament/tendon teaching-useful but incomplete (BP3D 1+1 + Open3D 27)  
-**Self-review**: `docs/phase-6-self-review.md`  
+**Self-review**: `docs/phase-8-self-review.md` (quality-week checkpoint; soft-tissue open-data ceiling)  
 **Repository**: https://github.com/linjinmiao1985/right-foot-anatomy-atlas

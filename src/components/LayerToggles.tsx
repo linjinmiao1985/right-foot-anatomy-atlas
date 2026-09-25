@@ -13,6 +13,26 @@ import {
   DEFAULT_CLIP_CONSTANT,
 } from '../lib/clipPlane';
 import { CAMERA_PRESETS, type CameraPresetId } from '../lib/cameraPresets';
+import {
+  LAYER_OPACITY_MAX,
+  LAYER_OPACITY_MIN,
+  LAYER_OPACITY_STEP,
+  clampLayerOpacity,
+  isGhostLayerOpacities,
+  isSolidLayerOpacities,
+  MASTER_GHOST_OPACITY_MIN,
+  MASTER_GHOST_OPACITY_MAX,
+  MASTER_GHOST_OPACITY_STEP,
+  clampMasterGhostOpacity,
+} from '../lib/layerOpacity';
+import {
+  EXPLODE_AMOUNT_MAX,
+  EXPLODE_AMOUNT_MIN,
+  EXPLODE_AMOUNT_STEP,
+  clampExplodeAmount,
+  isAssembledExplode,
+  isExplodePreset,
+} from '../lib/layerExplode';
 
 interface LayerTogglesProps {
   visibleLayers: Set<Layer>;
@@ -37,6 +57,18 @@ interface LayerTogglesProps {
   onClipConstantChange: (constant: number) => void;
   cameraPresetId: CameraPresetId;
   onCameraPresetChange: (id: CameraPresetId) => void;
+  layerOpacities: Record<Layer, number>;
+  onLayerOpacityChange: (layer: Layer, opacity: number) => void;
+  masterGhostOpacity: number;
+  onMasterGhostOpacityChange: (scale: number) => void;
+  onGhostPreset: () => void;
+  onSolidPreset: () => void;
+  explodeAmount: number;
+  onExplodeAmountChange: (amount: number) => void;
+  onExplodePreset: () => void;
+  onAssemblePreset: () => void;
+  quizMode: boolean;
+  onQuizModeChange: (on: boolean) => void;
 }
 
 /**
@@ -68,8 +100,24 @@ export default function LayerToggles({
   onClipConstantChange,
   cameraPresetId,
   onCameraPresetChange,
+  layerOpacities,
+  onLayerOpacityChange,
+  masterGhostOpacity,
+  onMasterGhostOpacityChange,
+  onGhostPreset,
+  onSolidPreset,
+  explodeAmount,
+  onExplodeAmountChange,
+  onExplodePreset,
+  onAssemblePreset,
+  quizMode,
+  onQuizModeChange,
 }: LayerTogglesProps) {
   const layers = getAllLayers();
+  const ghostOn = isGhostLayerOpacities(layerOpacities);
+  const solidOn = isSolidLayerOpacities(layerOpacities);
+  const explodeOn = isExplodePreset(explodeAmount);
+  const assembledOn = isAssembledExplode(explodeAmount);
 
   return (
     <div
@@ -82,9 +130,10 @@ export default function LayerToggles({
         borderRadius: '8px',
         padding: '16px',
         minWidth: '240px',
+        maxWidth: '300px',
         maxHeight: 'calc(100vh - 100px)',
         overflowY: 'auto',
-        zIndex: 100,
+        zIndex: 110,
       }}
       role="region"
       aria-label="图层与图例"
@@ -279,6 +328,286 @@ export default function LayerToggles({
         </label>
         <div style={{ fontSize: '9px', color: '#777', marginTop: '4px', lineHeight: 1.35 }}>
           单轴教学切面（非临床 MPR）。默认中足 X≈−{DEFAULT_CLIP_CONSTANT.toFixed(2)}（场景单位）。
+        </div>
+      </div>
+
+      <div
+        style={{
+          marginBottom: '12px',
+          padding: '8px',
+          background: ghostOn ? 'rgba(56, 189, 248, 0.12)' : 'rgba(68, 68, 68, 0.35)',
+          border: ghostOn ? '1px solid rgba(56, 189, 248, 0.45)' : '1px solid #444',
+          borderRadius: '6px',
+        }}
+        role="group"
+        aria-label="教学透视 Ghost opacity"
+        data-testid="teaching-ghost"
+        title="UX-borrow: Air-Sage 透视 + Z-Anatomy Atlas G-ghost habit (ideas only) — not clinical X-ray"
+      >
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '6px' }}>
+          <div style={{ fontSize: '11px', fontWeight: 600, color: '#d6d3d1' }}>
+            透视 · Ghost
+            <span style={{ fontWeight: 400, color: '#888', marginLeft: '6px' }}>G</span>
+          </div>
+          <div style={{ display: 'flex', gap: '4px' }}>
+            <button
+              type="button"
+              data-ghost-preset="true"
+              onClick={onGhostPreset}
+              aria-pressed={ghostOn}
+              title="软组织半透明，便于看骨（教学透视，非临床透视）"
+              style={{
+                padding: '3px 8px',
+                fontSize: '11px',
+                cursor: 'pointer',
+                borderRadius: '4px',
+                border: ghostOn ? '1px solid #38bdf8' : '1px solid #555',
+                background: ghostOn ? 'rgba(56, 189, 248, 0.3)' : '#333',
+                color: ghostOn ? '#e0f2fe' : '#ccc',
+              }}
+            >
+              透视
+            </button>
+            <button
+              type="button"
+              data-ghost-solid="true"
+              onClick={onSolidPreset}
+              aria-pressed={solidOn}
+              title="各层不透明（默认）"
+              style={{
+                padding: '3px 8px',
+                fontSize: '11px',
+                cursor: 'pointer',
+                borderRadius: '4px',
+                border: solidOn ? '1px solid #38bdf8' : '1px solid #555',
+                background: solidOn ? 'rgba(56, 189, 248, 0.3)' : '#333',
+                color: solidOn ? '#e0f2fe' : '#ccc',
+              }}
+            >
+              实心
+            </button>
+          </div>
+        </div>
+        <label
+          style={{
+            display: 'block',
+            fontSize: '11px',
+            color: '#e0f2fe',
+            marginBottom: '8px',
+            paddingBottom: '8px',
+            borderBottom: '1px solid rgba(56, 189, 248, 0.25)',
+          }}
+        >
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '4px' }}>
+            <span>主透明度 · Master</span>
+            <span style={{ fontVariantNumeric: 'tabular-nums', color: '#7dd3fc', fontSize: '10px' }}>
+              {masterGhostOpacity.toFixed(2)}
+            </span>
+          </div>
+          <input
+            type="range"
+            min={MASTER_GHOST_OPACITY_MIN}
+            max={MASTER_GHOST_OPACITY_MAX}
+            step={MASTER_GHOST_OPACITY_STEP}
+            value={masterGhostOpacity}
+            onChange={(e) =>
+              onMasterGhostOpacityChange(clampMasterGhostOpacity(Number(e.target.value)))
+            }
+            aria-label="主透明度 Master ghost opacity"
+            data-master-ghost-opacity="true"
+            style={{ width: '100%', cursor: 'pointer' }}
+            title="统一调节所有软组织层透明度（骨层保持实心）— 教学便利性"
+          />
+        </label>
+        {layers.map((layer) => {
+          const config = LAYER_CONFIG[layer];
+          const value = layerOpacities[layer];
+          return (
+            <label
+              key={layer}
+              style={{
+                display: 'block',
+                fontSize: '10px',
+                color: '#9ca3af',
+                marginBottom: '4px',
+              }}
+            >
+              {config.label}
+              <span style={{ marginLeft: '6px', fontVariantNumeric: 'tabular-nums', color: '#7dd3fc' }}>
+                {value.toFixed(2)}
+              </span>
+              <input
+                type="range"
+                min={LAYER_OPACITY_MIN}
+                max={LAYER_OPACITY_MAX}
+                step={LAYER_OPACITY_STEP}
+                value={value}
+                onChange={(e) =>
+                  onLayerOpacityChange(layer, clampLayerOpacity(Number(e.target.value)))
+                }
+                aria-label={`${config.label} ${config.labelEn} opacity`}
+                data-layer-opacity={layer}
+                style={{ width: '100%', marginTop: '2px', cursor: 'pointer' }}
+              />
+            </label>
+          );
+        })}
+        <div style={{ fontSize: '9px', color: '#777', marginTop: '4px', lineHeight: 1.35 }}>
+          主透明度统调所有软组织；逐层滑块可微调。教学透视，<strong>非</strong>临床 X 线 / 透视。
+        </div>
+      </div>
+
+      <div
+        style={{
+          marginBottom: '12px',
+          padding: '8px',
+          background: explodeOn || (!assembledOn && explodeAmount > 0)
+            ? 'rgba(251, 191, 36, 0.12)'
+            : 'rgba(68, 68, 68, 0.35)',
+          border:
+            explodeOn || (!assembledOn && explodeAmount > 0)
+              ? '1px solid rgba(251, 191, 36, 0.45)'
+              : '1px solid #444',
+          borderRadius: '6px',
+        }}
+        role="group"
+        aria-label="教学抽出 Explode layers"
+        data-testid="teaching-explode"
+        title="UX-borrow: Air-Sage 抽出 + Human Atlas explode (ideas only) — not surgical dissection"
+      >
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '6px' }}>
+          <div style={{ fontSize: '11px', fontWeight: 600, color: '#d6d3d1' }}>
+            抽出 · Explode
+            <span style={{ fontWeight: 400, color: '#888', marginLeft: '6px' }}>E</span>
+          </div>
+        </div>
+        <div style={{ display: 'flex', gap: '4px', marginBottom: '6px' }}>
+            <button
+              type="button"
+              data-explode-preset="true"
+              onClick={onExplodePreset}
+              aria-pressed={explodeOn}
+              title="按层沿 +Y 分开，便于看夹层（教学抽出，非手术剥离）"
+              style={{
+                flex: 1,
+                padding: '3px 8px',
+                fontSize: '11px',
+                cursor: 'pointer',
+                borderRadius: '4px',
+                border: explodeOn ? '1px solid #fbbf24' : '1px solid #555',
+                background: explodeOn ? 'rgba(251, 191, 36, 0.3)' : '#333',
+                color: explodeOn ? '#fef3c7' : '#ccc',
+              }}
+            >
+              抽出
+            </button>
+            <button
+              type="button"
+              data-explode-assemble="true"
+              onClick={onAssemblePreset}
+              aria-pressed={assembledOn}
+              title="合拢各层（默认）"
+              style={{
+                flex: 1,
+                padding: '3px 8px',
+                fontSize: '11px',
+                cursor: 'pointer',
+                borderRadius: '4px',
+                border: assembledOn ? '1px solid #fbbf24' : '1px solid #555',
+                background: assembledOn ? 'rgba(251, 191, 36, 0.3)' : '#333',
+                color: assembledOn ? '#fef3c7' : '#ccc',
+              }}
+            >
+              合拢
+            </button>
+        </div>
+        <label
+          style={{
+            display: 'block',
+            fontSize: '10px',
+            color: '#9ca3af',
+          }}
+        >
+          幅度 · Amount
+          <span style={{ marginLeft: '6px', fontVariantNumeric: 'tabular-nums', color: '#fcd34d' }}>
+            {explodeAmount.toFixed(2)}
+          </span>
+          <input
+            type="range"
+            min={EXPLODE_AMOUNT_MIN}
+            max={EXPLODE_AMOUNT_MAX}
+            step={EXPLODE_AMOUNT_STEP}
+            value={explodeAmount}
+            onChange={(e) => onExplodeAmountChange(clampExplodeAmount(Number(e.target.value)))}
+            aria-label="教学抽出幅度 Explode amount"
+            data-explode-amount="true"
+            style={{ width: '100%', marginTop: '4px', cursor: 'pointer' }}
+          />
+        </label>
+        <div style={{ fontSize: '9px', color: '#777', marginTop: '4px', lineHeight: 1.35 }}>
+          骨为锚，韧带/肌/血管/神经沿 +Y 分层。教学抽出，<strong>非</strong>手术剥离。
+        </div>
+      </div>
+
+      <div
+        style={{
+          marginBottom: '12px',
+          padding: '8px',
+          background: quizMode ? 'rgba(244, 114, 182, 0.12)' : 'rgba(68, 68, 68, 0.35)',
+          border: quizMode ? '1px solid rgba(244, 114, 182, 0.45)' : '1px solid #444',
+          borderRadius: '6px',
+        }}
+        role="group"
+        aria-label="教学测验 Quiz stub"
+        data-testid="teaching-quiz"
+        title="UX-borrow: Grypa-JJ quiz + MedicalPlab tutor→viewport (ideas only) — not Anki / exam"
+      >
+        <div style={{ fontSize: '11px', fontWeight: 600, color: '#d6d3d1', marginBottom: '6px' }}>
+          测验 · Quiz
+          <span style={{ fontWeight: 400, color: '#888', marginLeft: '6px' }}>Q</span>
+        </div>
+        <div style={{ display: 'flex', gap: '4px', marginBottom: '6px' }}>
+          <button
+            type="button"
+            data-quiz-on="true"
+            onClick={() => onQuizModeChange(true)}
+            aria-pressed={quizMode}
+            title="隐藏名称，按网格+图层识别（教学测验 stub，非考试）"
+            style={{
+              flex: 1,
+              padding: '3px 8px',
+              fontSize: '11px',
+              cursor: 'pointer',
+              borderRadius: '4px',
+              border: quizMode ? '1px solid #f9a8d4' : '1px solid #555',
+              background: quizMode ? 'rgba(244, 114, 182, 0.3)' : '#333',
+              color: quizMode ? '#fce7f3' : '#ccc',
+            }}
+          >
+            测验
+          </button>
+          <button
+            type="button"
+            data-quiz-off="true"
+            onClick={() => onQuizModeChange(false)}
+            aria-pressed={!quizMode}
+            title="显示名称（对照）"
+            style={{
+              flex: 1,
+              padding: '3px 8px',
+              fontSize: '11px',
+              cursor: 'pointer',
+              borderRadius: '4px',
+              border: !quizMode ? '1px solid #f9a8d4' : '1px solid #555',
+              background: !quizMode ? 'rgba(244, 114, 182, 0.3)' : '#333',
+              color: !quizMode ? '#fce7f3' : '#ccc',
+            }}
+          >
+            对照
+          </button>
+        </div>
+        <div style={{ fontSize: '9px', color: '#777', lineHeight: 1.35 }}>
+          隐藏中/拉名称与检索。教学测验 stub，<strong>非</strong> Anki / 考试 / 成品。
         </div>
       </div>
 

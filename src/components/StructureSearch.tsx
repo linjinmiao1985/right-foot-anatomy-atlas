@@ -54,6 +54,19 @@ export default function StructureSearch({ onSelect, clearSignal = 0 }: Structure
           // delay so click on result registers
           window.setTimeout(() => setOpen(false), 150);
         }}
+        onKeyDown={(e) => {
+          // Escape: clear query if present, else blur (standard search UX)
+          if (e.key === 'Escape') {
+            if (query.trim()) {
+              setQuery('');
+              setOpen(false);
+            } else {
+              e.currentTarget.blur();
+            }
+            e.preventDefault();
+            e.stopPropagation();
+          }
+        }}
         style={{
           width: '100%',
           boxSizing: 'border-box',
@@ -81,7 +94,21 @@ export default function StructureSearch({ onSelect, clearSignal = 0 }: Structure
           }}
         >
           {results.length === 0 ? (
-            <li style={{ padding: '10px 12px', fontSize: '12px', color: '#888' }}>无匹配</li>
+            <li
+              style={{
+                padding: '12px 12px',
+                fontSize: '12px',
+                color: '#999',
+                lineHeight: '1.5',
+              }}
+              role="status"
+              aria-live="polite"
+            >
+              <div style={{ marginBottom: '4px', color: '#d0d0d0' }}>无匹配结果</div>
+              <div style={{ fontSize: '11px', color: '#777' }}>
+                No matching structures · Try Chinese or Latin names
+              </div>
+            </li>
           ) : (
             results.map((s) => (
               <li key={s.id}>

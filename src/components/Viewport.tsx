@@ -39,6 +39,14 @@ interface ViewportProps {
   cameraPresetToken?: number;
   /** Per-structure hide set (beyond isolate). */
   hiddenStructureIds?: Set<string>;
+  /** Per-layer opacity multiplier (教学透视). */
+  layerOpacities?: Record<Layer, number>;
+  /** Teaching explode / 抽出 (0 assembled). */
+  explodeAmount?: number;
+  /** User prefers reduced motion (WCAG accessibility). */
+  reducedMotion?: boolean;
+  /** Teaching quiz stub — hide hover names. */
+  quizMode?: boolean;
 }
 
 export default function Viewport({
@@ -56,6 +64,10 @@ export default function Viewport({
   cameraPresetId = DEFAULT_CAMERA_PRESET,
   cameraPresetToken = 0,
   hiddenStructureIds,
+  layerOpacities,
+  explodeAmount,
+  reducedMotion = false,
+  quizMode = false,
 }: ViewportProps) {
   return (
     <Canvas
@@ -92,6 +104,10 @@ export default function Viewport({
           visibleMuscleGroups={visibleMuscleGroups}
           labelDensity={labelDensity}
           hiddenStructureIds={hiddenStructureIds}
+          layerOpacities={layerOpacities}
+          explodeAmount={explodeAmount}
+          reducedMotion={reducedMotion}
+          quizMode={quizMode}
         />
       </Suspense>
 

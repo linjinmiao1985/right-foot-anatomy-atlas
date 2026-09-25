@@ -1,5 +1,6 @@
 import type { CSSProperties, ReactNode } from 'react';
 import { shouldShowHoverLabel, showLatinInLabel, type LabelDensity } from '../lib/labelDensity';
+import { quizDisplayNames } from '../lib/quizMode';
 
 interface StructureHoverLabelProps {
   nameZh: string;
@@ -9,6 +10,8 @@ interface StructureHoverLabelProps {
   /** Optional provenance / teaching note line under names */
   footnote?: ReactNode;
   style?: CSSProperties;
+  /** Teaching quiz stub — hide names (Grypa-JJ habit, ideas only). */
+  quizMode?: boolean;
 }
 
 /**
@@ -22,8 +25,10 @@ export default function StructureHoverLabel({
   borderColor,
   footnote,
   style,
+  quizMode = false,
 }: StructureHoverLabelProps) {
   if (!shouldShowHoverLabel(density)) return null;
+  const shown = quizDisplayNames(quizMode, nameZh, nameLa);
 
   return (
     <div
@@ -40,9 +45,9 @@ export default function StructureHoverLabel({
         ...style,
       }}
     >
-      <strong>{nameZh}</strong>
+      <strong>{shown.nameZh}</strong>
       {showLatinInLabel(density) && (
-        <div style={{ fontSize: '0.75rem', opacity: 0.8, marginTop: '0.25rem' }}>{nameLa}</div>
+        <div style={{ fontSize: '0.75rem', opacity: 0.8, marginTop: '0.25rem' }}>{shown.nameLa}</div>
       )}
       {footnote}
     </div>

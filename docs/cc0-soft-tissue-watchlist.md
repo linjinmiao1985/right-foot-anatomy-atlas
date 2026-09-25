@@ -1,10 +1,10 @@
 # CC0 / CC BY soft-tissue watchlist (monitor · not integrated)
 
-**Date**: 2026-09-18 · Day **4bk** / Phase 7  
+**Date**: 2026-09-22 · Day **4bo** / Phase 7  
 **Policy**: Prefer **CC0 / CC BY** main-tree replacements that shrink ShareAlike surface. Dig + verify license page / SPDX / Zenodo `license.id` **before** any wire. **Reject** NC, unclear “License: Model”, and All Rights Reserved. BY-SA only under `by-sa/` + NOTICE — do not spam SA volume for its own sake.  
-**Status**: Living watchlist — **0** new soft-tissue meshes integrated from this list as of Day **4bk**. Andreassen gastroc/soleus still **blocked** (Day 4az+4ba); Day 4bf Utah Hive **reject** bones; Day 4bg–4bj Henson **CC0** LE labels = **monitor** (path + feasibility + **Aug_8 MC POC**; BP3D align sketch **FAIL** Achilles — not wired); Day **4bk** dig **#77–#83** still **dry** for DI/MTA; belly registration alternatives documented (docs-only). Teaching atlas in progress — **not** a finished-product claim.
+**Status**: Living watchlist — **0** new soft-tissue meshes integrated from this list as of Day **4bo**. Andreassen gastroc/soleus still **blocked** (Day 4az+4ba); Day 4bf Utah Hive **reject** bones; Day 4bg–4bj Henson **CC0** LE labels = **monitor** (path + feasibility + **Aug_8 MC POC**; BP3D align sketch **FAIL** Achilles — not wired); Day **4bk–4bo** digs **#77–#107** still **dry** for DI/MTA; belly registration alternatives documented (docs-only). Teaching atlas in progress — **not** a finished-product claim.
 
-Companion: `docs/open-anatomy-learning-log.md` (#38–#83), `docs/belly-registration-alternatives.md`, `docs/phase-7-self-review.md`.
+Companion: `docs/open-anatomy-learning-log.md` (#38–#107), `docs/belly-registration-alternatives.md`, `docs/phase-7-self-review.md`.
 
 ---
 
@@ -37,6 +37,7 @@ Companion: `docs/open-anatomy-learning-log.md` (#38–#83), `docs/belly-registra
 | Future Zenodo / open CT foot soft segmentations | TBD | Named DI, vessels, ligaments | Only if SPDX CC0/BY and elemental teaching value | **monitor** dig queue |
 | **#66** Henson Sheffield augmented LE muscle segmentations (Figshare **10.15131/shef.data.20440203** + MR **20440164**) | **CC0** (Figshare API Day 4bg; path detail Day **4bh**) | 69 DICOM label volumes · 37 LE muscle classes incl. gastroc/soleus / long flex-ext / peronei — see **Henson path** below | Masks ≠ elemental foot DI/NV GLBs; ~5.6 GB/side; no surface meshes | **monitor** masks; **reject** ready teaching mesh wire; **not** Andreassen Kabsch retry |
 | **#68** CEINMS-RT LowerLimbModel | Code **Apache-2.0**; Zenodo 6457662 open / SPDX unset | OpenSim MSK paths (soleus + gastroc + tib_ant …) | Simulation lines, not surface atlas meshes | **monitor** process; **reject** soft GLB substitute |
+| **#136** U Malaya Asian LE MSK model (doi:10.22452/RD/5T6TZ7 · 2026-04-22) | **CC0 1.0** (verified Day 4cd; readme + API) | 67 STL: 42 muscles (psoas→abd. dig. min.) + 13 bones + 5 lig. + 2 tendons (Achilles/quad) + 1 meniscus — MRI-derived hip-to-foot LE | **Day 4cd assess**: readme **explicitly excludes intrinsic foot muscles** (DI/plantar/lumbricals) due to MRI boundary difficulty. Whole LE pack (hip→foot); likely hip/thigh/leg muscles + extrinsic tendons only. No foot-specific named soft. Same LE Kabsch blocker as Andreassen Day 4az+4ba | **reject** — intrinsic foot muscles excluded per readme; 0 DI/NV; 58.3 MB download not justified; NOTICE in `third_party/u-malaya-asian-le/` |
 
 ---
 
@@ -213,3 +214,119 @@ Distinct from Sheffield Figshare **9934055** (**CC BY-NC** STL pack — already 
 | Cloud Agent | Still **quota / usage blocked** |
 
 Watchlist still tracks where a true **CC0/BY** soft find would matter. Day **4bl** confirms soft gaps remain **dry**. Handback: `docs/cloud-agent-handback.md`. **No finished-product claim**.
+
+## Day 4bm dig summary
+
+| Check | Result |
+|-------|--------|
+| New CC0/BY soft packs for DI / per-ray MTA / nerves / ligaments | **None** — #90 NC-SA tendon/muscle united GLB; #91 MuJoCo sim; #92/#93 ZA SA/NC; #94 same BP3D pool |
+| Gastroc/soleus | No new belly surface; Andreassen/Henson still **blocked** |
+| Tempting false leads | ScanTW **muscle and tendon structure of a foot** (Zenodo **21375254**, NC); nqwrc whole-atlas **NC-SA** from Dundee inner-ear + kidney |
+| Teaching polish | Layer **ghost / 透视** (`G`) — not a mesh integrate |
+| Andreassen / Utah / Henson wire | **Skipped** / not re-opened / **0** wire |
+| Cloud Agent | **Resumed** this pass |
+
+Watchlist still tracks where a true **CC0/BY** soft find would matter. Day **4bm** confirms soft gaps remain **dry**. Handback: `docs/cloud-agent-handback.md`. **No finished-product claim**.
+
+## Day 4bn dig summary
+
+| Check | Result |
+|-------|--------|
+| New CC0/BY soft packs for DI / per-ray MTA / nerves / ligaments | **None** — #95/#97 same BP3D pool; #96 trauma PNG/hip extracts; #98 ZA SA/NC; #99 game-skin CC0 |
+| Gastroc/soleus | No new belly surface; Andreassen/Henson still **blocked** |
+| Tempting false leads | sonuyadav 1774-structure atlas (foot ligaments present but **ZA SA** + NC warning); OpenGameArt CC0 outer foot |
+| Teaching polish | Layer **explode / 抽出** (`E`) — not a mesh integrate |
+| Andreassen / Utah / Henson wire | **Skipped** / not re-opened / **0** wire |
+| Cloud Agent | **Continued** this pass |
+
+Watchlist still tracks where a true **CC0/BY** soft find would matter. Day **4bn** confirms soft gaps remain **dry**. Handback: `docs/cloud-agent-handback.md`. **No finished-product claim**.
+
+## Day 4bo dig summary
+
+| Check | Result |
+|-------|--------|
+| New CC0/BY soft packs for DI / per-ray MTA / nerves / ligaments | **None** — #100/#101 ScanTW NC; #102/#104/#105 ZA/BP3D SA; #103 same BP3D R4 pool; #106 HRA organs; #107 legacy BP3D v3 SA STLs |
+| Gastroc/soleus | No new belly surface; Andreassen/Henson still **blocked** |
+| Tempting false leads | ScanTW united foot/ankle muscle GLB (**NC**); Grypa/Dayly/ZA Unity SA re-wires; bcl200n older SA archive |
+| Fresh hunt | Zenodo **4977162** CC0 = EMG `.mat` not mesh; GitHub `anatomy atlas foot` = this repo + crus-atlas (#85) |
+| Teaching polish | Quiz stub / 测验 (`Q`) — not a mesh integrate |
+| Andreassen / Utah / Henson wire | **Skipped** / not re-opened / **0** wire |
+| Cloud Agent | **Continued** this pass |
+
+Watchlist still tracks where a true **CC0/BY** soft find would matter. Day **4bo** confirms soft gaps remain **dry**. Handback: `docs/cloud-agent-handback.md`. Teaching atlas in progress — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+
+## Day 4br dig summary (2026-09-22)
+
+| Check | Result |
+|-------|--------|
+| New CC0/BY soft packs for DI / per-ray MTA / nerves / ligaments / gastroc-soleus | **None** — #122 OpenGameArt CC0 **skin** only; #123/#124 ScanTW NC re-verify; #125 Grant bones only; #126 VH/OpenSim **blocked**/opaque |
+| Gastroc/soleus | No new belly surface; Andreassen/Henson still **blocked** |
+| Tempting false leads | OpenGameArt outer-foot CC0 (not named anatomy); Sketchfab BodyParts3D foot dorsal (license unstated); Zenodo 1056750 **PDF** nerve diagram |
+| Teaching polish | Quiz mode **honesty banner** (`App.tsx`) — teaching self-test stub, **not** Anki / exam |
+| Andreassen / Utah / Hensen wire | **Skipped** / not re-opened / **0** wire |
+| Cloud Agent | **Continued** this pass |
+
+Watchlist still tracks where a true **CC0/BY** soft find would matter. Day **4br** confirms soft gaps remain **dry**. Teaching atlas in progress — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+## Day 4bs dig summary (2026-09-22)
+
+| Check | Result |
+|-------|--------|
+| Dig #127–#135 (LESS-obvious CC0/BY pools) | **All dry** — Zenodo FootNet CC BY = 2D smartphone seg (not 3D mesh); ScanTW Zenodo 20228270 **NC-SA** re-verify; Visible Korean **NC-ND**; NIH 15850 bones-only; Andreassen **blocked** Day 4az+4ba; SlicerOpenAnatomy = tool/viewer, not data; Figshare PLOS **research tables**, not 3D; Blender CC0 **skin-surface**, not named anatomy |
+| Zenodo / MorphoSource / NIH / Open Anatomy / Figshare CC0 foot soft with mesh or convertible labels | **None found** — all rejects (NC, 2D, bones-only, skin-only, tools, tables) |
+| Gastroc/soleus | No new belly surface; Andreassen/Henson still **blocked** |
+| Teaching polish chosen | G/E/Q/0/Home keyboard help ✓ (Day 4ao); panel gap notes ✓ (meshNote); screenshots ✓ (9 shots Day 4an) — **all done prior** |
+| Andreassen / Utah / Henson wire | **Skipped** / not re-opened / **0** wire |
+| Meshes integrated | **0** |
+
+Watchlist still tracks where a true **CC0/BY** soft find would matter. Day **4bs** confirms soft gaps remain **dry** after comprehensive LESS-obvious pool search. Teaching atlas in progress — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+## Day 4cc dig summary (2026-09-22)
+
+| Check | Result |
+|-------|--------|
+| New digs | **#136** U Malaya Asian LE CC0 (doi:10.22452/RD/5T6TZ7); Z-Anatomy/Open3D/BP3D/Proko/AnatomyTOOL re-verify SA; MyMiniFactory/Thingiverse/Printables foot models NC |
+| New CC0/BY soft packs for DI / per-ray MTA / nerves / ligaments / gastroc-soleus | **None** — #136 whole LE (hip→foot 67 STL), not foot-specific DI/NV; 42 muscles list unclear; foot content needs extract+verify |
+| Gastroc/soleus | No new foot-specific belly surface; Andreassen/Henson still **blocked** |
+| Teaching polish | StructurePanel empty-selection bilingual tip — **already present** Day 4bo+; **0** new code |
+| Andreassen / Utah / Hensen wire | **Skipped** / not re-opened / **0** wire |
+| Meshes integrated | **0** |
+
+Watchlist still tracks where a true **CC0/BY** soft find would matter. Day **4cc** confirms soft gaps remain **dry**. Teaching atlas in progress — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+## Day 4cd dig summary (2026-09-22)
+
+| Check | Result |
+|-------|--------|
+| #136 U Malaya Asian LE deep dive | **Readme assessed** — intrinsic foot muscles (DI/plantar/lumbricals) **explicitly excluded** due to MRI identification difficulty |
+| New CC0/BY soft packs for DI / per-ray MTA / nerves / ligaments / foot intrinsics | **None** — #136 hip-to-foot LE pack lacks foot-specific named soft; 42 muscles = likely hip/thigh/leg + extrinsic tendons |
+| Gastroc/soleus | Possibly present in #136 as leg muscles, but whole-LE Kabsch blocker same as Andreassen Day 4az+4ba; STL zip **not downloaded** (58.3 MB not justified) |
+| Files downloaded | readme.txt only (7.4 KB); STL zip rejected pre-download |
+| Assessment artifact | `third_party/u-malaya-asian-le/NOTICE.txt` (reject rationale + CC0 license verification) |
+| Andreassen / Utah / Hensen wire | **Skipped** / not re-opened / **0** wire |
+| Meshes integrated | **0** |
+
+Watchlist still tracks where a true **CC0/BY** soft find would matter. Day **4cd** confirms soft gaps remain **dry** — #136 intrinsic foot exclusion documented. Teaching atlas in progress — **not** clinical; **not** TA2-complete; **not** a finished product.
+
+## Day 4ce dig summary (2026-09-22)
+
+**Digs #137–#141** (15-min NEW CC0/BY foot-intrinsic search):
+- **#137** OpenGameArt CC0 low-poly foot (byzmod3d, March 2026) — realistic surface mesh, **not** separated anatomy
+- **#138** Wikimedia CC0 Blender foot STL (Blender Studio, 2024) — high-res mesh, **not** separated soft tissue
+- **#139** Visible Korean foot-muscle PDF (CC BY-NC-ND 3.0) — surface models include lumbricalis / plantar & dorsal interosseus, but **ND** prohibits derivatives
+- **#140** U Denver Visible Human LE geometries (SimTK / digitalcommons.du.edu) — 76 muscles iliacus→flexor digitorum, pelvis→feet bones, STL downloadable; **same** Andreassen VH dataset evaluated Day 4az-4ba: whole LE pack (hip→ankle), single Kabsch transform fails foot+calf; flexor digitorum = extrinsic longus, **not** foot intrinsics (DI / lumbricals)
+- **#141** Sketchfab dorsal interossei models (Anatomary, caestudio) — exist but **license unconfirmed** (not verified CC0/BY)
+
+**Outcome**: **0** new usable CC0/BY foot-intrinsic meshes. DI / plantar layers / lumbricals gaps remain **dry**. Soft ceiling stands.
+
+## Day 4ci dig summary (2026-09-22)
+
+**Light watch dig** (15-min observational sweep, post-Day 4ch teaching polish):
+- **#142** GitHub 3D anatomy repositories (search: "foot anatomy 3D CC0 OR CC-BY metatarsal interosseous") — surfaced this repo + Open3DModel/AnatomyTOOL **already wired** Day 4aa–4ab; no new foot-intrinsic CC0/BY sources
+- **#143** BioModels.net / PhysioNet foot MSK datasets — BioModels = computational models (SBML/CellML, not meshes); PhysioNet = cardiac/physiological signals, no 3D foot anatomy
+- **#144** Sketchfab "dorsal interosseous foot CC0" refined search — found Anatomary/caestudio DI models (#141 Day 4ce), still **license unconfirmed** (no CC0 badge visible, account inactive); no new CC0/BY DI
+- **#145** Smithsonian 3D Digitization foot specimens — scanned primate/mammal **bones** only (Smithsonian X 3D portal); no separated soft tissue
+- **#146** TurboSquid / CGTrader free foot models — predominantly **All Rights Reserved** or **Editorial**; confirmed **no** CC0/BY foot-intrinsic soft tissue
+
+**Outcome**: **0** new usable CC0/BY meshes. DI / per-ray MTA / plantar layers / lumbricals gaps remain **dry**. Soft ceiling reconfirmed after light observational sweep. Census unchanged.

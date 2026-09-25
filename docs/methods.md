@@ -1,15 +1,15 @@
 # Methods
 
 **Project**: Right Foot Anatomy Atlas (Teaching-Grade Interactive 3D)  
-**Version**: Week 2 Day 4bi / Phase 7 (teaching atlas in progress; see README + `docs/phase-7-self-review.md` live census; **129** entries / **124** unique; **53** main-tree / **71** BY-SA; ontology **126/129** citable with StructurePanel honest-empty notes; 134 discrete GLBs; expert-review checklist v2.0; mining through #65; Andreassen blocked — TA2 soft-tissue still incomplete — **not a finished product**)
-**Date**: 2026-09-15  
+**Version**: Week 2 Day 4bu / Phase 8 (quality-week checkpoint; see README + `docs/phase-8-self-review.md` live census; **129** entries / **124** unique; **53** main-tree / **71** BY-SA; ontology **126/129** citable with StructurePanel honest-empty notes; 134 discrete GLBs; expert-review checklist v2.0; mining through #135; soft-tissue open-data ceiling largely reached — TA2 soft-tissue still incomplete — **not a finished product**)
+**Date**: 2026-09-22  
 **Licenses**: Code MIT | Assets CC BY 4.0 / CC0 1.0 / CC BY-SA 4.0 (isolated)
 
 ---
 
 ## Overview
 
-This atlas integrates open-licensed anatomical meshes from BodyParts3D, Universiti Malaya, Z-Anatomy, and Open3D (BY-SA isolate) for interactive right-foot teaching. Live census (Phase 7 / Day 4be): **129** entry-level rows / **124** unique structures (**53** main-tree CC BY/CC0 · **71** ShareAlike isolate) — osteology **26/26**; muscle **28** entries / **23** unique (BP3D+UM main + Open3D/ZA BY-SA DI·FB·FT·opponens·plantaris); vessel **29** (7 BP3D + 12 Open3D BY-SA + 10 ZA BY-SA veins/proximal); nerve **17** (6 ZA trunks + 11 Open3D fine/cutaneous); ligament/tendon **29** (2 BP3D long plantar + Achilles + 27 Open3D BY-SA). **Entry-level placeholders: 0**. This is **not** TA2-complete: no per-ray dorsal MTA; several vessels/nerves remain **grouped**; ankle bands incomplete vs named ATFL-set in some texts; gastroc/soleus bellies absent. See `docs/phase-7-self-review.md` (week checkpoint; phase-6 retained as prior board) and `docs/week2-ligament-fascia-search.md`.
+This atlas integrates open-licensed anatomical meshes from BodyParts3D, Universiti Malaya, Z-Anatomy, and Open3D (BY-SA isolate) for interactive right-foot teaching. Live census (Phase 8 / Day 4bs): **129** entry-level rows / **124** unique structures (**53** main-tree CC BY/CC0 · **71** ShareAlike isolate) — osteology **26/26**; muscle **28** entries / **23** unique (BP3D+UM main + Open3D/ZA BY-SA DI·FB·FT·opponens·plantaris); vessel **29** (7 BP3D + 12 Open3D BY-SA + 10 ZA BY-SA veins/proximal); nerve **17** (6 ZA trunks + 11 Open3D fine/cutaneous); ligament/tendon **29** (2 BP3D long plantar + Achilles + 27 Open3D BY-SA). **Entry-level placeholders: 0**. This is **not** TA2-complete: no per-ray dorsal MTA; several vessels/nerves remain **grouped**; ankle bands incomplete vs named ATFL-set in some texts; gastroc/soleus bellies absent. Soft-tissue open-data ceiling largely reached after exhaustive CC0/BY search (digs #115–#135, Day 4bo–4bs). See `docs/phase-8-self-review.md` (quality-week checkpoint; phase-7 retained as prior week board) and `docs/week2-ligament-fascia-search.md`.
 
 **Soft disclaimer (teaching vs clinical)**: Meshes and Kabsch co-registration are intended **only** for anatomy education (spatial relationships, named structures, layer exploration, classroom cutaways). They are **not** validated for clinical diagnosis, treatment planning, surgical navigation, implant sizing, interventional guidance, or patient-specific modeling. Published landmark residuals support visualization grade only — cite transform JSONs: Open3D→BP3D mean ≈**2.61 mm** (max ≈4.41 mm MT1); UM→BP3D mean ≈**2.22 mm** (max ≈4.38 mm talus); ZA→BP3D mean ≈**1.81 mm** (max ≈3.52 mm calcaneus). Do **not** treat these as surgical registration error bounds.
 
@@ -21,13 +21,39 @@ This atlas integrates open-licensed anatomical meshes from BodyParts3D, Universi
 | Limitation | What it means | Implication for readers |
 |------------|---------------|-------------------------|
 | **License mix** | Code MIT; main-tree meshes CC BY 4.0 (BP3D) / CC0 (UM); soft-tissue majority under **CC BY-SA 4.0** isolate (`by-sa/`) | Redistribution of BY-SA meshes (and derivatives) requires ShareAlike; deleting `by-sa/` yields MIT+BY/CC0-only surface |
-| **Spatial residual** | Kabsch co-registration residuals: Open3D→BP3D ≈**2.61 mm** mean; UM→BP3D ≈**2.22 mm**; ZA→BP3D ≈**1.81 mm** (see transform JSONs) | Teaching visualization grade only — **not** surgical registration / implant / navigation error bounds |
-| **Grouped vessels** | Several arteries/nerves are **combined** meshes (e.g. dorsal digital, plantar/dorsal metatarsal) labeled （组合）/grouped | Do not treat as per-ray / per-toe elemental atlas; no license-clean per-ray MTA found |
-| **BY-SA share** | ≈**71/124** unique structures live under ShareAlike isolate | Prefer future CC0/CC BY replacements; do not equate isolate volume with main-tree completeness |
-| **No clinical claim** | Atlas is anatomy **education** (named structures, layers, classroom cutaways) | **Not** for diagnosis, treatment planning, interventional guidance, or patient-specific modeling |
-| **Ontology IDs partial** | **126/129** structures have ≥1 citable TA2 / FMA / BP in `src/lib/ontologyIds.ts`; **3** honest empties (cervical TC; med/lat plantar veins TNA-only) | Panel shows codes when present; named honest-empty note otherwise (Day 4be) — not TA2-complete soft tissue |
+| **Spatial residual** | Kabsch co-registration residuals: Open3D→BP3D ≈**2.61 mm** mean (max ≈4.41 mm MT1); UM→BP3D ≈**2.22 mm** (max ≈4.38 mm talus); ZA→BP3D ≈**1.81 mm** (max ≈3.52 mm calcaneus) | Teaching visualization grade only — **not** surgical registration / implant / navigation error bounds (see transform JSONs `third_party/*/open3d_to_bp3d_transform.json` + `um_to_bp3d_transform.json` + `za_to_bp3d_transform.json` for per-landmark residuals; **Table 1 Kabsch residuals** below) |
+| **Soft-tissue open-data ceiling** | Exhaustive search (digs #1–#184, Day 4cl–4ds Week 2–4) found **no CC0/BY per-toe DI, lumbricals, per-ray MTA** meshes | **Grouped structures** (DI 1st–4th combined, dorsal/plantar MTA all rays) are **teaching compromises**, not per-toe/per-ray elemental atlases (详见 `docs/week2-soft-ceiling-memo.md`) |
+| **Grouped vessels/muscles** | Several arteries/nerves/muscles are **combined** meshes (e.g. dorsal digital, plantar/dorsal metatarsal, DI 1st–4th) labeled （组合）/grouped | Do not treat as per-ray / per-toe elemental atlas; license-clear per-ray MTA / per-toe DI alternatives unavailable (open-data ceiling) |
+| **BY-SA share** | ≈**71/124** unique structures live under ShareAlike isolate (`by-sa/` directory) | Exhaustive CC0/BY search (digs #1–#184) found DI / per-ray MTA / gastroc-soleus alternatives dry; soft-tissue open-data ceiling reached; NC (Non-Commercial) sources rejected (Zenodo Scan-the-World, Visible Korean, BoneHub) |
+| **No clinical claim** | Atlas is anatomy **education** (named structures, layers, classroom cutaways, ghost/explode/quiz teaching modes) | **Not** for diagnosis, treatment planning, interventional guidance, or patient-specific modeling |
+| **Ontology IDs partial** | **126/129** structures have ≥1 citable TA2 / FMA / BP in `src/lib/ontologyIds.ts`; **3 honest empties**: (1) `cervical_talocalcaneal_ligament` (no distinct TA98 A-code; often lateral TC clinical synonym); (2) `medial_plantar_veins` (TNA-only TAH U15825; no TA98 A-code / clear FMA); (3) `lateral_plantar_vein` (TNA-only TAH U15824; no TA98 A-code / clear FMA) | StructurePanel shows codes when present; **named honest-empty note** (bilingual "TNA-only" / "no distinct TA98 A-code" reasons) when absent — **not** TA2-complete soft tissue (see `src/lib/ontologyIds.ts` lines 392-404 + `docs/expert-review-checklist.md` v3.0 §E ontology gaps) |
 
-Full census, UX inventory, and open-data ceilings: `docs/phase-7-self-review.md` (week checkpoint; phase-6 retained as prior board). CC0/BY soft watchlist: `docs/cc0-soft-tissue-watchlist.md`. Ontology source notes: `src/lib/ontologyIds.ts` header + `docs/terminology.md`.
+**Table 1: Kabsch Co-Registration Residuals (Teaching Visualization Grade)**
+
+| Source → Target | Method | Landmarks | Mean (mm) | Max (mm) | Max Landmark |
+|-----------------|--------|-----------|-----------|----------|--------------|
+| Open3D → BP3D | Kabsch similarity | 12 (7 tarsals + MT1–5) | **2.61** | **4.41** | MT1 (metatarsal_1) |
+| UM → BP3D | Kabsch similarity | 7 (7 tarsals) | **2.22** | **4.38** | Talus |
+| ZA → BP3D | Kabsch similarity | 9 (7 tarsals + MT1, MT5) | **1.81** | **3.52** | Calcaneus |
+
+*Note*: Residuals are teaching visualization grade co-registration quality metrics. **Not** surgical registration error bounds / implant sizing tolerances / navigation accuracy specifications. Per-landmark residuals and full transform matrices: `third_party/open3dmodel/open3d_to_bp3d_transform.json` (Open3D; 12 landmarks with per-landmark breakdown); `third_party/um/um_to_bp3d_transform.json` (UM; 7 landmarks); `third_party/z-anatomy/za_to_bp3d_transform.json` (ZA; 9 landmarks). Do not cite these residuals as surgical error bounds.
+
+### License matrix (summary)
+
+| Category | Main tree (CC BY 4.0 / CC0) | BY-SA isolate (`by-sa/`) | Rejected (not integrated) |
+|----------|----------------------------|--------------------------|---------------------------|
+| **Bones** | **26/26** (BP3D CC BY 4.0; UM CC0 duplicate) | 0 | BP3D V3.0 legacy (SA 2.1 JP) |
+| **Muscles** | **18/23** unique (BP3D+UM CC BY/CC0) | **5** (Open3D DI grouped + FB + FT + opponens + ZA plantaris) | UM excludes intrinsics per readme; Andreassen gastroc/soleus spatial QA fail |
+| **Vessels** | **7** (BP3D CC BY 4.0) | **22** (Open3D 12 + ZA 10 veins/circumflex) | Per-ray 1st–4th MTA elementals unavailable (open-data ceiling) |
+| **Nerves** | **0** (no CC BY/CC0 nerve meshes found) | **17** (ZA 6 trunks + Open3D 11 fine/cutaneous) | — |
+| **Ligaments/tendons** | **2** (BP3D long plantar + Achilles) | **27** (Open3D ankle bands/retinacula/aponeuroses) | Further tarsal/toe bands incomplete vs named ATFL-set in some texts |
+| **Total** | **53/124** unique (43%) | **71/124** unique (57%) | **NC rejected**: Zenodo Scan-the-World (CC BY-NC-SA), Visible Korean (NC-ND), BoneHub vsd-feet-seg (NC-SA); **License unclear**: Cults3D/Sketchfab models without explicit CC0/BY badge |
+
+**Journal figure captions**: For concise bilingual teaching figure stubs (bones overview, layer toggles/ghost opacity, explode, BY-SA isolate vs main tree, soft-ceiling/teaching-compromise grouped DI-MTA, ontology honest empties, Kabsch residuals), see `docs/journal-figure-captions.md` (Day 4db).
+
+**Key**: Main tree = MIT code + CC BY 4.0 / CC0 meshes (redistribution/derivatives permissive); BY-SA isolate = `by-sa/` directory (ShareAlike applies to derivatives); NC rejected = Non-Commercial incompatible with MIT-licensed atlas; License unclear = no explicit CC0/CC-BY badge verified.
+
+Full census, UX inventory, and open-data ceilings: `docs/phase-8-self-review.md` (quality-week checkpoint; Week 2 section added Day 4cu). CC0/BY soft watchlist: `docs/cc0-soft-tissue-watchlist.md` (digs #1–#184 through Day 4ds Week 4; DI / per-ray MTA / gastroc-soleus alternatives remain dry). Soft-tissue open-data ceiling: `docs/week2-soft-ceiling-memo.md` (detailed reject rationale + teaching stance + Day 4ct summary). Ontology source notes: `src/lib/ontologyIds.ts` header + `docs/terminology.md`.
 
 ---
 
@@ -282,8 +308,9 @@ Repo scripts (prefer these over ad-hoc one-offs):
 - `scripts/integrity-audit.py` — `placeholder:false` ↔ `REAL_*_MODELS` ↔ GLB existence (+ orphan allowlist)
 - `scripts/screenshot-pipeline.mjs` — optional teaching QA screenshots → `docs/screenshots/` (`npm run screenshots`; 9-shot pack incl. dorsal/plantar/medial/lateral; **not** a product gallery)
 - `src/lib/cameraPresets.ts` — teaching camera presets (默认/背/跖/内/外); FOOT_TEACHING_TARGET from BP3D bone midfoot
-- `src/lib/teachingPrefs.ts` — localStorage persist for layers / label density / clip / last camera preset / hidden structure ids (SSR-safe)
-- `src/lib/keyboardHelp.ts` + `KeyboardHelpOverlay` — bilingual shortcut sheet (`?`/`H`); Esc closes help first
+- `src/lib/teachingPrefs.ts` — localStorage persist for layers / label density / clip / last camera preset / hidden structure ids / **layerOpacities** (SSR-safe)
+- `src/lib/keyboardHelp.ts` + `KeyboardHelpOverlay` — bilingual shortcut sheet (`?`/`H`); Esc closes help first; `G` teaching ghost / 透视
+- `src/lib/layerOpacity.ts` — per-layer opacity compose + ghost preset (teaching translucency, **not** clinical X-ray)
 - `scripts/expand-structures.py` — structures helpers (when used)
 - `update_structures_bp3d.py` / `update_structures_um.py` — historical structure wiring
 - `third_party/z-anatomy/*` — Blender inventory/export **recipes** (Blender 4.2.9 LTS may be local; Zenodo `.blend` gitignored)
@@ -363,8 +390,8 @@ Commit history documents asset decisions, `structures.json` evolution, and `Foot
 
 ---
 
-**Document Version**: 1.5 (2026-09-15)  
-**Atlas Version**: Week 2 Day 4bd / Phase 7 (teaching-grade in progress; no finished-product claim)
+**Document Version**: 1.6 (2026-09-22)  
+**Atlas Version**: Week 2 Day 4bu / Phase 8 (quality-week checkpoint; soft-tissue open-data ceiling largely reached; teaching-grade in progress; no finished-product claim)
 
 
 ---
@@ -599,3 +626,22 @@ Downloaded Andreassen VHM Final STLs (CC BY 4.0). Documented Kabsch + spatial QA
 1. **Henson Sheffield**: feasibility note for one-subject marching-cubes sandbox (~80–160 MB; **not** full 5.65 GB). Metadata/NOTICE under `third_party/henson-sheffield/` — **0** DICOM in git; **0** GLB wire.
 2. Expert-review 踇/laterality spot-check; digs #71–#76 (MIT/CC0 companions + NC rejects + Apache LE bones). Andreassen **skipped**.
 3. Version pointer Day 4bi / Phase 7. **No finished-product claim.** Census unchanged.
+
+## Day 4bm — Teaching ghost / 透视 + mining #90–#94 (2026-09-21)
+
+1. **UX**: Per-layer opacity (`layerOpacity.ts`) + LayerToggles 透视/实心 + key **G** (Air-Sage 透视 / Z-Anatomy Atlas G-ghost habit — ideas only). Prefs persist `layerOpacities`. Teaching translucency only — **not** clinical X-ray.
+2. Expert-review §A named ontology spot-checks locked in vitest (≥10).
+3. Open mining **#90–#94** — soft gaps still **dry**; **0** mesh wire; Andreassen/Henson skipped.
+4. Version pointer Day 4bm / Phase 7. **No finished-product claim.** Census unchanged.
+
+## Day 4bn — Teaching explode / 抽出 + mining #95–#99 (2026-09-21)
+
+1. **UX**: Per-layer explode (`layerExplode.ts`) + LayerToggles 抽出/合拢 + key **E** (Air-Sage 抽出 / ashemag Human Atlas explode habit — ideas only). Prefs persist `explodeAmount`. Teaching peel only — **not** surgical dissection.
+2. Open mining **#95–#99** — soft gaps still **dry**; **0** mesh wire; Andreassen/Henson skipped.
+3. Version pointer Day 4bn / Phase 7. **No finished-product claim.** Census unchanged.
+
+## Day 4bo — Teaching quiz stub / 测验 + mining #100–#107 (2026-09-22)
+
+1. **UX**: Quiz stub (`quizMode.ts`) + LayerToggles 测验/对照 + key **Q** (Grypa-JJ quiz / MedicalPlab tutor→viewport habit — ideas only). Prefs persist `quizMode`. Teaching self-test only — **not** Anki / exam.
+2. Open mining **#100–#107** — soft gaps still **dry**; **0** mesh wire; Andreassen/Henson skipped.
+3. Version pointer Day 4bo / Phase 7. Teaching atlas in progress — **not** clinical; **not** TA2-complete; **no finished-product claim.** Census unchanged.
