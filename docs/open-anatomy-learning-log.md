@@ -2476,3 +2476,53 @@ Zenodo API metadata retrieved (DOI 10.5281/zenodo.20231309). License: **CC BY-NC
 
 **Day 4dr sparse watch dig summary**: 2 digs (#181–#182); **all MONITOR / DRY / REJECT**. MuscleMap v1.4 (Aug 2026) adds leg extrinsics (EDL/EHL/tibialis posterior/FDL/popliteus/plantaris/gastroc compartments) but **no foot intrinsic muscles** (foot region still in development per GitHub README + MDPI paper); software MIT-licensed; data license for future foot release unclear. Alana Sharp LiMRIC Sketchfab foot muscle model **not downloadable** (view-only); license unclear (no CC0/BY badge); **REJECT** (fails wire criteria 1 and 3). Soft-tissue open-data ceiling **reconfirmed through dig #182** (Day 4dr Week 4).
 
+---
+
+### Dig #183: LivingLab Sketchfab “Human Foot Anatomy” (May 2026) — view-only, license empty
+
+**Date**: 2026-09-25 (Day 4ds Week 4 sparse watch)  
+**Query**: New Sketchfab foot models that visualize dorsal interossei / tendons, with a clear CC0 or CC BY download — not Alana Sharp (#182)  
+**Sources**:
+- Sketchfab API `GET /v3/models/8790193042b44c67880f7abb7995ca22` — “Human Foot Anatomy” by LivingLab (@living_lab), published 2026-05-02
+- Sibling model `46c4bcae535c457cb7d958007fe13460` — same title, published 2026-05-01
+- Bones-only sibling `92800ec28e7f43599f0d6b4cfe140dea` — “Human Foot Skeleton (Articulated Bones)”, published 2026-08-19
+- Related Cults listing of the skeleton (HzA, 2026-08-19): https://cults3d.com/en/3d-model/various/human-foot-skeleton-articulated-bones — license **CULTS PU**, paid STL (not CC0/BY)
+
+**License verdict**:
+- Sketchfab API `license` = **null** on all three models (no CC0 / CC BY slug)
+- `isDownloadable` = **false** on all three
+- Cults skeleton mirror is a paid platform license, not CC0/BY
+
+**Content verdict**:
+- The May 2026 “Human Foot Anatomy” descriptions mention extensor/flexor tendons, **dorsal interosseous muscles**, and ligaments in an écorché render
+- The August skeleton model is osteology only (tarsals, metatarsals, phalanges)
+- Neither is a labeled per-toe DI / lumbrical / per-ray artery mesh pack
+
+**Action**: **REJECT** — fails wire criteria 1 (license empty) and 3 (not downloadable). Do not contact the author. Do not buy or mirror the Cults STL. Soft-tissue ceiling unchanged.
+
+---
+
+### Dig #184: Knaus / Blemker soleus finite-element geometry — no public mesh deposit
+
+**Date**: 2026-09-25 (Day 4ds Week 4 sparse watch)  
+**Query**: A usable gastrocnemius/soleus belly mesh with CC0 or CC BY, other than Andreassen (already spatial-QA fail)  
+**Source**: Knaus KR, Blemker SS, et al. “A 3D Model of the Soleus Reveals Effects of Aponeuroses Morphology and Material Properties on Complex Muscle Fascicle Behavior.” PMC8841064 / J Biomech. https://pmc.ncbi.nlm.nih.gov/articles/PMC8841064/
+
+**License verdict**:
+- Article text reviewed does **not** state a CC0 or CC BY license on a downloadable mesh
+- No Zenodo, Figshare, or STL/OBJ supplement link appears in the full text that was retrieved
+
+**Content verdict**:
+- One-subject right-leg MRI (University of Wisconsin–Madison protocol; Knaus et al. 2020 imaging study)
+- Soleus compartments and aponeuroses lofted in Matlab / Autodesk Inventor and meshed in Trelis for finite-element simulation
+- Calf soleus only — **not** per-toe DI, lumbricals, per-ray MTA, or elemental foot nerves/ligaments
+- Not the same asset as Andreassen Visible Human STLs (those remain rejected on spatial QA)
+
+**Spatial fit**: N/A — no public mesh to align
+
+**Action**: **DRY** — research geometry described in a paper, not a ready CC0/BY STL/OBJ/GLB. Do not reconstruct the model from the paper. Do not reopen Andreassen. Gastroc/soleus main-tree gap stays open.
+
+---
+
+**Day 4ds sparse watch dig summary**: 2 digs (#183–#184); **REJECT / DRY**. LivingLab Sketchfab foot anatomy (May 2026) shows dorsal interossei in a viewer but API license is empty and download is off. Knaus/Blemker soleus FE model has no public mesh deposit. Zenodo record search was **403** from this network, so no new Zenodo hit was claimed. Census unchanged. Soft-tissue open-data ceiling **reconfirmed through dig #184**.
+

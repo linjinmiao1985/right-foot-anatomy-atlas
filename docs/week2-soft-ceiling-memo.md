@@ -219,10 +219,10 @@
 
 ---
 
-## Post–Week 2 sparse watch update (Day 4dk–4dr)
+## Post–Week 2 sparse watch update (Day 4dk–4ds)
 
-**Date**: 2026-09-23–24 · Day 4dk through Day 4dq (Week 3–4 START)  
-**Additional digs**: #171–#178 (8 sparse watch digs; all DRY or MONITOR/REJECT)
+**Date**: 2026-09-23–25 · Day 4dk through Day 4ds (Week 3–4 sparse watch)  
+**Additional digs**: #171–#184 (14 sparse watch digs; all DRY or MONITOR/REJECT)
 
 **Outcomes**:
 - **#171–#173** (Day 4dd): Cults3D/CGTrader/Wikimedia generic (DRY; license unclear); IFAA terminology BY-SA (DRY; terminology not meshes); Open3DModel/Complete Anatomy/Pennsieve (DRY; BY-SA / subscription / license unclear)
@@ -231,6 +231,8 @@
 - **#177–#178** (Day 4dk): MRI segmentation papers no public meshes (DRY); Andreassen already rejected Day 4ay/4az; BoneHub NC-SA rejected
 - **#179–#180** (Day 4dq): MuscleMap foot CVM still in dev (MONITOR; MIT software no public dataset); TotalSegmentator v2.15.0 foot bones MR only no soft tissue (DRY); Zenodo Scan-the-World 2026 NC+SA already rejected; UM Apr 2026 update no new foot intrinsics (DRY)
 - **#181–#182** (Day 4dr): MuscleMap v1.4 (Aug 2026) adds leg extrinsics (EDL/EHL/tibialis posterior/FDL/popliteus/plantaris/gastroc compartments) but **no foot intrinsics** (MONITOR/DRY); Alana Sharp LiMRIC Sketchfab foot muscle model not downloadable + license unclear (REJECT)
-**Day 4ct summary above remains canonical** (24 digs #147–#170; comprehensive 1-page freeze). Post–Week 2 sparse watch digs #171–#182 extend the DRY outcome; no changes to teaching-compromise stance.
+- **#183–#184** (Day 4ds): LivingLab Sketchfab “Human Foot Anatomy” (May 2026) API license empty + not downloadable (REJECT); Knaus/Blemker soleus FE geometry has no public CC0/BY STL (DRY). Zenodo API 403 this session — no new Zenodo hit claimed
+
+**Day 4ct summary above remains canonical** (24 digs #147–#170; comprehensive 1-page freeze). Post–Week 2 sparse watch digs #171–#184 extend the DRY outcome; no changes to teaching-compromise stance. Soft-tissue open-data ceiling **reconfirmed through #184** (Day 4ds).
 
 

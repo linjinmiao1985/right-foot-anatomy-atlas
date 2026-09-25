@@ -3308,3 +3308,23 @@ Existing honest no-screenshot note in `docs/journal-figure-captions.md` (Day 4df
 
 **Summary**: Day 4dr sparse soft watch completed per request. (1) Dig #181 (MuscleMap v1.4 Aug 2026): 14 additional leg structures (patella, popliteus, plantaris, gastroc medial/lateral, EDL/EHL, tibialis posterior, FDL) but **no foot intrinsic muscles** (foot region still in development per GitHub README + MDPI paper); software MIT-licensed; data license for future foot release unclear; verdict **MONITOR/DRY** (no wire candidate). (2) Dig #182 (Alana Sharp LiMRIC Sketchfab): intrinsic foot muscles segmented from MRI (Avizo); presented 2021 Anatomical Society poster; Sketchfab model **not downloadable** (view-only); license unclear (no CC0/BY badge); verdict **REJECT/MONITOR** (fails wire criteria 1 and 3; do NOT contact author; WATCH ONLY). (3) Dig-range honesty synced: methods.md/README/week2-soft-ceiling-memo → through #182. Gates green. Census 129/124 unchanged. Soft-tissue open-data ceiling **reconfirmed through dig #182** (Day 4dr Week 4). Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
 
+---
+
+## Day 4ds (2026-09-25) — Week 4 sparse soft watch #183–#184
+
+**Goals**: At most 2–3 new soft digs. Wire only on CC0/BY + downloadable mesh + spatial QA. Sync dig-range honesty through the new numbers. No census or mesh edits.
+
+**Digs**:
+- **#183 REJECT**: LivingLab Sketchfab “Human Foot Anatomy” (uid `8790193042b44c67880f7abb7995ca22`, published 2026-05-02; sibling `46c4bcae…` 2026-05-01). API `license` null, `isDownloadable` false. Description mentions dorsal interossei in an écorché viewer. August skeleton sibling is bones-only and also not downloadable. Cults mirror of that skeleton is paid CULTS PU.
+- **#184 DRY**: Knaus / Blemker soleus finite-element geometry (PMC8841064). One-subject MRI soleus compartments; no public STL/Zenodo/Figshare link in the retrieved full text. Not Andreassen. Not foot intrinsics.
+
+**Honesty sync**: `docs/methods.md`, `README.md` Limitations, `docs/week2-soft-ceiling-memo.md` post–Week 2 note → through **#184**. Handback header refreshed.
+
+**Not done**: no mesh wire; no structures.json / GLB / UX edits; gates not re-run (docs only). Zenodo API returned 403 — no Zenodo hit invented.
+
+**Census**: 129/124 unchanged.
+
+**Commit**: (pending)
+
+**Stance**: MERGE-READY for teaching-grade if disclosed gaps accepted. Not clinical. Not TA2-complete. Not a finished product.
+
