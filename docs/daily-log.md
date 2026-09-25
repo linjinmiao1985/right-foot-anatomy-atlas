@@ -3304,7 +3304,7 @@ Existing honest no-screenshot note in `docs/journal-figure-captions.md` (Day 4df
 
 **Census**: unchanged (129/124 entries/unique; 126/129 ontology citable; 53 main-tree / 71 BY-SA; 134 GLB on-disk)
 
-**Commit**: (pending)
+**Commit**: a3dc32d
 
 **Summary**: Day 4dr sparse soft watch completed per request. (1) Dig #181 (MuscleMap v1.4 Aug 2026): 14 additional leg structures (patella, popliteus, plantaris, gastroc medial/lateral, EDL/EHL, tibialis posterior, FDL) but **no foot intrinsic muscles** (foot region still in development per GitHub README + MDPI paper); software MIT-licensed; data license for future foot release unclear; verdict **MONITOR/DRY** (no wire candidate). (2) Dig #182 (Alana Sharp LiMRIC Sketchfab): intrinsic foot muscles segmented from MRI (Avizo); presented 2021 Anatomical Society poster; Sketchfab model **not downloadable** (view-only); license unclear (no CC0/BY badge); verdict **REJECT/MONITOR** (fails wire criteria 1 and 3; do NOT contact author; WATCH ONLY). (3) Dig-range honesty synced: methods.md/README/week2-soft-ceiling-memo → through #182. Gates green. Census 129/124 unchanged. Soft-tissue open-data ceiling **reconfirmed through dig #182** (Day 4dr Week 4). Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
 
