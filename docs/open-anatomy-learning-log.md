@@ -2422,3 +2422,57 @@ Zenodo API metadata retrieved (DOI 10.5281/zenodo.20231309). License: **CC BY-NC
 
 **Day 4dq sparse watch dig summary**: 2 digs (#179–#180); **all DRY or MONITOR**. MuscleMap foot CVM still in development (MIT software; no public foot mesh dataset; monitor for future CC0/BY data release). TotalSegmentator v2.15.0 adds foot bones MR but **no foot soft tissue** (intrinsics / nerves / vessels). Zenodo Scan-the-World 2026 deposits remain NC+SA (already rejected #161b). UM Apr 2026 update adds **no new foot intrinsic muscles** (intrinsics excluded per UM readme). Soft-tissue open-data ceiling **reconfirmed through dig #180** (Day 4dq Week 4 START).
 
+
+### Dig #181: MuscleMap wholebody v1.4 (August 2026) — foot intrinsic CVM still in development
+
+**Date**: 2026-09-25 (Day 4dr Week 4 sparse watch)  
+**Query**: MuscleMap v1.4 release status (~2026-08-16/17); foot intrinsic muscle segmentation model availability; data license for potential future foot mesh/segmentation datasets  
+**Sources**:
+- LinkedIn MuscleMap v1.4 announcement: https://www.linkedin.com/posts/musclemap_musclemap-3dslicer-medicalimaging-activity-7494835215794769920-FxSV (2026-08-16)
+- LinkedIn Neuromuscular Insight Lab: https://www.linkedin.com/posts/neuromuscular-insight-lab_opensource-muscle-segmentation-activity-7495178868669001728-CQWp (2026-08-17)
+- MuscleMap GitHub: https://github.com/MuscleMap/MuscleMap (README.md; releases)
+- MuscleMap MDPI paper §3.8: https://www.mdpi.com/2313-433X/10/11/262 (foot and ankle section)
+
+**License verdict**:
+- MuscleMap software: **MIT License** (NOT CC0 or CC-BY; software license not data license)
+- Data license for any future foot intrinsic segmentation dataset: **unclear** (no explicit CC0/CC-BY statement for model-generated segmentation outputs as downloadable meshes)
+
+**Content verdict**:
+- **MuscleMap v1.4** (released 2026-08-16): 14 additional structures relative to v1.3 — patella, popliteus, plantaris, medial/lateral compartments of gastrocnemius, extensor digitorum longus, extensor hallucis longus, tibialis posterior, flexor digitorum longus
+- **Foot intrinsic muscles**: **still in development** as of v1.4 (Aug 2026); GitHub README lists "Regions in development: neck, shoulder, arm, forearm, thorax, pelvis, thigh, leg, and **foot**"; MDPI paper §3.8 states "we are working to expand our MuscleMap efforts to develop a deep learning CVM to automate the segmentation of the intrinsic foot muscles" with preliminary results showing <30s segmentation time (reduced from 6–7 hours manual segmentation); **no public downloadable foot intrinsic mesh/segmentation dataset released**
+- Available regions v1.4: abdomen, pelvis, thigh, forearm, leg (foot **NOT** included in v1.4 release)
+- Model automatically fetches latest version from Zenodo; users can specify earlier versions with `--model_version` flag
+
+**Spatial fit**: N/A (no foot intrinsic mesh datasets released)
+
+**Action**: **MONITOR / DRY** — MuscleMap v1.4 (Aug 2026) adds leg extrinsics (EDL, EHL, tibialis posterior, FDL, popliteus, plantaris, gastroc compartments) but **no foot intrinsic muscles** (abductor hallucis, flexor digitorum brevis, lumbricals, interossei, etc.); foot intrinsic CVM remains in development per GitHub README + MDPI paper; software MIT-licensed (unclear whether future foot segmentation outputs would carry CC0/CC-BY data license for mesh redistribution); continue watch for MuscleMap foot intrinsic public dataset release with clear CC0/BY data license.
+
+---
+
+### Dig #182: Alana Sharp / LiMRIC MRI intrinsic foot muscles (Sketchfab) — view-only / license unclear
+
+**Date**: 2026-09-25 (Day 4dr Week 4 sparse watch)  
+**Query**: Alana Sharp (University of Liverpool) intrinsic foot muscle 3D model Sketchfab; MRI-derived segmentation (LiMRIC); license status for downloadable mesh  
+**Sources**:
+- Sketchfab model: https://sketchfab.com/3d-models/human-foot-muscles-89468e00d99848859825cfc7f0134da2 (Alana Sharp @asharp)
+- ResearchGate poster (2021 Anatomical Society winter meeting): http://dx.doi.org/10.13140/RG.2.2.30039.09129
+- Related 7T MRI foot muscle paper: Franettovich Smith et al. (2022) BMC Musculoskelet Disord 22:97 (DOI 10.1186/s12891-020-03926-7)
+
+**License verdict**:
+- Sketchfab model page: **no explicit CC0 or CC BY badge visible** (Sketchfab default = view-only unless author explicitly marks model as downloadable with specific Creative Commons license)
+- **License unclear** — fails wire criterion 1 (requires CC0/BY; unclear licenses rejected)
+
+**Content verdict**:
+- Intrinsic muscles of human foot segmented from MRI scanned at Liverpool Magnetic Resonance Imaging Centre (LiMRIC)
+- Segmented using Avizo software; includes abductor hallucis, flexor digitorum brevis, lumbricals, interossei, and accessory muscle of flexor digitorum longus
+- Presented as poster at 2021 Anatomical Society winter meeting
+- Sketchfab model: 1.2M triangles / 416.2k vertices
+
+**Downloadability**: **Not downloadable** — Sketchfab model appears view-only (no download button visible on model page; typical Sketchfab behavior unless author explicitly enables download); fails wire criterion 3 (requires downloadable STL/OBJ/GLB)
+
+**Action**: **REJECT / MONITOR** — Alana Sharp LiMRIC foot muscle model fails two wire criteria: (1) license unclear (no CC0/BY badge on Sketchfab page; Sketchfab default = restrictive); (3) not downloadable (view-only web viewer; no STL/OBJ export option visible). Do **NOT** contact author or request files (WATCH ONLY posture; no author solicitation). Continue watch for any future CC0/BY downloadable intrinsic foot muscle mesh releases from Liverpool / LiMRIC group.
+
+---
+
+**Day 4dr sparse watch dig summary**: 2 digs (#181–#182); **all MONITOR / DRY / REJECT**. MuscleMap v1.4 (Aug 2026) adds leg extrinsics (EDL/EHL/tibialis posterior/FDL/popliteus/plantaris/gastroc compartments) but **no foot intrinsic muscles** (foot region still in development per GitHub README + MDPI paper); software MIT-licensed; data license for future foot release unclear. Alana Sharp LiMRIC Sketchfab foot muscle model **not downloadable** (view-only); license unclear (no CC0/BY badge); **REJECT** (fails wire criteria 1 and 3). Soft-tissue open-data ceiling **reconfirmed through dig #182** (Day 4dr Week 4).
+

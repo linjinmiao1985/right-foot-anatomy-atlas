@@ -3259,3 +3259,52 @@ Existing honest no-screenshot note in `docs/journal-figure-captions.md` (Day 4df
 
 **Summary**: Week 4 START completed per Day 4dq request. (1) Dig-range honesty lags closed: methods.md #1–#175→#1–#178 (3-dig lag); README #1–#170→#1–#178 (8-dig lag); week2-soft-ceiling-memo post–Week 2 sparse watch update appended. (2) Sparse soft watch digs #179–#180 both DRY/MONITOR: MuscleMap foot CVM still in development (MIT software; no public foot mesh dataset; monitor for future CC0/BY data release); TotalSegmentator v2.15.0 adds foot bones MR but **no foot soft tissue** (intrinsics / nerves / vessels); Zenodo Scan-the-World 2026 deposits remain NC+SA (already rejected #161b); UM Apr 2026 update adds **no new foot intrinsic muscles** (intrinsics excluded per UM readme). (3) Week 4 roadmap v1.0 created (post–Week-3 merge readiness + continuous watch; soft WATCH ONLY; research tracks docs-only; quality work; non-goals; success criteria). (4) PR #3 body refreshed (Week 3 wrap status; MERGE-READY teaching-grade with disclosed gaps; tip sha; census; soft digs through #180; link week3/week4 docs). Gates green. Census 129/124 unchanged. Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product. **MERGE-READY for teaching-grade** if reviewers accept disclosed gaps.
 
+
+---
+
+## Day 4dr (2026-09-25) — Week 4 Sparse Soft Watch: Digs #181–#182 + Honesty Sync
+
+**Goals**: Per Day 4dr request (Week 4 sparse soft watch; at most 2 NEW digs; quality-first; WATCH ONLY; NO force-wire; NO SA padding; NO finished-product claim): (1) Dig #181 — MuscleMap wholebody v1.4 (Aug 2026) foot-intrinsic status; (2) Dig #182 — Alana Sharp / LiMRIC MRI intrinsic foot muscles (Sketchfab); (3) Docs/honesty updates (append digs to learning-log; sync dig-range honesty methods.md/README/week2-soft-ceiling-memo through #182; brief Day 4dr note; fix PR #3 body tip SHA if stale); (4) Gates + commit/push.
+
+**Completed**:
+
+1. **Dig #181** (Day 4dr): MuscleMap wholebody v1.4 (August 2026) — foot intrinsic CVM still in development
+   
+   **Sources**: LinkedIn MuscleMap v1.4 announcement (2026-08-16); GitHub MuscleMap README + releases; MDPI MuscleMap paper §3.8
+   
+   **License**: MuscleMap software **MIT License** (NOT CC0/CC-BY; software license not data license); data license for any future foot intrinsic segmentation dataset **unclear** (no explicit CC0/CC-BY statement for model-generated segmentation outputs as downloadable meshes)
+   
+   **Content**: MuscleMap v1.4 (released 2026-08-16) includes 14 additional structures relative to v1.3 — patella, popliteus, plantaris, medial/lateral compartments of gastrocnemius, extensor digitorum longus, extensor hallucis longus, tibialis posterior, flexor digitorum longus; **foot intrinsic muscles** (abductor hallucis, flexor digitorum brevis, lumbricals, interossei, etc.) **still in development** as of v1.4 (Aug 2026); GitHub README lists "Regions in development: neck, shoulder, arm, forearm, thorax, pelvis, thigh, leg, and **foot**"; MDPI paper §3.8 states "we are working to expand our MuscleMap efforts to develop a deep learning CVM to automate the segmentation of the intrinsic foot muscles" with preliminary results showing <30s segmentation time (reduced from 6–7 hours manual segmentation); **no public downloadable foot intrinsic mesh/segmentation dataset released**; available regions v1.4: abdomen, pelvis, thigh, forearm, leg (foot **NOT** included)
+   
+   **Action**: **MONITOR / DRY** — MuscleMap v1.4 (Aug 2026) adds leg extrinsics (EDL, EHL, tibialis posterior, FDL, popliteus, plantaris, gastroc compartments) but **no foot intrinsic muscles**; foot intrinsic CVM remains in development per GitHub README + MDPI paper; software MIT-licensed (unclear whether future foot segmentation outputs would carry CC0/CC-BY data license for mesh redistribution); continue watch for MuscleMap foot intrinsic public dataset release with clear CC0/BY data license
+
+2. **Dig #182** (Day 4dr): Alana Sharp / LiMRIC MRI intrinsic foot muscles (Sketchfab) — view-only / license unclear
+   
+   **Sources**: Sketchfab model https://sketchfab.com/3d-models/human-foot-muscles-89468e00d99848859825cfc7f0134da2 (Alana Sharp @asharp); ResearchGate poster (2021 Anatomical Society winter meeting DOI 10.13140/RG.2.2.30039.09129); related 7T MRI foot muscle paper Franettovich Smith et al. (2022) BMC Musculoskelet Disord 22:97
+   
+   **License**: Sketchfab model page **no explicit CC0 or CC BY badge visible** (Sketchfab default = view-only unless author explicitly marks model as downloadable with specific Creative Commons license); **license unclear** — fails wire criterion 1 (requires CC0/BY; unclear licenses rejected)
+   
+   **Content**: Intrinsic muscles of human foot segmented from MRI scanned at Liverpool Magnetic Resonance Imaging Centre (LiMRIC); segmented using Avizo software; includes abductor hallucis, flexor digitorum brevis, lumbricals, interossei, and accessory muscle of flexor digitorum longus; presented as poster at 2021 Anatomical Society winter meeting; Sketchfab model: 1.2M triangles / 416.2k vertices
+   
+   **Downloadability**: **Not downloadable** — Sketchfab model appears view-only (no download button visible on model page; typical Sketchfab behavior unless author explicitly enables download); fails wire criterion 3 (requires downloadable STL/OBJ/GLB)
+   
+   **Action**: **REJECT / MONITOR** — Alana Sharp LiMRIC foot muscle model fails two wire criteria: (1) license unclear (no CC0/BY badge on Sketchfab page; Sketchfab default = restrictive); (3) not downloadable (view-only web viewer; no STL/OBJ export option visible); do **NOT** contact author or request files (WATCH ONLY posture; no author solicitation); continue watch for any future CC0/BY downloadable intrinsic foot muscle mesh releases from Liverpool / LiMRIC group
+
+3. **Dig-range honesty sync** (Task 3; through #182):
+   - ✅ `docs/methods.md` 3 places: #1–#178 → **#1–#182** (4-dig increment)
+   - ✅ `README.md` Limitations 2 places: #1–#178 → **#1–#182** (4-dig increment)
+   - ✅ `docs/week2-soft-ceiling-memo.md` post–Week 2 sparse watch update section: #171–#180 → **#171–#182** (2 digs added Day 4dr)
+
+4. **PR #3 body tip SHA**: Remains current (will update after Day 4dr commit push; current tip 262f116 Day 4dq SHA finalization)
+
+**Gates** (all green):
+- `python3 scripts/integrity-audit.py`: ✅ 0 violations (129 structures / 134 GLBs)
+- `npm test -- --run`: ✅ 138/138 passed (19 test files)
+- `npm run build`: ✅ dist built (1.2 MB chunk size warning expected)
+
+**Census**: unchanged (129/124 entries/unique; 126/129 ontology citable; 53 main-tree / 71 BY-SA; 134 GLB on-disk)
+
+**Commit**: (pending)
+
+**Summary**: Day 4dr sparse soft watch completed per request. (1) Dig #181 (MuscleMap v1.4 Aug 2026): 14 additional leg structures (patella, popliteus, plantaris, gastroc medial/lateral, EDL/EHL, tibialis posterior, FDL) but **no foot intrinsic muscles** (foot region still in development per GitHub README + MDPI paper); software MIT-licensed; data license for future foot release unclear; verdict **MONITOR/DRY** (no wire candidate). (2) Dig #182 (Alana Sharp LiMRIC Sketchfab): intrinsic foot muscles segmented from MRI (Avizo); presented 2021 Anatomical Society poster; Sketchfab model **not downloadable** (view-only); license unclear (no CC0/BY badge); verdict **REJECT/MONITOR** (fails wire criteria 1 and 3; do NOT contact author; WATCH ONLY). (3) Dig-range honesty synced: methods.md/README/week2-soft-ceiling-memo → through #182. Gates green. Census 129/124 unchanged. Soft-tissue open-data ceiling **reconfirmed through dig #182** (Day 4dr Week 4). Teaching atlas **in progress** — **not** clinical; **not** TA2-complete; **not** a finished product.
+
