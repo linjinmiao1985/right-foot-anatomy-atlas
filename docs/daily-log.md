@@ -3324,7 +3324,7 @@ Existing honest no-screenshot note in `docs/journal-figure-captions.md` (Day 4df
 
 **Census**: 129/124 unchanged.
 
-**Commit**: (pending)
+**Commit**: 28b686a
 
 **Stance**: MERGE-READY for teaching-grade if disclosed gaps accepted. Not clinical. Not TA2-complete. Not a finished product.
 
