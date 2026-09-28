@@ -2526,3 +2526,45 @@ Zenodo API metadata retrieved (DOI 10.5281/zenodo.20231309). License: **CC BY-NC
 
 **Day 4ds sparse watch dig summary**: 2 digs (#183–#184); **REJECT / DRY**. LivingLab Sketchfab foot anatomy (May 2026) shows dorsal interossei in a viewer but API license is empty and download is off. Knaus/Blemker soleus FE model has no public mesh deposit. Zenodo record search was **403** from this network, so no new Zenodo hit was claimed. Census unchanged. Soft-tissue open-data ceiling **reconfirmed through dig #184**.
 
+---
+
+### Dig #185: Bolsterlee et al. 2018 soleus DTI architecture — CC BY paper, no surface mesh
+
+**Date**: 2026-09-28 (Day 4dt Week 4 sparse watch)  
+**Query**: A public gastrocnemius/soleus surface mesh with CC BY, other than Andreassen (spatial QA fail) and Knaus/Blemker (#184, paper geometry only)  
+**Sources**:
+- Bolsterlee B, Finni T, D’Souza A, Eguchi J, Clarke EC, Herbert RD. Three-dimensional architecture of the whole human soleus muscle in vivo. PeerJ 6:e4610 (2018). https://doi.org/10.7717/peerj.4610
+- PMC: https://pmc.ncbi.nlm.nih.gov/articles/PMC5910694/
+- QUT eprint states License Creative Commons Attribution 4.0: https://eprints.qut.edu.au/234361/
+- Data availability in the paper: https://researchdata.neura.edu.au/2018/01/08/01 (in vivo MRI and DTI plus architectural measurements) and https://researchdata.neura.edu.au/2018/01/08/02 (cadaver measurements). PeerJ supplemental “Data S1” is a **6.1 KB** zip of cadaver architectural measurements.
+
+**License verdict**: Article is **CC BY 4.0**. That license covers the paper. The deposited payload described in the paper is scans and numeric measurements, not a redistributable muscle surface under a separate mesh license statement.
+
+**Content / downloadability**: Soleus compartment architecture (fascicle length, pennation, volume) from DTI and cadaver digitisation. No STL, OBJ, or GLB of the muscle belly is listed. Not per-toe DI, lumbricals, per-ray MTA, or elemental foot nerves.
+
+**Action**: **DRY** — fails wire criterion 3 (no downloadable surface mesh). Do not reconstruct a belly from the DTI description. Do not reopen Andreassen.
+
+---
+
+### Dig #186: TotalSegmentator v2.16.0–v2.18.0 and v3.0.0 weights — still no foot-soft pack
+
+**Date**: 2026-09-28 (Day 4dt Week 4 sparse watch)  
+**Query**: Foot soft-tissue classes added after the v2.15.0 check in dig #179 (2026-07-01)  
+**Sources**:
+- Changelog on master, fetched 2026-09-28: https://github.com/wasserth/TotalSegmentator/blob/master/CHANGELOG.md
+  - **2.16.0** (2026-07-21): pulmonary-artery and aorta reports; resampling speed. No foot classes.
+  - **2.17.0** (2026-07-29): task-map and phase-speed fixes. No foot classes.
+  - **2.18.0** (2026-08-12): DICOM orientation fix, MCP server, extra `totalseg_get_body_stats` targets. Changelog line does not name foot muscles, nerves, or vessels.
+- GitHub release **v3.0.0-weights** (published 2026-09-07): https://github.com/wasserth/TotalSegmentator/releases/tag/v3.0.0-weights
+  - Assets are Dataset831–837 (organs, vertebrae, cardiac, muscles, ribs, total 3 mm/6 mm) and Dataset857 / 870–873 (MRI thigh/shoulder, MRI organs, MRI muscles, MRI total). No file name denotes foot intrinsics, plantar nerves, or per-ray metatarsal arteries.
+
+**License verdict**: Software remains the TotalSegmentator license (Apache-2.0 for the open tasks; some subtasks such as `appendicular_bones` are non-commercial). These releases do not add a CC0/CC BY static foot-soft mesh.
+
+**Content**: Trunk and thigh/shoulder muscle weights, plus reporting tools. Foot bones stay inside the already-known appendicular-bone task. No labeled per-toe DI, lumbrical, or per-ray artery output.
+
+**Action**: **DRY** — no new downloadable foot-soft atlas mesh. Do not run the model to invent surfaces. Do not treat grouped skeletal-muscle labels as elemental foot anatomy.
+
+---
+
+**Day 4dt sparse watch dig summary**: 2 digs (#185–#186); **both DRY**. Bolsterlee soleus data are MRI/DTI and measurements under a CC BY paper, not a surface mesh. TotalSegmentator through v2.18.0 and the 2026-09-07 v3.0.0 weights still have no foot-intrinsic pack. Census unchanged. Soft-tissue open-data ceiling **reconfirmed through dig #186**.
+

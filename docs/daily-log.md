@@ -3328,3 +3328,23 @@ Existing honest no-screenshot note in `docs/journal-figure-captions.md` (Day 4df
 
 **Stance**: MERGE-READY for teaching-grade if disclosed gaps accepted. Not clinical. Not TA2-complete. Not a finished product.
 
+---
+
+## Day 4dt (2026-09-28) — Week 4 sparse soft watch #185–#186
+
+**Goals**: Two new soft-tissue candidates not already logged through #184. Wire only if CC0/CC BY, a gap-filling foot-soft mesh, downloadable STL/OBJ/GLB, and Kabsch QA all pass.
+
+**Digs**:
+- **#185 DRY**: Bolsterlee et al., PeerJ 2018 (DOI 10.7717/peerj.4610). Article is CC BY 4.0. Deposited data are in vivo MRI/DTI plus architectural measurements, and a 6.1 KB supplemental zip of cadaver numbers. No soleus surface mesh.
+- **#186 DRY**: TotalSegmentator changelog 2.16.0 (2026-07-21), 2.17.0 (2026-07-29), 2.18.0 (2026-08-12) and GitHub release v3.0.0-weights (2026-09-07). New material is reporting tools and trunk/thigh-shoulder weights. No foot-intrinsic, plantar-nerve, or per-ray artery pack.
+
+**Honesty sync**: methods.md, README Limitations, week2-soft-ceiling-memo → through **#186**.
+
+**Not done**: no wire; census, structures.json, and GLBs untouched. Docs only, so gates not re-run.
+
+**Census**: 129/124 unchanged.
+
+**Commit**: (pending)
+
+**Stance**: MERGE-READY unchanged. Not clinical. Not TA2-complete. Not a finished product.
+

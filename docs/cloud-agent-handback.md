@@ -28,11 +28,11 @@ Henson Sheffield **Option A** one-subject MC POC completed (`Aug_8`): surfaces O
 
 # Cloud Agent handback — Phase 8 resume brief
 
-**Date**: 2026-09-25 · Day **4ds** (Week 4 sparse soft watch #183–#184)  
+**Date**: 2026-09-28 · Day **4dt** (Week 4 sparse soft watch #185–#186)  
 **Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3)  
-**HEAD tip**: `28b686a` (Day 4ds: digs #183–#184 REJECT/DRY; dig-range through #184)  
-**Status**: Week 4 sparse watch continued. Dig **#183 REJECT** (LivingLab Sketchfab Human Foot Anatomy, May 2026: API license empty, not downloadable). Dig **#184 DRY** (Knaus/Blemker soleus FE geometry: no public CC0/BY STL). Zenodo API returned 403 this session — no new Zenodo asset claimed. Census **129/124** unchanged. **MERGE-READY for teaching-grade** if disclosed gaps accepted — **NOT** finished/clinical/TA2-complete  
-**Companion**: `docs/week4-roadmap.md`, `docs/week2-soft-ceiling-memo.md` (digs through #184), `docs/phase-8-self-review.md` (Week 3 section), `docs/week3-expert-self-audit.md`
+**HEAD tip**: `9222042` (Day 4ds tip; Day 4dt commit follows)  
+**Status**: Dig **#185 DRY** (Bolsterlee PeerJ soleus: CC BY paper; MRI/DTI and measurements, no STL). Dig **#186 DRY** (TotalSegmentator v2.16.0–v2.18.0 and v3.0.0 weights 2026-09-07: no foot-intrinsic pack). Census **129/124** unchanged. **MERGE-READY for teaching-grade** if disclosed gaps accepted — **NOT** finished/clinical/TA2-complete. No stance shift.  
+**Companion**: `docs/week4-roadmap.md`, `docs/week2-soft-ceiling-memo.md` (digs through #186), `docs/phase-8-self-review.md` (Week 3 section), `docs/week3-expert-self-audit.md`
 
 ---
 
