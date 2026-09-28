@@ -3344,7 +3344,7 @@ Existing honest no-screenshot note in `docs/journal-figure-captions.md` (Day 4df
 
 **Census**: 129/124 unchanged.
 
-**Commit**: (pending)
+**Commit**: faa8957
 
 **Stance**: MERGE-READY unchanged. Not clinical. Not TA2-complete. Not a finished product.
 

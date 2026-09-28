@@ -30,7 +30,7 @@ Henson Sheffield **Option A** one-subject MC POC completed (`Aug_8`): surfaces O
 
 **Date**: 2026-09-28 · Day **4dt** (Week 4 sparse soft watch #185–#186)  
 **Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3)  
-**HEAD tip**: `9222042` (Day 4ds tip; Day 4dt commit follows)  
+**HEAD tip**: `faa8957` (Day 4dt: digs #185–#186 both DRY; dig-range through #186)  
 **Status**: Dig **#185 DRY** (Bolsterlee PeerJ soleus: CC BY paper; MRI/DTI and measurements, no STL). Dig **#186 DRY** (TotalSegmentator v2.16.0–v2.18.0 and v3.0.0 weights 2026-09-07: no foot-intrinsic pack). Census **129/124** unchanged. **MERGE-READY for teaching-grade** if disclosed gaps accepted — **NOT** finished/clinical/TA2-complete. No stance shift.  
 **Companion**: `docs/week4-roadmap.md`, `docs/week2-soft-ceiling-memo.md` (digs through #186), `docs/phase-8-self-review.md` (Week 3 section), `docs/week3-expert-self-audit.md`
 
