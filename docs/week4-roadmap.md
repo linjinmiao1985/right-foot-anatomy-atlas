@@ -2,8 +2,9 @@
 
 **Phase 8 · Day 4dq · Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3)  
 **Census**: 129/124 entries/unique; 126/129 ontology citable; 53 main-tree / 71 BY-SA; 134 GLB on-disk  
-**Soft digs**: #147–#180 (34 watch digs Day 4cl–4dq); **0** new CC0/BY soft meshes integrated  
-**Week 3 end**: teaching-grade MERGE-READY with disclosed gaps (58 PASS / 12 PARTIAL / 0 FAIL; soft-ceiling ALIGNED; 0 broken journal links)
+**Soft digs**: #147–#180 at Week 4 start; **Day 4du wrap** extends the watch through **#186** (Day 4dq–4dt). **0** new CC0/BY soft meshes. **0** wires.  
+**Week 3 end**: teaching-grade MERGE-READY with disclosed gaps (58 PASS / 12 PARTIAL / 0 FAIL; soft-ceiling ALIGNED; 0 broken journal links)  
+**Day 4du status (2026-09-29)**: Week 4 wrap recorded in `docs/phase-8-self-review.md`. Dig-range honesty stays at **#186**. Census **129/124**. MERGE-READY unchanged. PR #3 remains draft. Next sparse batch is due after another 2–3 days, not on this wrap day.
 
 ---
 
@@ -15,7 +16,7 @@ Week 4 focus: maintain **merge-ready teaching-grade** status post–Week-3 verif
 
 ## 1. Soft-Tissue Posture (WATCH ONLY Until Clear CC0/BY Hit + Spatial QA)
 
-### Current Status (through dig #180 Day 4dq)
+### Current Status (through dig #180 at Day 4dq start; wrap extends DRY through #186 — see phase-8 Week 4)
 
 **Soft gaps remain DRY** (0 new CC0/BY meshes #147–#180):
 - Per-toe DI (dorsal interossei 1st–4th elementals)
@@ -225,7 +226,7 @@ Week 4 focus: maintain **merge-ready teaching-grade** status post–Week-3 verif
 
 ### Days 4dr–4dt: Sparse soft watch (at most 2 NEW digs every 2–3 days; expect DRY)
 
-### Day 4du: Week 4 wrap / update phase-8-self-review.md Week 4 section / PR #3 final draft-ready status check
+### Day 4du (2026-09-29, done): Week 4 wrap — phase-8 Week 4 section, roadmap status lines, PR #3 draft body. No new dig.
 
 **Soft-tissue posture**: **WATCH ONLY** through Week 4 (at most 4–6 digs total; expect DRY; no force-wire until clear CC0/BY hit + spatial QA passes)
 
@@ -237,5 +238,5 @@ Week 4 = **post–Week-3 merge readiness + continuous open-data watch**. Prefer 
 
 ---
 
-**Version**: v1.0 (Day 4dq 2026-09-24)  
-**Next review**: Day 4du (Week 4 wrap)
+**Version**: v1.0 (Day 4dq 2026-09-24); status lines refreshed Day 4du 2026-09-29  
+**Next review**: next sparse soft-watch batch (2–3 days after digs #185–#186; still WATCH ONLY)

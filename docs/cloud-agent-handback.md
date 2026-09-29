@@ -28,11 +28,11 @@ Henson Sheffield **Option A** one-subject MC POC completed (`Aug_8`): surfaces O
 
 # Cloud Agent handback — Phase 8 resume brief
 
-**Date**: 2026-09-28 · Day **4dt** (Week 4 sparse soft watch #185–#186)  
-**Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3)  
-**HEAD tip**: `faa8957` (Day 4dt: digs #185–#186 both DRY; dig-range through #186)  
-**Status**: Dig **#185 DRY** (Bolsterlee PeerJ soleus: CC BY paper; MRI/DTI and measurements, no STL). Dig **#186 DRY** (TotalSegmentator v2.16.0–v2.18.0 and v3.0.0 weights 2026-09-07: no foot-intrinsic pack). Census **129/124** unchanged. **MERGE-READY for teaching-grade** if disclosed gaps accepted — **NOT** finished/clinical/TA2-complete. No stance shift.  
-**Companion**: `docs/week4-roadmap.md`, `docs/week2-soft-ceiling-memo.md` (digs through #186), `docs/phase-8-self-review.md` (Week 3 section), `docs/week3-expert-self-audit.md`
+**Date**: 2026-09-29 · Day **4du** (Week 4 WRAP)  
+**Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3, draft)  
+**HEAD tip**: `ff9c5fd` (Day 4dt; Day 4du wrap commit follows)  
+**Status**: Week 4 wrap recorded in `docs/phase-8-self-review.md`. Soft digs **#179–#186** all MONITOR/DRY/REJECT; **0** wires. Dig range stays **#186** (no new dig today). Census **129/124**. **MERGE-READY for teaching-grade** unchanged if disclosed gaps accepted — **NOT** finished/clinical/TA2-complete. Next: sparse watch every 2–3 days.  
+**Companion**: `docs/phase-8-self-review.md` (Week 4 section), `docs/week4-roadmap.md` (status lines Day 4du), `docs/week2-soft-ceiling-memo.md` (through #186)
 
 ---
 

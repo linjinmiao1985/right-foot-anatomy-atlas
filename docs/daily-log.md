@@ -3348,3 +3348,25 @@ Existing honest no-screenshot note in `docs/journal-figure-captions.md` (Day 4df
 
 **Stance**: MERGE-READY unchanged. Not clinical. Not TA2-complete. Not a finished product.
 
+---
+
+## Day 4du (2026-09-29) — Week 4 WRAP
+
+**Goals**: Docs and PR communication only. No new soft dig (last batch was Day 4dt, digs #185–#186). No mesh wire. Leave PR #3 as draft.
+
+**Done**:
+- `docs/phase-8-self-review.md`: Week 4 section (theme; digs #179–#186 all MONITOR/DRY/REJECT; 0 wires; dig range #186; census 129/124; MERGE-READY maintained; non-goals held; next sparse watch).
+- `docs/week4-roadmap.md`: status lines only (wrap through #186; Day 4du marked done; next review is the following sparse batch).
+- Handback header set to Day 4du.
+- PR #3 body refreshed after the commit.
+
+**Not done**: no dig #187. No `structures.json` or GLB edits. No merge. Draft stays draft.
+
+**Gates** (after `npm ci`; the checkout had no `node_modules`): integrity-audit 0 violations (129 structures / 134 GLB); vitest 138/138; `npm run build` succeeded (expected chunk-size warning).
+
+**Census**: 129/124 unchanged.
+
+**Commit**: (pending)
+
+**Stance**: MERGE-READY unchanged. Not clinical. Not TA2-complete. Not a finished product.
+

@@ -422,3 +422,64 @@ Week 2 journal pack (complete; intact):
 
 **Version**: Phase 8 Week 3 wrap (Day 4dp 2026-09-23)  
 **Next**: Per Week 3 roadmap §6 + reviewer feedback — optional demo video Day 4do if requested; otherwise PR #3 ready for external review + merge discussion
+
+---
+
+## Week 4 Quality Checkpoint (Day 4dq–4du)
+
+**Date**: 2026-09-29 (Day 4du wrap; watch days 4dq–4dt)  
+**Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3, draft)  
+**Prior tip**: `ff9c5fd` (Day 4dt)
+
+### A) Theme
+
+Post–Week-3 merge readiness plus a sparse open-data watch. The atlas stays a teaching atlas **in progress**. Week 4 did not add meshes and did not change the merge stance.
+
+### B) Soft watch (Day 4dq–4dt, digs #179–#186)
+
+WATCH ONLY. No new dig on Day 4du (the last batch was Day 4dt; cadence is every 2–3 days).
+
+| Digs | Day | Verdict |
+| --- | --- | --- |
+| #179–#180 | 4dq | MONITOR/DRY — MuscleMap foot model still in development; TotalSegmentator v2.15.0 foot bones only; Scan-the-World still NC+SA; UM Apr 2026 adds no foot intrinsics |
+| #181 | 4dr | MONITOR/DRY — MuscleMap v1.4 adds leg extrinsics, not foot intrinsics |
+| #182 | 4dr | REJECT — Alana Sharp LiMRIC Sketchfab view-only, license unclear |
+| #183 | 4ds | REJECT — LivingLab Sketchfab foot anatomy: empty license, not downloadable |
+| #184 | 4ds | DRY — Knaus/Blemker soleus finite-element write-up, no public mesh |
+| #185 | 4dt | DRY — Bolsterlee PeerJ soleus: CC BY paper; MRI/DTI and measurements, no surface mesh |
+| #186 | 4dt | DRY — TotalSegmentator v2.16.0–v2.18.0 and v3.0.0 weights (2026-09-07): no foot-intrinsic pack |
+
+**Result**: 8 digs, all MONITOR, DRY, or REJECT. **0** new CC0/BY soft meshes. **0** wires. No NC, SA, or unclear license was forced in. Andreassen was not reopened.
+
+Dig-range labels in `docs/methods.md`, README Limitations, and `docs/week2-soft-ceiling-memo.md` are synced through **#186**. No new dig number today.
+
+### C) Census and gates
+
+- Census **129/124** entries/unique; 126/129 ontology citable; 53 main-tree / 71 BY-SA; 134 GLB. Unchanged all week.
+- Gate posture unchanged: integrity audit, vitest, and production build were green on inventory-touching days. Day 4du re-runs them because this wrap records the checkpoint (docs only; no mesh or `structures.json` edit).
+
+### D) MERGE-READY stance (maintained, not shifted)
+
+Teaching-grade **MERGE-READY** if reviewers accept the disclosed gaps:
+
+1. Lumbricals absent as meshes (anatomical metadata only)
+2. DI 1st–4th grouped (teaching compromise, not per-toe elementals)
+3. MTA grouped (teaching compromise, not per-ray elementals)
+4. Nerve, ligament, and vessel teaching sets incomplete
+5. Gastrocnemius and soleus bellies absent (Andreassen spatial QA fail; no CC0/BY alternative)
+6. 3 honest ontology empties (cervical TC; medial and lateral plantar veins)
+
+### E) Non-goals held
+
+- Not a finished product
+- Not clinical, surgical, diagnostic, or treatment planning
+- Not a TA2-complete soft-tissue atlas
+- No extra BY-SA padding
+
+### F) Next
+
+Week 4 wrap is complete. Keep the PR as a draft. Continue the sparse soft watch on later weekdays: every 2–3 days, at most 2–3 digs, still WATCH ONLY until a clear CC0/BY foot-soft mesh passes Kabsch QA.
+
+---
+
+**Version**: Phase 8 Week 4 wrap (Day 4du 2026-09-29)
