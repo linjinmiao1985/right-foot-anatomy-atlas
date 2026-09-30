@@ -219,10 +219,10 @@
 
 ---
 
-## Post–Week 2 sparse watch update (Day 4dk–4dt)
+## Post–Week 2 sparse watch update (Day 4dk–4dv)
 
-**Date**: 2026-09-23–28 · Day 4dk through Day 4dt (Week 3–4 sparse watch)  
-**Additional digs**: #171–#186 (16 sparse watch digs; all DRY or MONITOR/REJECT)
+**Date**: 2026-09-23–30 · Day 4dk through Day 4dv (Week 3–4 sparse watch)  
+**Additional digs**: #171–#189 (19 sparse watch digs; all DRY or MONITOR/REJECT)
 
 **Outcomes**:
 - **#171–#173** (Day 4dd): Cults3D/CGTrader/Wikimedia generic (DRY; license unclear); IFAA terminology BY-SA (DRY; terminology not meshes); Open3DModel/Complete Anatomy/Pennsieve (DRY; BY-SA / subscription / license unclear)
@@ -233,7 +233,8 @@
 - **#181–#182** (Day 4dr): MuscleMap v1.4 (Aug 2026) adds leg extrinsics (EDL/EHL/tibialis posterior/FDL/popliteus/plantaris/gastroc compartments) but **no foot intrinsics** (MONITOR/DRY); Alana Sharp LiMRIC Sketchfab foot muscle model not downloadable + license unclear (REJECT)
 - **#183–#184** (Day 4ds): LivingLab Sketchfab “Human Foot Anatomy” (May 2026) API license empty + not downloadable (REJECT); Knaus/Blemker soleus FE geometry has no public CC0/BY STL (DRY). Zenodo API 403 this session — no new Zenodo hit claimed
 - **#185–#186** (Day 4dt): Bolsterlee PeerJ soleus DTI is CC BY measurements/MRI, not a surface mesh (DRY); TotalSegmentator v2.16–v2.18 and v3.0.0 weights (2026-09-07) add no foot-intrinsic pack (DRY)
+- **#187–#189** (Day 4dv): NIH 3DPX-015850 still CC BY-NC-SA bones; Utah Hive still CC BY 3.0 tibia/talus/calcaneus only (REJECT). Figshare STL search empty; OSF tsmqg is a review with no mesh (DRY). TogoLab `foot_soft_plantar_fascia` STL is CC BY-SA 2.1 JP (REJECT)
 
-**Day 4ct summary above remains canonical** (24 digs #147–#170; comprehensive 1-page freeze). Post–Week 2 sparse watch digs #171–#186 extend the DRY outcome; no changes to teaching-compromise stance. Soft-tissue open-data ceiling **reconfirmed through #186** (Day 4dt).
+**Day 4ct summary above remains canonical** (24 digs #147–#170; comprehensive 1-page freeze). Post–Week 2 sparse watch digs #171–#189 extend the DRY/REJECT outcome; no changes to teaching-compromise stance. Soft-tissue open-data ceiling **reconfirmed through #189** (Day 4dv).
 
 

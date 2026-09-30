@@ -2568,3 +2568,45 @@ Zenodo API metadata retrieved (DOI 10.5281/zenodo.20231309). License: **CC BY-NC
 
 **Day 4dt sparse watch dig summary**: 2 digs (#185–#186); **both DRY**. Bolsterlee soleus data are MRI/DTI and measurements under a CC BY paper, not a surface mesh. TotalSegmentator through v2.18.0 and the 2026-09-07 v3.0.0 weights still have no foot-intrinsic pack. Census unchanged. Soft-tissue open-data ceiling **reconfirmed through dig #186**.
 
+---
+
+### Dig #187: Utah Hive + NIH 3D foot entry recheck — license and content unchanged
+
+**Date**: 2026-09-30 (Day 4dv)  
+**Query**: Any new CC0/CC BY downloadable foot nerve or ligament mesh from Utah Hive or NIH 3D / 3DPX since the bones-only rejects  
+**Sources**:
+- NIH 3D entry 3DPX-015850, fetched 2026-09-30: https://3d.nih.gov/entries/15850?version=1 — page still preloads only `/images/licenses/cc-by-nc-sa.png` (no CC0 or CC BY badge). HTML has no nerve or ligament strings. Same NC-SA bones model rejected as dig #41.
+- Utah Hive record `fmfxm-02c03`, DOI 10.7278/S5d-1nqg-0fqd: https://hive.utah.edu/records/fmfxm-02c03 — rights id still `cc-by-3.0`. Record modified 2026-09-28. Files remain `ANDERSON_readme20260127.txt` and `Hive_Tibiotalar_Arthrodesis_Biomechanics.zip`. README (generated 2026-01-27) lists surface STLs for the tibia–talus fusion, distal tibia, talus, and calcaneus only.
+
+**License**: NIH entry still CC BY-NC-SA. Utah still CC BY 3.0.  
+**Downloadable foot soft**: no. Utah STLs are osteology. NIH entry is still the designed bone model.  
+**Verdict**: **REJECT** — evidence did not change. Do not wire bones as a soft-tissue fill. Do not treat CC BY 3.0 osteology as plantar nerves or ligaments.
+
+---
+
+### Dig #188: 2026 Figshare / OSF / Zenodo sweep — no new CC0/CC BY foot-soft mesh
+
+**Date**: 2026-09-30 (Day 4dv)  
+**Query**: 2026 repository deposits of foot/ankle soft meshes (intrinsics, lumbricals, per-toe DI, per-ray MTA, plantar nerves/ligaments, gastroc/soleus surfaces) with explicit CC0 or CC BY  
+**Sources**:
+- Figshare public search API `POST /v2/articles/search` with `search_for=foot muscle mesh STL`, 2026-09-30: **0 articles**.
+- OSF node `tsmqg` (created 2026-05-18): “INTRINSIC FOOT MUSCLE EXERCISES… SYSTEMATIC REVIEW”. `node_license` is empty. Storage holds bibliometric PDFs, a PROSPERO PDF, and an R script. No STL/OBJ/GLB. https://osf.io/tsmqg
+- Zenodo records API returned **403** from this network, so no new Zenodo license was read. A July 2026 “Muscles of the foot and ankle” abstract is the Scan-the-World / Embodi3D CT model already rejected as CC BY-NC-SA (MyMiniFactory object 72472 states BY-NC-SA). Not re-opened as a CC BY candidate.
+
+**Verdict**: **DRY** — no new explicit CC0 or CC BY foot-soft mesh. NC/SA family stays rejected. Empty OSF license is not a wire.
+
+---
+
+### Dig #189: TogoLab anthropomimetic foot STLs — plantar fascia file is CC BY-SA 2.1 JP
+
+**Date**: 2026-09-30 (Day 4dv)  
+**Query**: A concrete downloadable academic/open mesh not closed in digs #179–#186  
+**Source**: https://github.com/TogoLab/anthropomimetic-foot-joint-structure — license guide https://github.com/TogoLab/anthropomimetic-foot-joint-structure/blob/main/licenses/README_LICENSE.md  
+**License evidence**: `stl/foot_soft_*` and `stl/foot_rigid_*` are **CC BY-SA 2.1 Japan**. CC BY 4.0 covers apparatus parts, `foot_flat_*`, raw data, and video only.  
+**Downloadability**: GitHub lists downloadable STLs, including `foot_soft_plantar_fascia_v1.stl` (155,884 bytes). The other `foot_soft_*` names are bones (calcaneus, talus, cuneiforms, metatarsals, phalanges), not lumbricals, per-toe DI, per-ray arteries, or nerves.  
+**Verdict**: **REJECT** — the one soft-tissue STL fails the license rule (ShareAlike). Do not add it to `by-sa/` (no SA padding) and do not put it on the main tree.
+
+---
+
+**Day 4dv sparse watch dig summary**: 3 digs (#187–#189); **REJECT / DRY / REJECT**. No wire. Census unchanged. Soft-tissue open-data ceiling **reconfirmed through dig #189**.
+

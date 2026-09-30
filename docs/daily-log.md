@@ -3370,3 +3370,24 @@ Existing honest no-screenshot note in `docs/journal-figure-captions.md` (Day 4df
 
 **Stance**: MERGE-READY unchanged. Not clinical. Not TA2-complete. Not a finished product.
 
+---
+
+## Day 4dv (2026-09-30) — sparse soft watch #187–#189
+
+**Goals**: Exactly three new soft-tissue digs. Wire only if CC0 or CC BY, a downloadable foot-soft STL/OBJ/GLB, and Kabsch QA all pass. Leave PR #3 as draft.
+
+**Digs**:
+- **#187 REJECT**: NIH 3DPX-015850 still preloads only the CC BY-NC-SA badge (bones). Utah Hive `fmfxm-02c03` was modified 2026-09-28 but remains CC BY 3.0 tibia/talus/calcaneus STLs. No plantar nerve or ligament mesh.
+- **#188 DRY**: Figshare search for foot muscle STL returned 0 articles. OSF `tsmqg` (2026-05-18) is an intrinsic-foot-muscle exercise review with an empty node license and no mesh files. Zenodo API returned 403; the July 2026 Scan-the-World foot model stays in the already-rejected NC+SA family.
+- **#189 REJECT**: TogoLab `anthropomimetic-foot-joint-structure` lists a downloadable `foot_soft_plantar_fascia_v1.stl`, licensed CC BY-SA 2.1 Japan. CC BY 4.0 on that repo covers apparatus and raw data, not the anatomical STLs. Not added to `by-sa/`.
+
+**Honesty sync**: `docs/methods.md`, README Limitations, `docs/week2-soft-ceiling-memo.md`, `docs/week4-roadmap.md` status, `docs/phase-8-self-review.md` Day 4dv note, handback → through **#189**.
+
+**Not done**: no wire. Census, `structures.json`, and GLBs untouched. No merge. Draft stays draft.
+
+**Census**: 129/124 unchanged.
+
+**Commit**: (pending)
+
+**Stance**: MERGE-READY unchanged. Not clinical. Not TA2-complete. Not a finished product.
+

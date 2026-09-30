@@ -28,11 +28,11 @@ Henson Sheffield **Option A** one-subject MC POC completed (`Aug_8`): surfaces O
 
 # Cloud Agent handback — Phase 8 resume brief
 
-**Date**: 2026-09-29 · Day **4du** (Week 4 WRAP)  
+**Date**: 2026-09-30 · Day **4dv** (sparse soft watch #187–#189)  
 **Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3, draft)  
-**HEAD tip**: `1636f22` (Day 4du Week 4 wrap; dig range stays #186)  
-**Status**: Week 4 wrap recorded in `docs/phase-8-self-review.md`. Soft digs **#179–#186** all MONITOR/DRY/REJECT; **0** wires. Dig range stays **#186** (no new dig today). Census **129/124**. **MERGE-READY for teaching-grade** unchanged if disclosed gaps accepted — **NOT** finished/clinical/TA2-complete. Next: sparse watch every 2–3 days.  
-**Companion**: `docs/phase-8-self-review.md` (Week 4 section), `docs/week4-roadmap.md` (status lines Day 4du), `docs/week2-soft-ceiling-memo.md` (through #186)
+**HEAD tip**: `341f836` (Day 4du; Day 4dv commit follows)  
+**Status**: Dig **#187 REJECT** (NIH 3DPX-015850 still NC-SA bones; Utah Hive still CC BY 3.0 osteology). Dig **#188 DRY** (Figshare 0 hits; OSF review has no mesh). Dig **#189 REJECT** (TogoLab plantar-fascia STL is CC BY-SA 2.1 JP). **0** wires. Census **129/124**. **MERGE-READY** unchanged — **NOT** finished/clinical/TA2-complete.  
+**Companion**: `docs/week2-soft-ceiling-memo.md` (through #189), `docs/phase-8-self-review.md` (Day 4dv note), `docs/week4-roadmap.md`
 
 ---
 

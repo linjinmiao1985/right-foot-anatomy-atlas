@@ -451,7 +451,9 @@ WATCH ONLY. No new dig on Day 4du (the last batch was Day 4dt; cadence is every 
 
 **Result**: 8 digs, all MONITOR, DRY, or REJECT. **0** new CC0/BY soft meshes. **0** wires. No NC, SA, or unclear license was forced in. Andreassen was not reopened.
 
-Dig-range labels in `docs/methods.md`, README Limitations, and `docs/week2-soft-ceiling-memo.md` are synced through **#186**. No new dig number today.
+Dig-range labels in `docs/methods.md`, README Limitations, and `docs/week2-soft-ceiling-memo.md` were synced through **#186** on Day 4du.
+
+**Day 4dv note (2026-09-30)**: three further watch digs, still no wire. **#187 REJECT** — NIH 3DPX-015850 remains CC BY-NC-SA bones; Utah Hive (modified 2026-09-28) remains CC BY 3.0 tibia/talus/calcaneus STLs. **#188 DRY** — Figshare STL search returned 0; OSF `tsmqg` is a systematic-review folder with an empty node license; Zenodo API 403, and the July 2026 Scan-the-World foot model stays in the already-rejected NC+SA family. **#189 REJECT** — TogoLab `foot_soft_plantar_fascia_v1.stl` is downloadable but CC BY-SA 2.1 Japan. Dig-range honesty moves to **#189**. Census and MERGE-READY unchanged.
 
 ### C) Census and gates
 
