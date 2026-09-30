@@ -30,7 +30,7 @@ Henson Sheffield **Option A** one-subject MC POC completed (`Aug_8`): surfaces O
 
 **Date**: 2026-09-30 · Day **4dv** (sparse soft watch #187–#189)  
 **Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3, draft)  
-**HEAD tip**: `341f836` (Day 4du; Day 4dv commit follows)  
+**HEAD tip**: `b6c9dc2` (Day 4dv sparse watch #187–#189; dig range #189)  
 **Status**: Dig **#187 REJECT** (NIH 3DPX-015850 still NC-SA bones; Utah Hive still CC BY 3.0 osteology). Dig **#188 DRY** (Figshare 0 hits; OSF review has no mesh). Dig **#189 REJECT** (TogoLab plantar-fascia STL is CC BY-SA 2.1 JP). **0** wires. Census **129/124**. **MERGE-READY** unchanged — **NOT** finished/clinical/TA2-complete.  
 **Companion**: `docs/week2-soft-ceiling-memo.md` (through #189), `docs/phase-8-self-review.md` (Day 4dv note), `docs/week4-roadmap.md`
 
