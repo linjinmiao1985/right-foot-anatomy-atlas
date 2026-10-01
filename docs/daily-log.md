@@ -3391,3 +3391,23 @@ Existing honest no-screenshot note in `docs/journal-figure-captions.md` (Day 4df
 
 **Stance**: MERGE-READY unchanged. Not clinical. Not TA2-complete. Not a finished product.
 
+---
+
+## Day 4dw (2026-10-01) — polish/docs only
+
+**Goals**: Docs sync only. Soft watch is not due (+1 day after digs #189). No new dig. No mesh wire. Leave PR #3 as draft.
+
+**Done**:
+- Handback header set to Day 4dw. Incoming tip recorded as `673e052`.
+- `docs/phase-8-self-review.md`: Day 4dw note (watch not due; next batch ~2026-10-02 or 2026-10-03).
+- `docs/week4-roadmap.md`: Day 4dw status line. Dig range stays **#189**.
+- `docs/week5-roadmap.md`: thin cadence stub (every 2–3 days, at most 2–3 digs, WATCH ONLY). Not a Week 5 start and not a finished-product claim.
+
+**Not done**: no dig #190. No `structures.json` or GLB edits. No merge. Draft stays draft.
+
+**Census**: 129/124 unchanged.
+
+**Commit**: (pending)
+
+**Stance**: MERGE-READY unchanged. Not clinical. Not TA2-complete. Not a finished product.
+

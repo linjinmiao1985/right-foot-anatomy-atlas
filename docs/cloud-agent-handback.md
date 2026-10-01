@@ -28,11 +28,11 @@ Henson Sheffield **Option A** one-subject MC POC completed (`Aug_8`): surfaces O
 
 # Cloud Agent handback — Phase 8 resume brief
 
-**Date**: 2026-09-30 · Day **4dv** (sparse soft watch #187–#189)  
+**Date**: 2026-10-01 · Day **4dw** (polish/docs only; soft watch not due)  
 **Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3, draft)  
-**HEAD tip**: `b6c9dc2` (Day 4dv sparse watch #187–#189; dig range #189)  
-**Status**: Dig **#187 REJECT** (NIH 3DPX-015850 still NC-SA bones; Utah Hive still CC BY 3.0 osteology). Dig **#188 DRY** (Figshare 0 hits; OSF review has no mesh). Dig **#189 REJECT** (TogoLab plantar-fascia STL is CC BY-SA 2.1 JP). **0** wires. Census **129/124**. **MERGE-READY** unchanged — **NOT** finished/clinical/TA2-complete.  
-**Companion**: `docs/week2-soft-ceiling-memo.md` (through #189), `docs/phase-8-self-review.md` (Day 4dv note), `docs/week4-roadmap.md`
+**HEAD tip**: `673e052` (Day 4dv record; Day 4dw docs commit follows)  
+**Status**: No new dig. Last batch remains Day 4dv **#187 REJECT / #188 DRY / #189 REJECT**. Dig range stays **#189**. Next sparse watch ~2026-10-02 or 2026-10-03. **0** wires. Census **129/124**. **MERGE-READY** unchanged — **NOT** finished/clinical/TA2-complete.  
+**Companion**: `docs/week2-soft-ceiling-memo.md` (through #189), `docs/phase-8-self-review.md` (Day 4dw note), `docs/week4-roadmap.md`, `docs/week5-roadmap.md` (cadence stub)
 
 ---
 

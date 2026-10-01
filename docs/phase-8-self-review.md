@@ -455,6 +455,8 @@ Dig-range labels in `docs/methods.md`, README Limitations, and `docs/week2-soft-
 
 **Day 4dv note (2026-09-30)**: three further watch digs, still no wire. **#187 REJECT** — NIH 3DPX-015850 remains CC BY-NC-SA bones; Utah Hive (modified 2026-09-28) remains CC BY 3.0 tibia/talus/calcaneus STLs. **#188 DRY** — Figshare STL search returned 0; OSF `tsmqg` is a systematic-review folder with an empty node license; Zenodo API 403, and the July 2026 Scan-the-World foot model stays in the already-rejected NC+SA family. **#189 REJECT** — TogoLab `foot_soft_plantar_fascia_v1.stl` is downloadable but CC BY-SA 2.1 Japan. Dig-range honesty moves to **#189**. Census and MERGE-READY unchanged.
 
+**Day 4dw note (2026-10-01)**: polish and docs only. Soft watch is not due (one day after #189; cadence is every 2–3 days). No dig #190. Last verdicts stay #187 REJECT / #188 DRY / #189 REJECT. Next sparse batch is about 2026-10-02 or 2026-10-03, still WATCH ONLY. Census **129/124** and MERGE-READY unchanged. A thin cadence stub for the following week is `docs/week5-roadmap.md`.
+
 ### C) Census and gates
 
 - Census **129/124** entries/unique; 126/129 ontology citable; 53 main-tree / 71 BY-SA; 134 GLB. Unchanged all week.
@@ -484,4 +486,4 @@ Week 4 wrap is complete. Keep the PR as a draft. Continue the sparse soft watch 
 
 ---
 
-**Version**: Phase 8 Week 4 wrap (Day 4du 2026-09-29)
+**Version**: Phase 8 Week 4 wrap (Day 4du 2026-09-29); Day 4dv and Day 4dw notes appended (no new checkpoint)

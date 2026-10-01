@@ -5,7 +5,8 @@
 **Soft digs**: #147–#180 at Week 4 start; **Day 4du wrap** extends the watch through **#186** (Day 4dq–4dt). **0** new CC0/BY soft meshes. **0** wires.  
 **Week 3 end**: teaching-grade MERGE-READY with disclosed gaps (58 PASS / 12 PARTIAL / 0 FAIL; soft-ceiling ALIGNED; 0 broken journal links)  
 **Day 4du status (2026-09-29)**: Week 4 wrap recorded in `docs/phase-8-self-review.md`. Dig-range honesty was **#186** at wrap. Census **129/124**. MERGE-READY unchanged. PR #3 remains draft.  
-**Day 4dv status (2026-09-30)**: sparse digs **#187–#189** (REJECT / DRY / REJECT). **0** wires. Dig-range honesty now **#189**. Census **129/124**. MERGE-READY unchanged.
+**Day 4dv status (2026-09-30)**: sparse digs **#187–#189** (REJECT / DRY / REJECT). **0** wires. Dig-range honesty now **#189**. Census **129/124**. MERGE-READY unchanged.  
+**Day 4dw status (2026-10-01)**: polish/docs only. Soft watch **not due** (+1 day after #189). **0** new digs. Dig range stays **#189**. Next sparse batch ~2026-10-02 or 2026-10-03. Census **129/124**. MERGE-READY unchanged. Cadence stub: `docs/week5-roadmap.md`.
 
 ---
 
@@ -229,7 +230,11 @@ Week 4 focus: maintain **merge-ready teaching-grade** status post–Week-3 verif
 
 ### Day 4du (2026-09-29, done): Week 4 wrap — phase-8 Week 4 section, roadmap status lines, PR #3 draft body. No new dig.
 
-**Soft-tissue posture**: **WATCH ONLY** through Week 4 (at most 4–6 digs total; expect DRY; no force-wire until clear CC0/BY hit + spatial QA passes)
+### Day 4dv (2026-09-30, done): sparse digs #187–#189 (REJECT / DRY / REJECT). 0 wires. Dig range #189.
+
+### Day 4dw (2026-10-01, done): polish/docs only. Soft watch not due. No dig #190. Next batch ~2026-10-02 or 2026-10-03.
+
+**Soft-tissue posture**: **WATCH ONLY** (expect DRY; no force-wire until clear CC0/BY hit + spatial QA passes)
 
 ---
 
@@ -239,5 +244,5 @@ Week 4 = **post–Week-3 merge readiness + continuous open-data watch**. Prefer 
 
 ---
 
-**Version**: v1.0 (Day 4dq 2026-09-24); status lines refreshed Day 4du 2026-09-29  
-**Next review**: next sparse soft-watch batch (2–3 days after digs #187–#189; still WATCH ONLY)
+**Version**: v1.0 (Day 4dq 2026-09-24); status lines refreshed Day 4du 2026-09-29 and Day 4dw 2026-10-01  
+**Next review**: next sparse soft-watch batch (2–3 days after digs #187–#189, about 2026-10-02 or 2026-10-03; still WATCH ONLY). Cadence continues in `docs/week5-roadmap.md`.
