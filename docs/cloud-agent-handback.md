@@ -30,7 +30,7 @@ Henson Sheffield **Option A** one-subject MC POC completed (`Aug_8`): surfaces O
 
 **Date**: 2026-10-01 · Day **4dw** (polish/docs only; soft watch not due)  
 **Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3, draft)  
-**HEAD tip**: `673e052` (Day 4dv record; Day 4dw docs commit follows)  
+**HEAD tip**: `5633a9c` (Day 4dw docs; prior tip `673e052`)  
 **Status**: No new dig. Last batch remains Day 4dv **#187 REJECT / #188 DRY / #189 REJECT**. Dig range stays **#189**. Next sparse watch ~2026-10-02 or 2026-10-03. **0** wires. Census **129/124**. **MERGE-READY** unchanged — **NOT** finished/clinical/TA2-complete.  
 **Companion**: `docs/week2-soft-ceiling-memo.md` (through #189), `docs/phase-8-self-review.md` (Day 4dw note), `docs/week4-roadmap.md`, `docs/week5-roadmap.md` (cadence stub)
 

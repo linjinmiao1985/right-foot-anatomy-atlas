@@ -3405,9 +3405,11 @@ Existing honest no-screenshot note in `docs/journal-figure-captions.md` (Day 4df
 
 **Not done**: no dig #190. No `structures.json` or GLB edits. No merge. Draft stays draft.
 
+**Gates**: integrity-audit 0 violations (129 structures / 134 GLB); vitest 138/138; `npm run build` succeeded (expected chunk-size warning).
+
 **Census**: 129/124 unchanged.
 
-**Commit**: (pending)
+**Commit**: 5633a9c
 
 **Stance**: MERGE-READY unchanged. Not clinical. Not TA2-complete. Not a finished product.
 
