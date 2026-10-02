@@ -2610,3 +2610,47 @@ Zenodo API metadata retrieved (DOI 10.5281/zenodo.20231309). License: **CC BY-NC
 
 **Day 4dv sparse watch dig summary**: 3 digs (#187–#189); **REJECT / DRY / REJECT**. No wire. Census unchanged. Soft-tissue open-data ceiling **reconfirmed through dig #189**.
 
+---
+
+### Dig #190: MuscleMap v1.4 label list and TotalSegmentator v3 datasets — still no foot-soft surface mesh
+
+**Date**: 2026-10-02 (Day 4dx)  
+**Query**: Any new foot-intrinsic or foot-soft public mesh since Day 4dv (MuscleMap after v1.4; TotalSegmentator after v2.18 / the 2026-09-07 weights)  
+**Sources**:
+- MuscleMap GitHub commits since 2026-09-01: **0**. Software license remains MIT. Latest GitHub release is still toolbox **2.0** (2026-05-05).
+- Zenodo 10.5281/zenodo.21929873 (published 2026-08-16, license **MIT**): whole-body weights `contrast_agnostic_wholebody_model.json` states model version **1.4** and lists **113** labels. Regions are neck, shoulder, thorax, abdomen, pelvis, thigh, and leg. Leg labels are tibialis anterior/posterior, peroneus longus, soleus, medial and lateral gastrocnemius, tibia, fibula, flexor hallucis longus, extensor digitorum/hallucis longus, flexor digitorum longus, popliteus, and plantaris. The file has **no** `foot` region and **no** lumbrical, interosseous, or digiti minimi label. Files are `.pth` and `.json`, not an STL/OBJ/GLB.
+- TotalSegmentator: PyPI version still **2.18.0**. GitHub releases still top out at `v3.0.0-weights` (2026-09-07). Master changelog has no release after 2.18.0 (2026-08-12). `map_to_binary.py` names grouped foot **bones** only (`tarsal`, `metatarsal`, `phalanges_feet`) and has no lumbrical, gastrocnemius, soleus, or plantar-nerve class.
+- Zenodo 10.5281/zenodo.22688904 and 10.5281/zenodo.22688334 (both 2026-09-10, **CC BY 4.0**) are the v3 training sets: 1939 CT images / 117 structures (37 GB zip) and 1296 MRI images / 50 regions (15 GB zip). They are segmentation volumes, not a foot-soft surface mesh.
+
+**Verdict**: **MONITOR / DRY** — no new downloadable foot-soft atlas mesh. MIT weights are not a data license for a surface. Do not run either model to invent lumbrical or gastrocnemius surfaces.
+
+---
+
+### Dig #191: 2026 Zenodo / Figshare / OSF sweep — the only foot-muscle GLB is still CC BY-NC-SA
+
+**Date**: 2026-10-02 (Day 4dx)  
+**Query**: 2026 deposits of foot/ankle soft meshes with explicit CC0 or CC BY  
+**Sources**:
+- Zenodo title query `title:foot AND title:muscle` for 2026, fetched 2026-10-02: **4** hits. The only mesh records are Scan-the-World “Muscle and tendon structure of a foot”: 10.5281/zenodo.21375254 (2026-07-15) and 10.5281/zenodo.20207805 (2026-05-12). Both are **CC BY-NC-SA 4.0** and include GLB files. The other two hits are CC BY PDFs with no mesh.
+- Zenodo `title:"plantar fascia"` (2025–2026): one CC BY clinical PDF (10.5281/zenodo.19123728). No STL.
+- Zenodo `title:lumbrical` (2024–2026): one CC BY spreadsheet for a **hand** carpal-tunnel paper (10.5281/zenodo.15400204). Not a foot mesh.
+- Figshare `POST /v2/articles/search` for `foot muscle mesh STL` with `published_since=2026-01-01`: **0** articles.
+- OSF: `tsmqg` remains the review already logged as dig #188. New node `p9v5d` (2025-11-20) is a scoping-review protocol (`scoping_review_protocol.docx` only). `node_license` is null. No STL/OBJ/GLB.
+
+**Verdict**: **DRY** — no new CC0 or CC BY foot-soft mesh. The downloadable 2026 foot-muscle GLB stays in the rejected NC+SA family. Do not wire it.
+
+---
+
+### Dig #192: UniSA plantar ultrasound dataset — measurements under all-rights-reserved, no mesh
+
+**Date**: 2026-10-02 (Day 4dx)  
+**Query**: An academic or institutional foot-soft release with explicit CC0/CC BY and a downloadable surface mesh, not already closed in #179–#189  
+**Source**: University of South Australia dataset “Differences and relationships between ultrasound measurements… plantar foot soft tissue…”, DOI 10.25954/jt95-0x06, record https://researchdata.edu.au/differences-relationships-ultrasound-diabetic-status/1733664 (available 2024-12-31; page fetched 2026-10-02)  
+**Content**: Thickness numbers and categorical morphology for plantar skin, fat pad, and selected intrinsics (extensor digitorum brevis, 1st dorsal interosseous, grouped 2nd dorsal and 1st plantar interosseous, flexor digitorum brevis, quadratus plantae, 1st and 2nd lumbricals). No STL, OBJ, or GLB.  
+**License**: Access note says rights may be subject to license and privacy conditions, requests go through a contact, and **all rights are reserved**. Not CC0 or CC BY.  
+**Verdict**: **REJECT** — the measurements are not a surface mesh, and the license is not CC0 or CC BY. Do not invent meshes from the thickness table.
+
+---
+
+**Day 4dx sparse watch dig summary**: 3 digs (#190–#192); **MONITOR/DRY / DRY / REJECT**. No wire. Census unchanged. Soft-tissue open-data ceiling **reconfirmed through dig #192**.
+

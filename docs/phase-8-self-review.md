@@ -457,6 +457,8 @@ Dig-range labels in `docs/methods.md`, README Limitations, and `docs/week2-soft-
 
 **Day 4dw note (2026-10-01)**: polish and docs only. Soft watch is not due (one day after #189; cadence is every 2–3 days). No dig #190. Last verdicts stay #187 REJECT / #188 DRY / #189 REJECT. Next sparse batch is about 2026-10-02 or 2026-10-03, still WATCH ONLY. Census **129/124** and MERGE-READY unchanged. A thin cadence stub for the following week is `docs/week5-roadmap.md`.
 
+**Day 4dx note (2026-10-02)**: sparse watch due. **#190 MONITOR/DRY** — MuscleMap v1.4 (Zenodo 21929873, MIT weights) lists 113 labels through the leg and no foot region; TotalSegmentator stays at PyPI 2.18.0, and the 2026-09-10 CC BY v3 datasets are CT/MRI volumes rather than foot-soft surfaces. **#191 DRY** — Figshare 2026 STL search returned 0; the only 2026 foot-muscle GLBs (Zenodo 21375254 and 20207805) are Scan-the-World CC BY-NC-SA; OSF `p9v5d` is a protocol with an empty license. **#192 REJECT** — UniSA DOI 10.25954/jt95-0x06 is ultrasound thickness data under all-rights-reserved access, not a mesh. **0** wires. Dig-range honesty moves to **#192**. Census and MERGE-READY unchanged.
+
 ### C) Census and gates
 
 - Census **129/124** entries/unique; 126/129 ontology citable; 53 main-tree / 71 BY-SA; 134 GLB. Unchanged all week.
@@ -486,4 +488,4 @@ Week 4 wrap is complete. Keep the PR as a draft. Continue the sparse soft watch 
 
 ---
 
-**Version**: Phase 8 Week 4 wrap (Day 4du 2026-09-29); Day 4dv and Day 4dw notes appended (no new checkpoint)
+**Version**: Phase 8 Week 4 wrap (Day 4du 2026-09-29); Day 4dv, Day 4dw, and Day 4dx notes appended (no new checkpoint)

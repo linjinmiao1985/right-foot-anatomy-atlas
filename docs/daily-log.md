@@ -3413,3 +3413,26 @@ Existing honest no-screenshot note in `docs/journal-figure-captions.md` (Day 4df
 
 **Stance**: MERGE-READY unchanged. Not clinical. Not TA2-complete. Not a finished product.
 
+---
+
+## Day 4dx (2026-10-02) — sparse soft watch #190–#192
+
+**Goals**: Exactly three new soft-tissue digs. The watch was due (2 days after #189). Wire only if CC0 or CC BY, a downloadable foot-soft STL/OBJ/GLB, and Kabsch QA all pass. Leave PR #3 as draft.
+
+**Digs**:
+- **#190 MONITOR/DRY**: MuscleMap whole-body weights (Zenodo 21929873, 2026-08-16, MIT) are model v1.4 with 113 labels. The leg list includes soleus and gastrocnemius compartments and stops there: no foot region, lumbrical, or interosseous. GitHub commits since 2026-09-01: 0. TotalSegmentator remains PyPI 2.18.0. The 2026-09-10 CC BY v3 datasets are CT/MRI segmentation volumes, and the class map still has only grouped foot bones.
+- **#191 DRY**: Figshare 2026 foot-muscle STL search returned 0. Zenodo’s 2026 “foot” + “muscle” mesh hits are Scan-the-World GLBs under CC BY-NC-SA (21375254, 20207805). OSF `p9v5d` is a scoping-review protocol with an empty node license.
+- **#192 REJECT**: UniSA DOI 10.25954/jt95-0x06 records ultrasound thickness of plantar soft tissue and selected intrinsics. Access text says all rights are reserved. No surface mesh.
+
+**Honesty sync**: methods.md, README Limitations, week2-soft-ceiling-memo, week4/week5 status, phase-8 Day 4dx note, handback → through **#192**.
+
+**Not done**: no wire. Census, `structures.json`, and GLBs untouched. No merge. Draft stays draft.
+
+**Gates**: integrity-audit 0 violations (129 structures / 134 GLB); vitest 138/138; `npm run build` succeeded (expected chunk-size warning).
+
+**Census**: 129/124 unchanged.
+
+**Commit**: (pending)
+
+**Stance**: MERGE-READY unchanged. Not clinical. Not TA2-complete. Not a finished product.
+

@@ -28,11 +28,11 @@ Henson Sheffield **Option A** one-subject MC POC completed (`Aug_8`): surfaces O
 
 # Cloud Agent handback — Phase 8 resume brief
 
-**Date**: 2026-10-01 · Day **4dw** (polish/docs only; soft watch not due)  
+**Date**: 2026-10-02 · Day **4dx** (sparse soft watch #190–#192)  
 **Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3, draft)  
-**HEAD tip**: `5633a9c` (Day 4dw docs; prior tip `673e052`)  
-**Status**: No new dig. Last batch remains Day 4dv **#187 REJECT / #188 DRY / #189 REJECT**. Dig range stays **#189**. Next sparse watch ~2026-10-02 or 2026-10-03. **0** wires. Census **129/124**. **MERGE-READY** unchanged — **NOT** finished/clinical/TA2-complete.  
-**Companion**: `docs/week2-soft-ceiling-memo.md` (through #189), `docs/phase-8-self-review.md` (Day 4dw note), `docs/week4-roadmap.md`, `docs/week5-roadmap.md` (cadence stub)
+**HEAD tip**: `324488f` (Day 4dw record; Day 4dx commit follows)  
+**Status**: Dig **#190 MONITOR/DRY** (MuscleMap v1.4 labels stop at the leg; TotalSegmentator v3 sets are volumes). Dig **#191 DRY** (2026 foot-muscle GLB still CC BY-NC-SA; Figshare 0). Dig **#192 REJECT** (UniSA ultrasound measurements, all rights reserved). **0** wires. Dig range **#192**. Census **129/124**. **MERGE-READY** unchanged — **NOT** finished/clinical/TA2-complete. Next sparse watch ~2026-10-04 or 2026-10-05.  
+**Companion**: `docs/week2-soft-ceiling-memo.md` (through #192), `docs/phase-8-self-review.md` (Day 4dx note), `docs/week4-roadmap.md`, `docs/week5-roadmap.md`
 
 ---
 

@@ -2,7 +2,7 @@
 
 **Phase 8 · Day 4dw · Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3, draft)  
 **Census**: 129/124 entries/unique; 126/129 ontology citable; 53 main-tree / 71 BY-SA; 134 GLB on-disk  
-**Soft digs**: through **#189** (Day 4dv). **0** wires. Day 4dw adds **no** dig (watch not due; +1 day after #189).  
+**Soft digs**: through **#192** (Day 4dx). **0** wires. Day 4dx verdicts: #190 MONITOR/DRY, #191 DRY, #192 REJECT.  
 **Stance**: teaching-grade MERGE-READY if disclosed gaps are accepted. **Not** a finished product. **Not** clinical or surgical. **Not** TA2-complete.
 
 This file is a cadence stub so the watch does not look finished after the Week 4 wrap. It is not a claim that Week 5 has started, and it does not schedule a dig for Day 4dw.
@@ -23,7 +23,7 @@ Until that happens, census stays **129/124**.
 
 - One sparse batch every **2–3 days**.
 - At most **2–3 new digs** in a batch.
-- Next batch is about **2026-10-02 or 2026-10-03**. Those digs, if any, start at **#190**.
+- Day 4dx (2026-10-02) used **#190–#192**. Next batch is about **2026-10-04 or 2026-10-05** and would start at **#193**.
 - Docs-only days (like Day 4dw) do not invent a dig to fill the calendar.
 
 ## 3. Non-goals
@@ -43,5 +43,5 @@ Disclosed gaps stay disclosed: lumbricals absent as meshes; DI and MTA grouped (
 
 ---
 
-**Version**: stub v0.1 (Day 4dw 2026-10-01)  
-**Next review**: the first sparse batch on or after 2026-10-02 (still WATCH ONLY)
+**Version**: stub v0.1 (Day 4dw 2026-10-01); status lines refreshed Day 4dx 2026-10-02  
+**Next review**: next sparse batch about 2026-10-04 or 2026-10-05 (still WATCH ONLY)
