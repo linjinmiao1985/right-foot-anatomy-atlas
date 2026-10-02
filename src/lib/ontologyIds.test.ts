@@ -117,6 +117,37 @@ describe('ontologyIds', () => {
     expect(getHonestOntologyEmptyReason('calcaneus')).toBeUndefined();
   });
 
+  it('expert-review §A named spot-checks (≥10; checklist v2.0)', () => {
+    // Bones
+    expect(getOntologyIds('calcaneus')).toMatchObject({
+      ta2: 'A02.5.10.001',
+      fma: '24496',
+      bp: 'BP9040',
+    });
+    expect(getOntologyIds('talus')?.ta2).toBe('A02.5.10.002');
+    expect(getOntologyIds('metatarsal_1')?.bp).toBe('BP8230');
+    // Muscle — AH is FMA-only this pass (honest sparse; TA omitted)
+    expect(getOntologyIds('abductor_hallucis')?.fma).toBe('37459');
+    expect(getOntologyIds('abductor_hallucis')?.ta2).toBeUndefined();
+    expect(getOntologyIds('flexor_digitorum_longus')?.ta2).toBe('A04.7.02.052');
+    // Vessel
+    expect(getOntologyIds('dorsalis_pedis_artery')).toMatchObject({
+      ta2: 'A12.2.16.048',
+      fma: '43915',
+      bp: 'BP6027',
+    });
+    expect(getOntologyIds('plantar_artery_medial')?.ta2).toBe('A12.2.16.061');
+    // Nerve
+    expect(getOntologyIds('tibial_nerve')).toMatchObject({
+      ta2: 'A14.2.07.058',
+      fma: '19035',
+    });
+    expect(getOntologyIds('deep_fibular_nerve')?.fma).toBe('44771');
+    // Ligament / tendon
+    expect(getOntologyIds('anterior_talofibular_ligament')?.ta2).toBe('A03.6.10.009');
+    expect(getOntologyIds('calcaneal_tendon')?.bp).toBe('BP5098');
+  });
+
   it('grouped ontology notes have （组合）/（分组） in nameZh (Day 4bf)', () => {
     const byId = new Map(getAllStructures().map((s) => [s.id, s]));
     for (const [id, ont] of Object.entries(ONTOLOGY_BY_ID)) {
@@ -129,6 +160,4 @@ describe('ontologyIds', () => {
       ).toBe(true);
     }
   });
-
-
 });

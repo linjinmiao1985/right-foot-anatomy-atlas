@@ -2,6 +2,7 @@
  * Keyboard shortcut catalog for the teaching viewer help overlay.
  * UX-borrow (ideas only): Open Anatomy Studio / BioLens shortcut sheets;
  * GraphAnatomy isolate key habit; undergravity/human-atlas per-structure hide. No third-party UI code copied.
+ * Accessibility: focus-visible outlines (see index.css) for keyboard navigation; all interactive controls tab-reachable.
  */
 
 export interface KeyboardShortcut {
@@ -58,6 +59,24 @@ export const KEYBOARD_HELP_GROUPS: ReadonlyArray<KeyboardShortcutGroup> = [
         labelEn: 'Reset current teaching view',
         note: 'Re-applies the active preset after free orbit (Auckland LL visualiser reset habit — ideas only)',
       },
+      {
+        keys: 'G',
+        labelZh: '透视 / 实心',
+        labelEn: 'Toggle ghost / solid layers',
+        note: 'Soft-tissue translucency so osteology shows through — teaching 透视, not clinical X-ray (Air-Sage / Z-Anatomy Atlas G-ghost habit — ideas only). Fine-tune via master opacity slider in panel',
+      },
+      {
+        keys: 'E',
+        labelZh: '抽出 / 合拢',
+        labelEn: 'Toggle explode / assemble layers',
+        note: 'Peel covering layers along +Y so the sandwich is readable — teaching 抽出, not surgical dissection (Air-Sage / Human Atlas explode habit — ideas only)',
+      },
+      {
+        keys: 'Q',
+        labelZh: '测验 / 对照',
+        labelEn: 'Toggle quiz stub / names',
+        note: 'Hide names so students identify from mesh + layer — teaching quiz stub, not Anki / exam (Grypa-JJ / MedicalPlab habit — ideas only)',
+      },
     ],
   },
   {
@@ -79,10 +98,10 @@ export const KEYBOARD_HELP_GROUPS: ReadonlyArray<KeyboardShortcutGroup> = [
       },
       {
         keys: 'Esc',
-        labelZh: '取消选择 · 退出隔离 · 清空搜索',
-        labelEn: 'Clear selection, isolate, search',
+        labelZh: '取消选择 · 退出隔离 · 清空搜索 / 失焦',
+        labelEn: 'Clear selection, isolate, search / blur',
         note:
-          'Closes help first if open. Does NOT clear per-structure hides (X) — those persist in localStorage; use chip bar / Restore all',
+          'Closes help first if open. In search box: clears query (1st press), then blurs input (2nd). Global: clears selection + isolate. Does NOT clear per-structure hides (X) — use chip bar / Restore all',
       },
     ],
   },
