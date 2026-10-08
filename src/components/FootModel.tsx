@@ -121,6 +121,8 @@ const REAL_MUSCLE_MODELS: Record<string, string> = {
   'fibularis_brevis': '/models/right-foot/by-sa/fibularis_brevis.glb', // Open3D BY-SA Day 4ad
   'fibularis_tertius': '/models/right-foot/by-sa/fibularis_tertius.glb', // Open3D BY-SA Day 4ad
   'plantaris': '/models/right-foot/by-sa/plantaris.glb', // Z-Anatomy BY-SA Day 4ad
+  'gastrocnemius': '/models/right-foot/gastrocnemius_medial.glb', // BP3D FJ1397 CC BY Day 4dy
+  'soleus': '/models/right-foot/soleus.glb', // BP3D FJ1437 CC BY Day 4dy
   'extensor_digitorum_longus': '/models/right-foot/extensor_digitorum_longus.glb', // UM extrinsic
   'extensor_hallucis_longus': '/models/right-foot/extensor_hallucis_longus.glb', // UM extrinsic
   
@@ -149,6 +151,9 @@ const ADDITIONAL_MUSCLE_PARTS: Record<string, string[]> = {
   ],
   'flexor_hallucis_brevis': [
     '/models/right-foot/by-sa/flexor_hallucis_brevis_lateral.glb', // ZA BY-SA lateral head
+  ],
+  'gastrocnemius': [
+    '/models/right-foot/gastrocnemius_lateral.glb', // BP3D FJ1394 lateral head, CC BY Day 4dy
   ],
   'interossei_dorsales': [
     '/models/right-foot/by-sa/dorsal_interosseous_2nd.glb',
@@ -1078,7 +1083,7 @@ function RealLigamentModel({
 }
 
 /**
- * Load strategy (honesty): ~134 discrete teaching GLBs (~13 MB; 59 main + 75 by-sa).
+ * Load strategy (honesty): ~137 discrete teaching GLBs (Day 4dy +3 BP3D gastroc heads / soleus; prior ~134 was ~59 main + ~75 by-sa).
  * Visibility-gated mount already skips useGLTF for hidden layers.
  * Preload: bones eager (always-on osteology); other layers on demand when toggled visible
  * (BodyExplorer / OPANEX “deeper layer” habit — no code copy).

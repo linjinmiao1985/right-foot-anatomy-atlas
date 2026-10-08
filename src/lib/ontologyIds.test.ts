@@ -88,11 +88,14 @@ describe('ontologyIds', () => {
     expect(n).toBeLessThan(total);
   });
 
-  it('covers 126/129 live structures with three named honest empties (Day 4at)', () => {
+  it('covers 128/131 live structures with three named honest empties (Day 4dy)', () => {
     const n = Object.keys(ONTOLOGY_BY_ID).length;
     const total = getAllStructures().length;
-    expect(total).toBe(129);
-    expect(n).toBe(126);
+    expect(total).toBe(131);
+    expect(n).toBe(128);
+    expect(getOntologyIds('gastrocnemius')?.ta2).toBe('A04.7.02.044');
+    expect(getOntologyIds('gastrocnemius')?.fma).toBe('22541');
+    expect(getOntologyIds('soleus')?.fma).toBe('22542');
     const empty = [
       'cervical_talocalcaneal_ligament',
       'medial_plantar_veins',

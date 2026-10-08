@@ -28,11 +28,11 @@ Henson Sheffield **Option A** one-subject MC POC completed (`Aug_8`): surfaces O
 
 # Cloud Agent handback — Phase 8 resume brief
 
-**Date**: 2026-10-02 · Day **4dx** (sparse soft watch #190–#192)  
+**Date**: 2026-10-08 · Day **4dy** (sparse soft watch #193–#195 + M1 merge-readiness pack)  
 **Branch**: `cursor/week2-day4bm-ghost-opacity-096e` (PR #3, draft)  
-**HEAD tip**: `731fe65` (Day 4dx sparse watch #190–#192; prior tip `324488f`)  
-**Status**: Dig **#190 MONITOR/DRY** (MuscleMap v1.4 labels stop at the leg; TotalSegmentator v3 sets are volumes). Dig **#191 DRY** (2026 foot-muscle GLB still CC BY-NC-SA; Figshare 0). Dig **#192 REJECT** (UniSA ultrasound measurements, all rights reserved). **0** wires. Dig range **#192**. Census **129/124**. **MERGE-READY** unchanged — **NOT** finished/clinical/TA2-complete. Next sparse watch ~2026-10-04 or 2026-10-05.  
-**Companion**: `docs/week2-soft-ceiling-memo.md` (through #192), `docs/phase-8-self-review.md` (Day 4dx note), `docs/week4-roadmap.md`, `docs/week5-roadmap.md`
+**HEAD tip at start of this pass**: `37e92e3` (Day 4dx dig-log SHA record). New tip is the Day 4dy commit on this branch.  
+**Status**: Dig **#193 DRY** (OrthoSense FEBio V10, Zenodo 21372171, dataset `cc-by-4.0`, files are npz; geometry licence not granted). Dig **#194 WIRED** (BodyParts3D gastrocnemius FJ1397/FJ1394 + soleus FJ1437 via Somakine GLB; Kabsch mean 0.00 mm, max 0.00 mm, right side X<0). Dig **#195 DRY** (Zenodo 23205453 plantar-pressure CSVs, `cc-by-4.0`). Dig range **#195**. Census **131/126**. Ontology **128/131**. GLB **137**. **MERGE-READY** for a teaching tag if the remaining gaps are accepted — **NOT** finished/clinical/TA2-complete. Decision pack: `docs/merge-readiness-2026-10.md`. Next sparse watch ~2026-10-10 or 2026-10-11, starting at **#196**.  
+**Companion**: `docs/week2-soft-ceiling-memo.md` (through #195), `docs/phase-8-self-review.md` (Day 4dy note), `docs/week5-roadmap.md`, `docs/merge-readiness-2026-10.md`
 
 ---
 

@@ -459,6 +459,8 @@ Dig-range labels in `docs/methods.md`, README Limitations, and `docs/week2-soft-
 
 **Day 4dx note (2026-10-02)**: sparse watch due. **#190 MONITOR/DRY** — MuscleMap v1.4 (Zenodo 21929873, MIT weights) lists 113 labels through the leg and no foot region; TotalSegmentator stays at PyPI 2.18.0, and the 2026-09-10 CC BY v3 datasets are CT/MRI volumes rather than foot-soft surfaces. **#191 DRY** — Figshare 2026 STL search returned 0; the only 2026 foot-muscle GLBs (Zenodo 21375254 and 20207805) are Scan-the-World CC BY-NC-SA; OSF `p9v5d` is a protocol with an empty license. **#192 REJECT** — UniSA DOI 10.25954/jt95-0x06 is ultrasound thickness data under all-rights-reserved access, not a mesh. **0** wires. Dig-range honesty moves to **#192**. Census and MERGE-READY unchanged.
 
+**Day 4dy note (2026-10-08)**: Thursday soft watch, digs **#193–#195**. **#193 DRY** — OrthoSense FEBio V10 (Zenodo 21372171) is `cc-by-4.0` npz samples; the repo README does not license the `.feb` geometry as CC0 or CC BY. **#194 WIRED** — Somakine BodyParts3D `supplement-ankle-foot-muscle.glb` is CC BY 4.0 (DBCLS licence page). Right gastrocnemius FJ1397 + FJ1394 and soleus FJ1437 pass Kabsch (mean 0.00 mm, max 0.00 mm, all X<0) against the atlas bones. **#195 DRY** — Zenodo 23205453 (2026-10-07, `cc-by-4.0`) is a plantar-pressure CSV zip, 0 meshes. Census becomes **131/126**, ontology **128/131**, main/BY-SA **55/71**, GLB **137**. The Week 4 gap list below is corrected for two items: lumbrical GLBs were already on disk, and gastrocnemius/soleus are no longer absent. Per-toe DI, per-ray MTA, incomplete nerve/ligament/vessel sets, and the three ontology empties remain. Still not finished, not clinical, not TA2-complete. Decision pack: `docs/merge-readiness-2026-10.md`.
+
 ### C) Census and gates
 
 - Census **129/124** entries/unique; 126/129 ontology citable; 53 main-tree / 71 BY-SA; 134 GLB. Unchanged all week.
@@ -474,6 +476,8 @@ Teaching-grade **MERGE-READY** if reviewers accept the disclosed gaps:
 4. Nerve, ligament, and vessel teaching sets incomplete
 5. Gastrocnemius and soleus bellies absent (Andreassen spatial QA fail; no CC0/BY alternative)
 6. 3 honest ontology empties (cervical TC; medial and lateral plantar veins)
+
+Day 4dy correction (do not read items 1 and 5 as the live gap list): `lumbrical_1st.glb`–`lumbrical_4th.glb` are real BP3D meshes (vertex counts measured 2026-10-08: 838, 266, 508, 410). Gastrocnemius and soleus were wired the same day (dig #194). Live gaps are items 2, 3, 4, and 6, plus everything the atlas still does not claim (clinical use, TA2 completeness).
 
 ### E) Non-goals held
 

@@ -7,7 +7,8 @@
 **Day 4du status (2026-09-29)**: Week 4 wrap recorded in `docs/phase-8-self-review.md`. Dig-range honesty was **#186** at wrap. Census **129/124**. MERGE-READY unchanged. PR #3 remains draft.  
 **Day 4dv status (2026-09-30)**: sparse digs **#187–#189** (REJECT / DRY / REJECT). **0** wires. Dig-range honesty now **#189**. Census **129/124**. MERGE-READY unchanged.  
 **Day 4dw status (2026-10-01)**: polish/docs only. Soft watch **not due** (+1 day after #189). **0** new digs. Dig range stays **#189**. Next sparse batch ~2026-10-02 or 2026-10-03. Census **129/124**. MERGE-READY unchanged. Cadence stub: `docs/week5-roadmap.md`.  
-**Day 4dx status (2026-10-02)**: sparse digs **#190–#192** (MONITOR/DRY / DRY / REJECT). **0** wires. Dig-range honesty now **#192**. Census **129/124**. MERGE-READY unchanged.
+**Day 4dx status (2026-10-02)**: sparse digs **#190–#192** (MONITOR/DRY / DRY / REJECT). **0** wires. Dig-range honesty now **#192**. Census **129/124**. MERGE-READY unchanged.  
+**Day 4dy status (2026-10-08)**: continued on `docs/week5-roadmap.md`. Digs **#193–#195**. One wire (gastrocnemius + soleus). Dig range **#195**. Live census is no longer 129/124; see week 5.
 
 ---
 

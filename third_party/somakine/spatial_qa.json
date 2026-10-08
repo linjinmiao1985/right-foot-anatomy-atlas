@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-08",
+  "day": "4dy",
+  "dig": 194,
+  "source_glb": "https://github.com/ivershuo/somakine/blob/main/data-packs/bodyparts3d-musculoskeletal/public/assets/bodyparts3d/supplement-ankle-foot-muscle.glb",
+  "source_record": "Somakine bodyparts3d-musculoskeletal pack 4.0.0-somakine.2",
+  "upstream": "BodyParts3D 4.0",
+  "upstream_license_page": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html",
+  "license_string_seen": "The license for this database is specified in the Creative Commons Attribution 4.0 International.",
+  "method": "Kabsch similarity of 12 bone centroids (calcaneus, talus, navicular, cuboid, 3 cuneiforms, MT1\u20135). Somakine right-foot bone nodes in ankle-foot.glb versus atlas BP3D GLB centroids. Vertices used without the pack root rotation/scale (scale 0.001, rotX -90), which is a viewer transform; raw positions are BP3D millimetres.",
+  "scale": 1.0,
+  "mean_residual_mm": 0.0,
+  "max_residual_mm": 0.0,
+  "computed_mean_residual_mm": 6.985594793171769e-15,
+  "computed_max_residual_mm": 1.5888218580782548e-14,
+  "max_landmark": "cuboid",
+  "landmarks": 12,
+  "identity_centroid_distance_mm": 0.0,
+  "gate": {
+    "mean_lt_mm": 3.5,
+    "max_lt_mm": 5.0,
+    "laterality": "right foot X<0"
+  },
+  "gate_pass": true,
+  "bellies": {
+    "gastrocnemius_medial.glb": {
+      "centroid_mm": [
+        -51.860641,
+        -52.717207,
+        289.710071
+      ],
+      "n_vertices": 2263,
+      "all_x_negative": true,
+      "distal10_min_to_achilles_mm": 0.39879358909382545
+    },
+    "gastrocnemius_lateral.glb": {
+      "centroid_mm": [
+        -92.748,
+        -39.968667,
+        304.361593
+      ],
+      "n_vertices": 1748,
+      "all_x_negative": true,
+      "distal10_min_to_achilles_mm": 0.1439640014720649
+    },
+    "soleus.glb": {
+      "centroid_mm": [
+        -80.79672,
+        -56.737006,
+        227.399349
+      ],
+      "n_vertices": 2674,
+      "all_x_negative": true,
+      "distal10_min_to_achilles_mm": 0.291380215146112
+    }
+  },
+  "left_side_not_wired": {
+    "FJ1394M": "all X>0 in source GLB (checked 2026-10-08)",
+    "FJ1437M": "all X>0 in source GLB (checked 2026-10-08)"
+  },
+  "note": "Numerical residual is floating-point noise around an identity transform. Printed pairwise centroid distances were 0.000 mm for all 12 landmarks."
+}

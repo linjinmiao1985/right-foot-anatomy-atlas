@@ -2654,3 +2654,42 @@ Zenodo API metadata retrieved (DOI 10.5281/zenodo.20231309). License: **CC BY-NC
 
 **Day 4dx sparse watch dig summary**: 3 digs (#190–#192); **MONITOR/DRY / DRY / REJECT**. No wire. Census unchanged. Soft-tissue open-data ceiling **reconfirmed through dig #192**.
 
+---
+
+### Dig #193: OrthoSense FEBio V10 anatomical-foot dataset — CC BY samples are npz, geometry licence not granted
+
+**Date**: 2026-10-08 (Day 4dy)  
+**Query**: A post–#192 foot model with an explicit CC0 or CC BY surface mesh (gastrocnemius, soleus, intrinsics, or plantar soft tissue), not already closed in #179–#192  
+**Source**: Zenodo 10.5281/zenodo.21372171 “OrthoSense FEBio V10 Final-State Model-Ready Dataset” (published 2026-07-15; API fetched 2026-10-08). Companion record 10.5281/zenodo.21371916 is V9, same day, same author (Tobias Brandt).  
+**License string actually seen**: Zenodo metadata `license.id` = `cc-by-4.0` on both records. GitHub `tobr2000/febio-foot-surrogate-pipeline` `LICENSE` file begins “MIT License” / “Copyright (c) 2026 Tobias Brandt”. README “Citation and licence” says: “Code is released under MIT unless a file states otherwise. FEBio models, anatomical geometry, datasets, and third-party components require their own licence and redistribution review before public release.”  
+**Files**: V10 record has `orthosense_v10_final_state_modelready_v1.zip` (8,166,308,856 bytes) and a sha256 sidecar. HTTP range `bytes=0-2047` of the zip local header names `data/batch_000000_000299.npz` and `sample_ids.npy`. No STL, OBJ, or GLB in that header. The repo tree (344 paths, `git/trees/main?recursive=1`) has no `.stl` / `.obj` / `.glb`. It does have `examples/febio/anatomic_knee_down_foot_smooth_v10_contact.feb` (6,350,937 bytes) and a V9 `.feb`. Those are FEBio inputs, not STL/OBJ/GLB, and the README does not place them under CC0 or CC BY.  
+**Verdict**: **DRY** — the CC BY download is a simulation-sample archive, not a foot-soft surface. Do not convert the `.feb` into a mesh: the geometry licence was not obtained (README says it still needs a separate review). Do not wire.
+
+---
+
+### Dig #194: Somakine BodyParts3D ankle-foot supplement — right gastrocnemius and soleus, CC BY 4.0, Kabsch identity
+
+**Date**: 2026-10-08 (Day 4dy)  
+**Query**: A directly downloadable CC0 or CC BY GLB that fills gastrocnemius / soleus, not already in `public/models/`  
+**Source**: https://github.com/ivershuo/somakine `data-packs/bodyparts3d-musculoskeletal` pack version `4.0.0-somakine.2` (`public/pack.json`, fetched 2026-10-08). GLB (no login): https://github.com/ivershuo/somakine/raw/main/data-packs/bodyparts3d-musculoskeletal/public/assets/bodyparts3d/supplement-ankle-foot-muscle.glb (1,589,824 bytes).  
+**License string actually seen**: DBCLS page https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html (fetched 2026-10-08, “Last updated : 2025/02/27”): “The license for this database is specified in the Creative Commons Attribution 4.0 International.” Attribution sentence on that page: “BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International”. Pack `licenses[0].id` = `CC-BY-4.0`. Pack README: “This data pack and its derived assets remain CC BY 4.0; the Somakine framework code license does not relicense the anatomy data.”  
+**What is in the ankle-foot region**: 44 structures. Muscles present as meshes include gastrocnemius (FJ1394, FJ1397 and left `M` counterparts), soleus (FJ1437), plantaris, and several extrinsics already wired from other donors. Lumbricals, per-toe dorsal interossei, and per-ray metatarsal arteries are not in this region list. Lisfranc ligament mode is `unavailable`.  
+**Kabsch** (12 right-foot bone centroids in `ankle-foot.glb` versus the atlas BP3D GLBs; raw millimetres, viewer root scale 0.001 and rotX −90° not applied): scale 1, rotation identity, pairwise centroid distance 0.000 mm on all 12 landmarks. Computed mean residual 6.99×10⁻¹⁵ mm, max 1.59×10⁻¹⁴ mm (cuboid). Gate mean < 3.5 mm and max < 5.0 mm: pass. Right nodes FJ1397, FJ1394, and FJ1437 have every vertex X<0 (same side as the atlas right foot). Left `M` nodes have X>0 and were not wired. Distal-10% minimum distance to `calcaneal_tendon_BP5098.glb`: medial head 0.399 mm, lateral head 0.144 mm, soleus 0.291 mm. Record: `third_party/somakine/spatial_qa.json`.  
+**IFAA** (fetched 2026-10-08): m. gastrocnemius A04.7.02.044 FMA:22541; caput mediale A04.7.02.046 FMA:45956; caput laterale A04.7.02.045 FMA:45959; m. soleus A04.7.02.047 FMA:22542. Somakine `externalIds` say gastrocnemius FMA45950; that does not match the IFAA page, so the atlas cites IFAA, not the pack’s FMA field.  
+**Action**: **WIRED** — `gastrocnemius_medial.glb` (FJ1397), `gastrocnemius_lateral.glb` (FJ1394, additional part), `soleus.glb` (FJ1437). Main tree. Not clinical.
+
+---
+
+### Dig #195: Zenodo flatfoot plantar-pressure zip — CC BY 4.0 CSVs, no surface mesh
+
+**Date**: 2026-10-08 (Day 4dy)  
+**Query**: A deposit published after the 2026-10-02 batch with an explicit licence and a foot-soft STL/OBJ/GLB  
+**Source**: Zenodo 10.5281/zenodo.23205453 “Plantar-pressure data for validating minimal 11-sensor insole configurations against a 99-sensor Pedar-X array in individuals with flatfoot” (published 2026-10-07; API fetched 2026-10-08).  
+**License string actually seen**: Zenodo metadata `license.id` = `cc-by-4.0`. Description field was empty.  
+**Files**: `Flatfoot_PlantarPressure_Data.zip` (2,094,176 bytes), downloaded 2026-10-08. Zip listing: 100 members, extensions `{csv: 99, txt: 1}`. Names are center-of-pressure and sensor CSVs under `raw_data/`. Mesh extensions `.stl` / `.obj` / `.glb` / `.ply` / `.vtk`: **0**.  
+**Verdict**: **DRY** — CC BY measurements, not a surface mesh. Do not invent a fascia or muscle mesh from the pressure table.
+
+---
+
+**Day 4dy sparse watch dig summary**: 3 digs (#193–#195); **DRY / WIRED / DRY**. One wire (dig #194, BodyParts3D gastrocnemius + soleus). Census moves because of that wire. Per-toe DI and per-ray MTA remain grouped. Soft-tissue open-data ceiling for those two gaps **reconfirmed through dig #195**.
+

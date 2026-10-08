@@ -97,10 +97,12 @@ export const MUSCLE_GROUPS: readonly MuscleGroup[] = [
     labelZh: '外在肌·后群',
     labelEn: 'Extrinsic posterior',
     structureIds: [
+      'gastrocnemius',
+      'soleus',
+      'plantaris',
       'tibialis_posterior',
       'flexor_digitorum_longus',
       'flexor_hallucis_longus',
-      'plantaris',
     ],
   },
 ] as const;

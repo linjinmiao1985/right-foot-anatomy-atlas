@@ -3436,3 +3436,24 @@ Existing honest no-screenshot note in `docs/journal-figure-captions.md` (Day 4df
 
 **Stance**: MERGE-READY unchanged. Not clinical. Not TA2-complete. Not a finished product.
 
+---
+
+## Day 4dy (2026-10-08) — Thursday soft watch #193–#195 and M1 merge-readiness pack
+
+**Goals**: One batch of new digs starting at #193. Wire only if CC0 or CC BY, a direct STL/OBJ/GLB, and Kabsch mean < 3.5 mm, max < 5.0 mm, correct laterality. Write `docs/merge-readiness-2026-10.md`. Leave PR #3 as a draft. Do not merge, tag, or enable Pages.
+
+**Digs**:
+- **#193 DRY**: OrthoSense FEBio V10, DOI 10.5281/zenodo.21372171, Zenodo `license.id` `cc-by-4.0`. The zip’s first local-header names are `data/batch_000000_000299.npz` and `sample_ids.npy`. GitHub README says anatomical geometry still needs its own licence. V9 is 10.5281/zenodo.21371916, same licence.
+- **#194 WIRED**: Somakine BodyParts3D pack `4.0.0-somakine.2`, GLB `supplement-ankle-foot-muscle.glb`. DBCLS licence page: “The license for this database is specified in the Creative Commons Attribution 4.0 International.” Right gastrocnemius FJ1397 (medial) and FJ1394 (lateral) plus soleus FJ1437. Kabsch on 12 bone centroids is identity (computed mean 6.99×10⁻¹⁵ mm, max 1.59×10⁻¹⁴ mm). All wired vertices have X<0. Distal-10% to the Achilles GLB: 0.399 mm, 0.144 mm, 0.291 mm. Record: `third_party/somakine/spatial_qa.json`.
+- **#195 DRY**: DOI 10.5281/zenodo.23205453, published 2026-10-07, Zenodo `license.id` `cc-by-4.0`. Downloaded zip is 2,094,176 bytes, 99 CSV and 1 TXT, 0 meshes.
+
+**Census**: 131 entries / 126 unique (unique drops lumbrical_2/3/4 and plantar_interosseous_2/3). Muscles 30 entries / 25 unique. Ontology 128/131. GLB 137 (62 main + 75 `by-sa/`). Main-tree unique 55, BY-SA unique 71.
+
+**Honesty**: Lumbrical GLBs were already in the tree (vertex counts 838, 266, 508, 410). The older “lumbricals absent” line does not match the files. Per-toe DI and per-ray MTA stay grouped.
+
+**Gates** (this working tree, before the commit that records them): `python3 scripts/integrity-audit.py` — 0 violations, 131 structures, 137 GLB. `npx vitest run` — 138/138. `npm run build` — succeeded; chunk-size warning on `dist/assets/index-DggYBzMt.js` (1,219.22 kB).
+
+**Not done**: no merge, no tag, no Pages, PR #3 stays draft, PR #1 title/body not edited.
+
+**Stance**: Teaching-grade merge candidate if the remaining gaps are accepted. Not clinical. Not TA2-complete. Not a finished product.
+

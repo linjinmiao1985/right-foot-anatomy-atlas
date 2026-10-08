@@ -177,7 +177,7 @@ export function licenseLabel(license: AssetLicense): string {
 
 /** Persistent footer copy — keep factual, no “complete atlas” claims. */
 export const ATLAS_SOURCE_FOOTER =
-  '网格来源 (census ≈53 主树 / ≈71 BY-SA of 124 unique): BodyParts3D CC BY 4.0 · UM CC0 1.0 · Z-Anatomy 干神经+跖肌/踇短屈肌外侧腹/足底趾动脉+腓回旋支+足静脉示意 / Open3D DI+FB/FT/小趾对掌肌+近端/细支动脉+踝足韧带/支持带/腱膜+细支神经 CC BY-SA 4.0（by-sa/ 隔离）· 软组织 census 软天花板：逐趾 DI/蚓状肌、逐射线 MTA 仍为开放数据空白；分组结构为教学妥协 / Mesh sources (census ≈53 main-tree / ≈71 BY-SA of 124 unique): BodyParts3D CC BY 4.0 · UM CC0 · Z-Anatomy nerves+plantaris/FHB-lateral/plantar digital arteries+circumflex/veins / Open3D DI+FB/FT/opponens+proximal/fine arteries+ankle ligaments/retinacula/aponeuroses+cutaneous nerves CC BY-SA 4.0 (by-sa/ isolate) · Soft-tissue census soft ceiling: per-toe DI/lumbricals, per-ray MTA remain open-data gaps; grouped structures are teaching compromises (详见 docs/week2-soft-ceiling-memo.md)';
+  '网格来源 (census ≈55 主树 / ≈71 BY-SA of 126 unique): BodyParts3D CC BY 4.0（含 Day 4dy 腓肠肌两头 + 比目鱼肌；蚓状肌 4 条已是 BP3D 网格）· UM CC0 1.0 · Z-Anatomy 干神经+跖肌/踇短屈肌外侧腹/足底趾动脉+腓回旋支+足静脉示意 / Open3D DI+FB/FT/小趾对掌肌+近端/细支动脉+踝足韧带/支持带/腱膜+细支神经 CC BY-SA 4.0（by-sa/ 隔离）· 软组织仍不完整：逐趾 DI、逐射线 MTA 仍为分组教学妥协 / Mesh sources (census ≈55 main-tree / ≈71 BY-SA of 126 unique): BodyParts3D CC BY 4.0 (Day 4dy gastrocnemius heads + soleus; four lumbricals are BP3D meshes) · UM CC0 · Z-Anatomy nerves+plantaris/FHB-lateral/plantar digital arteries+circumflex/veins / Open3D DI+FB/FT/opponens+proximal/fine arteries+ankle ligaments/retinacula/aponeuroses+cutaneous nerves CC BY-SA 4.0 (by-sa/ isolate) · Still incomplete: per-toe DI and per-ray MTA stay grouped teaching compromises (详见 docs/week2-soft-ceiling-memo.md)';
 
 /** Short panel copy about mesh fidelity — teaching honesty, not finished-product claims. */
 export function getTeachingMeshNote(structureId: string, layer: string): string | null {
@@ -198,7 +198,13 @@ export function getTeachingMeshNote(structureId: string, layer: string): string 
     return '网格：Open3DModel lower-limb（CC BY-SA），Kabsch→BP3D mm；census 缺口补齐；仅 by-sa/ 加载。肌肉层仍不完整。';
   }
   if (structureId === 'plantaris') {
-    return '网格：Z-Anatomy Plantaris muscle.r（CC BY-SA），ZA→BP3D Kabsch；by-sa/ 隔离。不代表小腿三头肌完整。';
+    return '网格：Z-Anatomy Plantaris muscle.r（CC BY-SA），ZA→BP3D Kabsch；by-sa/ 隔离。腓肠肌与比目鱼肌为另一来源的 BP3D CC BY 网格。';
+  }
+  if (structureId === 'gastrocnemius') {
+    return '网格：BodyParts3D 4.0 CC BY 4.0。内侧头 FJ1397 + 外侧头 FJ1394，从 Somakine 可直接下载的 GLB 抽出，与足骨同一毫米坐标系（Kabsch 均值约 0 mm，右侧 X<0）。教学可视化，不是临床配准。';
+  }
+  if (structureId === 'soleus') {
+    return '网格：BodyParts3D 4.0 CC BY 4.0，右足 ISA FJ1437。与足骨同一毫米坐标系（Kabsch 均值约 0 mm，右侧 X<0）。教学可视化，不是临床配准。';
   }
   if (structureId === 'proper_plantar_digital_arteries') {
     return '网格：Z-Anatomy Proper plantar digital arteries.r（CC BY-SA），分组教学对象，非逐趾分条；by-sa/。';

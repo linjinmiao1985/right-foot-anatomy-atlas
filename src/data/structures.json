@@ -403,7 +403,30 @@
     "layer": "muscle",
     "nameZh": "跖肌",
     "nameLa": "M. plantaris",
-    "summaryZh": "小腿后群细长肌（常缺如）。起自股骨外上髁附近，肌腹短小，长腱下行于腓肠肌与比目鱼肌之间，止于跟腱内侧缘或跟骨。作用：弱跖屈与屈膝辅助。支配：胫神经。临床：跟腱修复时注意伴行跖肌腱；缺如变异常见。网格：Z-Anatomy Plantaris muscle.r（CC BY-SA 4.0），by-sa/ 隔离；ZA→BP3D Kabsch（骨标志均值残差约1.8 mm）。教学补充，不代表小腿三头肌完整。",
+    "summaryZh": "小腿后群细长肌（常缺如）。起自股骨外上髁附近，肌腹短小，长腱下行于腓肠肌与比目鱼肌之间，止于跟腱内侧缘或跟骨。作用：弱跖屈与屈膝辅助。支配：胫神经。临床：跟腱修复时注意伴行跖肌腱；缺如变异常见。网格：Z-Anatomy Plantaris muscle.r（CC BY-SA 4.0），by-sa/ 隔离；ZA→BP3D Kabsch（骨标志均值残差约1.8 mm）。教学补充。腓肠肌与比目鱼肌另有 BP3D 网格（Day 4dy）。",
+    "placeholder": false
+  },
+  {
+    "id": "gastrocnemius",
+    "meshNames": [
+      "Gastrocnemius_Medial_R",
+      "Gastrocnemius_Lateral_R"
+    ],
+    "layer": "muscle",
+    "nameZh": "腓肠肌",
+    "nameLa": "M. gastrocnemius",
+    "summaryZh": "小腿三头肌浅层，分内侧头与外侧头，远端汇入跟腱止于跟骨。作用：跖屈踝关节，并辅助屈膝。支配：胫神经。网格：BodyParts3D 4.0 CC BY 4.0，经 Somakine 包内可直接下载的 GLB 抽出右足节点（内侧头 ISA FJ1397，外侧头 ISA FJ1394）；与本图谱 12 个足骨标志 Kabsch 相似变换为恒等（均值残差约 0 mm）。右侧：全部顶点 X<0。远端 10% 到已有跟腱网格的最小距离约 0.40 mm（内侧头）与 0.14 mm（外侧头）。教学可视化，不是临床或手术配准。TA98：A04.7.02.044（FMA22541）；内侧头 A04.7.02.046（FMA45956），外侧头 A04.7.02.045（FMA45959）。",
+    "placeholder": false
+  },
+  {
+    "id": "soleus",
+    "meshNames": [
+      "Soleus_R"
+    ],
+    "layer": "muscle",
+    "nameZh": "比目鱼肌",
+    "nameLa": "M. soleus",
+    "summaryZh": "小腿三头肌深层，起自胫、腓骨上端与比目鱼肌腱弓，远端汇入跟腱。作用：跖屈踝关节（站立时维持小腿姿势）。支配：胫神经。网格：BodyParts3D 4.0 CC BY 4.0 右足 ISA FJ1437（Somakine supplement-ankle-foot-muscle.glb 直接下载）。与足骨同一 BP3D 毫米坐标系（Kabsch 均值残差约 0 mm）；全部顶点 X<0。远端 10% 到跟腱最小距离约 0.29 mm。教学可视化，不是临床或手术配准。TA98：A04.7.02.047（FMA22542）。",
     "placeholder": false
   },
   {

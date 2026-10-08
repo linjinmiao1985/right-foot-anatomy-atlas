@@ -181,8 +181,8 @@ Open `http://localhost:5173` to view the atlas.
 ## Limitations
 
 ### Anatomical
-- **License mix**: Code MIT; assets ≈**53/124 unique** main-tree (CC BY 4.0 BP3D + CC0 UM) / ≈**71/124 unique** BY-SA isolate (`by-sa/` directory) — teaching trade-off; prefer future CC0/BY replacements (详见 `docs/methods.md` license matrix + `docs/expert-review-checklist.md` v3.0)
-- **Soft-tissue open-data ceiling**: Exhaustive search (#1–#192 verified projects Day 4cl–4dx) found CC0/BY alternatives for per-toe DI, lumbricals, per-ray MTA, nerve/ligament main-tree replacements, gastroc/soleus bellies **dry** — **teaching compromises** accepted ShareAlike volume over incomplete coverage (详见 **`docs/week2-soft-ceiling-memo.md`**). **Grouped structures** (DI 1st–4th combined, dorsal/plantar MTA all rays) are **teaching compromises** (教学妥协), **not** per-toe/per-ray elemental atlases.
+- **License mix**: Code MIT; assets ≈**55/126 unique** main-tree (CC BY 4.0 BP3D + CC0 UM) / ≈**71/126 unique** BY-SA isolate (`by-sa/` directory) — teaching trade-off; prefer future CC0/BY replacements (详见 `docs/methods.md` license matrix + `docs/expert-review-checklist.md` v3.0)
+- **Soft-tissue open-data ceiling**: Search through dig **#195** (Day 4dy) still has no CC0/BY per-toe DI or per-ray MTA mesh (详见 **`docs/week2-soft-ceiling-memo.md`**). Lumbricals are four BP3D GLBs already in the tree. Gastrocnemius and soleus were wired on dig #194 (BodyParts3D CC BY 4.0; Kabsch mean 0.00 mm; `third_party/somakine/spatial_qa.json`). **Grouped structures** (DI 1st–4th combined, dorsal/plantar MTA all rays) are **teaching compromises** (教学妥协), **not** per-toe/per-ray elemental atlases.
 - **Ligament / fascia / tendon**: BP3D long plantar + Achilles; Open3D BY-SA **27** teaching meshes; further tarsal/toe bands still missing — **teaching-useful, not a finished ligament atlas**
 - **Vessel fine detail**: Per-toe digital splits not available as separate BP3D meshes (honest grouped instead)
 - **Nerve geometry**: Z-Anatomy CURVE tubes + Open3D volumetric fine branches (teaching-grade; commons/proprii grouped)
@@ -207,7 +207,7 @@ Open `http://localhost:5173` to view the atlas.
 - **Expert Review Checklist**: `docs/expert-review-checklist.md` v3.0 (Day 4cw: teaching-grade QA; grouped DI/MTA teaching compromises; soft-ceiling memo links; pass/fail criteria)
 - **Week 3 Expert Self-Audit**: `docs/week3-expert-self-audit.md` (Day 4dl: systematic checklist v3.0 self-audit; 73 items: 58 PASS / 12 PARTIAL disclosed teaching-useful incomplete / 0 FAIL; teaching-grade pass bar ✅ PASS)
 - **Week 3 Roadmap**: `docs/week3-roadmap.md` (Day 4dk: soft-ceiling honesty / quality targets no-new-meshes / research tracks / explicit non-goals)
-- **Soft-Ceiling Memo**: `docs/week2-soft-ceiling-memo.md` (exhaustive search #1–#192; NC/SA/unclear rejects; teaching compromises stance)
+- **Soft-Ceiling Memo**: `docs/week2-soft-ceiling-memo.md` (search through #195; NC/SA/unclear rejects; gastrocnemius and soleus wired on #194; per-toe DI and per-ray MTA still grouped)
 - **Journal Figure Captions**: `docs/journal-figure-captions.md` (bilingual teaching figure stubs: bones/layers/explode/BY-SA-isolate/soft-ceiling-grouped-DI-MTA/ontology-empties/Kabsch-residuals; Day 4db)
 - **Contributing**: `CONTRIBUTING.md` (license boundaries, NC-trap exclusions)
 - **Spatial Alignment QA**: `docs/spatial-alignment-qa.md` (0.01 scale verification)

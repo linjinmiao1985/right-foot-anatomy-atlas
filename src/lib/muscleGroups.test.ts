@@ -20,12 +20,12 @@ describe('muscleGroups', () => {
     ]);
   });
 
-  it('partitions all 28 muscle ids without overlap', () => {
+  it('partitions all 30 muscle ids without overlap', () => {
     const ids = MUSCLE_GROUPS.flatMap((g) => [...g.structureIds]);
-    expect(ids).toHaveLength(28);
-    expect(new Set(ids).size).toBe(28);
+    expect(ids).toHaveLength(30);
+    expect(new Set(ids).size).toBe(30);
     const muscleIds = structures.filter((s) => s.layer === 'muscle').map((s) => s.id);
-    expect(muscleIds).toHaveLength(28);
+    expect(muscleIds).toHaveLength(30);
     expect(new Set(ids)).toEqual(new Set(muscleIds));
   });
 

@@ -142,7 +142,7 @@ export default function StructurePanel({
           data-testid="teaching-quiz-panel-note"
           style={{ fontSize: '11px', color: '#f9a8d4', margin: '0 0 12px', lineHeight: 1.5 }}
         >
-          测验 stub：名称 / 摘要 / 本体论已隐藏。对照（Q）后查看。教学自测（teaching self-test），非考试（not exam）。软组织 census 软天花板（soft-tissue census soft-ceiling）：逐趾 DI/腰肌、逐射线 MTA 为开放数据空白 (per-toe DI/lumbricals, per-ray MTA = open-data gaps; 详见 docs/week2-soft-ceiling-memo.md)。
+          测验 stub：名称 / 摘要 / 本体论已隐藏。对照（Q）后查看。教学自测（teaching self-test），非考试（not exam）。软组织仍不完整（soft tissue still incomplete）：逐趾骨间背侧肌与逐射线跖背动脉仍是分组教学妥协 (per-toe DI and per-ray MTA stay grouped); 蚓状肌与腓肠肌/比目鱼肌已有网格。详见 docs/week2-soft-ceiling-memo.md。
         </p>
       )}
 
