@@ -1,0 +1,53 @@
+{
+  "method": "Kabsch similarity ZA bone centroids (Blender mesh API, world space) vs BP3D GLB centroids",
+  "za_units_assumed": "meters (*1000 \u2192 mm)",
+  "shared_landmarks": [
+    "calcaneus",
+    "talus",
+    "navicular",
+    "cuboid",
+    "cuneiform_medial",
+    "cuneiform_intermediate",
+    "cuneiform_lateral",
+    "metatarsal_1",
+    "metatarsal_5"
+  ],
+  "scale": 1.0134874111135599,
+  "R": [
+    [
+      0.9699354340613937,
+      0.24335848351042583,
+      0.0013792228394845507
+    ],
+    [
+      -0.24335806256270204,
+      0.9698687985656765,
+      0.011461542413583665
+    ],
+    [
+      0.0014515983821741796,
+      -0.011452601113991615,
+      0.9999333631746967
+    ]
+  ],
+  "t_mm": [
+    -6.423149939893094,
+    -129.49557827118394,
+    -81.11115904159766
+  ],
+  "mean_residual_mm": 1.813981463537448,
+  "max_residual_mm": 3.518700065247173,
+  "per_landmark_residual_mm": {
+    "calcaneus": 3.518700065247173,
+    "talus": 2.6123272084751057,
+    "navicular": 3.4914772046903684,
+    "cuboid": 0.6810441410303266,
+    "cuneiform_medial": 0.741320508535994,
+    "cuneiform_intermediate": 0.7097474121523677,
+    "cuneiform_lateral": 1.794539568405726,
+    "metatarsal_1": 1.0208335368375345,
+    "metatarsal_5": 1.7558435264624366
+  },
+  "raw_mean_abs_diff_mm_after_m_to_mm": 65.45376171786276,
+  "decision": "TRANSFORM_OK \u2014 could bake soft tissue; still deferred this pass because Open3D already fills FB/FT/opponens with proven Kabsch, and ZA glTF selection export dumps bloated multi-object GLBs (Calcaneus\u224871MB). Prefer documenting unique ZA list + defer wiring."
+}

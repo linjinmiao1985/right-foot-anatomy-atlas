@@ -1,0 +1,914 @@
+{
+  "date": "2026-09-15",
+  "day": "4bj",
+  "subject": "Aug_8_segmentations.dcm",
+  "figshare_file_id": 36572283,
+  "doi_labels": "10.15131/shef.data.20440203",
+  "license": "CC0",
+  "spacing_mm": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "spacing_source": "Henson et al. PLoS ONE 2023 \u2014 sequences homogenized to 1\u00d71\u00d71 mm before augmentation",
+  "volume_shape_zyx": [
+    933,
+    320,
+    256
+  ],
+  "greyscale_class_encoding": "round(class_id * 255 / 37)",
+  "classes": {
+    "10": "gastrocnemius_lateralis",
+    "11": "gastrocnemius_medialis",
+    "31": "soleus"
+  },
+  "marching_cubes": "skimage.measure.marching_cubes level=0.5",
+  "native_mri_frame": {
+    "gastrocnemius_lateralis": {
+      "n_verts": 15468,
+      "n_faces": 30932,
+      "volume_mm3_approx": 32158.208333333332,
+      "aabb_min_mm": [
+        118.5,
+        206.5,
+        222.5
+      ],
+      "aabb_max_mm": [
+        162.5,
+        235.5,
+        403.5
+      ],
+      "centroid_mm": [
+        142.22415663605324,
+        222.39325282316315,
+        303.019056490509
+      ],
+      "extents_mm": [
+        44.0,
+        29.0,
+        181.0
+      ],
+      "class_id": 10,
+      "grey_value": 69,
+      "voxels": 32273
+    },
+    "gastrocnemius_medialis": {
+      "n_verts": 33020,
+      "n_faces": 66036,
+      "volume_mm3_approx": 109936.54166666667,
+      "aabb_min_mm": [
+        158.5,
+        186.5,
+        191.5
+      ],
+      "aabb_max_mm": [
+        214.5,
+        236.5,
+        411.5
+      ],
+      "centroid_mm": [
+        188.0577230344615,
+        215.33317222518158,
+        298.6731887279563
+      ],
+      "extents_mm": [
+        56.0,
+        50.0,
+        220.0
+      ],
+      "class_id": 11,
+      "grey_value": 76,
+      "voxels": 110076
+    },
+    "soleus": {
+      "n_verts": 58534,
+      "n_faces": 117068,
+      "volume_mm3_approx": 227493.29166666666,
+      "aabb_min_mm": [
+        112.5,
+        178.5,
+        78.5
+      ],
+      "aabb_max_mm": [
+        206.5,
+        227.5,
+        373.5
+      ],
+      "centroid_mm": [
+        162.86854761400866,
+        207.9491095004981,
+        235.1033548882707
+      ],
+      "extents_mm": [
+        94.0,
+        49.0,
+        295.0
+      ],
+      "class_id": 31,
+      "grey_value": 214,
+      "voxels": 227679
+    }
+  },
+  "laterality_native": {
+    "med_minus_lat_centroid_mm": [
+      45.833566398408266,
+      -7.0600805979815675,
+      -4.3458677625527
+    ],
+    "dominant_separation_axis": "X",
+    "dominant_separation_mm": 45.833566398408266,
+    "note": "MRI subject frame \u2014 not BP3D. Separation confirms med/lat masks distinct."
+  },
+  "native_distal_tips": {
+    "gastrocnemius_lateralis": {
+      "zmin_point_mm": [
+        146.0,
+        223.0,
+        222.5
+      ],
+      "zmax_point_mm": [
+        142.0,
+        210.0,
+        403.5
+      ],
+      "z_extent_mm": 181.0
+    },
+    "gastrocnemius_medialis": {
+      "zmin_point_mm": [
+        199.0,
+        214.0,
+        191.5
+      ],
+      "zmax_point_mm": [
+        173.0,
+        198.0,
+        411.5
+      ],
+      "z_extent_mm": 220.0
+    },
+    "soleus": {
+      "zmin_point_mm": [
+        174.0,
+        219.0,
+        78.5
+      ],
+      "zmax_point_mm": [
+        137.0,
+        206.0,
+        373.5
+      ],
+      "z_extent_mm": 295.0
+    }
+  },
+  "bp3d_references": {
+    "achilles_glb": "public/models/right-foot/calcaneal_tendon_BP5098.glb",
+    "achilles": {
+      "n_verts": 3663,
+      "n_faces": 3882,
+      "volume_mm3_approx": null,
+      "aabb_min_mm": [
+        -97.71320343017578,
+        -55.28239822387695,
+        -56.154598236083984
+      ],
+      "aabb_max_mm": [
+        -40.82279968261719,
+        -24.662099838256836,
+        157.822998046875
+      ],
+      "centroid_mm": [
+        -61.48186383509516,
+        -38.90097093409543,
+        64.89929509134693
+      ],
+      "extents_mm": [
+        56.890403747558594,
+        30.620298385620117,
+        213.97759628295898
+      ]
+    },
+    "calcaneus": {
+      "n_verts": 739,
+      "n_faces": 1262,
+      "volume_mm3_approx": null,
+      "aabb_min_mm": [
+        -100.78099822998047,
+        -94.14849853515625,
+        -68.4906997680664
+      ],
+      "aabb_max_mm": [
+        -44.87580108642578,
+        -24.00510025024414,
+        -19.154699325561523
+      ],
+      "centroid_mm": [
+        -71.15817914958129,
+        -58.763399880693115,
+        -41.62582165577214
+      ],
+      "extents_mm": [
+        55.90519714355469,
+        70.14339828491211,
+        49.33600044250488
+      ]
+    },
+    "padded_foot_aabb_pad_mm": 40.0
+  },
+  "alignment_trials": [
+    {
+      "label": "kabsch_distalZ_landmarks_flipX=False",
+      "right_side_ok": true,
+      "achilles_reasonable_all": false,
+      "integrate_gate": false,
+      "would_sketch_pass_laterality_and_achilles": false,
+      "meshes": {
+        "gastrocnemius_lateralis": {
+          "wrong_side_all_X_gt_0": false,
+          "frac_inside_padded_foot_aabb": 0.9992888544091026,
+          "centroid_mm": [
+            -52.297376461150755,
+            -38.35629447966753,
+            100.00288352601714
+          ],
+          "aabb_min_mm": [
+            -70.10901278403831,
+            -53.74783826044859,
+            17.82249486272184
+          ],
+          "aabb_max_mm": [
+            -26.22921282804471,
+            -26.06078767878509,
+            198.89800593454336
+          ],
+          "min_to_achilles_mm": 0.2954629033445887,
+          "distal10_min_to_achilles_mm": 0.5779256972485143,
+          "achilles_distal10_ok": true
+        },
+        "gastrocnemius_medialis": {
+          "wrong_side_all_X_gt_0": false,
+          "frac_inside_padded_foot_aabb": 0.9839188370684434,
+          "centroid_mm": [
+            -97.829097720503,
+            -37.898577291294416,
+            90.8845170541968
+          ],
+          "aabb_min_mm": [
+            -122.15215306102864,
+            -58.61615807356117,
+            -17.21905168060647
+          ],
+          "aabb_max_mm": [
+            -71.39456381565476,
+            -9.829793719677411,
+            204.80401850470358
+          ],
+          "min_to_achilles_mm": 0.5093563666626543,
+          "distal10_min_to_achilles_mm": 22.970999189472558,
+          "achilles_distal10_ok": false
+        },
+        "soleus": {
+          "wrong_side_all_X_gt_0": false,
+          "frac_inside_padded_foot_aabb": 0.987409027232036,
+          "centroid_mm": [
+            -70.03731217528751,
+            -21.795430090207905,
+            30.226630696541424
+          ],
+          "aabb_min_mm": [
+            -115.49492467105792,
+            -48.44253089898518,
+            -127.66151865922866
+          ],
+          "aabb_max_mm": [
+            -19.809225082215022,
+            4.205237332361833,
+            169.79397810623377
+          ],
+          "min_to_achilles_mm": 0.5504963346812903,
+          "distal10_min_to_achilles_mm": 3.7707406172968243,
+          "achilles_distal10_ok": true
+        }
+      },
+      "note": "integrate_gate forced false \u2014 POC must not wire even if sketch looks close"
+    },
+    {
+      "label": "kabsch_distalZ_landmarks_flipX=True",
+      "right_side_ok": true,
+      "achilles_reasonable_all": false,
+      "integrate_gate": false,
+      "would_sketch_pass_laterality_and_achilles": false,
+      "meshes": {
+        "gastrocnemius_lateralis": {
+          "wrong_side_all_X_gt_0": false,
+          "frac_inside_padded_foot_aabb": 1.0,
+          "centroid_mm": [
+            -52.297851326895334,
+            -38.62380815287438,
+            99.98414949861112
+          ],
+          "aabb_min_mm": [
+            -70.08587303090535,
+            -60.3585433604639,
+            17.868155462090158
+          ],
+          "aabb_max_mm": [
+            -26.256775165483432,
+            -23.938246477050797,
+            197.270875246878
+          ],
+          "min_to_achilles_mm": 0.29747793991112564,
+          "distal10_min_to_achilles_mm": 3.866631450884733,
+          "achilles_distal10_ok": true
+        },
+        "gastrocnemius_medialis": {
+          "wrong_side_all_X_gt_0": false,
+          "frac_inside_padded_foot_aabb": 0.9890975166565718,
+          "centroid_mm": [
+            -97.82864814728373,
+            -37.64531205825677,
+            90.9022532609478
+          ],
+          "aabb_min_mm": [
+            -122.19437529790777,
+            -70.76130020762452,
+            -17.23325620257819
+          ],
+          "aabb_max_mm": [
+            -71.35759554871804,
+            -16.34266289762496,
+            202.31769786079906
+          ],
+          "min_to_achilles_mm": 0.28322292368699753,
+          "distal10_min_to_achilles_mm": 27.57965231041877,
+          "achilles_distal10_ok": false
+        },
+        "soleus": {
+          "wrong_side_all_X_gt_0": false,
+          "frac_inside_padded_foot_aabb": 0.9870844295623057,
+          "centroid_mm": [
+            -70.07892011415248,
+            -45.235092117764445,
+            28.58514723310935
+          ],
+          "aabb_min_mm": [
+            -115.58776662511765,
+            -69.55516446618626,
+            -127.66902335484332
+          ],
+          "aabb_max_mm": [
+            -19.872455365562814,
+            -20.269175869296816,
+            167.4659126577061
+          ],
+          "min_to_achilles_mm": 0.14230670411749224,
+          "distal10_min_to_achilles_mm": 1.9557339337526929,
+          "achilles_distal10_ok": true
+        }
+      },
+      "note": "integrate_gate forced false \u2014 POC must not wire even if sketch looks close"
+    },
+    {
+      "label": "translate_scale_soleusDistal_to_achillesLow_flipX=False_scale=1.0",
+      "right_side_ok": true,
+      "achilles_reasonable_all": false,
+      "integrate_gate": false,
+      "would_sketch_pass_laterality_and_achilles": false,
+      "meshes": {
+        "gastrocnemius_lateralis": {
+          "wrong_side_all_X_gt_0": false,
+          "frac_inside_padded_foot_aabb": 0.7165761572278252,
+          "centroid_mm": [
+            -88.57555249296982,
+            -24.53220160678591,
+            174.36491069071133
+          ],
+          "aabb_min_mm": [
+            -112.4388185907357,
+            -40.475568557904516,
+            92.04049900206418
+          ],
+          "aabb_max_mm": [
+            -68.4388185907357,
+            -11.475568557904516,
+            273.04049900206417
+          ],
+          "min_to_achilles_mm": 0.11597892402927398,
+          "distal10_min_to_achilles_mm": 5.142079407448848,
+          "achilles_distal10_ok": true
+        },
+        "gastrocnemius_medialis": {
+          "wrong_side_all_X_gt_0": false,
+          "frac_inside_padded_foot_aabb": 0.6890066626287099,
+          "centroid_mm": [
+            -43.03984826970391,
+            -31.80539896369838,
+            168.87929367194036
+          ],
+          "aabb_min_mm": [
+            -72.4388185907357,
+            -60.475568557904516,
+            61.04049900206418
+          ],
+          "aabb_max_mm": [
+            -16.4388185907357,
+            -10.475568557904516,
+            281.04049900206417
+          ],
+          "min_to_achilles_mm": 6.7992321904532025,
+          "distal10_min_to_achilles_mm": 19.31332614938403,
+          "achilles_distal10_ok": false
+        },
+        "soleus": {
+          "wrong_side_all_X_gt_0": false,
+          "frac_inside_padded_foot_aabb": 0.9272901219803875,
+          "centroid_mm": [
+            -67.38874512913942,
+            -39.25132282037295,
+            105.13948420721326
+          ],
+          "aabb_min_mm": [
+            -118.4388185907357,
+            -68.47556855790452,
+            -51.95950099793582
+          ],
+          "aabb_max_mm": [
+            -24.4388185907357,
+            -19.475568557904516,
+            243.04049900206417
+          ],
+          "min_to_achilles_mm": 0.08783634189107009,
+          "distal10_min_to_achilles_mm": 0.44105634178218384,
+          "achilles_distal10_ok": true
+        }
+      },
+      "note": "integrate_gate forced false \u2014 POC must not wire even if sketch looks close"
+    },
+    {
+      "label": "translate_scale_soleusDistal_to_achillesLow_flipX=False_scale=0.85",
+      "right_side_ok": true,
+      "achilles_reasonable_all": false,
+      "integrate_gate": false,
+      "would_sketch_pass_laterality_and_achilles": false,
+      "meshes": {
+        "gastrocnemius_lateralis": {
+          "wrong_side_all_X_gt_0": false,
+          "frac_inside_padded_foot_aabb": 0.9009568140677527,
+          "centroid_mm": [
+            -83.83004240764608,
+            -25.04870664944742,
+            140.41624893741638
+          ],
+          "aabb_min_mm": [
+            -104.11381859073569,
+            -38.600568557904516,
+            70.44049900206417
+          ],
+          "aabb_max_mm": [
+            -66.7138185907357,
+            -13.950568557904516,
+            224.29049900206417
+          ],
+          "min_to_achilles_mm": 0.401878335669627,
+          "distal10_min_to_achilles_mm": 7.787208089483872,
+          "achilles_distal10_ok": true
+        },
+        "gastrocnemius_medialis": {
+          "wrong_side_all_X_gt_0": false,
+          "frac_inside_padded_foot_aabb": 0.8860387643852211,
+          "centroid_mm": [
+            -45.124693817867794,
+            -31.230924402846004,
+            135.7534744714649
+          ],
+          "aabb_min_mm": [
+            -70.1138185907357,
+            -55.600568557904516,
+            44.09049900206418
+          ],
+          "aabb_max_mm": [
+            -22.513818590735703,
+            -13.100568557904516,
+            231.09049900206418
+          ],
+          "min_to_achilles_mm": 0.32046027278476175,
+          "distal10_min_to_achilles_mm": 16.842004276984618,
+          "achilles_distal10_ok": false
+        },
+        "soleus": {
+          "wrong_side_all_X_gt_0": false,
+          "frac_inside_padded_foot_aabb": 0.9997779068575529,
+          "centroid_mm": [
+            -65.82125614838182,
+            -37.559959681012614,
+            81.57463642645911
+          ],
+          "aabb_min_mm": [
+            -109.2138185907357,
+            -62.40056855790451,
+            -51.95950099793582
+          ],
+          "aabb_max_mm": [
+            -29.3138185907357,
+            -20.750568557904515,
+            198.79049900206417
+          ],
+          "min_to_achilles_mm": 0.28125706964963965,
+          "distal10_min_to_achilles_mm": 0.22333058222686533,
+          "achilles_distal10_ok": true
+        }
+      },
+      "note": "integrate_gate forced false \u2014 POC must not wire even if sketch looks close"
+    },
+    {
+      "label": "translate_scale_soleusDistal_to_achillesLow_flipX=False_scale=1.15",
+      "right_side_ok": true,
+      "achilles_reasonable_all": false,
+      "integrate_gate": false,
+      "would_sketch_pass_laterality_and_achilles": false,
+      "meshes": {
+        "gastrocnemius_lateralis": {
+          "wrong_side_all_X_gt_0": false,
+          "frac_inside_padded_foot_aabb": 0.4634729764675459,
+          "centroid_mm": [
+            -93.32106257831852,
+            -24.015696564109806,
+            208.31357244399882
+          ],
+          "aabb_min_mm": [
+            -120.7638185907357,
+            -42.350568557904516,
+            113.64049900206417
+          ],
+          "aabb_max_mm": [
+            -70.1638185907357,
+            -9.000568557904518,
+            321.7904990020641
+          ],
+          "min_to_achilles_mm": 0.4579373323302634,
+          "distal10_min_to_achilles_mm": 0.8024542661468871,
+          "achilles_distal10_ok": true
+        },
+        "gastrocnemius_medialis": {
+          "wrong_side_all_X_gt_0": false,
+          "frac_inside_padded_foot_aabb": 0.48976377952755906,
+          "centroid_mm": [
+            -40.95500272156411,
+            -32.37987352459005,
+            202.0051128724482
+          ],
+          "aabb_min_mm": [
+            -74.7638185907357,
+            -65.35056855790452,
+            77.99049900206417
+          ],
+          "aabb_max_mm": [
+            -10.363818590735704,
+            -7.850568557904516,
+            330.99049900206415
+          ],
+          "min_to_achilles_mm": 10.536805617940548,
+          "distal10_min_to_achilles_mm": 20.74062753062648,
+          "achilles_distal10_ok": false
+        },
+        "soleus": {
+          "wrong_side_all_X_gt_0": false,
+          "frac_inside_padded_foot_aabb": 0.7982710903064886,
+          "centroid_mm": [
+            -68.95623410990707,
+            -40.94268595975472,
+            128.70433198802516
+          ],
+          "aabb_min_mm": [
+            -127.6638185907357,
+            -74.55056855790451,
+            -51.95950099793582
+          ],
+          "aabb_max_mm": [
+            -19.5638185907357,
+            -18.200568557904518,
+            287.29049900206417
+          ],
+          "min_to_achilles_mm": 0.33969007115905747,
+          "distal10_min_to_achilles_mm": 0.4682325318276044,
+          "achilles_distal10_ok": true
+        }
+      },
+      "note": "integrate_gate forced false \u2014 POC must not wire even if sketch looks close"
+    },
+    {
+      "label": "translate_scale_soleusDistal_to_achillesLow_flipX=True_scale=1.0",
+      "right_side_ok": true,
+      "achilles_reasonable_all": false,
+      "integrate_gate": false,
+      "would_sketch_pass_laterality_and_achilles": false,
+      "meshes": {
+        "gastrocnemius_lateralis": {
+          "wrong_side_all_X_gt_0": false,
+          "frac_inside_padded_foot_aabb": 0.7165761572278252,
+          "centroid_mm": [
+            -25.302084688482026,
+            -24.53220160678591,
+            174.36491069071133
+          ],
+          "aabb_min_mm": [
+            -45.4388185907357,
+            -40.475568557904516,
+            92.04049900206418
+          ],
+          "aabb_max_mm": [
+            -1.4388185907356998,
+            -11.475568557904516,
+            273.04049900206417
+          ],
+          "min_to_achilles_mm": 19.060940447192323,
+          "distal10_min_to_achilles_mm": 21.028417564316296,
+          "achilles_distal10_ok": false
+        },
+        "gastrocnemius_medialis": {
+          "wrong_side_all_X_gt_0": false,
+          "frac_inside_padded_foot_aabb": 0.6890066626287099,
+          "centroid_mm": [
+            -70.8377889117353,
+            -31.80539896369838,
+            168.87929367194036
+          ],
+          "aabb_min_mm": [
+            -97.4388185907357,
+            -60.475568557904516,
+            61.04049900206418
+          ],
+          "aabb_max_mm": [
+            -41.4388185907357,
+            -10.475568557904516,
+            281.04049900206417
+          ],
+          "min_to_achilles_mm": 0.15932420193260466,
+          "distal10_min_to_achilles_mm": 3.74711898004567,
+          "achilles_distal10_ok": true
+        },
+        "soleus": {
+          "wrong_side_all_X_gt_0": false,
+          "frac_inside_padded_foot_aabb": 0.9047903782417057,
+          "centroid_mm": [
+            -46.488892052295355,
+            -39.25132282037295,
+            105.13948420721326
+          ],
+          "aabb_min_mm": [
+            -89.4388185907357,
+            -68.47556855790452,
+            -51.95950099793582
+          ],
+          "aabb_max_mm": [
+            4.5611814092643,
+            -19.475568557904516,
+            243.04049900206417
+          ],
+          "min_to_achilles_mm": 0.13382330285216884,
+          "distal10_min_to_achilles_mm": 0.39063270223830476,
+          "achilles_distal10_ok": true
+        }
+      },
+      "note": "integrate_gate forced false \u2014 POC must not wire even if sketch looks close"
+    },
+    {
+      "label": "translate_scale_soleusDistal_to_achillesLow_flipX=True_scale=0.85",
+      "right_side_ok": true,
+      "achilles_reasonable_all": false,
+      "integrate_gate": false,
+      "would_sketch_pass_laterality_and_achilles": false,
+      "meshes": {
+        "gastrocnemius_lateralis": {
+          "wrong_side_all_X_gt_0": false,
+          "frac_inside_padded_foot_aabb": 0.9009568140677527,
+          "centroid_mm": [
+            -30.047594773823942,
+            -25.04870664944742,
+            140.41624893741638
+          ],
+          "aabb_min_mm": [
+            -47.1638185907357,
+            -38.600568557904516,
+            70.44049900206417
+          ],
+          "aabb_max_mm": [
+            -9.763818590735703,
+            -13.950568557904516,
+            224.29049900206417
+          ],
+          "min_to_achilles_mm": 17.658200734955056,
+          "distal10_min_to_achilles_mm": 20.777898767048107,
+          "achilles_distal10_ok": false
+        },
+        "gastrocnemius_medialis": {
+          "wrong_side_all_X_gt_0": false,
+          "frac_inside_padded_foot_aabb": 0.8860387643852211,
+          "centroid_mm": [
+            -68.752943363589,
+            -31.230924402846004,
+            135.7534744714649
+          ],
+          "aabb_min_mm": [
+            -91.36381859073569,
+            -55.600568557904516,
+            44.09049900206418
+          ],
+          "aabb_max_mm": [
+            -43.7638185907357,
+            -13.100568557904516,
+            231.09049900206418
+          ],
+          "min_to_achilles_mm": 0.3382877799211979,
+          "distal10_min_to_achilles_mm": 5.587000814688577,
+          "achilles_distal10_ok": true
+        },
+        "soleus": {
+          "wrong_side_all_X_gt_0": false,
+          "frac_inside_padded_foot_aabb": 0.9997779068575529,
+          "centroid_mm": [
+            -48.05638103306371,
+            -37.559959681012614,
+            81.57463642645911
+          ],
+          "aabb_min_mm": [
+            -84.5638185907357,
+            -62.40056855790451,
+            -51.95950099793582
+          ],
+          "aabb_max_mm": [
+            -4.663818590735701,
+            -20.750568557904515,
+            198.79049900206417
+          ],
+          "min_to_achilles_mm": 0.4752948430227189,
+          "distal10_min_to_achilles_mm": 0.1772493021331111,
+          "achilles_distal10_ok": true
+        }
+      },
+      "note": "integrate_gate forced false \u2014 POC must not wire even if sketch looks close"
+    },
+    {
+      "label": "translate_scale_soleusDistal_to_achillesLow_flipX=True_scale=1.15",
+      "right_side_ok": true,
+      "achilles_reasonable_all": false,
+      "integrate_gate": false,
+      "would_sketch_pass_laterality_and_achilles": false,
+      "meshes": {
+        "gastrocnemius_lateralis": {
+          "wrong_side_all_X_gt_0": false,
+          "frac_inside_padded_foot_aabb": 0.41117145073700545,
+          "centroid_mm": [
+            -20.55657460314802,
+            -24.015696564109806,
+            208.31357244399882
+          ],
+          "aabb_min_mm": [
+            -43.7138185907357,
+            -42.350568557904516,
+            113.64049900206417
+          ],
+          "aabb_max_mm": [
+            6.886181409264296,
+            -9.000568557904518,
+            321.7904990020641
+          ],
+          "min_to_achilles_mm": 23.069312195936455,
+          "distal10_min_to_achilles_mm": 22.881424802903535,
+          "achilles_distal10_ok": false
+        },
+        "gastrocnemius_medialis": {
+          "wrong_side_all_X_gt_0": false,
+          "frac_inside_padded_foot_aabb": 0.48976377952755906,
+          "centroid_mm": [
+            -72.92263445989462,
+            -32.37987352459005,
+            202.0051128724482
+          ],
+          "aabb_min_mm": [
+            -103.5138185907357,
+            -65.35056855790452,
+            77.99049900206417
+          ],
+          "aabb_max_mm": [
+            -39.113818590735704,
+            -7.850568557904516,
+            330.99049900206415
+          ],
+          "min_to_achilles_mm": 0.47619247929687825,
+          "distal10_min_to_achilles_mm": 0.7134802057391925,
+          "achilles_distal10_ok": true
+        },
+        "soleus": {
+          "wrong_side_all_X_gt_0": false,
+          "frac_inside_padded_foot_aabb": 0.7415690026309495,
+          "centroid_mm": [
+            -44.92140307153779,
+            -40.94268595975472,
+            128.70433198802516
+          ],
+          "aabb_min_mm": [
+            -94.3138185907357,
+            -74.55056855790451,
+            -51.95950099793582
+          ],
+          "aabb_max_mm": [
+            13.786181409264294,
+            -18.200568557904518,
+            287.29049900206417
+          ],
+          "min_to_achilles_mm": 0.0935072085245919,
+          "distal10_min_to_achilles_mm": 0.06692184612988893,
+          "achilles_distal10_ok": true
+        }
+      },
+      "note": "integrate_gate forced false \u2014 POC must not wire even if sketch looks close"
+    }
+  ],
+  "best_trial_by_achilles_distal10_sum": {
+    "label": "translate_scale_soleusDistal_to_achillesLow_flipX=False_scale=1.15",
+    "right_side_ok": true,
+    "achilles_reasonable_all": false,
+    "integrate_gate": false,
+    "would_sketch_pass_laterality_and_achilles": false,
+    "meshes": {
+      "gastrocnemius_lateralis": {
+        "wrong_side_all_X_gt_0": false,
+        "frac_inside_padded_foot_aabb": 0.4634729764675459,
+        "centroid_mm": [
+          -93.32106257831852,
+          -24.015696564109806,
+          208.31357244399882
+        ],
+        "aabb_min_mm": [
+          -120.7638185907357,
+          -42.350568557904516,
+          113.64049900206417
+        ],
+        "aabb_max_mm": [
+          -70.1638185907357,
+          -9.000568557904518,
+          321.7904990020641
+        ],
+        "min_to_achilles_mm": 0.4579373323302634,
+        "distal10_min_to_achilles_mm": 0.8024542661468871,
+        "achilles_distal10_ok": true
+      },
+      "gastrocnemius_medialis": {
+        "wrong_side_all_X_gt_0": false,
+        "frac_inside_padded_foot_aabb": 0.48976377952755906,
+        "centroid_mm": [
+          -40.95500272156411,
+          -32.37987352459005,
+          202.0051128724482
+        ],
+        "aabb_min_mm": [
+          -74.7638185907357,
+          -65.35056855790452,
+          77.99049900206417
+        ],
+        "aabb_max_mm": [
+          -10.363818590735704,
+          -7.850568557904516,
+          330.99049900206415
+        ],
+        "min_to_achilles_mm": 10.536805617940548,
+        "distal10_min_to_achilles_mm": 20.74062753062648,
+        "achilles_distal10_ok": false
+      },
+      "soleus": {
+        "wrong_side_all_X_gt_0": false,
+        "frac_inside_padded_foot_aabb": 0.7982710903064886,
+        "centroid_mm": [
+          -68.95623410990707,
+          -40.94268595975472,
+          128.70433198802516
+        ],
+        "aabb_min_mm": [
+          -127.6638185907357,
+          -74.55056855790451,
+          -51.95950099793582
+        ],
+        "aabb_max_mm": [
+          -19.5638185907357,
+          -18.200568557904518,
+          287.29049900206417
+        ],
+        "min_to_achilles_mm": 0.33969007115905747,
+        "distal10_min_to_achilles_mm": 0.4682325318276044,
+        "achilles_distal10_ok": true
+      }
+    },
+    "note": "integrate_gate forced false \u2014 POC must not wire even if sketch looks close"
+  },
+  "qa_verdict": {
+    "mc_surfaces_extracted": true,
+    "bp3d_right_side_and_achilles_continuity": false,
+    "wire_into_atlas": false,
+    "reason": "MC OK for classes 10/11/31; crude landmark/translate sketches did NOT clearly pass right-side + Achilles distal10<15 mm for all three bellies \u2014 do not wire."
+  },
+  "outputs_gitignored": [
+    "third_party/henson-sheffield/downloads/Aug_8_segmentations.dcm",
+    "third_party/henson-sheffield/poc/meshes/"
+  ],
+  "andreassen": "skipped \u2014 not re-opened"
+}

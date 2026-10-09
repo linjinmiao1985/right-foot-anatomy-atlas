@@ -1,0 +1,86 @@
+{
+  "source": "/workspace/literature/open3d-assets/lower-limb.obj",
+  "transform": "third_party/open3dmodel/open3d_to_bp3d_transform.json",
+  "method": "reuse Open3D\u2192BP3D Kabsch (Day 4m); Day 4ad muscle gaps",
+  "kabsch_mean_residual_mm": 2.6124537404764445,
+  "targets": {
+    "Fibularis_brevis_muscle.r": "fibularis_brevis",
+    "Fibularis_tertius_muscle.r": "fibularis_tertius",
+    "Opponens_digiti_minimi_muscle_of_foot.r": "opponens_digiti_minimi"
+  },
+  "documented_only_skipped": {
+    "Medial_head_of_flexor_hallucis_brevis.r": "SKIP \u2014 BP3D flexor_hallucis_brevis_medial already CC BY main-tree",
+    "Lateral_head_of_flexor_hallucis_brevis.r": "SKIP this pass \u2014 could later join ADDITIONAL_MUSCLE_PARTS; prefer not to BY-SA-taint FHB when medial head already BP3D CC BY (mixed-license single structure)",
+    "Flexor_digiti_minimi_brevis_of_foot.r": "SKIP \u2014 BP3D flexor_digiti_minimi_brevis already CC BY main-tree",
+    "Fibularis_longus_muscle.r": "SKIP \u2014 UM peroneus_longus.glb already CC0 Kabsch\u2192BP3D"
+  },
+  "aabb_bp3d_mm": {
+    "fibularis_brevis": {
+      "x": [
+        -117.86568002905551,
+        -85.43677508478233
+      ],
+      "y": [
+        -94.33019669562151,
+        -49.28016053024261
+      ],
+      "z": [
+        -52.985863297262014,
+        191.37579388394602
+      ],
+      "centroid": [
+        -99.91670645978039,
+        -63.7657004811561,
+        54.013388743448225
+      ],
+      "n_verts": 552,
+      "n_faces": 550,
+      "open3d_object": "Fibularis_brevis_muscle.r"
+    },
+    "fibularis_tertius": {
+      "x": [
+        -123.82517024943992,
+        -92.32626340859399
+      ],
+      "y": [
+        -116.95932817695578,
+        -69.48255650121413
+      ],
+      "z": [
+        -47.550997489865146,
+        65.4415939270855
+      ],
+      "centroid": [
+        -103.69793304978396,
+        -90.29448684500483,
+        7.227504243898358
+      ],
+      "n_verts": 384,
+      "n_faces": 382,
+      "open3d_object": "Fibularis_tertius_muscle.r"
+    },
+    "opponens_digiti_minimi": {
+      "x": [
+        -145.18245399629936,
+        -109.03242565801268
+      ],
+      "y": [
+        -141.8404269028205,
+        -103.82089441173167
+      ],
+      "z": [
+        -64.40225910135342,
+        -53.91085221964235
+      ],
+      "centroid": [
+        -128.22999154260438,
+        -121.91353358390221,
+        -59.13905015671673
+      ],
+      "n_verts": 272,
+      "n_faces": 270,
+      "open3d_object": "Opponens_digiti_minimi_muscle_of_foot.r"
+    }
+  },
+  "inventory_note": "UM zip has Peroneus Longus only (no FB/FT/opponens). BP3D main-tree already has FHB medial + FDMB + AH. Z-Anatomy.blend also names Fibularis brevis/tertius + Opponens digiti minimi of foot.r \u2014 deferred in favor of Open3D path with proven Kabsch."
+}

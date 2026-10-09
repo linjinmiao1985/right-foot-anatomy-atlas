@@ -1,0 +1,146 @@
+{
+  "method": "Andreassen VHM Final STL \u2192 BP3D mm Kabsch (7 tarsals); Day 4az spatial QA",
+  "kabsch_mean_residual_mm": 2.301088174156796,
+  "kabsch_max_residual_mm": 4.267761350938084,
+  "foot_bone_aabb_mm": [
+    [
+      -169.327,
+      -236.044,
+      -70.392
+    ],
+    [
+      -40.823,
+      -24.005,
+      157.823
+    ]
+  ],
+  "padded_foot_aabb_mm": [
+    [
+      -209.327,
+      -276.044,
+      -110.392
+    ],
+    [
+      -0.8230000000000004,
+      15.995000000000001,
+      197.823
+    ]
+  ],
+  "pad_mm": 40.0,
+  "reject_if": "wrong_side (all verts X>0) OR frac_inside_padded_foot_aabb < 0.15 for extrinsic belly OR attachment absurd without proximal landmarks",
+  "compare_um_extrinsic_note": "UM TP/FDL/FHL after Kabsch retain some X>0 span but centroids near midline and min verts reach Achilles/calc within ~0.8\u201320 mm. Andreassen gastroc fails harder (entirely X>0; Achilles gap >100 mm).",
+  "integrated": [],
+  "blocked": {
+    "gastrocnemius_medial": {
+      "source_stl": "VHM_Right_Muscle_GastrocnemiusMedial_smooth.stl",
+      "sha256": "8477870b6fe512c5f81191a75061b033a96187a2d7839abf23b7ec83164405d3",
+      "centroid_mm": [
+        104.49459495860077,
+        23.254951871552638,
+        153.52073025353113
+      ],
+      "aabb_mm": [
+        [
+          48.094186042136755,
+          -20.82983530384996,
+          77.17275688167854
+        ],
+        [
+          160.2880643113091,
+          65.38824812814318,
+          250.74575991015502
+        ]
+      ],
+      "wrong_side_X_all_positive": true,
+      "wrong_side_centroid_X_pos": true,
+      "frac_inside_padded_foot_aabb": 0.0,
+      "min_vert_to_achilles_mm": 109.14,
+      "min_vert_to_calcaneus_mm": 153.43,
+      "distal10pct_min_to_achilles_mm": 108.293,
+      "distal10pct_centroid_mm": [
+        63.569808468487636,
+        8.214229311021604,
+        87.75240166575557
+      ],
+      "qa_pass": false,
+      "extrinsic_belly": true
+    },
+    "gastrocnemius_lateral": {
+      "source_stl": "VHM_Right_Muscle_GastrocnemiusLateral_smooth.stl",
+      "sha256": "9891bc109ec63451fe444ebbd9df5cd5e5e17f2df70ea96e07d62cee1e97ec14",
+      "centroid_mm": [
+        81.49605853868877,
+        52.39270063135375,
+        175.9677108719176
+      ],
+      "aabb_mm": [
+        [
+          27.287218320552938,
+          27.326083305605778,
+          90.73207019397
+        ],
+        [
+          131.7516308296636,
+          70.62025908458719,
+          263.97758806897355
+        ]
+      ],
+      "wrong_side_X_all_positive": true,
+      "wrong_side_centroid_X_pos": true,
+      "frac_inside_padded_foot_aabb": 0.0,
+      "min_vert_to_achilles_mm": 108.994,
+      "min_vert_to_calcaneus_mm": 161.196,
+      "distal10pct_min_to_achilles_mm": 108.994,
+      "distal10pct_centroid_mm": [
+        44.306108679778134,
+        38.32500789680896,
+        107.40300430358971
+      ],
+      "qa_pass": false,
+      "extrinsic_belly": true
+    },
+    "soleus": {
+      "source_stl": "VHM_Right_Muscle_Soleus_smooth.stl",
+      "sha256": "c29565f8180a71c4064934fd2c5ec70c487793b87ea889e39a036ad33c64443b",
+      "centroid_mm": [
+        48.84567199763012,
+        10.600937336951432,
+        124.82128024382715
+      ],
+      "aabb_mm": [
+        [
+          -23.068768740243286,
+          -35.9511709131142,
+          13.417754279286214
+        ],
+        [
+          111.03376638539044,
+          52.40390770899762,
+          226.8252559284564
+        ]
+      ],
+      "wrong_side_X_all_positive": false,
+      "wrong_side_centroid_X_pos": true,
+      "frac_inside_padded_foot_aabb": 0.088,
+      "min_vert_to_achilles_mm": 32.233,
+      "min_vert_to_calcaneus_mm": 55.644,
+      "distal10pct_min_to_achilles_mm": 31.749,
+      "distal10pct_centroid_mm": [
+        -3.2938015775523115,
+        -18.408444801533694,
+        39.68333191077109
+      ],
+      "qa_pass": false,
+      "extrinsic_belly": true
+    }
+  },
+  "verdict": "BLOCKED \u2014 do not wire gastrocnemius_medial / gastrocnemius_lateral / soleus to main tree (Day 4az + Option A Day 4ba)",
+  "date": "2026-09-15",
+  "option_a_day4ba": {
+    "method": "Real BP3D LE OBJs (FJ3387/3366/3381/3365) + VH tibia/fibula/patella/femur landmarks; multi-set Kabsch similarity",
+    "trials_artifact": "le_kabsch_option_a_trials.json",
+    "best_near_miss": "H_ankle_focus (calcaneus/talus/tibia_distal/fibula_distal/patella): right-side OK; soleus Achilles\u22480.2 mm; gastroc med distal10\u22489.7 mm; gastroc lat distal10\u224821.6 mm FAIL; foot mean\u22488.8 / max\u224811.9 mm FAIL teaching-grade",
+    "verdict": "BLOCKED_DO_NOT_INTEGRATE",
+    "integrate": false
+  }
+}

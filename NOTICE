@@ -1,0 +1,94 @@
+# Third-Party Attributions and Licenses
+
+This project uses the following third-party assets and libraries:
+
+---
+
+## 3D Anatomical Models
+
+### BodyParts3D (Primary Asset)
+
+**Source**: Database Center for Life Science (DBCLS), Japan  
+**License**: CC BY 4.0 (Creative Commons Attribution 4.0 International)  
+**License URL**: https://creativecommons.org/licenses/by/4.0/  
+**Data URL**: https://dbarchive.biosciencedbc.jp/en/bodyparts3d/  
+**License Page**: https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html (updated 2025-02-27)
+
+**Required Attribution**:
+```
+BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International
+```
+
+**Usage in this project**:
+- Right foot bone, vessel, muscle, ligament, and calcaneal-tendon meshes extracted from BodyParts3D Release 4.0 OBJ data
+- Files modified: cropped to right foot, converted to GLB format
+- Derivative work: integrated into interactive 3D web viewer
+
+**Data Provenance**:
+- DOI: 10.18908/lsdba.nbdc00837-007
+- FMA (Foundational Model of Anatomy) based nomenclature
+- Original data: whole-body MRI polygon meshes (99% reduction)
+
+**License Summary**:
+You are free to:
+- Share — copy and redistribute in any medium or format
+- Adapt — remix, transform, and build upon the material for any purpose, including commercially
+
+Under the following terms:
+- Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made
+
+---
+
+### Open3DModel / AnatomyTOOL (BY-SA isolate)
+
+Day 4ad adds fibularis brevis/tertius + opponens digiti minimi muscle GLBs (Kabsch→BP3D).
+
+**Source**: Open3D project via AnatomyTOOL create page  
+**License**: CC BY-SA 4.0  
+**Usage**: Dorsal interossei, proximal arteries, ankle/foot ligaments/retinacula/fascia, Day 4x–4z fine/cutaneous/calcaneal/dorsal-digital nerve meshes, Day 4aa fine vessels (deep plantar a./arch, grouped dorsal MTA, medial plantar branches), and Day 4ab tarsal/calcaneal/perforator vessels under `public/models/right-foot/by-sa/` (Kabsch-aligned). See that directory's NOTICE.md.
+
+### Andreassen Visible Human Male LE muscles (CC BY — not wired)
+
+**Source**: University of Denver Center for Orthopaedic Biomechanics (Andreassen et al. Sci Data 2023)  
+**License**: CC BY 4.0 · Digital Commons https://digitalcommons.du.edu/visiblehuman/2/  
+**Usage**: Day 4az download + Kabsch; Day 4ba Option A LE retry — still blocked. Transform/QA/trials under `third_party/andreassen/` (`BLOCKED_DO_NOT_INTEGRATE`). Gastroc/soleus **not** shipped under `public/models/`. See that NOTICE.txt + `docs/cloud-agent-handback.md`.
+
+### Z-Anatomy nerves (BY-SA isolate)
+
+**Source**: Z-Anatomy  
+**License**: CC BY-SA 4.0  
+**Usage**: Six trunk nerve GLBs under `by-sa/` only; Day 4ad plantaris + FHB lateral head + proper plantar digital arteries; Day 4ae common plantar digital arteries + anterior tibial artery + dorsal/plantar venous arches + plantar digital veins (grouped); Day 4af circumflex fibular branch of PTA + medial/lateral plantar veins + plantar metatarsal veins (grouped). Fine plantar/cutaneous/calcaneal / dorsal digital (superficial + deep fibular) branches are Open3D (above), not Z-Anatomy. Sural→LDC continuity is a teaching note on LDC (no extra mesh). Venous set is expanded teaching fill — **not** complete.
+
+## Software Libraries
+
+All JavaScript/TypeScript dependencies are listed in `package.json` with their respective licenses:
+- React, React-DOM: MIT License
+- three.js: MIT License
+- @react-three/fiber, @react-three/drei: MIT License
+- Vite: MIT License
+- TypeScript: Apache 2.0 License
+- Vitest: MIT License
+
+See `package.json` and individual package `LICENSE` files for complete terms.
+
+---
+
+## This Project's License
+
+**Code and Documentation**: MIT License (see LICENSE file)  
+**3D Assets**: CC BY 4.0 (BodyParts3D) + CC0 (UM) + CC BY-SA 4.0 isolate (`by-sa/`) + Andreassen CC BY documented-only (not wired)
+
+When redistributing or citing this project, please include:
+1. MIT License for code (LICENSE file)
+2. BodyParts3D attribution for 3D models (this NOTICE)
+
+---
+
+**Last Updated**: 2026-09-15  
+**Maintained By**: Right Foot Anatomy Atlas Project
+
+
+### Henson Sheffield LE muscle DICOM labels (research only — not shipped meshes)
+
+**Source**: ORDA / Figshare DOIs 10.15131/shef.data.20440203 (labels, CC0), 20440164 (MR, CC0), 21739733 (registration inputs, CC0), 21763982 (multi-atlas code, MIT)  
+**Usage**: Day 4bi metadata + sandbox feasibility only. Tiny files under `third_party/henson-sheffield/`. **No** DICOM volumes or teaching GLBs in this repo. See `docs/henson-sheffield-sandbox-feasibility.md`.

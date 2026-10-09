@@ -1,0 +1,471 @@
+{
+  "method": "ZA mesh-API OBJ \u2192 meters*1000 \u2192 Kabsch (za_to_bp3d_transform.json) \u2192 GLB",
+  "kabsch_mean_residual_mm": 1.813981463537448,
+  "aabb_bp3d_mm": {
+    "plantaris": {
+      "centroid": [
+        -65.27159229156437,
+        -45.643137608165475,
+        225.32102026713326
+      ],
+      "aabb": [
+        [
+          -105.14259923380158,
+          -93.33455321228328,
+          -53.610655942540674
+        ],
+        [
+          -38.286903287360985,
+          -29.38404151758273,
+          435.91136381021425
+        ]
+      ],
+      "n_verts": 4701,
+      "n_faces": 9398,
+      "glb_bytes": 113932
+    },
+    "flexor_hallucis_brevis_lateral": {
+      "centroid": [
+        -86.3158749728666,
+        -147.65241790687764,
+        -51.39462058780773
+      ],
+      "aabb": [
+        [
+          -106.09530693047117,
+          -196.25797092304458,
+          -71.37699702495276
+        ],
+        [
+          -67.24384536442763,
+          -119.54050755425915,
+          -33.07031798683956
+        ]
+      ],
+      "n_verts": 964,
+      "n_faces": 1932,
+      "glb_bytes": 24396
+    },
+    "proper_plantar_digital_arteries": {
+      "centroid": [
+        -132.7854751669828,
+        -183.63361658375484,
+        -64.59549588150543
+      ],
+      "aabb": [
+        [
+          -170.51861600749987,
+          -242.46092093530385,
+          -72.40044134961896
+        ],
+        [
+          -84.96287653047406,
+          -92.11427815615788,
+          -58.743760038793866
+        ]
+      ],
+      "n_verts": 820,
+      "n_faces": 1904,
+      "glb_bytes": 22500
+    },
+    "common_plantar_digital_arteries": {
+      "centroid": [
+        -122.52869959840945,
+        -167.14772603326713,
+        -63.50215764251413
+      ],
+      "aabb": [
+        [
+          -140.49775406109143,
+          -189.92760141533057,
+          -68.27023389351925
+        ],
+        [
+          -104.101808912406,
+          -142.82373157419187,
+          -55.3811859818142
+        ]
+      ],
+      "n_verts": 128,
+      "n_faces": 260,
+      "glb_bytes": 4328
+    },
+    "dorsal_venous_arch": {
+      "centroid": [
+        -109.70607632978759,
+        -101.16394308352734,
+        -29.29846607122457
+      ],
+      "aabb": [
+        [
+          -118.57286570769655,
+          -156.4332992573797,
+          -37.99104767702867
+        ],
+        [
+          -98.58492212513808,
+          -71.48400604264548,
+          -21.038169347197616
+        ]
+      ],
+      "n_verts": 411,
+      "n_faces": 844,
+      "glb_bytes": 11168
+    },
+    "plantar_venous_arch": {
+      "centroid": [
+        -92.71423204499897,
+        -116.53302084893537,
+        -51.17507555687252
+      ],
+      "aabb": [
+        [
+          -105.36931647833875,
+          -125.1465314748024,
+          -65.81064646005137
+        ],
+        [
+          -66.21524751632307,
+          -92.22974230729375,
+          -41.99455290727562
+        ]
+      ],
+      "n_verts": 159,
+      "n_faces": 349,
+      "glb_bytes": 5180
+    },
+    "anterior_tibial_artery": {
+      "centroid": [
+        -101.56860997797462,
+        -82.94104365543492,
+        191.83983306042154
+      ],
+      "aabb": [
+        [
+          -116.97141891594833,
+          -93.58686585504705,
+          3.217906491720342
+        ],
+        [
+          -68.980357367676,
+          -70.652693945019,
+          334.34085000504814
+        ]
+      ],
+      "n_verts": 2068,
+      "n_faces": 4382,
+      "glb_bytes": 52304
+    },
+    "plantar_digital_veins": {
+      "centroid": [
+        -126.11748030958938,
+        -180.75959188180593,
+        -66.9011951164885
+      ],
+      "aabb": [
+        [
+          -170.31606943046125,
+          -242.7884660647519,
+          -76.73250368581962
+        ],
+        [
+          -66.2313033859148,
+          -92.25653330610027,
+          -46.57446766775624
+        ]
+      ],
+      "n_verts": 960,
+      "n_faces": 2200,
+      "glb_bytes": 25912
+    },
+    "circumflex_fibular_artery": {
+      "centroid": [
+        -108.68082197532128,
+        -65.97621976398526,
+        371.90869007421185
+      ],
+      "aabb": [
+        [
+          -129.61169488923645,
+          -97.92489967186914,
+          353.2688299268412
+        ],
+        [
+          -88.92695493991906,
+          -53.1606909643165,
+          395.7065894112323
+        ]
+      ],
+      "n_verts": 316,
+      "n_faces": 652,
+      "glb_bytes": 8908
+    },
+    "medial_plantar_veins": {
+      "centroid": [
+        -66.81486901674869,
+        -100.9884670011942,
+        -45.141079663090835
+      ],
+      "aabb": [
+        [
+          -69.94373321656148,
+          -125.12564407772254,
+          -48.483083042221914
+        ],
+        [
+          -60.78845525631793,
+          -83.54777070550617,
+          -41.868511572808444
+        ]
+      ],
+      "n_verts": 150,
+      "n_faces": 311,
+      "glb_bytes": 4848
+    },
+    "lateral_plantar_vein": {
+      "centroid": [
+        -83.91114857897342,
+        -86.50691580236357,
+        -56.70534630384448
+      ],
+      "aabb": [
+        [
+          -105.11231185058904,
+          -93.94263003138087,
+          -65.99439188555631
+        ],
+        [
+          -60.66731698861949,
+          -82.70903166677617,
+          -44.76078126527368
+        ]
+      ],
+      "n_verts": 150,
+      "n_faces": 323,
+      "glb_bytes": 4920
+    },
+    "plantar_metatarsal_veins": {
+      "centroid": [
+        -115.2344470391535,
+        -146.75773529187407,
+        -59.89185321167115
+      ],
+      "aabb": [
+        [
+          -140.25836137570343,
+          -190.4430216188397,
+          -73.0802439382961
+        ],
+        [
+          -98.02817361728862,
+          -103.02530629688124,
+          -41.992481911149056
+        ]
+      ],
+      "n_verts": 445,
+      "n_faces": 1012,
+      "glb_bytes": 12616
+    }
+  },
+  "qa": {
+    "plantaris": {
+      "centroid": [
+        -65.27159230877962,
+        -45.64313762853866,
+        225.321020225481
+      ],
+      "frac_inside_pad": 0.883,
+      "wrong_side": false,
+      "qa_pass": true,
+      "note": "near_achilles_min_mm=9.4",
+      "n_verts": 4701
+    },
+    "flexor_hallucis_brevis_lateral": {
+      "centroid": [
+        -86.31587481201932,
+        -147.6524179070817,
+        -51.39462061442775
+      ],
+      "frac_inside_pad": 1.0,
+      "wrong_side": false,
+      "qa_pass": true,
+      "note": "dist_to_fhb_medial_mm=12.6",
+      "n_verts": 964
+    },
+    "proper_plantar_digital_arteries": {
+      "centroid": [
+        -132.7854750377376,
+        -183.63361658235877,
+        -64.5954959683302
+      ],
+      "frac_inside_pad": 1.0,
+      "wrong_side": false,
+      "qa_pass": true,
+      "note": "dist_to_proximal_phalanx_2_min_mm=3.4; prior fail used BP3D plantar_mta (X>0 odd centroid) as ref",
+      "n_verts": 820
+    },
+    "common_plantar_digital_arteries": {
+      "centroid": [
+        -122.52869959840945,
+        -167.14772603326713,
+        -63.50215764251413
+      ],
+      "frac_inside_pad": 1.0,
+      "wrong_side": false,
+      "qa_pass": true,
+      "note": "dist_to_ppda_mm=19.4; min_dist_prox_phal2_mm=16.1",
+      "n_verts": 128
+    },
+    "dorsal_venous_arch": {
+      "centroid": [
+        -109.70607632978759,
+        -101.16394308352734,
+        -29.29846607122457
+      ],
+      "frac_inside_pad": 1.0,
+      "wrong_side": false,
+      "qa_pass": true,
+      "note": "dist_to_dorsalis_mm=40.0",
+      "n_verts": 411
+    },
+    "plantar_venous_arch": {
+      "centroid": [
+        -92.71423204499897,
+        -116.53302084893537,
+        -51.17507555687252
+      ],
+      "frac_inside_pad": 1.0,
+      "wrong_side": false,
+      "qa_pass": true,
+      "note": "dist_to_plantar_arch_mm=7.7",
+      "n_verts": 159
+    },
+    "anterior_tibial_artery": {
+      "centroid": [
+        -101.56860997797462,
+        -82.94104365543492,
+        191.83983306042154
+      ],
+      "frac_inside_pad": 1.0,
+      "wrong_side": false,
+      "qa_pass": true,
+      "note": "distal_to_dorsalis_mm=27.3; z_span_mm=331.1",
+      "n_verts": 2068
+    },
+    "plantar_digital_veins": {
+      "centroid": [
+        -126.11748030958938,
+        -180.75959188180593,
+        -66.9011951164885
+      ],
+      "frac_inside_pad": 1.0,
+      "wrong_side": false,
+      "qa_pass": true,
+      "note": "dist_to_ppda_mm=7.6; min_dist_prox_phal2_mm=3.8",
+      "n_verts": 960
+    },
+    "circumflex_fibular_artery": {
+      "centroid": [
+        -108.68082197532128,
+        -65.97621976398526,
+        371.90869007421185
+      ],
+      "frac_inside_pad": 1.0,
+      "wrong_side": false,
+      "qa_pass": true,
+      "note": "dist_to_pta_mm=277.0; dist_to_fibular_a_mm=269.7; z_span_mm=42.4; centroid_z=371.9",
+      "n_verts": 316
+    },
+    "medial_plantar_veins": {
+      "centroid": [
+        -66.81486901674869,
+        -100.9884670011942,
+        -45.141079663090835
+      ],
+      "frac_inside_pad": 1.0,
+      "wrong_side": false,
+      "qa_pass": true,
+      "note": "",
+      "n_verts": 150
+    },
+    "lateral_plantar_vein": {
+      "centroid": [
+        -83.91114857897342,
+        -86.50691580236357,
+        -56.70534630384448
+      ],
+      "frac_inside_pad": 1.0,
+      "wrong_side": false,
+      "qa_pass": true,
+      "note": "",
+      "n_verts": 150
+    },
+    "plantar_metatarsal_veins": {
+      "centroid": [
+        -115.2344470391535,
+        -146.75773529187407,
+        -59.89185321167115
+      ],
+      "frac_inside_pad": 1.0,
+      "wrong_side": false,
+      "qa_pass": true,
+      "note": "dist_to_pva_mm=38.7; dist_to_pdv_mm=36.4",
+      "n_verts": 445
+    }
+  },
+  "wire_decision": {
+    "plantaris": "WIRE",
+    "flexor_hallucis_brevis_lateral": "WIRE",
+    "proper_plantar_digital_arteries": "WIRE",
+    "common_plantar_digital_arteries": "WIRE",
+    "dorsal_venous_arch": "WIRE",
+    "plantar_venous_arch": "WIRE",
+    "anterior_tibial_artery": "WIRE",
+    "plantar_digital_veins": "WIRE",
+    "circumflex_fibular_artery": "WIRE",
+    "medial_plantar_veins": "WIRE",
+    "lateral_plantar_vein": "WIRE",
+    "plantar_metatarsal_veins": "WIRE"
+  },
+  "note_ppda_ref": "BP3D plantar_metatarsal_arteries_grouped / dorsal_digital centroids have +X (~113/+134) vs right-foot bone frame (\u2212X); not used as laterality refs for ZA PPDA.",
+  "day4ae": {
+    "added": [
+      "common_plantar_digital_arteries",
+      "dorsal_venous_arch",
+      "plantar_venous_arch",
+      "anterior_tibial_artery",
+      "plantar_digital_veins"
+    ],
+    "skipped_duplicates": [
+      "Fibularis*/Opponens*/DI \u2014 Open3D",
+      "Long plantar / calcaneal tendon \u2014 BP3D",
+      "plantaris / FHB lat / PPDA \u2014 already Day 4ad",
+      "Deep plantar / dorsalis / fibular / PTA / plantar aa / MTA \u2014 Open3D/BP3D",
+      "Calcaneal arterial branches \u2014 overlap Open3D med/lat calcaneal",
+      "Circumflex fibular \u2014 less foot-specific",
+      "Other veins (med/lat plantar, dorsal digital/metatarsal, intercapitular) \u2014 deferred"
+    ]
+  },
+  "day4af": {
+    "added_candidates": [
+      "circumflex_fibular_artery",
+      "medial_plantar_veins",
+      "lateral_plantar_vein",
+      "plantar_metatarsal_veins"
+    ],
+    "wired": [
+      "circumflex_fibular_artery",
+      "medial_plantar_veins",
+      "lateral_plantar_vein",
+      "plantar_metatarsal_veins"
+    ],
+    "qa_fail": [],
+    "skipped_still_deferred": [
+      "Calcaneal arterial branches \u2014 overlap Open3D med/lat calcaneal",
+      "Dorsal digital / metatarsal / intercapitular veins \u2014 volume defer",
+      "Anterior tibial / fibular / great saphenous veins \u2014 proximal/less foot-specific",
+      "FB/FT/opponens/DI \u2014 Open3D",
+      "Long plantar / Achilles \u2014 BP3D"
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "generatedAt": "2026-09-22T05:09:18.531Z",
+  "url": "http://127.0.0.1:4173/",
+  "honesty": "Teaching-grade screenshot pack for expert review — not a finished-product gallery; soft-tissue incomplete; BY-SA layers opt-in.",
+  "shots": [
+    {
+      "file": "01-default-all-layers.png",
+      "note": "Default view — all teaching layers on"
+    },
+    {
+      "file": "02-bone-only.png",
+      "note": "Bone layer only (default oblique)"
+    },
+    {
+      "file": "03-muscle-only.png",
+      "note": "Muscle layer only (intrinsics + extrinsics teaching set)"
+    },
+    {
+      "file": "04-nerve-bysa.png",
+      "note": "Nerve layer only — BY-SA isolate visible in panel/legend"
+    },
+    {
+      "file": "05-clip-lite.png",
+      "note": "Sagittal clip lite on (teaching cutaway, not clinical MPR)"
+    },
+    {
+      "file": "06-bone-dorsal.png",
+      "note": "Bone only — dorsal preset (+Z)"
+    },
+    {
+      "file": "07-bone-plantar.png",
+      "note": "Bone only — plantar preset (−Z); sole teaching view"
+    },
+    {
+      "file": "08-bone-medial.png",
+      "note": "Bone only — medial preset (+X / hallux side)"
+    },
+    {
+      "file": "09-all-lateral.png",
+      "note": "All layers — lateral preset (−X); multi-view expand"
+    },
+    {
+      "file": "10-ghost-opacity.png",
+      "note": "Ghost opacity preset (G key) — muscle layers semi-transparent over bones (teaching mode Day 4bm)"
+    },
+    {
+      "file": "11-explode-separation.png",
+      "note": "Explode spatial separation (E key) — layers separated +Y for teaching sandwich visibility (Day 4bn)"
+    },
+    {
+      "file": "12-ghost-explode-combined.png",
+      "note": "Ghost + Explode combined — semi-transparent separated layers (teaching modes combined)"
+    }
+  ]
+}

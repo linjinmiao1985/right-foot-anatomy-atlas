@@ -1,0 +1,5 @@
+Open3DModel lower-limb OBJ (no textures)
+Source: https://anatomytool.org/open3dmodel-create
+File: lower-limb-obj.zip / lower-limb.obj
+License: CC BY-SA 4.0 — https://creativecommons.org/licenses/by-sa/4.0/
+Use only in third_party BY-SA isolation; do not mix into CC BY-only package without ShareAlike.

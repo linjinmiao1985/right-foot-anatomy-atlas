@@ -1,0 +1,11 @@
+Universiti Malaya Asian Male Lower Extremity Musculoskeletal Model
+DOI: 10.22452/RD/5T6TZ7
+License: CC0 1.0 (Public Domain Dedication)
+
+This directory stores the UM→BP3D frame transform artifact only
+(um_to_bp3d_transform.json). Source STLs are not redistributed here;
+muscle GLBs in public/models/right-foot/ were converted from UM STLs
+and (as of Week 2 Day 4l) have a Kabsch similarity bake into BodyParts3D
+right-foot millimeters so the shared render scale 0.01 applies.
+
+Teaching-grade registration — not surgical/patient-specific.

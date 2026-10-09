@@ -1,0 +1,121 @@
+{
+  "method": "Open3D muscles Kabsch\u2192BP3D mm (Day 4m); Day 4ad QA",
+  "kabsch_mean_residual_mm": 2.6124537404764445,
+  "foot_bone_aabb_mm": [
+    [
+      -169.327,
+      -236.044,
+      -70.392
+    ],
+    [
+      -40.823,
+      -24.005,
+      157.823
+    ]
+  ],
+  "ref_centroids_mm": {
+    "peroneus_longus.glb": [
+      -18.56479692119555,
+      17.455567800951876,
+      108.60164776982805
+    ],
+    "abductor_digiti_minimi.glb": [
+      -104.22025898238115,
+      -91.69781830861923,
+      -58.633734528435454
+    ],
+    "flexor_digiti_minimi_brevis.glb": [
+      -129.52123506904528,
+      -125.67701552231549,
+      -63.09300702718393
+    ],
+    "extensor_digitorum_longus.glb": [
+      -18.292030403313493,
+      3.3924844906463236,
+      116.97154611202599
+    ]
+  },
+  "results": {
+    "fibularis_brevis": {
+      "centroid": [
+        -99.91670637545378,
+        -63.765700519948766,
+        54.013388891582906
+      ],
+      "aabb": [
+        [
+          -117.86567687988281,
+          -94.3302001953125,
+          -52.985862731933594
+        ],
+        [
+          -85.43677520751953,
+          -49.2801628112793,
+          191.37579345703125
+        ]
+      ],
+      "n_verts": 552,
+      "frac_inside_pad": 1.0,
+      "wrong_side_X_pos": false,
+      "dist_centroid_to_mt5_mm": 127.03,
+      "min_vert_to_mt5_mm": 30.41,
+      "dist_centroid_to_adm_mm": 116.14,
+      "extrinsic": true,
+      "qa_pass": true
+    },
+    "fibularis_tertius": {
+      "centroid": [
+        -103.69793313741684,
+        -90.29448690017064,
+        7.227504163068564
+      ],
+      "aabb": [
+        [
+          -123.8251724243164,
+          -116.9593276977539,
+          -47.55099868774414
+        ],
+        [
+          -92.32626342773438,
+          -69.48255920410156,
+          65.44159698486328
+        ]
+      ],
+      "n_verts": 384,
+      "frac_inside_pad": 1.0,
+      "wrong_side_X_pos": false,
+      "dist_centroid_to_mt5_mm": 74.18,
+      "min_vert_to_mt5_mm": 10.4,
+      "dist_centroid_to_adm_mm": 65.88,
+      "extrinsic": true,
+      "qa_pass": true
+    },
+    "opponens_digiti_minimi": {
+      "centroid": [
+        -128.22999149210312,
+        -121.9135334631976,
+        -59.13905009101419
+      ],
+      "aabb": [
+        [
+          -145.1824493408203,
+          -141.84042358398438,
+          -64.40225982666016
+        ],
+        [
+          -109.03242492675781,
+          -103.82089233398438,
+          -53.910850524902344
+        ]
+      ],
+      "n_verts": 272,
+      "frac_inside_pad": 1.0,
+      "wrong_side_X_pos": false,
+      "dist_centroid_to_mt5_mm": 4.1,
+      "min_vert_to_mt5_mm": 3.29,
+      "dist_centroid_to_adm_mm": 38.6,
+      "extrinsic": false,
+      "qa_pass": true
+    }
+  }
+}
