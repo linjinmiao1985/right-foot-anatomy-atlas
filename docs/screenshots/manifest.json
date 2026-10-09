@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-15T05:25:36.720Z",
+  "generatedAt": "2026-09-22T05:09:18.531Z",
   "url": "http://127.0.0.1:4173/",
   "honesty": "Teaching-grade screenshot pack for expert review — not a finished-product gallery; soft-tissue incomplete; BY-SA layers opt-in.",
   "shots": [
@@ -38,6 +38,18 @@
     {
       "file": "09-all-lateral.png",
       "note": "All layers — lateral preset (−X); multi-view expand"
+    },
+    {
+      "file": "10-ghost-opacity.png",
+      "note": "Ghost opacity preset (G key) — muscle layers semi-transparent over bones (teaching mode Day 4bm)"
+    },
+    {
+      "file": "11-explode-separation.png",
+      "note": "Explode spatial separation (E key) — layers separated +Y for teaching sandwich visibility (Day 4bn)"
+    },
+    {
+      "file": "12-ghost-explode-combined.png",
+      "note": "Ghost + Explode combined — semi-transparent separated layers (teaching modes combined)"
     }
   ]
 }

@@ -91,6 +91,15 @@ export const ONTOLOGY_BY_ID: Readonly<Record<string, StructureOntologyIds>> = {
   flexor_digitorum_longus: { ta2: 'A04.7.02.052', fma: '51071' },
   flexor_hallucis_longus: { ta2: 'A04.7.02.053', fma: '22593' },
   plantaris: { ta2: 'A04.7.02.049', fma: '22543' },
+  // IFAA entity pages fetched 2026-10-08:
+  // 04.7.02.044 m. gastrocnemius FMA:22541; 045 caput laterale FMA:45959; 046 caput mediale FMA:45956
+  // 04.7.02.047 m. soleus FMA:22542
+  gastrocnemius: {
+    ta2: 'A04.7.02.044',
+    fma: '22541',
+    note: 'medial head FJ1397 (IFAA A04.7.02.046 FMA45956) + lateral head FJ1394 (IFAA A04.7.02.045 FMA45959)',
+  },
+  soleus: { ta2: 'A04.7.02.047', fma: '22542' },
   // Intrinsics: FMA/BP from manifest (UM/BP3D); PI TA from structures.json
   abductor_hallucis: { fma: '37459' },
   flexor_digitorum_brevis: { fma: '37461' },

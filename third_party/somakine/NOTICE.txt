@@ -1,0 +1,20 @@
+BodyParts3D gastrocnemius and soleus extracts (Day 4dy, dig #194)
+
+Upstream: BodyParts3D Release 4.0, Database Center for Life Science (DBCLS).
+License page fetched 2026-10-08: https://dbarchive.biosciencedbc.jp/en/bodyparts3d/lic.html
+License string seen on that page: "The license for this database is specified in the Creative Commons Attribution 4.0 International."
+Required attribution seen on that page: "BodyParts3D, © The Database Center for Life Science licensed under CC Attribution 4.0 International".
+
+Download path used (no login): 
+https://github.com/ivershuo/somakine/raw/main/data-packs/bodyparts3d-musculoskeletal/public/assets/bodyparts3d/supplement-ankle-foot-muscle.glb
+Pack manifest: data-packs/bodyparts3d-musculoskeletal/public/pack.json version 4.0.0-somakine.2
+Pack license field: "CC-BY-4.0" / "Creative Commons Attribution 4.0 International"
+Pack README: "This data pack and its derived assets remain CC BY 4.0; the Somakine framework code license does not relicense the anatomy data."
+
+Wired files (raw BP3D millimetres, right side only):
+- public/models/right-foot/gastrocnemius_medial.glb  (node ankle-foot:gastrocnemius:isa:FJ1397)
+- public/models/right-foot/gastrocnemius_lateral.glb (node ankle-foot:gastrocnemius:isa:FJ1394)
+- public/models/right-foot/soleus.glb                (node ankle-foot:soleus:isa:FJ1437)
+
+Spatial QA: third_party/somakine/spatial_qa.json
+Not a clinical model. Not TA2-complete.

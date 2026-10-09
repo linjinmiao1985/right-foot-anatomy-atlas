@@ -419,6 +419,39 @@
       "name_zh": "踇长伸肌",
       "name_la": "M. extensor hallucis longus",
       "note": "Day 4n teaching extrinsic; Kabsch-baked"
+    },
+    {
+      "id": "gastrocnemius_medial",
+      "file": "gastrocnemius_medial.glb",
+      "source": "BP3D",
+      "license": "CC BY 4.0",
+      "isa": "FJ1397",
+      "fma": "FMA45956",
+      "name_zh": "腓肠肌内侧头",
+      "name_la": "M. gastrocnemius caput mediale",
+      "note": "Day 4dy. Structure id gastrocnemius. Somakine GLB node ankle-foot:gastrocnemius:isa:FJ1397. Same BP3D mm frame as foot bones."
+    },
+    {
+      "id": "gastrocnemius_lateral",
+      "file": "gastrocnemius_lateral.glb",
+      "source": "BP3D",
+      "license": "CC BY 4.0",
+      "isa": "FJ1394",
+      "fma": "FMA45959",
+      "name_zh": "腓肠肌外侧头",
+      "name_la": "M. gastrocnemius caput laterale",
+      "note": "Day 4dy additional part of structure gastrocnemius. ISA FJ1394."
+    },
+    {
+      "id": "soleus",
+      "file": "soleus.glb",
+      "source": "BP3D",
+      "license": "CC BY 4.0",
+      "isa": "FJ1437",
+      "fma": "FMA22542",
+      "name_zh": "比目鱼肌",
+      "name_la": "M. soleus",
+      "note": "Day 4dy. ISA FJ1437. IFAA A04.7.02.047."
     }
   ],
   "vessels": [

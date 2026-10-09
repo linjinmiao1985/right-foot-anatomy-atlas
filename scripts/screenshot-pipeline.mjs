@@ -64,6 +64,18 @@ async function setCameraPreset(page, id) {
   await sleep(800);
 }
 
+async function setGhostPreset(page) {
+  // Press 'G' key to toggle ghost preset (or find ghost button if exists)
+  await page.keyboard.press('KeyG');
+  await sleep(400);
+}
+
+async function setExplodePreset(page) {
+  // Press 'E' key to toggle explode preset
+  await page.keyboard.press('KeyE');
+  await sleep(400);
+}
+
 const SHOTS = [
   {
     id: '01-default-all-layers',
@@ -145,6 +157,41 @@ const SHOTS = [
       await setClipLite(page, false);
       await setLayers(page, new Set(LAYER_LABELS));
       await setCameraPreset(page, 'lateral');
+    },
+  },
+  {
+    id: '10-ghost-opacity',
+    note: 'Ghost opacity preset (G key) — muscle layers semi-transparent over bones (teaching mode Day 4bm)',
+    setup: async (page) => {
+      await setClipLite(page, false);
+      await setLayers(page, new Set(LAYER_LABELS));
+      await setCameraPreset(page, 'default');
+      await setGhostPreset(page);
+      await sleep(600);
+    },
+  },
+  {
+    id: '11-explode-separation',
+    note: 'Explode spatial separation (E key) — layers separated +Y for teaching sandwich visibility (Day 4bn)',
+    setup: async (page) => {
+      await setClipLite(page, false);
+      await setLayers(page, new Set(LAYER_LABELS));
+      await setCameraPreset(page, 'default');
+      await setExplodePreset(page);
+      await sleep(600);
+    },
+  },
+  {
+    id: '12-ghost-explode-combined',
+    note: 'Ghost + Explode combined — semi-transparent separated layers (teaching modes combined)',
+    setup: async (page) => {
+      await setClipLite(page, false);
+      await setLayers(page, new Set(LAYER_LABELS));
+      await setCameraPreset(page, 'default');
+      await setGhostPreset(page);
+      await sleep(400);
+      await setExplodePreset(page);
+      await sleep(600);
     },
   },
 ];

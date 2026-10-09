@@ -178,3 +178,27 @@ If issues found during manual testing:
 - [x] Outside-canvas bilingual overlay (`data-testid="layer-load-progress"`) via drei `useProgress` — percent bar + optional layer chip + loaded/total detail
 - [x] Idle / `total===0` → overlay hidden (no stuck 100% flash)
 - Honesty: teaching asset-fetch chrome — **not** a clinical workstation / finished-product claim
+
+## Day 4bm addendum — teaching ghost / 透视
+
+- [x] Layer panel **透视 / 实心** + per-layer opacity sliders (`data-ghost-preset`, `data-layer-opacity`)
+- [x] Key `G` toggles ghost preset ↔ solid (help overlay documents it)
+- [x] Prefs persist `layerOpacities`; older localStorage envelopes without the field restore solid 1
+- [x] Ghost is teaching translucency — bones stay readable under faded muscle/ligament/vessel
+- Honesty: **not** clinical X-ray / fluoroscopy / finished-product claim
+
+## Day 4bn addendum — teaching explode / 抽出
+
+- [x] Layer panel **抽出 / 合拢** + amount slider (`data-explode-preset`, `data-explode-amount`)
+- [x] Key `E` toggles teaching explode preset ↔ assembled (help overlay documents it)
+- [x] Prefs persist `explodeAmount`; older localStorage envelopes without the field restore assembled 0
+- [x] Osteology stays the spatial anchor; covering layers peel along +Y
+- Honesty: **not** surgical dissection / clinical exposure / finished-product claim
+
+## Day 4bo addendum — teaching quiz stub / 测验
+
+- [x] Layer panel **测验 / 对照** (`data-quiz-on`, `data-quiz-off`, `data-testid="teaching-quiz"`)
+- [x] Key `Q` toggles quiz stub ↔ names (help overlay documents it)
+- [x] Prefs persist `quizMode`; older localStorage envelopes without the field restore quiz off
+- [x] Names, search, ontology IDs, and summaries hide while quiz is on; license / honesty chips stay
+- Honesty: **not** Anki / exam / finished-product claim

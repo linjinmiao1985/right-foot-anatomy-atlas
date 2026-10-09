@@ -40,6 +40,31 @@ import {
   revealStructureId,
   revealAllHiddenStructures,
 } from './lib/structureVisibility';
+import {
+  defaultLayerOpacities,
+  ghostLayerOpacities,
+  isGhostLayerOpacities,
+  isGhostToggleKey,
+  toggleGhostLayerOpacities,
+  DEFAULT_MASTER_GHOST_OPACITY,
+  applyMasterGhostOpacity,
+  inferMasterGhostOpacity,
+  clampMasterGhostOpacity,
+} from './lib/layerOpacity';
+import {
+  DEFAULT_EXPLODE_AMOUNT,
+  EXPLODE_PRESET_AMOUNT,
+  isAssembledExplode,
+  isExplodeToggleKey,
+  toggleExplodeAmount,
+  prefersReducedMotion,
+} from './lib/layerExplode';
+import {
+  DEFAULT_QUIZ_MODE,
+  isQuizToggleKey,
+  quizDisplayNames,
+  toggleQuizMode,
+} from './lib/quizMode';
 
 function emptyLayerCounts(): Record<Layer, number> {
   return { bone: 0, muscle: 0, nerve: 0, vessel: 0, ligament: 0 };
@@ -86,8 +111,36 @@ function App() {
   });
   const [cameraPresetToken, setCameraPresetToken] = useState(0);
   const [helpOpen, setHelpOpen] = useState(false);
+  const [layerOpacities, setLayerOpacities] = useState<Record<Layer, number>>(() => {
+    return loadTeachingPrefs()?.layerOpacities ?? defaultLayerOpacities();
+  });
+  const [masterGhostOpacity, setMasterGhostOpacity] = useState(() => {
+    return loadTeachingPrefs()?.masterGhostOpacity ?? DEFAULT_MASTER_GHOST_OPACITY;
+  });
+  const [explodeAmount, setExplodeAmount] = useState(() => {
+    return loadTeachingPrefs()?.explodeAmount ?? DEFAULT_EXPLODE_AMOUNT;
+  });
+  const [quizMode, setQuizMode] = useState(() => {
+    return loadTeachingPrefs()?.quizMode ?? DEFAULT_QUIZ_MODE;
+  });
 
-  // Persist teaching prefs (layers / label density / clip / camera / hidden structure ids).
+  // Track prefers-reduced-motion media query (WCAG accessibility — ideas only).
+  const [reducedMotion, setReducedMotion] = useState(() => prefersReducedMotion());
+
+  // Listen for prefers-reduced-motion changes.
+  useEffect(() => {
+    if (typeof window === 'undefined' || !window.matchMedia) return;
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const handler = (e: MediaQueryListEvent) => setReducedMotion(e.matches);
+    // Modern browsers use addEventListener; legacy uses addListener
+    if (mediaQuery.addEventListener) {
+      mediaQuery.addEventListener('change', handler);
+      return () => mediaQuery.removeEventListener('change', handler);
+    }
+    return undefined;
+  }, []);
+
+  // Persist teaching prefs (layers / label density / clip / camera / hidden / ghost / explode / quiz / masterGhostOpacity).
   useEffect(() => {
     saveTeachingPrefs({
       visibleLayers: [...visibleLayers],
@@ -96,8 +149,12 @@ function App() {
       clipConstant,
       cameraPresetId,
       hiddenStructureIds: [...hiddenStructureIds],
+      layerOpacities,
+      explodeAmount,
+      quizMode,
+      masterGhostOpacity,
     });
-  }, [visibleLayers, labelDensity, clipEnabled, clipConstant, cameraPresetId, hiddenStructureIds]);
+  }, [visibleLayers, labelDensity, clipEnabled, clipConstant, cameraPresetId, hiddenStructureIds, layerOpacities, explodeAmount, quizMode, masterGhostOpacity]);
 
   const handleCameraPresetChange = (id: CameraPresetId) => {
     setCameraPresetId(id);
@@ -118,6 +175,10 @@ function App() {
 
   const handleShowAll = () => setVisibleLayers(new Set(getAllLayers()));
   const handleHideAll = () => setVisibleLayers(new Set());
+
+  // Detect when all soft layers are off (only bone or nothing visible) — teaching empty-state.
+  const softLayers: Layer[] = ['muscle', 'nerve', 'vessel', 'ligament'];
+  const anySoftLayerVisible = softLayers.some((layer) => visibleLayers.has(layer));
 
   const handleLigamentGroupToggle = (group: LigamentGroupId) => {
     setVisibleLigamentGroups((prev) => {
@@ -239,6 +300,25 @@ function App() {
       if (isViewResetKey(e.key)) {
         e.preventDefault();
         setCameraPresetToken((n) => n + 1);
+        return;
+      }
+      // Ghost / 透视 — Air-Sage 透视 + Z-Anatomy Atlas G-ghost habit (ideas only)
+      if (isGhostToggleKey(e.key)) {
+        e.preventDefault();
+        setMasterGhostOpacity(1);
+        setLayerOpacities((prev) => toggleGhostLayerOpacities(prev));
+        return;
+      }
+      // Explode / 抽出 — Air-Sage 抽出 + Human Atlas explode habit (ideas only)
+      if (isExplodeToggleKey(e.key)) {
+        e.preventDefault();
+        setExplodeAmount((prev) => toggleExplodeAmount(prev));
+        return;
+      }
+      // Quiz stub — Grypa-JJ quiz + MedicalPlab tutor→viewport habit (ideas only)
+      if (isQuizToggleKey(e.key)) {
+        e.preventDefault();
+        setQuizMode((prev) => toggleQuizMode(prev));
       }
     };
     window.addEventListener('keydown', handleKey);
@@ -301,10 +381,41 @@ function App() {
             : ''}
           {isolateMode ? ' · 隔离中 (I)' : ''}
           {hiddenStructureIds.size > 0 ? ` · 已隐藏 ${hiddenStructureIds.size}` : ''}
+          {isGhostLayerOpacities(layerOpacities) ? ' · 透视 (G)' : ''}
+          {!isAssembledExplode(explodeAmount) ? ' · 抽出 (E)' : ''}
+          {quizMode ? ' · 测验 (Q)' : ''}
         </div>
       </div>
 
-      <StructureSearch onSelect={handleSearchSelect} clearSignal={searchClearSignal} />
+      {!quizMode && <StructureSearch onSelect={handleSearchSelect} clearSignal={searchClearSignal} />}
+
+      {quizMode && (
+        <div
+          role="status"
+          style={{
+            position: 'fixed',
+            top: '80px',
+            left: '20px',
+            maxWidth: '360px',
+            padding: '10px 14px',
+            background: 'rgba(251, 146, 60, 0.12)',
+            border: '1px solid rgba(251, 146, 60, 0.45)',
+            borderRadius: '6px',
+            color: '#fdba74',
+            fontSize: '11px',
+            lineHeight: 1.5,
+            zIndex: 105,
+            boxShadow: '0 2px 8px rgba(0,0,0,0.2)',
+          }}
+          title="Teaching quiz-mode stub — not Anki / exam"
+        >
+          <strong>ℹ️ 测验模式 · Quiz Stub</strong>
+          <div style={{ marginTop: '4px' }}>
+            教学自测：隐藏名称/搜索/本体编码,仅通过网格+图层识别结构。<strong>非</strong> Anki /
+            正式考试 / 完整产品。按 <code style={{ background: 'rgba(251,146,60,0.2)', padding: '1px 4px', borderRadius: '3px' }}>Q</code> 恢复对照。
+          </div>
+        </div>
+      )}
 
       <LayerToggles
         visibleLayers={visibleLayers}
@@ -329,7 +440,69 @@ function App() {
         onClipConstantChange={(v) => setClipConstant(clampClipConstant(v))}
         cameraPresetId={cameraPresetId}
         onCameraPresetChange={handleCameraPresetChange}
+        layerOpacities={layerOpacities}
+        onLayerOpacityChange={(layer, opacity) => {
+          setLayerOpacities((prev) => {
+            const updated = { ...prev, [layer]: opacity };
+            setMasterGhostOpacity(inferMasterGhostOpacity(updated));
+            return updated;
+          });
+        }}
+        masterGhostOpacity={masterGhostOpacity}
+        onMasterGhostOpacityChange={(scale) => {
+          const clamped = clampMasterGhostOpacity(scale);
+          setMasterGhostOpacity(clamped);
+          const base = isGhostLayerOpacities(layerOpacities) ? ghostLayerOpacities() : layerOpacities;
+          setLayerOpacities(applyMasterGhostOpacity(base, clamped));
+        }}
+        onGhostPreset={() => {
+          setMasterGhostOpacity(1);
+          setLayerOpacities(ghostLayerOpacities());
+        }}
+        onSolidPreset={() => {
+          setMasterGhostOpacity(1);
+          setLayerOpacities(defaultLayerOpacities());
+        }}
+        explodeAmount={explodeAmount}
+        onExplodeAmountChange={setExplodeAmount}
+        onExplodePreset={() => setExplodeAmount(EXPLODE_PRESET_AMOUNT)}
+        onAssemblePreset={() => setExplodeAmount(DEFAULT_EXPLODE_AMOUNT)}
+        quizMode={quizMode}
+        onQuizModeChange={setQuizMode}
       />
+
+      {!anySoftLayerVisible && visibleLayers.size > 0 && (
+        <div
+          style={{
+            position: 'fixed',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            zIndex: 95,
+            background: 'rgba(26, 26, 26, 0.95)',
+            border: '2px solid #f59e0b',
+            borderRadius: '12px',
+            padding: '20px 28px',
+            maxWidth: '480px',
+            boxShadow: '0 8px 32px rgba(0, 0, 0, 0.5)',
+            pointerEvents: 'none',
+          }}
+          role="status"
+          aria-label="软组织图层空状态提示"
+          data-testid="soft-layers-empty-state"
+        >
+          <div style={{ fontSize: '15px', fontWeight: 600, color: '#fbbf24', marginBottom: '12px', textAlign: 'center' }}>
+            💡 软组织图层已关闭
+          </div>
+          <div style={{ fontSize: '13px', color: '#e0e0e0', lineHeight: 1.6, marginBottom: '10px' }}>
+            当前仅显示<strong>骨骼图层</strong>。若需查看肌肉、神经、血管或韧带，请在右侧图层面板中打开相应图层。
+          </div>
+          <div style={{ fontSize: '12px', color: '#9ca3af', lineHeight: 1.5, fontStyle: 'italic', borderTop: '1px solid #444', paddingTop: '10px' }}>
+            <strong>Soft tissue layers disabled</strong><br />
+            Only <strong>bone layer</strong> is visible. To view muscles, nerves, vessels, or ligaments, enable the corresponding layers in the right panel.
+          </div>
+        </div>
+      )}
 
       <Viewport
         onMeshClick={handleMeshClick}
@@ -346,6 +519,10 @@ function App() {
         cameraPresetId={cameraPresetId}
         cameraPresetToken={cameraPresetToken}
         hiddenStructureIds={hiddenStructureIds}
+        layerOpacities={layerOpacities}
+        explodeAmount={explodeAmount}
+        reducedMotion={reducedMotion}
+        quizMode={quizMode}
       />
 
       <StructurePanel
@@ -364,6 +541,7 @@ function App() {
                 )
             : undefined
         }
+        quizMode={quizMode}
       />
 
       {hiddenStructureIds.size > 0 && (
@@ -391,13 +569,19 @@ function App() {
           </span>
           {[...hiddenStructureIds].map((id) => {
             const struct = structures.find((x) => x.id === id);
-            const label = struct?.nameZh ?? id;
+            const label = quizMode
+              ? quizDisplayNames(true, struct?.nameZh ?? id, struct?.nameLa ?? id).nameZh
+              : (struct?.nameZh ?? id);
             return (
               <button
                 key={id}
                 type="button"
                 onClick={() => setHiddenStructureIds((prev) => revealStructureId(prev, id))}
-                title={`恢复显示 Restore: ${struct?.nameLa ?? id}`}
+                title={
+                  quizMode
+                    ? '恢复显示 Restore hidden structure (quiz stub — name hidden)'
+                    : `恢复显示 Restore: ${struct?.nameLa ?? id}`
+                }
                 style={{
                   fontSize: '11px',
                   padding: '3px 8px',
@@ -449,7 +633,7 @@ function App() {
         }}
       >
         <div style={{ fontSize: '11px', color: '#666' }}>
-          提示: ?/H 快捷键 | 搜索 ZH/LA | 视角1–5 | 标签密度 | 矢状切面(lite) | 拖动旋转 | 滚轮缩放 | 右键平移 | 点击对焦 | I 隔离/退出 | X 隐藏此结构 | Esc 取消选择(不恢复已隐藏)
+          提示: ?/H 快捷键 | 搜索 ZH/LA | 视角1–5 | 标签密度 | 矢状切面(lite) | G 透视/实心 | E 抽出/合拢 | Q 测验/对照 | 拖动旋转 | 滚轮缩放 | 右键平移 | 点击对焦 | I 隔离/退出 | X 隐藏此结构 | Esc 取消选择(不恢复已隐藏)
         </div>
         <div
           style={{
