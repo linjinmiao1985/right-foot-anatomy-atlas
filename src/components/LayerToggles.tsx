@@ -948,7 +948,7 @@ export default function LayerToggles({
             title="Muscle soft-tissue layer — teaching incomplete"
           >
             ℹ️ 肌肉层<strong>教学有用但不完整</strong>：足底 1–4 层 + 足背固有肌 + 外在前/外/后群亚组筛选。
-            仍无腓肠肌/比目鱼肌肌腹（仅跟腱+跖肌）；DI 为 BY-SA 组合。非 TA2 完整肌图谱。
+            腓肠肌（内、外侧头）与比目鱼肌肌腹已纳入（BodyParts3D / Somakine，CC BY 4.0）；DI 为 BY-SA 组合。非 TA2 完整肌图谱。
           </div>
         )}
 
