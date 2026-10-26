@@ -44,7 +44,7 @@ This atlas integrates open-licensed anatomical meshes from BodyParts3D, Universi
 | Category | Main tree (CC BY 4.0 / CC0) | BY-SA isolate (`by-sa/`) | Rejected (not integrated) |
 |----------|----------------------------|--------------------------|---------------------------|
 | **Bones** | **26/26** (BP3D CC BY 4.0; UM CC0 duplicate) | 0 | BP3D V3.0 legacy (SA 2.1 JP) |
-| **Muscles** | **18/23** unique (BP3D+UM CC BY/CC0) | **5** (Open3D DI grouped + FB + FT + opponens + ZA plantaris) | UM excludes intrinsics per readme; Andreassen gastroc/soleus spatial QA fail |
+| **Muscles** | **18/23** unique (BP3D+UM CC BY/CC0; row predates Day 4dy) | **5** (Open3D DI grouped + FB + FT + opponens + ZA plantaris) | UM excludes intrinsics per readme; Andreassen VHM gastroc/soleus spatial QA fail (not wired). BP3D/Somakine bellies are main-tree CC BY — see Overview |
 | **Vessels** | **7** (BP3D CC BY 4.0) | **22** (Open3D 12 + ZA 10 veins/circumflex) | Per-ray 1st–4th MTA elementals unavailable (open-data ceiling) |
 | **Nerves** | **0** (no CC BY/CC0 nerve meshes found) | **17** (ZA 6 trunks + Open3D 11 fine/cutaneous) | — |
 | **Ligaments/tendons** | **2** (BP3D long plantar + Achilles) | **27** (Open3D ankle bands/retinacula/aponeuroses) | Further tarsal/toe bands incomplete vs named ATFL-set in some texts |
@@ -369,7 +369,7 @@ Commit history documents asset decisions, `structures.json` evolution, and `Foot
 - **Dorsal interossei**: Open3D BY-SA under `by-sa/`; Day 4al CC0/BY dig found **no** main-tree replacement (TotalSegmentator bones-only; NIH foot NC; Embodi3D NC-SA)
 - **Per-ray dorsal MTA / digital arteries**: Still **grouped** only (BP3D + Open3D); no license-clean elemental split found
 - **Nerve/ligament SA surface**: Prefer CC0/CC BY replacements that shrink ShareAlike weight (~71/124 unique); skip SA volume for its own sake
-- **Gastroc/soleus bellies**: Not in wired open packs (Achilles + plantaris only)
+- **Gastroc/soleus bellies**: Included via BodyParts3D / Somakine (CC BY 4.0). Teaching visualization only; the muscle layer is still not a TA2-complete atlas (grouped DI remains). Andreassen VHM alignment was not wired.
 - **Ligaments/joints**: Capsule rendering low priority; named ATFL/CFL absent from ZA blend (Open3D BY-SA covers teaching set incompletely)
 
 ### Technical Enhancements
